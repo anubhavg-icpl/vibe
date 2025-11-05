@@ -8,11 +8,13 @@ A comprehensive collection of specialized AI chat modes for software engineering
 **Modes for active coding, implementation, and development workflows**
 
 - **blueprint-mode-v39.md** - Structured workflows (Debug, Express, Main, Loop) with strict correctness and maintainability
+- **claude-code-best-practices-mode.md** - Optimized agentic coding workflows based on Anthropic engineering patterns
 - **rust-beast-mode.md** - Autonomous Rust coding with comprehensive workflow and research capabilities
 - **rust-mcp-expert-mode.md** - Rust MCP server development specialist using rmcp SDK
 - **software-engineer-agent-mode.md** - Expert-level autonomous engineering agent with zero-confirmation policy
 - **son-of-anubhav-mode.md** - Code review with technical mastery and sharp wit
 - **interactive-programming-nudge-mode.md** - REPL-based interactive programming assistant
+- **api-development-specialist-mode.md** - RESTful and GraphQL API design, implementation, and documentation
 
 ### 🏗️ Architecture
 **Modes for system design, clean code, and architectural decisions**
@@ -33,6 +35,9 @@ A comprehensive collection of specialized AI chat modes for software engineering
 
 - **kusto-assistant-mode.md** - Azure Data Explorer (Kusto) KQL expert for live data analysis
 - **prompt-engineer-mode.md** - Analyze and improve prompts with systematic framework
+- **devops-cicd-automation-mode.md** - Infrastructure as code, container orchestration, deployment pipelines
+- **data-science-ml-mode.md** - Feature engineering, model development, MLOps, and production deployment
+- **frontend-performance-mode.md** - Bundle optimization, Core Web Vitals, and rendering performance
 
 ### 📋 Planning
 **Modes for strategic planning, research, and implementation strategies**
@@ -59,7 +64,8 @@ Each mode is designed to be used as a specialized chat context. Simply reference
 
 | Task | Recommended Mode |
 |------|-----------------|
-| **Active Development** | software-engineer-agent-mode, blueprint-mode-v39 |
+| **Active Development** | software-engineer-agent-mode, blueprint-mode-v39, claude-code-best-practices-mode |
+| **API Development** | api-development-specialist-mode |
 | **Rust Projects** | rust-beast-mode, rust-mcp-expert-mode |
 | **Code Review** | son-of-anubhav-mode, wg-code-alchemist-mode |
 | **Security Analysis** | wg-code-sentinel-mode |
@@ -69,6 +75,9 @@ Each mode is designed to be used as a specialized chat context. Simply reference
 | **Azure/Kusto Queries** | kusto-assistant-mode |
 | **Documentation** | create-prd-mode |
 | **Prompt Engineering** | prompt-engineer-mode |
+| **DevOps & CI/CD** | devops-cicd-automation-mode |
+| **Data Science & ML** | data-science-ml-mode |
+| **Frontend Performance** | frontend-performance-mode |
 
 ## 📚 Mode Characteristics
 
@@ -106,4 +115,4 @@ This collection is part of the anubhavg-ai repository.
 
 ---
 
-**Total Modes**: 18 specialized AI chat modes across 6 categories
+**Total Modes**: 23 specialized AI chat modes across 6 categories

@@ -25,10 +25,10 @@ anubhavg-ai/
 
 Browse the organized modes in the `/modes` directory:
 
-- **Development Modes** (6 modes) - For active coding and implementation
+- **Development Modes** (8 modes) - For active coding and implementation
 - **Architecture Modes** (3 modes) - For system design and code quality
 - **Analysis Modes** (3 modes) - For code review and security
-- **Specialized Modes** (2 modes) - For domain-specific expertise
+- **Specialized Modes** (5 modes) - For domain-specific expertise
 - **Planning Modes** (3 modes) - For strategic planning and research
 - **Documentation Modes** (1 mode) - For documentation generation
 
@@ -79,7 +79,7 @@ Each mode includes:
 
 ## 🛠️ Technical Details
 
-- **Total Modes**: 18 specialized chat modes
+- **Total Modes**: 23 specialized chat modes
 - **Categories**: 6 professional categories
 - **Format**: Markdown with YAML frontmatter
 - **Tools**: Extensive tool integration for VS Code, GitHub, and more
