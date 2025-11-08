@@ -33,6 +33,7 @@ A comprehensive collection of specialized AI chat modes for software engineering
 ### 🎯 Specialized
 **Domain-specific expert modes**
 
+- **universal-rules-engine-mode.md** - Universal rules-based AI assistant that works across all platforms (Amazon Q, Claude Code, Copilot, Gemini, Aider)
 - **kusto-assistant-mode.md** - Azure Data Explorer (Kusto) KQL expert for live data analysis
 - **prompt-engineer-mode.md** - Analyze and improve prompts with systematic framework
 - **devops-cicd-automation-mode.md** - Infrastructure as code, container orchestration, deployment pipelines
@@ -65,6 +66,7 @@ Each mode is designed to be used as a specialized chat context. Simply reference
 | Task | Recommended Mode |
 |------|-----------------|
 | **Active Development** | software-engineer-agent-mode, blueprint-mode-v39, claude-code-best-practices-mode |
+| **Rules & Standards Automation** | universal-rules-engine-mode |
 | **API Development** | api-development-specialist-mode |
 | **Rust Projects** | rust-beast-mode, rust-mcp-expert-mode |
 | **Code Review** | son-of-anubhav-mode, wg-code-alchemist-mode |
@@ -115,4 +117,4 @@ This collection is part of the vibe repository.
 
 ---
 
-**Total Modes**: 23 specialized AI chat modes across 6 categories
+**Total Modes**: 24 specialized AI chat modes across 6 categories

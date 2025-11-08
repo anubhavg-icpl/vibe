@@ -4,7 +4,7 @@ A comprehensive, professionally organized collection of specialized AI chat mode
 
 ## 🎯 Overview
 
-This repository contains 18 expertly crafted AI chat modes, organized into 6 professional categories. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
+This repository contains 24 expertly crafted AI chat modes, organized into 6 professional categories. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
 
 ## 📁 Repository Structure
 
@@ -28,7 +28,7 @@ Browse the organized modes in the `/modes` directory:
 - **Development Modes** (8 modes) - For active coding and implementation
 - **Architecture Modes** (3 modes) - For system design and code quality
 - **Analysis Modes** (3 modes) - For code review and security
-- **Specialized Modes** (5 modes) - For domain-specific expertise
+- **Specialized Modes** (6 modes) - For domain-specific expertise
 - **Planning Modes** (3 modes) - For strategic planning and research
 - **Documentation Modes** (1 mode) - For documentation generation
 
@@ -53,7 +53,16 @@ See [modes/README.md](modes/README.md) for detailed descriptions and usage guide
 - **plan-mode** - Strategic planning before implementation
 - **technical-spike-mode** - Research and validate technical approaches
 
+### For Standards & Automation
+- **universal-rules-engine-mode** - Cross-platform rules system for all AI assistants (Amazon Q, Claude Code, Copilot, Gemini, Aider)
+
 ## 💡 Usage Examples
+
+**Automating Standards Across All AI Assistants:**
+1. Use `universal-rules-engine-mode` to set up rules once
+2. Works automatically with Amazon Q, Claude Code, Copilot, Gemini, Aider
+3. See [UNIVERSAL-RULES-SETUP.md](UNIVERSAL-RULES-SETUP.md) for quick start guide
+4. Rules in `.ai/rules/` apply to all AI interactions
 
 **Starting a new feature:**
 1. Use `plan-mode` to understand requirements
@@ -79,7 +88,7 @@ Each mode includes:
 
 ## 🛠️ Technical Details
 
-- **Total Modes**: 23 specialized chat modes
+- **Total Modes**: 24 specialized chat modes
 - **Categories**: 6 professional categories
 - **Format**: Markdown with YAML frontmatter
 - **Tools**: Extensive tool integration for VS Code, GitHub, and more
