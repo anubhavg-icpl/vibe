@@ -9,7 +9,7 @@ This repository contains 18 expertly crafted AI chat modes, organized into 6 pro
 ## 📁 Repository Structure
 
 ```
-anubhavg-ai/
+vibe/
 ├── modes/
 │   ├── development/        # Active coding and implementation modes
 │   ├── architecture/       # System design and clean code modes

@@ -111,7 +111,7 @@ To add new modes:
 
 ## 📄 License
 
-This collection is part of the anubhavg-ai repository.
+This collection is part of the vibe repository.
 
 ---
 
