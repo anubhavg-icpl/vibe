@@ -1,4 +1,4 @@
-# Anubhavg AI - Professional AI Chat Modes Collection
+# Vibe - Professional AI Chat Modes Collection
 
 A comprehensive, professionally organized collection of specialized AI chat modes for software engineering, architecture, security analysis, and development workflows.
 
