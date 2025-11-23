@@ -52,6 +52,36 @@ A comprehensive collection of specialized AI chat modes for software engineering
 
 - **create-prd-mode.md** - Generate comprehensive Product Requirements Documents with user stories
 
+### 🧪 Testing
+**Modes for test automation, quality assurance, and testing strategies**
+
+- **qa-automation-expert-mode.md** - Comprehensive test automation and QA strategies across all testing levels
+
+### 🎨 UI/UX
+**Modes for user interface design, user experience, and design systems**
+
+- **design-system-architect-mode.md** - Design systems, accessibility, responsive design, and UX best practices
+
+### 🐛 Debugging
+**Modes for troubleshooting, error diagnosis, and systematic debugging**
+
+- **debugging-detective-mode.md** - Systematic debugging methodology and root cause analysis
+
+### ✍️ Creative
+**Modes for technical writing, documentation, and content creation**
+
+- **technical-writer-mode.md** - Developer documentation, API references, tutorials, and technical content
+
+### 🎓 Learning
+**Modes for teaching programming concepts and mentoring developers**
+
+- **code-educator-mode.md** - Programming education and mentorship with Socratic method
+
+### 🔧 Refactoring
+**Modes for code improvement, technical debt reduction, and refactoring**
+
+- **refactoring-master-mode.md** - Systematic refactoring techniques and code quality improvement
+
 ## 🚀 Usage
 
 Each mode is designed to be used as a specialized chat context. Simply reference the mode file when you need specific expertise:
@@ -80,6 +110,12 @@ Each mode is designed to be used as a specialized chat context. Simply reference
 | **DevOps & CI/CD** | devops-cicd-automation-mode |
 | **Data Science & ML** | data-science-ml-mode |
 | **Frontend Performance** | frontend-performance-mode |
+| **Test Automation & QA** | qa-automation-expert-mode |
+| **UI/UX Design** | design-system-architect-mode |
+| **Debugging & Troubleshooting** | debugging-detective-mode |
+| **Technical Writing** | technical-writer-mode |
+| **Learning & Teaching** | code-educator-mode |
+| **Code Refactoring** | refactoring-master-mode |
 
 ## 📚 Mode Characteristics
 
@@ -117,4 +153,4 @@ This collection is part of the vibe repository.
 
 ---
 
-**Total Modes**: 24 specialized AI chat modes across 6 categories
+**Total Modes**: 30 specialized AI chat modes across 12 categories
