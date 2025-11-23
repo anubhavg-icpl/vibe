@@ -4,7 +4,7 @@ A comprehensive, professionally organized collection of specialized AI chat mode
 
 ## 🎯 Overview
 
-This repository contains 24 expertly crafted AI chat modes, organized into 6 professional categories. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
+This repository contains 30 expertly crafted AI chat modes, organized into 12 professional categories. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
 
 ## 📁 Repository Structure
 
@@ -17,6 +17,12 @@ vibe/
 │   ├── specialized/       # Domain-specific expert modes
 │   ├── planning/          # Strategic planning and research modes
 │   ├── documentation/     # Documentation generation modes
+│   ├── testing/           # Test automation and QA modes
+│   ├── ui-ux/             # UI/UX design and accessibility modes
+│   ├── debugging/         # Debugging and troubleshooting modes
+│   ├── creative/          # Technical writing and content creation modes
+│   ├── learning/          # Education and mentorship modes
+│   ├── refactoring/       # Code refactoring and improvement modes
 │   └── README.md          # Detailed modes documentation
 └── README.md              # This file
 ```
@@ -31,6 +37,12 @@ Browse the organized modes in the `/modes` directory:
 - **Specialized Modes** (6 modes) - For domain-specific expertise
 - **Planning Modes** (3 modes) - For strategic planning and research
 - **Documentation Modes** (1 mode) - For documentation generation
+- **Testing Modes** (1 mode) - For test automation and quality assurance
+- **UI/UX Modes** (1 mode) - For design systems and user experience
+- **Debugging Modes** (1 mode) - For troubleshooting and error diagnosis
+- **Creative Modes** (1 mode) - For technical writing and documentation
+- **Learning Modes** (1 mode) - For programming education and mentorship
+- **Refactoring Modes** (1 mode) - For code improvement and refactoring
 
 See [modes/README.md](modes/README.md) for detailed descriptions and usage guide.
 
@@ -88,10 +100,11 @@ Each mode includes:
 
 ## 🛠️ Technical Details
 
-- **Total Modes**: 24 specialized chat modes
-- **Categories**: 6 professional categories
-- **Format**: Markdown with YAML frontmatter
+- **Total Modes**: 30 specialized chat modes
+- **Categories**: 12 professional categories
+- **Format**: Markdown with comprehensive system prompts
 - **Tools**: Extensive tool integration for VS Code, GitHub, and more
+- **New Categories**: Testing, UI/UX, Debugging, Creative, Learning, Refactoring
 
 ## 🤝 Contributing
 
