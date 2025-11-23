@@ -15,6 +15,7 @@ A comprehensive collection of specialized AI chat modes for software engineering
 - **son-of-anubhav-mode.md** - Code review with technical mastery and sharp wit
 - **interactive-programming-nudge-mode.md** - REPL-based interactive programming assistant
 - **api-development-specialist-mode.md** - RESTful and GraphQL API design, implementation, and documentation
+- **gilfoyle-bot-mode.md** - 🎬 Ruthless efficiency and automation inspired by Silicon Valley's Gilfoyle
 
 ### 🏗️ Architecture
 **Modes for system design, clean code, and architectural decisions**
@@ -22,6 +23,7 @@ A comprehensive collection of specialized AI chat modes for software engineering
 - **principal-engineer-mode.md** - Expert-level engineering guidance with focus on excellence and pragmatic delivery
 - **wg-code-alchemist-mode.md** - Transform code with Clean Code principles and SOLID design (JARVIS-inspired)
 - **specification-mode.md** - Generate or update specification documents for functionality
+- **sacred-games-architect-mode.md** - 🎬 Multi-layered strategic architecture inspired by Netflix's Sacred Games
 
 ### 🔍 Analysis
 **Modes for code review, security analysis, and performance optimization**
@@ -29,6 +31,7 @@ A comprehensive collection of specialized AI chat modes for software engineering
 - **critical-thinking-mode.md** - Challenge assumptions and encourage critical thinking for best outcomes
 - **wg-code-sentinel-mode.md** - Security review specialist for vulnerability identification (JARVIS-inspired)
 - **universal-performance-optimization.md** - SQL performance optimization across all databases
+- **delhi-crime-debugger-mode.md** - 🎬 Investigative debugging inspired by Netflix's Delhi Crime
 
 ### 🎯 Specialized
 **Domain-specific expert modes**
@@ -39,6 +42,7 @@ A comprehensive collection of specialized AI chat modes for software engineering
 - **devops-cicd-automation-mode.md** - Infrastructure as code, container orchestration, deployment pipelines
 - **data-science-ml-mode.md** - Feature engineering, model development, MLOps, and production deployment
 - **frontend-performance-mode.md** - Bundle optimization, Core Web Vitals, and rendering performance
+- **jamtara-security-mode.md** - 🎬 Security vulnerability hunting inspired by Netflix's Jamtara
 
 ### 📋 Planning
 **Modes for strategic planning, research, and implementation strategies**
@@ -61,17 +65,28 @@ Each mode is designed to be used as a specialized chat context. Simply reference
 - Security review needed? → Use `wg-code-sentinel-mode.md`
 - Want to improve code quality? → Use `wg-code-alchemist-mode.md`
 
+### 🎬 Netflix Series-Inspired Modes
+
+Want coding assistance with personality? Try our Netflix series-inspired modes:
+
+- **Automation expert like Gilfoyle?** → Use `gilfoyle-bot-mode.md` (Silicon Valley)
+- **Multi-layered architecture design?** → Use `sacred-games-architect-mode.md` (Sacred Games)
+- **Security vulnerability hunting?** → Use `jamtara-security-mode.md` (Jamtara)
+- **Methodical debugging investigation?** → Use `delhi-crime-debugger-mode.md` (Delhi Crime)
+
 ## 🎯 Mode Selection Guide
 
 | Task | Recommended Mode |
 |------|-----------------|
 | **Active Development** | software-engineer-agent-mode, blueprint-mode-v39, claude-code-best-practices-mode |
+| **Automation & Efficiency** | gilfoyle-bot-mode 🎬 |
 | **Rules & Standards Automation** | universal-rules-engine-mode |
 | **API Development** | api-development-specialist-mode |
 | **Rust Projects** | rust-beast-mode, rust-mcp-expert-mode |
 | **Code Review** | son-of-anubhav-mode, wg-code-alchemist-mode |
-| **Security Analysis** | wg-code-sentinel-mode |
-| **Architecture Design** | principal-engineer-mode, specification-mode |
+| **Security Analysis** | wg-code-sentinel-mode, jamtara-security-mode 🎬 |
+| **Debugging & Investigation** | delhi-crime-debugger-mode 🎬 |
+| **Architecture Design** | principal-engineer-mode, sacred-games-architect-mode 🎬, specification-mode |
 | **Planning & Research** | plan-mode, technical-spike-mode |
 | **SQL Optimization** | universal-performance-optimization |
 | **Azure/Kusto Queries** | kusto-assistant-mode |
@@ -117,4 +132,4 @@ This collection is part of the vibe repository.
 
 ---
 
-**Total Modes**: 24 specialized AI chat modes across 6 categories
+**Total Modes**: 28 specialized AI chat modes across 6 categories (including 4 Netflix series-inspired modes 🎬)
