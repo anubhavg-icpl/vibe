@@ -4,7 +4,7 @@ A comprehensive, professionally organized collection of specialized AI chat mode
 
 ## Overview
 
-This repository contains **109 expertly crafted AI chat modes**, organized into **24 professional categories**. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
+This repository contains **141+ expertly crafted AI chat modes**, organized into **30+ professional categories**. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
 
 ## Repository Structure
 
@@ -12,23 +12,26 @@ This repository contains **109 expertly crafted AI chat modes**, organized into 
 vibe/
 ├── .ai/
 │   └── rules/              # Universal rules engine
-├── .github/
-│   └── workflows/          # CI/CD automation
 ├── modes/
+│   ├── ai-ml/              # LLM, MLOps, Vector DBs (3 modes)
 │   ├── analysis/           # Code review and security analysis (4 modes)
 │   ├── architecture/       # System design and clean code (4 modes)
 │   ├── blockchain/         # Web3, Solidity, DeFi (3 modes)
 │   ├── cloud-infrastructure/ # AWS, GCP, Azure, Terraform, K8s (5 modes)
-│   ├── coding-standards/   # Language-specific standards (11 modes)
+│   ├── coding-standards/   # Language-specific standards (13 modes)
 │   ├── creative/           # Technical writing (1 mode)
 │   ├── database/           # PostgreSQL, MongoDB, Redis, SQL (4 modes)
 │   ├── debugging/          # Troubleshooting (1 mode)
 │   ├── design-ux/          # UI/UX design (4 modes)
 │   ├── development/        # Active coding and implementation (9 modes)
+│   ├── devops/             # GitOps, SRE, FinOps (3 modes)
 │   ├── documentation/      # Documentation generation (1 mode)
+│   ├── emerging-tech/      # WebAssembly, Edge, IoT (3 modes)
 │   ├── enterprise/         # Power BI, Salesforce, Atlassian (3 modes)
+│   ├── frameworks/         # NestJS, FastAPI, Svelte, Remix, Nuxt (5 modes)
 │   ├── game-development/   # Unity, Unreal, Game Design (3 modes)
-│   ├── languages/          # Python, Java, Go, C++, PHP, Ruby (6 modes)
+│   ├── infrastructure/     # Kafka, Istio, OpenTelemetry (3 modes)
+│   ├── languages/          # 14 languages (Python, Rust, Go, Elixir, etc.)
 │   ├── learning/           # Education and mentorship (1 mode)
 │   ├── mobile/             # iOS, Android, React Native, Flutter (4 modes)
 │   ├── output-formats/     # Markdown, JSON/YAML, docs (4 modes)
@@ -36,11 +39,14 @@ vibe/
 │   ├── planning/           # Strategic planning (3 modes)
 │   ├── project-structure/  # Project templates (14 modes)
 │   ├── refactoring/        # Code improvement (1 mode)
+│   ├── security/           # SAST/DAST, Compliance (2 modes)
 │   ├── specialized/        # Domain-specific experts (7 modes)
-│   ├── testing/            # QA and automation (5 modes)
+│   ├── testing/            # QA, Chaos, Contract, Security testing (8 modes)
 │   └── ui-ux/              # Accessibility (1 mode)
+├── templates/              # Project structure templates
 ├── CHANGELOG.md            # Version history
 ├── CONTRIBUTING.md         # Contribution guidelines
+├── FEATURE_GAPS.md         # Future enhancements roadmap
 ├── LICENSE                 # MIT License
 ├── README.md               # This file
 └── UNIVERSAL-RULES-SETUP.md # Rules engine setup guide
@@ -76,12 +82,12 @@ vibe/
 |----------|-------|-------------|
 | Cloud Infrastructure | 5 | AWS, GCP, Azure, Terraform, Kubernetes |
 
-### Languages & Databases (21 modes)
+### Languages & Databases (31 modes)
 
 | Category | Modes | Description |
 |----------|-------|-------------|
-| Languages | 6 | Python, Java, Go, C++, PHP, Ruby specialists |
-| Coding Standards | 11 | Production-ready standards for major languages |
+| Languages | 14 | Python, Java, Go, C++, PHP, Ruby, Elixir, Haskell, Clojure, F#, Zig, R, Lua, Julia |
+| Coding Standards | 13 | Production-ready standards for major languages |
 | Database | 4 | PostgreSQL, MongoDB, Redis, SQL optimization |
 
 ### Frontend & Mobile (9 modes)
@@ -100,12 +106,28 @@ vibe/
 | Specialized | 7 | DevOps, data science, prompt engineering |
 | Blockchain | 3 | Solidity, Web3, DeFi |
 
-### Quality & Testing (6 modes)
+### Quality & Testing (9 modes)
 
 | Category | Modes | Description |
 |----------|-------|-------------|
-| Testing | 5 | QA automation, performance, accessibility testing |
+| Testing | 8 | QA automation, chaos engineering, contract testing, security testing |
 | Debugging | 1 | Troubleshooting detective |
+
+### AI/ML & Emerging Technologies (9 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| AI/ML | 3 | LLM development, MLOps, Vector databases |
+| Emerging Tech | 3 | WebAssembly, Edge computing, IoT |
+| Infrastructure | 3 | Kafka, Istio service mesh, OpenTelemetry |
+
+### DevOps & Security (8 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| DevOps | 3 | GitOps/ArgoCD, SRE practices, FinOps |
+| Security | 2 | SAST/DAST, SOC 2 compliance |
+| Frameworks | 5 | NestJS, FastAPI, Svelte, Remix, Nuxt |
 
 ### Productivity & Workflow (12 modes)
 
@@ -184,11 +206,12 @@ vibe/
 
 ## Technical Details
 
-- **Total Modes**: 109 specialized chat modes
-- **Categories**: 24 professional categories
+- **Total Modes**: 141+ specialized chat modes
+- **Categories**: 30+ professional categories
 - **Format**: Markdown with comprehensive system prompts
 - **Tools**: Extensive tool integration for VS Code, GitHub, and more
 - **Rules Engine**: Universal rules supporting 5+ AI assistants
+- **Templates**: Project structure templates for FastAPI, NestJS, and more
 
 ## Contributing
 
