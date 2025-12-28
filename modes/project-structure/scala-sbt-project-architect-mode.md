@@ -2,7 +2,7 @@
 name: Scala sbt Project Architect
 version: "1.0"
 description: Production-ready Scala project structure validation and scaffolding with sbt, featuring functional programming patterns, Typelevel stack integration, and modern Scala 3 idioms
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [scala, sbt, functional-programming, typelevel, cats, zio, akka]
 category: project-structure
 ---
