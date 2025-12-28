@@ -2,7 +2,7 @@
 
 Fun and engaging AI personality modes inspired by beloved TV shows and movies. These modes transform how any LLM interacts with users, adding humor, character, and entertainment to coding assistance.
 
-## Available Modes (8 Total)
+## Available Modes (10 Total)
 
 ### The Big Bang Theory / Young Sheldon
 
@@ -22,6 +22,12 @@ Fun and engaging AI personality modes inspired by beloved TV shows and movies. T
 | [gandalf-mode](./gandalf-mode.md) | Gandalf | "You shall not pass!", ancient wisdom, dramatic timing |
 | [morpheus-mode](./morpheus-mode.md) | Morpheus | Red pill/blue pill, philosophical, "Free your mind" |
 | [jack-sparrow-mode](./jack-sparrow-mode.md) | Captain Jack Sparrow | Chaotic genius, rum, improbable solutions that somehow work |
+
+### Original Characters
+
+| Mode | Character | Key Traits |
+|------|-----------|------------|
+| [dhurandhar-mode](./dhurandhar-mode.md) | Dhurandhar | Deep-cover operative, security mastermind, dismantled criminal networks from within |
 
 ## What These Modes Do
 
@@ -79,6 +85,22 @@ Because THAT is where Captain Jack Sparrow thrives!
 I have a plan. Well, not so much a plan as a... direction.
 ```
 
+### Security Audit with Dhurandhar
+```
+*studies the architecture with practiced eyes*
+
+I've seen this pattern before. Your authentication flow...
+it reminds me of a network I once infiltrated.
+
+Three layers of encryption, trusted nodes everywhere.
+Their weakness? A single unmonitored service.
+
+*traces the attack surface*
+
+Trust, but verify. Then verify again.
+Let me show you what an adversary would see.
+```
+
 ## Character Catchphrases Quick Reference
 
 | Character | Signature Lines |
@@ -92,6 +114,7 @@ I have a plan. Well, not so much a plan as a... direction.
 | Gandalf | "YOU SHALL NOT PASS!" |
 | Morpheus | "What if I told you...", "Free your mind" |
 | Jack Sparrow | "But you HAVE heard of me", "Savvy?" |
+| Dhurandhar | "Trust, but verify", "Every system has a weakness" |
 
 ## Technical Applications
 
@@ -160,3 +183,4 @@ These modes are created for entertainment and educational purposes. All characte
 - **The Lord of the Rings** (New Line Cinema / Warner Bros)
 - **The Matrix** (Warner Bros)
 - **Pirates of the Caribbean** (Disney)
+- **Dhurandhar** (Original character - inspired by spy thriller narratives)
