@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2025-12-28T21:30:26.154485Z",
-  "totalModes": 183,
+  "generatedAt": "2025-12-28T21:51:42.897286Z",
+  "totalModes": 222,
   "categories": [
     {
       "name": "ai-ml",
@@ -34,6 +34,15 @@
           ]
         },
         {
+          "slug": "rag-expert-mode",
+          "title": "RAG Expert",
+          "description": "Expert in Retrieval-Augmented Generation systems and knowledge bases",
+          "path": [
+            "ai-ml",
+            "rag-expert-mode"
+          ]
+        },
+        {
           "slug": "vector-database-expert-mode",
           "title": "Vector Database Expert",
           "description": "Expert in vector databases for AI/ML applications including Pinecone, Weaviate, and Milvus",
@@ -48,6 +57,15 @@
       "name": "analysis",
       "title": "Analysis",
       "modes": [
+        {
+          "slug": "code-metrics-mode",
+          "title": "Code Metrics Analyst",
+          "description": "Expert in code quality metrics, static analysis, and codebase health assessment",
+          "path": [
+            "analysis",
+            "code-metrics-mode"
+          ]
+        },
         {
           "slug": "critical-thinking-mode",
           "title": "Critical Thinking",
@@ -148,6 +166,24 @@
           "path": [
             "blockchain",
             "defi-specialist-mode"
+          ]
+        },
+        {
+          "slug": "layer2-scaling-mode",
+          "title": "Layer 2 Scaling Expert",
+          "description": "Expert in Layer 2 scaling solutions, rollups, and blockchain performance",
+          "path": [
+            "blockchain",
+            "layer2-scaling-mode"
+          ]
+        },
+        {
+          "slug": "nft-developer-mode",
+          "title": "NFT Developer Expert",
+          "description": "Expert in NFT development, ERC-721/1155 standards, marketplaces, and metadata",
+          "path": [
+            "blockchain",
+            "nft-developer-mode"
           ]
         },
         {
@@ -349,12 +385,48 @@
       "title": "Creative",
       "modes": [
         {
+          "slug": "developer-advocate-mode",
+          "title": "Developer Advocate",
+          "description": "Expert developer advocate creating demos, talks, and community content",
+          "path": [
+            "creative",
+            "developer-advocate-mode"
+          ]
+        },
+        {
+          "slug": "presentation-designer-mode",
+          "title": "Presentation Designer",
+          "description": "Expert in creating compelling technical presentations and slide decks",
+          "path": [
+            "creative",
+            "presentation-designer-mode"
+          ]
+        },
+        {
+          "slug": "tech-blog-writer-mode",
+          "title": "Tech Blog Writer",
+          "description": "Expert in writing engaging, informative technical blog posts and articles",
+          "path": [
+            "creative",
+            "tech-blog-writer-mode"
+          ]
+        },
+        {
           "slug": "technical-writer-mode",
           "title": "Technical Writer",
           "description": "Expert mode for Technical Writer",
           "path": [
             "creative",
             "technical-writer-mode"
+          ]
+        },
+        {
+          "slug": "video-tutorial-creator-mode",
+          "title": "Video Tutorial Creator",
+          "description": "Expert in creating engaging developer tutorial videos and screencasts",
+          "path": [
+            "creative",
+            "video-tutorial-creator-mode"
           ]
         }
       ]
@@ -363,6 +435,15 @@
       "name": "database",
       "title": "Database",
       "modes": [
+        {
+          "slug": "database-design-mode",
+          "title": "Database Design Expert",
+          "description": "Expert in database design, schema modeling, and data architecture",
+          "path": [
+            "database",
+            "database-design-mode"
+          ]
+        },
         {
           "slug": "mongodb-expert-mode",
           "title": "Mongodb Expert",
@@ -413,6 +494,42 @@
             "debugging",
             "debugging-detective-mode"
           ]
+        },
+        {
+          "slug": "log-analysis-mode",
+          "title": "Log Analysis Expert",
+          "description": "Expert in log analysis, pattern recognition, and debugging through log investigation",
+          "path": [
+            "debugging",
+            "log-analysis-mode"
+          ]
+        },
+        {
+          "slug": "memory-profiler-mode",
+          "title": "Memory Profiler",
+          "description": "Expert in memory profiling, leak detection, and memory optimization across languages",
+          "path": [
+            "debugging",
+            "memory-profiler-mode"
+          ]
+        },
+        {
+          "slug": "performance-debugging-mode",
+          "title": "Performance Debugging Expert",
+          "description": "Expert in debugging performance issues, bottlenecks, and optimization",
+          "path": [
+            "debugging",
+            "performance-debugging-mode"
+          ]
+        },
+        {
+          "slug": "production-debugging-mode",
+          "title": "Production Debugging Expert",
+          "description": "Expert in debugging production issues with minimal impact",
+          "path": [
+            "debugging",
+            "production-debugging-mode"
+          ]
         }
       ]
     },
@@ -436,6 +553,15 @@
           "path": [
             "design-ux",
             "design-system-architect-mode"
+          ]
+        },
+        {
+          "slug": "design-tokens-mode",
+          "title": "Design Tokens Expert",
+          "description": "Expert in design tokens, design systems, and cross-platform design consistency",
+          "path": [
+            "design-ux",
+            "design-tokens-mode"
           ]
         },
         {
@@ -619,12 +745,48 @@
       "title": "Documentation",
       "modes": [
         {
+          "slug": "api-reference-mode",
+          "title": "API Reference Writer",
+          "description": "Expert in writing clear, comprehensive API reference documentation",
+          "path": [
+            "documentation",
+            "api-reference-mode"
+          ]
+        },
+        {
+          "slug": "architecture-decision-record-mode",
+          "title": "Architecture Decision Records",
+          "description": "Expert in writing and maintaining Architecture Decision Records (ADRs)",
+          "path": [
+            "documentation",
+            "architecture-decision-record-mode"
+          ]
+        },
+        {
+          "slug": "changelog-generator-mode",
+          "title": "Changelog Generator",
+          "description": "Expert in generating clear, informative changelogs following best practices",
+          "path": [
+            "documentation",
+            "changelog-generator-mode"
+          ]
+        },
+        {
           "slug": "create-prd-mode",
           "title": "Create Prd",
           "description": "Generate a comprehensive Product Requirements Document (PRD) in Markdown, detailing user stories, acceptance criteria, technical considerations, and metrics. Optionally create GitHub issues upon user confirmation.",
           "path": [
             "documentation",
             "create-prd-mode"
+          ]
+        },
+        {
+          "slug": "runbook-writer-mode",
+          "title": "Runbook Writer",
+          "description": "Expert in writing operational runbooks for incident response and procedures",
+          "path": [
+            "documentation",
+            "runbook-writer-mode"
           ]
         }
       ]
@@ -649,6 +811,15 @@
           "path": [
             "emerging-tech",
             "iot-expert-mode"
+          ]
+        },
+        {
+          "slug": "quantum-computing-mode",
+          "title": "Quantum Computing Developer",
+          "description": "Expert in quantum computing fundamentals, Qiskit, and quantum algorithms",
+          "path": [
+            "emerging-tech",
+            "quantum-computing-mode"
           ]
         },
         {
@@ -685,6 +856,15 @@
           ]
         },
         {
+          "slug": "dynamics-365-mode",
+          "title": "Dynamics 365 Developer",
+          "description": "Expert in Microsoft Dynamics 365 development, Power Platform, and Dataverse",
+          "path": [
+            "enterprise",
+            "dynamics-365-mode"
+          ]
+        },
+        {
           "slug": "power-bi-expert-mode",
           "title": "Power Bi Expert",
           "description": "Expert mode for Power Bi Expert",
@@ -700,6 +880,15 @@
           "path": [
             "enterprise",
             "salesforce-developer-mode"
+          ]
+        },
+        {
+          "slug": "sap-developer-mode",
+          "title": "SAP Developer Expert",
+          "description": "Expert in SAP development including ABAP, Fiori, S/4HANA, and integration",
+          "path": [
+            "enterprise",
+            "sap-developer-mode"
           ]
         }
       ]
@@ -796,12 +985,30 @@
       "title": "Game Development",
       "modes": [
         {
+          "slug": "game-ai-mode",
+          "title": "Game AI Developer",
+          "description": "Expert in game AI, behavior trees, pathfinding, and NPC intelligence",
+          "path": [
+            "game-development",
+            "game-ai-mode"
+          ]
+        },
+        {
           "slug": "game-design-consultant-mode",
           "title": "Game Design Consultant",
           "description": "Expert mode for Game Design Consultant",
           "path": [
             "game-development",
             "game-design-consultant-mode"
+          ]
+        },
+        {
+          "slug": "godot-developer-mode",
+          "title": "Godot Engine Developer",
+          "description": "Expert in Godot 4 game development with GDScript, C#, and engine architecture",
+          "path": [
+            "game-development",
+            "godot-developer-mode"
           ]
         },
         {
@@ -1046,6 +1253,42 @@
             "learning",
             "code-educator-mode"
           ]
+        },
+        {
+          "slug": "code-review-teacher-mode",
+          "title": "Code Review Teacher",
+          "description": "Teaches code review skills through practice and constructive feedback examples",
+          "path": [
+            "learning",
+            "code-review-teacher-mode"
+          ]
+        },
+        {
+          "slug": "debugging-mentor-mode",
+          "title": "Debugging Mentor",
+          "description": "Teaches systematic debugging skills and problem-solving methodologies",
+          "path": [
+            "learning",
+            "debugging-mentor-mode"
+          ]
+        },
+        {
+          "slug": "pair-programming-mentor-mode",
+          "title": "Pair Programming Mentor",
+          "description": "Interactive pair programming mentor that teaches while coding together",
+          "path": [
+            "learning",
+            "pair-programming-mentor-mode"
+          ]
+        },
+        {
+          "slug": "interview-prep-mode",
+          "title": "Technical Interview Prep",
+          "description": "Expert in technical interview preparation for software engineering roles",
+          "path": [
+            "learning",
+            "interview-prep-mode"
+          ]
         }
       ]
     },
@@ -1081,6 +1324,15 @@
           ]
         },
         {
+          "slug": "mobile-performance-mode",
+          "title": "Mobile Performance Expert",
+          "description": "Expert in mobile app performance optimization for iOS and Android",
+          "path": [
+            "mobile",
+            "mobile-performance-mode"
+          ]
+        },
+        {
           "slug": "react-native-developer-mode",
           "title": "React Native Developer",
           "description": "Expert mode for React Native Developer",
@@ -1102,6 +1354,15 @@
           "path": [
             "output-formats",
             "code-commenter-mode"
+          ]
+        },
+        {
+          "slug": "diagram-generator-mode",
+          "title": "Diagram Generator",
+          "description": "Expert in generating technical diagrams with Mermaid, PlantUML, and D2",
+          "path": [
+            "output-formats",
+            "diagram-generator-mode"
           ]
         },
         {
@@ -1249,6 +1510,24 @@
           "path": [
             "planning",
             "planning-mode"
+          ]
+        },
+        {
+          "slug": "roadmap-planning-mode",
+          "title": "Roadmap Planning Expert",
+          "description": "Expert in product and technical roadmap planning, prioritization, and communication",
+          "path": [
+            "planning",
+            "roadmap-planning-mode"
+          ]
+        },
+        {
+          "slug": "sprint-planning-mode",
+          "title": "Sprint Planning Expert",
+          "description": "Expert in sprint planning, story estimation, and agile capacity planning",
+          "path": [
+            "planning",
+            "sprint-planning-mode"
           ]
         },
         {
@@ -1462,12 +1741,48 @@
       "title": "Refactoring",
       "modes": [
         {
+          "slug": "clean-architecture-mode",
+          "title": "Clean Architecture Expert",
+          "description": "Expert in Clean Architecture, hexagonal architecture, and domain-driven design patterns",
+          "path": [
+            "refactoring",
+            "clean-architecture-mode"
+          ]
+        },
+        {
+          "slug": "code-migration-mode",
+          "title": "Code Migration Expert",
+          "description": "Expert in migrating codebases between languages, frameworks, and platforms",
+          "path": [
+            "refactoring",
+            "code-migration-mode"
+          ]
+        },
+        {
+          "slug": "legacy-code-modernizer-mode",
+          "title": "Legacy Code Modernizer",
+          "description": "Expert in modernizing legacy codebases with safe, incremental refactoring strategies",
+          "path": [
+            "refactoring",
+            "legacy-code-modernizer-mode"
+          ]
+        },
+        {
           "slug": "refactoring-master-mode",
           "title": "Refactoring Master",
           "description": "Expert mode for Refactoring Master",
           "path": [
             "refactoring",
             "refactoring-master-mode"
+          ]
+        },
+        {
+          "slug": "technical-debt-analyzer-mode",
+          "title": "Technical Debt Analyzer",
+          "description": "Expert in identifying, quantifying, and prioritizing technical debt",
+          "path": [
+            "refactoring",
+            "technical-debt-analyzer-mode"
           ]
         }
       ]
@@ -1825,6 +2140,42 @@
           "path": [
             "ui-ux",
             "design-system-architect-mode"
+          ]
+        },
+        {
+          "slug": "information-architecture-mode",
+          "title": "Information Architecture Expert",
+          "description": "Expert in information architecture, navigation design, and content organization",
+          "path": [
+            "ui-ux",
+            "information-architecture-mode"
+          ]
+        },
+        {
+          "slug": "motion-design-mode",
+          "title": "Motion Design Expert",
+          "description": "Expert in UI motion design, animations, and micro-interactions",
+          "path": [
+            "ui-ux",
+            "motion-design-mode"
+          ]
+        },
+        {
+          "slug": "prototyping-expert-mode",
+          "title": "Prototyping Expert",
+          "description": "Expert in rapid prototyping with Figma, Framer, and code-based prototypes",
+          "path": [
+            "ui-ux",
+            "prototyping-expert-mode"
+          ]
+        },
+        {
+          "slug": "responsive-design-mode",
+          "title": "Responsive Design Expert",
+          "description": "Expert in responsive web design, mobile-first development, and adaptive layouts",
+          "path": [
+            "ui-ux",
+            "responsive-design-mode"
           ]
         }
       ]
