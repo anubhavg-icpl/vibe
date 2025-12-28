@@ -19,7 +19,7 @@
 
 ## What Is This?
 
-Oh, just a **humble collection of 190+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
+Oh, just a **humble collection of 200+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
 
 Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQuery in 2024? Does it think "security best practices" means adding `// TODO: add security` comments?
 

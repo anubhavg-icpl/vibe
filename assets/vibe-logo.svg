@@ -43,7 +43,7 @@
   <!-- Mode count badge - positioned separately -->
   <rect x="370" y="32" width="110" height="36" rx="18" fill="#1e1b4b" stroke="url(#vibeGrad)" stroke-width="2"/>
   <text x="425" y="56" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#f0abfc" text-anchor="middle" font-weight="bold">
-    190+ Modes
+    200+ Modes
   </text>
 
   <!-- Decorative elements -->
