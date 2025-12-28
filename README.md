@@ -19,7 +19,7 @@
 
 ## What Is This?
 
-Oh, just a **humble collection of 150+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
+Oh, just a **humble collection of 165+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
 
 Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQuery in 2024? Does it think "security best practices" means adding `// TODO: add security` comments?
 
@@ -29,7 +29,7 @@ Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQ
 
 | What You Get | Why You Need It |
 |--------------|-----------------|
-| **150+ Expert Modes** | Because one-size-fits-all is for socks, not AI |
+| **165+ Expert Modes** | Because one-size-fits-all is for socks, not AI |
 | **30+ Categories** | Organized chaos is still organization |
 | **Production-Ready Standards** | So you can pretend you wrote clean code yourself |
 | **Universal Rules Engine** | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
@@ -46,7 +46,7 @@ Languages & Standards ................ 31 modes (14 languages, 13 coding standar
 Security & Compliance ................ 8 modes  (SOC 2, GDPR, SAST/DAST - all the acronyms)
 AI/ML & Emerging Tech ................ 9 modes  (LLMs, MLOps, WebAssembly - the future is now)
 DevOps & Platform Engineering ........ 8 modes  (GitOps, SRE, AIOps, Chaos Engineering)
-Testing ............................. 8 modes  (Chaos Monkey, Contract Testing - break things professionally)
+Testing ............................. 14 modes (Chaos Monkey, Gremlin, LitmusChaos, Chaos Mesh - break things professionally)
 ```
 
 ### The Fun Stuff
@@ -174,14 +174,15 @@ Set up rules once, apply everywhere:
 
 | Metric | Value |
 |--------|-------|
-| Total Modes | **150+** |
+| Total Modes | **165+** |
 | Categories | **30+** |
 | Languages Covered | **14** |
 | Coding Standards | **13** |
 | Project Templates | **16+** |
 | Personality Modes | **10** |
-| Security Modes | **8** |
-| DevOps/Platform Modes | **8** |
+| Testing/Chaos Modes | **14** |
+| Security Modes | **10** |
+| DevOps/Platform Modes | **11** |
 
 ## Contributing
 
