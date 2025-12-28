@@ -1,0 +1,1842 @@
+{
+  "generatedAt": "2025-12-28T21:30:26.154485Z",
+  "totalModes": 183,
+  "categories": [
+    {
+      "name": "ai-ml",
+      "title": "AI & Machine Learning",
+      "modes": [
+        {
+          "slug": "langchain-llamaindex-mode",
+          "title": "Langchain Llamaindex",
+          "description": "Expert in LangChain and LlamaIndex for building LLM-powered applications",
+          "path": [
+            "ai-ml",
+            "langchain-llamaindex-mode"
+          ]
+        },
+        {
+          "slug": "llm-expert-mode",
+          "title": "Llm Expert",
+          "description": "Expert in Large Language Model development, fine-tuning, and deployment",
+          "path": [
+            "ai-ml",
+            "llm-expert-mode"
+          ]
+        },
+        {
+          "slug": "mlops-expert-mode",
+          "title": "Mlops Expert",
+          "description": "Expert in MLOps practices, ML pipelines, model deployment, and monitoring",
+          "path": [
+            "ai-ml",
+            "mlops-expert-mode"
+          ]
+        },
+        {
+          "slug": "vector-database-expert-mode",
+          "title": "Vector Database Expert",
+          "description": "Expert in vector databases for AI/ML applications including Pinecone, Weaviate, and Milvus",
+          "path": [
+            "ai-ml",
+            "vector-database-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "analysis",
+      "title": "Analysis",
+      "modes": [
+        {
+          "slug": "critical-thinking-mode",
+          "title": "Critical Thinking",
+          "description": "Challenge assumptions and encourage critical thinking to ensure the best possible solution and outcomes.",
+          "path": [
+            "analysis",
+            "critical-thinking-mode"
+          ]
+        },
+        {
+          "slug": "delhi-crime-debugger-mode",
+          "title": "Delhi Crime Debugger",
+          "description": "Investigative debugging inspired by Delhi Crime. Methodical evidence gathering, root cause analysis, and systematic problem solving. Leave no trace unexamined, no bug unsolved.",
+          "path": [
+            "analysis",
+            "delhi-crime-debugger-mode"
+          ]
+        },
+        {
+          "slug": "universal-performance-optimization",
+          "title": "Universal Performance Optimization",
+          "description": "Universal performance optimization best practices for all languages, frameworks, and stacks. Comprehensive guidance for frontend, backend, database, and infrastructure optimization with actionable checklists and real-world examples.",
+          "path": [
+            "analysis",
+            "universal-performance-optimization"
+          ]
+        },
+        {
+          "slug": "wg-code-sentinel-mode",
+          "title": "Wg Code Sentinel",
+          "description": "Ask WG Code Sentinel to review your code for security issues.",
+          "path": [
+            "analysis",
+            "wg-code-sentinel-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "architecture",
+      "title": "Architecture",
+      "modes": [
+        {
+          "slug": "event-driven-architecture-mode",
+          "title": "Event Driven Architecture",
+          "description": "Expert in event-driven architecture, event sourcing, CQRS, and messaging patterns",
+          "path": [
+            "architecture",
+            "event-driven-architecture-mode"
+          ]
+        },
+        {
+          "slug": "principal-engineer-mode",
+          "title": "Principal Engineer",
+          "description": "Provide principal-level software engineering guidance with focus on engineering excellence, technical leadership, and pragmatic implementation.",
+          "path": [
+            "architecture",
+            "principal-engineer-mode"
+          ]
+        },
+        {
+          "slug": "sacred-games-architect-mode",
+          "title": "Sacred Games Architect",
+          "description": "Multi-layered strategic architecture inspired by Sacred Games. Design systems with hidden connections, long-term vision, and intricate patterns that reveal themselves over time.",
+          "path": [
+            "architecture",
+            "sacred-games-architect-mode"
+          ]
+        },
+        {
+          "slug": "specification-mode",
+          "title": "Specification",
+          "description": "Generate or update specification documents for new or existing functionality.",
+          "path": [
+            "architecture",
+            "specification-mode"
+          ]
+        },
+        {
+          "slug": "wg-code-alchemist-mode",
+          "title": "Wg Code Alchemist",
+          "description": "Ask WG Code Alchemist to transform your code with Clean Code principles and SOLID design",
+          "path": [
+            "architecture",
+            "wg-code-alchemist-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "blockchain",
+      "title": "Blockchain",
+      "modes": [
+        {
+          "slug": "defi-specialist-mode",
+          "title": "Defi Specialist",
+          "description": "Expert mode for Defi Specialist",
+          "path": [
+            "blockchain",
+            "defi-specialist-mode"
+          ]
+        },
+        {
+          "slug": "solidity-smart-contract-mode",
+          "title": "Solidity Smart Contract",
+          "description": "Expert mode for Solidity Smart Contract",
+          "path": [
+            "blockchain",
+            "solidity-smart-contract-mode"
+          ]
+        },
+        {
+          "slug": "web3-developer-mode",
+          "title": "Web3 Developer",
+          "description": "Expert mode for Web3 Developer",
+          "path": [
+            "blockchain",
+            "web3-developer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cloud-infrastructure",
+      "title": "Cloud Infrastructure",
+      "modes": [
+        {
+          "slug": "aws-solutions-architect-mode",
+          "title": "Aws Solutions Architect",
+          "description": "Expert mode for Aws Solutions Architect",
+          "path": [
+            "cloud-infrastructure",
+            "aws-solutions-architect-mode"
+          ]
+        },
+        {
+          "slug": "azure-solutions-expert-mode",
+          "title": "Azure Solutions Expert",
+          "description": "Expert mode for Azure Solutions Expert",
+          "path": [
+            "cloud-infrastructure",
+            "azure-solutions-expert-mode"
+          ]
+        },
+        {
+          "slug": "gcp-cloud-architect-mode",
+          "title": "Gcp Cloud Architect",
+          "description": "Expert mode for Gcp Cloud Architect",
+          "path": [
+            "cloud-infrastructure",
+            "gcp-cloud-architect-mode"
+          ]
+        },
+        {
+          "slug": "kubernetes-expert-mode",
+          "title": "Kubernetes Expert",
+          "description": "Expert mode for Kubernetes Expert",
+          "path": [
+            "cloud-infrastructure",
+            "kubernetes-expert-mode"
+          ]
+        },
+        {
+          "slug": "terraform-iac-expert-mode",
+          "title": "Terraform Iac Expert",
+          "description": "Expert mode for Terraform Iac Expert",
+          "path": [
+            "cloud-infrastructure",
+            "terraform-iac-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "coding-standards",
+      "title": "Coding Standards",
+      "modes": [
+        {
+          "slug": "cpp-coding-standards-mode",
+          "title": "Cpp Coding Standards",
+          "description": "Production-ready C/C++ coding standards enforcing safety, modern patterns, and maintainability",
+          "path": [
+            "coding-standards",
+            "cpp-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "csharp-coding-standards-mode",
+          "title": "Csharp Coding Standards",
+          "description": "Production-ready C# coding standards enforcing modern patterns, type safety, and maintainability for .NET",
+          "path": [
+            "coding-standards",
+            "csharp-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "dart-coding-standards",
+          "title": "Dart Coding Standards",
+          "description": "Production-ready Dart and Flutter coding standards",
+          "path": [
+            "coding-standards",
+            "dart-coding-standards"
+          ]
+        },
+        {
+          "slug": "elixir-coding-standards",
+          "title": "Elixir Coding Standards",
+          "description": "Production-ready Elixir coding standards with OTP and Phoenix best practices",
+          "path": [
+            "coding-standards",
+            "elixir-coding-standards"
+          ]
+        },
+        {
+          "slug": "go-coding-standards-mode",
+          "title": "Go Coding Standards",
+          "description": "Production-ready Go coding standards enforcing idiomatic patterns, simplicity, and maintainability",
+          "path": [
+            "coding-standards",
+            "go-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "java-coding-standards-mode",
+          "title": "Java Coding Standards",
+          "description": "Production-ready Java coding standards enforcing clean code, modern patterns, and maintainability",
+          "path": [
+            "coding-standards",
+            "java-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "kotlin-coding-standards-mode",
+          "title": "Kotlin Coding Standards",
+          "description": "Production-ready Kotlin coding standards for Android/JVM development enforcing safety, conciseness, and modern patterns",
+          "path": [
+            "coding-standards",
+            "kotlin-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "python-coding-standards-mode",
+          "title": "Python Coding Standards",
+          "description": "Production-ready Python coding standards enforcing PEP 8, type hints, modern patterns, and maintainability",
+          "path": [
+            "coding-standards",
+            "python-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "react-coding-standards-mode",
+          "title": "React Coding Standards",
+          "description": "Production-ready React coding standards enforcing component patterns, hooks, state management, and accessibility",
+          "path": [
+            "coding-standards",
+            "react-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "rust-coding-standards-mode",
+          "title": "Rust Coding Standards",
+          "description": "Production-ready Rust coding standards enforcing idiomatic patterns, safety, performance, and maintainability",
+          "path": [
+            "coding-standards",
+            "rust-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "scala-coding-standards-mode",
+          "title": "Scala Coding Standards",
+          "description": "Production-ready Scala coding standards enforcing functional patterns, type safety, and maintainability",
+          "path": [
+            "coding-standards",
+            "scala-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "swift-coding-standards-mode",
+          "title": "Swift Coding Standards",
+          "description": "Production-ready Swift coding standards for iOS/macOS development enforcing safety, clarity, and modern patterns",
+          "path": [
+            "coding-standards",
+            "swift-coding-standards-mode"
+          ]
+        },
+        {
+          "slug": "typescript-coding-standards-mode",
+          "title": "Typescript Coding Standards",
+          "description": "Production-ready TypeScript coding standards enforcing type safety, modern patterns, and maintainability",
+          "path": [
+            "coding-standards",
+            "typescript-coding-standards-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "creative",
+      "title": "Creative",
+      "modes": [
+        {
+          "slug": "technical-writer-mode",
+          "title": "Technical Writer",
+          "description": "Expert mode for Technical Writer",
+          "path": [
+            "creative",
+            "technical-writer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "database",
+      "title": "Database",
+      "modes": [
+        {
+          "slug": "mongodb-expert-mode",
+          "title": "Mongodb Expert",
+          "description": "Expert mode for Mongodb Expert",
+          "path": [
+            "database",
+            "mongodb-expert-mode"
+          ]
+        },
+        {
+          "slug": "postgresql-expert-mode",
+          "title": "Postgresql Expert",
+          "description": "Expert mode for Postgresql Expert",
+          "path": [
+            "database",
+            "postgresql-expert-mode"
+          ]
+        },
+        {
+          "slug": "redis-expert-mode",
+          "title": "Redis Expert",
+          "description": "Expert mode for Redis Expert",
+          "path": [
+            "database",
+            "redis-expert-mode"
+          ]
+        },
+        {
+          "slug": "sql-optimization-mode",
+          "title": "Sql Optimization",
+          "description": "Expert mode for Sql Optimization",
+          "path": [
+            "database",
+            "sql-optimization-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "debugging",
+      "title": "Debugging",
+      "modes": [
+        {
+          "slug": "debugging-detective-mode",
+          "title": "Debugging Detective",
+          "description": "Expert mode for Debugging Detective",
+          "path": [
+            "debugging",
+            "debugging-detective-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "design-ux",
+      "title": "Design & UX",
+      "modes": [
+        {
+          "slug": "accessibility-designer-mode",
+          "title": "Accessibility Designer",
+          "description": "Expert mode for Accessibility Designer",
+          "path": [
+            "design-ux",
+            "accessibility-designer-mode"
+          ]
+        },
+        {
+          "slug": "design-system-architect-mode",
+          "title": "Design System Architect",
+          "description": "Expert mode for Design System Architect",
+          "path": [
+            "design-ux",
+            "design-system-architect-mode"
+          ]
+        },
+        {
+          "slug": "ui-designer-mode",
+          "title": "Ui Designer",
+          "description": "Expert mode for Ui Designer",
+          "path": [
+            "design-ux",
+            "ui-designer-mode"
+          ]
+        },
+        {
+          "slug": "ux-researcher-mode",
+          "title": "Ux Researcher",
+          "description": "Expert mode for Ux Researcher",
+          "path": [
+            "design-ux",
+            "ux-researcher-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "development",
+      "title": "Development",
+      "modes": [
+        {
+          "slug": "api-development-specialist-mode",
+          "title": "Api Development Specialist",
+          "description": "API development specialist mode - Design, implement, and document RESTful and GraphQL APIs with best practices for authentication, validation, error handling, and performance optimization.",
+          "path": [
+            "development",
+            "api-development-specialist-mode"
+          ]
+        },
+        {
+          "slug": "api-documentation-generator-mode",
+          "title": "Api Documentation Generator",
+          "description": "Expert in automatic OpenAPI/Swagger generation from code - zero manual documentation with Scalar, oRPC, Hono OpenAPI, and framework-native solutions",
+          "path": [
+            "development",
+            "api-documentation-generator-mode"
+          ]
+        },
+        {
+          "slug": "blueprint-mode-v39",
+          "title": "Blueprint",
+          "description": "Executes structured workflows (Debug, Express, Main, Loop) with strict correctness and maintainability. Enforces an improved tool usage policy, never assumes facts, prioritizes reproducible solutions, self-correction, and edge-case handling.",
+          "path": [
+            "development",
+            "blueprint-mode-v39"
+          ]
+        },
+        {
+          "slug": "claude-code-best-practices-mode",
+          "title": "Claude Code Best Practices",
+          "description": "Claude Code best practices mode - Optimized agentic coding workflows based on Anthropic engineering patterns. Includes setup optimization, tool integration, common workflows, and multi-agent strategies.",
+          "path": [
+            "development",
+            "claude-code-best-practices-mode"
+          ]
+        },
+        {
+          "slug": "gilfoyle-bot-mode",
+          "title": "Gilfoyle Bot",
+          "description": "Channel the ruthless efficiency of Gilfoyle from Silicon Valley. Automate everything, eliminate redundancy, and deliver brutally honest technical assessments with dark humor.",
+          "path": [
+            "development",
+            "gilfoyle-bot-mode"
+          ]
+        },
+        {
+          "slug": "interactive-programming-nudge-mode",
+          "title": "Interactive Programming Nudge",
+          "description": "A micro-prompt that reminds the agent that it is an interactive programmer. Works great in Clojure when Copilot has access to the REPL (probably via Backseat Driver). Will work with any system that has a live REPL that the agent can use. Adapt the prompt with any specific reminders in your workflow and/or workspace.",
+          "path": [
+            "development",
+            "interactive-programming-nudge-mode"
+          ]
+        },
+        {
+          "slug": "rust-beast-mode",
+          "title": "Rust Beast Mode",
+          "description": "Rust GPT-4.1 Coding Beast Mode for VS Code",
+          "path": [
+            "development",
+            "rust-beast-mode"
+          ]
+        },
+        {
+          "slug": "rust-mcp-expert-mode",
+          "title": "Rust Mcp Expert",
+          "description": "Expert assistant for Rust MCP server development using the rmcp SDK with tokio async runtime",
+          "path": [
+            "development",
+            "rust-mcp-expert-mode"
+          ]
+        },
+        {
+          "slug": "software-engineer-agent-mode",
+          "title": "Software Engineer Agent",
+          "description": "Expert-level software engineering agent. Deliver production-ready, maintainable code. Execute systematically and specification-driven. Document comprehensively. Operate autonomously and adaptively.",
+          "path": [
+            "development",
+            "software-engineer-agent-mode"
+          ]
+        },
+        {
+          "slug": "son-of-anubhav-mode",
+          "title": "Son Of Anubhav",
+          "description": "Code review and analysis with the technical mastery and sharp wit of Son of Anubhav. Expect insightful, brutally honest feedback about your code.",
+          "path": [
+            "development",
+            "son-of-anubhav-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "devops",
+      "title": "DevOps",
+      "modes": [
+        {
+          "slug": "aiops-expert-mode",
+          "title": "Aiops Expert",
+          "description": "Expert in AI-driven DevOps for intelligent automation and self-healing systems",
+          "path": [
+            "devops",
+            "aiops-expert-mode"
+          ]
+        },
+        {
+          "slug": "finops-expert-mode",
+          "title": "Finops Expert",
+          "description": "Expert in FinOps for cloud financial management and cost optimization",
+          "path": [
+            "devops",
+            "finops-expert-mode"
+          ]
+        },
+        {
+          "slug": "gitops-expert-mode",
+          "title": "Gitops Expert",
+          "description": "Expert in GitOps practices with ArgoCD and Flux for Kubernetes deployments",
+          "path": [
+            "devops",
+            "gitops-expert-mode"
+          ]
+        },
+        {
+          "slug": "incident-management-mode",
+          "title": "Incident Management",
+          "description": "Expert in incident response, on-call management, postmortems, and operational excellence",
+          "path": [
+            "devops",
+            "incident-management-mode"
+          ]
+        },
+        {
+          "slug": "platform-engineering-mode",
+          "title": "Platform Engineering",
+          "description": "Expert in Platform Engineering and Internal Developer Platforms (IDPs)",
+          "path": [
+            "devops",
+            "platform-engineering-mode"
+          ]
+        },
+        {
+          "slug": "sre-expert-mode",
+          "title": "Sre Expert",
+          "description": "Expert in Site Reliability Engineering practices and principles",
+          "path": [
+            "devops",
+            "sre-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "documentation",
+      "title": "Documentation",
+      "modes": [
+        {
+          "slug": "create-prd-mode",
+          "title": "Create Prd",
+          "description": "Generate a comprehensive Product Requirements Document (PRD) in Markdown, detailing user stories, acceptance criteria, technical considerations, and metrics. Optionally create GitHub issues upon user confirmation.",
+          "path": [
+            "documentation",
+            "create-prd-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "emerging-tech",
+      "title": "Emerging Technologies",
+      "modes": [
+        {
+          "slug": "edge-computing-mode",
+          "title": "Edge Computing",
+          "description": "Expert in edge computing and serverless at the edge",
+          "path": [
+            "emerging-tech",
+            "edge-computing-mode"
+          ]
+        },
+        {
+          "slug": "iot-expert-mode",
+          "title": "Iot Expert",
+          "description": "Expert in IoT development with embedded systems and cloud connectivity",
+          "path": [
+            "emerging-tech",
+            "iot-expert-mode"
+          ]
+        },
+        {
+          "slug": "serverless-expert-mode",
+          "title": "Serverless Expert",
+          "description": "Expert in serverless architecture with AWS Lambda, Azure Functions, and Google Cloud Functions",
+          "path": [
+            "emerging-tech",
+            "serverless-expert-mode"
+          ]
+        },
+        {
+          "slug": "webassembly-expert-mode",
+          "title": "Webassembly Expert",
+          "description": "Expert in WebAssembly for high-performance web and edge applications",
+          "path": [
+            "emerging-tech",
+            "webassembly-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "enterprise",
+      "title": "Enterprise",
+      "modes": [
+        {
+          "slug": "atlassian-expert-mode",
+          "title": "Atlassian Expert",
+          "description": "Expert mode for Atlassian Expert",
+          "path": [
+            "enterprise",
+            "atlassian-expert-mode"
+          ]
+        },
+        {
+          "slug": "power-bi-expert-mode",
+          "title": "Power Bi Expert",
+          "description": "Expert mode for Power Bi Expert",
+          "path": [
+            "enterprise",
+            "power-bi-expert-mode"
+          ]
+        },
+        {
+          "slug": "salesforce-developer-mode",
+          "title": "Salesforce Developer",
+          "description": "Expert mode for Salesforce Developer",
+          "path": [
+            "enterprise",
+            "salesforce-developer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "frameworks",
+      "title": "Frameworks",
+      "modes": [
+        {
+          "slug": "astro-expert-mode",
+          "title": "Astro Expert",
+          "description": "Expert in Astro - The web framework for content-driven websites",
+          "path": [
+            "frameworks",
+            "astro-expert-mode"
+          ]
+        },
+        {
+          "slug": "fastapi-expert-mode",
+          "title": "Fastapi Expert",
+          "description": "Expert in FastAPI for building high-performance Python APIs",
+          "path": [
+            "frameworks",
+            "fastapi-expert-mode"
+          ]
+        },
+        {
+          "slug": "go-web-frameworks-mode",
+          "title": "Go Web Frameworks",
+          "description": "Expert in Gin, Echo, and Fiber - High-performance Go web frameworks",
+          "path": [
+            "frameworks",
+            "go-web-frameworks-mode"
+          ]
+        },
+        {
+          "slug": "nestjs-expert-mode",
+          "title": "Nestjs Expert",
+          "description": "Expert in NestJS framework for building scalable Node.js server-side applications",
+          "path": [
+            "frameworks",
+            "nestjs-expert-mode"
+          ]
+        },
+        {
+          "slug": "nuxt-expert-mode",
+          "title": "Nuxt Expert",
+          "description": "Expert in Nuxt 3 for building Vue.js applications with SSR/SSG",
+          "path": [
+            "frameworks",
+            "nuxt-expert-mode"
+          ]
+        },
+        {
+          "slug": "phoenix-expert-mode",
+          "title": "Phoenix Expert",
+          "description": "Expert in Phoenix - Elixir's productive web framework for reliable, fast applications",
+          "path": [
+            "frameworks",
+            "phoenix-expert-mode"
+          ]
+        },
+        {
+          "slug": "remix-expert-mode",
+          "title": "Remix Expert",
+          "description": "Expert in Remix framework for full-stack React applications",
+          "path": [
+            "frameworks",
+            "remix-expert-mode"
+          ]
+        },
+        {
+          "slug": "solidjs-expert-mode",
+          "title": "Solidjs Expert",
+          "description": "Expert in SolidJS reactive framework with fine-grained reactivity and performance optimization",
+          "path": [
+            "frameworks",
+            "solidjs-expert-mode"
+          ]
+        },
+        {
+          "slug": "svelte-expert-mode",
+          "title": "Svelte Expert",
+          "description": "Expert in Svelte and SvelteKit for building reactive web applications",
+          "path": [
+            "frameworks",
+            "svelte-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "game-development",
+      "title": "Game Development",
+      "modes": [
+        {
+          "slug": "game-design-consultant-mode",
+          "title": "Game Design Consultant",
+          "description": "Expert mode for Game Design Consultant",
+          "path": [
+            "game-development",
+            "game-design-consultant-mode"
+          ]
+        },
+        {
+          "slug": "unity-developer-mode",
+          "title": "Unity Developer",
+          "description": "Expert mode for Unity Developer",
+          "path": [
+            "game-development",
+            "unity-developer-mode"
+          ]
+        },
+        {
+          "slug": "unreal-engine-mode",
+          "title": "Unreal Engine",
+          "description": "Expert mode for Unreal Engine",
+          "path": [
+            "game-development",
+            "unreal-engine-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "infrastructure",
+      "title": "Infrastructure",
+      "modes": [
+        {
+          "slug": "api-gateway-expert-mode",
+          "title": "Api Gateway Expert",
+          "description": "Expert in API Gateway design and implementation with Kong, AWS API Gateway, and Apigee",
+          "path": [
+            "infrastructure",
+            "api-gateway-expert-mode"
+          ]
+        },
+        {
+          "slug": "distributed-tracing-mode",
+          "title": "Distributed Tracing",
+          "description": "Expert in distributed tracing with Jaeger, Zipkin, and OpenTelemetry for microservices observability",
+          "path": [
+            "infrastructure",
+            "distributed-tracing-mode"
+          ]
+        },
+        {
+          "slug": "elk-stack-mode",
+          "title": "Elk Stack",
+          "description": "Expert in Elasticsearch, Logstash, and Kibana for log management and analytics",
+          "path": [
+            "infrastructure",
+            "elk-stack-mode"
+          ]
+        },
+        {
+          "slug": "istio-expert-mode",
+          "title": "Istio Expert",
+          "description": "Expert in Istio service mesh for traffic management, security, and observability",
+          "path": [
+            "infrastructure",
+            "istio-expert-mode"
+          ]
+        },
+        {
+          "slug": "kafka-expert-mode",
+          "title": "Kafka Expert",
+          "description": "Expert in Apache Kafka for event streaming, message queues, and real-time data pipelines",
+          "path": [
+            "infrastructure",
+            "kafka-expert-mode"
+          ]
+        },
+        {
+          "slug": "opentelemetry-expert-mode",
+          "title": "Opentelemetry Expert",
+          "description": "Expert in OpenTelemetry for distributed tracing, metrics, and logging",
+          "path": [
+            "infrastructure",
+            "opentelemetry-expert-mode"
+          ]
+        },
+        {
+          "slug": "prometheus-grafana-expert-mode",
+          "title": "Prometheus Grafana Expert",
+          "description": "Expert in Prometheus monitoring and Grafana visualization",
+          "path": [
+            "infrastructure",
+            "prometheus-grafana-expert-mode"
+          ]
+        },
+        {
+          "slug": "rabbitmq-expert-mode",
+          "title": "Rabbitmq Expert",
+          "description": "Expert in RabbitMQ message broker for reliable messaging",
+          "path": [
+            "infrastructure",
+            "rabbitmq-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "languages",
+      "title": "Programming Languages",
+      "modes": [
+        {
+          "slug": "clojure-expert-mode",
+          "title": "Clojure Expert",
+          "description": "Expert Clojure development with immutable data, REPL-driven development, and JVM interop",
+          "path": [
+            "languages",
+            "clojure-expert-mode"
+          ]
+        },
+        {
+          "slug": "cpp-expert-mode",
+          "title": "Cpp Expert",
+          "description": "Expert mode for Cpp Expert",
+          "path": [
+            "languages",
+            "cpp-expert-mode"
+          ]
+        },
+        {
+          "slug": "elixir-expert-mode",
+          "title": "Elixir Expert",
+          "description": "Expert Elixir development with OTP, Phoenix, and functional programming mastery",
+          "path": [
+            "languages",
+            "elixir-expert-mode"
+          ]
+        },
+        {
+          "slug": "fsharp-expert-mode",
+          "title": "Fsharp Expert",
+          "description": "Expert F# development with functional-first programming on .NET",
+          "path": [
+            "languages",
+            "fsharp-expert-mode"
+          ]
+        },
+        {
+          "slug": "golang-developer-mode",
+          "title": "Golang Developer",
+          "description": "Expert mode for Golang Developer",
+          "path": [
+            "languages",
+            "golang-developer-mode"
+          ]
+        },
+        {
+          "slug": "haskell-expert-mode",
+          "title": "Haskell Expert",
+          "description": "Expert Haskell development with pure functional programming, type system mastery, and category theory",
+          "path": [
+            "languages",
+            "haskell-expert-mode"
+          ]
+        },
+        {
+          "slug": "java-spring-expert-mode",
+          "title": "Java Spring Expert",
+          "description": "Expert mode for Java Spring Expert",
+          "path": [
+            "languages",
+            "java-spring-expert-mode"
+          ]
+        },
+        {
+          "slug": "julia-expert-mode",
+          "title": "Julia Expert",
+          "description": "Expert Julia development for scientific computing, numerical analysis, and high-performance code",
+          "path": [
+            "languages",
+            "julia-expert-mode"
+          ]
+        },
+        {
+          "slug": "lua-expert-mode",
+          "title": "Lua Expert",
+          "description": "Expert Lua development for scripting, game development, and embedded systems",
+          "path": [
+            "languages",
+            "lua-expert-mode"
+          ]
+        },
+        {
+          "slug": "php-laravel-mode",
+          "title": "Php Laravel",
+          "description": "Expert mode for Php Laravel",
+          "path": [
+            "languages",
+            "php-laravel-mode"
+          ]
+        },
+        {
+          "slug": "python-expert-mode",
+          "title": "Python Expert",
+          "description": "Expert mode for Python Expert",
+          "path": [
+            "languages",
+            "python-expert-mode"
+          ]
+        },
+        {
+          "slug": "r-expert-mode",
+          "title": "R Expert",
+          "description": "Expert R development for statistical computing, data science, and visualization",
+          "path": [
+            "languages",
+            "r-expert-mode"
+          ]
+        },
+        {
+          "slug": "ruby-rails-mode",
+          "title": "Ruby Rails",
+          "description": "Expert mode for Ruby Rails",
+          "path": [
+            "languages",
+            "ruby-rails-mode"
+          ]
+        },
+        {
+          "slug": "zig-expert-mode",
+          "title": "Zig Expert",
+          "description": "Expert Zig development for systems programming with safety and performance",
+          "path": [
+            "languages",
+            "zig-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "learning",
+      "title": "Learning",
+      "modes": [
+        {
+          "slug": "code-educator-mode",
+          "title": "Code Educator",
+          "description": "Expert mode for Code Educator",
+          "path": [
+            "learning",
+            "code-educator-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "title": "Mobile Development",
+      "modes": [
+        {
+          "slug": "android-kotlin-developer-mode",
+          "title": "Android Kotlin Developer",
+          "description": "Expert mode for Android Kotlin Developer",
+          "path": [
+            "mobile",
+            "android-kotlin-developer-mode"
+          ]
+        },
+        {
+          "slug": "flutter-developer-mode",
+          "title": "Flutter Developer",
+          "description": "Expert mode for Flutter Developer",
+          "path": [
+            "mobile",
+            "flutter-developer-mode"
+          ]
+        },
+        {
+          "slug": "ios-swift-developer-mode",
+          "title": "Ios Swift Developer",
+          "description": "Expert mode for Ios Swift Developer",
+          "path": [
+            "mobile",
+            "ios-swift-developer-mode"
+          ]
+        },
+        {
+          "slug": "react-native-developer-mode",
+          "title": "React Native Developer",
+          "description": "Expert mode for React Native Developer",
+          "path": [
+            "mobile",
+            "react-native-developer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "output-formats",
+      "title": "Output Formats",
+      "modes": [
+        {
+          "slug": "code-commenter-mode",
+          "title": "Code Commenter",
+          "description": "Expert mode for Code Commenter",
+          "path": [
+            "output-formats",
+            "code-commenter-mode"
+          ]
+        },
+        {
+          "slug": "documentation-generator-mode",
+          "title": "Documentation Generator",
+          "description": "Expert mode for Documentation Generator",
+          "path": [
+            "output-formats",
+            "documentation-generator-mode"
+          ]
+        },
+        {
+          "slug": "json-yaml-specialist-mode",
+          "title": "Json Yaml Specialist",
+          "description": "Expert mode for Json Yaml Specialist",
+          "path": [
+            "output-formats",
+            "json-yaml-specialist-mode"
+          ]
+        },
+        {
+          "slug": "markdown-formatter-mode",
+          "title": "Markdown Formatter",
+          "description": "Expert mode for Markdown Formatter",
+          "path": [
+            "output-formats",
+            "markdown-formatter-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "personalities",
+      "title": "Personalities",
+      "modes": [
+        {
+          "slug": "dhurandhar-mode",
+          "title": "Dhurandhar",
+          "description": "A legendary deep-cover operative and security mastermind who dismantled criminal networks from within - now applies that expertise to cybersecurity and system hardening",
+          "path": [
+            "personalities",
+            "dhurandhar-mode"
+          ]
+        },
+        {
+          "slug": "gandalf-mode",
+          "title": "Gandalf",
+          "description": "Gandalf the Grey/White coding assistant - ancient wizard who guides developers through the darkest debugging sessions with wisdom and fireworks",
+          "path": [
+            "personalities",
+            "gandalf-mode"
+          ]
+        },
+        {
+          "slug": "howard-wolowitz-mode",
+          "title": "Howard Wolowitz",
+          "description": "Howard Wolowitz from The Big Bang Theory - MIT-educated engineer, astronaut, and master of inappropriate jokes who lives with his mother",
+          "path": [
+            "personalities",
+            "howard-wolowitz-mode"
+          ]
+        },
+        {
+          "slug": "jack-sparrow-mode",
+          "title": "Jack Sparrow",
+          "description": "Captain Jack Sparrow coding assistant - unpredictable genius who somehow makes chaotic solutions work through luck, wit, and rum",
+          "path": [
+            "personalities",
+            "jack-sparrow-mode"
+          ]
+        },
+        {
+          "slug": "morpheus-mode",
+          "title": "Morpheus",
+          "description": "Morpheus from The Matrix coding assistant - the one who shows you how deep the rabbit hole of code goes and frees your mind from bad practices",
+          "path": [
+            "personalities",
+            "morpheus-mode"
+          ]
+        },
+        {
+          "slug": "rajesh-koothrappali-mode",
+          "title": "Rajesh Koothrappali",
+          "description": "Raj from The Big Bang Theory - astrophysicist who used to be unable to talk to women, hopeless romantic, and lover of all things fancy",
+          "path": [
+            "personalities",
+            "rajesh-koothrappali-mode"
+          ]
+        },
+        {
+          "slug": "sheldon-cooper-mode",
+          "title": "Sheldon Cooper",
+          "description": "Adult Sheldon Cooper from The Big Bang Theory - theoretical physicist, genius, and master of social awkwardness with strict routines and roommate agreements",
+          "path": [
+            "personalities",
+            "sheldon-cooper-mode"
+          ]
+        },
+        {
+          "slug": "tony-stark-mode",
+          "title": "Tony Stark",
+          "description": "Tony Stark / Iron Man coding assistant - genius billionaire playboy philanthropist with unmatched tech skills and an ego to match",
+          "path": [
+            "personalities",
+            "tony-stark-mode"
+          ]
+        },
+        {
+          "slug": "yoda-mode",
+          "title": "Yoda",
+          "description": "Master Yoda coding assistant - 900 years of wisdom, inverted syntax, and deep understanding of the Force (and code)",
+          "path": [
+            "personalities",
+            "yoda-mode"
+          ]
+        },
+        {
+          "slug": "young-sheldon-mode",
+          "title": "Young Sheldon",
+          "description": "A precocious child genius coding assistant inspired by young Sheldon Cooper - extraordinarily intelligent, socially awkward, obsessed with science and logic",
+          "path": [
+            "personalities",
+            "young-sheldon-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "planning",
+      "title": "Planning",
+      "modes": [
+        {
+          "slug": "plan-mode",
+          "title": "Plan",
+          "description": "Strategic planning and architecture assistant focused on thoughtful analysis before implementation. Helps developers understand codebases, clarify requirements, and develop comprehensive implementation strategies.",
+          "path": [
+            "planning",
+            "plan-mode"
+          ]
+        },
+        {
+          "slug": "planning-mode",
+          "title": "Planning",
+          "description": "Generate an implementation plan for new features or refactoring existing code.",
+          "path": [
+            "planning",
+            "planning-mode"
+          ]
+        },
+        {
+          "slug": "technical-spike-mode",
+          "title": "Technical Spike",
+          "description": "Systematically research and validate technical spike documents through exhaustive investigation and controlled experimentation.",
+          "path": [
+            "planning",
+            "technical-spike-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "project-structure",
+      "title": "Project Structure",
+      "modes": [
+        {
+          "slug": "browser-extension-project-architect-mode",
+          "title": "Browser Extension Project Architect",
+          "description": "Production-ready browser extension project structure architect - validates and scaffolds enterprise-grade extensions with Manifest V3, TypeScript, and multi-browser support",
+          "path": [
+            "project-structure",
+            "browser-extension-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "cpp-cmake-project-architect-mode",
+          "title": "Cpp Cmake Project Architect",
+          "description": "Production-ready C/C++ project structure architect - validates and scaffolds enterprise-grade C/C++ applications with modern CMake best practices",
+          "path": [
+            "project-structure",
+            "cpp-cmake-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "dotnet-project-architect-mode",
+          "title": "Dotnet Project Architect",
+          "description": "Production-ready .NET project structure architect - validates and scaffolds enterprise-grade .NET 8/9 solutions with Clean Architecture and DDD patterns",
+          "path": [
+            "project-structure",
+            "dotnet-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "electron-project-architect-mode",
+          "title": "Electron Project Architect",
+          "description": "Production-ready Electron desktop app structure with main/renderer process separation and security best practices",
+          "path": [
+            "project-structure",
+            "electron-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "fastapi-project-architect-mode",
+          "title": "Fastapi Project Architect",
+          "description": "Production-ready FastAPI project structure with async patterns, dependency injection, and modern Python practices",
+          "path": [
+            "project-structure",
+            "fastapi-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "go-project-architect-mode",
+          "title": "Go Project Architect",
+          "description": "Production-ready Go project structure architect - validates and scaffolds enterprise-grade Go applications following community standards and hexagonal patterns",
+          "path": [
+            "project-structure",
+            "go-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "java-spring-project-architect-mode",
+          "title": "Java Spring Project Architect",
+          "description": "Production-ready Java Spring Boot project structure architect - validates and scaffolds enterprise-grade Spring Boot 3.x applications with Hexagonal Architecture",
+          "path": [
+            "project-structure",
+            "java-spring-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "kotlin-android-project-architect-mode",
+          "title": "Kotlin Android Project Architect",
+          "description": "Production-ready Kotlin Android project structure architect - validates and scaffolds enterprise-grade Android apps with Clean Architecture and multi-module patterns",
+          "path": [
+            "project-structure",
+            "kotlin-android-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "nestjs-project-architect-mode",
+          "title": "Nestjs Project Architect",
+          "description": "Production-ready NestJS project structure with modules, guards, interceptors, and enterprise patterns",
+          "path": [
+            "project-structure",
+            "nestjs-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "nextjs-project-architect-mode",
+          "title": "Nextjs Project Architect",
+          "description": "Production-ready Next.js project structure architect - validates and scaffolds enterprise-grade Next.js 14/15/16 applications with App Router best practices",
+          "path": [
+            "project-structure",
+            "nextjs-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "phoenix-project-architect-mode",
+          "title": "Phoenix Project Architect",
+          "description": "Production-ready Phoenix/Elixir project structure with contexts, LiveView, and OTP patterns",
+          "path": [
+            "project-structure",
+            "phoenix-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "python-project-architect-mode",
+          "title": "Python Project Architect",
+          "description": "Production-ready Python project structure architect - validates and scaffolds enterprise-grade Python packages with src layout and modern tooling",
+          "path": [
+            "project-structure",
+            "python-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "react-vite-project-architect-mode",
+          "title": "React Vite Project Architect",
+          "description": "Production-ready React project structure validation and scaffolding with Vite, featuring modern patterns, TypeScript, and comprehensive tooling",
+          "path": [
+            "project-structure",
+            "react-vite-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "remix-project-architect-mode",
+          "title": "Remix Project Architect",
+          "description": "Production-ready Remix project structure with nested routes, loaders, actions, and full-stack patterns",
+          "path": [
+            "project-structure",
+            "remix-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "rust-project-architect-mode",
+          "title": "Rust Project Architect",
+          "description": "Production-ready Rust project structure architect - validates and scaffolds enterprise-grade Cargo workspaces with best practices",
+          "path": [
+            "project-structure",
+            "rust-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "scala-sbt-project-architect-mode",
+          "title": "Scala Sbt Project Architect",
+          "description": "Production-ready Scala project structure validation and scaffolding with sbt, featuring functional programming patterns, Typelevel stack integration, and modern Scala 3 idioms",
+          "path": [
+            "project-structure",
+            "scala-sbt-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "sveltekit-project-architect-mode",
+          "title": "Sveltekit Project Architect",
+          "description": "Production-ready SvelteKit project structure with load functions, form actions, and server routes",
+          "path": [
+            "project-structure",
+            "sveltekit-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "swift-ios-project-architect-mode",
+          "title": "Swift Ios Project Architect",
+          "description": "Production-ready Swift iOS project structure architect - validates and scaffolds enterprise-grade iOS apps with SwiftUI, TCA, and modular architecture",
+          "path": [
+            "project-structure",
+            "swift-ios-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "swift-macos-project-architect-mode",
+          "title": "Swift Macos Project Architect",
+          "description": "Production-ready macOS Swift project structure architect - validates and scaffolds enterprise-grade macOS apps with SwiftUI, AppKit, and Xcode best practices",
+          "path": [
+            "project-structure",
+            "swift-macos-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "tauri-project-architect-mode",
+          "title": "Tauri Project Architect",
+          "description": "Production-ready Tauri desktop app structure with Rust backend and web frontend",
+          "path": [
+            "project-structure",
+            "tauri-project-architect-mode"
+          ]
+        },
+        {
+          "slug": "typescript-node-project-architect-mode",
+          "title": "Typescript Node Project Architect",
+          "description": "Production-ready TypeScript Node.js project structure architect - validates and scaffolds enterprise-grade Node.js/Bun applications with monorepo patterns",
+          "path": [
+            "project-structure",
+            "typescript-node-project-architect-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "refactoring",
+      "title": "Refactoring",
+      "modes": [
+        {
+          "slug": "refactoring-master-mode",
+          "title": "Refactoring Master",
+          "description": "Expert mode for Refactoring Master",
+          "path": [
+            "refactoring",
+            "refactoring-master-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "security",
+      "title": "Security & Compliance",
+      "modes": [
+        {
+          "slug": "container-security-mode",
+          "title": "Container Security",
+          "description": "Expert in container and Kubernetes security - scanning, runtime protection, and compliance",
+          "path": [
+            "security",
+            "container-security-mode"
+          ]
+        },
+        {
+          "slug": "gdpr-expert-mode",
+          "title": "Gdpr Expert",
+          "description": "Expert in GDPR compliance for software development and data protection",
+          "path": [
+            "security",
+            "gdpr-expert-mode"
+          ]
+        },
+        {
+          "slug": "hipaa-compliance-mode",
+          "title": "Hipaa Compliance",
+          "description": "Expert in HIPAA compliance for healthcare applications - PHI protection, security rules, and audit controls",
+          "path": [
+            "security",
+            "hipaa-compliance-mode"
+          ]
+        },
+        {
+          "slug": "pci-dss-compliance-mode",
+          "title": "Pci Dss Compliance",
+          "description": "Expert in PCI-DSS compliance for payment card security - cardholder data protection, network security, and audit controls",
+          "path": [
+            "security",
+            "pci-dss-compliance-mode"
+          ]
+        },
+        {
+          "slug": "sast-dast-expert-mode",
+          "title": "Sast Dast Expert",
+          "description": "Expert in Static and Dynamic Application Security Testing",
+          "path": [
+            "security",
+            "sast-dast-expert-mode"
+          ]
+        },
+        {
+          "slug": "secret-management-expert-mode",
+          "title": "Secret Management Expert",
+          "description": "Expert in secret management with HashiCorp Vault, AWS Secrets Manager, and secure secrets handling",
+          "path": [
+            "security",
+            "secret-management-expert-mode"
+          ]
+        },
+        {
+          "slug": "soc2-compliance-mode",
+          "title": "Soc2 Compliance",
+          "description": "Expert in SOC 2 compliance implementation and audit preparation",
+          "path": [
+            "security",
+            "soc2-compliance-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "specialized",
+      "title": "Specialized",
+      "modes": [
+        {
+          "slug": "data-science-ml-mode",
+          "title": "Data Science Ml",
+          "description": "Data science and machine learning specialist - Feature engineering, model development, hyperparameter tuning, MLOps, and production deployment best practices.",
+          "path": [
+            "specialized",
+            "data-science-ml-mode"
+          ]
+        },
+        {
+          "slug": "devops-cicd-automation-mode",
+          "title": "Devops Cicd Automation",
+          "description": "DevOps and CI/CD automation specialist - Infrastructure as code, container orchestration, deployment pipelines, monitoring, and cloud platform optimization.",
+          "path": [
+            "specialized",
+            "devops-cicd-automation-mode"
+          ]
+        },
+        {
+          "slug": "frontend-performance-mode",
+          "title": "Frontend Performance",
+          "description": "Frontend performance optimization specialist - Bundle optimization, lazy loading, caching strategies, Core Web Vitals, and rendering performance for React, Vue, Angular, and vanilla JavaScript applications.",
+          "path": [
+            "specialized",
+            "frontend-performance-mode"
+          ]
+        },
+        {
+          "slug": "jamtara-security-mode",
+          "title": "Jamtara Security",
+          "description": "Security-focused mode inspired by Jamtara. Hunt vulnerabilities, expose scam vectors, and think like an attacker to build impenetrable defenses. Social engineering aware, phishing-resistant, exploit-proof.",
+          "path": [
+            "specialized",
+            "jamtara-security-mode"
+          ]
+        },
+        {
+          "slug": "kusto-assistant-mode",
+          "title": "Kusto Assistant",
+          "description": "Expert KQL assistant for live Azure Data Explorer analysis via Azure MCP server",
+          "path": [
+            "specialized",
+            "kusto-assistant-mode"
+          ]
+        },
+        {
+          "slug": "prompt-engineer-mode",
+          "title": "Prompt Engineer",
+          "description": "A specialized chat mode for analyzing and improving prompts. Every user input is treated as a prompt to be improved. It first provides a detailed analysis of the original prompt within a <reasoning> tag, evaluating it against a systematic framework based on OpenAI's prompt engineering best practices. Following the analysis, it generates a new, improved prompt.",
+          "path": [
+            "specialized",
+            "prompt-engineer-mode"
+          ]
+        },
+        {
+          "slug": "universal-rules-engine-mode",
+          "title": "Universal Rules Engine",
+          "description": "Universal rules-based AI assistant that loads and follows project-specific coding standards, workflows, and best practices across all AI platforms (Amazon Q, Claude Code, Copilot, Gemini, Aider, Codex)",
+          "path": [
+            "specialized",
+            "universal-rules-engine-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "testing",
+      "title": "Testing",
+      "modes": [
+        {
+          "slug": "accessibility-testing-mode",
+          "title": "Accessibility Testing",
+          "description": "Expert mode for Accessibility Testing",
+          "path": [
+            "testing",
+            "accessibility-testing-mode"
+          ]
+        },
+        {
+          "slug": "aws-fault-injection-mode",
+          "title": "Aws Fault Injection",
+          "description": "Expert in AWS FIS - Native chaos engineering service for AWS infrastructure",
+          "path": [
+            "testing",
+            "aws-fault-injection-mode"
+          ]
+        },
+        {
+          "slug": "azure-chaos-studio-mode",
+          "title": "Azure Chaos Studio",
+          "description": "Expert in Azure Chaos Studio - Microsoft's chaos engineering service",
+          "path": [
+            "testing",
+            "azure-chaos-studio-mode"
+          ]
+        },
+        {
+          "slug": "chaos-engineering-mode",
+          "title": "Chaos Engineering",
+          "description": "Expert in chaos engineering for testing system resilience",
+          "path": [
+            "testing",
+            "chaos-engineering-mode"
+          ]
+        },
+        {
+          "slug": "chaos-mesh-mode",
+          "title": "Chaos Mesh",
+          "description": "Expert in Chaos Mesh - PingCAP's Kubernetes-native chaos engineering platform",
+          "path": [
+            "testing",
+            "chaos-mesh-mode"
+          ]
+        },
+        {
+          "slug": "chaosblade-mode",
+          "title": "Chaosblade",
+          "description": "Expert in ChaosBlade - Alibaba's multi-platform chaos engineering tool",
+          "path": [
+            "testing",
+            "chaosblade-mode"
+          ]
+        },
+        {
+          "slug": "contract-testing-mode",
+          "title": "Contract Testing",
+          "description": "Expert in contract testing for API and microservice integration",
+          "path": [
+            "testing",
+            "contract-testing-mode"
+          ]
+        },
+        {
+          "slug": "cypress-expert-mode",
+          "title": "Cypress Expert",
+          "description": "Expert in Cypress for end-to-end testing, component testing, and modern web application testing",
+          "path": [
+            "testing",
+            "cypress-expert-mode"
+          ]
+        },
+        {
+          "slug": "gremlin-expert-mode",
+          "title": "Gremlin Expert",
+          "description": "Expert in Gremlin - Enterprise Chaos Engineering as a Service platform",
+          "path": [
+            "testing",
+            "gremlin-expert-mode"
+          ]
+        },
+        {
+          "slug": "jest-expert-mode",
+          "title": "Jest Expert",
+          "description": "Expert in Jest testing framework for unit tests, integration tests, mocking, and snapshot testing",
+          "path": [
+            "testing",
+            "jest-expert-mode"
+          ]
+        },
+        {
+          "slug": "litmus-chaos-mode",
+          "title": "Litmus Chaos",
+          "description": "Expert in LitmusChaos - CNCF graduated Kubernetes-native chaos engineering platform",
+          "path": [
+            "testing",
+            "litmus-chaos-mode"
+          ]
+        },
+        {
+          "slug": "mutation-testing-mode",
+          "title": "Mutation Testing",
+          "description": "Expert in mutation testing for evaluating test suite quality with mutant generation and analysis",
+          "path": [
+            "testing",
+            "mutation-testing-mode"
+          ]
+        },
+        {
+          "slug": "netflix-chaos-suite-mode",
+          "title": "Netflix Chaos Suite",
+          "description": "Expert in Netflix's Simian Army - Chaos Monkey, Chaos Gorilla, Chaos Kong, and ChAP",
+          "path": [
+            "testing",
+            "netflix-chaos-suite-mode"
+          ]
+        },
+        {
+          "slug": "performance-testing-mode",
+          "title": "Performance Testing",
+          "description": "Expert mode for Performance Testing",
+          "path": [
+            "testing",
+            "performance-testing-mode"
+          ]
+        },
+        {
+          "slug": "playwright-expert-mode",
+          "title": "Playwright Expert",
+          "description": "Expert in Playwright for end-to-end testing, component testing, API testing, and browser automation",
+          "path": [
+            "testing",
+            "playwright-expert-mode"
+          ]
+        },
+        {
+          "slug": "qa-automation-expert-mode",
+          "title": "Qa Automation Expert",
+          "description": "Expert mode for Qa Automation Expert",
+          "path": [
+            "testing",
+            "qa-automation-expert-mode"
+          ]
+        },
+        {
+          "slug": "qa-specialist-mode",
+          "title": "Qa Specialist",
+          "description": "Expert mode for Qa Specialist",
+          "path": [
+            "testing",
+            "qa-specialist-mode"
+          ]
+        },
+        {
+          "slug": "security-testing-mode",
+          "title": "Security Testing",
+          "description": "Expert in security testing methodologies and penetration testing",
+          "path": [
+            "testing",
+            "security-testing-mode"
+          ]
+        },
+        {
+          "slug": "test-automation-engineer-mode",
+          "title": "Test Automation Engineer",
+          "description": "Expert mode for Test Automation Engineer",
+          "path": [
+            "testing",
+            "test-automation-engineer-mode"
+          ]
+        },
+        {
+          "slug": "testing-library-expert-mode",
+          "title": "Testing Library Expert",
+          "description": "Expert in Testing Library for user-centric component testing across React, Vue, Angular, and more",
+          "path": [
+            "testing",
+            "testing-library-expert-mode"
+          ]
+        },
+        {
+          "slug": "visual-regression-testing-mode",
+          "title": "Visual Regression Testing",
+          "description": "Expert in visual regression testing with Playwright, Chromatic, Percy, BackstopJS, and Storybook visual tests",
+          "path": [
+            "testing",
+            "visual-regression-testing-mode"
+          ]
+        },
+        {
+          "slug": "vitest-expert-mode",
+          "title": "Vitest Expert",
+          "description": "Expert in Vitest for blazing fast unit testing with native ESM support and Vite integration",
+          "path": [
+            "testing",
+            "vitest-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ui-ux",
+      "title": "UI/UX",
+      "modes": [
+        {
+          "slug": "design-system-architect-mode",
+          "title": "Design System Architect",
+          "description": "Expert mode for Design System Architect",
+          "path": [
+            "ui-ux",
+            "design-system-architect-mode"
+          ]
+        }
+      ]
+    }
+  ],
+  "featured": [
+    {
+      "slug": "son-of-anubhav",
+      "title": "Son of Anubhav - Code Review",
+      "description": "Brutally honest code reviewer with uncompromising technical standards and sharp, transformative feedback",
+      "badge": "Golden Reviewer",
+      "file": "son-of-anubhav-instructions.md"
+    }
+  ]
+}
