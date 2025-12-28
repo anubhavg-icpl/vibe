@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2025-12-28T21:30:26.154485Z",
-  "totalModes": 183,
+  "generatedAt": "2025-12-28T21:40:29.939408Z",
+  "totalModes": 200,
   "categories": [
     {
       "name": "ai-ml",
@@ -148,6 +148,15 @@
           "path": [
             "blockchain",
             "defi-specialist-mode"
+          ]
+        },
+        {
+          "slug": "nft-developer-mode",
+          "title": "NFT Developer Expert",
+          "description": "Expert in NFT development, ERC-721/1155 standards, marketplaces, and metadata",
+          "path": [
+            "blockchain",
+            "nft-developer-mode"
           ]
         },
         {
@@ -349,6 +358,24 @@
       "title": "Creative",
       "modes": [
         {
+          "slug": "developer-advocate-mode",
+          "title": "Developer Advocate",
+          "description": "Expert developer advocate creating demos, talks, and community content",
+          "path": [
+            "creative",
+            "developer-advocate-mode"
+          ]
+        },
+        {
+          "slug": "tech-blog-writer-mode",
+          "title": "Tech Blog Writer",
+          "description": "Expert in writing engaging, informative technical blog posts and articles",
+          "path": [
+            "creative",
+            "tech-blog-writer-mode"
+          ]
+        },
+        {
           "slug": "technical-writer-mode",
           "title": "Technical Writer",
           "description": "Expert mode for Technical Writer",
@@ -412,6 +439,24 @@
           "path": [
             "debugging",
             "debugging-detective-mode"
+          ]
+        },
+        {
+          "slug": "log-analysis-mode",
+          "title": "Log Analysis Expert",
+          "description": "Expert in log analysis, pattern recognition, and debugging through log investigation",
+          "path": [
+            "debugging",
+            "log-analysis-mode"
+          ]
+        },
+        {
+          "slug": "memory-profiler-mode",
+          "title": "Memory Profiler",
+          "description": "Expert in memory profiling, leak detection, and memory optimization across languages",
+          "path": [
+            "debugging",
+            "memory-profiler-mode"
           ]
         }
       ]
@@ -619,6 +664,24 @@
       "title": "Documentation",
       "modes": [
         {
+          "slug": "api-reference-mode",
+          "title": "API Reference Writer",
+          "description": "Expert in writing clear, comprehensive API reference documentation",
+          "path": [
+            "documentation",
+            "api-reference-mode"
+          ]
+        },
+        {
+          "slug": "changelog-generator-mode",
+          "title": "Changelog Generator",
+          "description": "Expert in generating clear, informative changelogs following best practices",
+          "path": [
+            "documentation",
+            "changelog-generator-mode"
+          ]
+        },
+        {
           "slug": "create-prd-mode",
           "title": "Create Prd",
           "description": "Generate a comprehensive Product Requirements Document (PRD) in Markdown, detailing user stories, acceptance criteria, technical considerations, and metrics. Optionally create GitHub issues upon user confirmation.",
@@ -685,6 +748,15 @@
           ]
         },
         {
+          "slug": "dynamics-365-mode",
+          "title": "Dynamics 365 Developer",
+          "description": "Expert in Microsoft Dynamics 365 development, Power Platform, and Dataverse",
+          "path": [
+            "enterprise",
+            "dynamics-365-mode"
+          ]
+        },
+        {
           "slug": "power-bi-expert-mode",
           "title": "Power Bi Expert",
           "description": "Expert mode for Power Bi Expert",
@@ -700,6 +772,15 @@
           "path": [
             "enterprise",
             "salesforce-developer-mode"
+          ]
+        },
+        {
+          "slug": "sap-developer-mode",
+          "title": "SAP Developer Expert",
+          "description": "Expert in SAP development including ABAP, Fiori, S/4HANA, and integration",
+          "path": [
+            "enterprise",
+            "sap-developer-mode"
           ]
         }
       ]
@@ -802,6 +883,15 @@
           "path": [
             "game-development",
             "game-design-consultant-mode"
+          ]
+        },
+        {
+          "slug": "godot-developer-mode",
+          "title": "Godot Engine Developer",
+          "description": "Expert in Godot 4 game development with GDScript, C#, and engine architecture",
+          "path": [
+            "game-development",
+            "godot-developer-mode"
           ]
         },
         {
@@ -1046,6 +1136,24 @@
             "learning",
             "code-educator-mode"
           ]
+        },
+        {
+          "slug": "code-review-teacher-mode",
+          "title": "Code Review Teacher",
+          "description": "Teaches code review skills through practice and constructive feedback examples",
+          "path": [
+            "learning",
+            "code-review-teacher-mode"
+          ]
+        },
+        {
+          "slug": "pair-programming-mentor-mode",
+          "title": "Pair Programming Mentor",
+          "description": "Interactive pair programming mentor that teaches while coding together",
+          "path": [
+            "learning",
+            "pair-programming-mentor-mode"
+          ]
         }
       ]
     },
@@ -1249,6 +1357,15 @@
           "path": [
             "planning",
             "planning-mode"
+          ]
+        },
+        {
+          "slug": "sprint-planning-mode",
+          "title": "Sprint Planning Expert",
+          "description": "Expert in sprint planning, story estimation, and agile capacity planning",
+          "path": [
+            "planning",
+            "sprint-planning-mode"
           ]
         },
         {
@@ -1461,6 +1578,24 @@
       "name": "refactoring",
       "title": "Refactoring",
       "modes": [
+        {
+          "slug": "code-migration-mode",
+          "title": "Code Migration Expert",
+          "description": "Expert in migrating codebases between languages, frameworks, and platforms",
+          "path": [
+            "refactoring",
+            "code-migration-mode"
+          ]
+        },
+        {
+          "slug": "legacy-code-modernizer-mode",
+          "title": "Legacy Code Modernizer",
+          "description": "Expert in modernizing legacy codebases with safe, incremental refactoring strategies",
+          "path": [
+            "refactoring",
+            "legacy-code-modernizer-mode"
+          ]
+        },
         {
           "slug": "refactoring-master-mode",
           "title": "Refactoring Master",
@@ -1825,6 +1960,24 @@
           "path": [
             "ui-ux",
             "design-system-architect-mode"
+          ]
+        },
+        {
+          "slug": "motion-design-mode",
+          "title": "Motion Design Expert",
+          "description": "Expert in UI motion design, animations, and micro-interactions",
+          "path": [
+            "ui-ux",
+            "motion-design-mode"
+          ]
+        },
+        {
+          "slug": "responsive-design-mode",
+          "title": "Responsive Design Expert",
+          "description": "Expert in responsive web design, mobile-first development, and adaptive layouts",
+          "path": [
+            "ui-ux",
+            "responsive-design-mode"
           ]
         }
       ]
