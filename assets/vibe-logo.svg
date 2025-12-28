@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <defs>
+    <linearGradient id="vibeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background waves representing "vibe" -->
+  <path d="M0,60 Q25,40 50,60 T100,60 T150,60 T200,60 T250,60 T300,60 T350,60 T400,60"
+        fill="none" stroke="url(#waveGrad)" stroke-width="2" opacity="0.3">
+    <animate attributeName="d"
+             values="M0,60 Q25,40 50,60 T100,60 T150,60 T200,60 T250,60 T300,60 T350,60 T400,60;
+                     M0,60 Q25,80 50,60 T100,60 T150,60 T200,60 T250,60 T300,60 T350,60 T400,60;
+                     M0,60 Q25,40 50,60 T100,60 T150,60 T200,60 T250,60 T300,60 T350,60 T400,60"
+             dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,70 Q25,50 50,70 T100,70 T150,70 T200,70 T250,70 T300,70 T350,70 T400,70"
+        fill="none" stroke="url(#waveGrad)" stroke-width="2" opacity="0.2">
+    <animate attributeName="d"
+             values="M0,70 Q25,50 50,70 T100,70 T150,70 T200,70 T250,70 T300,70 T350,70 T400,70;
+                     M0,70 Q25,90 50,70 T100,70 T150,70 T200,70 T250,70 T300,70 T350,70 T400,70;
+                     M0,70 Q25,50 50,70 T100,70 T150,70 T200,70 T250,70 T300,70 T350,70 T400,70"
+             dur="2.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Main VIBE text -->
+  <text x="50" y="75" font-family="'Segoe UI', Arial, sans-serif" font-size="56" font-weight="bold" fill="url(#vibeGrad)" filter="url(#glow)">
+    VIBE
+  </text>
+
+  <!-- Subtitle -->
+  <text x="180" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#a78bfa" letter-spacing="4">
+    AI CHAT MODES
+  </text>
+  <text x="180" y="78" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#94a3b8" letter-spacing="2">
+    COLLECTION
+  </text>
+
+  <!-- Mode count badge -->
+  <rect x="285" y="40" width="90" height="35" rx="17" fill="#1e1b4b" stroke="url(#vibeGrad)" stroke-width="2"/>
+  <text x="330" y="63" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#f0abfc" text-anchor="middle" font-weight="bold">
+    150+ MODES
+  </text>
+
+  <!-- Decorative dots representing different modes -->
+  <circle cx="20" cy="20" r="4" fill="#667eea" opacity="0.8"/>
+  <circle cx="35" cy="30" r="3" fill="#764ba2" opacity="0.6"/>
+  <circle cx="25" cy="100" r="3" fill="#f093fb" opacity="0.7"/>
+  <circle cx="380" cy="25" r="4" fill="#00d4ff" opacity="0.8"/>
+  <circle cx="365" cy="100" r="3" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="385" cy="90" r="2" fill="#a78bfa" opacity="0.5"/>
+
+  <!-- Code brackets decoration -->
+  <text x="175" y="100" font-family="monospace" font-size="12" fill="#64748b" opacity="0.6">{ }</text>
+</svg>

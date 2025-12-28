@@ -1,229 +1,232 @@
-# Vibe - Professional AI Chat Modes Collection
+# VIBE - AI Chat Modes Collection
 
-A comprehensive, professionally organized collection of specialized AI chat modes for software engineering, architecture, security analysis, and development workflows.
+<p align="center">
+  <img src="assets/vibe-logo.svg" alt="VIBE Logo" width="400"/>
+</p>
 
-## Overview
+<p align="center">
+  <strong>Because apparently, your AI assistant needs more personality than you do.</strong>
+</p>
 
-This repository contains **141+ expertly crafted AI chat modes**, organized into **30+ professional categories**. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#modes">Modes</a> •
+  <a href="#getting-started">Get Started</a> •
+  <a href="#contributing">Contributing</a>
+</p>
+
+---
+
+## What Is This?
+
+Oh, just a **humble collection of 150+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
+
+Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQuery in 2024? Does it think "security best practices" means adding `// TODO: add security` comments?
+
+**Yeah, we fixed that.**
+
+## Features
+
+| What You Get | Why You Need It |
+|--------------|-----------------|
+| **150+ Expert Modes** | Because one-size-fits-all is for socks, not AI |
+| **30+ Categories** | Organized chaos is still organization |
+| **Production-Ready Standards** | So you can pretend you wrote clean code yourself |
+| **Universal Rules Engine** | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
+| **Personality Modes** | Ever wanted Tony Stark to review your code? Now you can. |
+
+## Mode Categories
+
+### The Serious Stuff
+
+```
+Development & Architecture ........... 17 modes (for when you want things done right)
+Cloud & Infrastructure ............... 11 modes (because "it works on my machine" isn't a deployment strategy)
+Languages & Standards ................ 31 modes (14 languages, 13 coding standards, 4 databases)
+Security & Compliance ................ 8 modes  (SOC 2, GDPR, SAST/DAST - all the acronyms)
+AI/ML & Emerging Tech ................ 9 modes  (LLMs, MLOps, WebAssembly - the future is now)
+DevOps & Platform Engineering ........ 8 modes  (GitOps, SRE, AIOps, Chaos Engineering)
+Testing ............................. 8 modes  (Chaos Monkey, Contract Testing - break things professionally)
+```
+
+### The Fun Stuff
+
+```
+Personality Modes .................... 10 modes (Sheldon Cooper as your code reviewer? Yes please)
+Game Development ..................... 3 modes  (Unity, Unreal, Game Design)
+```
+
+## Getting Started
+
+### Step 1: Clone This Repo
+
+```bash
+git clone https://github.com/anubhavg-icpl/vibe.git
+```
+
+*Revolutionary, I know.*
+
+### Step 2: Pick a Mode
+
+Browse `/modes` and find something that matches your existential crisis:
+
+| You Want To... | Use This Mode |
+|----------------|---------------|
+| Write code that doesn't suck | `software-engineer-agent-mode` |
+| Pretend you understand system design | `principal-engineer-mode` |
+| Find security holes (before hackers do) | `wg-code-sentinel-mode` |
+| Build ML pipelines | `mlops-expert-mode` |
+| Break production (professionally) | `netflix-chaos-suite-mode` |
+| Make your AI sound like Iron Man | `tony-stark-mode` |
+
+### Step 3: Copy, Paste, Profit
+
+Copy the mode content into your AI assistant. That's it. That's the whole process.
+
+## Showcase: What These Modes Actually Do
+
+### Example: Security Review Mode
+
+**Without Vibe:**
+> "Your code looks fine! Maybe add some input validation?"
+
+**With `wg-code-sentinel-mode`:**
+> "Line 47: SQL injection vulnerability. Line 89: Hardcoded AWS credentials (nice). Line 156: You're using `eval()` unironically. Let me walk you through the 17 ways this will get you featured on HaveIBeenPwned."
+
+### Example: Chaos Engineering Mode
+
+**Without Vibe:**
+> "Consider testing your application's resilience."
+
+**With `netflix-chaos-suite-mode`:**
+> "Deploying Chaos Monkey to randomly terminate instances, Chaos Gorilla to drop AZs, and Chaos Kong to simulate regional failures. Here's your blast radius calculation, rollback procedures, and the exact Prometheus queries to monitor this experiment. Also, maybe don't run this on Friday."
+
+### Example: Platform Engineering Mode
+
+**Without Vibe:**
+> "You could build an internal developer portal."
+
+**With `platform-engineering-mode`:**
+> "Here's a complete Backstage setup with software templates, Crossplane compositions for self-service infrastructure, and a platform API. Your developers will provision databases faster than they can argue about tabs vs spaces."
 
 ## Repository Structure
 
 ```
 vibe/
-├── .ai/
-│   └── rules/              # Universal rules engine
+├── .ai/rules/              # Universal rules (works everywhere)
 ├── modes/
-│   ├── ai-ml/              # LLM, MLOps, Vector DBs (3 modes)
-│   ├── analysis/           # Code review and security analysis (4 modes)
-│   ├── architecture/       # System design and clean code (4 modes)
-│   ├── blockchain/         # Web3, Solidity, DeFi (3 modes)
-│   ├── cloud-infrastructure/ # AWS, GCP, Azure, Terraform, K8s (5 modes)
-│   ├── coding-standards/   # Language-specific standards (13 modes)
-│   ├── creative/           # Technical writing (1 mode)
-│   ├── database/           # PostgreSQL, MongoDB, Redis, SQL (4 modes)
-│   ├── debugging/          # Troubleshooting (1 mode)
-│   ├── design-ux/          # UI/UX design (4 modes)
-│   ├── development/        # Active coding and implementation (9 modes)
-│   ├── devops/             # GitOps, SRE, FinOps (3 modes)
-│   ├── documentation/      # Documentation generation (1 mode)
-│   ├── emerging-tech/      # WebAssembly, Edge, IoT (3 modes)
-│   ├── enterprise/         # Power BI, Salesforce, Atlassian (3 modes)
-│   ├── frameworks/         # NestJS, FastAPI, Svelte, Remix, Nuxt (5 modes)
-│   ├── game-development/   # Unity, Unreal, Game Design (3 modes)
-│   ├── infrastructure/     # Kafka, Istio, OpenTelemetry (3 modes)
-│   ├── languages/          # 14 languages (Python, Rust, Go, Elixir, etc.)
-│   ├── learning/           # Education and mentorship (1 mode)
-│   ├── mobile/             # iOS, Android, React Native, Flutter (4 modes)
-│   ├── output-formats/     # Markdown, JSON/YAML, docs (4 modes)
-│   ├── personalities/      # Character-based AI personas (10 modes)
-│   ├── planning/           # Strategic planning (3 modes)
-│   ├── project-structure/  # Project templates (14 modes)
-│   ├── refactoring/        # Code improvement (1 mode)
-│   ├── security/           # SAST/DAST, Compliance (2 modes)
-│   ├── specialized/        # Domain-specific experts (7 modes)
-│   ├── testing/            # QA, Chaos, Contract, Security testing (8 modes)
-│   └── ui-ux/              # Accessibility (1 mode)
-├── templates/              # Project structure templates
-├── CHANGELOG.md            # Version history
-├── CONTRIBUTING.md         # Contribution guidelines
-├── FEATURE_GAPS.md         # Future enhancements roadmap
-├── LICENSE                 # MIT License
-├── README.md               # This file
-└── UNIVERSAL-RULES-SETUP.md # Rules engine setup guide
+│   ├── ai-ml/              # LLM, MLOps, Vector DBs
+│   ├── architecture/       # System design, clean code
+│   ├── cloud-infrastructure/ # AWS, GCP, Azure, Terraform, K8s
+│   ├── coding-standards/   # Because consistency matters
+│   ├── devops/             # GitOps, SRE, FinOps, AIOps
+│   ├── frameworks/         # NestJS, FastAPI, Svelte, Remix, Nuxt
+│   ├── infrastructure/     # Kafka, Istio, OpenTelemetry
+│   ├── languages/          # 14 languages
+│   ├── personalities/      # AI personas
+│   ├── security/           # SAST/DAST, Compliance
+│   ├── testing/            # Chaos, Contract, Security testing
+│   └── ...                 # 20+ more categories
+├── templates/              # Project templates
+└── assets/                 # Logo and other assets
 ```
 
-## Quick Start
+## Universal Rules Engine
 
-### Using a Mode
+Set up rules once, apply everywhere:
 
-1. Browse the `/modes` directory for your use case
-2. Copy the mode content into your AI assistant
-3. Start working with specialized expertise
+```
+.ai/rules/
+├── base.md          # Core coding standards
+├── security.md      # Security requirements
+├── testing.md       # Test coverage rules
+└── ...
+```
 
-### Setting Up Universal Rules
+**Works with:** Claude Code, Amazon Q, GitHub Copilot, Gemini, Aider
 
-1. Copy the `.ai/rules/` directory to your project
-2. AI assistants automatically detect and apply rules
-3. See [UNIVERSAL-RULES-SETUP.md](UNIVERSAL-RULES-SETUP.md) for detailed setup
-
-## Mode Categories
-
-### Development & Architecture (17 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Development | 9 | Active coding, autonomous agents, Rust development |
-| Architecture | 4 | System design, clean code, SOLID principles |
-| Analysis | 4 | Code review, security analysis, critical thinking |
-
-### Cloud & Infrastructure (5 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Cloud Infrastructure | 5 | AWS, GCP, Azure, Terraform, Kubernetes |
-
-### Languages & Databases (31 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Languages | 14 | Python, Java, Go, C++, PHP, Ruby, Elixir, Haskell, Clojure, F#, Zig, R, Lua, Julia |
-| Coding Standards | 13 | Production-ready standards for major languages |
-| Database | 4 | PostgreSQL, MongoDB, Redis, SQL optimization |
-
-### Frontend & Mobile (9 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Design UX | 4 | Design systems, UX research, UI design |
-| Mobile | 4 | iOS, Android, React Native, Flutter |
-| UI/UX | 1 | Accessibility specialist |
-
-### Specialized Domains (23 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Project Structure | 14 | Production-ready templates for 14 tech stacks |
-| Specialized | 7 | DevOps, data science, prompt engineering |
-| Blockchain | 3 | Solidity, Web3, DeFi |
-
-### Quality & Testing (9 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Testing | 8 | QA automation, chaos engineering, contract testing, security testing |
-| Debugging | 1 | Troubleshooting detective |
-
-### AI/ML & Emerging Technologies (9 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| AI/ML | 3 | LLM development, MLOps, Vector databases |
-| Emerging Tech | 3 | WebAssembly, Edge computing, IoT |
-| Infrastructure | 3 | Kafka, Istio service mesh, OpenTelemetry |
-
-### DevOps & Security (8 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| DevOps | 3 | GitOps/ArgoCD, SRE practices, FinOps |
-| Security | 2 | SAST/DAST, SOC 2 compliance |
-| Frameworks | 5 | NestJS, FastAPI, Svelte, Remix, Nuxt |
-
-### Productivity & Workflow (12 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Personalities | 10 | Character-based AI personas (Sheldon, Tony Stark, etc.) |
-| Planning | 3 | Strategic planning, technical spikes |
-| Output Formats | 4 | Markdown, JSON/YAML, documentation |
-| Documentation | 1 | PRD creation |
-| Creative | 1 | Technical writing |
-| Learning | 1 | Code education |
-| Refactoring | 1 | Code improvement |
-
-### Enterprise (3 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Enterprise | 3 | Power BI, Salesforce, Atlassian |
-
-### Game Development (3 modes)
-
-| Category | Modes | Description |
-|----------|-------|-------------|
-| Game Development | 3 | Unity, Unreal Engine, Game Design |
+*Finally, consistency across all your AI assistants without copying prompts like it's 2022.*
 
 ## Popular Modes
 
-### For Development
-- **software-engineer-agent-mode** - Autonomous engineering agent with zero-confirmation policy
-- **rust-beast-mode** - Comprehensive Rust development with research capabilities
-- **blueprint-mode-v39** - Structured workflows (Debug, Express, Main, Loop)
+### Development
+- `software-engineer-agent-mode` - Autonomous engineering with zero-confirmation policy
+- `rust-beast-mode` - Comprehensive Rust development
+- `blueprint-mode-v39` - Structured workflows (Debug, Express, Main, Loop)
 
-### For Architecture & Design
-- **principal-engineer-mode** - Expert-level engineering guidance
-- **wg-code-alchemist-mode** - Clean Code and SOLID principles expert
+### Infrastructure & DevOps
+- `platform-engineering-mode` - Internal Developer Platforms with Backstage
+- `aiops-expert-mode` - ML-powered anomaly detection and self-healing
+- `netflix-chaos-suite-mode` - Chaos Monkey, Gorilla, Kong, and ChAP
+- `gitops-expert-mode` - ArgoCD, Flux, GitOps patterns
 
-### For Analysis & Security
-- **wg-code-sentinel-mode** - Security vulnerability analysis
-- **critical-thinking-mode** - Challenge assumptions and improve solutions
+### Security
+- `wg-code-sentinel-mode` - Security vulnerability analysis
+- `sast-dast-expert-mode` - Static and dynamic analysis
+- `soc2-compliance-mode` - Compliance automation
 
-### For Planning
-- **plan-mode** - Strategic planning before implementation
-- **technical-spike-mode** - Research and validate technical approaches
+### AI/ML
+- `llm-expert-mode` - LLM development and fine-tuning
+- `vector-database-expert-mode` - Pinecone, Weaviate, Milvus
+- `mlops-expert-mode` - ML pipeline automation
 
-### For Standards & Automation
-- **universal-rules-engine-mode** - Cross-platform rules system for all AI assistants
+## Stats
 
-## Usage Examples
-
-**Automating Standards Across All AI Assistants:**
-1. Use `universal-rules-engine-mode` to set up rules once
-2. Works automatically with Amazon Q, Claude Code, Copilot, Gemini, Aider
-3. See [UNIVERSAL-RULES-SETUP.md](UNIVERSAL-RULES-SETUP.md) for quick start guide
-4. Rules in `.ai/rules/` apply to all AI interactions
-
-**Starting a new feature:**
-1. Use `plan-mode` to understand requirements
-2. Use `specification-mode` to document the design
-3. Use `software-engineer-agent-mode` or `blueprint-mode-v39` to implement
-4. Use `wg-code-alchemist-mode` to refine code quality
-5. Use `wg-code-sentinel-mode` for security review
-
-**Rust development:**
-1. Use `rust-beast-mode` for implementation
-2. Use `rust-mcp-expert-mode` for MCP server development
-
-**Database optimization:**
-- Use `universal-performance-optimization` for SQL tuning
-
-## Documentation
-
-- [Modes Documentation](modes/README.md) - Detailed mode descriptions
-- [Universal Rules Setup](UNIVERSAL-RULES-SETUP.md) - Rules engine guide
-- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute
-- [Changelog](CHANGELOG.md) - Version history
-
-## Technical Details
-
-- **Total Modes**: 141+ specialized chat modes
-- **Categories**: 30+ professional categories
-- **Format**: Markdown with comprehensive system prompts
-- **Tools**: Extensive tool integration for VS Code, GitHub, and more
-- **Rules Engine**: Universal rules supporting 5+ AI assistants
-- **Templates**: Project structure templates for FastAPI, NestJS, and more
+| Metric | Value |
+|--------|-------|
+| Total Modes | **150+** |
+| Categories | **30+** |
+| Languages Covered | **14** |
+| Coding Standards | **13** |
+| Project Templates | **16+** |
+| Personality Modes | **10** |
+| Security Modes | **8** |
+| DevOps/Platform Modes | **8** |
 
 ## Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
-- Adding new modes
-- Adding new rules
-- Documentation standards
-- Pull request process
+Want to add a mode? Found a bug? Have strong opinions about code formatting?
+
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md)
+2. Open a PR
+3. Wait for someone to judge your code
+
+We accept:
+- New modes (the weirder, the better)
+- Bug fixes (yes, even documentation has bugs)
+- Improvements (but not "let's rewrite everything in Rust")
+
+## FAQ
+
+**Q: Why is it called "Vibe"?**
+A: Because "A Comprehensive Collection of Specialized AI Chat Modes for Software Engineering" didn't fit on the repo name.
+
+**Q: Does this actually work?**
+A: Bold of you to ask. Yes, it works. 150+ modes don't just write themselves. (Actually, some of them were written by AI, but let's not get philosophical.)
+
+**Q: Can I use these commercially?**
+A: MIT License. Go wild. Just don't blame us when the Chaos Monkey mode takes down production.
+
+**Q: Why are there personality modes?**
+A: Because sometimes you need Gordon Ramsay to tell you your code is *raw*. It's therapeutic.
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) file for details.
+MIT License - See [LICENSE](LICENSE)
+
+Do whatever you want with this. We're not your parents.
+
+---
+
+<p align="center">
+  <strong>Built by developers who got tired of explaining the same things to AI assistants.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/anubhavg-icpl/vibe">Star this repo</a> •
+  <a href="https://github.com/anubhavg-icpl/vibe/issues">Report Issues</a> •
+  <a href="FEATURE_GAPS.md">See What's Coming</a>
+</p>
 
 ---
 
