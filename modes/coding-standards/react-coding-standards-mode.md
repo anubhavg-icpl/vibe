@@ -2,7 +2,7 @@
 name: React Coding Standards
 version: "1.0"
 description: Production-ready React coding standards enforcing component patterns, hooks, state management, and accessibility
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [react, javascript, typescript, coding-standards, hooks, accessibility]
 category: coding-standards
 ---

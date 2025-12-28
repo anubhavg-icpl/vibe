@@ -2,7 +2,7 @@
 name: Rust Coding Standards
 version: "1.0"
 description: Production-ready Rust coding standards enforcing idiomatic patterns, safety, performance, and maintainability
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [rust, coding-standards, best-practices, clippy, rustfmt]
 category: coding-standards
 ---

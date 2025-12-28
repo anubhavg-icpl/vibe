@@ -2,7 +2,7 @@
 name: C/C++ Coding Standards
 version: "1.0"
 description: Production-ready C/C++ coding standards enforcing safety, modern patterns, and maintainability
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [cpp, c, coding-standards, modern-cpp, clang-tidy]
 category: coding-standards
 ---

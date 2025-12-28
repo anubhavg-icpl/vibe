@@ -2,7 +2,7 @@
 name: Java Coding Standards
 version: "1.0"
 description: Production-ready Java coding standards enforcing clean code, modern patterns, and maintainability
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [java, coding-standards, clean-code, spring, best-practices]
 category: coding-standards
 ---

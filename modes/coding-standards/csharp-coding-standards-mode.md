@@ -2,7 +2,7 @@
 name: C# Coding Standards
 version: "1.0"
 description: Production-ready C# coding standards enforcing modern patterns, type safety, and maintainability for .NET
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [csharp, dotnet, coding-standards, clean-code, best-practices]
 category: coding-standards
 ---

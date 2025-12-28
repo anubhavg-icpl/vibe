@@ -2,7 +2,7 @@
 name: Scala Coding Standards
 version: "1.0"
 description: Production-ready Scala coding standards enforcing functional patterns, type safety, and maintainability
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [scala, functional-programming, coding-standards, cats, zio]
 category: coding-standards
 ---

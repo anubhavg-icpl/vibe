@@ -2,7 +2,7 @@
 name: Go Coding Standards
 version: "1.0"
 description: Production-ready Go coding standards enforcing idiomatic patterns, simplicity, and maintainability
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [go, golang, coding-standards, gofmt, golangci-lint]
 category: coding-standards
 ---

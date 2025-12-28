@@ -2,7 +2,7 @@
 name: TypeScript Coding Standards
 version: "1.0"
 description: Production-ready TypeScript coding standards enforcing type safety, modern patterns, and maintainability
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [typescript, javascript, coding-standards, eslint, prettier]
 category: coding-standards
 ---

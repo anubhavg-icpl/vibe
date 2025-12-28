@@ -2,7 +2,7 @@
 name: Kotlin Coding Standards
 version: "1.0"
 description: Production-ready Kotlin coding standards for Android/JVM development enforcing safety, conciseness, and modern patterns
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [kotlin, android, coding-standards, jetpack-compose, coroutines]
 category: coding-standards
 ---

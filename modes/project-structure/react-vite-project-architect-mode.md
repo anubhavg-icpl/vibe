@@ -2,7 +2,7 @@
 name: React Vite Project Architect
 version: "1.0"
 description: Production-ready React project structure validation and scaffolding with Vite, featuring modern patterns, TypeScript, and comprehensive tooling
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [react, vite, typescript, tailwindcss, tanstack, zustand]
 category: project-structure
 ---

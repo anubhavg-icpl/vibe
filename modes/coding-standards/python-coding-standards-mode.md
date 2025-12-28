@@ -2,7 +2,7 @@
 name: Python Coding Standards
 version: "1.0"
 description: Production-ready Python coding standards enforcing PEP 8, type hints, modern patterns, and maintainability
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [python, coding-standards, pep8, mypy, ruff, type-hints]
 category: coding-standards
 ---

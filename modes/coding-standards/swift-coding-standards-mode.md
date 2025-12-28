@@ -2,7 +2,7 @@
 name: Swift Coding Standards
 version: "1.0"
 description: Production-ready Swift coding standards for iOS/macOS development enforcing safety, clarity, and modern patterns
-author: Vibe AI Assistant
+author: Anubhav Gain
 tags: [swift, ios, macos, coding-standards, swiftui, apple]
 category: coding-standards
 ---
