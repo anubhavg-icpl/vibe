@@ -2,51 +2,136 @@
 
 A comprehensive, professionally organized collection of specialized AI chat modes for software engineering, architecture, security analysis, and development workflows.
 
-## 🎯 Overview
+## Overview
 
-This repository contains 30 expertly crafted AI chat modes, organized into 12 professional categories. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
+This repository contains **109 expertly crafted AI chat modes**, organized into **24 professional categories**. Each mode is designed to provide specialized expertise for different aspects of software development and engineering.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 vibe/
+├── .ai/
+│   └── rules/              # Universal rules engine
+├── .github/
+│   └── workflows/          # CI/CD automation
 ├── modes/
-│   ├── development/        # Active coding and implementation modes
-│   ├── architecture/       # System design and clean code modes
-│   ├── analysis/          # Code review and security analysis modes
-│   ├── specialized/       # Domain-specific expert modes
-│   ├── planning/          # Strategic planning and research modes
-│   ├── documentation/     # Documentation generation modes
-│   ├── testing/           # Test automation and QA modes
-│   ├── ui-ux/             # UI/UX design and accessibility modes
-│   ├── debugging/         # Debugging and troubleshooting modes
-│   ├── creative/          # Technical writing and content creation modes
-│   ├── learning/          # Education and mentorship modes
-│   ├── refactoring/       # Code refactoring and improvement modes
-│   └── README.md          # Detailed modes documentation
-└── README.md              # This file
+│   ├── analysis/           # Code review and security analysis (4 modes)
+│   ├── architecture/       # System design and clean code (4 modes)
+│   ├── blockchain/         # Web3, Solidity, DeFi (3 modes)
+│   ├── cloud-infrastructure/ # AWS, GCP, Azure, Terraform, K8s (5 modes)
+│   ├── coding-standards/   # Language-specific standards (11 modes)
+│   ├── creative/           # Technical writing (1 mode)
+│   ├── database/           # PostgreSQL, MongoDB, Redis, SQL (4 modes)
+│   ├── debugging/          # Troubleshooting (1 mode)
+│   ├── design-ux/          # UI/UX design (4 modes)
+│   ├── development/        # Active coding and implementation (9 modes)
+│   ├── documentation/      # Documentation generation (1 mode)
+│   ├── enterprise/         # Power BI, Salesforce, Atlassian (3 modes)
+│   ├── game-development/   # Unity, Unreal, Game Design (3 modes)
+│   ├── languages/          # Python, Java, Go, C++, PHP, Ruby (6 modes)
+│   ├── learning/           # Education and mentorship (1 mode)
+│   ├── mobile/             # iOS, Android, React Native, Flutter (4 modes)
+│   ├── output-formats/     # Markdown, JSON/YAML, docs (4 modes)
+│   ├── personalities/      # Character-based AI personas (10 modes)
+│   ├── planning/           # Strategic planning (3 modes)
+│   ├── project-structure/  # Project templates (14 modes)
+│   ├── refactoring/        # Code improvement (1 mode)
+│   ├── specialized/        # Domain-specific experts (7 modes)
+│   ├── testing/            # QA and automation (5 modes)
+│   └── ui-ux/              # Accessibility (1 mode)
+├── CHANGELOG.md            # Version history
+├── CONTRIBUTING.md         # Contribution guidelines
+├── LICENSE                 # MIT License
+├── README.md               # This file
+└── UNIVERSAL-RULES-SETUP.md # Rules engine setup guide
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
-Browse the organized modes in the `/modes` directory:
+### Using a Mode
 
-- **Development Modes** (8 modes) - For active coding and implementation
-- **Architecture Modes** (3 modes) - For system design and code quality
-- **Analysis Modes** (3 modes) - For code review and security
-- **Specialized Modes** (6 modes) - For domain-specific expertise
-- **Planning Modes** (3 modes) - For strategic planning and research
-- **Documentation Modes** (1 mode) - For documentation generation
-- **Testing Modes** (1 mode) - For test automation and quality assurance
-- **UI/UX Modes** (1 mode) - For design systems and user experience
-- **Debugging Modes** (1 mode) - For troubleshooting and error diagnosis
-- **Creative Modes** (1 mode) - For technical writing and documentation
-- **Learning Modes** (1 mode) - For programming education and mentorship
-- **Refactoring Modes** (1 mode) - For code improvement and refactoring
+1. Browse the `/modes` directory for your use case
+2. Copy the mode content into your AI assistant
+3. Start working with specialized expertise
 
-See [modes/README.md](modes/README.md) for detailed descriptions and usage guide.
+### Setting Up Universal Rules
 
-## 🎯 Popular Modes
+1. Copy the `.ai/rules/` directory to your project
+2. AI assistants automatically detect and apply rules
+3. See [UNIVERSAL-RULES-SETUP.md](UNIVERSAL-RULES-SETUP.md) for detailed setup
+
+## Mode Categories
+
+### Development & Architecture (17 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Development | 9 | Active coding, autonomous agents, Rust development |
+| Architecture | 4 | System design, clean code, SOLID principles |
+| Analysis | 4 | Code review, security analysis, critical thinking |
+
+### Cloud & Infrastructure (5 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Cloud Infrastructure | 5 | AWS, GCP, Azure, Terraform, Kubernetes |
+
+### Languages & Databases (21 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Languages | 6 | Python, Java, Go, C++, PHP, Ruby specialists |
+| Coding Standards | 11 | Production-ready standards for major languages |
+| Database | 4 | PostgreSQL, MongoDB, Redis, SQL optimization |
+
+### Frontend & Mobile (9 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Design UX | 4 | Design systems, UX research, UI design |
+| Mobile | 4 | iOS, Android, React Native, Flutter |
+| UI/UX | 1 | Accessibility specialist |
+
+### Specialized Domains (23 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Project Structure | 14 | Production-ready templates for 14 tech stacks |
+| Specialized | 7 | DevOps, data science, prompt engineering |
+| Blockchain | 3 | Solidity, Web3, DeFi |
+
+### Quality & Testing (6 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Testing | 5 | QA automation, performance, accessibility testing |
+| Debugging | 1 | Troubleshooting detective |
+
+### Productivity & Workflow (12 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Personalities | 10 | Character-based AI personas (Sheldon, Tony Stark, etc.) |
+| Planning | 3 | Strategic planning, technical spikes |
+| Output Formats | 4 | Markdown, JSON/YAML, documentation |
+| Documentation | 1 | PRD creation |
+| Creative | 1 | Technical writing |
+| Learning | 1 | Code education |
+| Refactoring | 1 | Code improvement |
+
+### Enterprise (3 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Enterprise | 3 | Power BI, Salesforce, Atlassian |
+
+### Game Development (3 modes)
+
+| Category | Modes | Description |
+|----------|-------|-------------|
+| Game Development | 3 | Unity, Unreal Engine, Game Design |
+
+## Popular Modes
 
 ### For Development
 - **software-engineer-agent-mode** - Autonomous engineering agent with zero-confirmation policy
@@ -66,9 +151,9 @@ See [modes/README.md](modes/README.md) for detailed descriptions and usage guide
 - **technical-spike-mode** - Research and validate technical approaches
 
 ### For Standards & Automation
-- **universal-rules-engine-mode** - Cross-platform rules system for all AI assistants (Amazon Q, Claude Code, Copilot, Gemini, Aider)
+- **universal-rules-engine-mode** - Cross-platform rules system for all AI assistants
 
-## 💡 Usage Examples
+## Usage Examples
 
 **Automating Standards Across All AI Assistants:**
 1. Use `universal-rules-engine-mode` to set up rules once
@@ -90,35 +175,34 @@ See [modes/README.md](modes/README.md) for detailed descriptions and usage guide
 **Database optimization:**
 - Use `universal-performance-optimization` for SQL tuning
 
-## 📚 Documentation
+## Documentation
 
-Each mode includes:
-- Comprehensive instructions and guidelines
-- Tool specifications and capabilities
-- Best practices and workflows
-- Example usage patterns
+- [Modes Documentation](modes/README.md) - Detailed mode descriptions
+- [Universal Rules Setup](UNIVERSAL-RULES-SETUP.md) - Rules engine guide
+- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute
+- [Changelog](CHANGELOG.md) - Version history
 
-## 🛠️ Technical Details
+## Technical Details
 
-- **Total Modes**: 30 specialized chat modes
-- **Categories**: 12 professional categories
+- **Total Modes**: 109 specialized chat modes
+- **Categories**: 24 professional categories
 - **Format**: Markdown with comprehensive system prompts
 - **Tools**: Extensive tool integration for VS Code, GitHub, and more
-- **New Categories**: Testing, UI/UX, Debugging, Creative, Learning, Refactoring
+- **Rules Engine**: Universal rules supporting 5+ AI assistants
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please:
-1. Follow the existing organizational structure
-2. Include proper YAML frontmatter in mode files
-3. Update the modes/README.md with new mode descriptions
-4. Test modes before submitting
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+- Adding new modes
+- Adding new rules
+- Documentation standards
+- Pull request process
 
-## 📄 License
+## License
 
-MIT License - See LICENSE file for details
+MIT License - See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Author**: Anubhav G  
+**Author**: Anubhav Gain
 **Repository**: [github.com/anubhavg-icpl/vibe](https://github.com/anubhavg-icpl/vibe)
