@@ -19,7 +19,7 @@
 
 ## What Is This?
 
-Oh, just a **humble collection of 165+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
+Oh, just a **humble collection of 190+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
 
 Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQuery in 2024? Does it think "security best practices" means adding `// TODO: add security` comments?
 
@@ -29,7 +29,7 @@ Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQ
 
 | What You Get | Why You Need It |
 |--------------|-----------------|
-| **165+ Expert Modes** | Because one-size-fits-all is for socks, not AI |
+| **190+ Expert Modes** | Because one-size-fits-all is for socks, not AI |
 | **30+ Categories** | Organized chaos is still organization |
 | **Production-Ready Standards** | So you can pretend you wrote clean code yourself |
 | **Universal Rules Engine** | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
