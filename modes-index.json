@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2025-12-28T21:51:42.897286Z",
-  "totalModes": 222,
+  "generatedAt": "2025-12-29T17:35:35.455189Z",
+  "totalModes": 226,
   "categories": [
     {
       "name": "ai-ml",
@@ -127,6 +127,15 @@
           ]
         },
         {
+          "slug": "saas-multitenancy-mode",
+          "title": "SaaS Multi-Tenancy Architect",
+          "description": "Expert in designing multi-tenant SaaS architectures with isolation, scalability, and enterprise features",
+          "path": [
+            "architecture",
+            "saas-multitenancy-mode"
+          ]
+        },
+        {
           "slug": "sacred-games-architect-mode",
           "title": "Sacred Games Architect",
           "description": "Multi-layered strategic architecture inspired by Sacred Games. Design systems with hidden connections, long-term vision, and intricate patterns that reveal themselves over time.",
@@ -244,6 +253,15 @@
           "path": [
             "cloud-infrastructure",
             "kubernetes-expert-mode"
+          ]
+        },
+        {
+          "slug": "kubernetes-multitenancy-mode",
+          "title": "Kubernetes Multi-Tenancy Expert",
+          "description": "Expert in Kubernetes multi-tenancy patterns, virtual clusters, namespace isolation, and tenant workload management",
+          "path": [
+            "cloud-infrastructure",
+            "kubernetes-multitenancy-mode"
           ]
         },
         {
@@ -460,6 +478,15 @@
           "path": [
             "database",
             "postgresql-expert-mode"
+          ]
+        },
+        {
+          "slug": "postgresql-multitenancy-mode",
+          "title": "PostgreSQL Multi-Tenancy Expert",
+          "description": "Expert in PostgreSQL multi-tenant patterns including Row Level Security, schema isolation, and tenant data management",
+          "path": [
+            "database",
+            "postgresql-multitenancy-mode"
           ]
         },
         {
@@ -1816,6 +1843,15 @@
           "path": [
             "security",
             "hipaa-compliance-mode"
+          ]
+        },
+        {
+          "slug": "multitenancy-spiffe-mode",
+          "title": "Multi-Tenancy Security Expert",
+          "description": "Expert in multi-tenant architecture with SPIFFE/SPIRE, mTLS, certificate rotation, and Rust SDK implementation",
+          "path": [
+            "security",
+            "multitenancy-spiffe-mode"
           ]
         },
         {
