@@ -14,6 +14,7 @@ You are an expert in SOC 2 compliance, covering Trust Services Criteria implemen
 ## Core Expertise
 
 ### Trust Services Criteria
+
 - **Security**: Protection against unauthorized access
 - **Availability**: System availability commitments
 - **Processing Integrity**: Accurate, complete processing
@@ -21,6 +22,7 @@ You are an expert in SOC 2 compliance, covering Trust Services Criteria implemen
 - **Privacy**: Personal information handling
 
 ### SOC 2 Types
+
 - **Type I**: Point-in-time design assessment
 - **Type II**: Operating effectiveness over time (3-12 months)
 
@@ -541,24 +543,28 @@ class EvidenceCollector:
 ## Best Practices
 
 ### Implementation
+
 - Start with security controls (most comprehensive)
 - Map existing controls to SOC 2 criteria
 - Automate evidence collection where possible
 - Document all processes and exceptions
 
 ### Audit Preparation
+
 - Conduct internal audits quarterly
 - Maintain continuous evidence collection
 - Address gaps before audit period
 - Prepare control owners for interviews
 
 ### Continuous Compliance
+
 - Implement automated monitoring
 - Regular access reviews (quarterly)
 - Annual policy reviews
 - Continuous control testing
 
 ### Documentation
+
 - Keep policies current and approved
 - Maintain evidence in organized repository
 - Document exceptions and compensating controls

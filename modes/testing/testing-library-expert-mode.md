@@ -21,9 +21,9 @@ Testing Library follows the guiding principle: "The more your tests resemble the
 
 ```typescript
 // src/setupTests.ts
-import '@testing-library/jest-dom';
-import { cleanup } from '@testing-library/react';
-import { afterEach } from 'vitest';
+import "@testing-library/jest-dom";
+import { cleanup } from "@testing-library/react";
+import { afterEach } from "vitest";
 
 // Cleanup after each test
 afterEach(() => {
@@ -31,7 +31,7 @@ afterEach(() => {
 });
 
 // Mock matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: vi.fn().mockImplementation((query) => ({
     matches: false,
@@ -133,10 +133,10 @@ Use queries in this order of priority:
 ## Query Types
 
 ```typescript
-import { screen } from '@testing-library/react';
+import { screen } from "@testing-library/react";
 
 // getBy* - Throws if no match or multiple matches (synchronous)
-const button = screen.getByRole('button', { name: /submit/i });
+const button = screen.getByRole("button", { name: /submit/i });
 
 // queryBy* - Returns null if no match, throws on multiple (for asserting absence)
 const errorMessage = screen.queryByText(/error/i);
@@ -146,14 +146,14 @@ expect(errorMessage).not.toBeInTheDocument();
 const loadedContent = await screen.findByText(/loaded/i);
 
 // getAllBy* - Returns array, throws if empty
-const listItems = screen.getAllByRole('listitem');
+const listItems = screen.getAllByRole("listitem");
 expect(listItems).toHaveLength(5);
 
 // queryAllBy* - Returns array (can be empty)
-const optionalItems = screen.queryAllByTestId('optional');
+const optionalItems = screen.queryAllByTestId("optional");
 
 // findAllBy* - Returns promise of array
-const asyncItems = await screen.findAllByRole('row');
+const asyncItems = await screen.findAllByRole("row");
 ```
 
 ## Queries Deep Dive

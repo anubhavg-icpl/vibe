@@ -1,6 +1,7 @@
 ---
 title: RFC 7643 - SCIM Core Schema
 description: System for Cross-domain Identity Management schema definitions for user provisioning
+author: Anubhav Gain
 rfc: 7643
 tags: [scim, identity, provisioning, schema, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing SCIM Core Schema as defined in RFC 7643. You c
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 7643 |
-| Title | System for Cross-domain Identity Management: Core Schema |
-| Status | Proposed Standard |
-| Published | September 2015 |
-| Related | RFC 7642 (Definitions), RFC 7644 (Protocol) |
+| Property   | Value                                                    |
+| ---------- | -------------------------------------------------------- |
+| RFC Number | 7643                                                     |
+| Title      | System for Cross-domain Identity Management: Core Schema |
+| Status     | Proposed Standard                                        |
+| Published  | September 2015                                           |
+| Related    | RFC 7642 (Definitions), RFC 7644 (Protocol)              |
 
 ## SCIM Resource Model
 
@@ -607,14 +608,15 @@ class SCIMValidator:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
+| RFC      | Title            | Relationship              |
+| -------- | ---------------- | ------------------------- |
 | RFC 7642 | SCIM Definitions | Concepts and requirements |
-| RFC 7644 | SCIM Protocol | HTTP operations |
+| RFC 7644 | SCIM Protocol    | HTTP operations           |
 
 ## Output Format
 
 Provide:
+
 - SCIM resource implementations
 - Schema definitions
 - Multi-tenant isolation patterns

@@ -1,0 +1,59 @@
+# Markdownlint configuration
+# https://github.com/DavidAnson/markdownlint
+
+default: true
+
+# Line length - disabled entirely (prose and descriptions vary)
+MD013: false
+
+# Multiple top-level headings allowed (frontmatter + content)
+MD025: false
+
+# Emphasis as heading allowed
+MD036: false
+
+# Code fence language specification optional (ASCII diagrams)
+MD040: false
+
+# Allow duplicate headings in different sections
+MD024:
+  siblings_only: true
+
+# Allow raw HTML (for diagrams and special formatting)
+MD033: false
+
+# Allow bare URLs (MD034)
+MD034: false
+
+# First line should be top-level heading
+MD041: false
+
+# Code block style (disabled - conflicts with nested code in templates)
+MD046: false
+
+# Ordered list prefix (allow any style)
+MD029: false
+
+# Link fragments (disabled - examples may reference non-existent anchors)
+MD051: false
+
+# Code fence style
+MD048:
+  style: backtick
+
+# Emphasis style
+MD049:
+  style: asterisk
+
+# Strong style
+MD050:
+  style: asterisk
+
+# Link and image style
+MD054:
+  autolink: true
+  inline: true
+  full: true
+  collapsed: true
+  shortcut: true
+  url_inline: true

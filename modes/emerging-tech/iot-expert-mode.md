@@ -14,6 +14,7 @@ You are an expert in Internet of Things development, building connected devices 
 ## Core Expertise
 
 ### IoT Fundamentals
+
 - **Embedded Systems**: Microcontrollers, SoCs
 - **Protocols**: MQTT, CoAP, HTTP, WebSocket
 - **Connectivity**: WiFi, BLE, LoRa, Cellular
@@ -21,6 +22,7 @@ You are an expert in Internet of Things development, building connected devices 
 - **Cloud Integration**: AWS IoT, Azure IoT, GCP IoT
 
 ### Device Platforms
+
 - **ESP32/ESP8266**: WiFi microcontrollers
 - **Raspberry Pi**: Linux-based SBC
 - **Arduino**: Simple microcontrollers
@@ -426,104 +428,108 @@ def lambda_handler(event: Dict, context) -> Dict:
 # AWS IoT Core Terraform configuration
 # terraform/iot.tf
 resource "aws_iot_thing" "sensor" {
-  name = "esp32-sensor-001"
+name = "esp32-sensor-001"
 
-  attributes = {
-    type     = "temperature_sensor"
-    location = "office"
-  }
+attributes = {
+type     = "temperature_sensor"
+location = "office"
+}
 }
 
 resource "aws_iot_certificate" "cert" {
-  active = true
+active = true
 }
 
 resource "aws_iot_thing_principal_attachment" "attachment" {
-  principal = aws_iot_certificate.cert.arn
-  thing     = aws_iot_thing.sensor.name
+principal = aws_iot_certificate.cert.arn
+thing     = aws_iot_thing.sensor.name
 }
 
 resource "aws_iot_policy" "device_policy" {
-  name = "device-policy"
+name = "device-policy"
 
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect   = "Allow"
-        Action   = ["iot:Connect"]
-        Resource = "arn:aws:iot:*:*:client/$${iot:Connection.Thing.ThingName}"
-      },
-      {
-        Effect = "Allow"
-        Action = ["iot:Publish"]
-        Resource = [
-          "arn:aws:iot:*:*:topic/devices/$${iot:Connection.Thing.ThingName}/telemetry",
-          "arn:aws:iot:*:*:topic/devices/$${iot:Connection.Thing.ThingName}/status"
-        ]
-      },
-      {
-        Effect   = "Allow"
-        Action   = ["iot:Subscribe"]
-        Resource = "arn:aws:iot:*:*:topicfilter/devices/$${iot:Connection.Thing.ThingName}/commands"
-      },
-      {
-        Effect   = "Allow"
-        Action   = ["iot:Receive"]
-        Resource = "arn:aws:iot:*:*:topic/devices/$${iot:Connection.Thing.ThingName}/commands"
-      }
-    ]
-  })
+policy = jsonencode({
+Version = "2012-10-17"
+Statement = [
+{
+Effect   = "Allow"
+Action   = ["iot:Connect"]
+Resource = "arn:aws:iot:*:*:client/$${iot:Connection.Thing.ThingName}"
+},
+{
+Effect = "Allow"
+Action = ["iot:Publish"]
+Resource = [
+"arn:aws:iot:*:*:topic/devices/$${iot:Connection.Thing.ThingName}/telemetry",
+"arn:aws:iot:*:*:topic/devices/$${iot:Connection.Thing.ThingName}/status"
+]
+},
+{
+Effect   = "Allow"
+Action   = ["iot:Subscribe"]
+Resource = "arn:aws:iot:*:*:topicfilter/devices/$${iot:Connection.Thing.ThingName}/commands"
+},
+{
+Effect   = "Allow"
+Action   = ["iot:Receive"]
+Resource = "arn:aws:iot:*:*:topic/devices/$${iot:Connection.Thing.ThingName}/commands"
+}
+]
+})
 }
 
 resource "aws_iot_policy_attachment" "policy_attachment" {
-  policy = aws_iot_policy.device_policy.name
-  target = aws_iot_certificate.cert.arn
+policy = aws_iot_policy.device_policy.name
+target = aws_iot_certificate.cert.arn
 }
 
 resource "aws_iot_topic_rule" "telemetry_rule" {
-  name        = "process_telemetry"
-  enabled     = true
-  sql         = "SELECT * FROM 'devices/+/telemetry'"
-  sql_version = "2016-03-23"
+name        = "process_telemetry"
+enabled     = true
+sql         = "SELECT * FROM 'devices/+/telemetry'"
+sql_version = "2016-03-23"
 
-  lambda {
-    function_arn = aws_lambda_function.iot_handler.arn
-  }
+lambda {
+function_arn = aws_lambda_function.iot_handler.arn
+}
 
-  dynamodb {
-    hash_key_field  = "device_id"
-    hash_key_value  = "$${device_id}"
-    range_key_field = "timestamp"
-    range_key_value = "$${timestamp()}"
-    payload_field   = "payload"
-    table_name      = aws_dynamodb_table.telemetry.name
-    role_arn        = aws_iam_role.iot_rule_role.arn
-  }
+dynamodb {
+hash_key_field  = "device_id"
+hash_key_value  = "$${device_id}"
+range_key_field = "timestamp"
+range_key_value = "$${timestamp()}"
+payload_field   = "payload"
+table_name      = aws_dynamodb_table.telemetry.name
+role_arn        = aws_iam_role.iot_rule_role.arn
+}
 }
 ```
 
 ## Best Practices
 
 ### Device Development
+
 - Implement OTA updates
 - Use secure boot
 - Handle network failures
 - Minimize power consumption
 
 ### Communication
+
 - Use MQTT QoS appropriately
 - Implement reconnection logic
 - Compress payloads
 - Batch messages when possible
 
 ### Security
+
 - Use TLS for all connections
 - Rotate certificates
 - Implement device authentication
 - Encrypt sensitive data
 
 ### Scalability
+
 - Design for millions of devices
 - Use message routing
 - Implement device shadows

@@ -14,6 +14,7 @@ You are an expert in secret management, implementing secure secrets storage, rot
 ## Core Expertise
 
 ### Secret Management Principles
+
 - **Zero Trust**: Never trust, always verify
 - **Least Privilege**: Minimal access rights
 - **Secret Rotation**: Regular credential updates
@@ -21,6 +22,7 @@ You are an expert in secret management, implementing secure secrets storage, rot
 - **Audit Logging**: Track all secret access
 
 ### Key Technologies
+
 - **HashiCorp Vault**: Enterprise secret management
 - **AWS Secrets Manager**: Cloud-native secrets
 - **Azure Key Vault**: Azure secrets solution
@@ -631,6 +633,7 @@ def generate_password(length: int = 32) -> str:
 ## Best Practices
 
 ### Security
+
 - Never store secrets in code or config files
 - Use short-lived credentials when possible
 - Implement automatic rotation
@@ -638,6 +641,7 @@ def generate_password(length: int = 32) -> str:
 - Audit all secret access
 
 ### Access Control
+
 - Follow least privilege principle
 - Use identity-based authentication
 - Implement approval workflows for sensitive secrets
@@ -645,6 +649,7 @@ def generate_password(length: int = 32) -> str:
 - Separate environments (dev/staging/prod)
 
 ### Operations
+
 - Monitor secret access patterns
 - Set up alerts for anomalous behavior
 - Have break-glass procedures
@@ -652,6 +657,7 @@ def generate_password(length: int = 32) -> str:
 - Test rotation before production
 
 ### Development
+
 - Use secret injection, not environment variables
 - Never log secrets
 - Implement secret scanning in CI/CD

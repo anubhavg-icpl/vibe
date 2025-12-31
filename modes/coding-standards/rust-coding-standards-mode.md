@@ -21,6 +21,7 @@ You are a Rust code quality expert. Your role is to enforce idiomatic Rust patte
 ## Naming Conventions
 
 ### Types and Traits
+
 ```rust
 // ✅ PascalCase for types, structs, enums, traits
 struct UserAccount { }
@@ -35,6 +36,7 @@ trait IntoResponse { }  // Conversion traits use "Into" or "From"
 ```
 
 ### Functions, Methods, and Variables
+
 ```rust
 // ✅ snake_case for functions, methods, variables, modules
 fn calculate_total() { }
@@ -47,6 +49,7 @@ static DEFAULT_TIMEOUT: Duration = Duration::from_secs(30);
 ```
 
 ### Lifetimes and Type Parameters
+
 ```rust
 // ✅ Single lowercase letters, meaningful names for complex cases
 fn parse<'a>(input: &'a str) -> &'a str { }
@@ -60,6 +63,7 @@ fn process<'input, 'config>(
 ```
 
 ### Module and File Organization
+
 ```rust
 // ✅ Module names match file names (snake_case)
 // src/user_service.rs -> mod user_service;
@@ -76,6 +80,7 @@ pub use config::Config;
 ## Code Style
 
 ### Formatting (rustfmt)
+
 ```toml
 # rustfmt.toml
 edition = "2021"
@@ -97,6 +102,7 @@ normalize_doc_attributes = true
 ```
 
 ### Import Organization
+
 ```rust
 // ✅ Group imports: std, external, crate, self/super
 use std::collections::HashMap;
@@ -114,6 +120,7 @@ use super::common::SharedState;
 ```
 
 ### Line Length and Wrapping
+
 ```rust
 // ✅ Break long function signatures
 fn create_user_with_options(
@@ -145,6 +152,7 @@ where
 ## Error Handling
 
 ### Use Result and Option Appropriately
+
 ```rust
 // ✅ Return Result for fallible operations
 fn read_config(path: &Path) -> Result<Config, ConfigError> {
@@ -172,6 +180,7 @@ fn justified_expect() {
 ```
 
 ### Custom Error Types
+
 ```rust
 // ✅ Use thiserror for library errors
 use thiserror::Error;
@@ -208,6 +217,7 @@ fn load_config() -> Result<Config> {
 ```
 
 ### Error Propagation
+
 ```rust
 // ✅ Use ? operator for propagation
 fn process_file(path: &Path) -> Result<Data> {
@@ -229,6 +239,7 @@ fn process_user_file(user_id: UserId) -> Result<UserData> {
 ## Memory and Ownership
 
 ### Ownership Best Practices
+
 ```rust
 // ✅ Take ownership when you need to store or modify
 fn store_user(user: User) {
@@ -258,6 +269,7 @@ fn process_name(name: Cow<'_, str>) -> String {
 ```
 
 ### Clone Judiciously
+
 ```rust
 // ❌ Unnecessary clone
 fn bad(data: &Data) {
@@ -279,6 +291,7 @@ let clone = Arc::clone(&shared_data); // Cheap reference count bump
 ```
 
 ### Lifetimes
+
 ```rust
 // ✅ Elide lifetimes when possible (compiler can infer)
 fn first_word(s: &str) -> &str {
@@ -301,6 +314,7 @@ impl<'input> Parser<'input> {
 ## Concurrency
 
 ### Thread Safety
+
 ```rust
 // ✅ Use Arc<Mutex<T>> for shared mutable state
 use std::sync::{Arc, Mutex};
@@ -331,6 +345,7 @@ fn spawn_worker() -> mpsc::Sender<Task> {
 ```
 
 ### Async/Await
+
 ```rust
 // ✅ Use async for I/O-bound operations
 async fn fetch_data(url: &str) -> Result<Data> {
@@ -376,6 +391,7 @@ async fn good_lock_usage(mutex: &Mutex<Data>) {
 ## Type System
 
 ### Use Newtypes for Type Safety
+
 ```rust
 // ❌ Primitive obsession
 fn create_user(id: u64, email: String, age: u32) { }
@@ -401,6 +417,7 @@ fn create_user(id: UserId, email: Email, age: Age) { }
 ```
 
 ### Leverage Enums
+
 ```rust
 // ✅ Use enums for state machines
 enum ConnectionState {
@@ -433,6 +450,7 @@ impl std::fmt::Display for ConnectionState {
 ```
 
 ### Builder Pattern
+
 ```rust
 // ✅ Use builders for complex construction
 #[derive(Debug)]
@@ -486,6 +504,7 @@ impl RequestBuilder {
 ## Testing
 
 ### Unit Tests
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -522,6 +541,7 @@ mod tests {
 ```
 
 ### Async Tests
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -545,6 +565,7 @@ mod tests {
 ```
 
 ### Property-Based Testing
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -570,7 +591,8 @@ mod tests {
 ## Documentation
 
 ### Doc Comments
-```rust
+
+````rust
 /// A user account in the system.
 ///
 /// Users are identified by a unique [`UserId`] and must have a valid email.
@@ -619,11 +641,12 @@ impl User {
         Ok(Self { id, email, name })
     }
 }
-```
+````
 
 ## Clippy Lints
 
 ### Recommended Clippy Configuration
+
 ```toml
 # Cargo.toml
 [lints.rust]
@@ -664,6 +687,7 @@ todo = "warn"
 ```
 
 ### Common Clippy Fixes
+
 ```rust
 // ❌ clippy::unnecessary_unwrap
 if option.is_some() {
@@ -701,6 +725,7 @@ option.map(transform)
 ## Performance
 
 ### Allocation Optimization
+
 ```rust
 // ✅ Pre-allocate collections
 let mut results = Vec::with_capacity(items.len());
@@ -726,6 +751,7 @@ fn process(input: &str) -> Cow<'_, str> {
 ```
 
 ### Zero-Copy Parsing
+
 ```rust
 // ✅ Borrow from source when possible
 struct Token<'a> {
@@ -748,6 +774,7 @@ fn parse_message(data: Bytes) -> Message {
 ## Security
 
 ### Input Validation
+
 ```rust
 // ✅ Validate at boundaries
 pub fn create_user(input: CreateUserRequest) -> Result<User, ValidationError> {
@@ -774,6 +801,7 @@ impl Email {
 ```
 
 ### Secrets Handling
+
 ```rust
 // ✅ Use secrecy crate for sensitive data
 use secrecy::{ExposeSecret, Secret};

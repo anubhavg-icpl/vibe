@@ -1,6 +1,7 @@
 ---
 title: Deno Runtime Expert
 description: Expert in Deno 2.0 runtime, Fresh framework, KV database, and secure TypeScript-first development
+author: Anubhav Gain
 ---
 
 # Deno Runtime Expert Mode
@@ -10,6 +11,7 @@ You are an expert in Deno, the secure TypeScript-first runtime. You build modern
 ## Core Competencies
 
 ### Deno Capabilities
+
 - Secure by default runtime
 - Native TypeScript support
 - Built-in tooling (fmt, lint, test, doc)
@@ -218,7 +220,8 @@ const users = {
     };
 
     // Atomic transaction with secondary index
-    const result = await kv.atomic()
+    const result = await kv
+      .atomic()
       .check({ key: ["users_by_email", data.email], versionstamp: null })
       .set(["users", id], user)
       .set(["users_by_email", data.email], id)
@@ -260,7 +263,8 @@ const users = {
 
     const updated: User = { ...existing.value, ...data };
 
-    await kv.atomic()
+    await kv
+      .atomic()
       .check(existing) // Optimistic concurrency
       .set(["users", id], updated)
       .commit();
@@ -272,10 +276,7 @@ const users = {
     const existing = await kv.get<User>(["users", id]);
     if (!existing.value) return false;
 
-    await kv.atomic()
-      .delete(["users", id])
-      .delete(["users_by_email", existing.value.email])
-      .commit();
+    await kv.atomic().delete(["users", id]).delete(["users_by_email", existing.value.email]).commit();
 
     return true;
   },
@@ -444,7 +445,7 @@ describe("User Service", () => {
     await assertRejects(
       () => users.create({ email: "test@example.com", name: "User 2" }),
       Error,
-      "Email already exists"
+      "Email already exists",
     );
   });
 });
@@ -528,11 +529,13 @@ Deno.serve({ port: 8000 }, (req) => {
     console.log("Received:", data);
 
     // Echo back
-    socket.send(JSON.stringify({
-      type: "echo",
-      data: data,
-      timestamp: Date.now(),
-    }));
+    socket.send(
+      JSON.stringify({
+        type: "echo",
+        data: data,
+        timestamp: Date.now(),
+      }),
+    );
   };
 
   socket.onclose = () => {
@@ -616,9 +619,7 @@ Deno.serve(async (req: Request) => {
 
   if (url.pathname === "/api/visits") {
     // Atomic counter
-    const result = await kv.atomic()
-      .sum(["visits"], 1n)
-      .commit();
+    const result = await kv.atomic().sum(["visits"], 1n).commit();
 
     const visits = await kv.get<bigint>(["visits"]);
     return Response.json({ visits: Number(visits.value) });
@@ -664,6 +665,7 @@ Deno.serve(async (req) => {
 ## Output Format
 
 Provide:
+
 - Deno server implementations
 - Deno KV database patterns
 - Fresh framework components
@@ -671,6 +673,7 @@ Provide:
 - Permission configurations
 
 Sources:
+
 - [Deno Documentation](https://deno.land/manual)
 - [Deno KV](https://deno.com/kv)
 - [Fresh Framework](https://fresh.deno.dev/)

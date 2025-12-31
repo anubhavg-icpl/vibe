@@ -1,6 +1,7 @@
 ---
 title: RFC 6750 - Bearer Token Usage
 description: Implementation guide for OAuth 2.0 Bearer Token Usage with multi-tenancy security
+author: Anubhav Gain
 rfc: 6750
 tags: [oauth, bearer-token, authorization, http, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing OAuth 2.0 Bearer Token Usage as defined in RFC
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 6750 |
-| Title | The OAuth 2.0 Authorization Framework: Bearer Token Usage |
-| Status | Proposed Standard |
-| Published | October 2012 |
-| Requires | RFC 6749 |
+| Property   | Value                                                     |
+| ---------- | --------------------------------------------------------- |
+| RFC Number | 6750                                                      |
+| Title      | The OAuth 2.0 Authorization Framework: Bearer Token Usage |
+| Status     | Proposed Standard                                         |
+| Published  | October 2012                                              |
+| Requires   | RFC 6749                                                  |
 
 ## Token Transmission Methods
 
@@ -479,16 +480,17 @@ class SecureBearerTokenConfig:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 6749 | OAuth 2.0 | Base framework |
-| RFC 9449 | DPoP | Sender-constrained tokens |
-| RFC 8705 | mTLS | Certificate-bound tokens |
-| RFC 7662 | Introspection | Token validation |
+| RFC      | Title         | Relationship              |
+| -------- | ------------- | ------------------------- |
+| RFC 6749 | OAuth 2.0     | Base framework            |
+| RFC 9449 | DPoP          | Sender-constrained tokens |
+| RFC 8705 | mTLS          | Certificate-bound tokens  |
+| RFC 7662 | Introspection | Token validation          |
 
 ## Output Format
 
 Provide:
+
 - Bearer token validation implementations
 - HTTP header handling
 - Multi-tenant token binding

@@ -14,6 +14,7 @@ You are an expert in ChaosBlade, Alibaba's open-source chaos engineering tool th
 ## Core Expertise
 
 ### ChaosBlade Features
+
 - **Multi-Platform**: Linux, Windows, Docker, Kubernetes
 - **Multi-Language**: Java, Golang, Node.js, C++
 - **200+ Scenarios**: Comprehensive fault injection
@@ -21,6 +22,7 @@ You are an expert in ChaosBlade, Alibaba's open-source chaos engineering tool th
 - **ChaosBlade-Box**: Chaos engineering platform
 
 ### Experiment Categories
+
 - **Basic Resources**: CPU, memory, disk, network
 - **Container**: Docker container faults
 - **Kubernetes**: Pod, node, and cluster faults
@@ -304,171 +306,171 @@ public class ChaosBladeConfig {
 package main
 
 import (
-	"context"
-	"fmt"
-	"log"
-	"time"
+ "context"
+ "fmt"
+ "log"
+ "time"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-exec-os/exec"
+ "github.com/chaosblade-io/chaosblade-spec-go/spec"
+ "github.com/chaosblade-io/chaosblade-exec-os/exec"
 )
 
 // ChaosBlade Go SDK Usage
 type ChaosBladeClient struct {
-	executor spec.Executor
+ executor spec.Executor
 }
 
 func NewChaosBladeClient() *ChaosBladeClient {
-	return &ChaosBladeClient{
-		executor: exec.NewLocalExecutor(),
-	}
+ return &ChaosBladeClient{
+  executor: exec.NewLocalExecutor(),
+ }
 }
 
 // CPUFullLoad creates full CPU load
 func (c *ChaosBladeClient) CPUFullLoad(ctx context.Context, duration time.Duration) (string, error) {
-	model := &spec.ExpModel{
-		Target:      "cpu",
-		ActionName:  "fullload",
-		ActionFlags: map[string]string{
-			"timeout": fmt.Sprintf("%d", int(duration.Seconds())),
-		},
-	}
+ model := &spec.ExpModel{
+  Target:      "cpu",
+  ActionName:  "fullload",
+  ActionFlags: map[string]string{
+   "timeout": fmt.Sprintf("%d", int(duration.Seconds())),
+  },
+ }
 
-	response := c.executor.Exec("create", model)
-	if !response.Success {
-		return "", fmt.Errorf("failed to create cpu fullload: %s", response.Err)
-	}
+ response := c.executor.Exec("create", model)
+ if !response.Success {
+  return "", fmt.Errorf("failed to create cpu fullload: %s", response.Err)
+ }
 
-	log.Printf("CPU fullload created: %s", response.Result)
-	return response.Result.(string), nil
+ log.Printf("CPU fullload created: %s", response.Result)
+ return response.Result.(string), nil
 }
 
 // NetworkDelay injects network delay
 func (c *ChaosBladeClient) NetworkDelay(
-	ctx context.Context,
-	delayMs int,
-	iface string,
-	port int,
-	duration time.Duration,
+ ctx context.Context,
+ delayMs int,
+ iface string,
+ port int,
+ duration time.Duration,
 ) (string, error) {
-	model := &spec.ExpModel{
-		Target:     "network",
-		ActionName: "delay",
-		ActionFlags: map[string]string{
-			"time":       fmt.Sprintf("%d", delayMs),
-			"interface":  iface,
-			"local-port": fmt.Sprintf("%d", port),
-			"timeout":    fmt.Sprintf("%d", int(duration.Seconds())),
-		},
-	}
+ model := &spec.ExpModel{
+  Target:     "network",
+  ActionName: "delay",
+  ActionFlags: map[string]string{
+   "time":       fmt.Sprintf("%d", delayMs),
+   "interface":  iface,
+   "local-port": fmt.Sprintf("%d", port),
+   "timeout":    fmt.Sprintf("%d", int(duration.Seconds())),
+  },
+ }
 
-	response := c.executor.Exec("create", model)
-	if !response.Success {
-		return "", fmt.Errorf("failed to create network delay: %s", response.Err)
-	}
+ response := c.executor.Exec("create", model)
+ if !response.Success {
+  return "", fmt.Errorf("failed to create network delay: %s", response.Err)
+ }
 
-	return response.Result.(string), nil
+ return response.Result.(string), nil
 }
 
 // MemoryLoad creates memory pressure
 func (c *ChaosBladeClient) MemoryLoad(
-	ctx context.Context,
-	memPercent int,
-	duration time.Duration,
+ ctx context.Context,
+ memPercent int,
+ duration time.Duration,
 ) (string, error) {
-	model := &spec.ExpModel{
-		Target:     "mem",
-		ActionName: "load",
-		ActionFlags: map[string]string{
-			"mode":        "ram",
-			"mem-percent": fmt.Sprintf("%d", memPercent),
-			"timeout":     fmt.Sprintf("%d", int(duration.Seconds())),
-		},
-	}
+ model := &spec.ExpModel{
+  Target:     "mem",
+  ActionName: "load",
+  ActionFlags: map[string]string{
+   "mode":        "ram",
+   "mem-percent": fmt.Sprintf("%d", memPercent),
+   "timeout":     fmt.Sprintf("%d", int(duration.Seconds())),
+  },
+ }
 
-	response := c.executor.Exec("create", model)
-	if !response.Success {
-		return "", fmt.Errorf("failed to create memory load: %s", response.Err)
-	}
+ response := c.executor.Exec("create", model)
+ if !response.Success {
+  return "", fmt.Errorf("failed to create memory load: %s", response.Err)
+ }
 
-	return response.Result.(string), nil
+ return response.Result.(string), nil
 }
 
 // DiskFill fills disk space
 func (c *ChaosBladeClient) DiskFill(
-	ctx context.Context,
-	path string,
-	sizeMB int,
-	duration time.Duration,
+ ctx context.Context,
+ path string,
+ sizeMB int,
+ duration time.Duration,
 ) (string, error) {
-	model := &spec.ExpModel{
-		Target:     "disk",
-		ActionName: "fill",
-		ActionFlags: map[string]string{
-			"path":    path,
-			"size":    fmt.Sprintf("%d", sizeMB),
-			"timeout": fmt.Sprintf("%d", int(duration.Seconds())),
-		},
-	}
+ model := &spec.ExpModel{
+  Target:     "disk",
+  ActionName: "fill",
+  ActionFlags: map[string]string{
+   "path":    path,
+   "size":    fmt.Sprintf("%d", sizeMB),
+   "timeout": fmt.Sprintf("%d", int(duration.Seconds())),
+  },
+ }
 
-	response := c.executor.Exec("create", model)
-	if !response.Success {
-		return "", fmt.Errorf("failed to create disk fill: %s", response.Err)
-	}
+ response := c.executor.Exec("create", model)
+ if !response.Success {
+  return "", fmt.Errorf("failed to create disk fill: %s", response.Err)
+ }
 
-	return response.Result.(string), nil
+ return response.Result.(string), nil
 }
 
 // DestroyExperiment stops an experiment
 func (c *ChaosBladeClient) DestroyExperiment(uid string) error {
-	model := &spec.ExpModel{}
-	model.SetUid(uid)
+ model := &spec.ExpModel{}
+ model.SetUid(uid)
 
-	response := c.executor.Exec("destroy", model)
-	if !response.Success {
-		return fmt.Errorf("failed to destroy experiment: %s", response.Err)
-	}
+ response := c.executor.Exec("destroy", model)
+ if !response.Success {
+  return fmt.Errorf("failed to destroy experiment: %s", response.Err)
+ }
 
-	log.Printf("Experiment destroyed: %s", uid)
-	return nil
+ log.Printf("Experiment destroyed: %s", uid)
+ return nil
 }
 
 // StatusExperiment checks experiment status
 func (c *ChaosBladeClient) StatusExperiment(uid string) (*spec.Response, error) {
-	model := &spec.ExpModel{}
-	model.SetUid(uid)
+ model := &spec.ExpModel{}
+ model.SetUid(uid)
 
-	response := c.executor.Exec("status", model)
-	return response, nil
+ response := c.executor.Exec("status", model)
+ return response, nil
 }
 
 // Example usage
 func main() {
-	client := NewChaosBladeClient()
-	ctx := context.Background()
+ client := NewChaosBladeClient()
+ ctx := context.Background()
 
-	// Create CPU stress for 60 seconds
-	uid, err := client.CPUFullLoad(ctx, 60*time.Second)
-	if err != nil {
-		log.Fatalf("Failed to create experiment: %v", err)
-	}
+ // Create CPU stress for 60 seconds
+ uid, err := client.CPUFullLoad(ctx, 60*time.Second)
+ if err != nil {
+  log.Fatalf("Failed to create experiment: %v", err)
+ }
 
-	log.Printf("Experiment started: %s", uid)
+ log.Printf("Experiment started: %s", uid)
 
-	// Wait for some time
-	time.Sleep(30 * time.Second)
+ // Wait for some time
+ time.Sleep(30 * time.Second)
 
-	// Destroy experiment
-	if err := client.DestroyExperiment(uid); err != nil {
-		log.Fatalf("Failed to destroy experiment: %v", err)
-	}
+ // Destroy experiment
+ if err := client.DestroyExperiment(uid); err != nil {
+  log.Fatalf("Failed to destroy experiment: %v", err)
+ }
 }
 ```
 
 ```yaml
 # ChaosBlade-Box Platform Deployment
 # docker-compose.yaml for ChaosBlade-Box
-version: '3.8'
+version: "3.8"
 
 services:
   chaosblade-box:
@@ -751,18 +753,21 @@ if __name__ == "__main__":
 ## Best Practices
 
 ### Experiment Design
+
 - Use --timeout to auto-recover
 - Start with minimal blast radius
 - Monitor target metrics during experiments
 - Document expected vs actual outcomes
 
 ### Safety
+
 - Always test in non-production first
 - Use blade status to monitor experiments
 - Keep blade destroy ready for emergencies
 - Set appropriate timeouts
 
 ### Integration
+
 - Use ChaosBlade-Box for platform management
 - Integrate with CI/CD pipelines
 - Export metrics to Prometheus

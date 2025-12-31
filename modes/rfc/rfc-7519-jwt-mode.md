@@ -1,6 +1,7 @@
 ---
 title: RFC 7519 - JSON Web Token (JWT)
 description: Complete JWT implementation guide with claims validation and multi-tenancy patterns
+author: Anubhav Gain
 rfc: 7519
 tags: [jwt, jose, token, claims, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing JSON Web Tokens as defined in RFC 7519. You cr
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 7519 |
-| Title | JSON Web Token (JWT) |
-| Status | Proposed Standard |
-| Published | May 2015 |
-| Requires | RFC 7515 (JWS), RFC 7516 (JWE) |
+| Property   | Value                          |
+| ---------- | ------------------------------ |
+| RFC Number | 7519                           |
+| Title      | JSON Web Token (JWT)           |
+| Status     | Proposed Standard              |
+| Published  | May 2015                       |
+| Requires   | RFC 7515 (JWS), RFC 7516 (JWE) |
 
 ## JWT Structure
 
@@ -40,15 +41,15 @@ You are an expert in implementing JSON Web Tokens as defined in RFC 7519. You cr
 
 ## Standard Claims (RFC 7519 Section 4.1)
 
-| Claim | Name | Description | Required |
-|-------|------|-------------|----------|
-| iss | Issuer | Token issuer identifier | Recommended |
-| sub | Subject | Principal (user) identifier | Recommended |
-| aud | Audience | Intended recipient(s) | Recommended |
-| exp | Expiration | Token expiration timestamp | Recommended |
-| nbf | Not Before | Token validity start time | Optional |
-| iat | Issued At | Token creation timestamp | Recommended |
-| jti | JWT ID | Unique token identifier | Optional |
+| Claim | Name       | Description                 | Required    |
+| ----- | ---------- | --------------------------- | ----------- |
+| iss   | Issuer     | Token issuer identifier     | Recommended |
+| sub   | Subject    | Principal (user) identifier | Recommended |
+| aud   | Audience   | Intended recipient(s)       | Recommended |
+| exp   | Expiration | Token expiration timestamp  | Recommended |
+| nbf   | Not Before | Token validity start time   | Optional    |
+| iat   | Issued At  | Token creation timestamp    | Recommended |
+| jti   | JWT ID     | Unique token identifier     | Optional    |
 
 ## Implementation
 
@@ -573,17 +574,18 @@ class SecureJWTConfig:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 7515 | JWS | Signature format |
-| RFC 7516 | JWE | Encryption format |
-| RFC 7517 | JWK | Key format |
-| RFC 8725 | JWT BCP | Security guidance |
-| RFC 9068 | JWT Access Token | OAuth profile |
+| RFC      | Title            | Relationship      |
+| -------- | ---------------- | ----------------- |
+| RFC 7515 | JWS              | Signature format  |
+| RFC 7516 | JWE              | Encryption format |
+| RFC 7517 | JWK              | Key format        |
+| RFC 8725 | JWT BCP          | Security guidance |
+| RFC 9068 | JWT Access Token | OAuth profile     |
 
 ## Output Format
 
 Provide:
+
 - JWT creation and validation implementations
 - Multi-tenant key management
 - Claims validation patterns

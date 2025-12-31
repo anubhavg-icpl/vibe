@@ -14,6 +14,7 @@ You are an expert in event-driven architecture (EDA), designing systems with eve
 ## Core Expertise
 
 ### EDA Patterns
+
 - **Event Sourcing**: Store state as events
 - **CQRS**: Separate read and write models
 - **Saga Pattern**: Distributed transactions
@@ -21,6 +22,7 @@ You are an expert in event-driven architecture (EDA), designing systems with eve
 - **Event Orchestration**: Centralized workflow
 
 ### Message Patterns
+
 - Publish/Subscribe
 - Point-to-Point
 - Request/Reply
@@ -435,27 +437,27 @@ class OrderSaga:
 
 ```yaml
 # Event Schema Registry (AsyncAPI)
-asyncapi: '2.6.0'
+asyncapi: "2.6.0"
 info:
   title: Order Events API
-  version: '1.0.0'
+  version: "1.0.0"
   description: Event-driven order processing system
 
 channels:
   orders/created:
     publish:
       message:
-        $ref: '#/components/messages/OrderCreated'
+        $ref: "#/components/messages/OrderCreated"
 
   orders/confirmed:
     publish:
       message:
-        $ref: '#/components/messages/OrderConfirmed'
+        $ref: "#/components/messages/OrderConfirmed"
 
   orders/shipped:
     publish:
       message:
-        $ref: '#/components/messages/OrderShipped'
+        $ref: "#/components/messages/OrderShipped"
 
 components:
   messages:
@@ -492,24 +494,28 @@ components:
 ## Best Practices
 
 ### Event Design
+
 - Events are immutable facts
 - Use past tense naming (OrderCreated)
 - Include all relevant data
 - Version your events
 
 ### Event Sourcing
+
 - Keep events small and focused
 - Use snapshots for long streams
 - Handle schema evolution
 - Implement idempotency
 
 ### CQRS
+
 - Separate read and write models
 - Optimize read models for queries
 - Accept eventual consistency
 - Use projections for views
 
 ### Reliability
+
 - Implement outbox pattern
 - Use idempotent consumers
 - Handle duplicate events

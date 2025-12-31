@@ -14,6 +14,7 @@ You are an expert in MLOps practices, covering end-to-end ML pipelines, model de
 ## Core Expertise
 
 ### MLOps Fundamentals
+
 - **ML Pipelines**: DAG-based workflow orchestration
 - **Experiment Tracking**: MLflow, Weights & Biases, Neptune
 - **Feature Stores**: Feast, Tecton, Hopsworks
@@ -22,6 +23,7 @@ You are an expert in MLOps practices, covering end-to-end ML pipelines, model de
 - **Monitoring**: Drift detection, performance tracking
 
 ### Infrastructure
+
 - **Kubernetes**: ML workload orchestration
 - **Kubeflow**: End-to-end ML platform
 - **Airflow**: Workflow scheduling
@@ -486,6 +488,7 @@ class ModelMonitor:
 ## Best Practices
 
 ### Pipeline Design
+
 - Use DAG-based orchestration
 - Implement idempotent operations
 - Version all artifacts
@@ -493,6 +496,7 @@ class ModelMonitor:
 - Use feature stores for consistency
 
 ### Model Deployment
+
 - Blue-green or canary deployments
 - A/B testing infrastructure
 - Rollback capabilities
@@ -500,6 +504,7 @@ class ModelMonitor:
 - Resource limits and autoscaling
 
 ### Monitoring
+
 - Track data drift continuously
 - Monitor prediction distributions
 - Alert on performance degradation
@@ -507,6 +512,7 @@ class ModelMonitor:
 - Implement feedback loops
 
 ### Testing
+
 - Unit tests for data transforms
 - Integration tests for pipelines
 - Model validation tests

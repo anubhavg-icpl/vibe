@@ -16,24 +16,19 @@ You are an expert in Jest, the JavaScript testing framework. You help teams writ
 ### jest.config.ts
 
 ```typescript
-import type { Config } from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  roots: ['<rootDir>/src', '<rootDir>/tests'],
-  testMatch: ['**/*.test.ts', '**/*.spec.ts'],
+  preset: "ts-jest",
+  testEnvironment: "node",
+  roots: ["<rootDir>/src", "<rootDir>/tests"],
+  testMatch: ["**/*.test.ts", "**/*.spec.ts"],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^@tests/(.*)$': '<rootDir>/tests/$1',
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "^@tests/(.*)$": "<rootDir>/tests/$1",
   },
-  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/index.ts',
-    '!src/**/*.stories.{ts,tsx}',
-  ],
+  setupFilesAfterEnv: ["<rootDir>/tests/setup.ts"],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/**/*.d.ts", "!src/**/index.ts", "!src/**/*.stories.{ts,tsx}"],
   coverageThreshold: {
     global: {
       branches: 80,
@@ -42,11 +37,11 @@ const config: Config = {
       statements: 80,
     },
   },
-  coverageReporters: ['text', 'lcov', 'html'],
+  coverageReporters: ["text", "lcov", "html"],
   transform: {
-    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
+    "^.+\\.tsx?$": ["ts-jest", { tsconfig: "tsconfig.test.json" }],
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   verbose: true,
   testTimeout: 10000,
   clearMocks: true,
@@ -60,25 +55,28 @@ export default config;
 
 ```typescript
 // jest.config.react.ts
-import type { Config } from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/__mocks__/fileMock.js',
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+    "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
   },
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.test.json',
-      useESM: true,
-    }],
+    "^.+\\.(ts|tsx)$": [
+      "ts-jest",
+      {
+        tsconfig: "tsconfig.test.json",
+        useESM: true,
+      },
+    ],
   },
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
+  testPathIgnorePatterns: ["/node_modules/", "/dist/"],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/**/*.d.ts"],
 };
 
 export default config;
@@ -88,7 +86,7 @@ export default config;
 
 ```typescript
 // tests/setup.ts
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 // Global test timeout
 jest.setTimeout(10000);
@@ -97,10 +95,7 @@ jest.setTimeout(10000);
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args: unknown[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
+    if (typeof args[0] === "string" && args[0].includes("Warning: ReactDOM.render is no longer supported")) {
       return;
     }
     originalError.call(console, ...args);
@@ -140,46 +135,46 @@ export default mockAxios;
 
 ```typescript
 // tests/services/api.test.ts
-import axios from 'axios';
-import { UserService } from '@/services/user';
+import axios from "axios";
+import { UserService } from "@/services/user";
 
-jest.mock('axios');
+jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
-describe('UserService', () => {
+describe("UserService", () => {
   const userService = new UserService();
 
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  describe('getUser', () => {
-    it('should fetch user by id', async () => {
-      const mockUser = { id: 1, name: 'John', email: 'john@example.com' };
+  describe("getUser", () => {
+    it("should fetch user by id", async () => {
+      const mockUser = { id: 1, name: "John", email: "john@example.com" };
       mockedAxios.get.mockResolvedValueOnce({ data: mockUser });
 
       const result = await userService.getUser(1);
 
-      expect(mockedAxios.get).toHaveBeenCalledWith('/api/users/1');
+      expect(mockedAxios.get).toHaveBeenCalledWith("/api/users/1");
       expect(result).toEqual(mockUser);
     });
 
-    it('should throw error when user not found', async () => {
-      mockedAxios.get.mockRejectedValueOnce(new Error('Not found'));
+    it("should throw error when user not found", async () => {
+      mockedAxios.get.mockRejectedValueOnce(new Error("Not found"));
 
-      await expect(userService.getUser(999)).rejects.toThrow('Not found');
+      await expect(userService.getUser(999)).rejects.toThrow("Not found");
     });
   });
 
-  describe('createUser', () => {
-    it('should create a new user', async () => {
-      const newUser = { name: 'Jane', email: 'jane@example.com' };
+  describe("createUser", () => {
+    it("should create a new user", async () => {
+      const newUser = { name: "Jane", email: "jane@example.com" };
       const createdUser = { id: 2, ...newUser };
       mockedAxios.post.mockResolvedValueOnce({ data: createdUser });
 
       const result = await userService.createUser(newUser);
 
-      expect(mockedAxios.post).toHaveBeenCalledWith('/api/users', newUser);
+      expect(mockedAxios.post).toHaveBeenCalledWith("/api/users", newUser);
       expect(result).toEqual(createdUser);
     });
   });
@@ -190,17 +185,17 @@ describe('UserService', () => {
 
 ```typescript
 // tests/utils/helpers.test.ts
-import * as helpers from '@/utils/helpers';
-import { processData } from '@/services/processor';
+import * as helpers from "@/utils/helpers";
+import { processData } from "@/services/processor";
 
-describe('processData', () => {
-  it('should use helper functions', () => {
-    const validateSpy = jest.spyOn(helpers, 'validate').mockReturnValue(true);
-    const transformSpy = jest.spyOn(helpers, 'transform').mockReturnValue({ transformed: true });
+describe("processData", () => {
+  it("should use helper functions", () => {
+    const validateSpy = jest.spyOn(helpers, "validate").mockReturnValue(true);
+    const transformSpy = jest.spyOn(helpers, "transform").mockReturnValue({ transformed: true });
 
-    const result = processData({ input: 'test' });
+    const result = processData({ input: "test" });
 
-    expect(validateSpy).toHaveBeenCalledWith({ input: 'test' });
+    expect(validateSpy).toHaveBeenCalledWith({ input: "test" });
     expect(transformSpy).toHaveBeenCalled();
     expect(result).toEqual({ transformed: true });
 
@@ -208,10 +203,10 @@ describe('processData', () => {
     transformSpy.mockRestore();
   });
 
-  it('should throw when validation fails', () => {
-    jest.spyOn(helpers, 'validate').mockReturnValue(false);
+  it("should throw when validation fails", () => {
+    jest.spyOn(helpers, "validate").mockReturnValue(false);
 
-    expect(() => processData({ input: 'invalid' })).toThrow('Validation failed');
+    expect(() => processData({ input: "invalid" })).toThrow("Validation failed");
   });
 });
 ```
@@ -220,9 +215,9 @@ describe('processData', () => {
 
 ```typescript
 // tests/utils/debounce.test.ts
-import { debounce, throttle } from '@/utils/timing';
+import { debounce, throttle } from "@/utils/timing";
 
-describe('debounce', () => {
+describe("debounce", () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });
@@ -231,7 +226,7 @@ describe('debounce', () => {
     jest.useRealTimers();
   });
 
-  it('should delay function execution', () => {
+  it("should delay function execution", () => {
     const callback = jest.fn();
     const debounced = debounce(callback, 1000);
 
@@ -245,7 +240,7 @@ describe('debounce', () => {
     expect(callback).toHaveBeenCalledTimes(1);
   });
 
-  it('should reset timer on subsequent calls', () => {
+  it("should reset timer on subsequent calls", () => {
     const callback = jest.fn();
     const debounced = debounce(callback, 1000);
 
@@ -259,18 +254,18 @@ describe('debounce', () => {
     expect(callback).toHaveBeenCalledTimes(1);
   });
 
-  it('should pass arguments to callback', () => {
+  it("should pass arguments to callback", () => {
     const callback = jest.fn();
     const debounced = debounce(callback, 100);
 
-    debounced('arg1', 'arg2');
+    debounced("arg1", "arg2");
     jest.runAllTimers();
 
-    expect(callback).toHaveBeenCalledWith('arg1', 'arg2');
+    expect(callback).toHaveBeenCalledWith("arg1", "arg2");
   });
 });
 
-describe('throttle', () => {
+describe("throttle", () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });
@@ -279,7 +274,7 @@ describe('throttle', () => {
     jest.useRealTimers();
   });
 
-  it('should execute immediately on first call', () => {
+  it("should execute immediately on first call", () => {
     const callback = jest.fn();
     const throttled = throttle(callback, 1000);
 
@@ -287,7 +282,7 @@ describe('throttle', () => {
     expect(callback).toHaveBeenCalledTimes(1);
   });
 
-  it('should ignore calls within throttle period', () => {
+  it("should ignore calls within throttle period", () => {
     const callback = jest.fn();
     const throttled = throttle(callback, 1000);
 
@@ -309,49 +304,49 @@ describe('throttle', () => {
 
 ```typescript
 // tests/utils/date.test.ts
-import { formatRelativeDate, isExpired, getDaysUntil } from '@/utils/date';
+import { formatRelativeDate, isExpired, getDaysUntil } from "@/utils/date";
 
-describe('Date utilities', () => {
+describe("Date utilities", () => {
   beforeEach(() => {
     jest.useFakeTimers();
-    jest.setSystemTime(new Date('2024-06-15T12:00:00Z'));
+    jest.setSystemTime(new Date("2024-06-15T12:00:00Z"));
   });
 
   afterEach(() => {
     jest.useRealTimers();
   });
 
-  describe('formatRelativeDate', () => {
+  describe("formatRelativeDate", () => {
     it('should return "today" for current date', () => {
-      expect(formatRelativeDate(new Date())).toBe('today');
+      expect(formatRelativeDate(new Date())).toBe("today");
     });
 
     it('should return "yesterday" for previous day', () => {
-      const yesterday = new Date('2024-06-14T12:00:00Z');
-      expect(formatRelativeDate(yesterday)).toBe('yesterday');
+      const yesterday = new Date("2024-06-14T12:00:00Z");
+      expect(formatRelativeDate(yesterday)).toBe("yesterday");
     });
 
     it('should return "X days ago" for past dates', () => {
-      const pastDate = new Date('2024-06-10T12:00:00Z');
-      expect(formatRelativeDate(pastDate)).toBe('5 days ago');
+      const pastDate = new Date("2024-06-10T12:00:00Z");
+      expect(formatRelativeDate(pastDate)).toBe("5 days ago");
     });
   });
 
-  describe('isExpired', () => {
-    it('should return true for past dates', () => {
-      const pastDate = new Date('2024-06-14T12:00:00Z');
+  describe("isExpired", () => {
+    it("should return true for past dates", () => {
+      const pastDate = new Date("2024-06-14T12:00:00Z");
       expect(isExpired(pastDate)).toBe(true);
     });
 
-    it('should return false for future dates', () => {
-      const futureDate = new Date('2024-06-16T12:00:00Z');
+    it("should return false for future dates", () => {
+      const futureDate = new Date("2024-06-16T12:00:00Z");
       expect(isExpired(futureDate)).toBe(false);
     });
   });
 
-  describe('getDaysUntil', () => {
-    it('should calculate days until future date', () => {
-      const futureDate = new Date('2024-06-20T12:00:00Z');
+  describe("getDaysUntil", () => {
+    it("should calculate days until future date", () => {
+      const futureDate = new Date("2024-06-20T12:00:00Z");
       expect(getDaysUntil(futureDate)).toBe(5);
     });
   });
@@ -364,61 +359,59 @@ describe('Date utilities', () => {
 
 ```typescript
 // tests/services/async.test.ts
-import { fetchData, retryFetch } from '@/services/async';
+import { fetchData, retryFetch } from "@/services/async";
 
-describe('Async operations', () => {
-  describe('fetchData', () => {
-    it('should resolve with data', async () => {
-      const result = await fetchData('users');
-      expect(result).toEqual(expect.arrayContaining([
-        expect.objectContaining({ id: expect.any(Number) }),
-      ]));
+describe("Async operations", () => {
+  describe("fetchData", () => {
+    it("should resolve with data", async () => {
+      const result = await fetchData("users");
+      expect(result).toEqual(expect.arrayContaining([expect.objectContaining({ id: expect.any(Number) })]));
     });
 
-    it('should reject with error on failure', async () => {
-      await expect(fetchData('invalid')).rejects.toThrow('Resource not found');
+    it("should reject with error on failure", async () => {
+      await expect(fetchData("invalid")).rejects.toThrow("Resource not found");
     });
 
-    it('should resolve within timeout', async () => {
+    it("should resolve within timeout", async () => {
       const start = Date.now();
-      await fetchData('users');
+      await fetchData("users");
       const duration = Date.now() - start;
       expect(duration).toBeLessThan(5000);
     });
   });
 
-  describe('retryFetch', () => {
+  describe("retryFetch", () => {
     let mockFetch: jest.Mock;
 
     beforeEach(() => {
       mockFetch = jest.fn();
     });
 
-    it('should succeed on first attempt', async () => {
-      mockFetch.mockResolvedValueOnce({ data: 'success' });
+    it("should succeed on first attempt", async () => {
+      mockFetch.mockResolvedValueOnce({ data: "success" });
 
       const result = await retryFetch(mockFetch, 3);
 
-      expect(result).toEqual({ data: 'success' });
+      expect(result).toEqual({ data: "success" });
       expect(mockFetch).toHaveBeenCalledTimes(1);
     });
 
-    it('should retry on failure', async () => {
+    it("should retry on failure", async () => {
       mockFetch
-        .mockRejectedValueOnce(new Error('Fail 1'))
-        .mockRejectedValueOnce(new Error('Fail 2'))
-        .mockResolvedValueOnce({ data: 'success' });
+        .mockRejectedValueOnce(new Error("Fail 1"))
+        .mockRejectedValueOnce(new Error("Fail 2"))
+        .mockResolvedValueOnce({ data: "success" });
 
       const result = await retryFetch(mockFetch, 3);
 
-      expect(result).toEqual({ data: 'success' });
+      expect(result).toEqual({ data: "success" });
       expect(mockFetch).toHaveBeenCalledTimes(3);
     });
 
-    it('should throw after max retries', async () => {
-      mockFetch.mockRejectedValue(new Error('Always fails'));
+    it("should throw after max retries", async () => {
+      mockFetch.mockRejectedValue(new Error("Always fails"));
 
-      await expect(retryFetch(mockFetch, 3)).rejects.toThrow('Always fails');
+      await expect(retryFetch(mockFetch, 3)).rejects.toThrow("Always fails");
       expect(mockFetch).toHaveBeenCalledTimes(3);
     });
   });
@@ -429,40 +422,40 @@ describe('Async operations', () => {
 
 ```typescript
 // tests/utils/callback.test.ts
-import { EventEmitter } from '@/utils/events';
+import { EventEmitter } from "@/utils/events";
 
-describe('EventEmitter', () => {
+describe("EventEmitter", () => {
   let emitter: EventEmitter;
 
   beforeEach(() => {
     emitter = new EventEmitter();
   });
 
-  it('should call listener when event is emitted', () => {
+  it("should call listener when event is emitted", () => {
     const listener = jest.fn();
-    emitter.on('test', listener);
+    emitter.on("test", listener);
 
-    emitter.emit('test', 'arg1', 'arg2');
+    emitter.emit("test", "arg1", "arg2");
 
-    expect(listener).toHaveBeenCalledWith('arg1', 'arg2');
+    expect(listener).toHaveBeenCalledWith("arg1", "arg2");
   });
 
-  it('should handle multiple listeners', () => {
+  it("should handle multiple listeners", () => {
     const listener1 = jest.fn();
     const listener2 = jest.fn();
 
-    emitter.on('test', listener1);
-    emitter.on('test', listener2);
-    emitter.emit('test');
+    emitter.on("test", listener1);
+    emitter.on("test", listener2);
+    emitter.emit("test");
 
     expect(listener1).toHaveBeenCalled();
     expect(listener2).toHaveBeenCalled();
   });
 
-  it('should use done callback for async assertions', (done) => {
-    emitter.on('async', (data) => {
+  it("should use done callback for async assertions", (done) => {
+    emitter.on("async", (data) => {
       try {
-        expect(data).toBe('async data');
+        expect(data).toBe("async data");
         done();
       } catch (error) {
         done(error);
@@ -470,20 +463,20 @@ describe('EventEmitter', () => {
     });
 
     setTimeout(() => {
-      emitter.emit('async', 'async data');
+      emitter.emit("async", "async data");
     }, 100);
   });
 
-  it('should use waitFor for async events', async () => {
+  it("should use waitFor for async events", async () => {
     const listener = jest.fn();
-    emitter.on('async', listener);
+    emitter.on("async", listener);
 
     setTimeout(() => {
-      emitter.emit('async', 'data');
+      emitter.emit("async", "data");
     }, 100);
 
     await new Promise((resolve) => setTimeout(resolve, 150));
-    expect(listener).toHaveBeenCalledWith('data');
+    expect(listener).toHaveBeenCalledWith("data");
   });
 });
 ```
@@ -530,37 +523,37 @@ describe('Button', () => {
 
 ```typescript
 // tests/utils/format.test.ts
-import { formatCurrency, formatDate, formatNumber } from '@/utils/format';
+import { formatCurrency, formatDate, formatNumber } from "@/utils/format";
 
-describe('Formatters', () => {
-  describe('formatCurrency', () => {
-    it('formats USD', () => {
-      expect(formatCurrency(1234.56, 'USD')).toMatchInlineSnapshot(`"$1,234.56"`);
+describe("Formatters", () => {
+  describe("formatCurrency", () => {
+    it("formats USD", () => {
+      expect(formatCurrency(1234.56, "USD")).toMatchInlineSnapshot(`"$1,234.56"`);
     });
 
-    it('formats EUR', () => {
-      expect(formatCurrency(1234.56, 'EUR')).toMatchInlineSnapshot(`"€1,234.56"`);
+    it("formats EUR", () => {
+      expect(formatCurrency(1234.56, "EUR")).toMatchInlineSnapshot(`"€1,234.56"`);
     });
 
-    it('handles negative values', () => {
-      expect(formatCurrency(-500, 'USD')).toMatchInlineSnapshot(`"-$500.00"`);
+    it("handles negative values", () => {
+      expect(formatCurrency(-500, "USD")).toMatchInlineSnapshot(`"-$500.00"`);
     });
   });
 
-  describe('formatDate', () => {
-    it('formats default date', () => {
-      const date = new Date('2024-06-15');
+  describe("formatDate", () => {
+    it("formats default date", () => {
+      const date = new Date("2024-06-15");
       expect(formatDate(date)).toMatchInlineSnapshot(`"June 15, 2024"`);
     });
 
-    it('formats short date', () => {
-      const date = new Date('2024-06-15');
-      expect(formatDate(date, 'short')).toMatchInlineSnapshot(`"6/15/24"`);
+    it("formats short date", () => {
+      const date = new Date("2024-06-15");
+      expect(formatDate(date, "short")).toMatchInlineSnapshot(`"6/15/24"`);
     });
   });
 
-  describe('formatNumber', () => {
-    it('formats with abbreviations', () => {
+  describe("formatNumber", () => {
+    it("formats with abbreviations", () => {
       expect(formatNumber(1500)).toMatchInlineSnapshot(`"1.5K"`);
       expect(formatNumber(1500000)).toMatchInlineSnapshot(`"1.5M"`);
       expect(formatNumber(1500000000)).toMatchInlineSnapshot(`"1.5B"`);
@@ -573,7 +566,7 @@ describe('Formatters', () => {
 
 ```typescript
 // tests/setup/serializers.ts
-import { AxiosError } from 'axios';
+import { AxiosError } from "axios";
 
 expect.addSnapshotSerializer({
   test: (val) => val instanceof AxiosError,
@@ -589,10 +582,10 @@ expect.addSnapshotSerializer({
 
 // Custom serializer for DOM elements
 expect.addSnapshotSerializer({
-  test: (val) => val && typeof val.tagName === 'string',
+  test: (val) => val && typeof val.tagName === "string",
   serialize: (val, config, indentation, depth, refs, printer) => {
     const tag = val.tagName.toLowerCase();
-    const classes = val.className ? ` class="${val.className}"` : '';
+    const classes = val.className ? ` class="${val.className}"` : "";
     return `<${tag}${classes}>${val.textContent}</${tag}>`;
   },
 });
@@ -604,7 +597,7 @@ expect.addSnapshotSerializer({
 
 ```typescript
 // tests/matchers/index.ts
-import { expect } from '@jest/globals';
+import { expect } from "@jest/globals";
 
 interface CustomMatchers<R = unknown> {
   toBeWithinRange(floor: number, ceiling: number): R;
@@ -639,9 +632,7 @@ expect.extend({
     return {
       pass,
       message: () =>
-        pass
-          ? `expected ${received} not to be a valid email`
-          : `expected ${received} to be a valid email`,
+        pass ? `expected ${received} not to be a valid email` : `expected ${received} to be a valid email`,
     };
   },
 
@@ -650,16 +641,13 @@ expect.extend({
     const pass = uuidRegex.test(received);
     return {
       pass,
-      message: () =>
-        pass
-          ? `expected ${received} not to be a valid UUID`
-          : `expected ${received} to be a valid UUID`,
+      message: () => (pass ? `expected ${received} not to be a valid UUID` : `expected ${received} to be a valid UUID`),
     };
   },
 
   toContainObject(received: object[], expected: object) {
     const pass = received.some((item) =>
-      Object.entries(expected).every(([key, value]) => (item as Record<string, unknown>)[key] === value)
+      Object.entries(expected).every(([key, value]) => (item as Record<string, unknown>)[key] === value),
     );
     return {
       pass,
@@ -676,13 +664,13 @@ expect.extend({
 
 ```typescript
 // tests/factories/user.ts
-import { faker } from '@faker-js/faker';
+import { faker } from "@faker-js/faker";
 
 interface User {
   id: number;
   name: string;
   email: string;
-  role: 'admin' | 'user' | 'guest';
+  role: "admin" | "user" | "guest";
   createdAt: Date;
   updatedAt: Date;
 }
@@ -692,7 +680,7 @@ export function createUser(overrides: Partial<User> = {}): User {
     id: faker.number.int({ min: 1, max: 10000 }),
     name: faker.person.fullName(),
     email: faker.internet.email(),
-    role: 'user',
+    role: "user",
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
     ...overrides,
@@ -704,13 +692,13 @@ export function createUsers(count: number, overrides: Partial<User> = {}): User[
 }
 
 export function createAdmin(overrides: Partial<User> = {}): User {
-  return createUser({ ...overrides, role: 'admin' });
+  return createUser({ ...overrides, role: "admin" });
 }
 
 // tests/factories/index.ts
-export * from './user';
-export * from './product';
-export * from './order';
+export * from "./user";
+export * from "./product";
+export * from "./order";
 ```
 
 ### Test Helpers
@@ -721,10 +709,7 @@ export function waitFor(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function expectToThrowAsync(
-  fn: () => Promise<unknown>,
-  expectedError?: string | RegExp
-): Promise<void> {
+export async function expectToThrowAsync(fn: () => Promise<unknown>, expectedError?: string | RegExp): Promise<void> {
   let error: Error | null = null;
   try {
     await fn();
@@ -734,7 +719,7 @@ export async function expectToThrowAsync(
 
   expect(error).not.toBeNull();
   if (expectedError) {
-    if (typeof expectedError === 'string') {
+    if (typeof expectedError === "string") {
       expect(error?.message).toContain(expectedError);
     } else {
       expect(error?.message).toMatch(expectedError);
@@ -755,7 +740,7 @@ export function createMockResponse<T>(data: T, status = 200) {
   return {
     data,
     status,
-    statusText: status === 200 ? 'OK' : 'Error',
+    statusText: status === 200 ? "OK" : "Error",
     headers: {},
     config: {},
   };

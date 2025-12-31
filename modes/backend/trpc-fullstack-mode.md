@@ -1,6 +1,7 @@
 ---
 title: tRPC & Type-Safe Stack Expert
 description: Expert in tRPC, Drizzle ORM, and Zod for end-to-end type-safe full-stack TypeScript applications
+author: Anubhav Gain
 ---
 
 # tRPC & Type-Safe Stack Expert Mode
@@ -10,6 +11,7 @@ You are an expert in building type-safe full-stack applications using tRPC, Driz
 ## Core Competencies
 
 ### Type-Safe Stack
+
 - tRPC for type-safe APIs
 - Drizzle ORM for type-safe database queries
 - Zod for runtime validation
@@ -79,57 +81,75 @@ import {
   integer,
   pgEnum,
   index,
-  uniqueIndex
-} from 'drizzle-orm/pg-core';
-import { relations } from 'drizzle-orm';
+  uniqueIndex,
+} from "drizzle-orm/pg-core";
+import { relations } from "drizzle-orm";
 
 // Enums
-export const userRole = pgEnum('user_role', ['admin', 'user', 'moderator']);
-export const postStatus = pgEnum('post_status', ['draft', 'published', 'archived']);
+export const userRole = pgEnum("user_role", ["admin", "user", "moderator"]);
+export const postStatus = pgEnum("post_status", ["draft", "published", "archived"]);
 
 // Users table
-export const users = pgTable('users', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  email: varchar('email', { length: 255 }).notNull().unique(),
-  name: varchar('name', { length: 255 }).notNull(),
-  role: userRole('role').default('user').notNull(),
-  avatarUrl: text('avatar_url'),
-  emailVerified: boolean('email_verified').default(false),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
-  updatedAt: timestamp('updated_at').defaultNow().notNull(),
-}, (table) => ({
-  emailIdx: uniqueIndex('email_idx').on(table.email),
-}));
+export const users = pgTable(
+  "users",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    email: varchar("email", { length: 255 }).notNull().unique(),
+    name: varchar("name", { length: 255 }).notNull(),
+    role: userRole("role").default("user").notNull(),
+    avatarUrl: text("avatar_url"),
+    emailVerified: boolean("email_verified").default(false),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().notNull(),
+  },
+  (table) => ({
+    emailIdx: uniqueIndex("email_idx").on(table.email),
+  }),
+);
 
 // Posts table
-export const posts = pgTable('posts', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  title: varchar('title', { length: 255 }).notNull(),
-  slug: varchar('slug', { length: 255 }).notNull().unique(),
-  content: text('content'),
-  excerpt: text('excerpt'),
-  status: postStatus('status').default('draft').notNull(),
-  authorId: uuid('author_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  publishedAt: timestamp('published_at'),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
-  updatedAt: timestamp('updated_at').defaultNow().notNull(),
-}, (table) => ({
-  authorIdx: index('author_idx').on(table.authorId),
-  statusIdx: index('status_idx').on(table.status),
-  slugIdx: uniqueIndex('slug_idx').on(table.slug),
-}));
+export const posts = pgTable(
+  "posts",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    title: varchar("title", { length: 255 }).notNull(),
+    slug: varchar("slug", { length: 255 }).notNull().unique(),
+    content: text("content"),
+    excerpt: text("excerpt"),
+    status: postStatus("status").default("draft").notNull(),
+    authorId: uuid("author_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    publishedAt: timestamp("published_at"),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().notNull(),
+  },
+  (table) => ({
+    authorIdx: index("author_idx").on(table.authorId),
+    statusIdx: index("status_idx").on(table.status),
+    slugIdx: uniqueIndex("slug_idx").on(table.slug),
+  }),
+);
 
 // Comments table
-export const comments = pgTable('comments', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  content: text('content').notNull(),
-  postId: uuid('post_id').notNull().references(() => posts.id, { onDelete: 'cascade' }),
-  authorId: uuid('author_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  parentId: uuid('parent_id').references((): any => comments.id),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
-}, (table) => ({
-  postIdx: index('post_idx').on(table.postId),
-}));
+export const comments = pgTable(
+  "comments",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    content: text("content").notNull(),
+    postId: uuid("post_id")
+      .notNull()
+      .references(() => posts.id, { onDelete: "cascade" }),
+    authorId: uuid("author_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    parentId: uuid("parent_id").references((): any => comments.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+  },
+  (table) => ({
+    postIdx: index("post_idx").on(table.postId),
+  }),
+);
 
 // Relations
 export const usersRelations = relations(users, ({ many }) => ({
@@ -172,9 +192,9 @@ export type NewPost = typeof posts.$inferInsert;
 
 ```typescript
 // src/db/index.ts
-import { drizzle } from 'drizzle-orm/postgres-js';
-import postgres from 'postgres';
-import * as schema from './schema';
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
+import * as schema from "./schema";
 
 const connectionString = process.env.DATABASE_URL!;
 
@@ -191,26 +211,24 @@ export const migrationDb = drizzle(migrationClient);
 
 ```typescript
 // src/validation/schemas.ts
-import { z } from 'zod';
-import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
-import { users, posts, comments } from '@/db/schema';
+import { z } from "zod";
+import { createInsertSchema, createSelectSchema } from "drizzle-zod";
+import { users, posts, comments } from "@/db/schema";
 
 // Auto-generate from Drizzle schema
 export const insertUserSchema = createInsertSchema(users, {
-  email: z.string().email('Invalid email address'),
-  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email("Invalid email address"),
+  name: z.string().min(2, "Name must be at least 2 characters"),
 });
 
 export const selectUserSchema = createSelectSchema(users);
 
 // Custom schemas with refinements
 export const createPostSchema = z.object({
-  title: z.string()
-    .min(3, 'Title must be at least 3 characters')
-    .max(255, 'Title must be less than 255 characters'),
-  content: z.string().min(10, 'Content must be at least 10 characters'),
+  title: z.string().min(3, "Title must be at least 3 characters").max(255, "Title must be less than 255 characters"),
+  content: z.string().min(10, "Content must be at least 10 characters"),
   excerpt: z.string().max(500).optional(),
-  status: z.enum(['draft', 'published']).default('draft'),
+  status: z.enum(["draft", "published"]).default("draft"),
 });
 
 export const updatePostSchema = createPostSchema.partial().extend({
@@ -220,8 +238,8 @@ export const updatePostSchema = createPostSchema.partial().extend({
 export const paginationSchema = z.object({
   page: z.number().int().positive().default(1),
   limit: z.number().int().min(1).max(100).default(20),
-  orderBy: z.enum(['createdAt', 'updatedAt', 'title']).default('createdAt'),
-  order: z.enum(['asc', 'desc']).default('desc'),
+  orderBy: z.enum(["createdAt", "updatedAt", "title"]).default("createdAt"),
+  order: z.enum(["asc", "desc"]).default("desc"),
 });
 
 export const createCommentSchema = z.object({
@@ -240,13 +258,13 @@ export type Pagination = z.infer<typeof paginationSchema>;
 
 ```typescript
 // src/server/trpc.ts
-import { initTRPC, TRPCError } from '@trpc/server';
-import { type CreateNextContextOptions } from '@trpc/server/adapters/next';
-import superjson from 'superjson';
-import { ZodError } from 'zod';
-import { db } from '@/db';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/auth';
+import { initTRPC, TRPCError } from "@trpc/server";
+import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
+import superjson from "superjson";
+import { ZodError } from "zod";
+import { db } from "@/db";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/auth";
 
 // Context creation
 export const createTRPCContext = async (opts: CreateNextContextOptions) => {
@@ -268,9 +286,7 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
       ...shape,
       data: {
         ...shape.data,
-        zodError: error.cause instanceof ZodError
-          ? error.cause.flatten()
-          : null,
+        zodError: error.cause instanceof ZodError ? error.cause.flatten() : null,
       },
     };
   },
@@ -284,7 +300,7 @@ export const createCallerFactory = t.createCallerFactory;
 // Middleware for authenticated routes
 const isAuthed = t.middleware(({ ctx, next }) => {
   if (!ctx.session?.user) {
-    throw new TRPCError({ code: 'UNAUTHORIZED' });
+    throw new TRPCError({ code: "UNAUTHORIZED" });
   }
   return next({
     ctx: {
@@ -298,8 +314,8 @@ export const protectedProcedure = t.procedure.use(isAuthed);
 
 // Admin middleware
 const isAdmin = t.middleware(({ ctx, next }) => {
-  if (ctx.session?.user?.role !== 'admin') {
-    throw new TRPCError({ code: 'FORBIDDEN' });
+  if (ctx.session?.user?.role !== "admin") {
+    throw new TRPCError({ code: "FORBIDDEN" });
   }
   return next({ ctx });
 });
@@ -311,20 +327,22 @@ export const adminProcedure = protectedProcedure.use(isAdmin);
 
 ```typescript
 // src/server/routers/posts.ts
-import { z } from 'zod';
-import { eq, desc, asc, and, ilike, sql } from 'drizzle-orm';
-import { createTRPCRouter, publicProcedure, protectedProcedure } from '../trpc';
-import { posts, users, comments } from '@/db/schema';
-import { createPostSchema, updatePostSchema, paginationSchema } from '@/validation/schemas';
-import { TRPCError } from '@trpc/server';
+import { z } from "zod";
+import { eq, desc, asc, and, ilike, sql } from "drizzle-orm";
+import { createTRPCRouter, publicProcedure, protectedProcedure } from "../trpc";
+import { posts, users, comments } from "@/db/schema";
+import { createPostSchema, updatePostSchema, paginationSchema } from "@/validation/schemas";
+import { TRPCError } from "@trpc/server";
 
 export const postsRouter = createTRPCRouter({
   // Get all posts with pagination
   list: publicProcedure
-    .input(paginationSchema.extend({
-      status: z.enum(['draft', 'published', 'archived']).optional(),
-      search: z.string().optional(),
-    }))
+    .input(
+      paginationSchema.extend({
+        status: z.enum(["draft", "published", "archived"]).optional(),
+        search: z.string().optional(),
+      }),
+    )
     .query(async ({ ctx, input }) => {
       const { page, limit, orderBy, order, status, search } = input;
       const offset = (page - 1) * limit;
@@ -354,7 +372,7 @@ export const postsRouter = createTRPCRouter({
               columns: { id: true },
             },
           },
-          orderBy: order === 'asc' ? asc(orderColumn) : desc(orderColumn),
+          orderBy: order === "asc" ? asc(orderColumn) : desc(orderColumn),
           limit,
           offset,
         }),
@@ -365,7 +383,7 @@ export const postsRouter = createTRPCRouter({
       ]);
 
       return {
-        items: items.map(post => ({
+        items: items.map((post) => ({
           ...post,
           commentCount: post.comments.length,
         })),
@@ -379,179 +397,169 @@ export const postsRouter = createTRPCRouter({
     }),
 
   // Get single post by slug
-  bySlug: publicProcedure
-    .input(z.object({ slug: z.string() }))
-    .query(async ({ ctx, input }) => {
-      const post = await ctx.db.query.posts.findFirst({
-        where: eq(posts.slug, input.slug),
-        with: {
-          author: true,
-          comments: {
-            with: {
-              author: {
-                columns: { id: true, name: true, avatarUrl: true },
-              },
+  bySlug: publicProcedure.input(z.object({ slug: z.string() })).query(async ({ ctx, input }) => {
+    const post = await ctx.db.query.posts.findFirst({
+      where: eq(posts.slug, input.slug),
+      with: {
+        author: true,
+        comments: {
+          with: {
+            author: {
+              columns: { id: true, name: true, avatarUrl: true },
             },
-            orderBy: desc(comments.createdAt),
           },
+          orderBy: desc(comments.createdAt),
         },
+      },
+    });
+
+    if (!post) {
+      throw new TRPCError({
+        code: "NOT_FOUND",
+        message: "Post not found",
       });
+    }
 
-      if (!post) {
-        throw new TRPCError({
-          code: 'NOT_FOUND',
-          message: 'Post not found',
-        });
-      }
-
-      return post;
-    }),
+    return post;
+  }),
 
   // Create post (authenticated)
-  create: protectedProcedure
-    .input(createPostSchema)
-    .mutation(async ({ ctx, input }) => {
-      const slug = input.title
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
+  create: protectedProcedure.input(createPostSchema).mutation(async ({ ctx, input }) => {
+    const slug = input.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
 
-      const [post] = await ctx.db.insert(posts).values({
+    const [post] = await ctx.db
+      .insert(posts)
+      .values({
         ...input,
         slug: `${slug}-${Date.now()}`,
         authorId: ctx.user.id,
-        publishedAt: input.status === 'published' ? new Date() : null,
-      }).returning();
+        publishedAt: input.status === "published" ? new Date() : null,
+      })
+      .returning();
 
-      return post;
-    }),
+    return post;
+  }),
 
   // Update post (authenticated + ownership check)
-  update: protectedProcedure
-    .input(updatePostSchema)
-    .mutation(async ({ ctx, input }) => {
-      const { id, ...data } = input;
+  update: protectedProcedure.input(updatePostSchema).mutation(async ({ ctx, input }) => {
+    const { id, ...data } = input;
 
-      const existingPost = await ctx.db.query.posts.findFirst({
-        where: eq(posts.id, id),
-      });
+    const existingPost = await ctx.db.query.posts.findFirst({
+      where: eq(posts.id, id),
+    });
 
-      if (!existingPost) {
-        throw new TRPCError({ code: 'NOT_FOUND' });
-      }
+    if (!existingPost) {
+      throw new TRPCError({ code: "NOT_FOUND" });
+    }
 
-      if (existingPost.authorId !== ctx.user.id && ctx.user.role !== 'admin') {
-        throw new TRPCError({ code: 'FORBIDDEN' });
-      }
+    if (existingPost.authorId !== ctx.user.id && ctx.user.role !== "admin") {
+      throw new TRPCError({ code: "FORBIDDEN" });
+    }
 
-      const [updated] = await ctx.db
-        .update(posts)
-        .set({
-          ...data,
-          updatedAt: new Date(),
-          publishedAt: data.status === 'published' && !existingPost.publishedAt
-            ? new Date()
-            : existingPost.publishedAt,
-        })
-        .where(eq(posts.id, id))
-        .returning();
+    const [updated] = await ctx.db
+      .update(posts)
+      .set({
+        ...data,
+        updatedAt: new Date(),
+        publishedAt: data.status === "published" && !existingPost.publishedAt ? new Date() : existingPost.publishedAt,
+      })
+      .where(eq(posts.id, id))
+      .returning();
 
-      return updated;
-    }),
+    return updated;
+  }),
 
   // Delete post
-  delete: protectedProcedure
-    .input(z.object({ id: z.string().uuid() }))
-    .mutation(async ({ ctx, input }) => {
-      const post = await ctx.db.query.posts.findFirst({
-        where: eq(posts.id, input.id),
-      });
+  delete: protectedProcedure.input(z.object({ id: z.string().uuid() })).mutation(async ({ ctx, input }) => {
+    const post = await ctx.db.query.posts.findFirst({
+      where: eq(posts.id, input.id),
+    });
 
-      if (!post) {
-        throw new TRPCError({ code: 'NOT_FOUND' });
-      }
+    if (!post) {
+      throw new TRPCError({ code: "NOT_FOUND" });
+    }
 
-      if (post.authorId !== ctx.user.id && ctx.user.role !== 'admin') {
-        throw new TRPCError({ code: 'FORBIDDEN' });
-      }
+    if (post.authorId !== ctx.user.id && ctx.user.role !== "admin") {
+      throw new TRPCError({ code: "FORBIDDEN" });
+    }
 
-      await ctx.db.delete(posts).where(eq(posts.id, input.id));
+    await ctx.db.delete(posts).where(eq(posts.id, input.id));
 
-      return { success: true };
-    }),
+    return { success: true };
+  }),
 });
 ```
 
 ```typescript
 // src/server/routers/comments.ts
-import { z } from 'zod';
-import { eq, desc } from 'drizzle-orm';
-import { createTRPCRouter, publicProcedure, protectedProcedure } from '../trpc';
-import { comments } from '@/db/schema';
-import { createCommentSchema } from '@/validation/schemas';
-import { TRPCError } from '@trpc/server';
+import { z } from "zod";
+import { eq, desc } from "drizzle-orm";
+import { createTRPCRouter, publicProcedure, protectedProcedure } from "../trpc";
+import { comments } from "@/db/schema";
+import { createCommentSchema } from "@/validation/schemas";
+import { TRPCError } from "@trpc/server";
 
 export const commentsRouter = createTRPCRouter({
-  byPost: publicProcedure
-    .input(z.object({ postId: z.string().uuid() }))
-    .query(async ({ ctx, input }) => {
-      return ctx.db.query.comments.findMany({
-        where: eq(comments.postId, input.postId),
-        with: {
-          author: {
-            columns: { id: true, name: true, avatarUrl: true },
-          },
-          replies: {
-            with: {
-              author: {
-                columns: { id: true, name: true, avatarUrl: true },
-              },
+  byPost: publicProcedure.input(z.object({ postId: z.string().uuid() })).query(async ({ ctx, input }) => {
+    return ctx.db.query.comments.findMany({
+      where: eq(comments.postId, input.postId),
+      with: {
+        author: {
+          columns: { id: true, name: true, avatarUrl: true },
+        },
+        replies: {
+          with: {
+            author: {
+              columns: { id: true, name: true, avatarUrl: true },
             },
           },
         },
-        orderBy: desc(comments.createdAt),
-      });
-    }),
+      },
+      orderBy: desc(comments.createdAt),
+    });
+  }),
 
-  create: protectedProcedure
-    .input(createCommentSchema)
-    .mutation(async ({ ctx, input }) => {
-      const [comment] = await ctx.db.insert(comments).values({
+  create: protectedProcedure.input(createCommentSchema).mutation(async ({ ctx, input }) => {
+    const [comment] = await ctx.db
+      .insert(comments)
+      .values({
         ...input,
         authorId: ctx.user.id,
-      }).returning();
+      })
+      .returning();
 
-      return comment;
-    }),
+    return comment;
+  }),
 
-  delete: protectedProcedure
-    .input(z.object({ id: z.string().uuid() }))
-    .mutation(async ({ ctx, input }) => {
-      const comment = await ctx.db.query.comments.findFirst({
-        where: eq(comments.id, input.id),
-      });
+  delete: protectedProcedure.input(z.object({ id: z.string().uuid() })).mutation(async ({ ctx, input }) => {
+    const comment = await ctx.db.query.comments.findFirst({
+      where: eq(comments.id, input.id),
+    });
 
-      if (!comment) {
-        throw new TRPCError({ code: 'NOT_FOUND' });
-      }
+    if (!comment) {
+      throw new TRPCError({ code: "NOT_FOUND" });
+    }
 
-      if (comment.authorId !== ctx.user.id && ctx.user.role !== 'admin') {
-        throw new TRPCError({ code: 'FORBIDDEN' });
-      }
+    if (comment.authorId !== ctx.user.id && ctx.user.role !== "admin") {
+      throw new TRPCError({ code: "FORBIDDEN" });
+    }
 
-      await ctx.db.delete(comments).where(eq(comments.id, input.id));
+    await ctx.db.delete(comments).where(eq(comments.id, input.id));
 
-      return { success: true };
-    }),
+    return { success: true };
+  }),
 });
 ```
 
 ```typescript
 // src/server/routers/index.ts
-import { createTRPCRouter } from '../trpc';
-import { postsRouter } from './posts';
-import { commentsRouter } from './comments';
-import { usersRouter } from './users';
+import { createTRPCRouter } from "../trpc";
+import { postsRouter } from "./posts";
+import { commentsRouter } from "./comments";
+import { usersRouter } from "./users";
 
 export const appRouter = createTRPCRouter({
   posts: postsRouter,
@@ -566,14 +574,14 @@ export type AppRouter = typeof appRouter;
 
 ```typescript
 // src/utils/trpc.ts
-import { createTRPCReact } from '@trpc/react-query';
-import type { AppRouter } from '@/server/routers';
+import { createTRPCReact } from "@trpc/react-query";
+import type { AppRouter } from "@/server/routers";
 
 export const trpc = createTRPCReact<AppRouter>();
 
 // For server-side calls
-import { createTRPCProxyClient, httpBatchLink } from '@trpc/client';
-import superjson from 'superjson';
+import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
+import superjson from "superjson";
 
 export const serverTrpc = createTRPCProxyClient<AppRouter>({
   transformer: superjson,
@@ -899,11 +907,11 @@ update: protectedProcedure
 
 ```typescript
 // __tests__/posts.test.ts
-import { describe, it, expect, beforeEach } from 'vitest';
-import { createCaller } from '@/server/trpc';
-import { createTRPCContext } from '@/server/trpc';
+import { describe, it, expect, beforeEach } from "vitest";
+import { createCaller } from "@/server/trpc";
+import { createTRPCContext } from "@/server/trpc";
 
-describe('Posts Router', () => {
+describe("Posts Router", () => {
   let caller: ReturnType<typeof createCaller>;
 
   beforeEach(async () => {
@@ -914,21 +922,19 @@ describe('Posts Router', () => {
     caller = createCaller(ctx);
   });
 
-  it('should list published posts', async () => {
+  it("should list published posts", async () => {
     const result = await caller.posts.list({
       page: 1,
       limit: 10,
-      status: 'published',
+      status: "published",
     });
 
     expect(result.items).toBeDefined();
     expect(result.pagination.page).toBe(1);
   });
 
-  it('should throw NOT_FOUND for non-existent post', async () => {
-    await expect(
-      caller.posts.bySlug({ slug: 'non-existent-post' })
-    ).rejects.toThrow('Post not found');
+  it("should throw NOT_FOUND for non-existent post", async () => {
+    await expect(caller.posts.bySlug({ slug: "non-existent-post" })).rejects.toThrow("Post not found");
   });
 });
 ```
@@ -936,6 +942,7 @@ describe('Posts Router', () => {
 ## Output Format
 
 Provide:
+
 - Type-safe API definitions with tRPC
 - Drizzle schema with relations
 - Zod validation schemas
@@ -943,6 +950,7 @@ Provide:
 - Error handling strategies
 
 Sources:
+
 - [tRPC Documentation](https://trpc.io/docs)
 - [Drizzle ORM Documentation](https://orm.drizzle.team/docs/overview)
 - [Zod Documentation](https://zod.dev/)

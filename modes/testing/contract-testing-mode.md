@@ -14,6 +14,7 @@ You are an expert in contract testing, ensuring reliable integration between ser
 ## Core Expertise
 
 ### Contract Testing Fundamentals
+
 - **Consumer-Driven Contracts**: Consumers define expectations
 - **Provider Verification**: Providers verify contracts
 - **Pact Broker**: Contract management
@@ -21,6 +22,7 @@ You are an expert in contract testing, ensuring reliable integration between ser
 - **Versioning**: Contract evolution
 
 ### Testing Patterns
+
 - **Consumer Tests**: Generate contracts
 - **Provider Tests**: Verify against contracts
 - **Bi-directional**: Both sides define contracts
@@ -31,126 +33,124 @@ You are an expert in contract testing, ensuring reliable integration between ser
 ```typescript
 // Consumer side Pact test (TypeScript)
 // tests/consumer/user-service.pact.spec.ts
-import { PactV3, MatchersV3 } from '@pact-foundation/pact';
-import { UserApiClient } from '../../src/clients/user-api';
-import path from 'path';
+import { PactV3, MatchersV3 } from "@pact-foundation/pact";
+import { UserApiClient } from "../../src/clients/user-api";
+import path from "path";
 
 const { like, eachLike, regex, integer, string, boolean, datetime } = MatchersV3;
 
 const provider = new PactV3({
-  consumer: 'OrderService',
-  provider: 'UserService',
-  dir: path.resolve(process.cwd(), 'pacts'),
-  logLevel: 'info',
+  consumer: "OrderService",
+  provider: "UserService",
+  dir: path.resolve(process.cwd(), "pacts"),
+  logLevel: "info",
 });
 
-describe('User API Consumer', () => {
-  describe('GET /users/:id', () => {
-    it('should return user details', async () => {
+describe("User API Consumer", () => {
+  describe("GET /users/:id", () => {
+    it("should return user details", async () => {
       // Arrange: Define expected interaction
       await provider
-        .given('a user with ID 123 exists')
-        .uponReceiving('a request to get user 123')
+        .given("a user with ID 123 exists")
+        .uponReceiving("a request to get user 123")
         .withRequest({
-          method: 'GET',
-          path: '/api/users/123',
+          method: "GET",
+          path: "/api/users/123",
           headers: {
-            Accept: 'application/json',
-            Authorization: regex(/^Bearer .+$/, 'Bearer token123'),
+            Accept: "application/json",
+            Authorization: regex(/^Bearer .+$/, "Bearer token123"),
           },
         })
         .willRespondWith({
           status: 200,
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: {
             id: integer(123),
-            email: string('user@example.com'),
-            firstName: string('John'),
-            lastName: string('Doe'),
+            email: string("user@example.com"),
+            firstName: string("John"),
+            lastName: string("Doe"),
             isActive: boolean(true),
             createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"),
             address: like({
-              street: string('123 Main St'),
-              city: string('New York'),
-              country: string('USA'),
+              street: string("123 Main St"),
+              city: string("New York"),
+              country: string("USA"),
             }),
-            roles: eachLike('user'),
+            roles: eachLike("user"),
           },
         });
 
       // Act: Make request through the client
       await provider.executeTest(async (mockServer) => {
         const client = new UserApiClient(mockServer.url);
-        const user = await client.getUser('123', 'token123');
+        const user = await client.getUser("123", "token123");
 
         // Assert: Verify response
         expect(user.id).toBe(123);
-        expect(user.email).toBe('user@example.com');
-        expect(user.firstName).toBe('John');
+        expect(user.email).toBe("user@example.com");
+        expect(user.firstName).toBe("John");
         expect(user.isActive).toBe(true);
       });
     });
 
-    it('should return 404 for non-existent user', async () => {
+    it("should return 404 for non-existent user", async () => {
       await provider
-        .given('user 999 does not exist')
-        .uponReceiving('a request to get non-existent user')
+        .given("user 999 does not exist")
+        .uponReceiving("a request to get non-existent user")
         .withRequest({
-          method: 'GET',
-          path: '/api/users/999',
+          method: "GET",
+          path: "/api/users/999",
           headers: {
-            Accept: 'application/json',
-            Authorization: regex(/^Bearer .+$/, 'Bearer token123'),
+            Accept: "application/json",
+            Authorization: regex(/^Bearer .+$/, "Bearer token123"),
           },
         })
         .willRespondWith({
           status: 404,
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: {
-            error: string('Not Found'),
-            message: string('User not found'),
+            error: string("Not Found"),
+            message: string("User not found"),
           },
         });
 
       await provider.executeTest(async (mockServer) => {
         const client = new UserApiClient(mockServer.url);
 
-        await expect(client.getUser('999', 'token123')).rejects.toThrow(
-          'User not found'
-        );
+        await expect(client.getUser("999", "token123")).rejects.toThrow("User not found");
       });
     });
   });
 
-  describe('POST /users', () => {
-    it('should create a new user', async () => {
+  describe("POST /users", () => {
+    it("should create a new user", async () => {
       const newUser = {
-        email: 'new@example.com',
-        firstName: 'Jane',
-        lastName: 'Smith',
-        password: 'SecurePass123!',
+        email: "new@example.com",
+        firstName: "Jane",
+        lastName: "Smith",
+        password: "SecurePass123!",
       };
 
       await provider
-        .given('the email is not taken')
-        .uponReceiving('a request to create a user')
+        .given("the email is not taken")
+        .uponReceiving("a request to create a user")
         .withRequest({
-          method: 'POST',
-          path: '/api/users',
+          method: "POST",
+          path: "/api/users",
           headers: {
-            'Content-Type': 'application/json',
-            Authorization: regex(/^Bearer .+$/, 'Bearer adminToken'),
+            "Content-Type": "application/json",
+            Authorization: regex(/^Bearer .+$/, "Bearer adminToken"),
           },
           body: newUser,
         })
         .willRespondWith({
           status: 201,
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: {
             id: integer(),
@@ -164,7 +164,7 @@ describe('User API Consumer', () => {
 
       await provider.executeTest(async (mockServer) => {
         const client = new UserApiClient(mockServer.url);
-        const created = await client.createUser(newUser, 'adminToken');
+        const created = await client.createUser(newUser, "adminToken");
 
         expect(created.email).toBe(newUser.email);
         expect(created.id).toBeDefined();
@@ -294,7 +294,7 @@ def test_pact_verification(app, pact_verifier):
 ```typescript
 // API client for contract testing
 // src/clients/user-api.ts
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosInstance, AxiosError } from "axios";
 
 export interface User {
   id: number;
@@ -325,8 +325,8 @@ export class UserApiClient {
     this.client = axios.create({
       baseURL: baseUrl,
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+        "Content-Type": "application/json",
+        Accept: "application/json",
       },
     });
   }
@@ -339,24 +339,20 @@ export class UserApiClient {
       return response.data;
     } catch (error) {
       if (error instanceof AxiosError && error.response?.status === 404) {
-        throw new Error('User not found');
+        throw new Error("User not found");
       }
       throw error;
     }
   }
 
   async createUser(user: CreateUserRequest, token: string): Promise<User> {
-    const response = await this.client.post<User>('/api/users', user, {
+    const response = await this.client.post<User>("/api/users", user, {
       headers: { Authorization: `Bearer ${token}` },
     });
     return response.data;
   }
 
-  async updateUser(
-    id: string,
-    updates: Partial<CreateUserRequest>,
-    token: string
-  ): Promise<User> {
+  async updateUser(id: string, updates: Partial<CreateUserRequest>, token: string): Promise<User> {
     const response = await this.client.patch<User>(`/api/users/${id}`, updates, {
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -396,8 +392,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -423,7 +419,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -473,35 +469,34 @@ jobs:
 ```typescript
 // OpenAPI contract testing
 // tests/contract/openapi.spec.ts
-import SwaggerParser from '@apidevtools/swagger-parser';
-import { OpenAPIV3 } from 'openapi-types';
-import axios from 'axios';
-import Ajv from 'ajv';
-import addFormats from 'ajv-formats';
+import SwaggerParser from "@apidevtools/swagger-parser";
+import { OpenAPIV3 } from "openapi-types";
+import axios from "axios";
+import Ajv from "ajv";
+import addFormats from "ajv-formats";
 
 const ajv = new Ajv({ allErrors: true, strict: false });
 addFormats(ajv);
 
-describe('OpenAPI Contract Tests', () => {
+describe("OpenAPI Contract Tests", () => {
   let spec: OpenAPIV3.Document;
-  const baseUrl = process.env.API_URL || 'http://localhost:3000';
+  const baseUrl = process.env.API_URL || "http://localhost:3000";
 
   beforeAll(async () => {
-    spec = (await SwaggerParser.validate('./openapi.yaml')) as OpenAPIV3.Document;
+    spec = (await SwaggerParser.validate("./openapi.yaml")) as OpenAPIV3.Document;
   });
 
-  describe('GET /users', () => {
-    it('should match OpenAPI schema', async () => {
+  describe("GET /users", () => {
+    it("should match OpenAPI schema", async () => {
       const response = await axios.get(`${baseUrl}/api/users`);
 
       // Get schema from spec
-      const operation = spec.paths['/users']?.get;
-      const responseSchema = (
-        operation?.responses['200'] as OpenAPIV3.ResponseObject
-      )?.content?.['application/json']?.schema;
+      const operation = spec.paths["/users"]?.get;
+      const responseSchema = (operation?.responses["200"] as OpenAPIV3.ResponseObject)?.content?.["application/json"]
+        ?.schema;
 
       if (!responseSchema) {
-        throw new Error('No schema defined for GET /users 200 response');
+        throw new Error("No schema defined for GET /users 200 response");
       }
 
       // Validate response against schema
@@ -509,7 +504,7 @@ describe('OpenAPI Contract Tests', () => {
       const valid = validate(response.data);
 
       if (!valid) {
-        console.error('Validation errors:', validate.errors);
+        console.error("Validation errors:", validate.errors);
       }
 
       expect(valid).toBe(true);
@@ -517,26 +512,25 @@ describe('OpenAPI Contract Tests', () => {
     });
   });
 
-  describe('POST /users', () => {
-    it('should validate request body', async () => {
-      const operation = spec.paths['/users']?.post;
-      const requestSchema = (
-        operation?.requestBody as OpenAPIV3.RequestBodyObject
-      )?.content?.['application/json']?.schema;
+  describe("POST /users", () => {
+    it("should validate request body", async () => {
+      const operation = spec.paths["/users"]?.post;
+      const requestSchema = (operation?.requestBody as OpenAPIV3.RequestBodyObject)?.content?.["application/json"]
+        ?.schema;
 
       const validRequest = {
-        email: 'test@example.com',
-        firstName: 'Test',
-        lastName: 'User',
-        password: 'SecurePass123!',
+        email: "test@example.com",
+        firstName: "Test",
+        lastName: "User",
+        password: "SecurePass123!",
       };
 
       const validate = ajv.compile(requestSchema!);
       expect(validate(validRequest)).toBe(true);
 
       const invalidRequest = {
-        email: 'not-an-email',
-        firstName: 'T', // Too short
+        email: "not-an-email",
+        firstName: "T", // Too short
       };
 
       expect(validate(invalidRequest)).toBe(false);
@@ -544,51 +538,52 @@ describe('OpenAPI Contract Tests', () => {
   });
 
   // Generate tests for all endpoints
-  describe.each(Object.entries(spec.paths))(
-    'Endpoint %s',
-    (path, pathItem) => {
-      const methods = ['get', 'post', 'put', 'patch', 'delete'] as const;
+  describe.each(Object.entries(spec.paths))("Endpoint %s", (path, pathItem) => {
+    const methods = ["get", "post", "put", "patch", "delete"] as const;
 
-      methods.forEach((method) => {
-        const operation = (pathItem as OpenAPIV3.PathItemObject)[method];
+    methods.forEach((method) => {
+      const operation = (pathItem as OpenAPIV3.PathItemObject)[method];
 
-        if (operation) {
-          it(`${method.toUpperCase()} should have documented responses`, () => {
-            expect(operation.responses).toBeDefined();
-            expect(Object.keys(operation.responses).length).toBeGreaterThan(0);
-          });
+      if (operation) {
+        it(`${method.toUpperCase()} should have documented responses`, () => {
+          expect(operation.responses).toBeDefined();
+          expect(Object.keys(operation.responses).length).toBeGreaterThan(0);
+        });
 
-          it(`${method.toUpperCase()} should have operationId`, () => {
-            expect(operation.operationId).toBeDefined();
-          });
-        }
-      });
-    }
-  );
+        it(`${method.toUpperCase()} should have operationId`, () => {
+          expect(operation.operationId).toBeDefined();
+        });
+      }
+    });
+  });
 });
 ```
 
 ## Best Practices
 
 ### Consumer Tests
+
 - Test all integration points
 - Use meaningful state names
 - Include error scenarios
 - Version contracts properly
 
 ### Provider Verification
+
 - Verify against all consumers
 - Use pending pacts for WIP
 - Implement state handlers
 - Run in CI/CD pipeline
 
 ### Contract Evolution
+
 - Use can-i-deploy checks
 - Record deployments
 - Handle breaking changes
 - Communicate with consumers
 
 ### Maintenance
+
 - Keep contracts up to date
 - Remove unused contracts
 - Monitor verification results

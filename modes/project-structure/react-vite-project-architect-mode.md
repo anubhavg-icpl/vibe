@@ -14,30 +14,35 @@ You are a React project structure expert. Your role is to validate, scaffold, an
 ## Core Competencies
 
 ### React & Build Tools
+
 - **React 18.x/19.x** - Concurrent rendering, Server Components (with frameworks)
 - **Vite 6.x** - Lightning-fast HMR, native ESM, Rollup bundling
 - **TypeScript 5.x** - Strict mode, satisfies operator, const type params
 - **SWC** - Fast Rust-based transpilation
 
 ### State Management
+
 - **Zustand** - Lightweight, hook-based state
 - **TanStack Query** - Server state, caching, mutations
 - **Jotai** - Atomic state management
 - **Redux Toolkit** - Full-featured state (when needed)
 
 ### Styling
+
 - **Tailwind CSS 4.x** - Utility-first, JIT compilation
 - **CSS Modules** - Scoped styles
 - **Styled Components / Emotion** - CSS-in-JS
 - **Vanilla Extract** - Zero-runtime CSS-in-TS
 
 ### Routing & Data
+
 - **TanStack Router** - Type-safe file-based routing
 - **React Router 7** - Traditional routing
 - **TanStack Query** - Data fetching & caching
 - **Axios / ky** - HTTP clients
 
 ### Testing
+
 - **Vitest** - Vite-native test runner
 - **Testing Library** - Component testing
 - **Playwright** - E2E testing
@@ -280,13 +285,8 @@ src/
     "lint-staged": "^15.2.11"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,md,css}": [
-      "prettier --write"
-    ]
+    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.{json,md,css}": ["prettier --write"]
   }
 }
 ```
@@ -294,24 +294,24 @@ src/
 ### vite.config.ts
 
 ```typescript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import tailwindcss from "@tailwindcss/vite";
+import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
 
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@features': resolve(__dirname, './src/features'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@lib': resolve(__dirname, './src/lib'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@types': resolve(__dirname, './src/types'),
-      '@assets': resolve(__dirname, './src/assets'),
+      "@": resolve(__dirname, "./src"),
+      "@components": resolve(__dirname, "./src/components"),
+      "@features": resolve(__dirname, "./src/features"),
+      "@hooks": resolve(__dirname, "./src/hooks"),
+      "@lib": resolve(__dirname, "./src/lib"),
+      "@utils": resolve(__dirname, "./src/utils"),
+      "@types": resolve(__dirname, "./src/types"),
+      "@assets": resolve(__dirname, "./src/assets"),
     },
   },
 
@@ -319,23 +319,23 @@ export default defineConfig({
     port: 3000,
     open: true,
     proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
+      "/api": {
+        target: "http://localhost:8080",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
 
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['@tanstack/react-router'],
-          query: ['@tanstack/react-query'],
+          vendor: ["react", "react-dom"],
+          router: ["@tanstack/react-router"],
+          query: ["@tanstack/react-query"],
         },
       },
     },
@@ -343,15 +343,15 @@ export default defineConfig({
 
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./tests/setup.ts'],
-    include: ['src/**/*.{test,spec}.{ts,tsx}'],
+    environment: "jsdom",
+    setupFiles: ["./tests/setup.ts"],
+    include: ["src/**/*.{test,spec}.{ts,tsx}"],
     coverage: {
-      reporter: ['text', 'json', 'html'],
-      exclude: ['node_modules/', 'tests/'],
+      reporter: ["text", "json", "html"],
+      exclude: ["node_modules/", "tests/"],
     },
   },
-})
+});
 ```
 
 ### tsconfig.json
@@ -419,59 +419,50 @@ export default defineConfig({
 ### eslint.config.js (Flat Config)
 
 ```javascript
-import js from '@eslint/js'
-import tseslint from 'typescript-eslint'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import globals from 'globals'
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import globals from "globals";
 
 export default tseslint.config(
-  { ignores: ['dist', 'node_modules', 'coverage'] },
+  { ignores: ["dist", "node_modules", "coverage"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.strictTypeChecked],
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2022,
       globals: globals.browser,
       parserOptions: {
-        project: ['./tsconfig.json', './tsconfig.node.json'],
+        project: ["./tsconfig.json", "./tsconfig.node.json"],
         tsconfigRootDir: import.meta.dirname,
       },
     },
     plugins: {
       react,
-      'react-hooks': reactHooks,
+      "react-hooks": reactHooks,
     },
     settings: {
       react: {
-        version: 'detect',
+        version: "detect",
       },
     },
     rules: {
       ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
+      ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
 
       // React rules
-      'react/prop-types': 'off',
-      'react/display-name': 'off',
+      "react/prop-types": "off",
+      "react/display-name": "off",
 
       // TypeScript rules
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-      ],
-      '@typescript-eslint/consistent-type-imports': [
-        'error',
-        { prefer: 'type-imports' },
-      ],
-      '@typescript-eslint/no-misused-promises': [
-        'error',
-        { checksVoidReturn: { attributes: false } },
-      ],
+      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+      "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
+      "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: { attributes: false } }],
     },
-  }
-)
+  },
+);
 ```
 
 ### prettier.config.js
@@ -482,11 +473,11 @@ export default {
   semi: false,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: 'es5',
+  trailingComma: "es5",
   printWidth: 80,
-  plugins: ['prettier-plugin-tailwindcss'],
-  tailwindFunctions: ['clsx', 'cn'],
-}
+  plugins: ["prettier-plugin-tailwindcss"],
+  tailwindFunctions: ["clsx", "cn"],
+};
 ```
 
 ### tailwind.config.ts (Tailwind v4)
@@ -497,29 +488,29 @@ export default {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
         primary: {
-          50: 'var(--color-primary-50)',
-          100: 'var(--color-primary-100)',
+          50: "var(--color-primary-50)",
+          100: "var(--color-primary-100)",
           // ... etc
-          900: 'var(--color-primary-900)',
+          900: "var(--color-primary-900)",
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
       },
     },
   },
-}
+};
 ```
 
 ### src/styles/tailwind.css (Tailwind v4)
 
 ```css
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Theme configuration */
 @theme {
@@ -530,7 +521,7 @@ export default {
   --color-primary-700: #1d4ed8;
   --color-primary-900: #1e3a8a;
 
-  --font-family-sans: 'Inter', sans-serif;
+  --font-family-sans: "Inter", sans-serif;
 
   --breakpoint-xs: 475px;
 }
@@ -565,28 +556,22 @@ export default {
 ### vitest.config.ts
 
 ```typescript
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react-swc'
-import { resolve } from 'path'
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./tests/setup.ts'],
-    include: ['src/**/*.{test,spec}.{ts,tsx}'],
-    exclude: ['node_modules', 'dist', 'tests/e2e'],
+    environment: "jsdom",
+    setupFiles: ["./tests/setup.ts"],
+    include: ["src/**/*.{test,spec}.{ts,tsx}"],
+    exclude: ["node_modules", "dist", "tests/e2e"],
     coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-      exclude: [
-        'node_modules/',
-        'tests/',
-        '**/*.d.ts',
-        '**/*.config.*',
-        '**/types/',
-      ],
+      provider: "v8",
+      reporter: ["text", "json", "html"],
+      exclude: ["node_modules/", "tests/", "**/*.d.ts", "**/*.config.*", "**/types/"],
       thresholds: {
         lines: 80,
         functions: 80,
@@ -597,33 +582,33 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      "@": resolve(__dirname, "./src"),
     },
   },
-})
+});
 ```
 
 ### tests/setup.ts
 
 ```typescript
-import '@testing-library/jest-dom/vitest'
-import { cleanup } from '@testing-library/react'
-import { afterEach, beforeAll, afterAll } from 'vitest'
-import { setupServer } from 'msw/node'
-import { handlers } from './mocks/handlers'
+import "@testing-library/jest-dom/vitest";
+import { cleanup } from "@testing-library/react";
+import { afterEach, beforeAll, afterAll } from "vitest";
+import { setupServer } from "msw/node";
+import { handlers } from "./mocks/handlers";
 
 // MSW server setup
-export const server = setupServer(...handlers)
+export const server = setupServer(...handlers);
 
-beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
+beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
 afterEach(() => {
-  cleanup()
-  server.resetHandlers()
-})
-afterAll(() => server.close())
+  cleanup();
+  server.resetHandlers();
+});
+afterAll(() => server.close());
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: vi.fn().mockImplementation((query: string) => ({
     matches: false,
@@ -635,53 +620,53 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: vi.fn(),
     dispatchEvent: vi.fn(),
   })),
-})
+});
 ```
 
 ### playwright.config.ts
 
 ```typescript
-import { defineConfig, devices } from '@playwright/test'
+import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './tests/e2e',
+  testDir: "./tests/e2e",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: "html",
 
   use: {
-    baseURL: 'http://localhost:3000',
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
+    baseURL: "http://localhost:3000",
+    trace: "on-first-retry",
+    screenshot: "only-on-failure",
   },
 
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
     },
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
     },
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: "webkit",
+      use: { ...devices["Desktop Safari"] },
     },
     {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
+      name: "Mobile Chrome",
+      use: { ...devices["Pixel 5"] },
     },
   ],
 
   webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3000',
+    command: "npm run dev",
+    url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
   },
-})
+});
 ```
 
 ## Code Templates
@@ -689,31 +674,31 @@ export default defineConfig({
 ### Main Entry (src/main.tsx)
 
 ```tsx
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { AppProviders } from '@/app/providers'
-import { AppRouter } from '@/app/router'
-import '@/styles/tailwind.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { AppProviders } from "@/app/providers";
+import { AppRouter } from "@/app/router";
+import "@/styles/tailwind.css";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AppProviders>
       <AppRouter />
     </AppProviders>
-  </StrictMode>
-)
+  </StrictMode>,
+);
 ```
 
 ### App Providers
 
 ```tsx
 // src/app/providers/index.tsx
-import type { ReactNode } from 'react'
-import { QueryProvider } from './QueryProvider'
-import { ThemeProvider } from './ThemeProvider'
+import type { ReactNode } from "react";
+import { QueryProvider } from "./QueryProvider";
+import { ThemeProvider } from "./ThemeProvider";
 
 interface AppProvidersProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export function AppProviders({ children }: AppProvidersProps) {
@@ -721,13 +706,13 @@ export function AppProviders({ children }: AppProvidersProps) {
     <QueryProvider>
       <ThemeProvider>{children}</ThemeProvider>
     </QueryProvider>
-  )
+  );
 }
 
 // src/app/providers/QueryProvider.tsx
-import { QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { queryClient } from '@/lib/queryClient'
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { queryClient } from "@/lib/queryClient";
 
 export function QueryProvider({ children }: { children: ReactNode }) {
   return (
@@ -735,7 +720,7 @@ export function QueryProvider({ children }: { children: ReactNode }) {
       {children}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  )
+  );
 }
 ```
 
@@ -743,7 +728,7 @@ export function QueryProvider({ children }: { children: ReactNode }) {
 
 ```typescript
 // src/lib/queryClient.ts
-import { QueryClient } from '@tanstack/react-query'
+import { QueryClient } from "@tanstack/react-query";
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -757,28 +742,28 @@ export const queryClient = new QueryClient({
       retry: 0,
     },
   },
-})
+});
 ```
 
 ### Zustand Store
 
 ```typescript
 // src/app/store/index.ts
-import { create } from 'zustand'
-import { devtools, persist } from 'zustand/middleware'
-import { immer } from 'zustand/middleware/immer'
+import { create } from "zustand";
+import { devtools, persist } from "zustand/middleware";
+import { immer } from "zustand/middleware/immer";
 
 interface User {
-  id: string
-  name: string
-  email: string
+  id: string;
+  name: string;
+  email: string;
 }
 
 interface AuthState {
-  user: User | null
-  isAuthenticated: boolean
-  login: (user: User) => void
-  logout: () => void
+  user: User | null;
+  isAuthenticated: boolean;
+  login: (user: User) => void;
+  logout: () => void;
 }
 
 export const useAuthStore = create<AuthState>()(
@@ -790,24 +775,24 @@ export const useAuthStore = create<AuthState>()(
 
         login: (user) =>
           set((state) => {
-            state.user = user
-            state.isAuthenticated = true
+            state.user = user;
+            state.isAuthenticated = true;
           }),
 
         logout: () =>
           set((state) => {
-            state.user = null
-            state.isAuthenticated = false
+            state.user = null;
+            state.isAuthenticated = false;
           }),
       })),
       {
-        name: 'auth-storage',
+        name: "auth-storage",
         partialize: (state) => ({ user: state.user }),
-      }
+      },
     ),
-    { name: 'AuthStore' }
-  )
-)
+    { name: "AuthStore" },
+  ),
+);
 ```
 
 ### Feature Module Example
@@ -815,63 +800,63 @@ export const useAuthStore = create<AuthState>()(
 ```typescript
 // src/features/users/index.ts
 // Public API for the users feature
-export { UserList } from './components/UserList'
-export { UserCard } from './components/UserCard'
-export { useUsers, useUser } from './hooks/useUsers'
-export type { User, CreateUserDto } from './types'
+export { UserList } from "./components/UserList";
+export { UserCard } from "./components/UserCard";
+export { useUsers, useUser } from "./hooks/useUsers";
+export type { User, CreateUserDto } from "./types";
 
 // src/features/users/types/index.ts
 export interface User {
-  id: string
-  name: string
-  email: string
-  role: 'admin' | 'user'
-  createdAt: Date
+  id: string;
+  name: string;
+  email: string;
+  role: "admin" | "user";
+  createdAt: Date;
 }
 
 export interface CreateUserDto {
-  name: string
-  email: string
-  role: 'admin' | 'user'
+  name: string;
+  email: string;
+  role: "admin" | "user";
 }
 
 // src/features/users/api/usersApi.ts
-import { api } from '@/lib/axios'
-import type { User, CreateUserDto } from '../types'
+import { api } from "@/lib/axios";
+import type { User, CreateUserDto } from "../types";
 
 export const usersApi = {
   getAll: async (): Promise<User[]> => {
-    const { data } = await api.get<User[]>('/users')
-    return data
+    const { data } = await api.get<User[]>("/users");
+    return data;
   },
 
   getById: async (id: string): Promise<User> => {
-    const { data } = await api.get<User>(`/users/${id}`)
-    return data
+    const { data } = await api.get<User>(`/users/${id}`);
+    return data;
   },
 
   create: async (dto: CreateUserDto): Promise<User> => {
-    const { data } = await api.post<User>('/users', dto)
-    return data
+    const { data } = await api.post<User>("/users", dto);
+    return data;
   },
 
   delete: async (id: string): Promise<void> => {
-    await api.delete(`/users/${id}`)
+    await api.delete(`/users/${id}`);
   },
-}
+};
 
 // src/features/users/hooks/useUsers.ts
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { usersApi } from '../api/usersApi'
-import type { CreateUserDto } from '../types'
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { usersApi } from "../api/usersApi";
+import type { CreateUserDto } from "../types";
 
-const USERS_KEY = ['users'] as const
+const USERS_KEY = ["users"] as const;
 
 export function useUsers() {
   return useQuery({
     queryKey: USERS_KEY,
     queryFn: usersApi.getAll,
-  })
+  });
 }
 
 export function useUser(id: string) {
@@ -879,29 +864,29 @@ export function useUser(id: string) {
     queryKey: [...USERS_KEY, id],
     queryFn: () => usersApi.getById(id),
     enabled: !!id,
-  })
+  });
 }
 
 export function useCreateUser() {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (dto: CreateUserDto) => usersApi.create(dto),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: USERS_KEY })
+      queryClient.invalidateQueries({ queryKey: USERS_KEY });
     },
-  })
+  });
 }
 
 export function useDeleteUser() {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (id: string) => usersApi.delete(id),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: USERS_KEY })
+      queryClient.invalidateQueries({ queryKey: USERS_KEY });
     },
-  })
+  });
 }
 ```
 
@@ -909,33 +894,31 @@ export function useDeleteUser() {
 
 ```tsx
 // src/features/users/components/UserCard.tsx
-import type { User } from '../types'
-import { Card, CardHeader, CardContent } from '@/components/ui/Card'
-import { Badge } from '@/components/ui/Badge'
-import { Button } from '@/components/ui/Button'
-import { useDeleteUser } from '../hooks/useUsers'
+import type { User } from "../types";
+import { Card, CardHeader, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { useDeleteUser } from "../hooks/useUsers";
 
 interface UserCardProps {
-  user: User
-  onEdit?: (user: User) => void
+  user: User;
+  onEdit?: (user: User) => void;
 }
 
 export function UserCard({ user, onEdit }: UserCardProps) {
-  const deleteUser = useDeleteUser()
+  const deleteUser = useDeleteUser();
 
   const handleDelete = () => {
-    if (confirm('Are you sure?')) {
-      deleteUser.mutate(user.id)
+    if (confirm("Are you sure?")) {
+      deleteUser.mutate(user.id);
     }
-  }
+  };
 
   return (
     <Card data-testid={`user-card-${user.id}`}>
       <CardHeader className="flex items-center justify-between">
         <h3 className="font-semibold">{user.name}</h3>
-        <Badge variant={user.role === 'admin' ? 'primary' : 'secondary'}>
-          {user.role}
-        </Badge>
+        <Badge variant={user.role === "admin" ? "primary" : "secondary"}>{user.role}</Badge>
       </CardHeader>
       <CardContent>
         <p className="text-sm text-muted-foreground">{user.email}</p>
@@ -943,35 +926,30 @@ export function UserCard({ user, onEdit }: UserCardProps) {
           <Button size="sm" onClick={() => onEdit?.(user)}>
             Edit
           </Button>
-          <Button
-            size="sm"
-            variant="destructive"
-            onClick={handleDelete}
-            disabled={deleteUser.isPending}
-          >
-            {deleteUser.isPending ? 'Deleting...' : 'Delete'}
+          <Button size="sm" variant="destructive" onClick={handleDelete} disabled={deleteUser.isPending}>
+            {deleteUser.isPending ? "Deleting..." : "Delete"}
           </Button>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 // src/features/users/components/UserCard.test.tsx
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { describe, it, expect, vi } from 'vitest'
-import { UserCard } from './UserCard'
-import type { User } from '../types'
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { describe, it, expect, vi } from "vitest";
+import { UserCard } from "./UserCard";
+import type { User } from "../types";
 
 const mockUser: User = {
-  id: '1',
-  name: 'John Doe',
-  email: 'john@example.com',
-  role: 'admin',
+  id: "1",
+  name: "John Doe",
+  email: "john@example.com",
+  role: "admin",
   createdAt: new Date(),
-}
+};
 
 function renderWithProviders(ui: React.ReactElement) {
   const queryClient = new QueryClient({
@@ -979,72 +957,68 @@ function renderWithProviders(ui: React.ReactElement) {
       queries: { retry: false },
       mutations: { retry: false },
     },
-  })
+  });
 
-  return render(
-    <QueryClientProvider client={queryClient}>{ui}</QueryClientProvider>
-  )
+  return render(<QueryClientProvider client={queryClient}>{ui}</QueryClientProvider>);
 }
 
-describe('UserCard', () => {
-  it('renders user information', () => {
-    renderWithProviders(<UserCard user={mockUser} />)
+describe("UserCard", () => {
+  it("renders user information", () => {
+    renderWithProviders(<UserCard user={mockUser} />);
 
-    expect(screen.getByText('John Doe')).toBeInTheDocument()
-    expect(screen.getByText('john@example.com')).toBeInTheDocument()
-    expect(screen.getByText('admin')).toBeInTheDocument()
-  })
+    expect(screen.getByText("John Doe")).toBeInTheDocument();
+    expect(screen.getByText("john@example.com")).toBeInTheDocument();
+    expect(screen.getByText("admin")).toBeInTheDocument();
+  });
 
-  it('calls onEdit when edit button is clicked', async () => {
-    const user = userEvent.setup()
-    const onEdit = vi.fn()
+  it("calls onEdit when edit button is clicked", async () => {
+    const user = userEvent.setup();
+    const onEdit = vi.fn();
 
-    renderWithProviders(<UserCard user={mockUser} onEdit={onEdit} />)
+    renderWithProviders(<UserCard user={mockUser} onEdit={onEdit} />);
 
-    await user.click(screen.getByRole('button', { name: /edit/i }))
+    await user.click(screen.getByRole("button", { name: /edit/i }));
 
-    expect(onEdit).toHaveBeenCalledWith(mockUser)
-  })
-})
+    expect(onEdit).toHaveBeenCalledWith(mockUser);
+  });
+});
 ```
 
 ### Shared UI Component
 
 ```tsx
 // src/components/ui/Button/Button.tsx
-import { forwardRef, type ButtonHTMLAttributes } from 'react'
-import { cva, type VariantProps } from 'class-variance-authority'
-import { cn } from '@/utils/cn'
+import { forwardRef, type ButtonHTMLAttributes } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/utils/cn";
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: 'bg-primary-600 text-white hover:bg-primary-700',
-        secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
-        destructive: 'bg-red-600 text-white hover:bg-red-700',
-        ghost: 'hover:bg-gray-100 hover:text-gray-900',
-        link: 'text-primary-600 underline-offset-4 hover:underline',
+        default: "bg-primary-600 text-white hover:bg-primary-700",
+        secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200",
+        destructive: "bg-red-600 text-white hover:bg-red-700",
+        ghost: "hover:bg-gray-100 hover:text-gray-900",
+        link: "text-primary-600 underline-offset-4 hover:underline",
       },
       size: {
-        default: 'h-10 px-4 py-2',
-        sm: 'h-8 px-3 text-xs',
-        lg: 'h-12 px-8',
-        icon: 'h-10 w-10',
+        default: "h-10 px-4 py-2",
+        sm: "h-8 px-3 text-xs",
+        lg: "h-12 px-8",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {
-      variant: 'default',
-      size: 'default',
+      variant: "default",
+      size: "default",
     },
-  }
-)
+  },
+);
 
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  loading?: boolean
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  loading?: boolean;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -1060,23 +1034,23 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ) : null}
       {children}
     </button>
-  )
-)
-Button.displayName = 'Button'
+  ),
+);
+Button.displayName = "Button";
 
 // src/components/ui/Button/index.ts
-export { Button, type ButtonProps } from './Button'
+export { Button, type ButtonProps } from "./Button";
 ```
 
 ### Utility: cn Helper
 
 ```typescript
 // src/utils/cn.ts
-import { clsx, type ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 ```
 
@@ -1084,40 +1058,40 @@ export function cn(...inputs: ClassValue[]) {
 
 ```typescript
 // src/hooks/useLocalStorage.ts
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from "react";
 
 export function useLocalStorage<T>(
   key: string,
-  initialValue: T
+  initialValue: T,
 ): [T, (value: T | ((prev: T) => T)) => void, () => void] {
   const [storedValue, setStoredValue] = useState<T>(() => {
-    if (typeof window === 'undefined') return initialValue
+    if (typeof window === "undefined") return initialValue;
 
     try {
-      const item = window.localStorage.getItem(key)
-      return item ? (JSON.parse(item) as T) : initialValue
+      const item = window.localStorage.getItem(key);
+      return item ? (JSON.parse(item) as T) : initialValue;
     } catch {
-      return initialValue
+      return initialValue;
     }
-  })
+  });
 
   const setValue = useCallback(
     (value: T | ((prev: T) => T)) => {
       setStoredValue((prev) => {
-        const valueToStore = value instanceof Function ? value(prev) : value
-        window.localStorage.setItem(key, JSON.stringify(valueToStore))
-        return valueToStore
-      })
+        const valueToStore = value instanceof Function ? value(prev) : value;
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        return valueToStore;
+      });
     },
-    [key]
-  )
+    [key],
+  );
 
   const removeValue = useCallback(() => {
-    window.localStorage.removeItem(key)
-    setStoredValue(initialValue)
-  }, [key, initialValue])
+    window.localStorage.removeItem(key);
+    setStoredValue(initialValue);
+  }, [key, initialValue]);
 
-  return [storedValue, setValue, removeValue]
+  return [storedValue, setValue, removeValue];
 }
 ```
 
@@ -1143,8 +1117,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'npm'
+          node-version: "22"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -1166,8 +1140,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'npm'
+          node-version: "22"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -1188,8 +1162,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'npm'
+          node-version: "22"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -1215,8 +1189,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'npm'
+          node-version: "22"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -1233,6 +1207,7 @@ jobs:
 ## Validation Checklist
 
 ### Structure Validation
+
 ```
 □ Uses feature-based or atomic design structure
 □ Clear separation: features/, components/, hooks/, utils/
@@ -1242,6 +1217,7 @@ jobs:
 ```
 
 ### Build & Tooling
+
 ```
 □ Vite 6.x with SWC plugin
 □ TypeScript strict mode enabled
@@ -1252,6 +1228,7 @@ jobs:
 ```
 
 ### Testing
+
 ```
 □ Vitest configured with jsdom
 □ Testing Library for component tests
@@ -1261,6 +1238,7 @@ jobs:
 ```
 
 ### State & Data
+
 ```
 □ TanStack Query for server state
 □ Zustand for client state (if needed)
@@ -1270,6 +1248,7 @@ jobs:
 ```
 
 ### Production Ready
+
 ```
 □ Environment variables (.env.example)
 □ Bundle splitting configured

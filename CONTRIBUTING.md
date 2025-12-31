@@ -38,20 +38,20 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 Place your mode in the appropriate category under `/modes/`:
 
-| Category | Description |
-|----------|-------------|
-| `development/` | General development and coding modes |
-| `architecture/` | System design and architecture modes |
-| `analysis/` | Code analysis and review modes |
-| `cloud/` | Cloud platform-specific modes (AWS, GCP, Azure) |
-| `databases/` | Database-specific modes |
-| `mobile/` | Mobile development modes |
-| `games/` | Game development modes |
-| `design/` | UI/UX design modes |
-| `testing/` | QA and testing modes |
-| `coding-standards/` | Language-specific coding standards |
-| `project-structure/` | Project scaffolding templates |
-| `personalities/` | Character-based AI personas |
+| Category             | Description                                     |
+| -------------------- | ----------------------------------------------- |
+| `development/`       | General development and coding modes            |
+| `architecture/`      | System design and architecture modes            |
+| `analysis/`          | Code analysis and review modes                  |
+| `cloud/`             | Cloud platform-specific modes (AWS, GCP, Azure) |
+| `databases/`         | Database-specific modes                         |
+| `mobile/`            | Mobile development modes                        |
+| `games/`             | Game development modes                          |
+| `design/`            | UI/UX design modes                              |
+| `testing/`           | QA and testing modes                            |
+| `coding-standards/`  | Language-specific coding standards              |
+| `project-structure/` | Project scaffolding templates                   |
+| `personalities/`     | Character-based AI personas                     |
 
 ### 2. File Structure
 
@@ -86,6 +86,7 @@ Detailed instructions for how the AI should behave.
 ## Examples
 
 ### Example 1
+
 [Provide concrete examples]
 
 ## Anti-patterns
@@ -125,11 +126,13 @@ Why this rule exists.
 ## Examples
 
 ### Good
+
 \`\`\`
 Example of correct behavior
 \`\`\`
 
 ### Bad
+
 \`\`\`
 Example of incorrect behavior
 \`\`\`
@@ -155,6 +158,7 @@ Example of incorrect behavior
 ### YAML Frontmatter
 
 All mode and rule files must include YAML frontmatter with:
+
 - `name` (required)
 - `version` (required)
 - `category` (required)
@@ -185,9 +189,11 @@ All mode and rule files must include YAML frontmatter with:
 
 ```markdown
 ## Description
+
 [Brief description of changes]
 
 ## Type of Change
+
 - [ ] New mode
 - [ ] New rule
 - [ ] Documentation update
@@ -195,6 +201,7 @@ All mode and rule files must include YAML frontmatter with:
 - [ ] Enhancement
 
 ## Checklist
+
 - [ ] I have read the contributing guidelines
 - [ ] My changes follow the style guide
 - [ ] I have updated relevant documentation
@@ -227,6 +234,7 @@ All mode and rule files must include YAML frontmatter with:
 ### Code Examples
 
 When including code examples:
+
 - Use realistic, production-quality code
 - Include comments explaining key points
 - Show both good and bad examples
@@ -235,6 +243,7 @@ When including code examples:
 ## Questions?
 
 If you have questions about contributing, please:
+
 1. Check existing documentation
 2. Search closed issues for similar questions
 3. Open a new issue with the `question` label

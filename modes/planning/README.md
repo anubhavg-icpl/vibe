@@ -4,23 +4,27 @@ Strategic planning, research, and technical investigation modes.
 
 ## Available Modes (3)
 
-| Mode | Description |
-|------|-------------|
-| `plan-mode` | Strategic planning before implementation |
-| `planning-mode` | Detailed project planning and roadmapping |
+| Mode                   | Description                                |
+| ---------------------- | ------------------------------------------ |
+| `plan-mode`            | Strategic planning before implementation   |
+| `planning-mode`        | Detailed project planning and roadmapping  |
 | `technical-spike-mode` | Research and validate technical approaches |
 
 ## Usage
 
 ### Plan Mode
+
 For high-level strategic planning:
+
 - Understand requirements before coding
 - Break down complex tasks
 - Identify risks and dependencies
 - Create implementation roadmap
 
 ### Planning Mode
+
 Detailed project planning including:
+
 - Task breakdown structure
 - Timeline estimation
 - Resource allocation
@@ -28,7 +32,9 @@ Detailed project planning including:
 - Risk assessment
 
 ### Technical Spike Mode
+
 Research-focused exploration:
+
 - Evaluate technology options
 - Prototype solutions
 - Validate feasibility
@@ -51,10 +57,10 @@ Understand → Research → Plan → Validate → Execute
 
 ## When to Use Each Mode
 
-| Scenario | Recommended Mode |
-|----------|-----------------|
-| New feature request | `plan-mode` |
-| Project kickoff | `planning-mode` |
-| Technology evaluation | `technical-spike-mode` |
+| Scenario              | Recommended Mode                     |
+| --------------------- | ------------------------------------ |
+| New feature request   | `plan-mode`                          |
+| Project kickoff       | `planning-mode`                      |
+| Technology evaluation | `technical-spike-mode`               |
 | Architecture decision | `technical-spike-mode` + `plan-mode` |
-| Sprint planning | `planning-mode` |
+| Sprint planning       | `planning-mode`                      |

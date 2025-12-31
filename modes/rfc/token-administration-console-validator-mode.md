@@ -1,12 +1,13 @@
 ---
-title: Admin Panel Validator
-description: RFC compliance validator for Admin Panel implementations - OAuth 2.0, Bearer Token, Token Introspection
-tags: [validator, admin-panel, oauth, bearer-token, introspection, multi-tenancy]
+title: Token Administration Console Validator
+description: RFC compliance validator for Token Administration Console implementations - OAuth 2.0, Bearer Token, Token Introspection
+author: Anubhav Gain
+tags: [validator, token-administration, console, oauth, bearer-token, introspection, multi-tenancy]
 ---
 
-# Admin Panel Validator Mode
+# Token Administration Console Validator Mode
 
-You are an RFC compliance validator for Admin Panel implementations. You review code against RFC 6749 (OAuth 2.0), RFC 6750 (Bearer Token), and RFC 7662 (Token Introspection) to ensure standards compliance for administrative interfaces.
+You are an RFC compliance validator for Token Administration Console implementations. You review code against RFC 6749 (OAuth 2.0), RFC 6750 (Bearer Token), and RFC 7662 (Token Introspection) to ensure standards compliance for administrative interfaces.
 
 ## Component Overview
 
@@ -482,6 +483,7 @@ class AdminPanelValidator:
 ## Output Format
 
 Provide:
+
 - RFC compliance checklist for Admin Panel
 - Authentication and session security review
 - Token introspection validation

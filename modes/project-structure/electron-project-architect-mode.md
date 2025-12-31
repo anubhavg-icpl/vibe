@@ -67,17 +67,17 @@ electron-project/
 
 ```typescript
 // src/main/index.ts
-import { app, BrowserWindow, ipcMain } from 'electron';
-import { join } from 'path';
-import { createWindow } from './window';
-import { createMenu } from './menu';
-import { setupIPC } from './ipc';
-import { initDatabase } from './services/database';
-import { setupAutoUpdater } from './services/updater';
-import { logger } from './utils/logger';
+import { app, BrowserWindow, ipcMain } from "electron";
+import { join } from "path";
+import { createWindow } from "./window";
+import { createMenu } from "./menu";
+import { setupIPC } from "./ipc";
+import { initDatabase } from "./services/database";
+import { setupAutoUpdater } from "./services/updater";
+import { logger } from "./utils/logger";
 
 // Handle creating/removing shortcuts on Windows
-if (require('electron-squirrel-startup')) {
+if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
@@ -102,37 +102,37 @@ async function init() {
       setupAutoUpdater(mainWindow);
     }
 
-    logger.info('Application initialized');
+    logger.info("Application initialized");
   } catch (error) {
-    logger.error('Failed to initialize', error);
+    logger.error("Failed to initialize", error);
     app.quit();
   }
 }
 
 app.whenReady().then(init);
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
     app.quit();
   }
 });
 
-app.on('activate', () => {
+app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     mainWindow = createWindow();
   }
 });
 
 // Security: Prevent new window creation
-app.on('web-contents-created', (_, contents) => {
-  contents.setWindowOpenHandler(() => ({ action: 'deny' }));
+app.on("web-contents-created", (_, contents) => {
+  contents.setWindowOpenHandler(() => ({ action: "deny" }));
 });
 ```
 
 ```typescript
 // src/main/window.ts
-import { BrowserWindow, shell } from 'electron';
-import { join } from 'path';
+import { BrowserWindow, shell } from "electron";
+import { join } from "path";
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -145,7 +145,7 @@ export function createWindow(): BrowserWindow {
     minHeight: 600,
     show: false,
     webPreferences: {
-      preload: join(__dirname, '../preload/index.js'),
+      preload: join(__dirname, "../preload/index.js"),
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: true,
@@ -153,23 +153,21 @@ export function createWindow(): BrowserWindow {
   });
 
   // Graceful show
-  window.once('ready-to-show', () => {
+  window.once("ready-to-show", () => {
     window.show();
   });
 
   // Handle external links
   window.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);
-    return { action: 'deny' };
+    return { action: "deny" };
   });
 
   // Load app
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     window.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
   } else {
-    window.loadFile(
-      join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`)
-    );
+    window.loadFile(join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`));
   }
 
   return window;
@@ -178,9 +176,9 @@ export function createWindow(): BrowserWindow {
 
 ```typescript
 // src/main/ipc/index.ts
-import { ipcMain, dialog, shell } from 'electron';
-import { setupFileHandlers } from './files';
-import { setupDatabaseHandlers } from './database';
+import { ipcMain, dialog, shell } from "electron";
+import { setupFileHandlers } from "./files";
+import { setupDatabaseHandlers } from "./database";
 
 export function setupIPC() {
   // File handlers
@@ -190,22 +188,22 @@ export function setupIPC() {
   setupDatabaseHandlers();
 
   // Dialog handlers
-  ipcMain.handle('dialog:openFile', async (_, options) => {
+  ipcMain.handle("dialog:openFile", async (_, options) => {
     const result = await dialog.showOpenDialog(options);
     return result;
   });
 
-  ipcMain.handle('dialog:saveFile', async (_, options) => {
+  ipcMain.handle("dialog:saveFile", async (_, options) => {
     const result = await dialog.showSaveDialog(options);
     return result;
   });
 
   // Shell handlers
-  ipcMain.handle('shell:openExternal', async (_, url) => {
+  ipcMain.handle("shell:openExternal", async (_, url) => {
     await shell.openExternal(url);
   });
 
-  ipcMain.handle('shell:openPath', async (_, path) => {
+  ipcMain.handle("shell:openPath", async (_, path) => {
     await shell.openPath(path);
   });
 }
@@ -213,31 +211,31 @@ export function setupIPC() {
 
 ```typescript
 // src/main/ipc/database.ts
-import { ipcMain } from 'electron';
-import { db, Item } from '../services/database';
+import { ipcMain } from "electron";
+import { db, Item } from "../services/database";
 
 export function setupDatabaseHandlers() {
-  ipcMain.handle('db:getItems', async (_, { page = 1, limit = 20 }) => {
+  ipcMain.handle("db:getItems", async (_, { page = 1, limit = 20 }) => {
     return db.items.findMany({
       skip: (page - 1) * limit,
       take: limit,
-      orderBy: { createdAt: 'desc' },
+      orderBy: { createdAt: "desc" },
     });
   });
 
-  ipcMain.handle('db:getItem', async (_, id: number) => {
+  ipcMain.handle("db:getItem", async (_, id: number) => {
     return db.items.findUnique({ where: { id } });
   });
 
-  ipcMain.handle('db:createItem', async (_, data: Partial<Item>) => {
+  ipcMain.handle("db:createItem", async (_, data: Partial<Item>) => {
     return db.items.create({ data });
   });
 
-  ipcMain.handle('db:updateItem', async (_, { id, data }: { id: number; data: Partial<Item> }) => {
+  ipcMain.handle("db:updateItem", async (_, { id, data }: { id: number; data: Partial<Item> }) => {
     return db.items.update({ where: { id }, data });
   });
 
-  ipcMain.handle('db:deleteItem', async (_, id: number) => {
+  ipcMain.handle("db:deleteItem", async (_, id: number) => {
     return db.items.delete({ where: { id } });
   });
 }
@@ -245,38 +243,30 @@ export function setupDatabaseHandlers() {
 
 ```typescript
 // src/preload/index.ts
-import { contextBridge, ipcRenderer } from 'electron';
+import { contextBridge, ipcRenderer } from "electron";
 
 // Expose protected methods via context bridge
-contextBridge.exposeInMainWorld('electron', {
+contextBridge.exposeInMainWorld("electron", {
   // Database
   db: {
-    getItems: (options?: { page?: number; limit?: number }) =>
-      ipcRenderer.invoke('db:getItems', options || {}),
-    getItem: (id: number) =>
-      ipcRenderer.invoke('db:getItem', id),
-    createItem: (data: { name: string; description?: string }) =>
-      ipcRenderer.invoke('db:createItem', data),
+    getItems: (options?: { page?: number; limit?: number }) => ipcRenderer.invoke("db:getItems", options || {}),
+    getItem: (id: number) => ipcRenderer.invoke("db:getItem", id),
+    createItem: (data: { name: string; description?: string }) => ipcRenderer.invoke("db:createItem", data),
     updateItem: (id: number, data: { name?: string; description?: string }) =>
-      ipcRenderer.invoke('db:updateItem', { id, data }),
-    deleteItem: (id: number) =>
-      ipcRenderer.invoke('db:deleteItem', id),
+      ipcRenderer.invoke("db:updateItem", { id, data }),
+    deleteItem: (id: number) => ipcRenderer.invoke("db:deleteItem", id),
   },
 
   // Dialogs
   dialog: {
-    openFile: (options?: Electron.OpenDialogOptions) =>
-      ipcRenderer.invoke('dialog:openFile', options),
-    saveFile: (options?: Electron.SaveDialogOptions) =>
-      ipcRenderer.invoke('dialog:saveFile', options),
+    openFile: (options?: Electron.OpenDialogOptions) => ipcRenderer.invoke("dialog:openFile", options),
+    saveFile: (options?: Electron.SaveDialogOptions) => ipcRenderer.invoke("dialog:saveFile", options),
   },
 
   // Shell
   shell: {
-    openExternal: (url: string) =>
-      ipcRenderer.invoke('shell:openExternal', url),
-    openPath: (path: string) =>
-      ipcRenderer.invoke('shell:openPath', path),
+    openExternal: (url: string) => ipcRenderer.invoke("shell:openExternal", url),
+    openPath: (path: string) => ipcRenderer.invoke("shell:openPath", path),
   },
 
   // App info
@@ -330,7 +320,7 @@ declare global {
 
 ```tsx
 // src/renderer/hooks/useDatabase.ts
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from "react";
 
 interface Item {
   id: number;
@@ -391,11 +381,11 @@ directories:
   buildResources: resources
 
 files:
-  - '!**/.vscode/*'
-  - '!src/*'
-  - '!electron.vite.config.*'
-  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml}'
-  - '!{tsconfig.json,tsconfig.*.json}'
+  - "!**/.vscode/*"
+  - "!src/*"
+  - "!electron.vite.config.*"
+  - "!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml}"
+  - "!{tsconfig.json,tsconfig.*.json}"
 
 mac:
   artifactName: ${name}-${version}-${arch}.${ext}

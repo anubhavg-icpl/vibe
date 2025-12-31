@@ -14,6 +14,7 @@ You are an expert in HIPAA (Health Insurance Portability and Accountability Act)
 ## Core Expertise
 
 ### HIPAA Rules
+
 - **Privacy Rule**: PHI use and disclosure controls
 - **Security Rule**: Administrative, physical, technical safeguards
 - **Breach Notification Rule**: Incident response requirements
@@ -21,6 +22,7 @@ You are an expert in HIPAA (Health Insurance Portability and Accountability Act)
 - **Omnibus Rule**: Business associate requirements
 
 ### Key Concepts
+
 - **PHI**: Protected Health Information
 - **ePHI**: Electronic PHI
 - **Covered Entity**: Healthcare providers, plans, clearinghouses
@@ -530,7 +532,7 @@ def get_research_cohort():
 ```yaml
 # AWS HIPAA-Eligible Architecture
 # cloudformation-hipaa.yaml
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 Description: HIPAA-compliant healthcare infrastructure
 
 Resources:
@@ -551,7 +553,7 @@ Resources:
     Properties:
       VpcId: !Ref HealthcareVPC
       CidrBlock: 10.0.1.0/24
-      AvailabilityZone: !Select [0, !GetAZs '']
+      AvailabilityZone: !Select [0, !GetAZs ""]
       MapPublicIpOnLaunch: false
 
   # Encrypted RDS for PHI storage
@@ -560,13 +562,13 @@ Resources:
     Properties:
       DBInstanceClass: db.r5.large
       Engine: postgres
-      EngineVersion: '15'
-      MasterUsername: !Sub '{{resolve:secretsmanager:${DBSecret}:SecretString:username}}'
-      MasterUserPassword: !Sub '{{resolve:secretsmanager:${DBSecret}:SecretString:password}}'
+      EngineVersion: "15"
+      MasterUsername: !Sub "{{resolve:secretsmanager:${DBSecret}:SecretString:username}}"
+      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DBSecret}:SecretString:password}}"
       StorageEncrypted: true
       KmsKeyId: !Ref PHIEncryptionKey
       MultiAZ: true
-      BackupRetentionPeriod: 35  # HIPAA requires 6 years, configure accordingly
+      BackupRetentionPeriod: 35 # HIPAA requires 6 years, configure accordingly
       EnableCloudwatchLogsExports:
         - postgresql
         - upgrade
@@ -582,14 +584,14 @@ Resources:
       Description: CMK for PHI encryption
       EnableKeyRotation: true
       KeyPolicy:
-        Version: '2012-10-17'
+        Version: "2012-10-17"
         Statement:
           - Sid: Enable IAM User Permissions
             Effect: Allow
             Principal:
-              AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
-            Action: 'kms:*'
-            Resource: '*'
+              AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root"
+            Action: "kms:*"
+            Resource: "*"
           - Sid: Allow Healthcare App
             Effect: Allow
             Principal:
@@ -598,13 +600,13 @@ Resources:
               - kms:Encrypt
               - kms:Decrypt
               - kms:GenerateDataKey
-            Resource: '*'
+            Resource: "*"
 
   # S3 bucket for PHI documents
   PHIDocumentsBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub 'phi-documents-${AWS::AccountId}'
+      BucketName: !Sub "phi-documents-${AWS::AccountId}"
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
@@ -624,7 +626,7 @@ Resources:
         Rules:
           - Id: RetainPHI
             Status: Enabled
-            ExpirationInDays: 2555  # ~7 years
+            ExpirationInDays: 2555 # ~7 years
 
   # CloudTrail for API audit
   HIPAAAuditTrail:
@@ -642,7 +644,7 @@ Resources:
           DataResources:
             - Type: AWS::S3::Object
               Values:
-                - !Sub '${PHIDocumentsBucket.Arn}/*'
+                - !Sub "${PHIDocumentsBucket.Arn}/*"
             - Type: AWS::DynamoDB::Table
               Values:
                 - !GetAtt AuditLogTable.Arn
@@ -725,6 +727,7 @@ Outputs:
 ## Compliance Checklist
 
 ### Administrative Safeguards
+
 - [ ] Security Officer designated
 - [ ] Risk assessment completed
 - [ ] Workforce training program
@@ -733,12 +736,14 @@ Outputs:
 - [ ] Business Associate Agreements signed
 
 ### Physical Safeguards
+
 - [ ] Facility access controls
 - [ ] Workstation security policies
 - [ ] Device and media controls
 - [ ] Disposal procedures
 
 ### Technical Safeguards
+
 - [ ] Access controls implemented
 - [ ] Audit controls enabled
 - [ ] Integrity controls in place
@@ -746,6 +751,7 @@ Outputs:
 - [ ] Encryption at rest and in transit
 
 ### Breach Response
+
 - [ ] Breach detection procedures
 - [ ] Risk assessment process
 - [ ] Notification procedures (60-day rule)
@@ -754,24 +760,28 @@ Outputs:
 ## Best Practices
 
 ### Data Protection
+
 - Encrypt all ePHI at rest and in transit
 - Implement minimum necessary access
 - Use de-identification for analytics
 - Maintain detailed audit trails
 
 ### Access Control
+
 - Enforce unique user IDs
 - Implement automatic logoff
 - Use multi-factor authentication
 - Review access rights regularly
 
 ### Audit
+
 - Log all PHI access attempts
 - Retain logs for 6+ years
 - Implement immutable audit storage
 - Regular audit log reviews
 
 ### Incident Response
+
 - Document all security incidents
 - Perform breach risk assessments
 - Notify within 60 days if required

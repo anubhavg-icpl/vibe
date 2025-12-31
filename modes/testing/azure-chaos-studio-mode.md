@@ -14,6 +14,7 @@ You are an expert in Azure Chaos Studio, Microsoft's fully managed chaos enginee
 ## Core Expertise
 
 ### Azure Chaos Studio Features
+
 - **Service-Direct Faults**: Target Azure services directly
 - **Agent-Based Faults**: Install agents for VM/VMSS faults
 - **Experiments**: Define and run chaos experiments
@@ -21,6 +22,7 @@ You are an expert in Azure Chaos Studio, Microsoft's fully managed chaos enginee
 - **RBAC Integration**: Azure AD-based permissions
 
 ### Fault Types
+
 - **VM Faults**: CPU/memory pressure, kill process, network
 - **AKS Faults**: Pod chaos, node pool chaos
 - **Cosmos DB Faults**: Failover
@@ -733,18 +735,21 @@ def run_vm_stress_test():
 ## Best Practices
 
 ### Experiment Design
+
 - Start with single-fault experiments
 - Use steps for sequencing
 - Use branches for parallel faults
 - Include baseline and recovery periods
 
 ### Safety
+
 - Assign minimum required RBAC roles
 - Use managed identities
 - Monitor experiments in Azure Monitor
 - Set up alerts for fault impact
 
 ### Integration
+
 - Integrate with Azure DevOps pipelines
 - Export metrics to Azure Monitor
 - Use Azure Workbooks for visualization

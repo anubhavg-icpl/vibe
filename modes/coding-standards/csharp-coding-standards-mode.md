@@ -21,6 +21,7 @@ You are a C# code quality expert. Your role is to enforce modern C# patterns, ty
 ## Naming Conventions
 
 ### Classes, Interfaces, and Types
+
 ```csharp
 // ✅ PascalCase for classes, interfaces, records, structs
 public class UserService { }
@@ -39,6 +40,7 @@ public interface IHandler<TRequest, TResponse> { }
 ```
 
 ### Methods and Properties
+
 ```csharp
 // ✅ PascalCase for methods and properties
 public string FirstName { get; set; }
@@ -59,6 +61,7 @@ public bool ShouldRetry() { }
 ```
 
 ### Variables and Parameters
+
 ```csharp
 // ✅ camelCase for local variables and parameters
 public void ProcessUser(string userId, UserOptions options)
@@ -78,6 +81,7 @@ private static int s_instanceCount;
 ```
 
 ### Constants and Events
+
 ```csharp
 // ✅ PascalCase for constants
 public const int MaxRetryAttempts = 3;
@@ -92,6 +96,7 @@ public event EventHandler? StatusChanged;
 ## Modern C# Features
 
 ### Nullable Reference Types
+
 ```csharp
 // ✅ Enable nullable reference types
 #nullable enable
@@ -133,6 +138,7 @@ var user = GetUser(id)!; // Only if you know it won't be null
 ```
 
 ### Records
+
 ```csharp
 // ✅ Use records for immutable data
 public record User(string Id, string Email, string Name);
@@ -158,6 +164,7 @@ var updatedUser = user with { Email = "new@example.com" };
 ```
 
 ### Pattern Matching
+
 ```csharp
 // ✅ Pattern matching with is
 if (obj is string s)
@@ -199,6 +206,7 @@ public string Describe(int[] numbers) => numbers switch
 ```
 
 ### Primary Constructors (C# 12)
+
 ```csharp
 // ✅ Primary constructors for services
 public class UserService(
@@ -228,6 +236,7 @@ public class PositiveNumber(int value)
 ```
 
 ### Collection Expressions (C# 12)
+
 ```csharp
 // ✅ Collection expressions
 int[] numbers = [1, 2, 3, 4, 5];
@@ -246,6 +255,7 @@ List<User> noUsers = [];
 ## Error Handling
 
 ### Exception Design
+
 ```csharp
 // ✅ Create exception hierarchy
 public class ApplicationException : Exception
@@ -291,6 +301,7 @@ public class ValidationException : ApplicationException
 ```
 
 ### Exception Handling Patterns
+
 ```csharp
 // ✅ Catch specific exceptions
 try
@@ -331,6 +342,7 @@ catch (Exception ex)
 ```
 
 ### Result Pattern
+
 ```csharp
 // ✅ Result type for expected failures
 public readonly struct Result<T>
@@ -369,6 +381,7 @@ public async Task<Result<User>> CreateUserAsync(CreateUserRequest request)
 ## Async Programming
 
 ### Async/Await Best Practices
+
 ```csharp
 // ✅ Async all the way
 public async Task<User> GetUserAsync(string id)
@@ -410,6 +423,7 @@ await GetDataAsync();  // ✅
 ```
 
 ### Parallel Operations
+
 ```csharp
 // ✅ Use Task.WhenAll for concurrent operations
 public async Task<IReadOnlyList<User>> GetUsersAsync(IEnumerable<string> ids)
@@ -449,6 +463,7 @@ await Parallel.ForEachAsync(items,
 ```
 
 ### Async Streams
+
 ```csharp
 // ✅ Use IAsyncEnumerable for streaming
 public async IAsyncEnumerable<User> GetUsersStreamAsync(
@@ -555,6 +570,7 @@ public class DynamicService(IOptionsSnapshot<DynamicOptions> options)
 ## Testing
 
 ### Unit Tests (xUnit)
+
 ```csharp
 public class UserServiceTests
 {
@@ -616,6 +632,7 @@ public class UserServiceTests
 ```
 
 ### Integration Tests
+
 ```csharp
 public class UserRepositoryTests : IClassFixture<DatabaseFixture>
 {

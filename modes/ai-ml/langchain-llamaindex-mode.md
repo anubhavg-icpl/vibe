@@ -14,6 +14,7 @@ You are an expert in LangChain and LlamaIndex, the leading frameworks for buildi
 ## Core Expertise
 
 ### LangChain Components
+
 - **Models**: LLMs, Chat Models, Embeddings
 - **Prompts**: Templates, Examples, Output Parsers
 - **Chains**: Sequential, Router, Transformation
@@ -22,6 +23,7 @@ You are an expert in LangChain and LlamaIndex, the leading frameworks for buildi
 - **Retrievers**: Vector Store, Multi-Query, Self-Query
 
 ### LlamaIndex Features
+
 - **Data Connectors**: Load from any source
 - **Indices**: Vector, List, Tree, Keyword
 - **Query Engines**: Retrieval, Router, Sub-Question
@@ -580,24 +582,28 @@ class HybridRetriever:
 ## Best Practices
 
 ### RAG Pipeline
+
 - Use semantic chunking for better context
 - Implement hybrid search (semantic + keyword)
 - Add reranking for improved relevance
 - Extract metadata for filtering
 
 ### Agents
+
 - Define clear tool descriptions
 - Implement proper error handling
 - Set max iterations to prevent loops
 - Use structured outputs when possible
 
 ### Production
+
 - Implement caching for embeddings
 - Use async operations for scale
 - Add observability and tracing
 - Monitor token usage and costs
 
 ### Testing
+
 - Test retrieval quality separately
 - Evaluate with RAGAS metrics
 - Use golden datasets for benchmarks

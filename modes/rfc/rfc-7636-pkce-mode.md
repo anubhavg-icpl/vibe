@@ -1,6 +1,7 @@
 ---
 title: RFC 7636 - PKCE
 description: Proof Key for Code Exchange implementation for secure OAuth 2.0 authorization
+author: Anubhav Gain
 rfc: 7636
 tags: [oauth, pkce, security, authorization-code, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing PKCE as defined in RFC 7636. PKCE is now requi
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 7636 |
-| Title | Proof Key for Code Exchange by OAuth Public Clients |
-| Status | Proposed Standard |
-| Published | September 2015 |
-| Extends | RFC 6749 |
+| Property   | Value                                               |
+| ---------- | --------------------------------------------------- |
+| RFC Number | 7636                                                |
+| Title      | Proof Key for Code Exchange by OAuth Public Clients |
+| Status     | Proposed Standard                                   |
+| Published  | September 2015                                      |
+| Extends    | RFC 6749                                            |
 
 ## PKCE Flow
 
@@ -322,7 +323,7 @@ class PKCEAuthorizationServer:
 interface PKCEChallenge {
   codeVerifier: string;
   codeChallenge: string;
-  codeChallengeMethod: 'S256';
+  codeChallengeMethod: "S256";
 }
 
 async function generatePKCE(): Promise<PKCEChallenge> {
@@ -334,21 +335,21 @@ async function generatePKCE(): Promise<PKCEChallenge> {
   // Generate code_challenge using S256
   const encoder = new TextEncoder();
   const data = encoder.encode(codeVerifier);
-  const digest = await crypto.subtle.digest('SHA-256', data);
+  const digest = await crypto.subtle.digest("SHA-256", data);
   const codeChallenge = base64UrlEncode(new Uint8Array(digest));
 
   return {
     codeVerifier,
     codeChallenge,
-    codeChallengeMethod: 'S256',
+    codeChallengeMethod: "S256",
   };
 }
 
 function base64UrlEncode(buffer: Uint8Array): string {
   return btoa(String.fromCharCode(...buffer))
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '');
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
 }
 
 class OAuth2PKCEClient {
@@ -357,12 +358,7 @@ class OAuth2PKCEClient {
   private clientId: string;
   private redirectUri: string;
 
-  constructor(config: {
-    authorizationEndpoint: string;
-    tokenEndpoint: string;
-    clientId: string;
-    redirectUri: string;
-  }) {
+  constructor(config: { authorizationEndpoint: string; tokenEndpoint: string; clientId: string; redirectUri: string }) {
     this.authorizationEndpoint = config.authorizationEndpoint;
     this.tokenEndpoint = config.tokenEndpoint;
     this.clientId = config.clientId;
@@ -374,11 +370,11 @@ class OAuth2PKCEClient {
     const state = crypto.randomUUID();
 
     // Store PKCE verifier and state securely
-    sessionStorage.setItem('pkce_verifier', pkce.codeVerifier);
-    sessionStorage.setItem('oauth_state', state);
+    sessionStorage.setItem("pkce_verifier", pkce.codeVerifier);
+    sessionStorage.setItem("oauth_state", state);
 
     const params = new URLSearchParams({
-      response_type: 'code',
+      response_type: "code",
       client_id: this.clientId,
       redirect_uri: this.redirectUri,
       scope,
@@ -392,29 +388,29 @@ class OAuth2PKCEClient {
 
   async handleCallback(callbackUrl: string): Promise<TokenResponse> {
     const url = new URL(callbackUrl);
-    const code = url.searchParams.get('code');
-    const state = url.searchParams.get('state');
+    const code = url.searchParams.get("code");
+    const state = url.searchParams.get("state");
 
     // Verify state
-    const storedState = sessionStorage.getItem('oauth_state');
+    const storedState = sessionStorage.getItem("oauth_state");
     if (state !== storedState) {
-      throw new Error('State mismatch - possible CSRF attack');
+      throw new Error("State mismatch - possible CSRF attack");
     }
 
     // Get stored PKCE verifier
-    const codeVerifier = sessionStorage.getItem('pkce_verifier');
+    const codeVerifier = sessionStorage.getItem("pkce_verifier");
     if (!codeVerifier) {
-      throw new Error('PKCE verifier not found');
+      throw new Error("PKCE verifier not found");
     }
 
     // Exchange code for tokens
     const response = await fetch(this.tokenEndpoint, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams({
-        grant_type: 'authorization_code',
+        grant_type: "authorization_code",
         code: code!,
         redirect_uri: this.redirectUri,
         client_id: this.clientId,
@@ -423,8 +419,8 @@ class OAuth2PKCEClient {
     });
 
     // Clean up stored values
-    sessionStorage.removeItem('pkce_verifier');
-    sessionStorage.removeItem('oauth_state');
+    sessionStorage.removeItem("pkce_verifier");
+    sessionStorage.removeItem("oauth_state");
 
     if (!response.ok) {
       const error = await response.json();
@@ -485,15 +481,16 @@ Per RFC 7636 and RFC 9700 (Security BCP):
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 6749 | OAuth 2.0 | Base framework |
-| RFC 9700 | Security BCP | Mandates PKCE |
-| RFC 9126 | PAR | Enhanced with PKCE |
+| RFC      | Title        | Relationship       |
+| -------- | ------------ | ------------------ |
+| RFC 6749 | OAuth 2.0    | Base framework     |
+| RFC 9700 | Security BCP | Mandates PKCE      |
+| RFC 9126 | PAR          | Enhanced with PKCE |
 
 ## Output Format
 
 Provide:
+
 - PKCE generation implementations
 - OAuth integration patterns
 - Client-side storage strategies

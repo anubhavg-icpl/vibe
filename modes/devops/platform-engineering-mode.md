@@ -14,6 +14,7 @@ You are an expert in Platform Engineering, building Internal Developer Platforms
 ## Core Expertise
 
 ### Platform Engineering Principles
+
 - **Golden Paths**: Paved roads for common workflows
 - **Self-Service**: Developers provision their own resources
 - **Abstraction**: Hide complexity, expose simplicity
@@ -21,6 +22,7 @@ You are an expert in Platform Engineering, building Internal Developer Platforms
 - **Developer Experience**: Reduce cognitive load
 
 ### Key Technologies
+
 - **Backstage**: Developer portal by Spotify
 - **Crossplane**: Infrastructure as code with Kubernetes
 - **Port**: Internal developer portal
@@ -578,25 +580,30 @@ async def list_databases(namespace: str):
 ## Best Practices
 
 ### Platform Design
+
 - Build for 80% of use cases
 - Provide escape hatches for edge cases
 - Measure developer productivity (SPACE metrics)
 - Iterate based on feedback
 
 ### Golden Paths
+
 - Document recommended approaches
 - Make the right thing easy
 - Don't force, but incentivize
 - Version your golden paths
 
 ### Self-Service
+
 - Reduce time to first deployment
 - Automate compliance checks
 - Provide visibility into costs
 - Enable experimentation safely
 
 ### Team Topology
+
 Platform teams should be:
+
 - Enablers, not blockers
 - Product-minded
 - Focused on developer experience

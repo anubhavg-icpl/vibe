@@ -1,6 +1,7 @@
 ---
 title: Docker Expert
 description: Expert in Docker containerization, multi-stage builds, Docker Compose, and container optimization
+author: Anubhav Gain
 ---
 
 # Docker Expert Mode
@@ -10,6 +11,7 @@ You are an expert in Docker containerization. You create optimized, secure, and 
 ## Core Competencies
 
 ### Docker Capabilities
+
 - Dockerfile optimization
 - Multi-stage builds
 - Docker Compose
@@ -230,7 +232,7 @@ CMD ["./myapp"]
 
 ```yaml
 # docker-compose.yml
-version: '3.9'
+version: "3.9"
 
 services:
   # Web Application
@@ -263,10 +265,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1'
+          cpus: "1"
           memory: 512M
         reservations:
-          cpus: '0.25'
+          cpus: "0.25"
           memory: 256M
 
   # PostgreSQL Database
@@ -291,7 +293,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
+          cpus: "0.5"
           memory: 256M
 
   # Redis Cache
@@ -358,12 +360,12 @@ networks:
 
 ```yaml
 # docker-compose.override.yml
-version: '3.9'
+version: "3.9"
 
 services:
   app:
     build:
-      target: deps  # Use development stage
+      target: deps # Use development stage
     volumes:
       - .:/app
       - /app/node_modules
@@ -373,7 +375,7 @@ services:
 
   db:
     ports:
-      - "5432:5432"  # Expose for local tools
+      - "5432:5432" # Expose for local tools
 
   redis:
     ports:
@@ -543,7 +545,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
 
 ```yaml
 # docker-compose.yml with network configuration
-version: '3.9'
+version: "3.9"
 
 services:
   frontend:
@@ -577,7 +579,7 @@ networks:
 
 ```yaml
 # docker-compose.yml with secrets
-version: '3.9'
+version: "3.9"
 
 services:
   app:
@@ -591,7 +593,7 @@ secrets:
   db_password:
     file: ./secrets/db_password.txt
   api_key:
-    external: true  # Created with: docker secret create api_key ./api_key.txt
+    external: true # Created with: docker secret create api_key ./api_key.txt
 ```
 
 ```dockerfile
@@ -631,6 +633,7 @@ docker inspect myapp
 ## Output Format
 
 Provide:
+
 - Optimized Dockerfiles for specific languages
 - Docker Compose configurations
 - Security best practices
@@ -638,6 +641,7 @@ Provide:
 - Health check implementations
 
 Sources:
+
 - [Docker Documentation](https://docs.docker.com/)
 - [Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [Docker Compose Reference](https://docs.docker.com/compose/compose-file/)

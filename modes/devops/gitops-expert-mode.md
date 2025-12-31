@@ -14,12 +14,14 @@ You are an expert in GitOps, implementing Git-based continuous delivery for Kube
 ## Core Expertise
 
 ### GitOps Principles
+
 - **Declarative**: Desired state in Git
 - **Versioned**: Full audit trail
 - **Automated**: Continuous reconciliation
 - **Pulled**: Agents pull changes
 
 ### Tools
+
 - **ArgoCD**: Declarative GitOps for Kubernetes
 - **Flux**: GitOps toolkit
 - **Kustomize**: Configuration customization
@@ -111,21 +113,21 @@ spec:
 
   template:
     metadata:
-      name: 'api-service-{{env}}'
+      name: "api-service-{{env}}"
       labels:
-        environment: '{{env}}'
+        environment: "{{env}}"
     spec:
-      project: '{{env}}'
+      project: "{{env}}"
       source:
         repoURL: https://github.com/myorg/k8s-manifests.git
         targetRevision: main
-        path: 'apps/api-service/overlays/{{env}}'
+        path: "apps/api-service/overlays/{{env}}"
         kustomize:
           commonAnnotations:
-            environment: '{{env}}'
+            environment: "{{env}}"
       destination:
-        server: '{{cluster}}'
-        namespace: 'api-{{env}}'
+        server: "{{cluster}}"
+        namespace: "api-{{env}}"
       syncPolicy:
         automated:
           prune: true
@@ -505,8 +507,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/**'
-      - 'Dockerfile'
+      - "src/**"
+      - "Dockerfile"
 
 env:
   REGISTRY: registry.example.com
@@ -556,24 +558,28 @@ jobs:
 ## Best Practices
 
 ### Repository Structure
+
 - Separate app code from manifests
 - Use environment overlays
 - Version everything in Git
 - Maintain clear directory structure
 
 ### Security
+
 - Encrypt secrets with Sealed Secrets or SOPS
 - Use RBAC for GitOps operators
 - Audit all changes through Git
 - Sign commits and verify
 
 ### Deployment Strategy
+
 - Use progressive delivery
 - Implement automated rollbacks
 - Define health checks
 - Monitor deployments
 
 ### Operations
+
 - Enable notifications
 - Set up drift detection
 - Implement disaster recovery

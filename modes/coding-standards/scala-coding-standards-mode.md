@@ -21,6 +21,7 @@ You are a Scala code quality expert. Your role is to enforce functional programm
 ## Naming Conventions
 
 ### Types and Traits
+
 ```scala
 // ✅ PascalCase for types, classes, traits, objects
 class UserService
@@ -40,6 +41,7 @@ object UserId:
 ```
 
 ### Functions and Values
+
 ```scala
 // ✅ camelCase for functions and values
 def calculateTotal(items: List[Item]): BigDecimal
@@ -61,6 +63,7 @@ def validate(user: User): ValidatedNel[Error, User]
 ```
 
 ### Constants and Packages
+
 ```scala
 // ✅ PascalCase for constants in companion objects
 object HttpStatus:
@@ -78,6 +81,7 @@ package com.company.project.infrastructure.http
 ## Functional Patterns
 
 ### Pure Functions
+
 ```scala
 // ✅ Pure functions - same input, same output, no side effects
 def add(a: Int, b: Int): Int = a + b
@@ -99,6 +103,7 @@ def incrementAndGet(counter: Int): (Int, Int) =
 ```
 
 ### Immutability
+
 ```scala
 // ✅ Use case classes for data
 case class User(
@@ -121,6 +126,7 @@ val users = mutable.ListBuffer[User]()  // ❌
 ```
 
 ### Option and Either
+
 ```scala
 // ✅ Use Option for potentially absent values
 def findUser(id: UserId): Option[User] =
@@ -154,6 +160,7 @@ val name = userOpt.map(_.name).getOrElse("Unknown")
 ```
 
 ### Algebraic Data Types
+
 ```scala
 // ✅ Sealed traits/enums for closed hierarchies
 enum Result[+A]:
@@ -182,6 +189,7 @@ def process(method: PaymentMethod): Unit = method match
 ## Effect Systems
 
 ### Cats Effect
+
 ```scala
 import cats.effect.*
 import cats.syntax.all.*
@@ -219,6 +227,7 @@ def withConnection[A](f: Connection => IO[A]): IO[A] =
 ```
 
 ### Tagless Final
+
 ```scala
 // ✅ Abstract over effect type
 trait UserRepository[F[_]]:
@@ -252,6 +261,7 @@ class UserService[F[_]: Monad](repo: UserRepository[F]):
 ```
 
 ### ZIO Alternative
+
 ```scala
 import zio.*
 
@@ -278,6 +288,7 @@ val result: ZIO[UserService, AppError, User] =
 ## Error Handling
 
 ### Validated for Accumulation
+
 ```scala
 import cats.data.ValidatedNel
 import cats.syntax.all.*
@@ -314,6 +325,7 @@ val result = validateUser(UserValidation("", "invalid", -5))
 ```
 
 ### Custom Error Types
+
 ```scala
 // ✅ Sealed trait for errors
 sealed trait AppError extends Exception:
@@ -340,6 +352,7 @@ def handleResult[A](result: Either[AppError, A]): IO[Unit] =
 ## Testing
 
 ### MUnit with Cats Effect
+
 ```scala
 import munit.CatsEffectSuite
 
@@ -366,6 +379,7 @@ class UserServiceTest extends CatsEffectSuite:
 ```
 
 ### Property-Based Testing
+
 ```scala
 import org.scalacheck.Prop.*
 import munit.ScalaCheckSuite
@@ -397,6 +411,7 @@ given Arbitrary[User] = Arbitrary:
 ## Style Guidelines
 
 ### Scalafmt Configuration
+
 ```hocon
 # .scalafmt.conf
 version = 3.8.3
@@ -433,6 +448,7 @@ docstrings.style = SpaceAsterisk
 ```
 
 ### Scalafix Rules
+
 ```hocon
 # .scalafix.conf
 rules = [

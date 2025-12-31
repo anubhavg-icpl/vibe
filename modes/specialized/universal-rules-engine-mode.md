@@ -1,5 +1,6 @@
 ---
 description: Universal rules-based AI assistant that loads and follows project-specific coding standards, workflows, and best practices across all AI platforms (Amazon Q, Claude Code, Copilot, Gemini, Aider, Codex)
+author: Anubhav Gain
 tools:
   - changes
   - codebase
@@ -14,7 +15,7 @@ tools:
   - searchResults
   - usages
   - vscodeAPI
-applyTo: '**'
+applyTo: "**"
 ---
 
 # Universal Rules Engine Mode
@@ -58,18 +59,23 @@ Every rule file MUST follow this format:
 
 ```markdown
 # Rule Name
+
 ## Purpose
+
 Clear explanation of why this rule exists
 
 ## Instructions
+
 - Specific directives with unique identifiers (ID: RULE_ID)
 - Additional instructions (ID: ANOTHER_ID)
 - Conditions and context (ID: CONTEXT_ID)
 
 ## Priority
+
 Critical/High/Medium/Low
 
 ## Error Handling
+
 - Fallback strategies
 - Exception handling
 ```
@@ -126,19 +132,24 @@ Critical/High/Medium/Low
 
 ```markdown
 # Git Workflow
+
 ## Purpose
+
 Enforce consistent git operations and commit message standards
 
 ## Instructions
+
 - ALWAYS ask confirmation before pushing to remote (ID: GIT_PUSH_CONFIRM)
 - Commit messages MUST be detailed and meaningful (ID: GIT_COMMIT_QUALITY)
 - Include files modified and impact in commits (ID: GIT_COMMIT_DETAILS)
 - Follow conventional commits format when applicable (ID: GIT_CONVENTIONAL)
 
 ## Priority
+
 High
 
 ## Error Handling
+
 - If git command fails, report error and suggest fixes
 - If commit message too short, prompt for more details
 ```
@@ -147,19 +158,24 @@ High
 
 ```markdown
 # Monitoring
+
 ## Purpose
+
 Ensure monitoring coverage for all major features
 
 ## Instructions
+
 - When implementing major features, check MONITORING_PLAN.md (ID: CHECK_MONITORING)
 - Major features include: services, APIs, integrations, core functionality (ID: MAJOR_FEATURE_DEF)
 - Update monitoring plan with metrics, dashboards, alerts (ID: UPDATE_MONITORING)
 - Output confirmation: "📊 Updated monitoring plan for: [feature]" (ID: MONITORING_CONFIRM)
 
 ## Priority
+
 High
 
 ## Error Handling
+
 - If MONITORING_PLAN.md missing, create with basic structure
 - If unclear if feature is "major", err on side of caution
 ```
@@ -168,10 +184,13 @@ High
 
 ```markdown
 # Code Quality - [Language]
+
 ## Purpose
+
 Maintain consistent code quality and architectural patterns
 
 ## Instructions
+
 - Follow SOLID principles (ID: SOLID_PRINCIPLES)
 - Prefer composition over inheritance (ID: COMPOSITION_PATTERN)
 - Include JSDoc/docstrings for public APIs (ID: DOCUMENTATION)
@@ -179,9 +198,11 @@ Maintain consistent code quality and architectural patterns
 - Use consistent naming conventions (ID: NAMING_CONVENTIONS)
 
 ## Priority
+
 Medium
 
 ## Error Handling
+
 - If existing code violates standards, note and offer refactoring
 - If conventions unclear, ask user for clarification
 ```
@@ -190,10 +211,13 @@ Medium
 
 ```markdown
 # Security Standards
+
 ## Purpose
+
 Enforce security best practices and prevent vulnerabilities
 
 ## Instructions
+
 - NEVER commit secrets or credentials (ID: NO_SECRETS)
 - Validate and sanitize all user inputs (ID: INPUT_VALIDATION)
 - Use parameterized queries for SQL (ID: SQL_INJECTION_PREVENTION)
@@ -201,9 +225,11 @@ Enforce security best practices and prevent vulnerabilities
 - Follow OWASP Top 10 guidelines (ID: OWASP_COMPLIANCE)
 
 ## Priority
+
 Critical
 
 ## Error Handling
+
 - If security issue detected, HALT and warn user
 - Suggest secure alternatives
 ```
@@ -212,19 +238,24 @@ Critical
 
 ```markdown
 # Time Operations
+
 ## Purpose
+
 Handle time-related operations consistently
 
 ## Instructions
+
 - Determine current time using system commands (ID: GET_TIME)
 - Use ISO 8601 format for timestamps (ID: ISO_FORMAT)
 - Specify timezone explicitly in all time operations (ID: TIMEZONE_EXPLICIT)
 - For time-sensitive operations, verify current time first (ID: VERIFY_TIME)
 
 ## Priority
+
 Medium
 
 ## Error Handling
+
 - If timezone unavailable, use UTC as default
 - If date command fails, note and continue with available info
 ```
@@ -234,31 +265,37 @@ Medium
 ### Platform-Specific Adaptations
 
 **Amazon Q Developer**:
+
 - Primary directory: `.amazonq/rules/`
 - Supports CLI and IDE extensions
 - Full rule lifecycle as designed
 
 **Claude Code**:
+
 - Primary directory: `.claude/rules/`
 - Leverages existing tool ecosystem
 - Integrates with task management
 
 **GitHub Copilot**:
+
 - Primary directory: `.copilot/rules/`
 - Works through inline comments and chat
 - Limited dynamic update support
 
 **Google Gemini CLI**:
+
 - Primary directory: `.gemini/rules/`
 - Works through context injection
 - Supports all rule features
 
 **Aider**:
+
 - Primary directory: `.aider/rules/`
 - Integrates with existing prompt system
 - Works with .aider.conf.yml
 
 **Universal AI Rules**:
+
 - Primary directory: `.ai/rules/`
 - Fallback for any AI assistant
 - Platform-agnostic standards
@@ -331,16 +368,20 @@ Rules can reference other rules:
 
 ```markdown
 # Frontend - React
+
 ## Purpose
+
 React component development standards
 
 ## Instructions
+
 - Apply Code Quality rules (ID: INHERIT_CODE_QUALITY)
 - Apply Security Standards for input handling (ID: INHERIT_SECURITY)
 - Evaluate reusability (2+ uses, configurable props) (ID: REUSABILITY_CHECK)
 - Create in components/ with JSDoc (ID: COMPONENT_LOCATION)
 
 ## Priority
+
 Medium
 ```
 
@@ -350,16 +391,20 @@ Rules can include conditions:
 
 ```markdown
 # Performance Optimization
+
 ## Purpose
+
 Apply performance optimizations appropriately
 
 ## Instructions
+
 - IF file size > 50KB, suggest code splitting (ID: CODE_SPLIT_LARGE)
 - IF list > 100 items, implement virtualization (ID: VIRTUAL_SCROLL)
 - IF bundle > 1MB, analyze and optimize (ID: BUNDLE_OPTIMIZE)
 - IF API response > 2s, add caching strategy (ID: CACHE_SLOW_API)
 
 ## Priority
+
 Medium
 ```
 
@@ -369,15 +414,19 @@ Track rule usage (optional enhancement):
 
 ```markdown
 # Rule Analytics
+
 ## Purpose
+
 Track which rules are most frequently applied
 
 ## Instructions
+
 - Log rule usage with timestamps (ID: LOG_USAGE)
 - Generate weekly rule usage report (ID: WEEKLY_REPORT)
 - Identify unused rules for review (ID: IDENTIFY_UNUSED)
 
 ## Priority
+
 Low
 ```
 
@@ -448,6 +497,7 @@ EOF
 ### 4. Initialize AI Assistant with Rules
 
 When starting any AI session, the assistant will:
+
 1. Scan for rule directories
 2. Load all applicable rules
 3. Announce loaded rules
@@ -458,6 +508,7 @@ When starting any AI session, the assistant will:
 ### Consistency Across Platforms
 
 Whether using Amazon Q, Claude Code, Copilot, or Gemini, your team gets:
+
 - Same coding standards
 - Same workflow guidance
 - Same quality expectations
@@ -466,6 +517,7 @@ Whether using Amazon Q, Claude Code, Copilot, or Gemini, your team gets:
 ### Knowledge Preservation
 
 Rules capture institutional knowledge:
+
 - Architecture decisions
 - Best practices learned
 - Team preferences
@@ -474,6 +526,7 @@ Rules capture institutional knowledge:
 ### Reduced Cognitive Load
 
 Developers focus on problems, not process:
+
 - No need to remember all standards
 - No repetitive explanations to AI
 - Automatic guidance on best practices
@@ -482,6 +535,7 @@ Developers focus on problems, not process:
 ### Faster Onboarding
 
 New team members benefit immediately:
+
 - AI automatically follows team standards
 - Embedded best practices in every interaction
 - Transparent learning (see which rules apply)
@@ -490,6 +544,7 @@ New team members benefit immediately:
 ### Scalable Standards
 
 As team grows, standards scale:
+
 - Add new rules as patterns emerge
 - Update existing rules as practices evolve
 - Share rules across projects
@@ -522,6 +577,7 @@ As team grows, standards scale:
 ### Keep Rules Focused
 
 Each rule should:
+
 - Address one domain/concern
 - Have clear, actionable instructions
 - Include specific IDs
@@ -550,6 +606,7 @@ git diff HEAD~5:.ai/rules/core/git-workflow.rule.md
 ### Rules Not Being Applied
 
 **Check**:
+
 1. Rule directory location correct?
 2. Files have `.md` or `.rule.md` extension?
 3. Rule structure follows template?
@@ -559,6 +616,7 @@ git diff HEAD~5:.ai/rules/core/git-workflow.rule.md
 ### Conflicting Rules
 
 **Resolution**:
+
 1. Check rule priorities (Critical > High > Medium > Low)
 2. Highest priority wins
 3. If same priority, first loaded wins
@@ -567,6 +625,7 @@ git diff HEAD~5:.ai/rules/core/git-workflow.rule.md
 ### Rules Not Announced
 
 **Fix**:
+
 1. Ensure conversation.rule.md exists
 2. Check ANNOUNCE_RULES instruction present
 3. Verify Priority is Critical
@@ -575,6 +634,7 @@ git diff HEAD~5:.ai/rules/core/git-workflow.rule.md
 ### Too Many Rules
 
 **Optimize**:
+
 1. Consolidate related rules
 2. Archive unused rules
 3. Create rule hierarchy
@@ -585,6 +645,7 @@ git diff HEAD~5:.ai/rules/core/git-workflow.rule.md
 This Universal Rules Engine mode works alongside other Vibe modes:
 
 **Combine with**:
+
 - `software-engineer-agent-mode`: Rules guide autonomous execution
 - `blueprint-mode-v39`: Rules enhance workflow decisions
 - `son-of-anubhav-mode`: Rules define review criteria
@@ -592,6 +653,7 @@ This Universal Rules Engine mode works alongside other Vibe modes:
 - `plan-mode`: Rules shape planning approach
 
 **Usage Pattern**:
+
 1. Start session with Universal Rules Engine active
 2. Rules auto-load and apply
 3. Switch to specific mode as needed
@@ -600,30 +662,35 @@ This Universal Rules Engine mode works alongside other Vibe modes:
 ## Platform-Specific Notes
 
 ### Amazon Q Developer
+
 - Native support for `.amazonq/rules/`
 - Full lifecycle implemented
 - IDE and CLI support
 - Automatic rule detection
 
 ### Claude Code
+
 - Uses `.claude/rules/` or `.ai/rules/`
 - Integrates with existing tools
 - Task management compatible
 - Real-time rule updates
 
 ### GitHub Copilot
+
 - Limited dynamic rule support
 - Works best with static rules
 - Inline comment integration
 - Use `.copilot/rules/` or `.ai/rules/`
 
 ### Google Gemini
+
 - Context injection approach
 - Supports all rule features
 - Use `.gemini/rules/` or `.ai/rules/`
 - CLI integration
 
 ### Aider
+
 - Works with existing config
 - Prompt augmentation
 - Use `.aider/rules/` or `.ai/rules/`
@@ -635,19 +702,24 @@ This Universal Rules Engine mode works alongside other Vibe modes:
 
 ```markdown
 # Startup Monitoring
+
 ## Purpose
+
 Ensure all services have health checks and graceful shutdown
 
 ## Instructions
+
 - Every service MUST have /health endpoint (ID: HEALTH_ENDPOINT)
 - Every service MUST have /readiness endpoint (ID: READINESS_ENDPOINT)
 - Implement graceful shutdown on SIGTERM (ID: GRACEFUL_SHUTDOWN)
 - Log startup time and ready state (ID: STARTUP_LOGGING)
 
 ## Priority
+
 High
 
 ## Error Handling
+
 - If health check missing, create standard implementation
 - If shutdown handler missing, add with connection draining
 ```
@@ -656,10 +728,13 @@ High
 
 ```markdown
 # API Design Standards
+
 ## Purpose
+
 Maintain consistent RESTful API design
 
 ## Instructions
+
 - Use plural nouns for collections (ID: PLURAL_COLLECTIONS)
 - Use proper HTTP methods (GET/POST/PUT/DELETE/PATCH) (ID: HTTP_METHODS)
 - Return proper status codes (ID: STATUS_CODES)
@@ -668,9 +743,11 @@ Maintain consistent RESTful API design
 - Include rate limiting headers (ID: RATE_LIMIT_HEADERS)
 
 ## Priority
+
 High
 
 ## Error Handling
+
 - If endpoint doesn't follow REST, suggest refactoring
 - If missing pagination, add with sensible defaults
 ```

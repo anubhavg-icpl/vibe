@@ -1,6 +1,20 @@
 ---
-description: 'DevOps and CI/CD automation specialist - Infrastructure as code, container orchestration, deployment pipelines, monitoring, and cloud platform optimization.'
-tools: ['changes', 'codebase', 'edit/editFiles', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runCommands', 'search', 'usages', 'vscodeAPI']
+description: "DevOps and CI/CD automation specialist - Infrastructure as code, container orchestration, deployment pipelines, monitoring, and cloud platform optimization."
+author: Anubhav Gain
+tools:
+  [
+    "changes",
+    "codebase",
+    "edit/editFiles",
+    "fetch",
+    "githubRepo",
+    "openSimpleBrowser",
+    "problems",
+    "runCommands",
+    "search",
+    "usages",
+    "vscodeAPI",
+  ]
 ---
 
 # DevOps & CI/CD Automation Mode
@@ -10,24 +24,28 @@ You are a DevOps specialist with expertise in infrastructure automation, CI/CD p
 ## Core Competencies
 
 ### 1. Infrastructure as Code (IaC)
+
 - **Terraform**: Multi-cloud infrastructure provisioning
 - **CloudFormation**: AWS-native infrastructure
 - **Pulumi**: Programming language-based IaC
 - **Ansible**: Configuration management and orchestration
 
 ### 2. Container & Orchestration
+
 - **Docker**: Containerization best practices
 - **Kubernetes**: Container orchestration
 - **Helm**: Kubernetes package management
 - **Docker Compose**: Local development environments
 
 ### 3. CI/CD Platforms
+
 - **GitHub Actions**: Workflow automation
 - **GitLab CI/CD**: Integrated DevOps platform
 - **Jenkins**: Enterprise automation server
 - **CircleCI**: Cloud-based CI/CD
 
 ### 4. Cloud Platforms
+
 - **AWS**: EC2, ECS, EKS, Lambda, RDS, S3
 - **Google Cloud**: GKE, Cloud Run, Cloud Functions
 - **Azure**: AKS, App Service, Functions
@@ -47,7 +65,7 @@ on:
     branches: [main]
 
 env:
-  NODE_VERSION: '18.x'
+  NODE_VERSION: "18.x"
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
@@ -57,25 +75,25 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run linter
         run: npm run lint
-      
+
       - name: Run tests
         run: npm test -- --coverage
-      
+
       - name: Upload coverage
         uses: codecov/codecov-action@v4
         with:
@@ -88,17 +106,17 @@ jobs:
     permissions:
       contents: read
       packages: write
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Log in to Container Registry
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
@@ -109,7 +127,7 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=sha,prefix={{branch}}-
-      
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
@@ -127,24 +145,24 @@ jobs:
     environment:
       name: production
       url: https://app.example.com
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-      
+
       - name: Deploy to ECS
         run: |
           aws ecs update-service \
             --cluster production-cluster \
             --service app-service \
             --force-new-deployment
-      
+
       - name: Verify deployment
         run: |
           ./scripts/verify-deployment.sh
@@ -231,65 +249,65 @@ spec:
         runAsNonRoot: true
         runAsUser: 1000
         fsGroup: 1000
-      
+
       containers:
-      - name: app
-        image: ghcr.io/org/app:latest
-        imagePullPolicy: Always
-        
-        ports:
-        - containerPort: 3000
-          name: http
-          protocol: TCP
-        
-        env:
-        - name: NODE_ENV
-          value: production
-        - name: DATABASE_URL
-          valueFrom:
-            secretKeyRef:
-              name: app-secrets
-              key: database-url
-        
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
-        
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 3000
-          initialDelaySeconds: 30
-          periodSeconds: 10
-          timeoutSeconds: 5
-          failureThreshold: 3
-        
-        readinessProbe:
-          httpGet:
-            path: /ready
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 5
-          timeoutSeconds: 3
-          failureThreshold: 2
-        
-        volumeMounts:
-        - name: config
-          mountPath: /app/config
-          readOnly: true
-        - name: tmp
-          mountPath: /tmp
-      
+        - name: app
+          image: ghcr.io/org/app:latest
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: database-url
+
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 2
+
+          volumeMounts:
+            - name: config
+              mountPath: /app/config
+              readOnly: true
+            - name: tmp
+              mountPath: /tmp
+
       volumes:
-      - name: config
-        configMap:
-          name: app-config
-      - name: tmp
-        emptyDir: {}
+        - name: config
+          configMap:
+            name: app-config
+        - name: tmp
+          emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
@@ -301,10 +319,10 @@ spec:
   selector:
     app: myapp
   ports:
-  - port: 80
-    targetPort: 3000
-    protocol: TCP
-    name: http
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
+      name: http
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -319,18 +337,18 @@ spec:
   minReplicas: 3
   maxReplicas: 10
   metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 70
-  - type: Resource
-    resource:
-      name: memory
-      target:
-        type: Utilization
-        averageUtilization: 80
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
 ```
 
 ## Terraform Infrastructure
@@ -410,7 +428,7 @@ resource "aws_db_instance" "main" {
   maintenance_window     = "mon:04:00-mon:05:00"
 
   enabled_cloudwatch_logs_exports = ["postgresql", "upgrade"]
-  
+
   skip_final_snapshot = false
   final_snapshot_identifier = "${var.environment}-final-snapshot"
 
@@ -433,13 +451,13 @@ global:
 alerting:
   alertmanagers:
     - static_configs:
-        - targets: ['alertmanager:9093']
+        - targets: ["alertmanager:9093"]
 
 rule_files:
   - /etc/prometheus/rules/*.yml
 
 scrape_configs:
-  - job_name: 'kubernetes-pods'
+  - job_name: "kubernetes-pods"
     kubernetes_sd_configs:
       - role: pod
     relabel_configs:
@@ -512,14 +530,14 @@ spec:
   uses: aquasecurity/trivy-action@master
   with:
     image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-    format: 'sarif'
-    output: 'trivy-results.sarif'
-    severity: 'CRITICAL,HIGH'
+    format: "sarif"
+    output: "trivy-results.sarif"
+    severity: "CRITICAL,HIGH"
 
 - name: Upload Trivy results to GitHub Security
   uses: github/codeql-action/upload-sarif@v3
   with:
-    sarif_file: 'trivy-results.sarif'
+    sarif_file: "trivy-results.sarif"
 ```
 
 ## Backup & Disaster Recovery
@@ -579,30 +597,30 @@ echo "Backup completed successfully: backup_${TIMESTAMP}.sql.gz"
 
 ```javascript
 // CloudFlare Workers
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener("fetch", (event) => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  const cache = caches.default
-  let response = await cache.match(request)
+  const cache = caches.default;
+  let response = await cache.match(request);
 
   if (!response) {
-    response = await fetch(request)
-    
+    response = await fetch(request);
+
     // Cache static assets for 1 year
-    if (request.url.includes('/static/')) {
-      const headers = new Headers(response.headers)
-      headers.set('Cache-Control', 'public, max-age=31536000')
+    if (request.url.includes("/static/")) {
+      const headers = new Headers(response.headers);
+      headers.set("Cache-Control", "public, max-age=31536000");
       response = new Response(response.body, {
         status: response.status,
-        headers
-      })
-      event.waitUntil(cache.put(request, response.clone()))
+        headers,
+      });
+      event.waitUntil(cache.put(request, response.clone()));
     }
   }
 
-  return response
+  return response;
 }
 ```
 
@@ -616,21 +634,21 @@ import boto3
 
 def lambda_handler(event, context):
     ec2 = boto3.client('ec2')
-    
+
     # Tag-based instance management
     filters = [{'Name': 'tag:AutoScale', 'Values': ['true']}]
     instances = ec2.describe_instances(Filters=filters)
-    
+
     instance_ids = []
     for reservation in instances['Reservations']:
         for instance in reservation['Instances']:
             instance_ids.append(instance['InstanceId'])
-    
+
     if event['action'] == 'stop':
         ec2.stop_instances(InstanceIds=instance_ids)
     elif event['action'] == 'start':
         ec2.start_instances(InstanceIds=instance_ids)
-    
+
     return {'statusCode': 200, 'body': f'Processed {len(instance_ids)} instances'}
 ```
 
@@ -657,8 +675,8 @@ spec:
         version: blue
     spec:
       containers:
-      - name: app
-        image: myapp:v1.0.0
+        - name: app
+          image: myapp:v1.0.0
 ---
 # Service pointing to blue
 apiVersion: v1
@@ -668,10 +686,10 @@ metadata:
 spec:
   selector:
     app: myapp
-    version: blue  # Switch to 'green' for cutover
+    version: blue # Switch to 'green' for cutover
   ports:
-  - port: 80
-    targetPort: 3000
+    - port: 80
+      targetPort: 3000
 ```
 
 ### Canary Deployment (Istio)
@@ -683,25 +701,25 @@ metadata:
   name: app-vs
 spec:
   hosts:
-  - app.example.com
+    - app.example.com
   http:
-  - match:
-    - headers:
-        canary:
-          exact: "true"
-    route:
-    - destination:
-        host: app-service
-        subset: v2
-  - route:
-    - destination:
-        host: app-service
-        subset: v1
-      weight: 90
-    - destination:
-        host: app-service
-        subset: v2
-      weight: 10
+    - match:
+        - headers:
+            canary:
+              exact: "true"
+      route:
+        - destination:
+            host: app-service
+            subset: v2
+    - route:
+        - destination:
+            host: app-service
+            subset: v1
+          weight: 90
+        - destination:
+            host: app-service
+            subset: v2
+          weight: 10
 ```
 
 ## Workflow Best Practices

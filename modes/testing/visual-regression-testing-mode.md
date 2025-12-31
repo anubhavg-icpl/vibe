@@ -17,19 +17,19 @@ You are an expert in visual regression testing, helping teams catch unintended U
 
 ```typescript
 // playwright.config.ts
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './tests',
-  snapshotDir: './tests/__snapshots__',
-  snapshotPathTemplate: '{snapshotDir}/{testFilePath}/{arg}{ext}',
+  testDir: "./tests",
+  snapshotDir: "./tests/__snapshots__",
+  snapshotPathTemplate: "{snapshotDir}/{testFilePath}/{arg}{ext}",
 
   expect: {
     toHaveScreenshot: {
       maxDiffPixels: 100,
       maxDiffPixelRatio: 0.02,
       threshold: 0.2,
-      animations: 'disabled',
+      animations: "disabled",
     },
     toMatchSnapshot: {
       maxDiffPixelRatio: 0.02,
@@ -37,30 +37,30 @@ export default defineConfig({
   },
 
   use: {
-    screenshot: 'only-on-failure',
-    trace: 'retain-on-failure',
+    screenshot: "only-on-failure",
+    trace: "retain-on-failure",
   },
 
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
     },
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
     },
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: "webkit",
+      use: { ...devices["Desktop Safari"] },
     },
     {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
+      name: "Mobile Chrome",
+      use: { ...devices["Pixel 5"] },
     },
     {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
+      name: "Mobile Safari",
+      use: { ...devices["iPhone 12"] },
     },
   ],
 });
@@ -68,13 +68,13 @@ export default defineConfig({
 
 ```typescript
 // tests/visual/homepage.spec.ts
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test.describe('Homepage Visual Tests', () => {
+test.describe("Homepage Visual Tests", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto("/");
     // Wait for fonts and images to load
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState("networkidle");
     // Disable animations for consistent screenshots
     await page.addStyleTag({
       content: `
@@ -88,28 +88,28 @@ test.describe('Homepage Visual Tests', () => {
     });
   });
 
-  test('full page screenshot', async ({ page }) => {
-    await expect(page).toHaveScreenshot('homepage-full.png', {
+  test("full page screenshot", async ({ page }) => {
+    await expect(page).toHaveScreenshot("homepage-full.png", {
       fullPage: true,
     });
   });
 
-  test('hero section', async ({ page }) => {
+  test("hero section", async ({ page }) => {
     const hero = page.locator('[data-testid="hero-section"]');
-    await expect(hero).toHaveScreenshot('hero-section.png');
+    await expect(hero).toHaveScreenshot("hero-section.png");
   });
 
-  test('navigation bar', async ({ page }) => {
-    const nav = page.locator('nav');
-    await expect(nav).toHaveScreenshot('navigation.png');
+  test("navigation bar", async ({ page }) => {
+    const nav = page.locator("nav");
+    await expect(nav).toHaveScreenshot("navigation.png");
   });
 
-  test('responsive layouts', async ({ page }) => {
+  test("responsive layouts", async ({ page }) => {
     const viewports = [
-      { width: 375, height: 667, name: 'mobile' },
-      { width: 768, height: 1024, name: 'tablet' },
-      { width: 1280, height: 720, name: 'desktop' },
-      { width: 1920, height: 1080, name: 'wide' },
+      { width: 375, height: 667, name: "mobile" },
+      { width: 768, height: 1024, name: "tablet" },
+      { width: 1280, height: 720, name: "desktop" },
+      { width: 1920, height: 1080, name: "wide" },
     ];
 
     for (const viewport of viewports) {
@@ -124,81 +124,81 @@ test.describe('Homepage Visual Tests', () => {
 
 ```typescript
 // tests/visual/components.spec.ts
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test.describe('Component Visual Tests', () => {
-  test('button states', async ({ page }) => {
-    await page.goto('/components/buttons');
+test.describe("Component Visual Tests", () => {
+  test("button states", async ({ page }) => {
+    await page.goto("/components/buttons");
 
-    const button = page.getByRole('button', { name: 'Primary Button' });
+    const button = page.getByRole("button", { name: "Primary Button" });
 
     // Default state
-    await expect(button).toHaveScreenshot('button-default.png');
+    await expect(button).toHaveScreenshot("button-default.png");
 
     // Hover state
     await button.hover();
-    await expect(button).toHaveScreenshot('button-hover.png');
+    await expect(button).toHaveScreenshot("button-hover.png");
 
     // Focus state
     await button.focus();
-    await expect(button).toHaveScreenshot('button-focus.png');
+    await expect(button).toHaveScreenshot("button-focus.png");
 
     // Active state
     await button.click({ force: true, noWaitAfter: true });
-    await expect(button).toHaveScreenshot('button-active.png');
+    await expect(button).toHaveScreenshot("button-active.png");
   });
 
-  test('form validation states', async ({ page }) => {
-    await page.goto('/components/forms');
+  test("form validation states", async ({ page }) => {
+    await page.goto("/components/forms");
 
     const form = page.locator('[data-testid="contact-form"]');
 
     // Empty state
-    await expect(form).toHaveScreenshot('form-empty.png');
+    await expect(form).toHaveScreenshot("form-empty.png");
 
     // Filled state
-    await page.fill('[name="email"]', 'test@example.com');
-    await page.fill('[name="message"]', 'Hello world');
-    await expect(form).toHaveScreenshot('form-filled.png');
+    await page.fill('[name="email"]', "test@example.com");
+    await page.fill('[name="message"]', "Hello world");
+    await expect(form).toHaveScreenshot("form-filled.png");
 
     // Error state
-    await page.fill('[name="email"]', 'invalid-email');
+    await page.fill('[name="email"]', "invalid-email");
     await page.click('button[type="submit"]');
-    await expect(form).toHaveScreenshot('form-error.png');
+    await expect(form).toHaveScreenshot("form-error.png");
 
     // Success state
-    await page.fill('[name="email"]', 'valid@example.com');
+    await page.fill('[name="email"]', "valid@example.com");
     await page.click('button[type="submit"]');
-    await page.waitForSelector('.success-message');
-    await expect(form).toHaveScreenshot('form-success.png');
+    await page.waitForSelector(".success-message");
+    await expect(form).toHaveScreenshot("form-success.png");
   });
 
-  test('modal dialog', async ({ page }) => {
-    await page.goto('/components/modals');
+  test("modal dialog", async ({ page }) => {
+    await page.goto("/components/modals");
 
     // Open modal
     await page.click('[data-testid="open-modal"]');
     await page.waitForSelector('[role="dialog"]');
 
     // Capture modal with backdrop
-    await expect(page).toHaveScreenshot('modal-open.png');
+    await expect(page).toHaveScreenshot("modal-open.png");
 
     // Capture just the modal
     const modal = page.locator('[role="dialog"]');
-    await expect(modal).toHaveScreenshot('modal-content.png');
+    await expect(modal).toHaveScreenshot("modal-content.png");
   });
 });
 ```
 
 ```typescript
 // tests/visual/utils/visual-helpers.ts
-import { Page, expect } from '@playwright/test';
+import { Page, expect } from "@playwright/test";
 
 export async function prepareForVisualTest(page: Page) {
   // Wait for all images to load
   await page.waitForFunction(() => {
-    const images = document.querySelectorAll('img');
-    return Array.from(images).every(img => img.complete);
+    const images = document.querySelectorAll("img");
+    return Array.from(images).every((img) => img.complete);
   });
 
   // Wait for custom fonts
@@ -233,17 +233,13 @@ export async function maskDynamicContent(page: Page, selectors: string[]) {
   for (const selector of selectors) {
     await page.locator(selector).evaluateAll((elements) => {
       elements.forEach((el) => {
-        (el as HTMLElement).style.visibility = 'hidden';
+        (el as HTMLElement).style.visibility = "hidden";
       });
     });
   }
 }
 
-export async function takeResponsiveScreenshots(
-  page: Page,
-  name: string,
-  options?: { fullPage?: boolean }
-) {
+export async function takeResponsiveScreenshots(page: Page, name: string, options?: { fullPage?: boolean }) {
   const breakpoints = {
     mobile: { width: 375, height: 812 },
     tablet: { width: 768, height: 1024 },
@@ -268,13 +264,10 @@ export async function takeResponsiveScreenshots(
 ```javascript
 // .storybook/main.js
 module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: [
-    '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
-  ],
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx|mdx)"],
+  addons: ["@storybook/addon-essentials", "@chromatic-com/storybook"],
   framework: {
-    name: '@storybook/react-vite',
+    name: "@storybook/react-vite",
     options: {},
   },
 };
@@ -458,8 +451,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -492,89 +485,83 @@ module.exports = {
     `,
   },
   discovery: {
-    allowedHostnames: ['localhost', 'cdn.example.com'],
+    allowedHostnames: ["localhost", "cdn.example.com"],
     networkIdleTimeout: 250,
   },
   upload: {
-    files: '**/*.html',
-    ignore: '**/node_modules/**',
+    files: "**/*.html",
+    ignore: "**/node_modules/**",
   },
 };
 ```
 
 ```typescript
 // tests/percy/visual.spec.ts
-import { test } from '@playwright/test';
-import percySnapshot from '@percy/playwright';
+import { test } from "@playwright/test";
+import percySnapshot from "@percy/playwright";
 
-test.describe('Percy Visual Tests', () => {
-  test('homepage', async ({ page }) => {
-    await page.goto('/');
-    await page.waitForLoadState('networkidle');
+test.describe("Percy Visual Tests", () => {
+  test("homepage", async ({ page }) => {
+    await page.goto("/");
+    await page.waitForLoadState("networkidle");
 
-    await percySnapshot(page, 'Homepage', {
+    await percySnapshot(page, "Homepage", {
       widths: [375, 768, 1280],
       minHeight: 1024,
     });
   });
 
-  test('product listing', async ({ page }) => {
-    await page.goto('/products');
+  test("product listing", async ({ page }) => {
+    await page.goto("/products");
     await page.waitForSelector('[data-testid="product-grid"]');
 
-    await percySnapshot(page, 'Product Listing');
+    await percySnapshot(page, "Product Listing");
   });
 
-  test('product detail', async ({ page }) => {
-    await page.goto('/products/sample-product');
+  test("product detail", async ({ page }) => {
+    await page.goto("/products/sample-product");
     await page.waitForSelector('[data-testid="product-detail"]');
 
     // Wait for images
     await page.waitForFunction(() => {
-      const images = document.querySelectorAll('img');
-      return Array.from(images).every(img => img.complete);
+      const images = document.querySelectorAll("img");
+      return Array.from(images).every((img) => img.complete);
     });
 
-    await percySnapshot(page, 'Product Detail');
+    await percySnapshot(page, "Product Detail");
   });
 
-  test('checkout flow', async ({ page }) => {
-    await page.goto('/checkout');
+  test("checkout flow", async ({ page }) => {
+    await page.goto("/checkout");
 
     // Step 1: Cart
-    await percySnapshot(page, 'Checkout - Cart');
+    await percySnapshot(page, "Checkout - Cart");
 
     // Step 2: Shipping
     await page.click('[data-testid="continue-to-shipping"]');
     await page.waitForSelector('[data-testid="shipping-form"]');
-    await percySnapshot(page, 'Checkout - Shipping');
+    await percySnapshot(page, "Checkout - Shipping");
 
     // Step 3: Payment
-    await page.fill('[name="address"]', '123 Test St');
+    await page.fill('[name="address"]', "123 Test St");
     await page.click('[data-testid="continue-to-payment"]');
     await page.waitForSelector('[data-testid="payment-form"]');
-    await percySnapshot(page, 'Checkout - Payment');
+    await percySnapshot(page, "Checkout - Payment");
   });
 });
 ```
 
 ```typescript
 // tests/percy/storybook.ts
-import PercyStorybook from '@percy/storybook';
+import PercyStorybook from "@percy/storybook";
 
 // Run Percy on Storybook
 // npx percy storybook http://localhost:6006
 
 // percy.storybook.config.js
 module.exports = {
-  include: [
-    'Components/**',
-    'Pages/**',
-  ],
-  exclude: [
-    '**/Docs',
-    '**/*-dev',
-  ],
+  include: ["Components/**", "Pages/**"],
+  exclude: ["**/Docs", "**/*-dev"],
   args: {
     widths: [375, 768, 1280],
   },
@@ -600,7 +587,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm ci
@@ -625,67 +612,67 @@ jobs:
 ```javascript
 // backstop.config.js
 module.exports = {
-  id: 'visual-regression',
+  id: "visual-regression",
   viewports: [
-    { label: 'phone', width: 375, height: 812 },
-    { label: 'tablet', width: 768, height: 1024 },
-    { label: 'desktop', width: 1440, height: 900 },
+    { label: "phone", width: 375, height: 812 },
+    { label: "tablet", width: 768, height: 1024 },
+    { label: "desktop", width: 1440, height: 900 },
   ],
   scenarios: [
     {
-      label: 'Homepage',
-      url: 'http://localhost:3000',
-      selectors: ['document'],
+      label: "Homepage",
+      url: "http://localhost:3000",
+      selectors: ["document"],
       delay: 500,
       misMatchThreshold: 0.1,
       requireSameDimensions: true,
     },
     {
-      label: 'Homepage - Hero Section',
-      url: 'http://localhost:3000',
+      label: "Homepage - Hero Section",
+      url: "http://localhost:3000",
       selectors: ['[data-testid="hero"]'],
       delay: 300,
     },
     {
-      label: 'Homepage - Navigation Hover',
-      url: 'http://localhost:3000',
-      selectors: ['nav'],
-      hoverSelector: 'nav a:first-child',
+      label: "Homepage - Navigation Hover",
+      url: "http://localhost:3000",
+      selectors: ["nav"],
+      hoverSelector: "nav a:first-child",
       delay: 200,
     },
     {
-      label: 'Products Page',
-      url: 'http://localhost:3000/products',
-      selectors: ['document'],
+      label: "Products Page",
+      url: "http://localhost:3000/products",
+      selectors: ["document"],
       delay: 1000,
       scrollToSelector: '[data-testid="product-grid"]',
     },
     {
-      label: 'Modal Open',
-      url: 'http://localhost:3000',
-      selectors: ['document'],
+      label: "Modal Open",
+      url: "http://localhost:3000",
+      selectors: ["document"],
       clickSelector: '[data-testid="open-modal"]',
       postInteractionWait: 500,
     },
     {
-      label: 'Form Validation',
-      url: 'http://localhost:3000/contact',
-      selectors: ['form'],
-      onReadyScript: 'form-validation.js',
+      label: "Form Validation",
+      url: "http://localhost:3000/contact",
+      selectors: ["form"],
+      onReadyScript: "form-validation.js",
     },
   ],
   paths: {
-    bitmaps_reference: 'backstop_data/bitmaps_reference',
-    bitmaps_test: 'backstop_data/bitmaps_test',
-    engine_scripts: 'backstop_data/engine_scripts',
-    html_report: 'backstop_data/html_report',
-    ci_report: 'backstop_data/ci_report',
+    bitmaps_reference: "backstop_data/bitmaps_reference",
+    bitmaps_test: "backstop_data/bitmaps_test",
+    engine_scripts: "backstop_data/engine_scripts",
+    html_report: "backstop_data/html_report",
+    ci_report: "backstop_data/ci_report",
   },
-  report: ['browser', 'CI'],
-  engine: 'playwright',
+  report: ["browser", "CI"],
+  engine: "playwright",
   engineOptions: {
-    browser: 'chromium',
-    args: ['--no-sandbox'],
+    browser: "chromium",
+    args: ["--no-sandbox"],
   },
   asyncCaptureLimit: 5,
   asyncCompareLimit: 50,
@@ -698,14 +685,14 @@ module.exports = {
 // backstop_data/engine_scripts/form-validation.js
 module.exports = async (page, scenario) => {
   // Fill form with invalid data
-  await page.fill('[name="email"]', 'invalid-email');
-  await page.fill('[name="phone"]', 'abc');
+  await page.fill('[name="email"]', "invalid-email");
+  await page.fill('[name="phone"]', "abc");
 
   // Submit to trigger validation
   await page.click('button[type="submit"]');
 
   // Wait for validation messages
-  await page.waitForSelector('.error-message');
+  await page.waitForSelector(".error-message");
 };
 ```
 
@@ -727,16 +714,16 @@ module.exports = async (page, scenario, viewport, isReference) => {
 
   // Wait for images
   await page.waitForFunction(() => {
-    const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll("img");
     return Array.from(images).every((img) => img.complete);
   });
 
   // Hide dynamic content
-  const dynamicSelectors = ['.timestamp', '.user-avatar', '.random-ad'];
+  const dynamicSelectors = [".timestamp", ".user-avatar", ".random-ad"];
   for (const selector of dynamicSelectors) {
     await page.evaluate((sel) => {
       document.querySelectorAll(sel).forEach((el) => {
-        el.style.visibility = 'hidden';
+        el.style.visibility = "hidden";
       });
     }, selector);
   }
@@ -759,8 +746,8 @@ module.exports = async (page, scenario, viewport, isReference) => {
 
 ```typescript
 // .storybook/test-runner.ts
-import type { TestRunnerConfig } from '@storybook/test-runner';
-import { toMatchImageSnapshot } from 'jest-image-snapshot';
+import type { TestRunnerConfig } from "@storybook/test-runner";
+import { toMatchImageSnapshot } from "jest-image-snapshot";
 
 const config: TestRunnerConfig = {
   setup() {
@@ -769,7 +756,7 @@ const config: TestRunnerConfig = {
 
   async postVisit(page, context) {
     // Wait for story to be fully rendered
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState("networkidle");
 
     // Disable animations
     await page.addStyleTag({
@@ -788,7 +775,7 @@ const config: TestRunnerConfig = {
       customSnapshotsDir: `__snapshots__/${context.id}`,
       customSnapshotIdentifier: context.name,
       failureThreshold: 0.01,
-      failureThresholdType: 'percent',
+      failureThresholdType: "percent",
     });
   },
 };
@@ -857,8 +844,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -908,7 +895,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm ci
@@ -944,7 +931,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm ci
@@ -990,7 +977,7 @@ CMD ["npm", "run", "test:visual"]
 
 ```yaml
 # docker-compose.visual.yml
-version: '3.8'
+version: "3.8"
 
 services:
   app:
@@ -1025,7 +1012,7 @@ services:
 
 ```typescript
 // tests/visual/component-matrix.spec.ts
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
 interface ComponentVariant {
   props: Record<string, unknown>;
@@ -1037,46 +1024,46 @@ interface ComponentTestConfig {
   url: string;
   selector: string;
   variants: ComponentVariant[];
-  states?: ('default' | 'hover' | 'focus' | 'active' | 'disabled')[];
+  states?: ("default" | "hover" | "focus" | "active" | "disabled")[];
   themes?: string[];
   viewports?: { width: number; height: number; name: string }[];
 }
 
 const components: ComponentTestConfig[] = [
   {
-    component: 'Button',
-    url: '/storybook-static/iframe.html?id=components-button--default',
-    selector: 'button',
+    component: "Button",
+    url: "/storybook-static/iframe.html?id=components-button--default",
+    selector: "button",
     variants: [
-      { name: 'primary', props: { variant: 'primary' } },
-      { name: 'secondary', props: { variant: 'secondary' } },
-      { name: 'danger', props: { variant: 'danger' } },
+      { name: "primary", props: { variant: "primary" } },
+      { name: "secondary", props: { variant: "secondary" } },
+      { name: "danger", props: { variant: "danger" } },
     ],
-    states: ['default', 'hover', 'focus', 'disabled'],
-    themes: ['light', 'dark'],
+    states: ["default", "hover", "focus", "disabled"],
+    themes: ["light", "dark"],
   },
   {
-    component: 'Input',
-    url: '/storybook-static/iframe.html?id=components-input--default',
-    selector: 'input',
+    component: "Input",
+    url: "/storybook-static/iframe.html?id=components-input--default",
+    selector: "input",
     variants: [
-      { name: 'text', props: { type: 'text' } },
-      { name: 'password', props: { type: 'password' } },
-      { name: 'search', props: { type: 'search' } },
+      { name: "text", props: { type: "text" } },
+      { name: "password", props: { type: "password" } },
+      { name: "search", props: { type: "search" } },
     ],
-    states: ['default', 'focus', 'disabled'],
-    themes: ['light', 'dark'],
+    states: ["default", "focus", "disabled"],
+    themes: ["light", "dark"],
   },
 ];
 
 for (const config of components) {
   test.describe(`${config.component} Visual Matrix`, () => {
     for (const variant of config.variants) {
-      for (const theme of config.themes || ['light']) {
-        for (const state of config.states || ['default']) {
+      for (const theme of config.themes || ["light"]) {
+        for (const state of config.states || ["default"]) {
           test(`${variant.name} - ${theme} - ${state}`, async ({ page }) => {
             // Navigate to component
-            const url = new URL(config.url, 'http://localhost:6006');
+            const url = new URL(config.url, "http://localhost:6006");
             Object.entries(variant.props).forEach(([key, value]) => {
               url.searchParams.set(`args.${key}`, String(value));
             });
@@ -1085,20 +1072,20 @@ for (const config of components) {
 
             // Apply theme
             await page.evaluate((t) => {
-              document.documentElement.setAttribute('data-theme', t);
+              document.documentElement.setAttribute("data-theme", t);
             }, theme);
 
             const element = page.locator(config.selector).first();
 
             // Apply state
             switch (state) {
-              case 'hover':
+              case "hover":
                 await element.hover();
                 break;
-              case 'focus':
+              case "focus":
                 await element.focus();
                 break;
-              case 'disabled':
+              case "disabled":
                 await element.evaluate((el) => {
                   (el as HTMLButtonElement).disabled = true;
                 });
@@ -1106,9 +1093,7 @@ for (const config of components) {
             }
 
             // Take screenshot
-            await expect(element).toHaveScreenshot(
-              `${config.component}-${variant.name}-${theme}-${state}.png`
-            );
+            await expect(element).toHaveScreenshot(`${config.component}-${variant.name}-${theme}-${state}.png`);
           });
         }
       }
@@ -1121,23 +1106,16 @@ for (const config of components) {
 
 ```typescript
 // tests/visual/responsive.spec.ts
-import { test, expect, devices } from '@playwright/test';
+import { test, expect, devices } from "@playwright/test";
 
 const pages = [
-  { name: 'homepage', url: '/' },
-  { name: 'products', url: '/products' },
-  { name: 'about', url: '/about' },
-  { name: 'contact', url: '/contact' },
+  { name: "homepage", url: "/" },
+  { name: "products", url: "/products" },
+  { name: "about", url: "/about" },
+  { name: "contact", url: "/contact" },
 ];
 
-const deviceList = [
-  'iPhone 12',
-  'iPhone 12 Pro Max',
-  'iPad',
-  'iPad Pro 11',
-  'Desktop Chrome',
-  'Desktop Firefox',
-];
+const deviceList = ["iPhone 12", "iPhone 12 Pro Max", "iPad", "iPad Pro 11", "Desktop Chrome", "Desktop Firefox"];
 
 for (const pageConfig of pages) {
   test.describe(`${pageConfig.name} Responsive`, () => {
@@ -1150,12 +1128,11 @@ for (const pageConfig of pages) {
         const page = await context.newPage();
 
         await page.goto(pageConfig.url);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState("networkidle");
 
-        await expect(page).toHaveScreenshot(
-          `${pageConfig.name}-${deviceName.replace(/\s+/g, '-').toLowerCase()}.png`,
-          { fullPage: true }
-        );
+        await expect(page).toHaveScreenshot(`${pageConfig.name}-${deviceName.replace(/\s+/g, "-").toLowerCase()}.png`, {
+          fullPage: true,
+        });
 
         await context.close();
       });
@@ -1168,45 +1145,37 @@ for (const pageConfig of pages) {
 
 ```typescript
 // tests/visual/themes.spec.ts
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-const themes = ['light', 'dark', 'high-contrast', 'system'];
+const themes = ["light", "dark", "high-contrast", "system"];
 
-const pages = [
-  '/',
-  '/dashboard',
-  '/settings',
-  '/profile',
-];
+const pages = ["/", "/dashboard", "/settings", "/profile"];
 
-test.describe('Theme Visual Tests', () => {
+test.describe("Theme Visual Tests", () => {
   for (const theme of themes) {
     for (const pagePath of pages) {
       test(`${pagePath} - ${theme} theme`, async ({ page }) => {
         // Set color scheme for system theme
-        if (theme === 'system') {
-          await page.emulateMedia({ colorScheme: 'dark' });
+        if (theme === "system") {
+          await page.emulateMedia({ colorScheme: "dark" });
         }
 
         await page.goto(pagePath);
 
         // Apply theme
-        if (theme !== 'system') {
+        if (theme !== "system") {
           await page.evaluate((t) => {
-            localStorage.setItem('theme', t);
-            document.documentElement.setAttribute('data-theme', t);
+            localStorage.setItem("theme", t);
+            document.documentElement.setAttribute("data-theme", t);
           }, theme);
         }
 
         // Wait for theme to apply
         await page.waitForTimeout(100);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState("networkidle");
 
-        const pageName = pagePath === '/' ? 'home' : pagePath.slice(1);
-        await expect(page).toHaveScreenshot(
-          `${pageName}-${theme}.png`,
-          { fullPage: true }
-        );
+        const pageName = pagePath === "/" ? "home" : pagePath.slice(1);
+        await expect(page).toHaveScreenshot(`${pageName}-${theme}.png`, { fullPage: true });
       });
     }
   }

@@ -1,6 +1,7 @@
 ---
 title: Turborepo & Monorepo Expert
 description: Expert in Turborepo, monorepo architecture, workspace management, and build optimization
+author: Anubhav Gain
 ---
 
 # Turborepo & Monorepo Expert Mode
@@ -10,6 +11,7 @@ You are an expert in Turborepo and monorepo architecture. You design and impleme
 ## Core Competencies
 
 ### Turborepo Capabilities
+
 - Incremental builds
 - Remote caching
 - Task pipelines
@@ -215,10 +217,10 @@ packages:
 ### packages/ui/src/button.tsx
 
 ```tsx
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "./utils"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "./utils";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50",
@@ -243,30 +245,23 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
-)
+  },
+);
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    )
-  }
-)
-Button.displayName = "Button"
+    const Comp = asChild ? Slot : "button";
+    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+  },
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };
 ```
 
 ### packages/shared/package.json
@@ -301,7 +296,7 @@ export { Button, buttonVariants }
 ### packages/shared/src/validators.ts
 
 ```typescript
-import { z } from "zod"
+import { z } from "zod";
 
 // Shared validation schemas
 export const userSchema = z.object({
@@ -311,28 +306,28 @@ export const userSchema = z.object({
   role: z.enum(["admin", "user", "guest"]),
   createdAt: z.date(),
   updatedAt: z.date(),
-})
+});
 
 export const createUserSchema = userSchema.omit({
   id: true,
   createdAt: true,
   updatedAt: true,
-})
+});
 
-export const updateUserSchema = createUserSchema.partial()
+export const updateUserSchema = createUserSchema.partial();
 
 export const paginationSchema = z.object({
   page: z.number().int().positive().default(1),
   limit: z.number().int().min(1).max(100).default(20),
   sortBy: z.string().optional(),
   order: z.enum(["asc", "desc"]).default("desc"),
-})
+});
 
 // Type exports
-export type User = z.infer<typeof userSchema>
-export type CreateUser = z.infer<typeof createUserSchema>
-export type UpdateUser = z.infer<typeof updateUserSchema>
-export type Pagination = z.infer<typeof paginationSchema>
+export type User = z.infer<typeof userSchema>;
+export type CreateUser = z.infer<typeof createUserSchema>;
+export type UpdateUser = z.infer<typeof updateUserSchema>;
+export type Pagination = z.infer<typeof paginationSchema>;
 ```
 
 ### packages/database/package.json
@@ -445,18 +440,11 @@ export type Pagination = z.infer<typeof paginationSchema>
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   parser: "@typescript-eslint/parser",
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-  ],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   plugins: ["@typescript-eslint", "import"],
   rules: {
     "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      { prefer: "type-imports", fixStyle: "inline-type-imports" },
-    ],
+    "@typescript-eslint/consistent-type-imports": ["warn", { prefer: "type-imports", fixStyle: "inline-type-imports" }],
     "import/order": [
       "error",
       {
@@ -467,7 +455,7 @@ module.exports = {
     ],
   },
   ignorePatterns: ["node_modules", "dist", ".next", "coverage"],
-}
+};
 ```
 
 ## App Configuration
@@ -683,6 +671,7 @@ pnpm turbo gen workspace
 ## Output Format
 
 Provide:
+
 - Turborepo configurations
 - Package structures
 - Shared package setups
@@ -690,6 +679,7 @@ Provide:
 - Filtering strategies
 
 Sources:
+
 - [Turborepo Documentation](https://turbo.build/repo/docs)
 - [pnpm Workspaces](https://pnpm.io/workspaces)
 - [Vercel Monorepo Guide](https://vercel.com/docs/monorepos)

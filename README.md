@@ -27,13 +27,13 @@ Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQ
 
 ## Features
 
-| What You Get | Why You Need It |
-|--------------|-----------------|
-| **190+ Expert Modes** | Because one-size-fits-all is for socks, not AI |
-| **30+ Categories** | Organized chaos is still organization |
-| **Production-Ready Standards** | So you can pretend you wrote clean code yourself |
-| **Universal Rules Engine** | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
-| **Personality Modes** | Ever wanted Tony Stark to review your code? Now you can. |
+| What You Get                   | Why You Need It                                                                   |
+| ------------------------------ | --------------------------------------------------------------------------------- |
+| **190+ Expert Modes**          | Because one-size-fits-all is for socks, not AI                                    |
+| **30+ Categories**             | Organized chaos is still organization                                             |
+| **Production-Ready Standards** | So you can pretend you wrote clean code yourself                                  |
+| **Universal Rules Engine**     | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
+| **Personality Modes**          | Ever wanted Tony Stark to review your code? Now you can.                          |
 
 ## Mode Categories
 
@@ -64,20 +64,20 @@ Game Development ..................... 3 modes  (Unity, Unreal, Game Design)
 git clone https://github.com/anubhavg-icpl/vibe.git
 ```
 
-*Revolutionary, I know.*
+_Revolutionary, I know._
 
 ### Step 2: Pick a Mode
 
 Browse `/modes` and find something that matches your existential crisis:
 
-| You Want To... | Use This Mode |
-|----------------|---------------|
-| Write code that doesn't suck | `software-engineer-agent-mode` |
-| Pretend you understand system design | `principal-engineer-mode` |
-| Find security holes (before hackers do) | `wg-code-sentinel-mode` |
-| Build ML pipelines | `mlops-expert-mode` |
-| Break production (professionally) | `netflix-chaos-suite-mode` |
-| Make your AI sound like Iron Man | `tony-stark-mode` |
+| You Want To...                          | Use This Mode                  |
+| --------------------------------------- | ------------------------------ |
+| Write code that doesn't suck            | `software-engineer-agent-mode` |
+| Pretend you understand system design    | `principal-engineer-mode`      |
+| Find security holes (before hackers do) | `wg-code-sentinel-mode`        |
+| Build ML pipelines                      | `mlops-expert-mode`            |
+| Break production (professionally)       | `netflix-chaos-suite-mode`     |
+| Make your AI sound like Iron Man        | `tony-stark-mode`              |
 
 ### Step 3: Copy, Paste, Profit
 
@@ -88,25 +88,31 @@ Copy the mode content into your AI assistant. That's it. That's the whole proces
 ### Example: Security Review Mode
 
 **Without Vibe:**
+
 > "Your code looks fine! Maybe add some input validation?"
 
 **With `wg-code-sentinel-mode`:**
+
 > "Line 47: SQL injection vulnerability. Line 89: Hardcoded AWS credentials (nice). Line 156: You're using `eval()` unironically. Let me walk you through the 17 ways this will get you featured on HaveIBeenPwned."
 
 ### Example: Chaos Engineering Mode
 
 **Without Vibe:**
+
 > "Consider testing your application's resilience."
 
 **With `netflix-chaos-suite-mode`:**
+
 > "Deploying Chaos Monkey to randomly terminate instances, Chaos Gorilla to drop AZs, and Chaos Kong to simulate regional failures. Here's your blast radius calculation, rollback procedures, and the exact Prometheus queries to monitor this experiment. Also, maybe don't run this on Friday."
 
 ### Example: Platform Engineering Mode
 
 **Without Vibe:**
+
 > "You could build an internal developer portal."
 
 **With `platform-engineering-mode`:**
+
 > "Here's a complete Backstage setup with software templates, Crossplane compositions for self-service infrastructure, and a platform API. Your developers will provision databases faster than they can argue about tabs vs spaces."
 
 ## Repository Structure
@@ -145,44 +151,48 @@ Set up rules once, apply everywhere:
 
 **Works with:** Claude Code, Amazon Q, GitHub Copilot, Gemini, Aider
 
-*Finally, consistency across all your AI assistants without copying prompts like it's 2022.*
+_Finally, consistency across all your AI assistants without copying prompts like it's 2022._
 
 ## Popular Modes
 
 ### Development
+
 - `software-engineer-agent-mode` - Autonomous engineering with zero-confirmation policy
 - `rust-beast-mode` - Comprehensive Rust development
 - `blueprint-mode-v39` - Structured workflows (Debug, Express, Main, Loop)
 
 ### Infrastructure & DevOps
+
 - `platform-engineering-mode` - Internal Developer Platforms with Backstage
 - `aiops-expert-mode` - ML-powered anomaly detection and self-healing
 - `netflix-chaos-suite-mode` - Chaos Monkey, Gorilla, Kong, and ChAP
 - `gitops-expert-mode` - ArgoCD, Flux, GitOps patterns
 
 ### Security
+
 - `wg-code-sentinel-mode` - Security vulnerability analysis
 - `sast-dast-expert-mode` - Static and dynamic analysis
 - `soc2-compliance-mode` - Compliance automation
 
 ### AI/ML
+
 - `llm-expert-mode` - LLM development and fine-tuning
 - `vector-database-expert-mode` - Pinecone, Weaviate, Milvus
 - `mlops-expert-mode` - ML pipeline automation
 
 ## Stats
 
-| Metric | Value |
-|--------|-------|
-| Total Modes | **165+** |
-| Categories | **30+** |
-| Languages Covered | **14** |
-| Coding Standards | **13** |
-| Project Templates | **16+** |
-| Personality Modes | **10** |
-| Testing/Chaos Modes | **14** |
-| Security Modes | **10** |
-| DevOps/Platform Modes | **11** |
+| Metric                | Value    |
+| --------------------- | -------- |
+| Total Modes           | **165+** |
+| Categories            | **30+**  |
+| Languages Covered     | **14**   |
+| Coding Standards      | **13**   |
+| Project Templates     | **16+**  |
+| Personality Modes     | **10**   |
+| Testing/Chaos Modes   | **14**   |
+| Security Modes        | **10**   |
+| DevOps/Platform Modes | **11**   |
 
 ## Contributing
 
@@ -193,6 +203,7 @@ Want to add a mode? Found a bug? Have strong opinions about code formatting?
 3. Wait for someone to judge your code
 
 We accept:
+
 - New modes (the weirder, the better)
 - Bug fixes (yes, even documentation has bugs)
 - Improvements (but not "let's rewrite everything in Rust")
@@ -209,7 +220,7 @@ A: Bold of you to ask. Yes, it works. 150+ modes don't just write themselves. (A
 A: MIT License. Go wild. Just don't blame us when the Chaos Monkey mode takes down production.
 
 **Q: Why are there personality modes?**
-A: Because sometimes you need Gordon Ramsay to tell you your code is *raw*. It's therapeutic.
+A: Because sometimes you need Gordon Ramsay to tell you your code is _raw_. It's therapeutic.
 
 ## License
 

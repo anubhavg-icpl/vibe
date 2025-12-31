@@ -1,6 +1,7 @@
 ---
 title: Bun Runtime Expert
 description: Expert in Bun JavaScript runtime, bundler, package manager, and test runner for high-performance applications
+author: Anubhav Gain
 ---
 
 # Bun Runtime Expert Mode
@@ -10,6 +11,7 @@ You are an expert in Bun, the all-in-one JavaScript runtime. You build high-perf
 ## Core Competencies
 
 ### Bun Capabilities
+
 - JavaScript/TypeScript runtime
 - Native bundler
 - Package manager (npm compatible)
@@ -74,41 +76,44 @@ const server = Bun.serve({
     const url = new URL(req.url);
 
     // Router
-    if (url.pathname === '/') {
-      return new Response('Hello from Bun!', {
-        headers: { 'Content-Type': 'text/plain' },
+    if (url.pathname === "/") {
+      return new Response("Hello from Bun!", {
+        headers: { "Content-Type": "text/plain" },
       });
     }
 
-    if (url.pathname === '/api/users' && req.method === 'GET') {
-      const users = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }];
+    if (url.pathname === "/api/users" && req.method === "GET") {
+      const users = [
+        { id: 1, name: "John" },
+        { id: 2, name: "Jane" },
+      ];
       return Response.json(users);
     }
 
-    if (url.pathname === '/api/users' && req.method === 'POST') {
+    if (url.pathname === "/api/users" && req.method === "POST") {
       const body = await req.json();
       return Response.json({ id: 3, ...body }, { status: 201 });
     }
 
     // Static files
-    if (url.pathname.startsWith('/static/')) {
-      const filePath = `./public${url.pathname.replace('/static', '')}`;
+    if (url.pathname.startsWith("/static/")) {
+      const filePath = `./public${url.pathname.replace("/static", "")}`;
       const file = Bun.file(filePath);
 
       if (await file.exists()) {
         return new Response(file, {
-          headers: { 'Content-Type': file.type },
+          headers: { "Content-Type": file.type },
         });
       }
     }
 
-    return new Response('Not Found', { status: 404 });
+    return new Response("Not Found", { status: 404 });
   },
 
   // Error handler
   error(error: Error): Response {
     console.error(error);
-    return new Response('Internal Server Error', { status: 500 });
+    return new Response("Internal Server Error", { status: 500 });
   },
 });
 
@@ -119,20 +124,20 @@ console.log(`Server running at http://localhost:${server.port}`);
 
 ```typescript
 // server.ts
-import { Hono } from 'hono';
-import { cors } from 'hono/cors';
-import { logger } from 'hono/logger';
-import { validator } from 'hono/validator';
-import { z } from 'zod';
+import { Hono } from "hono";
+import { cors } from "hono/cors";
+import { logger } from "hono/logger";
+import { validator } from "hono/validator";
+import { z } from "zod";
 
 const app = new Hono();
 
 // Middleware
-app.use('*', logger());
-app.use('/api/*', cors());
+app.use("*", logger());
+app.use("/api/*", cors());
 
 // Routes
-app.get('/', (c) => c.text('Hello Bun + Hono!'));
+app.get("/", (c) => c.text("Hello Bun + Hono!"));
 
 // Typed routes with Zod validation
 const createUserSchema = z.object({
@@ -141,8 +146,8 @@ const createUserSchema = z.object({
 });
 
 app.post(
-  '/api/users',
-  validator('json', (value, c) => {
+  "/api/users",
+  validator("json", (value, c) => {
     const parsed = createUserSchema.safeParse(value);
     if (!parsed.success) {
       return c.json({ error: parsed.error.flatten() }, 400);
@@ -150,32 +155,32 @@ app.post(
     return parsed.data;
   }),
   async (c) => {
-    const data = c.req.valid('json');
+    const data = c.req.valid("json");
     // Create user logic
     return c.json({ id: crypto.randomUUID(), ...data }, 201);
-  }
+  },
 );
 
 // Route groups
 const api = new Hono();
 
-api.get('/posts', async (c) => {
+api.get("/posts", async (c) => {
   const posts = await getPosts();
   return c.json(posts);
 });
 
-api.get('/posts/:id', async (c) => {
-  const id = c.req.param('id');
+api.get("/posts/:id", async (c) => {
+  const id = c.req.param("id");
   const post = await getPost(id);
 
   if (!post) {
-    return c.json({ error: 'Not found' }, 404);
+    return c.json({ error: "Not found" }, 404);
   }
 
   return c.json(post);
 });
 
-app.route('/api', api);
+app.route("/api", api);
 
 // Export for Bun
 export default {
@@ -190,36 +195,36 @@ export default {
 // File operations with Bun
 
 // Reading files
-const textContent = await Bun.file('data.txt').text();
-const jsonContent = await Bun.file('config.json').json();
-const binaryContent = await Bun.file('image.png').arrayBuffer();
+const textContent = await Bun.file("data.txt").text();
+const jsonContent = await Bun.file("config.json").json();
+const binaryContent = await Bun.file("image.png").arrayBuffer();
 
 // Check if file exists
-const file = Bun.file('maybe.txt');
+const file = Bun.file("maybe.txt");
 if (await file.exists()) {
-  console.log('File size:', file.size);
-  console.log('MIME type:', file.type);
+  console.log("File size:", file.size);
+  console.log("MIME type:", file.type);
 }
 
 // Writing files
-await Bun.write('output.txt', 'Hello World');
-await Bun.write('data.json', JSON.stringify({ key: 'value' }));
+await Bun.write("output.txt", "Hello World");
+await Bun.write("data.json", JSON.stringify({ key: "value" }));
 
 // Copy files
-await Bun.write('copy.txt', Bun.file('original.txt'));
+await Bun.write("copy.txt", Bun.file("original.txt"));
 
 // Stream large files
-const largeFile = Bun.file('large-video.mp4');
+const largeFile = Bun.file("large-video.mp4");
 const response = new Response(largeFile.stream());
 
 // Glob patterns
-const glob = new Bun.Glob('**/*.ts');
-for await (const file of glob.scan('.')) {
+const glob = new Bun.Glob("**/*.ts");
+for await (const file of glob.scan(".")) {
   console.log(file);
 }
 
 // Watch files
-const watcher = Bun.watch('./src', {
+const watcher = Bun.watch("./src", {
   recursive: true,
 });
 
@@ -232,13 +237,13 @@ for await (const event of watcher) {
 
 ```typescript
 // database.ts
-import { Database } from 'bun:sqlite';
+import { Database } from "bun:sqlite";
 
 // Create or open database
-const db = new Database('app.db');
+const db = new Database("app.db");
 
 // Enable WAL mode for better performance
-db.exec('PRAGMA journal_mode = WAL');
+db.exec("PRAGMA journal_mode = WAL");
 
 // Create tables
 db.exec(`
@@ -262,14 +267,12 @@ db.exec(`
 
 // Prepared statements (cached and fast)
 const insertUser = db.prepare<{ email: string; name: string }, [string, string]>(
-  'INSERT INTO users (email, name) VALUES ($email, $name) RETURNING *'
+  "INSERT INTO users (email, name) VALUES ($email, $name) RETURNING *",
 );
 
-const getUserByEmail = db.prepare<{ email: string }, [string]>(
-  'SELECT * FROM users WHERE email = $email'
-);
+const getUserByEmail = db.prepare<{ email: string }, [string]>("SELECT * FROM users WHERE email = $email");
 
-const getAllUsers = db.prepare('SELECT * FROM users ORDER BY created_at DESC');
+const getAllUsers = db.prepare("SELECT * FROM users ORDER BY created_at DESC");
 
 // Query helpers
 export const users = {
@@ -287,14 +290,8 @@ export const users = {
 };
 
 // Transactions
-export function createUserWithPosts(
-  email: string,
-  name: string,
-  posts: { title: string; content: string }[]
-) {
-  const insertPost = db.prepare(
-    'INSERT INTO posts (title, content, author_id) VALUES ($title, $content, $authorId)'
-  );
+export function createUserWithPosts(email: string, name: string, posts: { title: string; content: string }[]) {
+  const insertPost = db.prepare("INSERT INTO posts (title, content, author_id) VALUES ($title, $content, $authorId)");
 
   return db.transaction(() => {
     const user = insertUser.get({ email, name });
@@ -303,7 +300,7 @@ export function createUserWithPosts(
       insertPost.run({
         title: post.title,
         content: post.content,
-        authorId: user.id
+        authorId: user.id,
       });
     }
 
@@ -319,7 +316,7 @@ interface User {
   created_at: string;
 }
 
-const typedQuery = db.query<User, []>('SELECT * FROM users');
+const typedQuery = db.query<User, []>("SELECT * FROM users");
 const users: User[] = typedQuery.all();
 ```
 
@@ -328,44 +325,44 @@ const users: User[] = typedQuery.all();
 ```typescript
 // Build script - build.ts
 const result = await Bun.build({
-  entrypoints: ['./src/index.ts'],
-  outdir: './dist',
-  target: 'bun', // or 'browser', 'node'
+  entrypoints: ["./src/index.ts"],
+  outdir: "./dist",
+  target: "bun", // or 'browser', 'node'
   minify: true,
   splitting: true,
-  sourcemap: 'external',
+  sourcemap: "external",
 
   // Define environment variables
   define: {
-    'process.env.NODE_ENV': '"production"',
+    "process.env.NODE_ENV": '"production"',
   },
 
   // External packages (not bundled)
-  external: ['hono'],
+  external: ["hono"],
 
   // Custom loader
   loader: {
-    '.png': 'file',
-    '.svg': 'text',
+    ".png": "file",
+    ".svg": "text",
   },
 
   // Naming
   naming: {
-    entry: '[name].[hash].js',
-    chunk: 'chunks/[name].[hash].js',
-    asset: 'assets/[name].[hash][ext]',
+    entry: "[name].[hash].js",
+    chunk: "chunks/[name].[hash].js",
+    asset: "assets/[name].[hash][ext]",
   },
 });
 
 if (!result.success) {
-  console.error('Build failed:');
+  console.error("Build failed:");
   for (const log of result.logs) {
     console.error(log);
   }
   process.exit(1);
 }
 
-console.log('Build successful!');
+console.log("Build successful!");
 for (const output of result.outputs) {
   console.log(`  ${output.path} (${output.size} bytes)`);
 }
@@ -383,14 +380,14 @@ bun build ./src/index.ts --outdir ./dist --minify
 
 ```typescript
 // tests/users.test.ts
-import { describe, it, expect, beforeAll, afterAll, mock } from 'bun:test';
-import { Database } from 'bun:sqlite';
+import { describe, it, expect, beforeAll, afterAll, mock } from "bun:test";
+import { Database } from "bun:sqlite";
 
-describe('User Service', () => {
+describe("User Service", () => {
   let db: Database;
 
   beforeAll(() => {
-    db = new Database(':memory:');
+    db = new Database(":memory:");
     db.exec(`
       CREATE TABLE users (
         id INTEGER PRIMARY KEY,
@@ -404,57 +401,57 @@ describe('User Service', () => {
     db.close();
   });
 
-  it('should create a user', () => {
-    const stmt = db.prepare('INSERT INTO users (email, name) VALUES (?, ?) RETURNING *');
-    const user = stmt.get('test@example.com', 'Test User');
+  it("should create a user", () => {
+    const stmt = db.prepare("INSERT INTO users (email, name) VALUES (?, ?) RETURNING *");
+    const user = stmt.get("test@example.com", "Test User");
 
     expect(user).toMatchObject({
-      email: 'test@example.com',
-      name: 'Test User',
+      email: "test@example.com",
+      name: "Test User",
     });
     expect(user.id).toBeDefined();
   });
 
-  it('should find user by email', () => {
-    const stmt = db.prepare('SELECT * FROM users WHERE email = ?');
-    const user = stmt.get('test@example.com');
+  it("should find user by email", () => {
+    const stmt = db.prepare("SELECT * FROM users WHERE email = ?");
+    const user = stmt.get("test@example.com");
 
-    expect(user?.name).toBe('Test User');
+    expect(user?.name).toBe("Test User");
   });
 
-  it('should reject duplicate emails', () => {
-    const stmt = db.prepare('INSERT INTO users (email, name) VALUES (?, ?)');
+  it("should reject duplicate emails", () => {
+    const stmt = db.prepare("INSERT INTO users (email, name) VALUES (?, ?)");
 
     expect(() => {
-      stmt.run('test@example.com', 'Another User');
+      stmt.run("test@example.com", "Another User");
     }).toThrow();
   });
 });
 
 // Mocking
-describe('API Client', () => {
-  it('should fetch data', async () => {
+describe("API Client", () => {
+  it("should fetch data", async () => {
     const mockFetch = mock(async () => {
-      return new Response(JSON.stringify({ data: 'test' }));
+      return new Response(JSON.stringify({ data: "test" }));
     });
 
     globalThis.fetch = mockFetch;
 
-    const response = await fetch('https://api.example.com/data');
+    const response = await fetch("https://api.example.com/data");
     const data = await response.json();
 
     expect(mockFetch).toHaveBeenCalled();
-    expect(data).toEqual({ data: 'test' });
+    expect(data).toEqual({ data: "test" });
   });
 });
 
 // Snapshot testing
-describe('Snapshots', () => {
-  it('should match snapshot', () => {
+describe("Snapshots", () => {
+  it("should match snapshot", () => {
     const user = {
       id: 1,
-      email: 'test@example.com',
-      roles: ['admin', 'user'],
+      email: "test@example.com",
+      roles: ["admin", "user"],
     };
 
     expect(user).toMatchSnapshot();
@@ -487,10 +484,10 @@ const server = Bun.serve({
     const url = new URL(req.url);
 
     // Upgrade WebSocket connections
-    if (url.pathname === '/ws') {
+    if (url.pathname === "/ws") {
       const upgraded = server.upgrade(req, {
         data: {
-          userId: url.searchParams.get('userId'),
+          userId: url.searchParams.get("userId"),
           connectedAt: Date.now(),
         },
       });
@@ -499,52 +496,64 @@ const server = Bun.serve({
         return undefined; // Upgrade successful
       }
 
-      return new Response('WebSocket upgrade failed', { status: 400 });
+      return new Response("WebSocket upgrade failed", { status: 400 });
     }
 
-    return new Response('Hello World');
+    return new Response("Hello World");
   },
 
   websocket: {
     open(ws) {
       console.log(`Client connected: ${ws.data.userId}`);
-      ws.subscribe('chat');
+      ws.subscribe("chat");
 
       // Broadcast join message
-      server.publish('chat', JSON.stringify({
-        type: 'user_joined',
-        userId: ws.data.userId,
-      }));
+      server.publish(
+        "chat",
+        JSON.stringify({
+          type: "user_joined",
+          userId: ws.data.userId,
+        }),
+      );
     },
 
     message(ws, message) {
       const data = JSON.parse(message as string);
 
       switch (data.type) {
-        case 'chat_message':
-          server.publish('chat', JSON.stringify({
-            type: 'chat_message',
-            userId: ws.data.userId,
-            content: data.content,
-            timestamp: Date.now(),
-          }));
+        case "chat_message":
+          server.publish(
+            "chat",
+            JSON.stringify({
+              type: "chat_message",
+              userId: ws.data.userId,
+              content: data.content,
+              timestamp: Date.now(),
+            }),
+          );
           break;
 
-        case 'typing':
-          server.publish('chat', JSON.stringify({
-            type: 'user_typing',
-            userId: ws.data.userId,
-          }));
+        case "typing":
+          server.publish(
+            "chat",
+            JSON.stringify({
+              type: "user_typing",
+              userId: ws.data.userId,
+            }),
+          );
           break;
       }
     },
 
     close(ws) {
       console.log(`Client disconnected: ${ws.data.userId}`);
-      server.publish('chat', JSON.stringify({
-        type: 'user_left',
-        userId: ws.data.userId,
-      }));
+      server.publish(
+        "chat",
+        JSON.stringify({
+          type: "user_left",
+          userId: ws.data.userId,
+        }),
+      );
     },
 
     // Per-message deflate compression
@@ -559,12 +568,12 @@ console.log(`WebSocket server running on ws://localhost:${server.port}/ws`);
 
 ```typescript
 // main.ts
-const worker = new Worker(new URL('./worker.ts', import.meta.url));
+const worker = new Worker(new URL("./worker.ts", import.meta.url));
 
-worker.postMessage({ type: 'compute', data: [1, 2, 3, 4, 5] });
+worker.postMessage({ type: "compute", data: [1, 2, 3, 4, 5] });
 
 worker.onmessage = (event) => {
-  console.log('Result from worker:', event.data);
+  console.log("Result from worker:", event.data);
 };
 
 // worker.ts
@@ -574,10 +583,10 @@ self.onmessage = (event) => {
   const { type, data } = event.data;
 
   switch (type) {
-    case 'compute':
+    case "compute":
       // CPU-intensive work
       const result = data.reduce((sum: number, n: number) => sum + n * n, 0);
-      self.postMessage({ type: 'result', data: result });
+      self.postMessage({ type: "result", data: result });
       break;
   }
 };
@@ -619,17 +628,17 @@ const config = {
   port: Bun.env.PORT || 3000,
   dbUrl: Bun.env.DATABASE_URL,
   jwtSecret: Bun.env.JWT_SECRET!,
-  nodeEnv: Bun.env.NODE_ENV || 'development',
+  nodeEnv: Bun.env.NODE_ENV || "development",
 };
 
 // Type-safe env with Zod
-import { z } from 'zod';
+import { z } from "zod";
 
 const envSchema = z.object({
-  PORT: z.string().transform(Number).default('3000'),
+  PORT: z.string().transform(Number).default("3000"),
   DATABASE_URL: z.string().url(),
   JWT_SECRET: z.string().min(32),
-  NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
+  NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
 });
 
 export const env = envSchema.parse(Bun.env);
@@ -654,6 +663,7 @@ export const env = envSchema.parse(Bun.env);
 ## Output Format
 
 Provide:
+
 - Bun server implementations
 - SQLite database patterns
 - Build configurations
@@ -661,6 +671,7 @@ Provide:
 - Performance optimizations
 
 Sources:
+
 - [Bun Documentation](https://bun.sh/docs)
 - [Bun GitHub](https://github.com/oven-sh/bun)
 - [Hono Framework](https://hono.dev/)

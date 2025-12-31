@@ -1,6 +1,7 @@
 ---
 title: RFC 8705 - OAuth 2.0 Mutual-TLS
 description: Certificate-based client authentication and token binding for high-security OAuth 2.0
+author: Anubhav Gain
 rfc: 8705
 tags: [oauth, mtls, certificates, security, multi-tenancy, identity-broker]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing mTLS for OAuth 2.0 as defined in RFC 8705. You
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 8705 |
-| Title | OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens |
-| Status | Proposed Standard |
-| Published | February 2020 |
-| Extends | RFC 6749 |
+| Property   | Value                                                                          |
+| ---------- | ------------------------------------------------------------------------------ |
+| RFC Number | 8705                                                                           |
+| Title      | OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens |
+| Status     | Proposed Standard                                                              |
+| Published  | February 2020                                                                  |
+| Extends    | RFC 6749                                                                       |
 
 ## mTLS Architecture
 
@@ -541,15 +542,16 @@ class MultiTenantPKI:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 6749 | OAuth 2.0 | Base framework |
-| RFC 9449 | DPoP | Alternative binding |
-| RFC 7517 | JWK | Key representation |
+| RFC      | Title     | Relationship        |
+| -------- | --------- | ------------------- |
+| RFC 6749 | OAuth 2.0 | Base framework      |
+| RFC 9449 | DPoP      | Alternative binding |
+| RFC 7517 | JWK       | Key representation  |
 
 ## Output Format
 
 Provide:
+
 - mTLS client authentication implementations
 - Certificate-bound token issuance
 - Token validation with binding verification

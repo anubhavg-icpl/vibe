@@ -1,6 +1,7 @@
 ---
 title: RFC 6749 - OAuth 2.0 Authorization Framework
 description: Complete implementation guide for OAuth 2.0 Authorization Framework with multi-tenancy support
+author: Anubhav Gain
 rfc: 6749
 tags: [oauth, authorization, identity, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing the OAuth 2.0 Authorization Framework as defin
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 6749 |
-| Title | The OAuth 2.0 Authorization Framework |
-| Status | Proposed Standard |
-| Published | October 2012 |
-| Updated By | RFC 8252, RFC 9700 |
+| Property   | Value                                 |
+| ---------- | ------------------------------------- |
+| RFC Number | 6749                                  |
+| Title      | The OAuth 2.0 Authorization Framework |
+| Status     | Proposed Standard                     |
+| Published  | October 2012                          |
+| Updated By | RFC 8252, RFC 9700                    |
 
 ## Protocol Flow
 
@@ -568,16 +569,17 @@ class SecureTokenStore:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 6750 | Bearer Token Usage | How to use access tokens |
-| RFC 7636 | PKCE | Security extension (required) |
-| RFC 7662 | Token Introspection | Token validation |
-| RFC 9700 | Security BCP | Security requirements |
+| RFC      | Title               | Relationship                  |
+| -------- | ------------------- | ----------------------------- |
+| RFC 6750 | Bearer Token Usage  | How to use access tokens      |
+| RFC 7636 | PKCE                | Security extension (required) |
+| RFC 7662 | Token Introspection | Token validation              |
+| RFC 9700 | Security BCP        | Security requirements         |
 
 ## Output Format
 
 Provide:
+
 - RFC-compliant OAuth 2.0 implementations
 - Multi-tenancy patterns with isolation
 - Security configurations

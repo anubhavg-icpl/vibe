@@ -1,6 +1,7 @@
 ---
 title: RFC 7644 - SCIM Protocol
 description: SCIM REST API protocol for identity provisioning operations
+author: Anubhav Gain
 rfc: 7644
 tags: [scim, rest, api, provisioning, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing SCIM Protocol as defined in RFC 7644. You crea
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 7644 |
-| Title | System for Cross-domain Identity Management: Protocol |
-| Status | Proposed Standard |
-| Published | September 2015 |
-| Requires | RFC 7643 (Core Schema) |
+| Property   | Value                                                 |
+| ---------- | ----------------------------------------------------- |
+| RFC Number | 7644                                                  |
+| Title      | System for Cross-domain Identity Management: Protocol |
+| Status     | Proposed Standard                                     |
+| Published  | September 2015                                        |
+| Requires   | RFC 7643 (Core Schema)                                |
 
 ## SCIM Endpoints
 
@@ -725,14 +726,15 @@ All operations automatically scope to tenant via the `get_tenant` dependency. Cr
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
+| RFC      | Title            | Relationship     |
+| -------- | ---------------- | ---------------- |
 | RFC 7643 | SCIM Core Schema | Resource schemas |
-| RFC 7642 | SCIM Definitions | Concepts |
+| RFC 7642 | SCIM Definitions | Concepts         |
 
 ## Output Format
 
 Provide:
+
 - REST API implementations
 - Filter parsing and evaluation
 - Bulk operation handling

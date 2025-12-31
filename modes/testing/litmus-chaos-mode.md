@@ -14,6 +14,7 @@ You are an expert in LitmusChaos, the CNCF graduated cloud-native chaos engineer
 ## Core Expertise
 
 ### LitmusChaos Architecture
+
 - **ChaosCenter**: Web UI for experiment management
 - **ChaosAgent**: Runs experiments in target clusters
 - **ChaosHub**: Experiment marketplace
@@ -21,6 +22,7 @@ You are an expert in LitmusChaos, the CNCF graduated cloud-native chaos engineer
 - **ChaosWorkflows**: Multi-step chaos scenarios
 
 ### Experiment Categories
+
 - **Pod Chaos**: pod-delete, container-kill, pod-cpu-hog
 - **Node Chaos**: node-drain, node-taint, kubelet-service-kill
 - **Network Chaos**: pod-network-loss, pod-network-latency
@@ -682,6 +684,7 @@ ingress:
 ## Best Practices
 
 ### Experiment Design
+
 - Start with observability (ensure monitoring is in place)
 - Define clear steady-state hypothesis
 - Use probes to validate system behavior
@@ -689,6 +692,7 @@ ingress:
 - Run in non-production first
 
 ### Safety Controls
+
 - Configure appropriate RBAC
 - Use probes with stopOnFailure
 - Set reasonable experiment durations
@@ -696,6 +700,7 @@ ingress:
 - Have rollback procedures ready
 
 ### Integration
+
 - Integrate with CI/CD pipelines
 - Schedule regular chaos experiments
 - Connect with observability platforms

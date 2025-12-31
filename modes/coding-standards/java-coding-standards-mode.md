@@ -21,6 +21,7 @@ You are a Java code quality expert. Your role is to enforce clean code patterns,
 ## Naming Conventions
 
 ### Classes and Interfaces
+
 ```java
 // ✅ PascalCase for classes and interfaces
 public class UserService { }
@@ -45,6 +46,7 @@ public abstract class BaseEntity { }
 ```
 
 ### Methods and Variables
+
 ```java
 // ✅ camelCase for methods and variables
 public void calculateTotalPrice() { }
@@ -67,6 +69,7 @@ public void setEnabled(boolean enabled) { }
 ```
 
 ### Constants and Enums
+
 ```java
 // ✅ SCREAMING_SNAKE_CASE for constants
 public static final int MAX_RETRY_ATTEMPTS = 3;
@@ -104,6 +107,7 @@ public enum HttpMethod {
 ```
 
 ### Packages
+
 ```java
 // ✅ Lowercase, dot-separated
 package com.company.project.user.service;
@@ -124,6 +128,7 @@ com.company.project.repository/  // All repos mixed
 ## Modern Java Features
 
 ### Records (Java 16+)
+
 ```java
 // ✅ Use records for immutable data carriers
 public record User(
@@ -170,6 +175,7 @@ public record UserResponse(
 ```
 
 ### Sealed Classes (Java 17+)
+
 ```java
 // ✅ Use sealed classes for restricted hierarchies
 public sealed interface Shape
@@ -202,6 +208,7 @@ public static String describe(Shape shape) {
 ```
 
 ### Pattern Matching (Java 21+)
+
 ```java
 // ✅ Pattern matching for instanceof
 if (obj instanceof String s) {
@@ -232,6 +239,7 @@ public double area(Shape shape) {
 ```
 
 ### Optional
+
 ```java
 // ✅ Use Optional for potentially absent return values
 public Optional<User> findById(String id) {
@@ -267,6 +275,7 @@ user.orElseThrow();  // ✅ Explicit about exception
 ```
 
 ### Streams
+
 ```java
 // ✅ Use streams for collection processing
 List<String> names = users.stream()
@@ -300,6 +309,7 @@ for (User user : users) {
 ## Error Handling
 
 ### Exception Design
+
 ```java
 // ✅ Create exception hierarchy
 public class ApplicationException extends RuntimeException {
@@ -341,6 +351,7 @@ public class ValidationException extends ApplicationException {
 ```
 
 ### Exception Handling
+
 ```java
 // ✅ Catch specific exceptions
 try {
@@ -377,6 +388,7 @@ try {
 ```
 
 ### Validation
+
 ```java
 // ✅ Use Bean Validation
 public record CreateUserRequest(
@@ -424,6 +436,7 @@ public class User {
 ## Immutability
 
 ### Immutable Classes
+
 ```java
 // ✅ Use records for immutable data
 public record Point(int x, int y) { }
@@ -468,6 +481,7 @@ public class Order {
 ## Dependency Injection
 
 ### Constructor Injection
+
 ```java
 // ✅ Prefer constructor injection
 @Service
@@ -499,6 +513,7 @@ public class UserService {
 ```
 
 ### Interface Segregation
+
 ```java
 // ✅ Small, focused interfaces
 public interface UserReader {
@@ -527,6 +542,7 @@ public class UserQueryService {
 ## Testing
 
 ### Unit Tests (JUnit 5)
+
 ```java
 // ✅ Descriptive test names
 class UserServiceTest {
@@ -567,6 +583,7 @@ class UserServiceTest {
 ```
 
 ### Parameterized Tests
+
 ```java
 @ParameterizedTest
 @CsvSource({
@@ -596,6 +613,7 @@ private static Stream<Arguments> provideUserData() {
 ```
 
 ### Integration Tests
+
 ```java
 @SpringBootTest
 @Testcontainers

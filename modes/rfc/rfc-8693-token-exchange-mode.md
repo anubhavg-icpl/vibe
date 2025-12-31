@@ -1,6 +1,7 @@
 ---
 title: RFC 8693 - OAuth 2.0 Token Exchange
 description: Token exchange for delegation, impersonation, and cross-domain identity federation
+author: Anubhav Gain
 rfc: 8693
 tags: [oauth, token-exchange, delegation, impersonation, multi-tenancy, iga-connect]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing OAuth 2.0 Token Exchange as defined in RFC 869
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 8693 |
-| Title | OAuth 2.0 Token Exchange |
-| Status | Proposed Standard |
-| Published | January 2020 |
-| Extends | RFC 6749 |
+| Property   | Value                    |
+| ---------- | ------------------------ |
+| RFC Number | 8693                     |
+| Title      | OAuth 2.0 Token Exchange |
+| Status     | Proposed Standard        |
+| Published  | January 2020             |
+| Extends    | RFC 6749                 |
 
 ## Token Exchange Flow
 
@@ -597,15 +598,16 @@ class IGAConnectTokenExchange:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 6749 | OAuth 2.0 | Base framework |
-| RFC 7519 | JWT | Token format |
+| RFC      | Title               | Relationship       |
+| -------- | ------------------- | ------------------ |
+| RFC 6749 | OAuth 2.0           | Base framework     |
+| RFC 7519 | JWT                 | Token format       |
 | RFC 7521 | Assertion Framework | Related grant type |
 
 ## Output Format
 
 Provide:
+
 - Token exchange implementations
 - Delegation chain handling
 - Cross-tenant federation

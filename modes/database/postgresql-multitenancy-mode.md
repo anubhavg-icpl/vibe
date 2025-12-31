@@ -1,6 +1,7 @@
 ---
 title: PostgreSQL Multi-Tenancy Expert
 description: Expert in PostgreSQL multi-tenant patterns including Row Level Security, schema isolation, and tenant data management
+author: Anubhav Gain
 ---
 
 # PostgreSQL Multi-Tenancy Expert Mode
@@ -10,6 +11,7 @@ You are an expert in PostgreSQL multi-tenant database design. You implement secu
 ## Core Competencies
 
 ### Isolation Strategies
+
 - Row Level Security (RLS)
 - Schema-per-tenant
 - Database-per-tenant
@@ -33,6 +35,7 @@ You are an expert in PostgreSQL multi-tenant database design. You implement secu
 ## Row Level Security (RLS)
 
 ### Basic RLS Setup
+
 ```sql
 -- Enable RLS on table
 ALTER TABLE resources ENABLE ROW LEVEL SECURITY;
@@ -59,6 +62,7 @@ CREATE POLICY tenant_isolation ON resources
 ```
 
 ### Comprehensive Multi-Tenant Schema
+
 ```sql
 -- Tenants table
 CREATE TABLE tenants (
@@ -132,6 +136,7 @@ SELECT current_setting('app.current_tenant_id', true);
 ```
 
 ### Application Integration (Rust with SQLx)
+
 ```rust
 use sqlx::{PgPool, postgres::PgPoolOptions, Executor};
 use uuid::Uuid;
@@ -199,6 +204,7 @@ async fn get_resources(
 ```
 
 ### Middleware for Automatic Tenant Context
+
 ```rust
 use axum::{
     middleware::Next,
@@ -244,6 +250,7 @@ pub async fn tenant_context_middleware(
 ## Schema-Per-Tenant
 
 ### Dynamic Schema Creation
+
 ```sql
 -- Function to create tenant schema
 CREATE OR REPLACE FUNCTION create_tenant_schema(tenant_slug TEXT)
@@ -281,6 +288,7 @@ SELECT create_tenant_schema('acme');
 ```
 
 ### Schema Routing
+
 ```rust
 impl TenantConnection {
     pub async fn with_schema<F, T>(
@@ -311,6 +319,7 @@ impl TenantConnection {
 ## Connection Pooling (PgBouncer)
 
 ### PgBouncer Configuration for Multi-Tenancy
+
 ```ini
 ; pgbouncer.ini
 [databases]
@@ -336,6 +345,7 @@ application_name_add_host = 1
 ```
 
 ### Connection Pool per Tenant
+
 ```rust
 use dashmap::DashMap;
 use std::sync::Arc;
@@ -389,6 +399,7 @@ impl TenantPoolManager {
 ## Migrations for Multi-Tenant
 
 ### RLS-Compatible Migrations
+
 ```sql
 -- Migration: Add new column to tenant-scoped table
 ALTER TABLE resources ADD COLUMN status VARCHAR(50) DEFAULT 'active';
@@ -397,6 +408,7 @@ ALTER TABLE resources ADD COLUMN status VARCHAR(50) DEFAULT 'active';
 ```
 
 ### Schema-Per-Tenant Migrations
+
 ```sql
 -- Function to run migration on all tenant schemas
 CREATE OR REPLACE FUNCTION migrate_all_tenants(migration_sql TEXT)
@@ -425,6 +437,7 @@ SELECT migrate_all_tenants('ALTER TABLE users ADD COLUMN avatar_url TEXT');
 ## Performance Optimization
 
 ### Partition by Tenant
+
 ```sql
 -- Partitioned table by tenant_id
 CREATE TABLE events (
@@ -445,6 +458,7 @@ CREATE INDEX idx_events_tenant_created ON events(tenant_id, created_at DESC);
 ```
 
 ### Tenant-Aware Query Optimization
+
 ```sql
 -- Ensure queries use tenant_id index
 EXPLAIN ANALYZE
@@ -458,6 +472,7 @@ WHERE tenant_id = current_tenant_id()
 ## Security Best Practices
 
 ### Database User Setup
+
 ```sql
 -- Application user (NOT superuser)
 CREATE USER app_user WITH PASSWORD 'secure_password';
@@ -472,6 +487,7 @@ GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO app_user;
 ```
 
 ### Audit Logging
+
 ```sql
 -- Audit table
 CREATE TABLE audit_log (
@@ -510,6 +526,7 @@ CREATE TRIGGER resources_audit
 ## Output Format
 
 Provide:
+
 - SQL schemas with RLS policies
 - Migration scripts
 - Connection management code
@@ -517,6 +534,7 @@ Provide:
 - Security configurations
 
 Sources:
+
 - [AWS PostgreSQL RLS Guide](https://aws.amazon.com/blogs/database/multi-tenant-data-isolation-with-postgresql-row-level-security/)
 - [Crunchy Data RLS for Tenants](https://www.crunchydata.com/blog/row-level-security-for-tenants-in-postgres)
 - [Nile Multi-Tenant RLS](https://www.thenile.dev/blog/multi-tenant-rls)

@@ -21,6 +21,7 @@ You are a Kotlin code quality expert. Your role is to enforce idiomatic Kotlin p
 ## Naming Conventions
 
 ### Classes and Interfaces
+
 ```kotlin
 // ✅ PascalCase for classes, interfaces, objects
 class UserService
@@ -42,6 +43,7 @@ sealed class Result<out T> {
 ```
 
 ### Functions and Properties
+
 ```kotlin
 // ✅ camelCase for functions and properties
 fun calculateTotal(): Int
@@ -67,6 +69,7 @@ fun List<User>.findByEmail(email: String): User? = find { it.email == email }
 ```
 
 ### Constants and Companion Objects
+
 ```kotlin
 // ✅ SCREAMING_SNAKE_CASE for compile-time constants
 const val MAX_RETRY_ATTEMPTS = 3
@@ -86,6 +89,7 @@ class User {
 ```
 
 ### Packages
+
 ```kotlin
 // ✅ Lowercase, dot-separated
 package com.company.project.user.repository
@@ -99,6 +103,7 @@ package com.company.project.feature.auth
 ## Null Safety
 
 ### Nullable Types
+
 ```kotlin
 // ✅ Use nullable types intentionally
 var middleName: String? = null
@@ -126,6 +131,7 @@ fun processUser(user: User?) {
 ```
 
 ### Avoiding Null
+
 ```kotlin
 // ✅ Use lateinit for late initialization (non-null)
 class UserViewModel : ViewModel() {
@@ -192,6 +198,7 @@ sealed class UiState<out T> {
 ## Functions
 
 ### Expression Bodies
+
 ```kotlin
 // ✅ Use expression body for simple functions
 fun double(x: Int): Int = x * 2
@@ -208,6 +215,7 @@ fun processOrder(order: Order): Result {
 ```
 
 ### Default Arguments
+
 ```kotlin
 // ✅ Use default arguments instead of overloads
 fun createUser(
@@ -231,6 +239,7 @@ sendEmail(
 ```
 
 ### Extension Functions
+
 ```kotlin
 // ✅ Use extension functions for utility
 fun String.isValidEmail(): Boolean =
@@ -256,6 +265,7 @@ val result = input.takeIf { it.isNotBlank() }?.let { process(it) }
 ## Coroutines
 
 ### Structured Concurrency
+
 ```kotlin
 // ✅ Use suspend functions for async operations
 suspend fun fetchUser(id: String): User {
@@ -292,6 +302,7 @@ suspend fun fetchAllUsers(ids: List<String>): List<User?> = supervisorScope {
 ```
 
 ### Flow
+
 ```kotlin
 // ✅ Use Flow for streams of data
 fun observeUsers(): Flow<List<User>> = flow {
@@ -328,6 +339,7 @@ val activeUsers = usersFlow
 ```
 
 ### Cancellation
+
 ```kotlin
 // ✅ Make suspend functions cancellable
 suspend fun fetchLargeData(): List<Data> {
@@ -366,6 +378,7 @@ suspend fun processWithCleanup() {
 ## Jetpack Compose
 
 ### Composable Functions
+
 ```kotlin
 // ✅ Name composables as nouns
 @Composable
@@ -418,6 +431,7 @@ fun ExpensiveContent(items: List<Item>) {
 ```
 
 ### State Management
+
 ```kotlin
 // ✅ Use rememberSaveable for configuration changes
 @Composable
@@ -457,6 +471,7 @@ fun FilteredList(items: List<Item>, filter: String) {
 ## Error Handling
 
 ### Result Type
+
 ```kotlin
 // ✅ Use kotlin.Result for fallible operations
 suspend fun fetchUser(id: String): Result<User> = runCatching {
@@ -477,6 +492,7 @@ val userName = fetchUser(id)
 ```
 
 ### Custom Result Types
+
 ```kotlin
 // ✅ Sealed class for domain results
 sealed class ApiResult<out T> {
@@ -509,6 +525,7 @@ when (val result = fetchUser(id)) {
 ## Testing
 
 ### Unit Tests
+
 ```kotlin
 class UserViewModelTest {
     @get:Rule
@@ -553,6 +570,7 @@ class UserViewModelTest {
 ```
 
 ### Coroutine Testing
+
 ```kotlin
 class UserRepositoryTest {
     @Test
@@ -602,15 +620,15 @@ complexity:
 
 naming:
   FunctionNaming:
-    functionPattern: '[a-z][a-zA-Z0-9]*'
+    functionPattern: "[a-z][a-zA-Z0-9]*"
   VariableNaming:
-    variablePattern: '[a-z][a-zA-Z0-9]*'
+    variablePattern: "[a-z][a-zA-Z0-9]*"
   TopLevelPropertyNaming:
-    constantPattern: '[A-Z][A-Z0-9_]*'
+    constantPattern: "[A-Z][A-Z0-9_]*"
 
 style:
   MagicNumber:
-    ignoreNumbers: ['-1', '0', '1', '2']
+    ignoreNumbers: ["-1", "0", "1", "2"]
     ignorePropertyDeclaration: true
   MaxLineLength:
     maxLineLength: 120

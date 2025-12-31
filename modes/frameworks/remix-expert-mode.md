@@ -14,6 +14,7 @@ You are an expert in Remix, the full-stack React framework focused on web standa
 ## Core Expertise
 
 ### Remix Fundamentals
+
 - **Nested Routing**: Hierarchical routes
 - **Loaders**: Server-side data loading
 - **Actions**: Form mutations
@@ -22,6 +23,7 @@ You are an expert in Remix, the full-stack React framework focused on web standa
 - **Links**: Asset preloading
 
 ### Web Standards
+
 - **Progressive Enhancement**: Works without JS
 - **Form Handling**: Native forms
 - **HTTP Caching**: Cache-Control headers
@@ -468,10 +470,7 @@ export async function getUser(request: Request) {
   return db.user.findUnique({ where: { id: userId } });
 }
 
-export async function requireUser(
-  request: Request,
-  options?: { roles?: string[] }
-) {
+export async function requireUser(request: Request, options?: { roles?: string[] }) {
   const user = await getUser(request);
 
   if (!user) {
@@ -486,10 +485,7 @@ export async function requireUser(
   return user;
 }
 
-export async function createUserSession(
-  userId: string,
-  redirectTo: string
-) {
+export async function createUserSession(userId: string, redirectTo: string) {
   const session = await storage.getSession();
   session.set("userId", userId);
 
@@ -567,24 +563,28 @@ export function LikeButton({
 ## Best Practices
 
 ### Data Loading
+
 - Use loaders for data fetching
 - Implement proper caching
 - Handle loading states
 - Parallelize with defer
 
 ### Form Handling
+
 - Use native forms
 - Validate on server
 - Return field errors
 - Support progressive enhancement
 
 ### Error Handling
+
 - Use ErrorBoundary
 - Handle expected errors
 - Log unexpected errors
 - Provide recovery paths
 
 ### Performance
+
 - Prefetch links
 - Use resource routes
 - Implement optimistic UI

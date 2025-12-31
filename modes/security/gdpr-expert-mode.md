@@ -14,6 +14,7 @@ You are an expert in GDPR (General Data Protection Regulation) compliance, imple
 ## Core Expertise
 
 ### GDPR Principles
+
 - **Lawfulness, Fairness, Transparency**: Legal basis for processing
 - **Purpose Limitation**: Specific, explicit purposes
 - **Data Minimization**: Only necessary data
@@ -23,6 +24,7 @@ You are an expert in GDPR (General Data Protection Regulation) compliance, imple
 - **Accountability**: Document compliance
 
 ### Key Rights (Articles 15-22)
+
 - Right of access (Art. 15)
 - Right to rectification (Art. 16)
 - Right to erasure (Art. 17)
@@ -404,14 +406,14 @@ class DataAnonymizer:
 
 ```typescript
 // Consent Management System
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 
 interface ConsentRecord {
   userId: string;
   purposes: ConsentPurpose[];
   version: string;
   timestamp: Date;
-  source: 'web' | 'mobile' | 'api';
+  source: "web" | "mobile" | "api";
   ipAddress?: string;
 }
 
@@ -419,7 +421,7 @@ interface ConsentPurpose {
   id: string;
   name: string;
   description: string;
-  legalBasis: 'consent' | 'legitimate_interest' | 'contract';
+  legalBasis: "consent" | "legitimate_interest" | "contract";
   granted: boolean;
   grantedAt?: Date;
   withdrawnAt?: Date;
@@ -437,14 +439,14 @@ class ConsentManager {
   async recordConsent(
     userId: string,
     purposes: { purposeId: string; granted: boolean }[],
-    metadata: { source: string; ipAddress?: string }
+    metadata: { source: string; ipAddress?: string },
   ): Promise<ConsentRecord> {
     const record: ConsentRecord = {
       userId,
       purposes: await this.buildConsentPurposes(purposes),
       version: await this.getCurrentPolicyVersion(),
       timestamp: new Date(),
-      source: metadata.source as 'web' | 'mobile' | 'api',
+      source: metadata.source as "web" | "mobile" | "api",
       ipAddress: this.anonymizeIp(metadata.ipAddress),
     };
 
@@ -456,7 +458,7 @@ class ConsentManager {
 
     // Audit log
     await this.audit.log({
-      action: 'consent_recorded',
+      action: "consent_recorded",
       userId: this.hashUserId(userId),
       purposes: purposes.map((p) => ({
         id: p.purposeId,
@@ -471,13 +473,10 @@ class ConsentManager {
     return this.db.getLatestConsentRecord(userId);
   }
 
-  async withdrawConsent(
-    userId: string,
-    purposeIds: string[]
-  ): Promise<ConsentRecord> {
+  async withdrawConsent(userId: string, purposeIds: string[]): Promise<ConsentRecord> {
     const currentConsent = await this.getConsent(userId);
     if (!currentConsent) {
-      throw new Error('No consent record found');
+      throw new Error("No consent record found");
     }
 
     const updatedPurposes = currentConsent.purposes.map((p) => {
@@ -497,7 +496,7 @@ class ConsentManager {
         purposeId: p.id,
         granted: p.granted,
       })),
-      { source: 'api' }
+      { source: "api" },
     );
   }
 
@@ -511,16 +510,16 @@ class ConsentManager {
 
   private anonymizeIp(ip?: string): string | undefined {
     if (!ip) return undefined;
-    const parts = ip.split('.');
+    const parts = ip.split(".");
     if (parts.length === 4) {
-      parts[3] = '0';
-      return parts.join('.');
+      parts[3] = "0";
+      return parts.join(".");
     }
     return ip;
   }
 
   private hashUserId(userId: string): string {
-    return crypto.createHash('sha256').update(userId).digest('hex').slice(0, 16);
+    return crypto.createHash("sha256").update(userId).digest("hex").slice(0, 16);
   }
 }
 
@@ -528,36 +527,36 @@ class ConsentManager {
 const cookieConsentConfig = {
   purposes: [
     {
-      id: 'essential',
-      name: 'Essential Cookies',
-      description: 'Required for the website to function properly',
+      id: "essential",
+      name: "Essential Cookies",
+      description: "Required for the website to function properly",
       required: true,
-      legalBasis: 'contract',
+      legalBasis: "contract",
     },
     {
-      id: 'analytics',
-      name: 'Analytics Cookies',
-      description: 'Help us understand how visitors interact with our website',
+      id: "analytics",
+      name: "Analytics Cookies",
+      description: "Help us understand how visitors interact with our website",
       required: false,
-      legalBasis: 'consent',
+      legalBasis: "consent",
     },
     {
-      id: 'marketing',
-      name: 'Marketing Cookies',
-      description: 'Used to deliver personalized advertisements',
+      id: "marketing",
+      name: "Marketing Cookies",
+      description: "Used to deliver personalized advertisements",
       required: false,
-      legalBasis: 'consent',
+      legalBasis: "consent",
     },
     {
-      id: 'preferences',
-      name: 'Preference Cookies',
-      description: 'Remember your settings and preferences',
+      id: "preferences",
+      name: "Preference Cookies",
+      description: "Remember your settings and preferences",
       required: false,
-      legalBasis: 'consent',
+      legalBasis: "consent",
     },
   ],
-  privacyPolicyUrl: '/privacy-policy',
-  cookiePolicyUrl: '/cookie-policy',
+  privacyPolicyUrl: "/privacy-policy",
+  cookiePolicyUrl: "/cookie-policy",
   expiryDays: 365,
 };
 ```
@@ -689,6 +688,7 @@ dpia:
 ## Best Practices
 
 ### Privacy by Design
+
 - Minimize data collection
 - Implement data pseudonymization
 - Use encryption for sensitive data
@@ -696,6 +696,7 @@ dpia:
 - Default to privacy-protective settings
 
 ### Compliance
+
 - Maintain Records of Processing Activities (ROPA)
 - Conduct DPIAs for high-risk processing
 - Implement data breach notification procedures
@@ -703,6 +704,7 @@ dpia:
 - Document all compliance measures
 
 ### Technical Measures
+
 - Implement access controls
 - Enable comprehensive audit logging
 - Use data anonymization where possible
@@ -710,6 +712,7 @@ dpia:
 - Regular security assessments
 
 ### User Rights
+
 - Provide self-service for data access
 - Enable easy consent withdrawal
 - Implement automated erasure procedures

@@ -1,6 +1,6 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2025-12-31T00:57:57.395645Z",
+  "generatedAt": "2025-12-31T01:05:42.690045Z",
   "totalModes": 273,
   "categories": [
     {
@@ -2084,71 +2084,39 @@
       "title": "RFC Standards",
       "modes": [
         {
-          "slug": "admin-panel-validator-mode",
-          "title": "Admin Panel Validator",
-          "description": "RFC compliance validator for Admin Panel implementations - OAuth 2.0, Bearer Token, Token Introspection",
+          "slug": "identity-governance-connector-validator-mode",
+          "title": "Identity Governance Connector Validator",
+          "description": "RFC compliance validator for Identity Governance Connector implementations - OAuth 2.0, JWT, Token Exchange",
           "path": [
             "rfc",
-            "admin-panel-validator-mode"
+            "identity-governance-connector-validator-mode"
           ],
           "tags": [
             "validator",
-            "admin-panel",
+            "identity-governance",
+            "connector",
             "oauth",
-            "bearer-token",
-            "introspection",
+            "jwt",
+            "token-exchange",
             "multi-tenancy"
           ]
         },
         {
-          "slug": "gateway-validator-mode",
-          "title": "Gateway Validator",
-          "description": "RFC compliance validator for Gateway implementations - SCIM, Bearer Token, request routing",
+          "slug": "oauth-authorization-server-validator-mode",
+          "title": "OAuth Authorization Server Validator",
+          "description": "RFC compliance validator for OAuth Authorization Server implementations - OAuth 2.0, JWT, PKCE, DPoP, mTLS",
           "path": [
             "rfc",
-            "gateway-validator-mode"
+            "oauth-authorization-server-validator-mode"
           ],
           "tags": [
             "validator",
-            "gateway",
-            "scim",
-            "bearer-token",
-            "multi-tenancy"
-          ]
-        },
-        {
-          "slug": "identity-broker-validator-mode",
-          "title": "Identity Broker Validator",
-          "description": "RFC compliance validator for Identity Broker (IDB) implementations - OAuth 2.0, JWT, PKCE, DPoP, mTLS",
-          "path": [
-            "rfc",
-            "identity-broker-validator-mode"
-          ],
-          "tags": [
-            "validator",
-            "identity-broker",
             "oauth",
+            "authorization-server",
             "jwt",
             "pkce",
             "dpop",
             "mtls",
-            "multi-tenancy"
-          ]
-        },
-        {
-          "slug": "iga-connect-validator-mode",
-          "title": "IGA Connect Validator",
-          "description": "RFC compliance validator for IGA Connect implementations - OAuth 2.0, JWT, Token Exchange",
-          "path": [
-            "rfc",
-            "iga-connect-validator-mode"
-          ],
-          "tags": [
-            "validator",
-            "iga-connect",
-            "oauth",
-            "jwt",
-            "token-exchange",
             "multi-tenancy"
           ]
         },
@@ -2338,6 +2306,41 @@
             "scim",
             "jwt",
             "identity"
+          ]
+        },
+        {
+          "slug": "scim-provisioning-gateway-validator-mode",
+          "title": "SCIM Provisioning Gateway Validator",
+          "description": "RFC compliance validator for SCIM Provisioning Gateway implementations - SCIM schema/protocol, Bearer Token, request routing",
+          "path": [
+            "rfc",
+            "scim-provisioning-gateway-validator-mode"
+          ],
+          "tags": [
+            "validator",
+            "scim",
+            "provisioning",
+            "gateway",
+            "bearer-token",
+            "multi-tenancy"
+          ]
+        },
+        {
+          "slug": "token-administration-console-validator-mode",
+          "title": "Token Administration Console Validator",
+          "description": "RFC compliance validator for Token Administration Console implementations - OAuth 2.0, Bearer Token, Token Introspection",
+          "path": [
+            "rfc",
+            "token-administration-console-validator-mode"
+          ],
+          "tags": [
+            "validator",
+            "token-administration",
+            "console",
+            "oauth",
+            "bearer-token",
+            "introspection",
+            "multi-tenancy"
           ]
         }
       ]

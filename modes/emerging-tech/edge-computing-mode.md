@@ -14,6 +14,7 @@ You are an expert in edge computing, building low-latency applications that run 
 ## Core Expertise
 
 ### Edge Platforms
+
 - **Cloudflare Workers**: V8 isolates globally
 - **Deno Deploy**: TypeScript at the edge
 - **Vercel Edge Functions**: Next.js edge runtime
@@ -21,6 +22,7 @@ You are an expert in edge computing, building low-latency applications that run 
 - **Fastly Compute@Edge**: Wasm-based edge
 
 ### Edge Concepts
+
 - **Cold Starts**: Minimize startup time
 - **Edge Caching**: CDN integration
 - **Data Locality**: Regional data access
@@ -40,20 +42,16 @@ export interface Env {
 }
 
 export default {
-  async fetch(
-    request: Request,
-    env: Env,
-    ctx: ExecutionContext
-  ): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
     // Route handling
-    if (url.pathname.startsWith('/api/')) {
+    if (url.pathname.startsWith("/api/")) {
       return handleAPI(request, env, ctx);
     }
 
     // Static asset caching
-    if (url.pathname.startsWith('/static/')) {
+    if (url.pathname.startsWith("/static/")) {
       return handleStatic(request, env, ctx);
     }
 
@@ -62,65 +60,57 @@ export default {
   },
 };
 
-async function handleAPI(
-  request: Request,
-  env: Env,
-  ctx: ExecutionContext
-): Promise<Response> {
+async function handleAPI(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   const url = new URL(request.url);
 
   // Rate limiting with Durable Objects
-  const clientIP = request.headers.get('CF-Connecting-IP') || 'unknown';
-  const rateLimiter = env.RATE_LIMITER.get(
-    env.RATE_LIMITER.idFromName(clientIP)
-  );
+  const clientIP = request.headers.get("CF-Connecting-IP") || "unknown";
+  const rateLimiter = env.RATE_LIMITER.get(env.RATE_LIMITER.idFromName(clientIP));
 
   const rateCheck = await rateLimiter.fetch(
-    new Request('http://internal/check', {
-      method: 'POST',
+    new Request("http://internal/check", {
+      method: "POST",
       body: JSON.stringify({ limit: 100, window: 60 }),
-    })
+    }),
   );
 
   if (!rateCheck.ok) {
-    return new Response('Rate limit exceeded', {
+    return new Response("Rate limit exceeded", {
       status: 429,
       headers: {
-        'Retry-After': '60',
-        'X-RateLimit-Limit': '100',
-        'X-RateLimit-Remaining': '0',
+        "Retry-After": "60",
+        "X-RateLimit-Limit": "100",
+        "X-RateLimit-Remaining": "0",
       },
     });
   }
 
   // Route to handlers
-  const path = url.pathname.replace('/api/', '');
+  const path = url.pathname.replace("/api/", "");
 
   switch (path) {
-    case 'users':
+    case "users":
       return handleUsers(request, env);
-    case 'data':
+    case "data":
       return handleData(request, env);
     default:
-      return new Response('Not found', { status: 404 });
+      return new Response("Not found", { status: 404 });
   }
 }
 
 async function handleUsers(request: Request, env: Env): Promise<Response> {
   // Check KV cache first
   const cacheKey = `users:${new URL(request.url).search}`;
-  const cached = await env.KV.get(cacheKey, 'json');
+  const cached = await env.KV.get(cacheKey, "json");
 
-  if (cached && request.method === 'GET') {
+  if (cached && request.method === "GET") {
     return Response.json(cached, {
-      headers: { 'X-Cache': 'HIT' },
+      headers: { "X-Cache": "HIT" },
     });
   }
 
   // Query D1 database
-  const { results } = await env.D1.prepare(
-    'SELECT id, name, email FROM users LIMIT 100'
-  ).all();
+  const { results } = await env.D1.prepare("SELECT id, name, email FROM users LIMIT 100").all();
 
   // Cache the result
   await env.KV.put(cacheKey, JSON.stringify(results), {
@@ -128,26 +118,21 @@ async function handleUsers(request: Request, env: Env): Promise<Response> {
   });
 
   return Response.json(results, {
-    headers: { 'X-Cache': 'MISS' },
+    headers: { "X-Cache": "MISS" },
   });
 }
 
 async function handleData(request: Request, env: Env): Promise<Response> {
-  if (request.method === 'POST') {
+  if (request.method === "POST") {
     const data = await request.json();
 
     // Validate
     if (!data.key || !data.value) {
-      return Response.json(
-        { error: 'Missing key or value' },
-        { status: 400 }
-      );
+      return Response.json({ error: "Missing key or value" }, { status: 400 });
     }
 
     // Store in D1
-    await env.D1.prepare(
-      'INSERT OR REPLACE INTO data (key, value, updated_at) VALUES (?, ?, ?)'
-    )
+    await env.D1.prepare("INSERT OR REPLACE INTO data (key, value, updated_at) VALUES (?, ?, ?)")
       .bind(data.key, JSON.stringify(data.value), Date.now())
       .run();
 
@@ -157,14 +142,10 @@ async function handleData(request: Request, env: Env): Promise<Response> {
     return Response.json({ success: true }, { status: 201 });
   }
 
-  return Response.json({ error: 'Method not allowed' }, { status: 405 });
+  return Response.json({ error: "Method not allowed" }, { status: 405 });
 }
 
-async function handleStatic(
-  request: Request,
-  env: Env,
-  ctx: ExecutionContext
-): Promise<Response> {
+async function handleStatic(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   const cache = caches.default;
 
   // Check edge cache
@@ -179,31 +160,22 @@ async function handleStatic(
   // Cache successful responses
   if (response.ok) {
     const cacheResponse = new Response(response.body, response);
-    cacheResponse.headers.set('Cache-Control', 'public, max-age=86400');
+    cacheResponse.headers.set("Cache-Control", "public, max-age=86400");
     ctx.waitUntil(cache.put(request, cacheResponse.clone()));
   }
 
   return response;
 }
 
-async function handleOrigin(
-  request: Request,
-  env: Env,
-  ctx: ExecutionContext
-): Promise<Response> {
+async function handleOrigin(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   // Implement edge-side includes, personalization, etc.
   const response = await fetch(request);
 
   // Transform response at the edge
   return new HTMLRewriter()
-    .on('head', {
+    .on("head", {
       element(element) {
-        element.append(
-          '<script>window.EDGE_REGION="' +
-            request.cf?.colo +
-            '"</script>',
-          { html: true }
-        );
+        element.append('<script>window.EDGE_REGION="' + request.cf?.colo + '"</script>', { html: true });
       },
     })
     .transform(response);
@@ -218,16 +190,14 @@ export class RateLimiter implements DurableObject {
     const now = Date.now();
 
     // Clean old requests
-    this.requests = this.requests.filter(
-      (time) => now - time < window * 1000
-    );
+    this.requests = this.requests.filter((time) => now - time < window * 1000);
 
     if (this.requests.length >= limit) {
-      return new Response('Rate limited', { status: 429 });
+      return new Response("Rate limited", { status: 429 });
     }
 
     this.requests.push(now);
-    return new Response('OK', { status: 200 });
+    return new Response("OK", { status: 200 });
   }
 }
 ```
@@ -285,17 +255,14 @@ async function handler(request: Request): Promise<Response> {
           region: Deno.env.get("DENO_REGION") || "unknown",
           timestamp: new Date().toISOString(),
         },
-        { headers }
+        { headers },
       );
     }
 
     return Response.json({ error: "Not found" }, { status: 404, headers });
   } catch (error) {
     console.error("Error:", error);
-    return Response.json(
-      { error: "Internal server error" },
-      { status: 500, headers }
-    );
+    return Response.json({ error: "Internal server error" }, { status: 500, headers });
   }
 }
 
@@ -320,10 +287,7 @@ async function getUser(id: string, headers: HeadersInit): Promise<Response> {
   return Response.json(result.value, { headers });
 }
 
-async function createUser(
-  request: Request,
-  headers: HeadersInit
-): Promise<Response> {
+async function createUser(request: Request, headers: HeadersInit): Promise<Response> {
   const body = await request.json();
 
   const user: User = {
@@ -343,10 +307,10 @@ serve(handler, { port: 8000 });
 ```typescript
 // Vercel Edge Function
 // app/api/edge/route.ts
-import { NextRequest, NextResponse } from 'next/server';
-import { geolocation, ipAddress } from '@vercel/edge';
+import { NextRequest, NextResponse } from "next/server";
+import { geolocation, ipAddress } from "@vercel/edge";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
 export async function GET(request: NextRequest) {
   const geo = geolocation(request);
@@ -368,26 +332,23 @@ export async function GET(request: NextRequest) {
   });
 
   // Cache at edge for 60 seconds
-  response.headers.set(
-    'Cache-Control',
-    'public, s-maxage=60, stale-while-revalidate=300'
-  );
+  response.headers.set("Cache-Control", "public, s-maxage=60, stale-while-revalidate=300");
 
   return response;
 }
 
 function getLocalizedGreeting(country: string | undefined): string {
   const greetings: Record<string, string> = {
-    US: 'Hello!',
-    GB: 'Hello!',
-    ES: '¡Hola!',
-    FR: 'Bonjour!',
-    DE: 'Hallo!',
-    JP: 'こんにちは!',
-    CN: '你好!',
+    US: "Hello!",
+    GB: "Hello!",
+    ES: "¡Hola!",
+    FR: "Bonjour!",
+    DE: "Hallo!",
+    JP: "こんにちは!",
+    CN: "你好!",
   };
 
-  return greetings[country || 'US'] || 'Hello!';
+  return greetings[country || "US"] || "Hello!";
 }
 
 export async function POST(request: NextRequest) {
@@ -447,24 +408,28 @@ zone_name = "example.com"
 ## Best Practices
 
 ### Performance
+
 - Minimize cold start time
 - Use streaming responses
 - Implement edge caching
 - Reduce bundle size
 
 ### Data Access
+
 - Use edge databases (D1, Deno KV)
 - Cache aggressively
 - Minimize origin calls
 - Handle regional data compliance
 
 ### Reliability
+
 - Implement graceful fallbacks
 - Monitor edge locations
 - Handle rate limiting
 - Use circuit breakers
 
 ### Security
+
 - Validate at the edge
 - Implement auth early
 - Use secure headers

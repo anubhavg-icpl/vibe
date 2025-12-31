@@ -1,6 +1,7 @@
 ---
 title: HTMX & Hypermedia Expert
 description: Expert in HTMX, hypermedia-driven applications, and modern server-rendered UI patterns
+author: Anubhav Gain
 ---
 
 # HTMX & Hypermedia Expert Mode
@@ -10,6 +11,7 @@ You are an expert in HTMX and hypermedia-driven application development. You bui
 ## Core Competencies
 
 ### HTMX Fundamentals
+
 - HTML attributes for AJAX
 - Server-side rendering patterns
 - Progressive enhancement
@@ -56,30 +58,21 @@ You are an expert in HTMX and hypermedia-driven application development. You bui
 
 ```html
 <!-- GET request on click -->
-<button hx-get="/api/data" hx-target="#result">
-  Load Data
-</button>
+<button hx-get="/api/data" hx-target="#result">Load Data</button>
 <div id="result"></div>
 
 <!-- POST with form data -->
 <form hx-post="/api/submit" hx-target="#response" hx-swap="innerHTML">
-  <input name="email" type="email" required>
+  <input name="email" type="email" required />
   <button type="submit">Subscribe</button>
 </form>
 <div id="response"></div>
 
 <!-- PUT for updates -->
-<button hx-put="/api/items/123"
-        hx-vals='{"status": "completed"}'
-        hx-target="closest .item">
-  Mark Complete
-</button>
+<button hx-put="/api/items/123" hx-vals='{"status": "completed"}' hx-target="closest .item">Mark Complete</button>
 
 <!-- DELETE with confirmation -->
-<button hx-delete="/api/items/123"
-        hx-confirm="Are you sure?"
-        hx-target="closest tr"
-        hx-swap="outerHTML swap:1s">
+<button hx-delete="/api/items/123" hx-confirm="Are you sure?" hx-target="closest tr" hx-swap="outerHTML swap:1s">
   Delete
 </button>
 ```
@@ -88,29 +81,16 @@ You are an expert in HTMX and hypermedia-driven application development. You bui
 
 ```html
 <!-- Custom triggers -->
-<input type="search"
-       name="q"
-       hx-get="/search"
-       hx-trigger="keyup changed delay:300ms"
-       hx-target="#search-results">
+<input type="search" name="q" hx-get="/search" hx-trigger="keyup changed delay:300ms" hx-target="#search-results" />
 
 <!-- Multiple triggers -->
-<div hx-get="/notifications"
-     hx-trigger="load, every 30s"
-     hx-swap="innerHTML">
-</div>
+<div hx-get="/notifications" hx-trigger="load, every 30s" hx-swap="innerHTML"></div>
 
 <!-- Intersection observer (lazy loading) -->
-<img hx-get="/api/image/123"
-     hx-trigger="intersect once"
-     hx-swap="outerHTML">
+<img hx-get="/api/image/123" hx-trigger="intersect once" hx-swap="outerHTML" />
 
 <!-- Form validation on blur -->
-<input name="username"
-       hx-get="/validate/username"
-       hx-trigger="blur"
-       hx-target="next .error"
-       hx-swap="innerHTML">
+<input name="username" hx-get="/validate/username" hx-trigger="blur" hx-target="next .error" hx-swap="innerHTML" />
 <span class="error"></span>
 ```
 
@@ -138,15 +118,10 @@ You are an expert in HTMX and hypermedia-driven application development. You bui
 </ul>
 
 <!-- Swap with transition -->
-<div hx-get="/content"
-     hx-swap="innerHTML transition:true"
-     class="fade-me">
-</div>
+<div hx-get="/content" hx-swap="innerHTML transition:true" class="fade-me"></div>
 
 <!-- Swap with timing -->
-<div hx-get="/content"
-     hx-swap="innerHTML swap:500ms settle:1s">
-</div>
+<div hx-get="/content" hx-swap="innerHTML swap:500ms settle:1s"></div>
 ```
 
 ## Server Integration Patterns
@@ -337,16 +312,18 @@ func deleteTodoHandler(c echo.Context) error {
 
 ```html
 <div id="items-container">
-    <!-- Items loaded here -->
+  <!-- Items loaded here -->
 </div>
 
-<div hx-get="/items?page=2"
-     hx-trigger="intersect once"
-     hx-swap="afterend"
-     hx-target="#items-container"
-     hx-select="div.item"
-     hx-indicator="#loading">
-    <div id="loading" class="htmx-indicator">Loading more...</div>
+<div
+  hx-get="/items?page=2"
+  hx-trigger="intersect once"
+  hx-swap="afterend"
+  hx-target="#items-container"
+  hx-select="div.item"
+  hx-indicator="#loading"
+>
+  <div id="loading" class="htmx-indicator">Loading more...</div>
 </div>
 ```
 
@@ -372,17 +349,19 @@ async def get_items(request: Request, page: int = 1, per_page: int = 20):
 
 ```html
 <div class="search-container">
-    <input type="search"
-           name="q"
-           placeholder="Search..."
-           hx-get="/search"
-           hx-trigger="input changed delay:300ms, search"
-           hx-target="#search-results"
-           hx-indicator="#search-spinner"
-           hx-push-url="true">
-    <span id="search-spinner" class="htmx-indicator">🔄</span>
+  <input
+    type="search"
+    name="q"
+    placeholder="Search..."
+    hx-get="/search"
+    hx-trigger="input changed delay:300ms, search"
+    hx-target="#search-results"
+    hx-indicator="#search-spinner"
+    hx-push-url="true"
+  />
+  <span id="search-spinner" class="htmx-indicator">🔄</span>
 
-    <div id="search-results"></div>
+  <div id="search-results"></div>
 </div>
 ```
 
@@ -390,33 +369,26 @@ async def get_items(request: Request, page: int = 1, per_page: int = 20):
 
 ```html
 <!-- Trigger button -->
-<button hx-get="/modals/edit-user/123"
-        hx-target="#modal-container"
-        hx-swap="innerHTML">
-    Edit User
-</button>
+<button hx-get="/modals/edit-user/123" hx-target="#modal-container" hx-swap="innerHTML">Edit User</button>
 
 <div id="modal-container"></div>
 
 <!-- Modal template (partials/modal-edit-user.html) -->
-<div class="modal-backdrop"
-     hx-on:click="htmx.remove(this)"
-     hx-on:keyup.escape.window="htmx.remove(this)">
-    <div class="modal" onclick="event.stopPropagation()">
-        <h2>Edit User</h2>
-        <form hx-put="/users/{{ user.id }}"
-              hx-target="#user-{{ user.id }}"
-              hx-swap="outerHTML"
-              hx-on::after-request="htmx.remove(this.closest('.modal-backdrop'))">
-            <input name="name" value="{{ user.name }}" required>
-            <input name="email" value="{{ user.email }}" type="email" required>
-            <button type="submit">Save</button>
-            <button type="button"
-                    onclick="htmx.remove(this.closest('.modal-backdrop'))">
-                Cancel
-            </button>
-        </form>
-    </div>
+<div class="modal-backdrop" hx-on:click="htmx.remove(this)" hx-on:keyup.escape.window="htmx.remove(this)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <h2>Edit User</h2>
+    <form
+      hx-put="/users/{{ user.id }}"
+      hx-target="#user-{{ user.id }}"
+      hx-swap="outerHTML"
+      hx-on::after-request="htmx.remove(this.closest('.modal-backdrop'))"
+    >
+      <input name="name" value="{{ user.name }}" required />
+      <input name="email" value="{{ user.email }}" type="email" required />
+      <button type="submit">Save</button>
+      <button type="button" onclick="htmx.remove(this.closest('.modal-backdrop'))">Cancel</button>
+    </form>
+  </div>
 </div>
 ```
 
@@ -427,10 +399,7 @@ async def get_items(request: Request, page: int = 1, per_page: int = 20):
 <div id="notifications-count">5</div>
 <div id="notifications-list"></div>
 
-<button hx-post="/notifications/mark-all-read"
-        hx-swap="none">
-    Mark All Read
-</button>
+<button hx-post="/notifications/mark-all-read" hx-swap="none">Mark All Read</button>
 ```
 
 ```python
@@ -452,12 +421,12 @@ async def mark_all_read(request: Request):
 
 ```html
 <div hx-ext="ws" ws-connect="/ws/chat">
-    <div id="chat-messages"></div>
+  <div id="chat-messages"></div>
 
-    <form ws-send>
-        <input name="message" placeholder="Type a message...">
-        <button type="submit">Send</button>
-    </form>
+  <form ws-send>
+    <input name="message" placeholder="Type a message..." />
+    <button type="submit">Send</button>
+  </form>
 </div>
 ```
 
@@ -488,53 +457,48 @@ async def websocket_chat(websocket: WebSocket):
 ```html
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <script src="https://unpkg.com/htmx.org@2.0.0"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Alpine for client-side state, HTMX for server communication -->
     <div x-data="{ open: false, count: 0 }">
-        <!-- Toggle with Alpine -->
-        <button @click="open = !open">
-            Toggle Menu
-        </button>
+      <!-- Toggle with Alpine -->
+      <button @click="open = !open">Toggle Menu</button>
 
-        <nav x-show="open" x-transition>
-            <a href="/page1">Page 1</a>
-            <a href="/page2">Page 2</a>
-        </nav>
+      <nav x-show="open" x-transition>
+        <a href="/page1">Page 1</a>
+        <a href="/page2">Page 2</a>
+      </nav>
 
-        <!-- Counter with Alpine -->
-        <div>
-            <button @click="count--">-</button>
-            <span x-text="count"></span>
-            <button @click="count++">+</button>
-        </div>
+      <!-- Counter with Alpine -->
+      <div>
+        <button @click="count--">-</button>
+        <span x-text="count"></span>
+        <button @click="count++">+</button>
+      </div>
 
-        <!-- Save to server with HTMX -->
-        <button hx-post="/save-count"
-                hx-vals="js:{count: Alpine.$data(this).count}"
-                hx-swap="none">
-            Save Count
-        </button>
+      <!-- Save to server with HTMX -->
+      <button hx-post="/save-count" hx-vals="js:{count: Alpine.$data(this).count}" hx-swap="none">Save Count</button>
     </div>
 
     <!-- Complex form with both -->
-    <form x-data="{ submitting: false }"
-          hx-post="/submit"
-          hx-target="#result"
-          @htmx:before-request="submitting = true"
-          @htmx:after-request="submitting = false">
-
-        <input name="data" required>
-        <button type="submit" :disabled="submitting">
-            <span x-show="!submitting">Submit</span>
-            <span x-show="submitting">Submitting...</span>
-        </button>
+    <form
+      x-data="{ submitting: false }"
+      hx-post="/submit"
+      hx-target="#result"
+      @htmx:before-request="submitting = true"
+      @htmx:after-request="submitting = false"
+    >
+      <input name="data" required />
+      <button type="submit" :disabled="submitting">
+        <span x-show="!submitting">Submit</span>
+        <span x-show="submitting">Submitting...</span>
+      </button>
     </form>
     <div id="result"></div>
-</body>
+  </body>
 </html>
 ```
 
@@ -543,32 +507,29 @@ async def websocket_chat(websocket: WebSocket):
 ```html
 <!-- Global error handling -->
 <body hx-ext="response-targets">
-    <div id="error-toast" class="toast hidden"></div>
+  <div id="error-toast" class="toast hidden"></div>
 
-    <button hx-get="/api/data"
-            hx-target="#content"
-            hx-target-error="#error-toast"
-            hx-target-404="#not-found">
-        Load Data
-    </button>
+  <button hx-get="/api/data" hx-target="#content" hx-target-error="#error-toast" hx-target-404="#not-found">
+    Load Data
+  </button>
 
-    <div id="content"></div>
-    <div id="not-found" class="hidden"></div>
+  <div id="content"></div>
+  <div id="not-found" class="hidden"></div>
 </body>
 
 <script>
-    // Custom error handling
-    document.body.addEventListener('htmx:responseError', function(evt) {
-        const toast = document.getElementById('error-toast');
-        toast.textContent = `Error: ${evt.detail.xhr.status} - ${evt.detail.xhr.statusText}`;
-        toast.classList.remove('hidden');
-        setTimeout(() => toast.classList.add('hidden'), 5000);
-    });
+  // Custom error handling
+  document.body.addEventListener("htmx:responseError", function (evt) {
+    const toast = document.getElementById("error-toast");
+    toast.textContent = `Error: ${evt.detail.xhr.status} - ${evt.detail.xhr.statusText}`;
+    toast.classList.remove("hidden");
+    setTimeout(() => toast.classList.add("hidden"), 5000);
+  });
 
-    // Retry failed requests
-    document.body.addEventListener('htmx:sendError', function(evt) {
-        setTimeout(() => htmx.trigger(evt.detail.elt, 'htmx:retry'), 1000);
-    });
+  // Retry failed requests
+  document.body.addEventListener("htmx:sendError", function (evt) {
+    setTimeout(() => htmx.trigger(evt.detail.elt, "htmx:retry"), 1000);
+  });
 </script>
 ```
 
@@ -576,39 +537,47 @@ async def websocket_chat(websocket: WebSocket):
 
 ```html
 <style>
-    .htmx-indicator { display: none; }
-    .htmx-request .htmx-indicator { display: inline; }
-    .htmx-request.htmx-indicator { display: inline; }
+  .htmx-indicator {
+    display: none;
+  }
+  .htmx-request .htmx-indicator {
+    display: inline;
+  }
+  .htmx-request.htmx-indicator {
+    display: inline;
+  }
 
-    /* Skeleton loading */
-    .skeleton {
-        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-        background-size: 200% 100%;
-        animation: skeleton 1.5s infinite;
+  /* Skeleton loading */
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton 1.5s infinite;
+  }
+  @keyframes skeleton {
+    0% {
+      background-position: 200% 0;
     }
-    @keyframes skeleton {
-        0% { background-position: 200% 0; }
-        100% { background-position: -200% 0; }
+    100% {
+      background-position: -200% 0;
     }
+  }
 </style>
 
 <!-- Button with spinner -->
 <button hx-get="/slow-endpoint" hx-target="#result">
-    <span class="button-text">Load Data</span>
-    <span class="htmx-indicator">
-        <svg class="spinner">...</svg>
-    </span>
+  <span class="button-text">Load Data</span>
+  <span class="htmx-indicator">
+    <svg class="spinner">...</svg>
+  </span>
 </button>
 
 <!-- Skeleton placeholder -->
-<div hx-get="/content"
-     hx-trigger="load"
-     hx-indicator=".skeleton-container">
-    <div class="skeleton-container htmx-indicator">
-        <div class="skeleton" style="height: 20px; width: 60%;"></div>
-        <div class="skeleton" style="height: 20px; width: 80%;"></div>
-        <div class="skeleton" style="height: 20px; width: 40%;"></div>
-    </div>
+<div hx-get="/content" hx-trigger="load" hx-indicator=".skeleton-container">
+  <div class="skeleton-container htmx-indicator">
+    <div class="skeleton" style="height: 20px; width: 60%;"></div>
+    <div class="skeleton" style="height: 20px; width: 80%;"></div>
+    <div class="skeleton" style="height: 20px; width: 40%;"></div>
+  </div>
 </div>
 ```
 
@@ -663,37 +632,33 @@ def test_search_returns_fragment():
 
 ```html
 <!-- Preload on hover -->
-<a href="/page"
-   hx-get="/page"
-   hx-target="#content"
-   hx-trigger="mouseenter"
-   hx-swap="none"
-   preload>
-    Go to Page
-</a>
+<a href="/page" hx-get="/page" hx-target="#content" hx-trigger="mouseenter" hx-swap="none" preload> Go to Page </a>
 
 <!-- Boost all links (SPA-like navigation) -->
 <body hx-boost="true">
-    <nav>
-        <a href="/page1">Page 1</a>  <!-- Automatically uses AJAX -->
-        <a href="/page2">Page 2</a>
-    </nav>
-    <main id="content">
-        <!-- Content swapped here -->
-    </main>
+  <nav>
+    <a href="/page1">Page 1</a>
+    <!-- Automatically uses AJAX -->
+    <a href="/page2">Page 2</a>
+  </nav>
+  <main id="content">
+    <!-- Content swapped here -->
+  </main>
 </body>
 
 <!-- Cache responses -->
-<div hx-get="/static-content"
-     hx-trigger="load"
-     hx-swap="innerHTML"
-     hx-headers='{"Cache-Control": "max-age=3600"}'>
-</div>
+<div
+  hx-get="/static-content"
+  hx-trigger="load"
+  hx-swap="innerHTML"
+  hx-headers='{"Cache-Control": "max-age=3600"}'
+></div>
 ```
 
 ## Output Format
 
 Provide:
+
 - HTML templates with HTMX attributes
 - Server endpoint implementations
 - Partial templates for fragments
@@ -701,6 +666,7 @@ Provide:
 - Error handling strategies
 
 Sources:
+
 - [HTMX Documentation](https://htmx.org/docs/)
 - [Hypermedia Systems Book](https://hypermedia.systems/)
 - [HTMX Examples](https://htmx.org/examples/)

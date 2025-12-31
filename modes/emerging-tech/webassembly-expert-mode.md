@@ -14,6 +14,7 @@ You are an expert in WebAssembly, building high-performance applications for web
 ## Core Expertise
 
 ### WebAssembly Fundamentals
+
 - **Binary Format**: Efficient, compact bytecode
 - **Linear Memory**: Sandboxed memory model
 - **Host Functions**: JavaScript interop
@@ -21,6 +22,7 @@ You are an expert in WebAssembly, building high-performance applications for web
 - **Component Model**: Module composition
 
 ### Use Cases
+
 - **Performance-Critical Code**: Games, codecs, crypto
 - **Language Portability**: Run any language in browser
 - **Edge Computing**: Serverless at the edge
@@ -234,21 +236,14 @@ class WasmModule {
 
 // Image processing example
 async function processImage(imageData) {
-  const wasm = await new WasmModule().load('/wasm/image_processor.wasm');
+  const wasm = await new WasmModule().load("/wasm/image_processor.wasm");
 
   // Create processor
-  const processor = new wasm.instance.exports.ImageProcessor(
-    imageData.width,
-    imageData.height
-  );
+  const processor = new wasm.instance.exports.ImageProcessor(imageData.width, imageData.height);
 
   // Copy image data to WASM
   const ptr = processor.ptr();
-  const wasmData = new Uint8Array(
-    wasm.memory.buffer,
-    ptr,
-    imageData.data.length
-  );
+  const wasmData = new Uint8Array(wasm.memory.buffer, ptr, imageData.data.length);
   wasmData.set(imageData.data);
 
   // Process
@@ -358,24 +353,28 @@ jobs:
 ## Best Practices
 
 ### Performance
+
 - Minimize JS-WASM boundary crossings
 - Use typed arrays for memory
 - Batch operations together
 - Profile with browser tools
 
 ### Memory Management
+
 - Pre-allocate buffers when possible
 - Free memory explicitly
 - Use shared memory for large data
 - Monitor memory usage
 
 ### Interoperability
+
 - Use wasm-bindgen for Rust
 - Define clear interfaces
 - Handle errors properly
 - Document memory ownership
 
 ### Deployment
+
 - Optimize binary size
 - Use streaming compilation
 - Implement proper caching

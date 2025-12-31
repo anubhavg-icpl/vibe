@@ -1,6 +1,7 @@
 ---
 title: RFC 9449 - DPoP (Demonstrating Proof-of-Possession)
 description: Sender-constrained access tokens using DPoP for enhanced OAuth 2.0 security
+author: Anubhav Gain
 rfc: 9449
 tags: [oauth, dpop, proof-of-possession, security, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing DPoP as defined in RFC 9449. DPoP provides sen
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 9449 |
-| Title | OAuth 2.0 Demonstrating Proof-of-Possession (DPoP) |
-| Status | Proposed Standard |
-| Published | September 2023 |
-| Extends | RFC 6749, RFC 6750 |
+| Property   | Value                                              |
+| ---------- | -------------------------------------------------- |
+| RFC Number | 9449                                               |
+| Title      | OAuth 2.0 Demonstrating Proof-of-Possession (DPoP) |
+| Status     | Proposed Standard                                  |
+| Published  | September 2023                                     |
+| Extends    | RFC 6749, RFC 6750                                 |
 
 ## DPoP Flow
 
@@ -234,14 +235,14 @@ class DPoPClient {
     // Generate ECDSA key pair
     const keyPair = await crypto.subtle.generateKey(
       {
-        name: 'ECDSA',
-        namedCurve: 'P-256',
+        name: "ECDSA",
+        namedCurve: "P-256",
       },
-      true,  // extractable
-      ['sign', 'verify']
+      true, // extractable
+      ["sign", "verify"],
     );
 
-    const jwk = await crypto.subtle.exportKey('jwk', keyPair.publicKey);
+    const jwk = await crypto.subtle.exportKey("jwk", keyPair.publicKey);
 
     this.keyPair = {
       privateKey: keyPair.privateKey,
@@ -255,18 +256,14 @@ class DPoPClient {
     };
   }
 
-  async createProof(
-    method: string,
-    uri: string,
-    accessToken?: string
-  ): Promise<string> {
+  async createProof(method: string, uri: string, accessToken?: string): Promise<string> {
     if (!this.keyPair) {
-      throw new Error('DPoP not initialized');
+      throw new Error("DPoP not initialized");
     }
 
     const header = {
-      typ: 'dpop+jwt',
-      alg: 'ES256',
+      typ: "dpop+jwt",
+      alg: "ES256",
       jwk: this.keyPair.jwk,
     };
 
@@ -281,7 +278,7 @@ class DPoPClient {
     if (accessToken) {
       const encoder = new TextEncoder();
       const data = encoder.encode(accessToken);
-      const hash = await crypto.subtle.digest('SHA-256', data);
+      const hash = await crypto.subtle.digest("SHA-256", data);
       payload.ath = this.base64UrlEncode(new Uint8Array(hash));
     }
 
@@ -293,29 +290,26 @@ class DPoPClient {
     return this.signJwt(header, payload);
   }
 
-  async requestToken(
-    tokenEndpoint: string,
-    params: URLSearchParams
-  ): Promise<TokenResponse> {
-    const proof = await this.createProof('POST', tokenEndpoint);
+  async requestToken(tokenEndpoint: string, params: URLSearchParams): Promise<TokenResponse> {
+    const proof = await this.createProof("POST", tokenEndpoint);
 
     const response = await fetch(tokenEndpoint, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'DPoP': proof,
+        "Content-Type": "application/x-www-form-urlencoded",
+        DPoP: proof,
       },
       body: params,
     });
 
     // Handle DPoP-Nonce
-    const newNonce = response.headers.get('DPoP-Nonce');
+    const newNonce = response.headers.get("DPoP-Nonce");
     if (newNonce) {
       this.nonce = newNonce;
 
       // Retry with nonce if error
       if (response.status === 400) {
-        const retryProof = await this.createProof('POST', tokenEndpoint);
+        const retryProof = await this.createProof("POST", tokenEndpoint);
         return this.retryRequest(tokenEndpoint, params, retryProof);
       }
     }
@@ -323,21 +317,16 @@ class DPoPClient {
     return response.json();
   }
 
-  async callApi(
-    url: string,
-    accessToken: string,
-    method: string = 'GET',
-    body?: any
-  ): Promise<Response> {
+  async callApi(url: string, accessToken: string, method: string = "GET", body?: any): Promise<Response> {
     const proof = await this.createProof(method, url, accessToken);
 
     const headers: Record<string, string> = {
-      'Authorization': `DPoP ${accessToken}`,
-      'DPoP': proof,
+      Authorization: `DPoP ${accessToken}`,
+      DPoP: proof,
     };
 
     if (body) {
-      headers['Content-Type'] = 'application/json';
+      headers["Content-Type"] = "application/json";
     }
 
     const response = await fetch(url, {
@@ -347,7 +336,7 @@ class DPoPClient {
     });
 
     // Update nonce if provided
-    const newNonce = response.headers.get('DPoP-Nonce');
+    const newNonce = response.headers.get("DPoP-Nonce");
     if (newNonce) {
       this.nonce = newNonce;
     }
@@ -360,23 +349,16 @@ class DPoPClient {
     return `${url.protocol}//${url.host}${url.pathname}`;
   }
 
-  private async signJwt(
-    header: object,
-    payload: object
-  ): Promise<string> {
-    const headerB64 = this.base64UrlEncode(
-      new TextEncoder().encode(JSON.stringify(header))
-    );
-    const payloadB64 = this.base64UrlEncode(
-      new TextEncoder().encode(JSON.stringify(payload))
-    );
+  private async signJwt(header: object, payload: object): Promise<string> {
+    const headerB64 = this.base64UrlEncode(new TextEncoder().encode(JSON.stringify(header)));
+    const payloadB64 = this.base64UrlEncode(new TextEncoder().encode(JSON.stringify(payload)));
 
     const signingInput = new TextEncoder().encode(`${headerB64}.${payloadB64}`);
 
     const signature = await crypto.subtle.sign(
-      { name: 'ECDSA', hash: 'SHA-256' },
+      { name: "ECDSA", hash: "SHA-256" },
       this.keyPair!.privateKey,
-      signingInput
+      signingInput,
     );
 
     const signatureB64 = this.base64UrlEncode(new Uint8Array(signature));
@@ -386,9 +368,9 @@ class DPoPClient {
 
   private base64UrlEncode(buffer: Uint8Array): string {
     return btoa(String.fromCharCode(...buffer))
-      .replace(/\+/g, '-')
-      .replace(/\//g, '_')
-      .replace(/=+$/, '');
+      .replace(/\+/g, "-")
+      .replace(/\//g, "_")
+      .replace(/=+$/, "");
   }
 }
 
@@ -398,21 +380,18 @@ await dpop.initialize();
 
 // Token request
 const tokenResponse = await dpop.requestToken(
-  'https://auth.example.com/token',
+  "https://auth.example.com/token",
   new URLSearchParams({
-    grant_type: 'authorization_code',
+    grant_type: "authorization_code",
     code: authCode,
     redirect_uri: redirectUri,
     client_id: clientId,
     code_verifier: pkceVerifier,
-  })
+  }),
 );
 
 // API call with DPoP-bound token
-const apiResponse = await dpop.callApi(
-  'https://api.example.com/users',
-  tokenResponse.access_token
-);
+const apiResponse = await dpop.callApi("https://api.example.com/users", tokenResponse.access_token);
 ```
 
 ### Server-Side DPoP Validation
@@ -667,16 +646,17 @@ class MultiTenantDPoPServer:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 6749 | OAuth 2.0 | Base framework |
-| RFC 8705 | mTLS | Alternative binding |
-| RFC 7638 | JWK Thumbprint | Key identification |
-| RFC 9700 | Security BCP | Recommends DPoP |
+| RFC      | Title          | Relationship        |
+| -------- | -------------- | ------------------- |
+| RFC 6749 | OAuth 2.0      | Base framework      |
+| RFC 8705 | mTLS           | Alternative binding |
+| RFC 7638 | JWK Thumbprint | Key identification  |
+| RFC 9700 | Security BCP   | Recommends DPoP     |
 
 ## Output Format
 
 Provide:
+
 - DPoP proof generation
 - Token binding implementations
 - Validation patterns

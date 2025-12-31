@@ -4,16 +4,18 @@ Game engines, game design, and interactive entertainment modes.
 
 ## Available Modes (3)
 
-| Mode | Description |
-|------|-------------|
-| `unity-developer-mode` | Unity game development with C# |
-| `unreal-developer-mode` | Unreal Engine development with C++ and Blueprints |
+| Mode                          | Description                                          |
+| ----------------------------- | ---------------------------------------------------- |
+| `unity-developer-mode`        | Unity game development with C#                       |
+| `unreal-developer-mode`       | Unreal Engine development with C++ and Blueprints    |
 | `game-design-consultant-mode` | Game design theory, mechanics, and player experience |
 
 ## Usage
 
 ### Unity Developer Mode
+
 Expertise in:
+
 - C# scripting
 - MonoBehaviour lifecycle
 - Physics and collisions
@@ -24,7 +26,9 @@ Expertise in:
 - Mobile and console builds
 
 ### Unreal Developer Mode
+
 Covers:
+
 - C++ gameplay programming
 - Blueprint visual scripting
 - Unreal Motion Graphics (UMG)
@@ -34,7 +38,9 @@ Covers:
 - Multiplayer networking
 
 ### Game Design Consultant Mode
+
 Includes:
+
 - Core loop design
 - Player motivation (Bartle types)
 - Progression systems
@@ -59,11 +65,11 @@ Concept → Prototype → Production → Polish → Release → Live Ops
 
 ## Engine Selection
 
-| Criteria | Unity | Unreal |
-|----------|-------|--------|
-| 2D Games | Excellent | Good |
-| 3D Games | Good | Excellent |
-| Mobile | Excellent | Good |
-| AAA Quality | Good | Excellent |
-| Learning Curve | Easier | Steeper |
-| Free Tier | Yes | Yes |
+| Criteria       | Unity     | Unreal    |
+| -------------- | --------- | --------- |
+| 2D Games       | Excellent | Good      |
+| 3D Games       | Good      | Excellent |
+| Mobile         | Excellent | Good      |
+| AAA Quality    | Good      | Excellent |
+| Learning Curve | Easier    | Steeper   |
+| Free Tier      | Yes       | Yes       |

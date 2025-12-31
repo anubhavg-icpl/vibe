@@ -14,6 +14,7 @@ You are an expert in Netflix's Simian Army and Chaos Engineering Platform (ChAP)
 ## Core Expertise
 
 ### Simian Army Hierarchy
+
 - **Chaos Monkey**: Randomly terminates instances
 - **Chaos Gorilla**: Drops entire Availability Zone
 - **Chaos Kong**: Drops entire AWS Region
@@ -23,6 +24,7 @@ You are an expert in Netflix's Simian Army and Chaos Engineering Platform (ChAP)
 - **Janitor Monkey**: Cleans up unused resources
 
 ### Netflix ChAP (Chaos Automation Platform)
+
 - Automated experiment scheduling
 - Hypothesis-driven testing
 - Blast radius control
@@ -68,175 +70,175 @@ chaosmonkey.groupType=ASG
 package chaosmonkey
 
 import (
-	"context"
-	"log"
-	"math/rand"
-	"time"
+ "context"
+ "log"
+ "math/rand"
+ "time"
 
-	"github.com/aws/aws-sdk-go-v2/aws"
-	"github.com/aws/aws-sdk-go-v2/service/ec2"
-	"github.com/aws/aws-sdk-go-v2/service/autoscaling"
+ "github.com/aws/aws-sdk-go-v2/aws"
+ "github.com/aws/aws-sdk-go-v2/service/ec2"
+ "github.com/aws/aws-sdk-go-v2/service/autoscaling"
 )
 
 type ChaosMonkey struct {
-	ec2Client *ec2.Client
-	asgClient *autoscaling.Client
-	config    Config
-	metrics   MetricsClient
+ ec2Client *ec2.Client
+ asgClient *autoscaling.Client
+ config    Config
+ metrics   MetricsClient
 }
 
 type Config struct {
-	Enabled                    bool
-	Leashed                    bool          // Dry-run mode
-	MeanTimeBetweenKills       time.Duration
-	MinInstancesPerASG         int
-	ExcludedASGs               []string
-	ScheduleStart              int  // Hour (0-23)
-	ScheduleEnd                int
-	SkipWeekends               bool
-	NotificationWebhook        string
+ Enabled                    bool
+ Leashed                    bool          // Dry-run mode
+ MeanTimeBetweenKills       time.Duration
+ MinInstancesPerASG         int
+ ExcludedASGs               []string
+ ScheduleStart              int  // Hour (0-23)
+ ScheduleEnd                int
+ SkipWeekends               bool
+ NotificationWebhook        string
 }
 
 type TerminationEvent struct {
-	InstanceID    string
-	ASGName       string
-	AvailabilityZone string
-	Timestamp     time.Time
-	DryRun        bool
-	Reason        string
+ InstanceID    string
+ ASGName       string
+ AvailabilityZone string
+ Timestamp     time.Time
+ DryRun        bool
+ Reason        string
 }
 
 func NewChaosMonkey(cfg aws.Config, config Config) *ChaosMonkey {
-	return &ChaosMonkey{
-		ec2Client: ec2.NewFromConfig(cfg),
-		asgClient: autoscaling.NewFromConfig(cfg),
-		config:    config,
-	}
+ return &ChaosMonkey{
+  ec2Client: ec2.NewFromConfig(cfg),
+  asgClient: autoscaling.NewFromConfig(cfg),
+  config:    config,
+ }
 }
 
 func (cm *ChaosMonkey) Run(ctx context.Context) error {
-	if !cm.config.Enabled {
-		log.Println("Chaos Monkey is disabled")
-		return nil
-	}
+ if !cm.config.Enabled {
+  log.Println("Chaos Monkey is disabled")
+  return nil
+ }
 
-	if !cm.isWithinSchedule() {
-		log.Println("Outside of chaos schedule, skipping")
-		return nil
-	}
+ if !cm.isWithinSchedule() {
+  log.Println("Outside of chaos schedule, skipping")
+  return nil
+ }
 
-	// Get all eligible ASGs
-	asgs, err := cm.getEligibleASGs(ctx)
-	if err != nil {
-		return err
-	}
+ // Get all eligible ASGs
+ asgs, err := cm.getEligibleASGs(ctx)
+ if err != nil {
+  return err
+ }
 
-	// Select random ASG
-	if len(asgs) == 0 {
-		log.Println("No eligible ASGs found")
-		return nil
-	}
+ // Select random ASG
+ if len(asgs) == 0 {
+  log.Println("No eligible ASGs found")
+  return nil
+ }
 
-	asg := asgs[rand.Intn(len(asgs))]
+ asg := asgs[rand.Intn(len(asgs))]
 
-	// Select random instance from ASG
-	instance, err := cm.selectRandomInstance(ctx, asg)
-	if err != nil {
-		return err
-	}
+ // Select random instance from ASG
+ instance, err := cm.selectRandomInstance(ctx, asg)
+ if err != nil {
+  return err
+ }
 
-	// Terminate instance
-	event := TerminationEvent{
-		InstanceID:       instance.InstanceID,
-		ASGName:          asg.Name,
-		AvailabilityZone: instance.AvailabilityZone,
-		Timestamp:        time.Now(),
-		DryRun:           cm.config.Leashed,
-		Reason:           "Chaos Monkey random termination",
-	}
+ // Terminate instance
+ event := TerminationEvent{
+  InstanceID:       instance.InstanceID,
+  ASGName:          asg.Name,
+  AvailabilityZone: instance.AvailabilityZone,
+  Timestamp:        time.Now(),
+  DryRun:           cm.config.Leashed,
+  Reason:           "Chaos Monkey random termination",
+ }
 
-	if cm.config.Leashed {
-		log.Printf("DRY-RUN: Would terminate %s in %s",
-			instance.InstanceID, asg.Name)
-		cm.recordEvent(event)
-		return nil
-	}
+ if cm.config.Leashed {
+  log.Printf("DRY-RUN: Would terminate %s in %s",
+   instance.InstanceID, asg.Name)
+  cm.recordEvent(event)
+  return nil
+ }
 
-	// Actually terminate
-	_, err = cm.ec2Client.TerminateInstances(ctx, &ec2.TerminateInstancesInput{
-		InstanceIds: []string{instance.InstanceID},
-	})
+ // Actually terminate
+ _, err = cm.ec2Client.TerminateInstances(ctx, &ec2.TerminateInstancesInput{
+  InstanceIds: []string{instance.InstanceID},
+ })
 
-	if err != nil {
-		return err
-	}
+ if err != nil {
+  return err
+ }
 
-	log.Printf("Terminated instance %s in ASG %s",
-		instance.InstanceID, asg.Name)
+ log.Printf("Terminated instance %s in ASG %s",
+  instance.InstanceID, asg.Name)
 
-	cm.recordEvent(event)
-	cm.sendNotification(event)
+ cm.recordEvent(event)
+ cm.sendNotification(event)
 
-	return nil
+ return nil
 }
 
 func (cm *ChaosMonkey) isWithinSchedule() bool {
-	now := time.Now()
+ now := time.Now()
 
-	// Check weekend
-	if cm.config.SkipWeekends {
-		weekday := now.Weekday()
-		if weekday == time.Saturday || weekday == time.Sunday {
-			return false
-		}
-	}
+ // Check weekend
+ if cm.config.SkipWeekends {
+  weekday := now.Weekday()
+  if weekday == time.Saturday || weekday == time.Sunday {
+   return false
+  }
+ }
 
-	// Check hours
-	hour := now.Hour()
-	return hour >= cm.config.ScheduleStart && hour < cm.config.ScheduleEnd
+ // Check hours
+ hour := now.Hour()
+ return hour >= cm.config.ScheduleStart && hour < cm.config.ScheduleEnd
 }
 
 func (cm *ChaosMonkey) getEligibleASGs(ctx context.Context) ([]ASG, error) {
-	result, err := cm.asgClient.DescribeAutoScalingGroups(ctx,
-		&autoscaling.DescribeAutoScalingGroupsInput{})
-	if err != nil {
-		return nil, err
-	}
+ result, err := cm.asgClient.DescribeAutoScalingGroups(ctx,
+  &autoscaling.DescribeAutoScalingGroupsInput{})
+ if err != nil {
+  return nil, err
+ }
 
-	var eligible []ASG
-	for _, asg := range result.AutoScalingGroups {
-		// Skip excluded ASGs
-		if cm.isExcluded(*asg.AutoScalingGroupName) {
-			continue
-		}
+ var eligible []ASG
+ for _, asg := range result.AutoScalingGroups {
+  // Skip excluded ASGs
+  if cm.isExcluded(*asg.AutoScalingGroupName) {
+   continue
+  }
 
-		// Must have more than minimum instances
-		if len(asg.Instances) <= cm.config.MinInstancesPerASG {
-			continue
-		}
+  // Must have more than minimum instances
+  if len(asg.Instances) <= cm.config.MinInstancesPerASG {
+   continue
+  }
 
-		// Must be enabled for chaos
-		if !cm.hasOptedIn(asg) {
-			continue
-		}
+  // Must be enabled for chaos
+  if !cm.hasOptedIn(asg) {
+   continue
+  }
 
-		eligible = append(eligible, ASG{
-			Name:      *asg.AutoScalingGroupName,
-			Instances: asg.Instances,
-		})
-	}
+  eligible = append(eligible, ASG{
+   Name:      *asg.AutoScalingGroupName,
+   Instances: asg.Instances,
+  })
+ }
 
-	return eligible, nil
+ return eligible, nil
 }
 
 func (cm *ChaosMonkey) hasOptedIn(asg types.AutoScalingGroup) bool {
-	// Check for opt-in tag
-	for _, tag := range asg.Tags {
-		if *tag.Key == "chaos:enabled" && *tag.Value == "true" {
-			return true
-		}
-	}
-	return false
+ // Check for opt-in tag
+ for _, tag := range asg.Tags {
+  if *tag.Key == "chaos:enabled" && *tag.Value == "true" {
+   return true
+  }
+ }
+ return false
 }
 ```
 
@@ -444,7 +446,7 @@ spec:
   # Schedule
   schedule:
     type: cron
-    expression: "0 10-15 * * 1-5"  # Mon-Fri, 10am-3pm
+    expression: "0 10-15 * * 1-5" # Mon-Fri, 10am-3pm
     timezone: America/Los_Angeles
 
   # Notifications
@@ -562,12 +564,14 @@ class NetworkChaos:
 ## Best Practices
 
 ### Experiment Design
+
 - Start with smallest blast radius
 - Have clear rollback procedures
 - Run during business hours initially
 - Gradually increase scope
 
 ### From Netflix's Principles
+
 1. Build a hypothesis around steady state
 2. Vary real-world events
 3. Run experiments in production
@@ -575,15 +579,18 @@ class NetworkChaos:
 5. Minimize blast radius
 
 ### Safety Controls
+
 - Implement circuit breakers
 - Set strict time limits
 - Monitor during experiments
 - Have humans ready to intervene
 
 ### Measuring Success
+
 Studies show **35% reduction in outages** and **41% improvement in MTTR** after implementing chaos engineering.
 
 ## Sources
+
 - [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)
 - [Gremlin Guide](https://www.gremlin.com/chaos-monkey)
 

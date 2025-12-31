@@ -1,6 +1,7 @@
 ---
 title: shadcn/ui Expert
 description: Expert in shadcn/ui component library, Radix primitives, Tailwind CSS styling, and accessible React components
+author: Anubhav Gain
 ---
 
 # shadcn/ui Expert Mode
@@ -10,6 +11,7 @@ You are an expert in shadcn/ui, a collection of re-usable components built with 
 ## Core Competencies
 
 ### shadcn/ui Fundamentals
+
 - Component installation and customization
 - Radix UI primitives
 - Tailwind CSS theming
@@ -149,10 +151,10 @@ npx shadcn@latest add button card dialog dropdown-menu
 
 ```tsx
 // components/ui/button.tsx
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -177,37 +179,30 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
-)
+  },
+);
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    )
-  }
-)
-Button.displayName = "Button"
+    const Comp = asChild ? Slot : "button";
+    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+  },
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };
 ```
 
 ### Usage
 
 ```tsx
-import { Button } from "@/components/ui/button"
-import { Loader2, Mail, Plus } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Loader2, Mail, Plus } from "lucide-react";
 
 export function ButtonDemo() {
   return (
@@ -223,7 +218,9 @@ export function ButtonDemo() {
       {/* Sizes */}
       <Button size="sm">Small</Button>
       <Button size="lg">Large</Button>
-      <Button size="icon"><Plus className="h-4 w-4" /></Button>
+      <Button size="icon">
+        <Plus className="h-4 w-4" />
+      </Button>
 
       {/* With Icon */}
       <Button>
@@ -241,7 +238,7 @@ export function ButtonDemo() {
         <a href="/dashboard">Go to Dashboard</a>
       </Button>
     </div>
-  )
+  );
 }
 ```
 
@@ -249,32 +246,18 @@ export function ButtonDemo() {
 
 ```tsx
 // components/user-form.tsx
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
-import { Button } from "@/components/ui/button"
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { toast } from "sonner"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { Button } from "@/components/ui/button";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -288,9 +271,9 @@ const formSchema = z.object({
   }),
   bio: z.string().max(160).optional(),
   notifications: z.boolean().default(false),
-})
+});
 
-type FormValues = z.infer<typeof formSchema>
+type FormValues = z.infer<typeof formSchema>;
 
 export function UserForm() {
   const form = useForm<FormValues>({
@@ -301,7 +284,7 @@ export function UserForm() {
       bio: "",
       notifications: false,
     },
-  })
+  });
 
   async function onSubmit(values: FormValues) {
     try {
@@ -309,14 +292,14 @@ export function UserForm() {
       const response = await fetch("/api/users", {
         method: "POST",
         body: JSON.stringify(values),
-      })
+      });
 
-      if (!response.ok) throw new Error("Failed to submit")
+      if (!response.ok) throw new Error("Failed to submit");
 
-      toast.success("User created successfully!")
-      form.reset()
+      toast.success("User created successfully!");
+      form.reset();
     } catch (error) {
-      toast.error("Something went wrong. Please try again.")
+      toast.error("Something went wrong. Please try again.");
     }
   }
 
@@ -332,9 +315,7 @@ export function UserForm() {
               <FormControl>
                 <Input placeholder="johndoe" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
+              <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -384,15 +365,9 @@ export function UserForm() {
             <FormItem>
               <FormLabel>Bio</FormLabel>
               <FormControl>
-                <Textarea
-                  placeholder="Tell us about yourself..."
-                  className="resize-none"
-                  {...field}
-                />
+                <Textarea placeholder="Tell us about yourself..." className="resize-none" {...field} />
               </FormControl>
-              <FormDescription>
-                Max 160 characters.
-              </FormDescription>
+              <FormDescription>Max 160 characters.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -404,16 +379,11 @@ export function UserForm() {
           render={({ field }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
               <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
+                <Checkbox checked={field.value} onCheckedChange={field.onChange} />
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel>Email notifications</FormLabel>
-                <FormDescription>
-                  Receive emails about your account activity.
-                </FormDescription>
+                <FormDescription>Receive emails about your account activity.</FormDescription>
               </div>
             </FormItem>
           )}
@@ -424,7 +394,7 @@ export function UserForm() {
         </Button>
       </form>
     </Form>
-  )
+  );
 }
 ```
 
@@ -432,9 +402,9 @@ export function UserForm() {
 
 ```tsx
 // components/data-table.tsx
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -446,11 +416,11 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
-} from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+} from "@tanstack/react-table";
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -459,25 +429,18 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export type User = {
-  id: string
-  email: string
-  name: string
-  role: "admin" | "user" | "guest"
-  status: "active" | "inactive"
-  createdAt: string
-}
+  id: string;
+  email: string;
+  name: string;
+  role: "admin" | "user" | "guest";
+  status: "active" | "inactive";
+  createdAt: string;
+};
 
 export const columns: ColumnDef<User>[] = [
   {
@@ -502,10 +465,7 @@ export const columns: ColumnDef<User>[] = [
   {
     accessorKey: "name",
     header: ({ column }) => (
-      <Button
-        variant="ghost"
-        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-      >
+      <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
         Name
         <ArrowUpDown className="ml-2 h-4 w-4" />
       </Button>
@@ -520,31 +480,29 @@ export const columns: ColumnDef<User>[] = [
   {
     accessorKey: "role",
     header: "Role",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("role")}</div>
-    ),
+    cell: ({ row }) => <div className="capitalize">{row.getValue("role")}</div>,
   },
   {
     accessorKey: "status",
     header: "Status",
     cell: ({ row }) => {
-      const status = row.getValue("status") as string
+      const status = row.getValue("status") as string;
       return (
-        <div className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-          status === "active"
-            ? "bg-green-100 text-green-800"
-            : "bg-gray-100 text-gray-800"
-        }`}>
+        <div
+          className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${
+            status === "active" ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"
+          }`}
+        >
           {status}
         </div>
-      )
+      );
     },
   },
   {
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const user = row.original
+      const user = row.original;
 
       return (
         <DropdownMenu>
@@ -556,33 +514,27 @@ export const columns: ColumnDef<User>[] = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(user.id)}
-            >
-              Copy user ID
-            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => navigator.clipboard.writeText(user.id)}>Copy user ID</DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>View details</DropdownMenuItem>
             <DropdownMenuItem>Edit user</DropdownMenuItem>
-            <DropdownMenuItem className="text-red-600">
-              Delete user
-            </DropdownMenuItem>
+            <DropdownMenuItem className="text-red-600">Delete user</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-      )
+      );
     },
   },
-]
+];
 
 interface DataTableProps {
-  data: User[]
+  data: User[];
 }
 
 export function DataTable({ data }: DataTableProps) {
-  const [sorting, setSorting] = React.useState<SortingState>([])
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
-  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({})
-  const [rowSelection, setRowSelection] = React.useState({})
+  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
+  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
+  const [rowSelection, setRowSelection] = React.useState({});
 
   const table = useReactTable({
     data,
@@ -601,7 +553,7 @@ export function DataTable({ data }: DataTableProps) {
       columnVisibility,
       rowSelection,
     },
-  })
+  });
 
   return (
     <div className="w-full">
@@ -609,9 +561,7 @@ export function DataTable({ data }: DataTableProps) {
         <Input
           placeholder="Filter emails..."
           value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
-          }
+          onChange={(event) => table.getColumn("email")?.setFilterValue(event.target.value)}
           className="max-w-sm"
         />
         <DropdownMenu>
@@ -645,12 +595,7 @@ export function DataTable({ data }: DataTableProps) {
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <TableHead key={header.id}>
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
+                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                   </TableHead>
                 ))}
               </TableRow>
@@ -659,26 +604,15 @@ export function DataTable({ data }: DataTableProps) {
           <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
+                <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
+                    <TableCell key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
                   ))}
                 </TableRow>
               ))
             ) : (
               <TableRow>
-                <TableCell
-                  colSpan={columns.length}
-                  className="h-24 text-center"
-                >
+                <TableCell colSpan={columns.length} className="h-24 text-center">
                   No results.
                 </TableCell>
               </TableRow>
@@ -689,8 +623,8 @@ export function DataTable({ data }: DataTableProps) {
 
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
-          {table.getFilteredSelectedRowModel().rows.length} of{" "}
-          {table.getFilteredRowModel().rows.length} row(s) selected.
+          {table.getFilteredSelectedRowModel().rows.length} of {table.getFilteredRowModel().rows.length} row(s)
+          selected.
         </div>
         <div className="space-x-2">
           <Button
@@ -701,18 +635,13 @@ export function DataTable({ data }: DataTableProps) {
           >
             Previous
           </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
-          >
+          <Button variant="outline" size="sm" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>
             Next
           </Button>
         </div>
       </div>
     </div>
-  )
+  );
 }
 ```
 
@@ -728,10 +657,10 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function EditProfileDialog() {
   return (
@@ -742,30 +671,20 @@ export function EditProfileDialog() {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
+          <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input
-              id="name"
-              defaultValue="Pedro Duarte"
-              className="col-span-3"
-            />
+            <Input id="name" defaultValue="Pedro Duarte" className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>
-            <Input
-              id="username"
-              defaultValue="@peduarte"
-              className="col-span-3"
-            />
+            <Input id="username" defaultValue="@peduarte" className="col-span-3" />
           </div>
         </div>
         <DialogFooter>
@@ -778,17 +697,17 @@ export function EditProfileDialog() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
 ```
 
 ## Command Menu (Cmd+K)
 
 ```tsx
-"use client"
+"use client";
 
-import * as React from "react"
-import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react"
+import * as React from "react";
+import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react";
 
 import {
   CommandDialog,
@@ -799,22 +718,22 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/components/ui/command"
+} from "@/components/ui/command";
 
 export function CommandMenu() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault()
-        setOpen((open) => !open)
+        e.preventDefault();
+        setOpen((open) => !open);
       }
-    }
+    };
 
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
-  }, [])
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
 
   return (
     <CommandDialog open={open} onOpenChange={setOpen}>
@@ -855,29 +774,29 @@ export function CommandMenu() {
         </CommandGroup>
       </CommandList>
     </CommandDialog>
-  )
+  );
 }
 ```
 
 ## Dark Mode Toggle
 
 ```tsx
-"use client"
+"use client";
 
-import * as React from "react"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
 export function ThemeToggle() {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -889,24 +808,19 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
 ```
 
 ## Output Format
 
 Provide:
+
 - Component implementations with proper TypeScript types
 - Form validation with Zod schemas
 - Accessible component patterns
@@ -914,6 +828,7 @@ Provide:
 - Dark mode support
 
 Sources:
+
 - [shadcn/ui Documentation](https://ui.shadcn.com/)
 - [Radix UI Primitives](https://www.radix-ui.com/docs/primitives)
 - [Tailwind CSS](https://tailwindcss.com/docs)

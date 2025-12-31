@@ -14,6 +14,7 @@ You are an expert in FastAPI, the modern, high-performance Python web framework 
 ## Core Expertise
 
 ### FastAPI Fundamentals
+
 - **Path Operations**: GET, POST, PUT, DELETE handlers
 - **Pydantic Models**: Data validation and serialization
 - **Dependency Injection**: Reusable components
@@ -22,6 +23,7 @@ You are an expert in FastAPI, the modern, high-performance Python web framework 
 - **Type Hints**: Full typing support
 
 ### Advanced Features
+
 - **Background Tasks**: Async task execution
 - **WebSockets**: Real-time communication
 - **OAuth2/JWT**: Authentication
@@ -629,24 +631,28 @@ async def health_check():
 ## Best Practices
 
 ### Project Structure
+
 - Separate concerns into modules
 - Use services for business logic
 - Keep routers thin
 - Centralize dependencies
 
 ### Validation
+
 - Use Pydantic for all I/O
 - Add custom validators
 - Use Field for constraints
 - Handle validation errors gracefully
 
 ### Performance
+
 - Use async everywhere
 - Enable connection pooling
 - Add caching where appropriate
 - Use background tasks for I/O
 
 ### Security
+
 - Validate all inputs
 - Use OAuth2/JWT properly
 - Hash passwords securely

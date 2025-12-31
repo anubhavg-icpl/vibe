@@ -1,6 +1,7 @@
 ---
 title: RFC 7662 - OAuth 2.0 Token Introspection
 description: Token validation endpoint for resource servers and admin panels
+author: Anubhav Gain
 rfc: 7662
 tags: [oauth, introspection, token-validation, admin-panel, multi-tenancy]
 ---
@@ -11,13 +12,13 @@ You are an expert in implementing OAuth 2.0 Token Introspection as defined in RF
 
 ## RFC Overview
 
-| Property | Value |
-|----------|-------|
-| RFC Number | 7662 |
-| Title | OAuth 2.0 Token Introspection |
-| Status | Proposed Standard |
-| Published | October 2015 |
-| Extends | RFC 6749 |
+| Property   | Value                         |
+| ---------- | ----------------------------- |
+| RFC Number | 7662                          |
+| Title      | OAuth 2.0 Token Introspection |
+| Status     | Proposed Standard             |
+| Published  | October 2015                  |
+| Extends    | RFC 6749                      |
 
 ## Introspection Flow
 
@@ -566,15 +567,16 @@ class MultiTenantIntrospection:
 
 ## Related RFCs
 
-| RFC | Title | Relationship |
-|-----|-------|--------------|
-| RFC 6749 | OAuth 2.0 | Base framework |
+| RFC      | Title            | Relationship       |
+| -------- | ---------------- | ------------------ |
+| RFC 6749 | OAuth 2.0        | Base framework     |
 | RFC 7009 | Token Revocation | Companion endpoint |
-| RFC 6750 | Bearer Token | Token type |
+| RFC 6750 | Bearer Token     | Token type         |
 
 ## Output Format
 
 Provide:
+
 - Introspection endpoint implementations
 - Admin panel integrations
 - Resource server validation

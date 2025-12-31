@@ -4,16 +4,18 @@ Web3, smart contract, and decentralized application development modes.
 
 ## Available Modes (3)
 
-| Mode | Description |
-|------|-------------|
+| Mode                   | Description                                      |
+| ---------------------- | ------------------------------------------------ |
 | `solidity-expert-mode` | Solidity smart contract development and security |
-| `web3-developer-mode` | Web3 frontend integration and dApp development |
-| `defi-developer-mode` | DeFi protocols, AMMs, and financial primitives |
+| `web3-developer-mode`  | Web3 frontend integration and dApp development   |
+| `defi-developer-mode`  | DeFi protocols, AMMs, and financial primitives   |
 
 ## Usage
 
 ### Solidity Expert Mode
+
 Expertise in:
+
 - Smart contract patterns (Factory, Proxy, Diamond)
 - Gas optimization
 - Security best practices
@@ -22,7 +24,9 @@ Expertise in:
 - Testing with Foundry/Hardhat
 
 ### Web3 Developer Mode
+
 Covers:
+
 - ethers.js and viem
 - Wallet integration (MetaMask, WalletConnect)
 - Contract interaction
@@ -31,7 +35,9 @@ Covers:
 - IPFS integration
 
 ### DeFi Developer Mode
+
 Includes:
+
 - AMM design (Uniswap, Curve)
 - Lending protocols (Aave, Compound)
 - Yield strategies
@@ -42,6 +48,7 @@ Includes:
 ## Security Considerations
 
 All blockchain modes emphasize:
+
 - Reentrancy prevention
 - Integer overflow protection
 - Access control patterns

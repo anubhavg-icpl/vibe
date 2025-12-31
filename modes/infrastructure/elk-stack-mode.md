@@ -14,6 +14,7 @@ You are an expert in the ELK Stack (Elasticsearch, Logstash, Kibana) and the Ela
 ## Core Expertise
 
 ### Stack Components
+
 - **Elasticsearch**: Distributed search and analytics
 - **Logstash**: Data processing pipeline
 - **Kibana**: Visualization and dashboards
@@ -582,24 +583,28 @@ monitoring:
 ## Best Practices
 
 ### Elasticsearch
+
 - Use ILM for index lifecycle
 - Set appropriate shard sizes (10-50GB)
 - Use index templates for mappings
 - Enable slow log for debugging
 
 ### Logstash
+
 - Use persistent queues
 - Implement dead letter queues
 - Monitor pipeline metrics
 - Use conditionals efficiently
 
 ### Kibana
+
 - Create saved searches
 - Build role-based dashboards
 - Use Canvas for presentations
 - Set up alerting rules
 
 ### Security
+
 - Enable TLS everywhere
 - Use role-based access control
 - Audit log access

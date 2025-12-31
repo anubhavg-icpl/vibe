@@ -1,6 +1,7 @@
 ---
 title: Multi-Tenancy RFC Architecture
 description: Comprehensive multi-tenancy architecture guide using RFC standards for identity, authorization, and provisioning
+author: Anubhav Gain
 tags: [multi-tenancy, architecture, oauth, scim, jwt, identity]
 ---
 
@@ -55,31 +56,31 @@ You are an expert in designing multi-tenant identity and access management syste
 
 ### Authorization Layer
 
-| RFC | Title | Multi-Tenancy Use |
-|-----|-------|-------------------|
-| RFC 6749 | OAuth 2.0 | Tenant-scoped authorization |
+| RFC      | Title        | Multi-Tenancy Use               |
+| -------- | ------------ | ------------------------------- |
+| RFC 6749 | OAuth 2.0    | Tenant-scoped authorization     |
 | RFC 6750 | Bearer Token | Tenant-bound token transmission |
-| RFC 7636 | PKCE | Security for all clients |
-| RFC 9449 | DPoP | Sender-constrained tokens |
-| RFC 8705 | mTLS | Certificate-based tenant auth |
-| RFC 9126 | PAR | Secure request submission |
-| RFC 9207 | Issuer ID | Prevent tenant mix-up attacks |
+| RFC 7636 | PKCE         | Security for all clients        |
+| RFC 9449 | DPoP         | Sender-constrained tokens       |
+| RFC 8705 | mTLS         | Certificate-based tenant auth   |
+| RFC 9126 | PAR          | Secure request submission       |
+| RFC 9207 | Issuer ID    | Prevent tenant mix-up attacks   |
 
 ### Token Layer
 
-| RFC | Title | Multi-Tenancy Use |
-|-----|-------|-------------------|
-| RFC 7519 | JWT | Tenant claims in tokens |
-| RFC 7515 | JWS | Per-tenant signing keys |
-| RFC 7516 | JWE | Tenant-specific encryption |
-| RFC 7517 | JWK | Tenant key management |
+| RFC      | Title          | Multi-Tenancy Use          |
+| -------- | -------------- | -------------------------- |
+| RFC 7519 | JWT            | Tenant claims in tokens    |
+| RFC 7515 | JWS            | Per-tenant signing keys    |
+| RFC 7516 | JWE            | Tenant-specific encryption |
+| RFC 7517 | JWK            | Tenant key management      |
 | RFC 9068 | JWT AT Profile | Standardized access tokens |
 
 ### Provisioning Layer
 
-| RFC | Title | Multi-Tenancy Use |
-|-----|-------|-------------------|
-| RFC 7643 | SCIM Schema | Tenant-scoped user resources |
+| RFC      | Title         | Multi-Tenancy Use            |
+| -------- | ------------- | ---------------------------- |
+| RFC 7643 | SCIM Schema   | Tenant-scoped user resources |
 | RFC 7644 | SCIM Protocol | Tenant-isolated provisioning |
 
 ## Implementation
@@ -583,18 +584,19 @@ class TenantIsolationValidator:
 
 ## Related RFC Modes
 
-| Mode | Purpose |
-|------|---------|
-| `rfc-6749-oauth2-mode` | OAuth 2.0 implementation |
-| `rfc-7636-pkce-mode` | PKCE security |
-| `rfc-9449-dpop-mode` | DPoP token binding |
-| `rfc-7519-jwt-mode` | JWT tokens |
-| `rfc-7643-scim-schema-mode` | SCIM resources |
-| `rfc-7644-scim-protocol-mode` | SCIM API |
+| Mode                          | Purpose                  |
+| ----------------------------- | ------------------------ |
+| `rfc-6749-oauth2-mode`        | OAuth 2.0 implementation |
+| `rfc-7636-pkce-mode`          | PKCE security            |
+| `rfc-9449-dpop-mode`          | DPoP token binding       |
+| `rfc-7519-jwt-mode`           | JWT tokens               |
+| `rfc-7643-scim-schema-mode`   | SCIM resources           |
+| `rfc-7644-scim-protocol-mode` | SCIM API                 |
 
 ## Output Format
 
 Provide:
+
 - Multi-tenant architecture designs
 - RFC-compliant implementations
 - Tenant isolation patterns

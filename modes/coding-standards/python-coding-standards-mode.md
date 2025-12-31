@@ -21,6 +21,7 @@ You are a Python code quality expert. Your role is to enforce Pythonic patterns,
 ## Naming Conventions
 
 ### Variables and Functions
+
 ```python
 # ✅ snake_case for variables and functions
 user_name = "Alice"
@@ -40,6 +41,7 @@ def _validate_input(data: dict) -> bool:
 ```
 
 ### Classes and Types
+
 ```python
 # ✅ PascalCase for classes
 class UserAccount:
@@ -58,6 +60,7 @@ Callback = Callable[[str], None]
 ```
 
 ### Constants and Modules
+
 ```python
 # ✅ SCREAMING_SNAKE_CASE for constants
 MAX_CONNECTIONS = 100
@@ -71,6 +74,7 @@ API_BASE_URL = "https://api.example.com"
 ```
 
 ### Special Naming Patterns
+
 ```python
 # ✅ Dunder methods for special behaviors
 class User:
@@ -99,6 +103,7 @@ def can_access_resource(user: User, resource: Resource) -> bool:
 ## Type Hints
 
 ### Basic Type Annotations
+
 ```python
 from typing import Any
 from collections.abc import Callable, Iterable, Mapping, Sequence
@@ -126,6 +131,7 @@ def transform(mapping: Mapping[str, Any]) -> dict[str, str]:
 ```
 
 ### Complex Types
+
 ```python
 from typing import TypeVar, Generic, Protocol, TypeAlias
 
@@ -160,6 +166,7 @@ Handler: TypeAlias = Callable[[Request], Response]
 ```
 
 ### Dataclasses and Attrs
+
 ```python
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -199,6 +206,7 @@ class Config:
 ## Code Style
 
 ### Ruff Configuration
+
 ```toml
 # pyproject.toml
 [tool.ruff]
@@ -235,6 +243,7 @@ known-first-party = ["mypackage"]
 ```
 
 ### Import Organization
+
 ```python
 # ✅ Group imports: stdlib, third-party, local
 # Separate groups with blank line
@@ -259,6 +268,7 @@ from .utils import helper_function
 ```
 
 ### String Formatting
+
 ```python
 # ✅ Use f-strings for interpolation
 name = "Alice"
@@ -292,6 +302,7 @@ long_message = (
 ## Error Handling
 
 ### Exception Handling
+
 ```python
 # ✅ Catch specific exceptions
 try:
@@ -328,6 +339,7 @@ except Exception:  # Too broad!
 ```
 
 ### Custom Exceptions
+
 ```python
 # ✅ Create exception hierarchies
 class AppError(Exception):
@@ -356,6 +368,7 @@ except HTTPError as e:
 ```
 
 ### Context Managers
+
 ```python
 # ✅ Use context managers for resource management
 with open("file.txt") as f:
@@ -394,6 +407,7 @@ async def database_connection() -> AsyncIterator[Connection]:
 ## Functions
 
 ### Function Design
+
 ```python
 # ✅ Single responsibility
 def validate_email(email: str) -> bool:
@@ -436,6 +450,7 @@ def fetch_user(user_id: int) -> User:
 ```
 
 ### Default Arguments
+
 ```python
 # ❌ Mutable default argument
 def bad_append(item: str, items: list[str] = []) -> list[str]:
@@ -456,6 +471,7 @@ class Container:
 ```
 
 ### Decorators
+
 ```python
 from functools import wraps
 from typing import ParamSpec, TypeVar
@@ -487,6 +503,7 @@ def fetch_data(url: str) -> dict:
 ## Classes
 
 ### Class Design
+
 ```python
 # ✅ Prefer composition over inheritance
 class EmailService:
@@ -525,6 +542,7 @@ class Point:
 ```
 
 ### Abstract Base Classes
+
 ```python
 from abc import ABC, abstractmethod
 
@@ -562,6 +580,7 @@ class PostgresRepository(Repository):
 ## Async Programming
 
 ### Async/Await
+
 ```python
 import asyncio
 from collections.abc import AsyncIterator
@@ -596,6 +615,7 @@ async def get_connection() -> AsyncIterator[Connection]:
 ```
 
 ### Task Management
+
 ```python
 # ✅ Handle task cancellation
 async def process_with_timeout(data: bytes, timeout: float = 5.0) -> Result:
@@ -627,6 +647,7 @@ async def fetch_with_limit(urls: list[str], max_concurrent: int = 10) -> list[Re
 ## Testing
 
 ### Pytest Best Practices
+
 ```python
 import pytest
 from unittest.mock import Mock, patch
@@ -675,6 +696,7 @@ def test_email_validation(email: str, expected_valid: bool):
 ```
 
 ### Async Tests
+
 ```python
 import pytest
 
@@ -701,6 +723,7 @@ async def test_with_async_fixture(async_client: AsyncClient):
 ## Documentation
 
 ### Docstrings (Google Style)
+
 ```python
 def fetch_users(
     *,
@@ -754,6 +777,7 @@ class UserService:
 ## Logging
 
 ### Structured Logging
+
 ```python
 import logging
 import structlog
@@ -795,6 +819,7 @@ def process_order(order_id: str, user_id: str) -> None:
 ## Security
 
 ### Input Validation
+
 ```python
 from pydantic import BaseModel, EmailStr, Field, validator
 
@@ -821,6 +846,7 @@ def create_user(request: CreateUserRequest) -> User:
 ```
 
 ### Secrets Management
+
 ```python
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings
