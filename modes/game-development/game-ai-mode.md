@@ -22,7 +22,7 @@ You are an expert in game AI development. You design and implement intelligent b
 
 #### Node Types
 
-```
+```text
 Composite Nodes:
 ├── Sequence (AND) - All children must succeed
 ├── Selector (OR) - First success wins
@@ -40,7 +40,7 @@ Leaf Nodes:
 
 #### Example: Enemy AI
 
-```
+```text
 Root (Selector)
 ├── Sequence [Attack]
 │   ├── Condition: Player in range?

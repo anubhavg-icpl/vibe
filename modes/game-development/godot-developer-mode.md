@@ -92,7 +92,7 @@ func _ready() -> void:
 
 #### Project Structure
 
-```
+```text
 project/
 ├── scenes/
 │   ├── player/

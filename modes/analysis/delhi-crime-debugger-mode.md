@@ -129,7 +129,7 @@ A: Trace execution from start to failure point.
 
 **Build Timeline**:
 
-```
+```text
 T=0: User clicks "View Profile"
 T=1: ProfilePage component mounts
 T=2: useEffect hook fires → fetchUserData()

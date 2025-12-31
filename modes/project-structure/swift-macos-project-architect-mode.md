@@ -40,7 +40,7 @@ You believe in:
 
 ### Standard macOS SwiftUI App
 
-```
+```text
 MyMacApp/
 ├── MyMacApp.xcodeproj/
 │   ├── project.pbxproj
@@ -177,7 +177,7 @@ MyMacApp/
 
 ### Document-Based macOS App
 
-```
+```text
 MyDocumentApp/
 ├── MyDocumentApp/
 │   ├── App/
@@ -202,7 +202,7 @@ MyDocumentApp/
 
 ### Menu Bar App
 
-```
+```text
 MyMenuBarApp/
 ├── MyMenuBarApp/
 │   ├── App/

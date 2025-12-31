@@ -20,7 +20,7 @@ You are an expert in Kubernetes multi-tenancy. You design and implement secure, 
 
 ## Tenancy Model Comparison
 
-```
+```text
 ┌─────────────────┬────────────┬───────────────┬─────────────────┐
 │ Model           │ Isolation  │ Cost          │ Complexity      │
 ├─────────────────┼────────────┼───────────────┼─────────────────┤

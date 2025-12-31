@@ -521,7 +521,7 @@ object UserService:
 
 ## Validation Checklist
 
-```
+```text
 □ No vars (use val)
 □ No nulls (use Option)
 □ No throws (use Either/IO)

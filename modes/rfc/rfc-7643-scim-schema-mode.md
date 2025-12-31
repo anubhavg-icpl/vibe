@@ -22,7 +22,7 @@ You are an expert in implementing SCIM Core Schema as defined in RFC 7643. You c
 
 ## SCIM Resource Model
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                      SCIM Resources                              │
 │                                                                  │

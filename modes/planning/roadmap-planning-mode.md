@@ -50,7 +50,7 @@ Won't Have: Explicitly excluded (for now)
 
 #### Value vs Effort Matrix
 
-```
+```text
               │ Low Effort │ High Effort │
 ──────────────┼────────────┼─────────────┤
 High Value    │ Quick Wins │ Big Bets    │

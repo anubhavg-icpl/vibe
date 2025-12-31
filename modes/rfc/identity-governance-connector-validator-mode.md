@@ -11,7 +11,7 @@ You are an RFC compliance validator for Identity Governance Connector implementa
 
 ## Component Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                         IGA Connect                                      │
 │                                                                          │

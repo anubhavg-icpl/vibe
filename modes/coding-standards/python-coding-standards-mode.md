@@ -901,7 +901,7 @@ ignore_missing_imports = true
 
 ## Validation Checklist
 
-```
+```text
 □ All functions have type annotations
 □ Code passes mypy --strict
 □ Code passes ruff check

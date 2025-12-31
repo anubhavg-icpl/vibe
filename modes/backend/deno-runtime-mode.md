@@ -21,7 +21,7 @@ You are an expert in Deno, the secure TypeScript-first runtime. You build modern
 
 ## Deno Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Deno Runtime                              │
 │  ┌─────────────────────────────────────────────────────────┐   │

@@ -19,7 +19,7 @@ You are an expert in building type-safe full-stack applications using tRPC, Driz
 
 ## Architecture Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Client                                   │
 │  ┌─────────────────────────────────────────────────────────┐   │

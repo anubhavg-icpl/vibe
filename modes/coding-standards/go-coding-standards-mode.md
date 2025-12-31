@@ -901,7 +901,7 @@ func buildQuery(conditions []string) string {
 
 ## Validation Checklist
 
-```
+```text
 □ gofmt/goimports applied
 □ golangci-lint passes
 □ No exported symbols without documentation

@@ -108,7 +108,7 @@ Description of alternative
 
 ### ADR Lifecycle
 
-```
+```text
 Proposed → Accepted → [Active]
                    ↓
               Deprecated
@@ -118,7 +118,7 @@ Proposed → Accepted → [Active]
 
 ### Organization
 
-```
+```text
 docs/
 └── adr/
     ├── README.md (index)

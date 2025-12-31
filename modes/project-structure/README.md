@@ -143,7 +143,7 @@ Each mode enforces modern best practices:
 
 Used by: **Java Spring**, **Go** (large projects), **.NET**
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │              Infrastructure             │
 │  ┌───────────────────────────────────┐  │
@@ -162,7 +162,7 @@ Used by: **Java Spring**, **Go** (large projects), **.NET**
 
 Used by: **.NET**, **Kotlin/Android**, **Swift/iOS**
 
-```
+```text
 Presentation → Application → Domain ← Infrastructure
                     ↑
               (Use Cases)
@@ -172,7 +172,7 @@ Presentation → Application → Domain ← Infrastructure
 
 Used by: **Next.js**, **Kotlin/Android**, **Swift/iOS**
 
-```
+```text
 feature/
 ├── authentication/
 │   ├── components/
@@ -187,7 +187,7 @@ feature/
 
 ### Rust
 
-```
+```text
 my-workspace/
 ├── Cargo.toml          # Virtual manifest
 ├── crates/             # All workspace crates
@@ -196,7 +196,7 @@ my-workspace/
 
 ### Python
 
-```
+```text
 my-project/
 ├── pyproject.toml      # Single source of truth
 ├── src/my_package/     # src layout
@@ -205,7 +205,7 @@ my-project/
 
 ### Next.js (14/15/16)
 
-```
+```text
 my-app/
 ├── src/
 │   ├── app/            # App Router
@@ -217,7 +217,7 @@ my-app/
 
 ### Java Spring (Hexagonal)
 
-```
+```text
 src/main/java/com/example/
 ├── domain/             # Pure business logic
 ├── application/        # Use cases, ports
@@ -226,7 +226,7 @@ src/main/java/com/example/
 
 ### Go
 
-```
+```text
 my-app/
 ├── cmd/api/            # Entry points
 ├── internal/           # Private code
@@ -235,7 +235,7 @@ my-app/
 
 ### Kotlin/Android
 
-```
+```text
 my-android-app/
 ├── app/                # Main application
 ├── feature/            # Feature modules
@@ -246,7 +246,7 @@ my-android-app/
 
 ### TypeScript/Node.js (Turborepo)
 
-```
+```text
 my-platform/
 ├── apps/               # Applications
 ├── packages/           # Shared packages
@@ -256,7 +256,7 @@ my-platform/
 
 ### React/Vite
 
-```
+```text
 my-react-app/
 ├── src/
 │   ├── features/       # Feature modules
@@ -269,7 +269,7 @@ my-react-app/
 
 ### Scala/sbt
 
-```
+```text
 my-scala-app/
 ├── build.sbt           # Build definition
 ├── project/            # sbt plugins
@@ -279,7 +279,7 @@ my-scala-app/
 
 ### C/C++ (CMake)
 
-```
+```text
 my-cpp-project/
 ├── CMakeLists.txt      # Root build
 ├── src/                # Implementation
@@ -290,7 +290,7 @@ my-cpp-project/
 
 ### macOS/Swift (Xcode)
 
-```
+```text
 MyMacApp/
 ├── MyMacApp.xcodeproj
 ├── MyMacApp/
@@ -301,7 +301,7 @@ MyMacApp/
 
 ### Browser Extension
 
-```
+```text
 my-extension/
 ├── src/
 │   ├── background/     # Service worker

@@ -22,7 +22,7 @@ You are an expert in implementing OAuth 2.0 Token Introspection as defined in RF
 
 ## Introspection Flow
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                     Token Introspection Flow                             │
 │                                                                          │

@@ -13,7 +13,7 @@ You are an expert in structuring production-ready Tauri desktop applications wit
 
 ## Project Structure
 
-```
+```text
 tauri-project/
 ├── src-tauri/
 │   ├── src/

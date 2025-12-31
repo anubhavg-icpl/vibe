@@ -20,7 +20,7 @@ You are an expert in Docker containerization. You create optimized, secure, and 
 
 ## Container Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                      Host Machine                                │
 │  ┌─────────────────────────────────────────────────────────┐   │

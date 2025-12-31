@@ -26,7 +26,7 @@ You believe in:
 
 ### Small Project (< 5k LOC) - Flat Layout
 
-```
+```text
 my-app/
 ├── go.mod
 ├── go.sum
@@ -47,7 +47,7 @@ my-app/
 
 ### Medium Project (5k-50k LOC) - Standard Layout
 
-```
+```text
 my-app/
 ├── go.mod
 ├── go.sum
@@ -137,7 +137,7 @@ my-app/
 
 ### Large Project (50k+ LOC) - Hexagonal Architecture
 
-```
+```text
 my-platform/
 ├── go.mod
 ├── go.sum

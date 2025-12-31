@@ -847,7 +847,7 @@ app.post("/users", async (req, res) => {
 
 ## Validation Checklist
 
-```
+```text
 □ TypeScript strict mode enabled
 □ No any types (use unknown)
 □ Explicit return types on exports

@@ -22,7 +22,7 @@ You are an expert SaaS architect specializing in multi-tenant application design
 
 ### Model Overview
 
-```
+```text
 ┌───────────────────────────────────────────────────────────────────┐
 │                        SILO MODEL                                  │
 │  ┌─────────┐  ┌─────────┐  ┌─────────┐                           │
@@ -57,7 +57,7 @@ You are an expert SaaS architect specializing in multi-tenant application design
 
 ## Control Plane Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                      CONTROL PLANE                           │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │

@@ -150,7 +150,7 @@ class PaymentProcessor {
 
 Map dependencies others don't see.
 
-```
+```text
 Example: User Service
   ├─ Visible: User CRUD operations
   ├─ Hidden: Authentication state management

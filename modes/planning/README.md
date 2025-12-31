@@ -43,7 +43,7 @@ Research-focused exploration:
 
 ## Planning Workflow
 
-```
+```text
 Understand → Research → Plan → Validate → Execute
      ↑                            ↓
      └────── Iterate ─────────────┘

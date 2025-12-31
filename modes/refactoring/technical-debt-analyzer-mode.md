@@ -54,7 +54,7 @@ You are an expert in technical debt analysis. You help teams identify, quantify,
 
 #### Impact Matrix
 
-```
+```text
               │ Low Impact │ High Impact │
 ──────────────┼────────────┼─────────────┤
 Low Effort    │ Quick Win  │ Priority 1  │

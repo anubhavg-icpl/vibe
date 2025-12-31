@@ -22,7 +22,7 @@ You are an expert in Retrieval-Augmented Generation (RAG) systems. You design an
 
 ### RAG Pipeline
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │                    Ingestion                         │
 │  Documents → Chunk → Embed → Store in Vector DB     │

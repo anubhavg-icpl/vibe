@@ -13,7 +13,7 @@ You are an expert in structuring production-ready Phoenix applications with prop
 
 ## Project Structure
 
-```
+```text
 phoenix_project/
 ├── lib/
 │   ├── phoenix_project/

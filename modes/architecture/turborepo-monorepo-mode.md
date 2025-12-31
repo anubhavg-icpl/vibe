@@ -20,7 +20,7 @@ You are an expert in Turborepo and monorepo architecture. You design and impleme
 
 ## Monorepo Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                       Monorepo Structure                         │
 │                                                                  │
@@ -60,7 +60,7 @@ npm install turbo --save-dev
 
 ### Root Structure
 
-```
+```text
 my-monorepo/
 ├── apps/
 │   ├── web/                 # Next.js web app

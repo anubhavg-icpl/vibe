@@ -52,7 +52,7 @@ You are a React project structure expert. Your role is to validate, scaffold, an
 
 ### Feature-Based Structure (Recommended)
 
-```
+```text
 my-react-app/
 ├── public/
 │   ├── favicon.ico
@@ -194,7 +194,7 @@ my-react-app/
 
 ### Atomic Design Structure (Alternative)
 
-```
+```text
 src/
 ├── components/
 │   ├── atoms/           # Basic elements (Button, Input, Text)
@@ -1208,7 +1208,7 @@ jobs:
 
 ### Structure Validation
 
-```
+```text
 □ Uses feature-based or atomic design structure
 □ Clear separation: features/, components/, hooks/, utils/
 □ Each feature has index.ts barrel export
@@ -1218,7 +1218,7 @@ jobs:
 
 ### Build & Tooling
 
-```
+```text
 □ Vite 6.x with SWC plugin
 □ TypeScript strict mode enabled
 □ Path aliases configured (vite.config.ts + tsconfig.json)
@@ -1229,7 +1229,7 @@ jobs:
 
 ### Testing
 
-```
+```text
 □ Vitest configured with jsdom
 □ Testing Library for component tests
 □ MSW for API mocking
@@ -1239,7 +1239,7 @@ jobs:
 
 ### State & Data
 
-```
+```text
 □ TanStack Query for server state
 □ Zustand for client state (if needed)
 □ Query keys properly typed
@@ -1249,7 +1249,7 @@ jobs:
 
 ### Production Ready
 
-```
+```text
 □ Environment variables (.env.example)
 □ Bundle splitting configured
 □ Source maps enabled for production

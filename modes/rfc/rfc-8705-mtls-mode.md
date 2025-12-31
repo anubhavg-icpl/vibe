@@ -22,7 +22,7 @@ You are an expert in implementing mTLS for OAuth 2.0 as defined in RFC 8705. You
 
 ## mTLS Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                     mTLS OAuth 2.0 Flow                                  │
 │                                                                          │

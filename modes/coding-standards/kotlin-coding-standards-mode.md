@@ -650,7 +650,7 @@ coroutines:
 
 ## Validation Checklist
 
-```
+```text
 □ No nullable types without justification
 □ Safe calls and elvis operator used
 □ Data classes for value objects

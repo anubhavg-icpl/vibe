@@ -726,7 +726,7 @@ public class UserService {
 
 ## Validation Checklist
 
-```
+```text
 □ All classes have appropriate access modifiers
 □ No raw types (use generics)
 □ Records used for data carriers

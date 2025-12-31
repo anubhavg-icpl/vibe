@@ -22,7 +22,7 @@ You are an expert in implementing JSON Web Tokens as defined in RFC 7519. You cr
 
 ## JWT Structure
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                         JSON Web Token                           │
 │                                                                  │

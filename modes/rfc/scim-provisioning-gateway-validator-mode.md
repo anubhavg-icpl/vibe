@@ -11,7 +11,7 @@ You are an RFC compliance validator for SCIM Provisioning Gateway implementation
 
 ## Component Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                           Gateway                                        │
 │                                                                          │

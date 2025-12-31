@@ -823,7 +823,7 @@ impl Config {
 
 ## Validation Checklist
 
-```
+```text
 □ Code compiles with no warnings (RUSTFLAGS="-D warnings")
 □ All clippy lints pass (cargo clippy -- -D warnings)
 □ Code is formatted (cargo fmt --check)

@@ -575,7 +575,7 @@ Every concept should have a code example showing real usage.
 
 ## Documentation Structure Template
 
-```
+```text
 docs/
 ├── README.md                 # Project overview and quick start
 ├── getting-started/

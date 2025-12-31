@@ -36,7 +36,7 @@ You believe in:
 
 ### Standard SwiftUI App (MVVM + Coordinator)
 
-```
+```text
 MyApp/
 ├── MyApp.xcodeproj
 ├── MyApp/
@@ -143,7 +143,7 @@ MyApp/
 
 ### Large-Scale Modular Architecture (TCA + SPM)
 
-```
+```text
 MyPlatform/
 ├── MyPlatform.xcworkspace
 ├── App/                                   # Main app target

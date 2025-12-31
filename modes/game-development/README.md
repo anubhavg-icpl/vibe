@@ -52,7 +52,7 @@ Includes:
 
 ## Game Development Pipeline
 
-```
+```text
 Concept → Prototype → Production → Polish → Release → Live Ops
 ```
 

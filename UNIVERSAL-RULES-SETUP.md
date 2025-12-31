@@ -28,7 +28,7 @@ vibe/modes/specialized/universal-rules-engine-mode.md
 
 This repository includes starter rules in `.ai/rules/`:
 
-```
+```text
 .ai/rules/
 ├── core/
 │   ├── conversation.rule.md       # Rule transparency

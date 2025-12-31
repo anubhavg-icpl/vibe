@@ -117,7 +117,7 @@ Copy the mode content into your AI assistant. That's it. That's the whole proces
 
 ## Repository Structure
 
-```
+```text
 vibe/
 ├── .ai/rules/              # Universal rules (works everywhere)
 ├── modes/
@@ -141,7 +141,7 @@ vibe/
 
 Set up rules once, apply everywhere:
 
-```
+```text
 .ai/rules/
 ├── base.md          # Core coding standards
 ├── security.md      # Security requirements

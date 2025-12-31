@@ -106,7 +106,7 @@ export default async function ProductsPage() {
 
 ### Standard Next.js App (Recommended)
 
-```
+```text
 my-nextjs-app/
 ├── src/
 │   ├── app/                           # App Router (routes & layouts)
@@ -224,7 +224,7 @@ my-nextjs-app/
 
 ### Large-Scale Enterprise Structure
 
-```
+```text
 my-enterprise-app/
 ├── src/
 │   ├── app/
