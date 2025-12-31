@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vibe.dev/schemas/modes-index.json",
+  "title": "Vibe Modes Index Schema",
+  "description": "Schema for the modes-index.json file that tracks all chat modes",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["generatedAt", "totalModes", "categories"],
+  "properties": {
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of when the index was generated"
+    },
+    "totalModes": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total count of all modes across all categories"
+    },
+    "categories": {
+      "type": "array",
+      "description": "Array of mode categories",
+      "items": {
+        "$ref": "#/definitions/category"
+      }
+    },
+    "featured": {
+      "type": "array",
+      "description": "Featured/highlighted modes",
+      "items": {
+        "$ref": "#/definitions/featuredMode"
+      }
+    }
+  },
+  "definitions": {
+    "category": {
+      "type": "object",
+      "required": ["name", "title", "modes"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Category folder name (kebab-case)"
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable category title"
+        },
+        "modes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/mode"
+          }
+        }
+      }
+    },
+    "mode": {
+      "type": "object",
+      "required": ["slug", "title", "description", "path"],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Mode file name without .md extension"
+        },
+        "title": {
+          "type": "string",
+          "description": "Mode title from frontmatter"
+        },
+        "description": {
+          "type": "string",
+          "description": "Mode description from frontmatter"
+        },
+        "path": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Path array [category, slug]"
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Optional tags for filtering"
+        },
+        "rfc": {
+          "type": "integer",
+          "description": "RFC number if this mode documents an RFC standard"
+        }
+      }
+    },
+    "featuredMode": {
+      "type": "object",
+      "required": ["slug", "title", "description", "path"],
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "path": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "badge": {
+          "type": "string",
+          "description": "Special badge label for featured mode"
+        }
+      }
+    }
+  }
+}

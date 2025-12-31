@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2025-12-30T12:04:48.700249Z",
-  "totalModes": 258,
+  "$schema": "./modes-index.schema.json",
+  "generatedAt": "2025-12-31T00:40:38.109115Z",
+  "totalModes": 266,
   "categories": [
     {
       "name": "ai-ml",
@@ -2074,6 +2075,147 @@
           "path": [
             "refactoring",
             "technical-debt-analyzer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rfc",
+      "title": "RFC Standards",
+      "modes": [
+        {
+          "slug": "rfc-6749-oauth2-mode",
+          "title": "RFC 6749 - OAuth 2.0 Authorization Framework",
+          "description": "Complete implementation guide for OAuth 2.0 Authorization Framework with multi-tenancy support",
+          "path": [
+            "rfc",
+            "rfc-6749-oauth2-mode"
+          ],
+          "tags": [
+            "oauth",
+            "authorization",
+            "identity",
+            "multi-tenancy"
+          ],
+          "rfc": 6749
+        },
+        {
+          "slug": "rfc-6750-bearer-token-mode",
+          "title": "RFC 6750 - Bearer Token Usage",
+          "description": "Implementation guide for OAuth 2.0 Bearer Token Usage with multi-tenancy security",
+          "path": [
+            "rfc",
+            "rfc-6750-bearer-token-mode"
+          ],
+          "tags": [
+            "oauth",
+            "bearer-token",
+            "authorization",
+            "http",
+            "multi-tenancy"
+          ],
+          "rfc": 6750
+        },
+        {
+          "slug": "rfc-7519-jwt-mode",
+          "title": "RFC 7519 - JSON Web Token (JWT)",
+          "description": "Complete JWT implementation guide with claims validation and multi-tenancy patterns",
+          "path": [
+            "rfc",
+            "rfc-7519-jwt-mode"
+          ],
+          "tags": [
+            "jwt",
+            "jose",
+            "token",
+            "claims",
+            "multi-tenancy"
+          ],
+          "rfc": 7519
+        },
+        {
+          "slug": "rfc-7636-pkce-mode",
+          "title": "RFC 7636 - PKCE",
+          "description": "Proof Key for Code Exchange implementation for secure OAuth 2.0 authorization",
+          "path": [
+            "rfc",
+            "rfc-7636-pkce-mode"
+          ],
+          "tags": [
+            "oauth",
+            "pkce",
+            "security",
+            "authorization-code",
+            "multi-tenancy"
+          ],
+          "rfc": 7636
+        },
+        {
+          "slug": "rfc-7643-scim-schema-mode",
+          "title": "RFC 7643 - SCIM Core Schema",
+          "description": "System for Cross-domain Identity Management schema definitions for user provisioning",
+          "path": [
+            "rfc",
+            "rfc-7643-scim-schema-mode"
+          ],
+          "tags": [
+            "scim",
+            "identity",
+            "provisioning",
+            "schema",
+            "multi-tenancy"
+          ],
+          "rfc": 7643
+        },
+        {
+          "slug": "rfc-7644-scim-protocol-mode",
+          "title": "RFC 7644 - SCIM Protocol",
+          "description": "SCIM REST API protocol for identity provisioning operations",
+          "path": [
+            "rfc",
+            "rfc-7644-scim-protocol-mode"
+          ],
+          "tags": [
+            "scim",
+            "rest",
+            "api",
+            "provisioning",
+            "multi-tenancy"
+          ],
+          "rfc": 7644
+        },
+        {
+          "slug": "rfc-9449-dpop-mode",
+          "title": "RFC 9449 - DPoP (Demonstrating Proof-of-Possession)",
+          "description": "Sender-constrained access tokens using DPoP for enhanced OAuth 2.0 security",
+          "path": [
+            "rfc",
+            "rfc-9449-dpop-mode"
+          ],
+          "tags": [
+            "oauth",
+            "dpop",
+            "proof-of-possession",
+            "security",
+            "multi-tenancy"
+          ],
+          "rfc": 9449
+        },
+        {
+          "slug": "rfc-multitenancy-architecture-mode",
+          "title": "Multi-Tenancy RFC Architecture",
+          "description": "Comprehensive multi-tenancy architecture guide using RFC standards for identity, authorization, and provisioning",
+          "path": [
+            "rfc",
+            "rfc-multitenancy-architecture-mode"
+          ],
+          "tags": [
+            "multi-tenancy",
+            "architecture",
+            "oauth",
+            "scim",
+            "jwt",
+            "identity"
           ]
         }
       ]
