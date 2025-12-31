@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2025-12-31T00:40:38.109115Z",
-  "totalModes": 266,
+  "generatedAt": "2025-12-31T00:57:57.395645Z",
+  "totalModes": 273,
   "categories": [
     {
       "name": "ai-ml",
@@ -2084,6 +2084,75 @@
       "title": "RFC Standards",
       "modes": [
         {
+          "slug": "admin-panel-validator-mode",
+          "title": "Admin Panel Validator",
+          "description": "RFC compliance validator for Admin Panel implementations - OAuth 2.0, Bearer Token, Token Introspection",
+          "path": [
+            "rfc",
+            "admin-panel-validator-mode"
+          ],
+          "tags": [
+            "validator",
+            "admin-panel",
+            "oauth",
+            "bearer-token",
+            "introspection",
+            "multi-tenancy"
+          ]
+        },
+        {
+          "slug": "gateway-validator-mode",
+          "title": "Gateway Validator",
+          "description": "RFC compliance validator for Gateway implementations - SCIM, Bearer Token, request routing",
+          "path": [
+            "rfc",
+            "gateway-validator-mode"
+          ],
+          "tags": [
+            "validator",
+            "gateway",
+            "scim",
+            "bearer-token",
+            "multi-tenancy"
+          ]
+        },
+        {
+          "slug": "identity-broker-validator-mode",
+          "title": "Identity Broker Validator",
+          "description": "RFC compliance validator for Identity Broker (IDB) implementations - OAuth 2.0, JWT, PKCE, DPoP, mTLS",
+          "path": [
+            "rfc",
+            "identity-broker-validator-mode"
+          ],
+          "tags": [
+            "validator",
+            "identity-broker",
+            "oauth",
+            "jwt",
+            "pkce",
+            "dpop",
+            "mtls",
+            "multi-tenancy"
+          ]
+        },
+        {
+          "slug": "iga-connect-validator-mode",
+          "title": "IGA Connect Validator",
+          "description": "RFC compliance validator for IGA Connect implementations - OAuth 2.0, JWT, Token Exchange",
+          "path": [
+            "rfc",
+            "iga-connect-validator-mode"
+          ],
+          "tags": [
+            "validator",
+            "iga-connect",
+            "oauth",
+            "jwt",
+            "token-exchange",
+            "multi-tenancy"
+          ]
+        },
+        {
           "slug": "rfc-6749-oauth2-mode",
           "title": "RFC 6749 - OAuth 2.0 Authorization Framework",
           "description": "Complete implementation guide for OAuth 2.0 Authorization Framework with multi-tenancy support",
@@ -2183,6 +2252,59 @@
             "multi-tenancy"
           ],
           "rfc": 7644
+        },
+        {
+          "slug": "rfc-7662-introspection-mode",
+          "title": "RFC 7662 - OAuth 2.0 Token Introspection",
+          "description": "Token validation endpoint for resource servers and admin panels",
+          "path": [
+            "rfc",
+            "rfc-7662-introspection-mode"
+          ],
+          "tags": [
+            "oauth",
+            "introspection",
+            "token-validation",
+            "admin-panel",
+            "multi-tenancy"
+          ],
+          "rfc": 7662
+        },
+        {
+          "slug": "rfc-8693-token-exchange-mode",
+          "title": "RFC 8693 - OAuth 2.0 Token Exchange",
+          "description": "Token exchange for delegation, impersonation, and cross-domain identity federation",
+          "path": [
+            "rfc",
+            "rfc-8693-token-exchange-mode"
+          ],
+          "tags": [
+            "oauth",
+            "token-exchange",
+            "delegation",
+            "impersonation",
+            "multi-tenancy",
+            "iga-connect"
+          ],
+          "rfc": 8693
+        },
+        {
+          "slug": "rfc-8705-mtls-mode",
+          "title": "RFC 8705 - OAuth 2.0 Mutual-TLS",
+          "description": "Certificate-based client authentication and token binding for high-security OAuth 2.0",
+          "path": [
+            "rfc",
+            "rfc-8705-mtls-mode"
+          ],
+          "tags": [
+            "oauth",
+            "mtls",
+            "certificates",
+            "security",
+            "multi-tenancy",
+            "identity-broker"
+          ],
+          "rfc": 8705
         },
         {
           "slug": "rfc-9449-dpop-mode",
