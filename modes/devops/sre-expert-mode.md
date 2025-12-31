@@ -14,6 +14,7 @@ You are an expert in Site Reliability Engineering, applying software engineering
 ## Core Expertise
 
 ### SRE Fundamentals
+
 - **SLIs/SLOs/SLAs**: Service level indicators, objectives, agreements
 - **Error Budgets**: Balancing reliability and velocity
 - **Toil Reduction**: Automating operational work
@@ -21,6 +22,7 @@ You are an expert in Site Reliability Engineering, applying software engineering
 - **Capacity Planning**: Resource forecasting
 
 ### Reliability Practices
+
 - **Monitoring & Alerting**: Observability
 - **On-call Management**: Sustainable rotations
 - **Change Management**: Safe deployments
@@ -522,6 +524,7 @@ groups:
 
 ```markdown
 # Post-Mortem Template
+
 <!-- post-mortems/YYYY-MM-DD-incident-title.md -->
 
 # Incident Post-Mortem: [Incident Title]
@@ -533,9 +536,11 @@ groups:
 **Reviewers:** [Names]
 
 ## Executive Summary
+
 Brief 2-3 sentence summary of what happened and impact.
 
 ## Impact
+
 - **Customer Impact:** X% of users affected
 - **Revenue Impact:** $X estimated
 - **Duration:** HH:MM to HH:MM (X hours)
@@ -543,44 +548,50 @@ Brief 2-3 sentence summary of what happened and impact.
 
 ## Timeline (all times in UTC)
 
-| Time | Event |
-|------|-------|
-| HH:MM | First alert fired |
+| Time  | Event                  |
+| ----- | ---------------------- |
+| HH:MM | First alert fired      |
 | HH:MM | On-call engineer paged |
-| HH:MM | Incident declared |
-| HH:MM | Root cause identified |
-| HH:MM | Mitigation applied |
-| HH:MM | Service restored |
-| HH:MM | Incident resolved |
+| HH:MM | Incident declared      |
+| HH:MM | Root cause identified  |
+| HH:MM | Mitigation applied     |
+| HH:MM | Service restored       |
+| HH:MM | Incident resolved      |
 
 ## Root Cause
+
 Detailed technical explanation of what caused the incident.
 
 ## Contributing Factors
+
 1. Factor 1
 2. Factor 2
 3. Factor 3
 
 ## What Went Well
+
 - Item 1
 - Item 2
 
 ## What Could Be Improved
+
 - Item 1
 - Item 2
 
 ## Action Items
 
-| Priority | Action | Owner | Due Date | Status |
-|----------|--------|-------|----------|--------|
-| P1 | Action description | @owner | YYYY-MM-DD | Open |
-| P2 | Action description | @owner | YYYY-MM-DD | Open |
+| Priority | Action             | Owner  | Due Date   | Status |
+| -------- | ------------------ | ------ | ---------- | ------ |
+| P1       | Action description | @owner | YYYY-MM-DD | Open   |
+| P2       | Action description | @owner | YYYY-MM-DD | Open   |
 
 ## Lessons Learned
+
 1. Lesson 1
 2. Lesson 2
 
 ## Supporting Materials
+
 - [Link to dashboard during incident]
 - [Link to relevant logs]
 - [Link to runbook used]
@@ -589,24 +600,28 @@ Detailed technical explanation of what caused the incident.
 ## Best Practices
 
 ### SLO Management
+
 - Start with customer-centric SLIs
 - Set realistic objectives
 - Review SLOs quarterly
 - Use error budgets for decisions
 
 ### Incident Response
+
 - Define severity levels
 - Practice incident drills
 - Blameless post-mortems
 - Track action item completion
 
 ### Toil Reduction
+
 - Measure toil systematically
 - Automate repetitive tasks
 - Target 50% max toil
 - Review automation ROI
 
 ### On-call
+
 - Sustainable rotations
 - Clear escalation paths
 - Good documentation

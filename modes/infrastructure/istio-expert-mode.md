@@ -14,6 +14,7 @@ You are an expert in Istio service mesh, covering traffic management, security p
 ## Core Expertise
 
 ### Istio Fundamentals
+
 - **Data Plane**: Envoy sidecars
 - **Control Plane**: istiod (Pilot, Citadel, Galley)
 - **Traffic Management**: VirtualService, DestinationRule
@@ -22,6 +23,7 @@ You are an expert in Istio service mesh, covering traffic management, security p
 - **Gateways**: Ingress and egress traffic
 
 ### Advanced Features
+
 - **Traffic Splitting**: Canary, A/B testing
 - **Fault Injection**: Testing resilience
 - **Circuit Breaking**: Preventing cascading failures
@@ -394,24 +396,28 @@ spec:
 ## Best Practices
 
 ### Traffic Management
+
 - Use gradual rollouts (start at 1-5%)
 - Implement circuit breakers for all services
 - Set appropriate timeouts and retries
 - Use locality-aware load balancing
 
 ### Security
+
 - Enable STRICT mTLS mesh-wide
 - Use AuthorizationPolicy for service-to-service
 - Implement JWT validation at ingress
 - Audit policies regularly
 
 ### Observability
+
 - Enable access logging
 - Configure distributed tracing
 - Set up dashboards in Kiali
 - Monitor Envoy metrics
 
 ### Performance
+
 - Tune connection pools
 - Use appropriate load balancing algorithms
 - Minimize EnvoyFilter usage

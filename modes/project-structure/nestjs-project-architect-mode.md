@@ -113,16 +113,16 @@ nestjs-project/
 
 ```typescript
 // src/main.ts
-import { NestFactory } from '@nestjs/core';
-import { ValidationPipe, VersioningType } from '@nestjs/common';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { ConfigService } from '@nestjs/config';
-import helmet from 'helmet';
+import { NestFactory } from "@nestjs/core";
+import { ValidationPipe, VersioningType } from "@nestjs/common";
+import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
+import { ConfigService } from "@nestjs/config";
+import helmet from "helmet";
 
-import { AppModule } from './app.module';
-import { HttpExceptionFilter } from './common/filters/http-exception.filter';
-import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
-import { TransformInterceptor } from './common/interceptors/transform.interceptor';
+import { AppModule } from "./app.module";
+import { HttpExceptionFilter } from "./common/filters/http-exception.filter";
+import { LoggingInterceptor } from "./common/interceptors/logging.interceptor";
+import { TransformInterceptor } from "./common/interceptors/transform.interceptor";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -131,14 +131,14 @@ async function bootstrap() {
   // Security
   app.use(helmet());
   app.enableCors({
-    origin: configService.get('CORS_ORIGINS')?.split(',') || [],
+    origin: configService.get("CORS_ORIGINS")?.split(",") || [],
     credentials: true,
   });
 
   // Versioning
   app.enableVersioning({
     type: VersioningType.URI,
-    defaultVersion: '1',
+    defaultVersion: "1",
   });
 
   // Global pipes, filters, interceptors
@@ -151,22 +151,19 @@ async function bootstrap() {
     }),
   );
   app.useGlobalFilters(new HttpExceptionFilter());
-  app.useGlobalInterceptors(
-    new LoggingInterceptor(),
-    new TransformInterceptor(),
-  );
+  app.useGlobalInterceptors(new LoggingInterceptor(), new TransformInterceptor());
 
   // Swagger
   const config = new DocumentBuilder()
-    .setTitle('API')
-    .setDescription('API Documentation')
-    .setVersion('1.0')
+    .setTitle("API")
+    .setDescription("API Documentation")
+    .setVersion("1.0")
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document);
+  SwaggerModule.setup("docs", app, document);
 
-  const port = configService.get('PORT') || 3000;
+  const port = configService.get("PORT") || 3000;
   await app.listen(port);
 }
 bootstrap();
@@ -174,18 +171,18 @@ bootstrap();
 
 ```typescript
 // src/app.module.ts
-import { Module, MiddlewareConsumer } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { Module, MiddlewareConsumer } from "@nestjs/common";
+import { ConfigModule } from "@nestjs/config";
+import { TypeOrmModule } from "@nestjs/typeorm";
 
-import configuration from './config/configuration';
-import { DatabaseConfig } from './config/database.config';
-import { LoggerMiddleware } from './common/middleware/logger.middleware';
+import configuration from "./config/configuration";
+import { DatabaseConfig } from "./config/database.config";
+import { LoggerMiddleware } from "./common/middleware/logger.middleware";
 
-import { AuthModule } from './modules/auth/auth.module';
-import { UsersModule } from './modules/users/users.module';
-import { ItemsModule } from './modules/items/items.module';
-import { SharedModule } from './shared/shared.module';
+import { AuthModule } from "./modules/auth/auth.module";
+import { UsersModule } from "./modules/users/users.module";
+import { ItemsModule } from "./modules/items/items.module";
+import { SharedModule } from "./shared/shared.module";
 
 @Module({
   imports: [
@@ -204,20 +201,20 @@ import { SharedModule } from './shared/shared.module';
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(LoggerMiddleware).forRoutes('*');
+    consumer.apply(LoggerMiddleware).forRoutes("*");
   }
 }
 ```
 
 ```typescript
 // src/modules/users/users.module.ts
-import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { Module } from "@nestjs/common";
+import { TypeOrmModule } from "@nestjs/typeorm";
 
-import { UsersController } from './users.controller';
-import { UsersService } from './users.service';
-import { UsersRepository } from './users.repository';
-import { User } from './entities/user.entity';
+import { UsersController } from "./users.controller";
+import { UsersService } from "./users.service";
+import { UsersRepository } from "./users.repository";
+import { User } from "./entities/user.entity";
 
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
@@ -230,84 +227,62 @@ export class UsersModule {}
 
 ```typescript
 // src/modules/users/users.controller.ts
-import {
-  Controller,
-  Get,
-  Post,
-  Put,
-  Delete,
-  Body,
-  Param,
-  Query,
-  UseGuards,
-  ParseIntPipe,
-} from '@nestjs/common';
-import {
-  ApiTags,
-  ApiOperation,
-  ApiBearerAuth,
-  ApiResponse,
-} from '@nestjs/swagger';
+import { Controller, Get, Post, Put, Delete, Body, Param, Query, UseGuards, ParseIntPipe } from "@nestjs/common";
+import { ApiTags, ApiOperation, ApiBearerAuth, ApiResponse } from "@nestjs/swagger";
 
-import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
-import { RolesGuard } from '../../common/guards/roles.guard';
-import { Roles } from '../../common/decorators/roles.decorator';
-import { CurrentUser } from '../../common/decorators/current-user.decorator';
+import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard";
+import { RolesGuard } from "../../common/guards/roles.guard";
+import { Roles } from "../../common/decorators/roles.decorator";
+import { CurrentUser } from "../../common/decorators/current-user.decorator";
 
-import { UsersService } from './users.service';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from './entities/user.entity';
+import { UsersService } from "./users.service";
+import { CreateUserDto } from "./dto/create-user.dto";
+import { UpdateUserDto } from "./dto/update-user.dto";
+import { User } from "./entities/user.entity";
 
-@ApiTags('Users')
+@ApiTags("Users")
 @ApiBearerAuth()
 @UseGuards(JwtAuthGuard, RolesGuard)
-@Controller('users')
+@Controller("users")
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Get()
-  @ApiOperation({ summary: 'Get all users' })
-  @Roles('admin')
-  async findAll(
-    @Query('page') page = 1,
-    @Query('limit') limit = 10,
-  ) {
+  @ApiOperation({ summary: "Get all users" })
+  @Roles("admin")
+  async findAll(@Query("page") page = 1, @Query("limit") limit = 10) {
     return this.usersService.findAll({ page, limit });
   }
 
-  @Get('me')
-  @ApiOperation({ summary: 'Get current user' })
+  @Get("me")
+  @ApiOperation({ summary: "Get current user" })
   async getMe(@CurrentUser() user: User) {
     return user;
   }
 
-  @Get(':id')
-  @ApiOperation({ summary: 'Get user by ID' })
-  async findOne(@Param('id', ParseIntPipe) id: number) {
+  @Get(":id")
+  @ApiOperation({ summary: "Get user by ID" })
+  async findOne(@Param("id", ParseIntPipe) id: number) {
     return this.usersService.findOne(id);
   }
 
   @Post()
-  @ApiOperation({ summary: 'Create user' })
-  @Roles('admin')
+  @ApiOperation({ summary: "Create user" })
+  @Roles("admin")
   async create(@Body() createUserDto: CreateUserDto) {
     return this.usersService.create(createUserDto);
   }
 
-  @Put(':id')
-  @ApiOperation({ summary: 'Update user' })
-  async update(
-    @Param('id', ParseIntPipe) id: number,
-    @Body() updateUserDto: UpdateUserDto,
-  ) {
+  @Put(":id")
+  @ApiOperation({ summary: "Update user" })
+  async update(@Param("id", ParseIntPipe) id: number, @Body() updateUserDto: UpdateUserDto) {
     return this.usersService.update(id, updateUserDto);
   }
 
-  @Delete(':id')
-  @ApiOperation({ summary: 'Delete user' })
-  @Roles('admin')
-  async remove(@Param('id', ParseIntPipe) id: number) {
+  @Delete(":id")
+  @ApiOperation({ summary: "Delete user" })
+  @Roles("admin")
+  async remove(@Param("id", ParseIntPipe) id: number) {
     return this.usersService.remove(id);
   }
 }
@@ -315,10 +290,10 @@ export class UsersController {
 
 ```typescript
 // src/modules/users/users.service.ts
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { UsersRepository } from './users.repository';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
+import { Injectable, NotFoundException } from "@nestjs/common";
+import { UsersRepository } from "./users.repository";
+import { CreateUserDto } from "./dto/create-user.dto";
+import { UpdateUserDto } from "./dto/update-user.dto";
 
 @Injectable()
 export class UsersService {
@@ -358,21 +333,18 @@ export class UsersService {
 
 ```typescript
 // src/common/guards/jwt-auth.guard.ts
-import { Injectable, ExecutionContext } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
-import { Reflector } from '@nestjs/core';
+import { Injectable, ExecutionContext } from "@nestjs/common";
+import { AuthGuard } from "@nestjs/passport";
+import { Reflector } from "@nestjs/core";
 
 @Injectable()
-export class JwtAuthGuard extends AuthGuard('jwt') {
+export class JwtAuthGuard extends AuthGuard("jwt") {
   constructor(private reflector: Reflector) {
     super();
   }
 
   canActivate(context: ExecutionContext) {
-    const isPublic = this.reflector.getAllAndOverride<boolean>('isPublic', [
-      context.getHandler(),
-      context.getClass(),
-    ]);
+    const isPublic = this.reflector.getAllAndOverride<boolean>("isPublic", [context.getHandler(), context.getClass()]);
 
     if (isPublic) {
       return true;
@@ -385,14 +357,9 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 
 ```typescript
 // src/common/interceptors/transform.interceptor.ts
-import {
-  Injectable,
-  NestInterceptor,
-  ExecutionContext,
-  CallHandler,
-} from '@nestjs/common';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from "@nestjs/common";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
 
 export interface Response<T> {
   data: T;
@@ -400,13 +367,8 @@ export interface Response<T> {
 }
 
 @Injectable()
-export class TransformInterceptor<T>
-  implements NestInterceptor<T, Response<T>>
-{
-  intercept(
-    context: ExecutionContext,
-    next: CallHandler,
-  ): Observable<Response<T>> {
+export class TransformInterceptor<T> implements NestInterceptor<T, Response<T>> {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<Response<T>> {
     return next.handle().pipe(
       map((data) => ({
         data,

@@ -14,6 +14,7 @@ You are an expert in RabbitMQ, the most widely deployed open-source message brok
 ## Core Expertise
 
 ### RabbitMQ Concepts
+
 - **Exchanges**: Direct, Fanout, Topic, Headers
 - **Queues**: Classic, Quorum, Stream
 - **Bindings**: Route messages to queues
@@ -21,6 +22,7 @@ You are an expert in RabbitMQ, the most widely deployed open-source message brok
 - **Clustering**: High availability setup
 
 ### Advanced Features
+
 - Dead Letter Exchanges (DLX)
 - Priority Queues
 - Message TTL
@@ -437,24 +439,28 @@ spec:
 ## Best Practices
 
 ### Reliability
+
 - Use publisher confirms
 - Implement consumer acknowledgments
 - Set up dead letter exchanges
 - Use quorum queues for durability
 
 ### Performance
+
 - Set appropriate prefetch counts
 - Use lazy queues for large backlogs
 - Enable connection pooling
 - Monitor queue depths
 
 ### High Availability
+
 - Deploy 3+ node clusters
 - Use quorum queues
 - Configure partition handling
 - Set up monitoring alerts
 
 ### Security
+
 - Enable TLS for connections
 - Use virtual hosts for isolation
 - Implement RBAC

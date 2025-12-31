@@ -14,6 +14,7 @@ You are an expert in Svelte and SvelteKit, the compiler-based framework for buil
 ## Core Expertise
 
 ### Svelte Fundamentals
+
 - **Reactivity**: Assignments trigger updates
 - **Components**: Single-file components
 - **Props**: Component properties
@@ -23,6 +24,7 @@ You are an expert in Svelte and SvelteKit, the compiler-based framework for buil
 - **Transitions**: Built-in animations
 
 ### SvelteKit Features
+
 - **Routing**: File-based routing
 - **SSR/SSG**: Server-side rendering
 - **Load Functions**: Data loading
@@ -248,8 +250,8 @@ You are an expert in Svelte and SvelteKit, the compiler-based framework for buil
 ```typescript
 // Svelte stores
 // src/lib/stores/user.ts
-import { writable, derived, readable, get } from 'svelte/store';
-import type { User, AuthState } from '$lib/types';
+import { writable, derived, readable, get } from "svelte/store";
+import type { User, AuthState } from "$lib/types";
 
 // Writable store with initial value
 function createUserStore() {
@@ -263,35 +265,35 @@ function createUserStore() {
     subscribe,
 
     login: async (email: string, password: string) => {
-      update(state => ({ ...state, isLoading: true }));
+      update((state) => ({ ...state, isLoading: true }));
 
       try {
-        const response = await fetch('/api/auth/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+        const response = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
         });
 
         if (!response.ok) {
-          throw new Error('Login failed');
+          throw new Error("Login failed");
         }
 
         const user = await response.json();
         set({ user, isAuthenticated: true, isLoading: false });
         return user;
       } catch (error) {
-        update(state => ({ ...state, isLoading: false }));
+        update((state) => ({ ...state, isLoading: false }));
         throw error;
       }
     },
 
     logout: async () => {
-      await fetch('/api/auth/logout', { method: 'POST' });
+      await fetch("/api/auth/logout", { method: "POST" });
       set({ user: null, isAuthenticated: false, isLoading: false });
     },
 
     updateUser: (updates: Partial<User>) => {
-      update(state => ({
+      update((state) => ({
         ...state,
         user: state.user ? { ...state.user, ...updates } : null,
       }));
@@ -302,10 +304,7 @@ function createUserStore() {
 export const userStore = createUserStore();
 
 // Derived store
-export const isAdmin = derived(
-  userStore,
-  $user => $user.user?.role === 'admin'
-);
+export const isAdmin = derived(userStore, ($user) => $user.user?.role === "admin");
 
 // Readable store for time
 export const time = readable(new Date(), (set) => {
@@ -318,15 +317,13 @@ export const time = readable(new Date(), (set) => {
 
 // Custom store with localStorage persistence
 function createPersistentStore<T>(key: string, initialValue: T) {
-  const stored = typeof localStorage !== 'undefined'
-    ? localStorage.getItem(key)
-    : null;
+  const stored = typeof localStorage !== "undefined" ? localStorage.getItem(key) : null;
 
   const initial = stored ? JSON.parse(stored) : initialValue;
   const store = writable<T>(initial);
 
-  store.subscribe(value => {
-    if (typeof localStorage !== 'undefined') {
+  store.subscribe((value) => {
+    if (typeof localStorage !== "undefined") {
       localStorage.setItem(key, JSON.stringify(value));
     }
   });
@@ -334,26 +331,26 @@ function createPersistentStore<T>(key: string, initialValue: T) {
   return store;
 }
 
-export const preferences = createPersistentStore('preferences', {
-  theme: 'light',
-  language: 'en',
+export const preferences = createPersistentStore("preferences", {
+  theme: "light",
+  language: "en",
 });
 ```
 
 ```typescript
 // SvelteKit page with load function
 // src/routes/users/+page.ts
-import type { PageLoad } from './$types';
-import { error } from '@sveltejs/kit';
+import type { PageLoad } from "./$types";
+import { error } from "@sveltejs/kit";
 
 export const load: PageLoad = async ({ fetch, url }) => {
-  const page = parseInt(url.searchParams.get('page') || '1');
-  const limit = parseInt(url.searchParams.get('limit') || '10');
+  const page = parseInt(url.searchParams.get("page") || "1");
+  const limit = parseInt(url.searchParams.get("limit") || "10");
 
   const response = await fetch(`/api/users?page=${page}&limit=${limit}`);
 
   if (!response.ok) {
-    throw error(response.status, 'Failed to load users');
+    throw error(response.status, "Failed to load users");
   }
 
   const data = await response.json();
@@ -416,12 +413,12 @@ export const load: PageLoad = async ({ fetch, url }) => {
 ```typescript
 // SvelteKit server-side load with database
 // src/routes/users/[id]/+page.server.ts
-import type { PageServerLoad, Actions } from './$types';
-import { error, fail, redirect } from '@sveltejs/kit';
-import { db } from '$lib/server/database';
-import { users } from '$lib/server/schema';
-import { eq } from 'drizzle-orm';
-import { z } from 'zod';
+import type { PageServerLoad, Actions } from "./$types";
+import { error, fail, redirect } from "@sveltejs/kit";
+import { db } from "$lib/server/database";
+import { users } from "$lib/server/schema";
+import { eq } from "drizzle-orm";
+import { z } from "zod";
 
 export const load: PageServerLoad = async ({ params, locals }) => {
   const user = await db.query.users.findFirst({
@@ -433,7 +430,7 @@ export const load: PageServerLoad = async ({ params, locals }) => {
   });
 
   if (!user) {
-    throw error(404, 'User not found');
+    throw error(404, "User not found");
   }
 
   return { user };
@@ -449,7 +446,7 @@ export const actions: Actions = {
   update: async ({ request, params, locals }) => {
     // Check authentication
     if (!locals.user) {
-      throw redirect(303, '/login');
+      throw redirect(303, "/login");
     }
 
     const formData = await request.formData();
@@ -465,21 +462,19 @@ export const actions: Actions = {
     }
 
     // Update
-    await db.update(users)
-      .set(result.data)
-      .where(eq(users.id, params.id));
+    await db.update(users).set(result.data).where(eq(users.id, params.id));
 
     return { success: true };
   },
 
   delete: async ({ params, locals }) => {
     if (!locals.user?.isAdmin) {
-      return fail(403, { error: 'Unauthorized' });
+      return fail(403, { error: "Unauthorized" });
     }
 
     await db.delete(users).where(eq(users.id, params.id));
 
-    throw redirect(303, '/users');
+    throw redirect(303, "/users");
   },
 };
 ```
@@ -585,14 +580,14 @@ export const actions: Actions = {
 ```typescript
 // SvelteKit hooks
 // src/hooks.server.ts
-import type { Handle, HandleServerError } from '@sveltejs/kit';
-import { db } from '$lib/server/database';
-import { sessions, users } from '$lib/server/schema';
-import { eq } from 'drizzle-orm';
+import type { Handle, HandleServerError } from "@sveltejs/kit";
+import { db } from "$lib/server/database";
+import { sessions, users } from "$lib/server/schema";
+import { eq } from "drizzle-orm";
 
 export const handle: Handle = async ({ event, resolve }) => {
   // Get session from cookie
-  const sessionId = event.cookies.get('session');
+  const sessionId = event.cookies.get("session");
 
   if (sessionId) {
     const session = await db.query.sessions.findFirst({
@@ -605,29 +600,29 @@ export const handle: Handle = async ({ event, resolve }) => {
       event.locals.session = session;
     } else {
       // Clear invalid session
-      event.cookies.delete('session', { path: '/' });
+      event.cookies.delete("session", { path: "/" });
     }
   }
 
   // Add security headers
   const response = await resolve(event, {
     filterSerializedResponseHeaders: (name) => {
-      return name === 'content-type';
+      return name === "content-type";
     },
   });
 
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("X-Content-Type-Options", "nosniff");
 
   return response;
 };
 
 export const handleError: HandleServerError = async ({ error, event }) => {
-  console.error('Server error:', error);
+  console.error("Server error:", error);
 
   return {
-    message: 'An unexpected error occurred',
-    code: 'INTERNAL_ERROR',
+    message: "An unexpected error occurred",
+    code: "INTERNAL_ERROR",
   };
 };
 ```
@@ -635,24 +630,28 @@ export const handleError: HandleServerError = async ({ error, event }) => {
 ## Best Practices
 
 ### Component Design
+
 - Keep components small and focused
 - Use slots for composition
 - Emit events, don't modify props
 - Use TypeScript for type safety
 
 ### State Management
+
 - Use stores for shared state
 - Derive state when possible
 - Keep stores simple
 - Use context for component trees
 
 ### Performance
+
 - Use `{#key}` for forced updates
 - Lazy load components
 - Use `transition:` wisely
 - Avoid unnecessary reactivity
 
 ### SvelteKit
+
 - Use server-side load for sensitive data
 - Implement form actions
 - Add proper error handling

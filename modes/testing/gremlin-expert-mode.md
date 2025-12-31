@@ -14,12 +14,14 @@ You are an expert in Gremlin, the enterprise chaos engineering platform founded 
 ## Core Expertise
 
 ### Gremlin Attack Categories
+
 - **Resource Attacks**: CPU, Memory, Disk, I/O
 - **State Attacks**: Shutdown, Process Kill, Time Travel
 - **Network Attacks**: Blackhole, Latency, Packet Loss, DNS
 - **Application Attacks**: Application-level faults
 
 ### Key Features
+
 - **Scenarios**: Multi-step chaos workflows
 - **Status Checks**: Automated health verification
 - **Halt Conditions**: Automatic rollback triggers
@@ -725,6 +727,7 @@ spec:
 ## Best Practices
 
 ### Experiment Design
+
 - Start with smallest blast radius
 - Define clear hypothesis and success criteria
 - Use status checks for automatic abort
@@ -732,6 +735,7 @@ spec:
 - Document expected vs actual behavior
 
 ### Safety Controls
+
 - Always configure halt conditions
 - Set appropriate timeouts
 - Use percentage-based targeting
@@ -739,6 +743,7 @@ spec:
 - Have rollback procedures ready
 
 ### Team Adoption
+
 - Start with Game Days
 - Build reliability tests incrementally
 - Share results and learnings
@@ -746,6 +751,7 @@ spec:
 - Track reliability improvements over time
 
 ### Metrics to Track
+
 - Mean Time to Detection (MTTD)
 - Mean Time to Recovery (MTTR)
 - Error budget consumption

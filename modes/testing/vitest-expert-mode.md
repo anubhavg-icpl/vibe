@@ -16,31 +16,25 @@ You are an expert in Vitest, the blazing fast unit test framework powered by Vit
 ### vitest.config.ts
 
 ```typescript
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
 
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./src/test/setup.ts'],
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    exclude: ['node_modules', 'dist', '.idea', '.git', '.cache'],
+    environment: "jsdom",
+    setupFiles: ["./src/test/setup.ts"],
+    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    exclude: ["node_modules", "dist", ".idea", ".git", ".cache"],
 
     // Coverage configuration
     coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html', 'lcov'],
-      exclude: [
-        'node_modules/',
-        'src/test/',
-        '**/*.d.ts',
-        '**/*.test.{ts,tsx}',
-        '**/index.ts',
-      ],
+      provider: "v8",
+      reporter: ["text", "json", "html", "lcov"],
+      exclude: ["node_modules/", "src/test/", "**/*.d.ts", "**/*.test.{ts,tsx}", "**/index.ts"],
       thresholds: {
         lines: 80,
         functions: 80,
@@ -50,13 +44,13 @@ export default defineConfig({
     },
 
     // Reporter configuration
-    reporters: ['default', 'html'],
+    reporters: ["default", "html"],
     outputFile: {
-      html: './test-results/index.html',
+      html: "./test-results/index.html",
     },
 
     // Pool configuration for parallel execution
-    pool: 'threads',
+    pool: "threads",
     poolOptions: {
       threads: {
         singleThread: false,
@@ -79,15 +73,15 @@ export default defineConfig({
     // Type checking
     typecheck: {
       enabled: true,
-      checker: 'tsc',
-      include: ['src/**/*.{test,spec}-d.{ts,tsx}'],
+      checker: "tsc",
+      include: ["src/**/*.{test,spec}-d.{ts,tsx}"],
     },
   },
 
   resolve: {
     alias: {
-      '@': '/src',
-      '@test': '/src/test',
+      "@": "/src",
+      "@test": "/src/test",
     },
   },
 });
@@ -97,32 +91,32 @@ export default defineConfig({
 
 ```typescript
 // vitest.workspace.ts
-import { defineWorkspace } from 'vitest/config';
+import { defineWorkspace } from "vitest/config";
 
 export default defineWorkspace([
   {
-    extends: './vitest.config.ts',
+    extends: "./vitest.config.ts",
     test: {
-      name: 'unit',
-      include: ['src/**/*.unit.{test,spec}.{ts,tsx}'],
-      environment: 'node',
+      name: "unit",
+      include: ["src/**/*.unit.{test,spec}.{ts,tsx}"],
+      environment: "node",
     },
   },
   {
-    extends: './vitest.config.ts',
+    extends: "./vitest.config.ts",
     test: {
-      name: 'integration',
-      include: ['src/**/*.integration.{test,spec}.{ts,tsx}'],
-      environment: 'node',
+      name: "integration",
+      include: ["src/**/*.integration.{test,spec}.{ts,tsx}"],
+      environment: "node",
       hookTimeout: 30000,
     },
   },
   {
-    extends: './vitest.config.ts',
+    extends: "./vitest.config.ts",
     test: {
-      name: 'components',
-      include: ['src/**/*.component.{test,spec}.{ts,tsx}'],
-      environment: 'jsdom',
+      name: "components",
+      include: ["src/**/*.component.{test,spec}.{ts,tsx}"],
+      environment: "jsdom",
     },
   },
 ]);
@@ -132,9 +126,9 @@ export default defineWorkspace([
 
 ```typescript
 // src/test/setup.ts
-import '@testing-library/jest-dom/vitest';
-import { cleanup } from '@testing-library/react';
-import { afterEach, vi } from 'vitest';
+import "@testing-library/jest-dom/vitest";
+import { cleanup } from "@testing-library/react";
+import { afterEach, vi } from "vitest";
 
 // Cleanup after each test
 afterEach(() => {
@@ -143,7 +137,7 @@ afterEach(() => {
 });
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: vi.fn().mockImplementation((query: string) => ({
     matches: false,
@@ -164,7 +158,7 @@ const IntersectionObserverMock = vi.fn(() => ({
   takeRecords: vi.fn(),
   unobserve: vi.fn(),
 }));
-vi.stubGlobal('IntersectionObserver', IntersectionObserverMock);
+vi.stubGlobal("IntersectionObserver", IntersectionObserverMock);
 
 // Mock ResizeObserver
 const ResizeObserverMock = vi.fn(() => ({
@@ -172,7 +166,7 @@ const ResizeObserverMock = vi.fn(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
 }));
-vi.stubGlobal('ResizeObserver', ResizeObserverMock);
+vi.stubGlobal("ResizeObserver", ResizeObserverMock);
 ```
 
 ## Mocking
@@ -181,11 +175,11 @@ vi.stubGlobal('ResizeObserver', ResizeObserverMock);
 
 ```typescript
 // src/services/api.test.ts
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
-import { fetchUsers, createUser } from './api';
+import { describe, it, expect, vi, beforeEach, Mock } from "vitest";
+import { fetchUsers, createUser } from "./api";
 
 // Mock the entire module
-vi.mock('./http-client', () => ({
+vi.mock("./http-client", () => ({
   httpClient: {
     get: vi.fn(),
     post: vi.fn(),
@@ -195,45 +189,45 @@ vi.mock('./http-client', () => ({
 }));
 
 // Import the mocked module
-import { httpClient } from './http-client';
+import { httpClient } from "./http-client";
 
-describe('API Service', () => {
+describe("API Service", () => {
   beforeEach(() => {
     vi.clearAllMocks();
   });
 
-  describe('fetchUsers', () => {
-    it('should fetch users successfully', async () => {
+  describe("fetchUsers", () => {
+    it("should fetch users successfully", async () => {
       const mockUsers = [
-        { id: 1, name: 'John' },
-        { id: 2, name: 'Jane' },
+        { id: 1, name: "John" },
+        { id: 2, name: "Jane" },
       ];
 
       (httpClient.get as Mock).mockResolvedValueOnce({ data: mockUsers });
 
       const result = await fetchUsers();
 
-      expect(httpClient.get).toHaveBeenCalledWith('/api/users');
+      expect(httpClient.get).toHaveBeenCalledWith("/api/users");
       expect(result).toEqual(mockUsers);
     });
 
-    it('should handle errors', async () => {
-      (httpClient.get as Mock).mockRejectedValueOnce(new Error('Network error'));
+    it("should handle errors", async () => {
+      (httpClient.get as Mock).mockRejectedValueOnce(new Error("Network error"));
 
-      await expect(fetchUsers()).rejects.toThrow('Network error');
+      await expect(fetchUsers()).rejects.toThrow("Network error");
     });
   });
 
-  describe('createUser', () => {
-    it('should create a user', async () => {
-      const newUser = { name: 'Alice', email: 'alice@example.com' };
+  describe("createUser", () => {
+    it("should create a user", async () => {
+      const newUser = { name: "Alice", email: "alice@example.com" };
       const createdUser = { id: 3, ...newUser };
 
       (httpClient.post as Mock).mockResolvedValueOnce({ data: createdUser });
 
       const result = await createUser(newUser);
 
-      expect(httpClient.post).toHaveBeenCalledWith('/api/users', newUser);
+      expect(httpClient.post).toHaveBeenCalledWith("/api/users", newUser);
       expect(result).toEqual(createdUser);
     });
   });
@@ -244,39 +238,39 @@ describe('API Service', () => {
 
 ```typescript
 // src/utils/date.test.ts
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 // Partial mock - only mock specific exports
-vi.mock('./config', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('./config')>();
+vi.mock("./config", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("./config")>();
   return {
     ...actual,
-    getConfig: vi.fn(() => ({ timezone: 'UTC' })),
+    getConfig: vi.fn(() => ({ timezone: "UTC" })),
   };
 });
 
-import { formatDate, getRelativeTime } from './date';
-import { getConfig } from './config';
+import { formatDate, getRelativeTime } from "./date";
+import { getConfig } from "./config";
 
-describe('Date utilities', () => {
+describe("Date utilities", () => {
   beforeEach(() => {
     vi.useFakeTimers();
-    vi.setSystemTime(new Date('2024-06-15T12:00:00Z'));
+    vi.setSystemTime(new Date("2024-06-15T12:00:00Z"));
   });
 
   afterEach(() => {
     vi.useRealTimers();
   });
 
-  it('should format date using config timezone', () => {
-    const date = new Date('2024-06-15T10:30:00Z');
-    expect(formatDate(date)).toBe('June 15, 2024 10:30 AM');
+  it("should format date using config timezone", () => {
+    const date = new Date("2024-06-15T10:30:00Z");
+    expect(formatDate(date)).toBe("June 15, 2024 10:30 AM");
     expect(getConfig).toHaveBeenCalled();
   });
 
-  it('should calculate relative time', () => {
-    const pastDate = new Date('2024-06-15T11:00:00Z');
-    expect(getRelativeTime(pastDate)).toBe('1 hour ago');
+  it("should calculate relative time", () => {
+    const pastDate = new Date("2024-06-15T11:00:00Z");
+    expect(getRelativeTime(pastDate)).toBe("1 hour ago");
   });
 });
 ```
@@ -285,12 +279,12 @@ describe('Date utilities', () => {
 
 ```typescript
 // src/services/analytics.test.ts
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import * as analytics from './analytics';
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import * as analytics from "./analytics";
 
-describe('Analytics', () => {
-  const trackSpy = vi.spyOn(analytics, 'track');
-  const identifySpy = vi.spyOn(analytics, 'identify');
+describe("Analytics", () => {
+  const trackSpy = vi.spyOn(analytics, "track");
+  const identifySpy = vi.spyOn(analytics, "identify");
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -300,29 +294,29 @@ describe('Analytics', () => {
     vi.restoreAllMocks();
   });
 
-  it('should track page views', () => {
-    analytics.trackPageView('/home');
+  it("should track page views", () => {
+    analytics.trackPageView("/home");
 
-    expect(trackSpy).toHaveBeenCalledWith('Page View', {
-      path: '/home',
+    expect(trackSpy).toHaveBeenCalledWith("Page View", {
+      path: "/home",
       timestamp: expect.any(Number),
     });
   });
 
-  it('should identify users', () => {
-    analytics.identifyUser({ id: '123', email: 'test@example.com' });
+  it("should identify users", () => {
+    analytics.identifyUser({ id: "123", email: "test@example.com" });
 
-    expect(identifySpy).toHaveBeenCalledWith('123', {
-      email: 'test@example.com',
+    expect(identifySpy).toHaveBeenCalledWith("123", {
+      email: "test@example.com",
     });
   });
 
-  it('should spy on implementation', () => {
+  it("should spy on implementation", () => {
     trackSpy.mockImplementation(() => {
       // Custom implementation for testing
     });
 
-    analytics.track('Custom Event', {});
+    analytics.track("Custom Event", {});
     expect(trackSpy).toHaveBeenCalled();
   });
 });
@@ -332,10 +326,10 @@ describe('Analytics', () => {
 
 ```typescript
 // src/utils/scheduler.test.ts
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { scheduleTask, debounce, retry } from './scheduler';
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { scheduleTask, debounce, retry } from "./scheduler";
 
-describe('Scheduler', () => {
+describe("Scheduler", () => {
   beforeEach(() => {
     vi.useFakeTimers();
   });
@@ -345,8 +339,8 @@ describe('Scheduler', () => {
     vi.useRealTimers();
   });
 
-  describe('scheduleTask', () => {
-    it('should execute task after delay', () => {
+  describe("scheduleTask", () => {
+    it("should execute task after delay", () => {
       const callback = vi.fn();
       scheduleTask(callback, 1000);
 
@@ -356,7 +350,7 @@ describe('Scheduler', () => {
       expect(callback).toHaveBeenCalledOnce();
     });
 
-    it('should cancel scheduled task', () => {
+    it("should cancel scheduled task", () => {
       const callback = vi.fn();
       const cancel = scheduleTask(callback, 1000);
 
@@ -368,8 +362,8 @@ describe('Scheduler', () => {
     });
   });
 
-  describe('debounce', () => {
-    it('should debounce function calls', () => {
+  describe("debounce", () => {
+    it("should debounce function calls", () => {
       const callback = vi.fn();
       const debounced = debounce(callback, 300);
 
@@ -384,16 +378,17 @@ describe('Scheduler', () => {
     });
   });
 
-  describe('retry', () => {
-    it('should retry on failure', async () => {
-      const mockFn = vi.fn()
-        .mockRejectedValueOnce(new Error('Fail 1'))
-        .mockRejectedValueOnce(new Error('Fail 2'))
-        .mockResolvedValueOnce('Success');
+  describe("retry", () => {
+    it("should retry on failure", async () => {
+      const mockFn = vi
+        .fn()
+        .mockRejectedValueOnce(new Error("Fail 1"))
+        .mockRejectedValueOnce(new Error("Fail 2"))
+        .mockResolvedValueOnce("Success");
 
       const result = await retry(mockFn, { maxAttempts: 3, delay: 100 });
 
-      expect(result).toBe('Success');
+      expect(result).toBe("Success");
       expect(mockFn).toHaveBeenCalledTimes(3);
     });
   });
@@ -456,22 +451,22 @@ describe('Button', () => {
 
 ```typescript
 // src/hooks/useCounter.test.ts
-import { describe, it, expect } from 'vitest';
-import { renderHook, act } from '@testing-library/react';
-import { useCounter } from './useCounter';
+import { describe, it, expect } from "vitest";
+import { renderHook, act } from "@testing-library/react";
+import { useCounter } from "./useCounter";
 
-describe('useCounter', () => {
-  it('should initialize with default value', () => {
+describe("useCounter", () => {
+  it("should initialize with default value", () => {
     const { result } = renderHook(() => useCounter());
     expect(result.current.count).toBe(0);
   });
 
-  it('should initialize with provided value', () => {
+  it("should initialize with provided value", () => {
     const { result } = renderHook(() => useCounter(10));
     expect(result.current.count).toBe(10);
   });
 
-  it('should increment counter', () => {
+  it("should increment counter", () => {
     const { result } = renderHook(() => useCounter());
 
     act(() => {
@@ -481,7 +476,7 @@ describe('useCounter', () => {
     expect(result.current.count).toBe(1);
   });
 
-  it('should decrement counter', () => {
+  it("should decrement counter", () => {
     const { result } = renderHook(() => useCounter(5));
 
     act(() => {
@@ -491,7 +486,7 @@ describe('useCounter', () => {
     expect(result.current.count).toBe(4);
   });
 
-  it('should reset to initial value', () => {
+  it("should reset to initial value", () => {
     const { result } = renderHook(() => useCounter(5));
 
     act(() => {
@@ -503,10 +498,8 @@ describe('useCounter', () => {
     expect(result.current.count).toBe(5);
   });
 
-  it('should respect min/max bounds', () => {
-    const { result } = renderHook(() =>
-      useCounter(5, { min: 0, max: 10 })
-    );
+  it("should respect min/max bounds", () => {
+    const { result } = renderHook(() => useCounter(5, { min: 0, max: 10 }));
 
     act(() => {
       for (let i = 0; i < 20; i++) result.current.increment();
@@ -525,27 +518,27 @@ describe('useCounter', () => {
 
 ```typescript
 // src/hooks/useFetch.test.ts
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { renderHook, waitFor } from '@testing-library/react';
-import { useFetch } from './useFetch';
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { renderHook, waitFor } from "@testing-library/react";
+import { useFetch } from "./useFetch";
 
 // Mock fetch globally
 const mockFetch = vi.fn();
-vi.stubGlobal('fetch', mockFetch);
+vi.stubGlobal("fetch", mockFetch);
 
-describe('useFetch', () => {
+describe("useFetch", () => {
   beforeEach(() => {
     mockFetch.mockReset();
   });
 
-  it('should fetch data successfully', async () => {
-    const mockData = { id: 1, name: 'Test' };
+  it("should fetch data successfully", async () => {
+    const mockData = { id: 1, name: "Test" };
     mockFetch.mockResolvedValueOnce({
       ok: true,
       json: async () => mockData,
     });
 
-    const { result } = renderHook(() => useFetch('/api/data'));
+    const { result } = renderHook(() => useFetch("/api/data"));
 
     expect(result.current.loading).toBe(true);
 
@@ -557,41 +550,38 @@ describe('useFetch', () => {
     expect(result.current.error).toBeNull();
   });
 
-  it('should handle fetch errors', async () => {
+  it("should handle fetch errors", async () => {
     mockFetch.mockResolvedValueOnce({
       ok: false,
       status: 404,
-      statusText: 'Not Found',
+      statusText: "Not Found",
     });
 
-    const { result } = renderHook(() => useFetch('/api/notfound'));
+    const { result } = renderHook(() => useFetch("/api/notfound"));
 
     await waitFor(() => {
       expect(result.current.loading).toBe(false);
     });
 
-    expect(result.current.error).toBe('Not Found');
+    expect(result.current.error).toBe("Not Found");
     expect(result.current.data).toBeNull();
   });
 
-  it('should refetch on url change', async () => {
+  it("should refetch on url change", async () => {
     mockFetch.mockResolvedValue({
       ok: true,
       json: async () => ({ id: 1 }),
     });
 
-    const { result, rerender } = renderHook(
-      ({ url }) => useFetch(url),
-      { initialProps: { url: '/api/data/1' } }
-    );
+    const { result, rerender } = renderHook(({ url }) => useFetch(url), { initialProps: { url: "/api/data/1" } });
 
     await waitFor(() => expect(result.current.loading).toBe(false));
-    expect(mockFetch).toHaveBeenCalledWith('/api/data/1', expect.any(Object));
+    expect(mockFetch).toHaveBeenCalledWith("/api/data/1", expect.any(Object));
 
-    rerender({ url: '/api/data/2' });
+    rerender({ url: "/api/data/2" });
 
     await waitFor(() => expect(result.current.loading).toBe(false));
-    expect(mockFetch).toHaveBeenCalledWith('/api/data/2', expect.any(Object));
+    expect(mockFetch).toHaveBeenCalledWith("/api/data/2", expect.any(Object));
   });
 });
 ```
@@ -642,11 +632,11 @@ describe('Card Snapshots', () => {
 
 ```typescript
 // src/types/utils.test-d.ts
-import { describe, it, expectTypeOf } from 'vitest';
-import type { DeepPartial, AsyncReturnType, Prettify } from './utils';
+import { describe, it, expectTypeOf } from "vitest";
+import type { DeepPartial, AsyncReturnType, Prettify } from "./utils";
 
-describe('Type utilities', () => {
-  it('DeepPartial makes all nested properties optional', () => {
+describe("Type utilities", () => {
+  it("DeepPartial makes all nested properties optional", () => {
     type Original = {
       a: string;
       b: { c: number; d: { e: boolean } };
@@ -660,9 +650,9 @@ describe('Type utilities', () => {
     }>();
   });
 
-  it('AsyncReturnType extracts return type from async function', () => {
+  it("AsyncReturnType extracts return type from async function", () => {
     async function fetchUser(): Promise<{ id: number; name: string }> {
-      return { id: 1, name: 'Test' };
+      return { id: 1, name: "Test" };
     }
 
     type Result = AsyncReturnType<typeof fetchUser>;
@@ -670,7 +660,7 @@ describe('Type utilities', () => {
     expectTypeOf<Result>().toEqualTypeOf<{ id: number; name: string }>();
   });
 
-  it('Prettify flattens intersection types', () => {
+  it("Prettify flattens intersection types", () => {
     type A = { a: string };
     type B = { b: number };
 
@@ -744,13 +734,13 @@ export { customRender as render };
 
 ```typescript
 // src/test/factories.ts
-import { faker } from '@faker-js/faker';
+import { faker } from "@faker-js/faker";
 
 export interface User {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'user';
+  role: "admin" | "user";
   createdAt: Date;
 }
 
@@ -759,7 +749,7 @@ export function createUser(overrides?: Partial<User>): User {
     id: faker.string.uuid(),
     name: faker.person.fullName(),
     email: faker.internet.email(),
-    role: 'user',
+    role: "user",
     createdAt: faker.date.past(),
     ...overrides,
   };

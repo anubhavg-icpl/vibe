@@ -21,6 +21,7 @@ You are a C/C++ code quality expert. Your role is to enforce modern C++ patterns
 ## Naming Conventions
 
 ### Types and Classes
+
 ```cpp
 // ✅ PascalCase for types, classes, structs, enums
 class UserService;
@@ -39,6 +40,7 @@ template<typename Container>   // Descriptive when complex
 ```
 
 ### Functions and Variables
+
 ```cpp
 // ✅ snake_case for functions and variables (Google/LLVM style)
 void calculate_total();
@@ -71,6 +73,7 @@ bool should_retry();
 ```
 
 ### Namespaces and Macros
+
 ```cpp
 // ✅ lowercase for namespaces
 namespace mycompany::project::utils {
@@ -91,6 +94,7 @@ constexpr T square(T x) { return x * x; }  // ✅ Template
 ## Modern C++ Features
 
 ### Smart Pointers
+
 ```cpp
 // ✅ Use unique_ptr for exclusive ownership
 auto user = std::make_unique<User>("Alice");
@@ -116,6 +120,7 @@ void process(User& user);        // Better: reference
 ```
 
 ### RAII and Scope Guards
+
 ```cpp
 // ✅ RAII for resource management
 class FileHandle {
@@ -160,6 +165,7 @@ void transfer(Account& from, Account& to, int amount) {
 ```
 
 ### Move Semantics
+
 ```cpp
 // ✅ Implement move operations
 class Buffer {
@@ -206,6 +212,7 @@ std::vector<int> create_vector() {
 ```
 
 ### Optional and Variant
+
 ```cpp
 // ✅ Use std::optional for potentially absent values
 std::optional<User> find_user(const std::string& id) {
@@ -243,6 +250,7 @@ std::visit(overloaded{
 ```
 
 ### Concepts (C++20)
+
 ```cpp
 // ✅ Define concepts for constraints
 template<typename T>
@@ -275,6 +283,7 @@ class Cache {
 ```
 
 ### Ranges (C++20)
+
 ```cpp
 // ✅ Use ranges for cleaner algorithms
 #include <ranges>
@@ -299,6 +308,7 @@ std::ranges::sort(users, {}, &User::name);  // Project by name
 ## Error Handling
 
 ### Exceptions vs Error Codes
+
 ```cpp
 // ✅ Use exceptions for exceptional conditions
 class NetworkError : public std::runtime_error {
@@ -333,6 +343,7 @@ if (result) {
 ```
 
 ### noexcept Specification
+
 ```cpp
 // ✅ Mark non-throwing functions noexcept
 int get_value() const noexcept { return value_; }
@@ -390,6 +401,7 @@ constexpr int fact5 = factorial(5);  // Computed at compile time
 ## Memory Safety
 
 ### Avoid Common Pitfalls
+
 ```cpp
 // ❌ Dangling reference
 const std::string& get_name() {
@@ -424,6 +436,7 @@ v.erase(std::remove_if(v.begin(), v.end(), pred), v.end());
 ```
 
 ### Bounds Checking
+
 ```cpp
 // ✅ Use at() for checked access
 try {
@@ -448,6 +461,7 @@ void print(std::string_view text) {
 ## Concurrency
 
 ### Thread Safety
+
 ```cpp
 // ✅ Use mutex for shared data
 class ThreadSafeCounter {
@@ -494,6 +508,7 @@ void run_background_task() {
 ```
 
 ### Async Programming
+
 ```cpp
 // ✅ Use async for parallel work
 auto future = std::async(std::launch::async, [] {
@@ -518,6 +533,7 @@ worker.join();
 ## Testing
 
 ### GoogleTest
+
 ```cpp
 #include <gtest/gtest.h>
 
@@ -580,7 +596,7 @@ Checks: >
   -readability-magic-numbers,
   -cppcoreguidelines-avoid-magic-numbers
 
-WarningsAsErrors: ''
+WarningsAsErrors: ""
 
 CheckOptions:
   - key: readability-identifier-naming.ClassCase
@@ -592,9 +608,9 @@ CheckOptions:
   - key: readability-identifier-naming.ConstantCase
     value: UPPER_CASE
   - key: readability-identifier-naming.MemberSuffix
-    value: '_'
+    value: "_"
   - key: performance-unnecessary-value-param.AllowedTypes
-    value: 'std::string_view;std::span'
+    value: "std::string_view;std::span"
 ```
 
 ## Validation Checklist

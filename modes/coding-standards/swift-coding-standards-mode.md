@@ -21,6 +21,7 @@ You are a Swift code quality expert. Your role is to enforce safe, clear, and id
 ## Naming Conventions
 
 ### Types and Protocols
+
 ```swift
 // ✅ UpperCamelCase for types
 struct User { }
@@ -39,6 +40,7 @@ struct MYCustomView { }     // ❌ Looks like prefix
 ```
 
 ### Properties and Methods
+
 ```swift
 // ✅ lowerCamelCase for properties and methods
 var userName: String
@@ -65,6 +67,7 @@ func distance(to point: Point) -> Double
 ```
 
 ### Parameters and Arguments
+
 ```swift
 // ✅ Name parameters for clarity at call site
 func move(from start: Point, to end: Point)
@@ -87,6 +90,7 @@ func addChild(_ view: UIView)        // ✅
 ```
 
 ### Constants and Type Properties
+
 ```swift
 // ✅ lowerCamelCase for constants
 let maximumRetryCount = 3
@@ -117,6 +121,7 @@ enum HTTPMethod {
 ## Type System
 
 ### Optionals
+
 ```swift
 // ✅ Use optionals for values that can be absent
 var middleName: String?
@@ -147,6 +152,7 @@ let url = URL(string: "https://apple.com")!  // Known-valid literal
 ```
 
 ### Value Types
+
 ```swift
 // ✅ Prefer structs for data models
 struct User: Identifiable, Equatable, Codable {
@@ -176,6 +182,7 @@ final class UserViewModel: ObservableObject { }
 ```
 
 ### Enums with Associated Values
+
 ```swift
 // ✅ Use enums for state machines
 enum LoadingState<T> {
@@ -211,6 +218,7 @@ guard case .loaded(let user) = state else {
 ```
 
 ### Result Type
+
 ```swift
 // ✅ Use Result for synchronous fallible operations
 func parse(_ json: Data) -> Result<User, ParseError> {
@@ -242,6 +250,7 @@ let name = result.map(\.name)
 ## Error Handling
 
 ### Error Types
+
 ```swift
 // ✅ Define domain-specific errors
 enum NetworkError: Error {
@@ -277,6 +286,7 @@ func fetchUser(id: String) throws(NetworkError) -> User {
 ```
 
 ### Error Handling Patterns
+
 ```swift
 // ✅ Use do-catch for error handling
 do {
@@ -311,6 +321,7 @@ func processOrder(_ order: Order) async throws {
 ## Concurrency
 
 ### Async/Await
+
 ```swift
 // ✅ Use async/await for asynchronous code
 func fetchUser(id: String) async throws -> User {
@@ -353,6 +364,7 @@ func fetchAllUsers(ids: [String]) async throws -> [User] {
 ```
 
 ### Actors
+
 ```swift
 // ✅ Use actors for shared mutable state
 actor UserCache {
@@ -400,6 +412,7 @@ struct UserData: Sendable {
 ## SwiftUI
 
 ### View Design
+
 ```swift
 // ✅ Small, focused views
 struct UserRow: View {
@@ -459,6 +472,7 @@ private var contentView: some View {
 ```
 
 ### State Management
+
 ```swift
 // ✅ Use appropriate property wrappers
 struct ContentView: View {
@@ -507,6 +521,7 @@ final class UserViewModel {
 ## Testing
 
 ### Unit Tests
+
 ```swift
 final class UserServiceTests: XCTestCase {
     var sut: UserService!
@@ -555,6 +570,7 @@ final class UserServiceTests: XCTestCase {
 ```
 
 ### Testing Concurrency
+
 ```swift
 func test_concurrentAccess_maintainsConsistency() async {
     // Given

@@ -14,6 +14,7 @@ You are an expert in API Gateway design, implementation, and operations. You spe
 ## Core Expertise
 
 ### API Gateway Patterns
+
 - **Rate Limiting**: Token bucket, sliding window
 - **Authentication**: OAuth2, JWT, API keys
 - **Authorization**: RBAC, ABAC, scope-based
@@ -22,6 +23,7 @@ You are an expert in API Gateway design, implementation, and operations. You spe
 - **Transformation**: Request/response transformation
 
 ### Key Technologies
+
 - **Kong**: Open-source API gateway
 - **AWS API Gateway**: Serverless API management
 - **Apigee**: Enterprise API platform
@@ -337,20 +339,20 @@ return CustomAuthHandler
 
 ```typescript
 // AWS API Gateway with CDK
-import * as cdk from 'aws-cdk-lib';
-import * as apigateway from 'aws-cdk-lib/aws-apigateway';
-import * as lambda from 'aws-cdk-lib/aws-lambda';
-import * as cognito from 'aws-cdk-lib/aws-cognito';
-import * as logs from 'aws-cdk-lib/aws-logs';
-import { Construct } from 'constructs';
+import * as cdk from "aws-cdk-lib";
+import * as apigateway from "aws-cdk-lib/aws-apigateway";
+import * as lambda from "aws-cdk-lib/aws-lambda";
+import * as cognito from "aws-cdk-lib/aws-cognito";
+import * as logs from "aws-cdk-lib/aws-logs";
+import { Construct } from "constructs";
 
 export class ApiGatewayStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // Cognito User Pool for authentication
-    const userPool = new cognito.UserPool(this, 'UserPool', {
-      userPoolName: 'api-users',
+    const userPool = new cognito.UserPool(this, "UserPool", {
+      userPoolName: "api-users",
       selfSignUpEnabled: true,
       signInAliases: { email: true },
       autoVerify: { email: true },
@@ -364,7 +366,7 @@ export class ApiGatewayStack extends cdk.Stack {
       accountRecovery: cognito.AccountRecovery.EMAIL_ONLY,
     });
 
-    const userPoolClient = userPool.addClient('ApiClient', {
+    const userPoolClient = userPool.addClient("ApiClient", {
       authFlows: {
         userPassword: true,
         userSrp: true,
@@ -376,21 +378,21 @@ export class ApiGatewayStack extends cdk.Stack {
     });
 
     // Lambda functions
-    const getUsersHandler = new lambda.Function(this, 'GetUsersHandler', {
+    const getUsersHandler = new lambda.Function(this, "GetUsersHandler", {
       runtime: lambda.Runtime.NODEJS_18_X,
-      handler: 'index.handler',
-      code: lambda.Code.fromAsset('lambda/get-users'),
+      handler: "index.handler",
+      code: lambda.Code.fromAsset("lambda/get-users"),
       environment: {
-        TABLE_NAME: 'users',
+        TABLE_NAME: "users",
       },
     });
 
     // API Gateway
-    const api = new apigateway.RestApi(this, 'Api', {
-      restApiName: 'User Service API',
-      description: 'API for user management',
+    const api = new apigateway.RestApi(this, "Api", {
+      restApiName: "User Service API",
+      description: "API for user management",
       deployOptions: {
-        stageName: 'v1',
+        stageName: "v1",
         loggingLevel: apigateway.MethodLoggingLevel.INFO,
         dataTraceEnabled: true,
         metricsEnabled: true,
@@ -400,41 +402,33 @@ export class ApiGatewayStack extends cdk.Stack {
       defaultCorsPreflightOptions: {
         allowOrigins: apigateway.Cors.ALL_ORIGINS,
         allowMethods: apigateway.Cors.ALL_METHODS,
-        allowHeaders: ['Content-Type', 'Authorization'],
+        allowHeaders: ["Content-Type", "Authorization"],
       },
     });
 
     // Cognito Authorizer
-    const authorizer = new apigateway.CognitoUserPoolsAuthorizer(
-      this,
-      'CognitoAuthorizer',
-      {
-        cognitoUserPools: [userPool],
-        authorizerName: 'cognito-authorizer',
-        identitySource: 'method.request.header.Authorization',
-      }
-    );
+    const authorizer = new apigateway.CognitoUserPoolsAuthorizer(this, "CognitoAuthorizer", {
+      cognitoUserPools: [userPool],
+      authorizerName: "cognito-authorizer",
+      identitySource: "method.request.header.Authorization",
+    });
 
     // Request validator
-    const requestValidator = new apigateway.RequestValidator(
-      this,
-      'RequestValidator',
-      {
-        restApi: api,
-        validateRequestBody: true,
-        validateRequestParameters: true,
-      }
-    );
+    const requestValidator = new apigateway.RequestValidator(this, "RequestValidator", {
+      restApi: api,
+      validateRequestBody: true,
+      validateRequestParameters: true,
+    });
 
     // Users resource
-    const users = api.root.addResource('users');
+    const users = api.root.addResource("users");
 
     // GET /users
     users.addMethod(
-      'GET',
+      "GET",
       new apigateway.LambdaIntegration(getUsersHandler, {
         requestTemplates: {
-          'application/json': '{ "statusCode": "200" }',
+          "application/json": '{ "statusCode": "200" }',
         },
       }),
       {
@@ -443,18 +437,18 @@ export class ApiGatewayStack extends cdk.Stack {
         requestValidator,
         methodResponses: [
           {
-            statusCode: '200',
+            statusCode: "200",
             responseModels: {
-              'application/json': apigateway.Model.EMPTY_MODEL,
+              "application/json": apigateway.Model.EMPTY_MODEL,
             },
           },
         ],
-      }
+      },
     );
 
     // Usage plan with API key
-    const usagePlan = api.addUsagePlan('UsagePlan', {
-      name: 'Standard',
+    const usagePlan = api.addUsagePlan("UsagePlan", {
+      name: "Standard",
       throttle: {
         rateLimit: 100,
         burstLimit: 200,
@@ -465,15 +459,15 @@ export class ApiGatewayStack extends cdk.Stack {
       },
     });
 
-    const apiKey = api.addApiKey('ApiKey', {
-      apiKeyName: 'standard-key',
+    const apiKey = api.addApiKey("ApiKey", {
+      apiKeyName: "standard-key",
     });
 
     usagePlan.addApiKey(apiKey);
     usagePlan.addApiStage({ stage: api.deploymentStage });
 
     // Outputs
-    new cdk.CfnOutput(this, 'ApiUrl', {
+    new cdk.CfnOutput(this, "ApiUrl", {
       value: api.url,
     });
   }
@@ -485,67 +479,68 @@ export class ApiGatewayStack extends cdk.Stack {
 # apiproxy/proxies/default.xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ProxyEndpoint name="default">
-    <Description>User API Proxy</Description>
-    <FaultRules/>
-    <DefaultFaultRule name="default-fault">
-        <Step>
-            <Name>AM-ErrorResponse</Name>
-        </Step>
-    </DefaultFaultRule>
-    <PreFlow name="PreFlow">
-        <Request>
-            <Step>
-                <Name>RF-ThreatProtection</Name>
-            </Step>
-            <Step>
-                <Name>VA-VerifyAPIKey</Name>
-            </Step>
-            <Step>
-                <Name>QU-RateLimiting</Name>
-            </Step>
-            <Step>
-                <Name>SC-SpikeArrest</Name>
-            </Step>
-        </Request>
-        <Response/>
-    </PreFlow>
-    <PostFlow name="PostFlow">
-        <Request/>
-        <Response>
-            <Step>
-                <Name>AM-RemoveInternalHeaders</Name>
-            </Step>
-        </Response>
-    </PostFlow>
-    <Flows>
-        <Flow name="GetUsers">
-            <Description>Get all users</Description>
-            <Request>
-                <Step>
-                    <Name>OA-VerifyJWT</Name>
-                </Step>
-            </Request>
-            <Response>
-                <Step>
-                    <Name>JS-TransformResponse</Name>
-                </Step>
-            </Response>
-            <Condition>(proxy.pathsuffix MatchesPath "/users") and (request.verb = "GET")</Condition>
-        </Flow>
-    </Flows>
-    <HTTPProxyConnection>
-        <BasePath>/v1</BasePath>
-        <VirtualHost>secure</VirtualHost>
-    </HTTPProxyConnection>
-    <RouteRule name="default">
-        <TargetEndpoint>default</TargetEndpoint>
-    </RouteRule>
+<Description>User API Proxy</Description>
+<FaultRules/>
+<DefaultFaultRule name="default-fault">
+<Step>
+<Name>AM-ErrorResponse</Name>
+</Step>
+</DefaultFaultRule>
+<PreFlow name="PreFlow">
+<Request>
+<Step>
+<Name>RF-ThreatProtection</Name>
+</Step>
+<Step>
+<Name>VA-VerifyAPIKey</Name>
+</Step>
+<Step>
+<Name>QU-RateLimiting</Name>
+</Step>
+<Step>
+<Name>SC-SpikeArrest</Name>
+</Step>
+</Request>
+<Response/>
+</PreFlow>
+<PostFlow name="PostFlow">
+<Request/>
+<Response>
+<Step>
+<Name>AM-RemoveInternalHeaders</Name>
+</Step>
+</Response>
+</PostFlow>
+<Flows>
+<Flow name="GetUsers">
+<Description>Get all users</Description>
+<Request>
+<Step>
+<Name>OA-VerifyJWT</Name>
+</Step>
+</Request>
+<Response>
+<Step>
+<Name>JS-TransformResponse</Name>
+</Step>
+</Response>
+<Condition>(proxy.pathsuffix MatchesPath "/users") and (request.verb = "GET")</Condition>
+</Flow>
+</Flows>
+<HTTPProxyConnection>
+<BasePath>/v1</BasePath>
+<VirtualHost>secure</VirtualHost>
+</HTTPProxyConnection>
+<RouteRule name="default">
+<TargetEndpoint>default</TargetEndpoint>
+</RouteRule>
 </ProxyEndpoint>
 ```
 
 ## Best Practices
 
 ### Security
+
 - Always use HTTPS/TLS termination
 - Implement rate limiting at gateway level
 - Validate and sanitize all inputs
@@ -553,6 +548,7 @@ export class ApiGatewayStack extends cdk.Stack {
 - Apply WAF rules for protection
 
 ### Performance
+
 - Enable response caching
 - Use connection pooling
 - Implement circuit breakers
@@ -560,6 +556,7 @@ export class ApiGatewayStack extends cdk.Stack {
 - Optimize payload sizes
 
 ### Observability
+
 - Log all requests with correlation IDs
 - Export metrics to monitoring systems
 - Set up alerting for error rates
@@ -567,6 +564,7 @@ export class ApiGatewayStack extends cdk.Stack {
 - Track rate limit violations
 
 ### High Availability
+
 - Deploy across multiple zones
 - Use health checks for upstreams
 - Implement graceful degradation

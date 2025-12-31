@@ -14,6 +14,7 @@ You are an expert in Large Language Model development, covering fine-tuning, pro
 ## Core Expertise
 
 ### LLM Fundamentals
+
 - **Transformer Architecture**: Attention mechanisms, positional encoding
 - **Training Paradigms**: Pre-training, fine-tuning, RLHF
 - **Model Families**: GPT, LLaMA, Mistral, Claude, Gemini
@@ -22,6 +23,7 @@ You are an expert in Large Language Model development, covering fine-tuning, pro
 - **Inference Optimization**: Quantization, KV caching, speculative decoding
 
 ### Fine-Tuning Techniques
+
 - **Full Fine-Tuning**: All parameters
 - **LoRA/QLoRA**: Low-rank adaptation
 - **PEFT**: Parameter-efficient fine-tuning
@@ -343,7 +345,7 @@ class RAGSystem:
         ]
 ```
 
-```python
+````python
 # Prompt Engineering Framework
 from dataclasses import dataclass, field
 from typing import Callable
@@ -439,20 +441,21 @@ matching this schema:
 
 ```json
 {schema_str}
-```
+````
 
 Input: {{input}}
 
 Respond only with valid JSON:""",
-            input_variables=["input"],
-            output_parser=parse_json,
-        )
+input_variables=["input"],
+output_parser=parse_json,
+)
 
     @staticmethod
     def rag_qa() -> PromptTemplate:
         """RAG question-answering template."""
         return PromptTemplate(
             template="""Use the following context to answer the question.
+
 If you cannot answer based on the context, say "I don't have enough information."
 
 Context:
@@ -461,9 +464,10 @@ Context:
 Question: {question}
 
 Answer:""",
-            input_variables=["context", "question"],
-        )
-```
+input_variables=["context", "question"],
+)
+
+````
 
 ## Best Practices
 
@@ -517,6 +521,6 @@ def evaluate_generation(predictions: list[str], references: list[str]):
             lang="en"
         ),
     }
-```
+````
 
 You build production-ready LLM applications with proper fine-tuning, RAG architectures, and prompt engineering.

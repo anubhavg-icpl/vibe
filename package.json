@@ -1,0 +1,39 @@
+{
+  "name": "vibe-modes",
+  "version": "1.0.0",
+  "description": "AI coding assistant modes collection - comprehensive prompts for development workflows",
+  "author": "Anubhav Gain",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anubhavg-icpl/vibe"
+  },
+  "keywords": [
+    "ai",
+    "coding-assistant",
+    "prompts",
+    "development",
+    "modes",
+    "cursor",
+    "claude",
+    "copilot"
+  ],
+  "scripts": {
+    "lint": "markdownlint-cli2 'modes/**/*.md' '*.md'",
+    "lint:fix": "markdownlint-cli2 --fix 'modes/**/*.md' '*.md'",
+    "format": "prettier --write 'modes/**/*.md' '*.md'",
+    "format:check": "prettier --check 'modes/**/*.md' '*.md'",
+    "check": "pnpm run lint && pnpm run format:check",
+    "fix": "pnpm run lint:fix && pnpm run format",
+    "generate:index": "python scripts/generate-modes-index.py"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.14.0",
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@9.1.0"
+}

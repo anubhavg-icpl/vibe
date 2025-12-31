@@ -24,10 +24,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Dependencies (if any future tooling is added)
+# Dependencies
 node_modules/
 vendor/
 .pnpm-store/
+.pnpm-debug.log
+
+# Package manager
+pnpm-debug.log*
+.npmrc.local
 
 # Build outputs
 dist/

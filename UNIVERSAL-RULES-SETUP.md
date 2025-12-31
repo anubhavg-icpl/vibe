@@ -7,6 +7,7 @@ Transform ANY AI coding assistant into a context-aware development partner that 
 The Universal Rules Engine is a cross-platform system that makes AI assistants (Amazon Q, Claude Code, Copilot, Gemini, Aider, etc.) automatically follow your coding standards, workflows, and best practices.
 
 **Key Benefits:**
+
 - ✅ Define standards once, apply everywhere
 - ✅ Consistent AI guidance across all platforms
 - ✅ Transparent rule application (you see which rules are used)
@@ -23,7 +24,7 @@ Use the **Universal Rules Engine Mode** from the Vibe collection:
 vibe/modes/specialized/universal-rules-engine-mode.md
 ```
 
-### Step 2: Rules Are Already Set Up!
+### Step 2: Rules Are Already Set Up
 
 This repository includes starter rules in `.ai/rules/`:
 
@@ -57,6 +58,7 @@ When you interact with any AI assistant with the Universal Rules Engine active, 
 Every AI response will start with which rules it followed:
 
 ### Example 1: Git Commit
+
 ```
 📋 Rules applied: git-workflow.rule.md (GIT_COMMIT_QUALITY, GIT_COMMIT_STYLE)
 
@@ -64,6 +66,7 @@ I'll create a detailed commit message for these changes...
 ```
 
 ### Example 2: TypeScript Code
+
 ```
 📋 Rules applied: typescript.rule.md (STRICT_MODE, EXPLICIT_RETURN_TYPES),
                   code-quality.rule.md (SOLID_PRINCIPLES)
@@ -72,6 +75,7 @@ Here's the implementation with proper typing...
 ```
 
 ### Example 3: Security Review
+
 ```
 📋 Rules applied: security-standards.rule.md (INPUT_VALIDATION, SQL_INJECTION_PREVENTION)
 
@@ -121,18 +125,23 @@ Use this template for all new rules:
 
 ```markdown
 # Rule Name
+
 ## Purpose
+
 Clear, concise explanation of why this rule exists
 
 ## Instructions
+
 - Specific directive with unique ID (ID: UNIQUE_ID_1)
 - Another instruction (ID: UNIQUE_ID_2)
 - More instructions (ID: UNIQUE_ID_3)
 
 ## Priority
+
 Critical/High/Medium/Low
 
 ## Error Handling
+
 - What to do if things go wrong
 - Fallback strategies
 ```
@@ -140,9 +149,11 @@ Critical/High/Medium/Low
 ## 🌐 Multi-Platform Support
 
 ### Option 1: Universal Directory (Recommended)
+
 Keep all rules in `.ai/rules/` - works with all platforms automatically.
 
 ### Option 2: Platform-Specific Directories
+
 Create platform-specific directories as needed:
 
 ```bash
@@ -168,9 +179,11 @@ ln -s ../.ai/rules/* .aider/rules/
 ```
 
 ### Option 3: Mixed Approach
+
 Universal rules in `.ai/rules/`, platform-specific overrides in platform directories.
 
 Priority order (first match wins):
+
 1. `.amazonq/rules/` (Amazon Q)
 2. `.claude/rules/` (Claude Code)
 3. `.copilot/rules/` (Copilot)
@@ -182,27 +195,36 @@ Priority order (first match wins):
 ## 📋 Common Rule Examples
 
 ### Monitoring Coverage
+
 ```markdown
 # Monitoring
+
 ## Purpose
+
 Ensure all features have monitoring, metrics, and alerts
 
 ## Instructions
+
 - Check MONITORING_PLAN.md for major features (ID: CHECK_MONITORING)
 - Update with metrics, dashboards, alerts (ID: UPDATE_MONITORING)
 - Output: "📊 Updated monitoring plan for: [feature]" (ID: CONFIRM_UPDATE)
 
 ## Priority
+
 High
 ```
 
 ### API Design Standards
+
 ```markdown
 # API Design
+
 ## Purpose
+
 Consistent RESTful API patterns
 
 ## Instructions
+
 - Use plural nouns: /users not /user (ID: PLURAL_COLLECTIONS)
 - Proper HTTP methods (GET/POST/PUT/DELETE) (ID: HTTP_METHODS)
 - Include pagination for lists (ID: PAGINATION)
@@ -210,22 +232,28 @@ Consistent RESTful API patterns
 - Include rate limiting headers (ID: RATE_LIMITING)
 
 ## Priority
+
 High
 ```
 
 ### Documentation Requirements
+
 ```markdown
 # Documentation
+
 ## Purpose
+
 Comprehensive documentation for all public APIs
 
 ## Instructions
+
 - JSDoc for all public functions (ID: JSDOC_PUBLIC)
 - README for all packages (ID: PACKAGE_README)
 - Examples for complex usage (ID: USAGE_EXAMPLES)
 - Update docs with code changes (ID: UPDATE_DOCS)
 
 ## Priority
+
 Medium
 ```
 
@@ -234,21 +262,25 @@ Medium
 Choose the right priority for your rule:
 
 **Critical** - Must be followed, no exceptions
+
 - Security standards
 - Rule transparency (conversation)
 - Never commit secrets
 
 **High** - Should be followed unless conflicts with Critical
+
 - Git workflow safety
 - Testing requirements
 - Input validation
 
 **Medium** - Important guidelines
+
 - Code quality standards
 - Language-specific practices
 - Documentation requirements
 
 **Low** - Preferences, can be overridden
+
 - Formatting styles
 - Comment preferences
 - Variable naming suggestions
@@ -258,6 +290,7 @@ Choose the right priority for your rule:
 ### Rules Not Showing Up?
 
 **Check:**
+
 1. ✅ File extension is `.md` or `.rule.md`
 2. ✅ File follows standard format (Purpose, Instructions, Priority, Error Handling)
 3. ✅ All instructions have unique IDs
@@ -270,13 +303,16 @@ Adjust the conversation rule to be less verbose:
 
 ```markdown
 # Conversation
+
 ## Instructions
+
 - Announce only high/critical priority rules (ID: ANNOUNCE_IMPORTANT)
 ```
 
 ### Conflicting Rules?
 
 Rules are applied by priority:
+
 - **Critical** overrides everything
 - **High** overrides Medium and Low
 - **Medium** overrides Low
@@ -297,21 +333,25 @@ Track these metrics to see the impact:
 ## 🎓 Next Steps
 
 ### Week 1: Learn the System
+
 - Use existing rules
 - Observe which rules apply to different tasks
 - Understand the transparency system
 
 ### Week 2: Customize
+
 - Add 2-3 project-specific rules
 - Modify existing rules for your workflow
 - Get team feedback
 
 ### Week 3: Expand
+
 - Add language-specific rules
 - Create domain-specific rules (frontend, backend, etc.)
 - Share rules across team
 
 ### Month 2+: Optimize
+
 - Review rule usage analytics
 - Archive unused rules
 - Refine based on team feedback
@@ -344,6 +384,7 @@ Track these metrics to see the impact:
 ## 🎉 Success Story
 
 **Before Rules:**
+
 ```
 You: "Create a React component for user profiles"
 AI: [Creates component with inconsistent patterns]
@@ -356,6 +397,7 @@ AI: [Another update...]
 ```
 
 **After Rules:**
+
 ```
 You: "Create a React component for user profiles"
 📋 Rules applied: react.rule.md (FUNCTIONAL_COMPONENTS, PROP_VALIDATION),

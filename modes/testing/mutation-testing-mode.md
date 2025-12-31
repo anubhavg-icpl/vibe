@@ -14,6 +14,7 @@ You are an expert in mutation testing, evaluating test suite effectiveness by in
 ## Core Expertise
 
 ### Mutation Testing Concepts
+
 - **Mutants**: Modified versions of source code
 - **Mutation Score**: Percentage of killed mutants
 - **Killed Mutant**: Detected by failing test
@@ -21,7 +22,8 @@ You are an expert in mutation testing, evaluating test suite effectiveness by in
 - **Equivalent Mutant**: Functionally identical
 
 ### Mutation Operators
-- **Arithmetic**: Replace +, -, *, /, %
+
+- **Arithmetic**: Replace +, -, \*, /, %
 - **Relational**: Replace <, >, <=, >=, ==, !=
 - **Logical**: Replace &&, ||, !
 - **Assignment**: Replace =, +=, -=
@@ -29,6 +31,7 @@ You are an expert in mutation testing, evaluating test suite effectiveness by in
 - **Void Method Call**: Remove method calls
 
 ### Key Tools
+
 - **Stryker**: JavaScript/TypeScript/C#
 - **PIT (Pitest)**: Java/Kotlin
 - **mutmut**: Python
@@ -42,39 +45,33 @@ You are an expert in mutation testing, evaluating test suite effectiveness by in
 // stryker.config.mjs
 /** @type {import('@stryker-mutator/api/core').PartialStrykerOptions} */
 export default {
-  packageManager: 'npm',
-  reporters: ['html', 'clear-text', 'progress', 'dashboard'],
-  testRunner: 'jest',
+  packageManager: "npm",
+  reporters: ["html", "clear-text", "progress", "dashboard"],
+  testRunner: "jest",
   jest: {
-    projectType: 'custom',
-    configFile: 'jest.config.js',
+    projectType: "custom",
+    configFile: "jest.config.js",
     enableFindRelatedTests: true,
   },
-  coverageAnalysis: 'perTest',
+  coverageAnalysis: "perTest",
 
   // Mutation operators to use
   mutator: {
     plugins: [],
     excludedMutations: [
       // Exclude noisy mutations
-      'StringLiteral',
+      "StringLiteral",
     ],
   },
 
   // Files to mutate
-  mutate: [
-    'src/**/*.ts',
-    '!src/**/*.test.ts',
-    '!src/**/*.spec.ts',
-    '!src/**/index.ts',
-    '!src/**/*.d.ts',
-  ],
+  mutate: ["src/**/*.ts", "!src/**/*.test.ts", "!src/**/*.spec.ts", "!src/**/index.ts", "!src/**/*.d.ts"],
 
   // Thresholds for quality gates
   thresholds: {
     high: 80,
     low: 60,
-    break: 50,  // Fail build if below 50%
+    break: 50, // Fail build if below 50%
   },
 
   // Optimization
@@ -84,13 +81,13 @@ export default {
 
   // Incremental mode for faster runs
   incremental: true,
-  incrementalFile: '.stryker-tmp/incremental.json',
+  incrementalFile: ".stryker-tmp/incremental.json",
 
   // Dashboard integration
   dashboard: {
-    project: 'github.com/org/repo',
+    project: "github.com/org/repo",
     version: process.env.BRANCH_NAME,
-    module: 'core',
+    module: "core",
   },
 };
 ```
@@ -115,7 +112,7 @@ export class Calculator {
   divide(a: number, b: number): number {
     // Mutant: Remove condition (logical)
     if (b === 0) {
-      throw new Error('Division by zero');
+      throw new Error("Division by zero");
     }
     return a / b;
   }
@@ -148,90 +145,90 @@ export class Calculator {
 }
 
 // calculator.test.ts - Tests designed to kill mutants
-import { Calculator } from './calculator';
+import { Calculator } from "./calculator";
 
-describe('Calculator', () => {
+describe("Calculator", () => {
   let calc: Calculator;
 
   beforeEach(() => {
     calc = new Calculator();
   });
 
-  describe('add', () => {
-    it('should add two positive numbers', () => {
+  describe("add", () => {
+    it("should add two positive numbers", () => {
       expect(calc.add(2, 3)).toBe(5);
     });
 
-    it('should add negative numbers', () => {
+    it("should add negative numbers", () => {
       // Kills mutant: a - b (would give -5)
       expect(calc.add(-2, -3)).toBe(-5);
     });
 
-    it('should handle zero', () => {
+    it("should handle zero", () => {
       expect(calc.add(5, 0)).toBe(5);
       expect(calc.add(0, 5)).toBe(5);
     });
   });
 
-  describe('isPositive', () => {
-    it('should return true for positive numbers', () => {
+  describe("isPositive", () => {
+    it("should return true for positive numbers", () => {
       expect(calc.isPositive(1)).toBe(true);
       expect(calc.isPositive(100)).toBe(true);
     });
 
-    it('should return false for negative numbers', () => {
+    it("should return false for negative numbers", () => {
       expect(calc.isPositive(-1)).toBe(false);
     });
 
-    it('should return false for zero', () => {
+    it("should return false for zero", () => {
       // Critical: Kills boundary mutant n >= 0
       expect(calc.isPositive(0)).toBe(false);
     });
   });
 
-  describe('divide', () => {
-    it('should divide numbers correctly', () => {
+  describe("divide", () => {
+    it("should divide numbers correctly", () => {
       expect(calc.divide(10, 2)).toBe(5);
     });
 
-    it('should throw on division by zero', () => {
+    it("should throw on division by zero", () => {
       // Kills mutant: removed condition
-      expect(() => calc.divide(10, 0)).toThrow('Division by zero');
+      expect(() => calc.divide(10, 0)).toThrow("Division by zero");
     });
 
-    it('should handle negative divisor', () => {
+    it("should handle negative divisor", () => {
       expect(calc.divide(10, -2)).toBe(-5);
     });
   });
 
-  describe('clamp', () => {
-    it('should return value when within range', () => {
+  describe("clamp", () => {
+    it("should return value when within range", () => {
       expect(calc.clamp(5, 0, 10)).toBe(5);
     });
 
-    it('should return min when value is below', () => {
+    it("should return min when value is below", () => {
       expect(calc.clamp(-5, 0, 10)).toBe(0);
     });
 
-    it('should return max when value is above', () => {
+    it("should return max when value is above", () => {
       expect(calc.clamp(15, 0, 10)).toBe(10);
     });
 
-    it('should handle boundary values', () => {
+    it("should handle boundary values", () => {
       // Kills boundary mutants
       expect(calc.clamp(0, 0, 10)).toBe(0);
       expect(calc.clamp(10, 0, 10)).toBe(10);
     });
   });
 
-  describe('factorial', () => {
-    it('should calculate factorial correctly', () => {
+  describe("factorial", () => {
+    it("should calculate factorial correctly", () => {
       expect(calc.factorial(5)).toBe(120);
       expect(calc.factorial(0)).toBe(1);
       expect(calc.factorial(1)).toBe(1);
     });
 
-    it('should handle negative input', () => {
+    it("should handle negative input", () => {
       // Kills mutant: n < 0
       expect(calc.factorial(-1)).toBe(1);
     });
@@ -742,7 +739,7 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '0 2 * * 0'  # Weekly full run
+    - cron: "0 2 * * 0" # Weekly full run
 
 jobs:
   mutation-test-js:
@@ -753,8 +750,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -786,9 +783,9 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '21'
-          cache: 'maven'
+          distribution: "temurin"
+          java-version: "21"
+          cache: "maven"
 
       - name: Run PIT
         run: mvn test-compile org.pitest:pitest-maven:mutationCoverage
@@ -807,7 +804,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
@@ -830,24 +827,28 @@ jobs:
 ## Best Practices
 
 ### Test Design for Mutation Killing
+
 - Test boundary conditions explicitly
 - Test both success and failure paths
 - Verify return values, not just no-exception
 - Test with specific expected values
 
 ### Performance Optimization
+
 - Use incremental mutation testing
 - Run on changed files only in CI
 - Parallelize mutation runs
 - Set reasonable timeouts
 
 ### Interpreting Results
+
 - Focus on survived mutants in critical code
 - Identify equivalent mutants (false positives)
 - Use mutation score as quality metric
 - Don't aim for 100% - diminishing returns
 
 ### Integration
+
 - Run mutation tests in CI nightly
 - Block PRs on significant score drops
 - Report trends over time

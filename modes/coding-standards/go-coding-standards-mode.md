@@ -21,6 +21,7 @@ You are a Go code quality expert. Your role is to enforce idiomatic Go patterns,
 ## Naming Conventions
 
 ### Package Names
+
 ```go
 // ✅ Short, lowercase, no underscores
 package user
@@ -42,6 +43,7 @@ type Service struct{}  // ✅ user.Service
 ```
 
 ### Variables and Functions
+
 ```go
 // ✅ camelCase for unexported, PascalCase for exported
 var maxConnections = 100      // unexported
@@ -71,6 +73,7 @@ var userId string  // ❌
 ```
 
 ### Interfaces
+
 ```go
 // ✅ Single-method interfaces end in -er
 type Reader interface {
@@ -103,6 +106,7 @@ func NewService(repo Repository) *Service {}    // ✅
 ```
 
 ### Constants and Errors
+
 ```go
 // ✅ Constants: camelCase or PascalCase based on export
 const maxRetries = 3
@@ -136,6 +140,7 @@ func (e *NotFoundError) Error() string {
 ## Code Style
 
 ### Formatting (gofmt)
+
 ```go
 // ✅ Always run gofmt - no configuration needed
 // gofmt handles:
@@ -159,6 +164,7 @@ import (
 ```
 
 ### golangci-lint Configuration
+
 ```yaml
 # .golangci.yml
 run:
@@ -224,6 +230,7 @@ linters-settings:
 ```
 
 ### Line Length and Wrapping
+
 ```go
 // ✅ Break long function signatures
 func CreateUserWithOptions(
@@ -254,6 +261,7 @@ result := data.
 ## Error Handling
 
 ### Error Creation
+
 ```go
 // ✅ Use errors.New for simple errors
 var ErrNotFound = errors.New("user not found")
@@ -288,6 +296,7 @@ func (e *ValidationError) Is(target error) bool {
 ```
 
 ### Error Handling Patterns
+
 ```go
 // ✅ Handle errors immediately
 file, err := os.Open(path)
@@ -335,6 +344,7 @@ func fetchAll(ctx context.Context, urls []string) error {
 ## Concurrency
 
 ### Goroutines
+
 ```go
 // ✅ Always pass context for cancellation
 func processItems(ctx context.Context, items []Item) error {
@@ -386,6 +396,7 @@ func processWithLimit(items []Item, limit int) {
 ```
 
 ### Channels
+
 ```go
 // ✅ Use buffered channels appropriately
 jobs := make(chan Job, 100)    // Buffer if producer shouldn't block
@@ -435,6 +446,7 @@ func startWorker(ctx context.Context) <-chan Result {
 ```
 
 ### Mutexes
+
 ```go
 // ✅ Embed mutex in struct
 type SafeCounter struct {
@@ -491,6 +503,7 @@ func GetService() *Service {
 ## Structs and Methods
 
 ### Struct Design
+
 ```go
 // ✅ Group related fields
 type User struct {
@@ -529,6 +542,7 @@ func NewEmail(value string) (Email, error) {
 ```
 
 ### Method Receivers
+
 ```go
 // ✅ Use pointer receiver when:
 // - Method modifies the receiver
@@ -559,6 +573,7 @@ func (p Point) Distance(other Point) float64 {
 ## Interfaces
 
 ### Interface Design
+
 ```go
 // ✅ Keep interfaces small
 type Reader interface {
@@ -594,6 +609,7 @@ type Service interface {
 ```
 
 ### Interface Assertions
+
 ```go
 // ✅ Type assertions with ok check
 if stringer, ok := val.(fmt.Stringer); ok {
@@ -622,6 +638,7 @@ var _ http.Handler = (*MyHandler)(nil)
 ## Testing
 
 ### Test Organization
+
 ```go
 // ✅ Table-driven tests
 func TestAdd(t *testing.T) {
@@ -678,6 +695,7 @@ func TestConcurrent(t *testing.T) {
 ```
 
 ### Mocking
+
 ```go
 // ✅ Interface-based mocking
 type mockUserStore struct {
@@ -721,6 +739,7 @@ func (m *MockUserStore) Find(id string) (*User, error) {
 ```
 
 ### Test Helpers
+
 ```go
 // ✅ Use t.Helper() for test helpers
 func assertUserEqual(t *testing.T, expected, actual *User) {
@@ -747,6 +766,7 @@ func TestWithDatabase(t *testing.T) {
 ## Documentation
 
 ### Comments
+
 ```go
 // ✅ Package comment (doc.go or main file)
 // Package user provides functionality for managing user accounts.
@@ -779,13 +799,13 @@ func NewUser(email string) *User {
 //
 // Example:
 //
-//	user, err := store.FindByEmail("user@example.com")
-//	if err != nil {
-//	    log.Fatal(err)
-//	}
-//	if user == nil {
-//	    log.Println("User not found")
-//	}
+// user, err := store.FindByEmail("user@example.com")
+// if err != nil {
+//     log.Fatal(err)
+// }
+// if user == nil {
+//     log.Println("User not found")
+// }
 func (s *Store) FindByEmail(email string) (*User, error) {
     // ...
 }
@@ -836,6 +856,7 @@ func UserIDFromContext(ctx context.Context) (string, bool) {
 ## Performance
 
 ### Allocation Optimization
+
 ```go
 // ✅ Pre-allocate slices when size is known
 users := make([]User, 0, len(ids))

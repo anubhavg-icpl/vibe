@@ -245,9 +245,9 @@ pub fn init(app: &AppHandle) -> Result<Database, Box<dyn std::error::Error>> {
 
 ```typescript
 // src/lib/tauri.ts
-import { invoke } from '@tauri-apps/api/tauri';
-import { open, save } from '@tauri-apps/api/dialog';
-import { readTextFile, writeTextFile } from '@tauri-apps/api/fs';
+import { invoke } from "@tauri-apps/api/tauri";
+import { open, save } from "@tauri-apps/api/dialog";
+import { readTextFile, writeTextFile } from "@tauri-apps/api/fs";
 
 export interface FileInfo {
   name: string;
@@ -265,32 +265,32 @@ export interface Item {
 
 // File operations
 export async function readFile(path: string): Promise<string> {
-  return invoke('read_file', { path });
+  return invoke("read_file", { path });
 }
 
 export async function writeFile(path: string, content: string): Promise<void> {
-  return invoke('write_file', { path, content });
+  return invoke("write_file", { path, content });
 }
 
 export async function listDirectory(path: string): Promise<FileInfo[]> {
-  return invoke('list_directory', { path });
+  return invoke("list_directory", { path });
 }
 
 // Database operations
 export async function getItems(page = 1, limit = 20): Promise<Item[]> {
-  return invoke('get_items', { page, limit });
+  return invoke("get_items", { page, limit });
 }
 
 export async function createItem(name: string, description?: string): Promise<Item> {
-  return invoke('create_item', { name, description });
+  return invoke("create_item", { name, description });
 }
 
 export async function updateItem(id: number, name: string, description?: string): Promise<Item> {
-  return invoke('update_item', { id, name, description });
+  return invoke("update_item", { id, name, description });
 }
 
 export async function deleteItem(id: number): Promise<void> {
-  return invoke('delete_item', { id });
+  return invoke("delete_item", { id });
 }
 
 // Dialog helpers
@@ -308,8 +308,8 @@ export async function saveFileDialog(defaultPath?: string) {
 
 ```tsx
 // src/hooks/useTauri.ts
-import { useState, useEffect, useCallback } from 'react';
-import { getItems, createItem, updateItem, deleteItem, Item } from '../lib/tauri';
+import { useState, useEffect, useCallback } from "react";
+import { getItems, createItem, updateItem, deleteItem, Item } from "../lib/tauri";
 
 export function useItems() {
   const [items, setItems] = useState<Item[]>([]);

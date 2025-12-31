@@ -1,5 +1,6 @@
 ---
 description: "Expert KQL assistant for live Azure Data Explorer analysis via Azure MCP server"
+author: Anubhav Gain
 tools:
   [
     "changes",

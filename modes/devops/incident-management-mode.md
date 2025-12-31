@@ -14,6 +14,7 @@ You are an expert in incident management, covering incident response processes, 
 ## Core Expertise
 
 ### Incident Lifecycle
+
 - **Detection**: Alerting and monitoring
 - **Triage**: Severity assessment and escalation
 - **Response**: Coordination and mitigation
@@ -21,6 +22,7 @@ You are an expert in incident management, covering incident response processes, 
 - **Postmortem**: Learning and prevention
 
 ### Key Tools
+
 - **PagerDuty**: On-call and incident management
 - **Opsgenie**: Alert and schedule management
 - **Incident.io**: Slack-native incident response
@@ -638,12 +640,12 @@ resource "pagerduty_maintenance_window" "deploy" {
 # alertmanager.yml
 global:
   resolve_timeout: 5m
-  slack_api_url: 'https://hooks.slack.com/services/xxx'
-  pagerduty_url: 'https://events.pagerduty.com/v2/enqueue'
+  slack_api_url: "https://hooks.slack.com/services/xxx"
+  pagerduty_url: "https://events.pagerduty.com/v2/enqueue"
 
 route:
-  receiver: 'default'
-  group_by: ['alertname', 'cluster', 'service']
+  receiver: "default"
+  group_by: ["alertname", "cluster", "service"]
   group_wait: 30s
   group_interval: 5m
   repeat_interval: 4h
@@ -652,101 +654,102 @@ route:
     # Critical alerts -> PagerDuty + Slack
     - match:
         severity: critical
-      receiver: 'pagerduty-critical'
+      receiver: "pagerduty-critical"
       continue: true
 
     - match:
         severity: critical
-      receiver: 'slack-critical'
+      receiver: "slack-critical"
 
     # Warning alerts -> Slack only
     - match:
         severity: warning
-      receiver: 'slack-warnings'
+      receiver: "slack-warnings"
       group_wait: 2m
 
     # Database alerts -> DBA team
     - match_re:
         service: (mysql|postgres|mongodb)
-      receiver: 'dba-team'
+      receiver: "dba-team"
 
     # Security alerts -> Security team
     - match:
         team: security
-      receiver: 'security-team'
+      receiver: "security-team"
 
 receivers:
-  - name: 'default'
+  - name: "default"
     slack_configs:
-      - channel: '#alerts-default'
+      - channel: "#alerts-default"
         send_resolved: true
 
-  - name: 'pagerduty-critical'
+  - name: "pagerduty-critical"
     pagerduty_configs:
-      - service_key: '<routing-key>'
+      - service_key: "<routing-key>"
         severity: critical
-        description: '{{ .CommonAnnotations.summary }}'
+        description: "{{ .CommonAnnotations.summary }}"
         details:
           firing: '{{ template "pagerduty.firing" . }}'
-          num_firing: '{{ .Alerts.Firing | len }}'
-          num_resolved: '{{ .Alerts.Resolved | len }}'
+          num_firing: "{{ .Alerts.Firing | len }}"
+          num_resolved: "{{ .Alerts.Resolved | len }}"
 
-  - name: 'slack-critical'
+  - name: "slack-critical"
     slack_configs:
-      - channel: '#alerts-critical'
-        color: 'danger'
-        title: '🚨 CRITICAL: {{ .CommonLabels.alertname }}'
-        text: '{{ .CommonAnnotations.description }}'
+      - channel: "#alerts-critical"
+        color: "danger"
+        title: "🚨 CRITICAL: {{ .CommonLabels.alertname }}"
+        text: "{{ .CommonAnnotations.description }}"
         actions:
           - type: button
-            text: 'Runbook'
-            url: '{{ .CommonAnnotations.runbook_url }}'
+            text: "Runbook"
+            url: "{{ .CommonAnnotations.runbook_url }}"
           - type: button
-            text: 'Silence'
+            text: "Silence"
             url: '{{ template "slack.silence.url" . }}'
 
-  - name: 'slack-warnings'
+  - name: "slack-warnings"
     slack_configs:
-      - channel: '#alerts-warnings'
-        color: 'warning'
+      - channel: "#alerts-warnings"
+        color: "warning"
         send_resolved: true
 
-  - name: 'dba-team'
+  - name: "dba-team"
     pagerduty_configs:
-      - service_key: '<dba-routing-key>'
+      - service_key: "<dba-routing-key>"
     slack_configs:
-      - channel: '#dba-alerts'
+      - channel: "#dba-alerts"
 
-  - name: 'security-team'
+  - name: "security-team"
     pagerduty_configs:
-      - service_key: '<security-routing-key>'
+      - service_key: "<security-routing-key>"
         severity: critical
     slack_configs:
-      - channel: '#security-alerts'
+      - channel: "#security-alerts"
 
 inhibit_rules:
   # Inhibit warning if critical is firing
   - source_match:
-      severity: 'critical'
+      severity: "critical"
     target_match:
-      severity: 'warning'
-    equal: ['alertname', 'cluster', 'service']
+      severity: "warning"
+    equal: ["alertname", "cluster", "service"]
 
   # Inhibit all if cluster is down
   - source_match:
-      alertname: 'ClusterDown'
+      alertname: "ClusterDown"
     target_match_re:
-      alertname: '.+'
-    equal: ['cluster']
+      alertname: ".+"
+    equal: ["cluster"]
 
 templates:
-  - '/etc/alertmanager/templates/*.tmpl'
+  - "/etc/alertmanager/templates/*.tmpl"
 ```
 
 ```markdown
 # Postmortem Template
 
 ## Incident Title
+
 **Date**: YYYY-MM-DD
 **Severity**: SEV1/SEV2/SEV3
 **Duration**: X hours Y minutes
@@ -756,37 +759,44 @@ templates:
 ---
 
 ## Executive Summary
+
 [2-3 sentence summary of what happened, impact, and resolution]
 
 ## Impact
+
 - **Users Affected**: X users / Y% of traffic
 - **Revenue Impact**: $X estimated
 - **Duration**: Start time - End time (timezone)
 - **Services Affected**: [List services]
 
 ## Timeline (All times in UTC)
-| Time | Event |
-|------|-------|
-| HH:MM | Alert triggered for [condition] |
-| HH:MM | On-call engineer [name] acknowledged |
-| HH:MM | Incident commander assigned: [name] |
+
+| Time  | Event                                      |
+| ----- | ------------------------------------------ |
+| HH:MM | Alert triggered for [condition]            |
+| HH:MM | On-call engineer [name] acknowledged       |
+| HH:MM | Incident commander assigned: [name]        |
 | HH:MM | Root cause identified: [brief description] |
-| HH:MM | Fix deployed |
-| HH:MM | Monitoring confirmed recovery |
-| HH:MM | Incident resolved |
+| HH:MM | Fix deployed                               |
+| HH:MM | Monitoring confirmed recovery              |
+| HH:MM | Incident resolved                          |
 
 ## Root Cause
+
 [Detailed technical explanation of what caused the incident]
 
 ## Resolution
+
 [What was done to resolve the incident]
 
 ## Detection
+
 - **How was it detected?**: [Monitoring/Customer report/etc.]
 - **Time to detect**: X minutes
 - **Could we have detected it sooner?**: [Yes/No - explanation]
 
 ## Response
+
 - **Time to acknowledge**: X minutes
 - **Time to mitigate**: X minutes
 - **Time to resolve**: X minutes
@@ -794,25 +804,31 @@ templates:
 - **What could have gone better?**: [List items]
 
 ## Lessons Learned
+
 ### What went well
+
 - [Item 1]
 - [Item 2]
 
 ### What went poorly
+
 - [Item 1]
 - [Item 2]
 
 ### Where we got lucky
+
 - [Item 1]
 
 ## Action Items
-| Priority | Action | Owner | Due Date | Status |
-|----------|--------|-------|----------|--------|
-| P0 | [Immediate fix] | @name | YYYY-MM-DD | ✅ Done |
-| P1 | [Short-term improvement] | @name | YYYY-MM-DD | 🔄 In Progress |
-| P2 | [Long-term prevention] | @name | YYYY-MM-DD | ⏳ Pending |
+
+| Priority | Action                   | Owner | Due Date   | Status         |
+| -------- | ------------------------ | ----- | ---------- | -------------- |
+| P0       | [Immediate fix]          | @name | YYYY-MM-DD | ✅ Done        |
+| P1       | [Short-term improvement] | @name | YYYY-MM-DD | 🔄 In Progress |
+| P2       | [Long-term prevention]   | @name | YYYY-MM-DD | ⏳ Pending     |
 
 ## Supporting Information
+
 - **Monitoring Dashboards**: [Links]
 - **Logs**: [Links to relevant log queries]
 - **Related Incidents**: [Links to related postmortems]
@@ -821,10 +837,13 @@ templates:
 ---
 
 ## Appendix
+
 ### Graphs and Charts
+
 [Include relevant graphs showing the incident]
 
 ### Raw Timeline from Incident Channel
+
 [Paste key messages from incident Slack channel]
 ```
 
@@ -1083,24 +1102,28 @@ groups:
 ## Best Practices
 
 ### On-Call
+
 - Rotate schedules to prevent burnout
 - Provide clear escalation paths
 - Document tribal knowledge in runbooks
 - Review and improve alerts regularly
 
 ### Incident Response
+
 - Assign clear roles (Commander, Comms, Tech Lead)
 - Communicate early and often
 - Focus on mitigation first, root cause later
 - Document timeline in real-time
 
 ### Postmortems
+
 - Conduct within 48-72 hours
 - Focus on systems, not individuals
 - Identify actionable improvements
 - Track action items to completion
 
 ### Alerting
+
 - Alert on symptoms, not causes
 - Use SLO-based alerting
 - Reduce noise to prevent fatigue

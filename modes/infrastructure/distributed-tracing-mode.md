@@ -14,6 +14,7 @@ You are an expert in distributed tracing, implementing end-to-end request tracin
 ## Core Expertise
 
 ### Tracing Concepts
+
 - **Traces**: End-to-end request flow
 - **Spans**: Individual operations
 - **Context Propagation**: Cross-service correlation
@@ -21,6 +22,7 @@ You are an expert in distributed tracing, implementing end-to-end request tracin
 - **Baggage**: Cross-cutting data
 
 ### Tracing Systems
+
 - **Jaeger**: CNCF graduated, Uber-developed
 - **Zipkin**: Twitter-developed, B3 propagation
 - **OpenTelemetry**: Vendor-neutral standard
@@ -289,21 +291,21 @@ def get_user_context():
 ```yaml
 # Jaeger Deployment Configuration
 # docker-compose.yml
-version: '3.8'
+version: "3.8"
 
 services:
   jaeger:
     image: jaegertracing/all-in-one:1.53
     container_name: jaeger
     ports:
-      - "6831:6831/udp"   # Thrift compact (agent)
-      - "6832:6832/udp"   # Thrift binary (agent)
-      - "5778:5778"       # Agent config
-      - "16686:16686"     # Web UI
-      - "14268:14268"     # Collector HTTP
-      - "14250:14250"     # Collector gRPC
-      - "4317:4317"       # OTLP gRPC
-      - "4318:4318"       # OTLP HTTP
+      - "6831:6831/udp" # Thrift compact (agent)
+      - "6832:6832/udp" # Thrift binary (agent)
+      - "5778:5778" # Agent config
+      - "16686:16686" # Web UI
+      - "14268:14268" # Collector HTTP
+      - "14250:14250" # Collector gRPC
+      - "4317:4317" # OTLP gRPC
+      - "4318:4318" # OTLP HTTP
     environment:
       - COLLECTOR_OTLP_ENABLED=true
       - SPAN_STORAGE_TYPE=elasticsearch
@@ -328,9 +330,9 @@ services:
     volumes:
       - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
     ports:
-      - "4317:4317"   # OTLP gRPC
-      - "4318:4318"   # OTLP HTTP
-      - "8888:8888"   # Metrics
+      - "4317:4317" # OTLP gRPC
+      - "4318:4318" # OTLP HTTP
+      - "8888:8888" # Metrics
     depends_on:
       - jaeger
 
@@ -385,17 +387,17 @@ processors:
       # Always sample errors
       - name: errors
         type: status_code
-        status_code: {status_codes: [ERROR]}
+        status_code: { status_codes: [ERROR] }
 
       # Sample slow traces
       - name: latency
         type: latency
-        latency: {threshold_ms: 1000}
+        latency: { threshold_ms: 1000 }
 
       # Sample 10% of remaining traces
       - name: probabilistic
         type: probabilistic
-        probabilistic: {sampling_percentage: 10}
+        probabilistic: { sampling_percentage: 10 }
 
   resource:
     attributes:
@@ -671,24 +673,24 @@ func main() {
 
 ```typescript
 // Node.js/TypeScript Distributed Tracing
-import { NodeSDK } from '@opentelemetry/sdk-node';
-import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node';
-import { JaegerExporter } from '@opentelemetry/exporter-jaeger';
-import { Resource } from '@opentelemetry/resources';
-import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
-import { trace, context, SpanKind, SpanStatusCode } from '@opentelemetry/api';
-import { W3CTraceContextPropagator } from '@opentelemetry/core';
-import express, { Request, Response, NextFunction } from 'express';
-import axios from 'axios';
+import { NodeSDK } from "@opentelemetry/sdk-node";
+import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
+import { JaegerExporter } from "@opentelemetry/exporter-jaeger";
+import { Resource } from "@opentelemetry/resources";
+import { SemanticResourceAttributes } from "@opentelemetry/semantic-conventions";
+import { trace, context, SpanKind, SpanStatusCode } from "@opentelemetry/api";
+import { W3CTraceContextPropagator } from "@opentelemetry/core";
+import express, { Request, Response, NextFunction } from "express";
+import axios from "axios";
 
 // Initialize OpenTelemetry SDK
 const sdk = new NodeSDK({
   resource: new Resource({
-    [SemanticResourceAttributes.SERVICE_NAME]: 'user-service',
-    [SemanticResourceAttributes.SERVICE_VERSION]: '1.0.0',
+    [SemanticResourceAttributes.SERVICE_NAME]: "user-service",
+    [SemanticResourceAttributes.SERVICE_VERSION]: "1.0.0",
   }),
   traceExporter: new JaegerExporter({
-    endpoint: 'http://jaeger:14268/api/traces',
+    endpoint: "http://jaeger:14268/api/traces",
   }),
   instrumentations: [getNodeAutoInstrumentations()],
 });
@@ -696,14 +698,15 @@ const sdk = new NodeSDK({
 sdk.start();
 
 // Graceful shutdown
-process.on('SIGTERM', () => {
-  sdk.shutdown()
-    .then(() => console.log('Tracing terminated'))
-    .catch((error) => console.error('Error terminating tracing', error))
+process.on("SIGTERM", () => {
+  sdk
+    .shutdown()
+    .then(() => console.log("Tracing terminated"))
+    .catch((error) => console.error("Error terminating tracing", error))
     .finally(() => process.exit(0));
 });
 
-const tracer = trace.getTracer('user-service');
+const tracer = trace.getTracer("user-service");
 const app = express();
 app.use(express.json());
 
@@ -711,8 +714,8 @@ app.use(express.json());
 const tracingMiddleware = (req: Request, res: Response, next: NextFunction) => {
   const span = trace.getActiveSpan();
   if (span) {
-    span.setAttribute('http.request_id', req.headers['x-request-id'] as string);
-    span.setAttribute('user.id', req.headers['x-user-id'] as string);
+    span.setAttribute("http.request_id", req.headers["x-request-id"] as string);
+    span.setAttribute("user.id", req.headers["x-user-id"] as string);
   }
   next();
 };
@@ -720,61 +723,58 @@ const tracingMiddleware = (req: Request, res: Response, next: NextFunction) => {
 app.use(tracingMiddleware);
 
 // Handler with manual spans
-app.post('/users', async (req: Request, res: Response) => {
+app.post("/users", async (req: Request, res: Response) => {
   const parentSpan = trace.getActiveSpan();
 
   // Create child span for validation
-  const validateSpan = tracer.startSpan('validate-user-input', {
+  const validateSpan = tracer.startSpan("validate-user-input", {
     kind: SpanKind.INTERNAL,
     attributes: {
-      'user.email': req.body.email,
+      "user.email": req.body.email,
     },
   });
 
   try {
     // Validate input
     if (!req.body.email) {
-      validateSpan.setStatus({ code: SpanStatusCode.ERROR, message: 'Missing email' });
-      throw new Error('Email is required');
+      validateSpan.setStatus({ code: SpanStatusCode.ERROR, message: "Missing email" });
+      throw new Error("Email is required");
     }
     validateSpan.end();
 
     // Check if user exists (external service)
-    const checkSpan = tracer.startSpan('check-existing-user', {
+    const checkSpan = tracer.startSpan("check-existing-user", {
       kind: SpanKind.CLIENT,
     });
 
     const ctx = trace.setSpan(context.active(), checkSpan);
     await context.with(ctx, async () => {
-      const response = await axios.get(
-        `http://auth-service/users?email=${req.body.email}`,
-        {
-          headers: {
-            // Trace context is auto-propagated by instrumentation
-          },
-        }
-      );
-      checkSpan.setAttribute('user.exists', response.data.exists);
+      const response = await axios.get(`http://auth-service/users?email=${req.body.email}`, {
+        headers: {
+          // Trace context is auto-propagated by instrumentation
+        },
+      });
+      checkSpan.setAttribute("user.exists", response.data.exists);
     });
     checkSpan.end();
 
     // Create user
-    const createSpan = tracer.startSpan('create-user-in-db', {
+    const createSpan = tracer.startSpan("create-user-in-db", {
       kind: SpanKind.CLIENT,
       attributes: {
-        'db.system': 'postgresql',
-        'db.operation': 'INSERT',
+        "db.system": "postgresql",
+        "db.operation": "INSERT",
       },
     });
 
     const user = await createUser(req.body);
-    createSpan.setAttribute('user.id', user.id);
+    createSpan.setAttribute("user.id", user.id);
     createSpan.end();
 
     // Add event to parent span
-    parentSpan?.addEvent('user_created', {
-      'user.id': user.id,
-      'user.email': user.email,
+    parentSpan?.addEvent("user_created", {
+      "user.id": user.id,
+      "user.email": user.email,
     });
 
     res.status(201).json(user);
@@ -786,11 +786,7 @@ app.post('/users', async (req: Request, res: Response) => {
 });
 
 // Utility for creating spans with automatic error handling
-async function withSpan<T>(
-  name: string,
-  fn: (span: Span) => Promise<T>,
-  options?: SpanOptions
-): Promise<T> {
+async function withSpan<T>(name: string, fn: (span: Span) => Promise<T>, options?: SpanOptions): Promise<T> {
   return tracer.startActiveSpan(name, options ?? {}, async (span) => {
     try {
       const result = await fn(span);
@@ -807,20 +803,28 @@ async function withSpan<T>(
 }
 
 // Usage
-app.get('/users/:id', async (req: Request, res: Response) => {
-  const user = await withSpan('get-user', async (span) => {
-    span.setAttribute('user.id', req.params.id);
+app.get("/users/:id", async (req: Request, res: Response) => {
+  const user = await withSpan("get-user", async (span) => {
+    span.setAttribute("user.id", req.params.id);
 
-    const user = await withSpan('fetch-from-cache', async (cacheSpan) => {
-      cacheSpan.setAttribute('cache.type', 'redis');
-      return await cache.get(`user:${req.params.id}`);
-    }, { kind: SpanKind.CLIENT });
+    const user = await withSpan(
+      "fetch-from-cache",
+      async (cacheSpan) => {
+        cacheSpan.setAttribute("cache.type", "redis");
+        return await cache.get(`user:${req.params.id}`);
+      },
+      { kind: SpanKind.CLIENT },
+    );
 
     if (!user) {
-      return await withSpan('fetch-from-db', async (dbSpan) => {
-        dbSpan.setAttribute('db.system', 'postgresql');
-        return await db.users.findById(req.params.id);
-      }, { kind: SpanKind.CLIENT });
+      return await withSpan(
+        "fetch-from-db",
+        async (dbSpan) => {
+          dbSpan.setAttribute("db.system", "postgresql");
+          return await db.users.findById(req.params.id);
+        },
+        { kind: SpanKind.CLIENT },
+      );
     }
 
     return user;
@@ -829,7 +833,7 @@ app.get('/users/:id', async (req: Request, res: Response) => {
   res.json(user);
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+app.listen(3000, () => console.log("Server running on port 3000"));
 ```
 
 ## Sampling Strategies
@@ -895,24 +899,28 @@ class AdaptiveSampler(Sampler):
 ## Best Practices
 
 ### Instrumentation
+
 - Use auto-instrumentation where possible
 - Add custom spans for business logic
 - Include meaningful attributes
 - Propagate context across async boundaries
 
 ### Sampling
+
 - Use tail-based sampling for important traces
 - Always sample errors and slow requests
 - Adjust rates based on traffic volume
 - Consider cost of storage
 
 ### Context Propagation
+
 - Use W3C Trace Context standard
 - Support B3 for legacy systems
 - Include baggage for cross-cutting data
 - Handle async contexts properly
 
 ### Operations
+
 - Set appropriate retention periods
 - Monitor trace ingestion rates
 - Alert on tracing pipeline issues

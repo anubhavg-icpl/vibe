@@ -16,15 +16,15 @@ You are an expert in Cypress, the JavaScript end-to-end testing framework. You h
 ### cypress.config.ts
 
 ```typescript
-import { defineConfig } from 'cypress';
+import { defineConfig } from "cypress";
 
 export default defineConfig({
-  projectId: 'your-project-id',
+  projectId: "your-project-id",
 
   e2e: {
-    baseUrl: 'http://localhost:3000',
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: 'cypress/support/e2e.ts',
+    baseUrl: "http://localhost:3000",
+    specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
+    supportFile: "cypress/support/e2e.ts",
     viewportWidth: 1280,
     viewportHeight: 720,
     video: true,
@@ -40,7 +40,7 @@ export default defineConfig({
 
     setupNodeEvents(on, config) {
       // Task registration
-      on('task', {
+      on("task", {
         log(message) {
           console.log(message);
           return null;
@@ -56,7 +56,7 @@ export default defineConfig({
       });
 
       // Code coverage
-      require('@cypress/code-coverage/task')(on, config);
+      require("@cypress/code-coverage/task")(on, config);
 
       return config;
     },
@@ -64,15 +64,15 @@ export default defineConfig({
 
   component: {
     devServer: {
-      framework: 'react',
-      bundler: 'vite',
+      framework: "react",
+      bundler: "vite",
     },
-    specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: 'cypress/support/component.ts',
+    specPattern: "src/**/*.cy.{js,jsx,ts,tsx}",
+    supportFile: "cypress/support/component.ts",
   },
 
   env: {
-    apiUrl: 'http://localhost:3001/api',
+    apiUrl: "http://localhost:3001/api",
     coverage: true,
   },
 });
@@ -82,13 +82,13 @@ export default defineConfig({
 
 ```typescript
 // cypress/support/e2e.ts
-import './commands';
-import '@cypress/code-coverage/support';
+import "./commands";
+import "@cypress/code-coverage/support";
 
 // Handle uncaught exceptions
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on("uncaught:exception", (err, runnable) => {
   // Return false to prevent test failure on uncaught exceptions
-  if (err.message.includes('ResizeObserver loop')) {
+  if (err.message.includes("ResizeObserver loop")) {
     return false;
   }
   return true;
@@ -96,13 +96,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 // Log API calls for debugging
 beforeEach(() => {
-  cy.intercept('**/*').as('apiCall');
+  cy.intercept("**/*").as("apiCall");
 });
 ```
 
 ```typescript
 // cypress/support/commands.ts
-import '@testing-library/cypress/add-commands';
+import "@testing-library/cypress/add-commands";
 
 declare global {
   namespace Cypress {
@@ -121,40 +121,40 @@ declare global {
 }
 
 // Login via UI
-Cypress.Commands.add('login', (email: string, password: string) => {
-  cy.visit('/login');
-  cy.get('[data-cy=email-input]').type(email);
-  cy.get('[data-cy=password-input]').type(password);
-  cy.get('[data-cy=submit-button]').click();
-  cy.url().should('include', '/dashboard');
+Cypress.Commands.add("login", (email: string, password: string) => {
+  cy.visit("/login");
+  cy.get("[data-cy=email-input]").type(email);
+  cy.get("[data-cy=password-input]").type(password);
+  cy.get("[data-cy=submit-button]").click();
+  cy.url().should("include", "/dashboard");
 });
 
 // Login via API (faster for setup)
-Cypress.Commands.add('apiLogin', (email: string, password: string) => {
+Cypress.Commands.add("apiLogin", (email: string, password: string) => {
   cy.request({
-    method: 'POST',
-    url: `${Cypress.env('apiUrl')}/auth/login`,
+    method: "POST",
+    url: `${Cypress.env("apiUrl")}/auth/login`,
     body: { email, password },
   }).then((response) => {
-    window.localStorage.setItem('token', response.body.token);
+    window.localStorage.setItem("token", response.body.token);
   });
 });
 
 // Logout
-Cypress.Commands.add('logout', () => {
+Cypress.Commands.add("logout", () => {
   cy.window().then((win) => {
-    win.localStorage.removeItem('token');
+    win.localStorage.removeItem("token");
   });
-  cy.visit('/login');
+  cy.visit("/login");
 });
 
 // Data-cy selector shorthand
-Cypress.Commands.add('dataCy', (value: string) => {
+Cypress.Commands.add("dataCy", (value: string) => {
   return cy.get(`[data-cy="${value}"]`);
 });
 
 // Get by role
-Cypress.Commands.add('getByRole', (role: string, options?: { name?: string | RegExp }) => {
+Cypress.Commands.add("getByRole", (role: string, options?: { name?: string | RegExp }) => {
   if (options?.name) {
     return cy.get(`[role="${role}"]`).filter(`:contains("${options.name}")`);
   }
@@ -162,22 +162,22 @@ Cypress.Commands.add('getByRole', (role: string, options?: { name?: string | Reg
 });
 
 // Visibility assertions
-Cypress.Commands.add('shouldBeVisible', { prevSubject: true }, (subject) => {
-  cy.wrap(subject).should('be.visible');
+Cypress.Commands.add("shouldBeVisible", { prevSubject: true }, (subject) => {
+  cy.wrap(subject).should("be.visible");
 });
 
-Cypress.Commands.add('shouldNotExist', { prevSubject: true }, (subject) => {
-  cy.wrap(subject).should('not.exist');
+Cypress.Commands.add("shouldNotExist", { prevSubject: true }, (subject) => {
+  cy.wrap(subject).should("not.exist");
 });
 
 // Wait for API with assertion
-Cypress.Commands.add('waitForApi', (alias: string) => {
-  cy.wait(`@${alias}`).its('response.statusCode').should('be.oneOf', [200, 201]);
+Cypress.Commands.add("waitForApi", (alias: string) => {
+  cy.wait(`@${alias}`).its("response.statusCode").should("be.oneOf", [200, 201]);
 });
 
 // Mock API helper
-Cypress.Commands.add('mockApi', (method: string, url: string, response: object) => {
-  cy.intercept(method, url, response).as('mockedApi');
+Cypress.Commands.add("mockApi", (method: string, url: string, response: object) => {
+  cy.intercept(method, url, response).as("mockedApi");
 });
 ```
 
@@ -202,32 +202,32 @@ export class BasePage {
   }
 
   clickButton(name: string) {
-    cy.contains('button', name).click();
+    cy.contains("button", name).click();
     return this;
   }
 
   fillInput(label: string, value: string) {
-    cy.contains('label', label).parent().find('input').clear().type(value);
+    cy.contains("label", label).parent().find("input").clear().type(value);
     return this;
   }
 
   selectOption(label: string, option: string) {
-    cy.contains('label', label).parent().find('select').select(option);
+    cy.contains("label", label).parent().find("select").select(option);
     return this;
   }
 
   assertUrl(expectedUrl: string) {
-    cy.url().should('include', expectedUrl);
+    cy.url().should("include", expectedUrl);
     return this;
   }
 
   assertToast(message: string) {
-    cy.get('[role="alert"]').should('contain', message);
+    cy.get('[role="alert"]').should("contain", message);
     return this;
   }
 
   waitForPageLoad() {
-    cy.get('[data-loading="true"]').should('not.exist');
+    cy.get('[data-loading="true"]').should("not.exist");
     return this;
   }
 }
@@ -237,7 +237,7 @@ export class BasePage {
 
 ```typescript
 // cypress/pages/LoginPage.ts
-import { BasePage } from './BasePage';
+import { BasePage } from "./BasePage";
 
 export class LoginPage extends BasePage {
   // Selectors
@@ -251,7 +251,7 @@ export class LoginPage extends BasePage {
   };
 
   visit() {
-    super.visit('/login');
+    super.visit("/login");
     return this;
   }
 
@@ -283,12 +283,12 @@ export class LoginPage extends BasePage {
   }
 
   assertError(message: string) {
-    cy.get(this.selectors.errorMessage).should('contain', message);
+    cy.get(this.selectors.errorMessage).should("contain", message);
     return this;
   }
 
   assertLoginSuccess() {
-    cy.url().should('include', '/dashboard');
+    cy.url().should("include", "/dashboard");
     return this;
   }
 
@@ -305,7 +305,7 @@ export const loginPage = new LoginPage();
 
 ```typescript
 // cypress/pages/DashboardPage.ts
-import { BasePage } from './BasePage';
+import { BasePage } from "./BasePage";
 
 export class DashboardPage extends BasePage {
   private selectors = {
@@ -319,12 +319,12 @@ export class DashboardPage extends BasePage {
   };
 
   visit() {
-    super.visit('/dashboard');
+    super.visit("/dashboard");
     return this;
   }
 
   assertWelcomeMessage(name: string) {
-    cy.get(this.selectors.welcomeMessage).should('contain', name);
+    cy.get(this.selectors.welcomeMessage).should("contain", name);
     return this;
   }
 
@@ -336,7 +336,7 @@ export class DashboardPage extends BasePage {
   logout() {
     this.openUserMenu();
     cy.get(this.selectors.logoutButton).click();
-    cy.url().should('include', '/login');
+    cy.url().should("include", "/login");
     return this;
   }
 
@@ -345,20 +345,17 @@ export class DashboardPage extends BasePage {
   }
 
   assertStatsValue(cardName: string, value: string) {
-    cy.get(this.selectors.statsCard)
-      .contains(cardName)
-      .parent()
-      .should('contain', value);
+    cy.get(this.selectors.statsCard).contains(cardName).parent().should("contain", value);
     return this;
   }
 
   search(query: string) {
-    cy.get(this.selectors.searchInput).type(query).type('{enter}');
+    cy.get(this.selectors.searchInput).type(query).type("{enter}");
     return this;
   }
 
   getNotificationCount() {
-    return cy.get(this.selectors.notificationBell).find('.badge');
+    return cy.get(this.selectors.notificationBell).find(".badge");
   }
 }
 
@@ -371,48 +368,42 @@ export const dashboardPage = new DashboardPage();
 
 ```typescript
 // cypress/e2e/auth/login.cy.ts
-import { loginPage } from '../../pages/LoginPage';
-import { dashboardPage } from '../../pages/DashboardPage';
+import { loginPage } from "../../pages/LoginPage";
+import { dashboardPage } from "../../pages/DashboardPage";
 
-describe('Login', () => {
+describe("Login", () => {
   beforeEach(() => {
-    cy.task('clearDatabase');
-    cy.task('seedDatabase', { users: [{ email: 'test@example.com', password: 'password123' }] });
+    cy.task("clearDatabase");
+    cy.task("seedDatabase", { users: [{ email: "test@example.com", password: "password123" }] });
     loginPage.visit();
   });
 
-  it('should login with valid credentials', () => {
-    loginPage
-      .login('test@example.com', 'password123')
-      .assertLoginSuccess();
+  it("should login with valid credentials", () => {
+    loginPage.login("test@example.com", "password123").assertLoginSuccess();
 
-    dashboardPage.assertWelcomeMessage('Test User');
+    dashboardPage.assertWelcomeMessage("Test User");
   });
 
-  it('should show error with invalid credentials', () => {
-    loginPage
-      .login('wrong@example.com', 'wrongpassword')
-      .assertError('Invalid email or password');
+  it("should show error with invalid credentials", () => {
+    loginPage.login("wrong@example.com", "wrongpassword").assertError("Invalid email or password");
   });
 
-  it('should validate required fields', () => {
+  it("should validate required fields", () => {
     loginPage.clickSubmit();
 
-    cy.get('[data-cy="email-input"]').should('have.attr', 'aria-invalid', 'true');
-    cy.get('[data-cy="password-input"]').should('have.attr', 'aria-invalid', 'true');
+    cy.get('[data-cy="email-input"]').should("have.attr", "aria-invalid", "true");
+    cy.get('[data-cy="password-input"]').should("have.attr", "aria-invalid", "true");
   });
 
-  it('should persist session with remember me', () => {
-    loginPage
-      .checkRememberMe()
-      .login('test@example.com', 'password123');
+  it("should persist session with remember me", () => {
+    loginPage.checkRememberMe().login("test@example.com", "password123");
 
     // Clear session storage but not local storage
     cy.window().then((win) => win.sessionStorage.clear());
     cy.reload();
 
     // Should still be logged in
-    dashboardPage.assertWelcomeMessage('Test User');
+    dashboardPage.assertWelcomeMessage("Test User");
   });
 });
 ```
@@ -421,71 +412,71 @@ describe('Login', () => {
 
 ```typescript
 // cypress/e2e/dashboard/data.cy.ts
-describe('Dashboard Data', () => {
+describe("Dashboard Data", () => {
   beforeEach(() => {
-    cy.apiLogin('test@example.com', 'password123');
+    cy.apiLogin("test@example.com", "password123");
   });
 
-  it('should display data from API', () => {
-    cy.intercept('GET', '/api/dashboard/stats', {
+  it("should display data from API", () => {
+    cy.intercept("GET", "/api/dashboard/stats", {
       statusCode: 200,
       body: {
         totalUsers: 100,
         activeUsers: 85,
         revenue: 50000,
       },
-    }).as('getStats');
+    }).as("getStats");
 
-    cy.visit('/dashboard');
-    cy.wait('@getStats');
+    cy.visit("/dashboard");
+    cy.wait("@getStats");
 
-    cy.dataCy('stats-total-users').should('contain', '100');
-    cy.dataCy('stats-active-users').should('contain', '85');
-    cy.dataCy('stats-revenue').should('contain', '$50,000');
+    cy.dataCy("stats-total-users").should("contain", "100");
+    cy.dataCy("stats-active-users").should("contain", "85");
+    cy.dataCy("stats-revenue").should("contain", "$50,000");
   });
 
-  it('should handle API errors gracefully', () => {
-    cy.intercept('GET', '/api/dashboard/stats', {
+  it("should handle API errors gracefully", () => {
+    cy.intercept("GET", "/api/dashboard/stats", {
       statusCode: 500,
-      body: { error: 'Internal Server Error' },
-    }).as('getStatsError');
+      body: { error: "Internal Server Error" },
+    }).as("getStatsError");
 
-    cy.visit('/dashboard');
-    cy.wait('@getStatsError');
+    cy.visit("/dashboard");
+    cy.wait("@getStatsError");
 
-    cy.dataCy('error-message').should('be.visible');
-    cy.dataCy('retry-button').should('be.visible');
+    cy.dataCy("error-message").should("be.visible");
+    cy.dataCy("retry-button").should("be.visible");
   });
 
-  it('should show loading state', () => {
-    cy.intercept('GET', '/api/dashboard/stats', (req) => {
-      req.on('response', (res) => {
+  it("should show loading state", () => {
+    cy.intercept("GET", "/api/dashboard/stats", (req) => {
+      req.on("response", (res) => {
         res.setDelay(2000);
       });
-    }).as('getStatsSlow');
+    }).as("getStatsSlow");
 
-    cy.visit('/dashboard');
-    cy.dataCy('loading-spinner').should('be.visible');
-    cy.wait('@getStatsSlow');
-    cy.dataCy('loading-spinner').should('not.exist');
+    cy.visit("/dashboard");
+    cy.dataCy("loading-spinner").should("be.visible");
+    cy.wait("@getStatsSlow");
+    cy.dataCy("loading-spinner").should("not.exist");
   });
 
-  it('should refresh data on button click', () => {
+  it("should refresh data on button click", () => {
     let callCount = 0;
-    cy.intercept('GET', '/api/dashboard/stats', (req) => {
+    cy.intercept("GET", "/api/dashboard/stats", (req) => {
       callCount++;
       req.reply({
         body: { totalUsers: callCount * 10 },
       });
-    }).as('getStats');
+    }).as("getStats");
 
-    cy.visit('/dashboard');
-    cy.wait('@getStats');
-    cy.dataCy('stats-total-users').should('contain', '10');
+    cy.visit("/dashboard");
+    cy.wait("@getStats");
+    cy.dataCy("stats-total-users").should("contain", "10");
 
-    cy.dataCy('refresh-button').click();
-    cy.wait('@getStats');
-    cy.dataCy('stats-total-users').should('contain', '20');
+    cy.dataCy("refresh-button").click();
+    cy.wait("@getStats");
+    cy.dataCy("stats-total-users").should("contain", "20");
   });
 });
 ```
@@ -494,57 +485,57 @@ describe('Dashboard Data', () => {
 
 ```typescript
 // cypress/e2e/forms/user-form.cy.ts
-describe('User Form', () => {
+describe("User Form", () => {
   beforeEach(() => {
-    cy.apiLogin('admin@example.com', 'adminpass');
-    cy.visit('/users/new');
+    cy.apiLogin("admin@example.com", "adminpass");
+    cy.visit("/users/new");
   });
 
-  it('should create a new user', () => {
-    cy.intercept('POST', '/api/users', {
+  it("should create a new user", () => {
+    cy.intercept("POST", "/api/users", {
       statusCode: 201,
-      body: { id: 1, name: 'New User', email: 'new@example.com' },
-    }).as('createUser');
+      body: { id: 1, name: "New User", email: "new@example.com" },
+    }).as("createUser");
 
-    cy.dataCy('name-input').type('New User');
-    cy.dataCy('email-input').type('new@example.com');
-    cy.dataCy('role-select').select('Editor');
-    cy.dataCy('submit-button').click();
+    cy.dataCy("name-input").type("New User");
+    cy.dataCy("email-input").type("new@example.com");
+    cy.dataCy("role-select").select("Editor");
+    cy.dataCy("submit-button").click();
 
-    cy.wait('@createUser').its('request.body').should('deep.include', {
-      name: 'New User',
-      email: 'new@example.com',
-      role: 'editor',
+    cy.wait("@createUser").its("request.body").should("deep.include", {
+      name: "New User",
+      email: "new@example.com",
+      role: "editor",
     });
 
-    cy.url().should('include', '/users/1');
-    cy.get('[role="alert"]').should('contain', 'User created successfully');
+    cy.url().should("include", "/users/1");
+    cy.get('[role="alert"]').should("contain", "User created successfully");
   });
 
-  it('should validate email format', () => {
-    cy.dataCy('email-input').type('invalid-email');
-    cy.dataCy('submit-button').click();
+  it("should validate email format", () => {
+    cy.dataCy("email-input").type("invalid-email");
+    cy.dataCy("submit-button").click();
 
-    cy.dataCy('email-error').should('contain', 'Please enter a valid email');
+    cy.dataCy("email-error").should("contain", "Please enter a valid email");
   });
 
-  it('should prevent duplicate emails', () => {
-    cy.intercept('POST', '/api/users', {
+  it("should prevent duplicate emails", () => {
+    cy.intercept("POST", "/api/users", {
       statusCode: 409,
-      body: { error: 'Email already exists' },
-    }).as('createUser');
+      body: { error: "Email already exists" },
+    }).as("createUser");
 
-    cy.dataCy('name-input').type('Test User');
-    cy.dataCy('email-input').type('existing@example.com');
-    cy.dataCy('submit-button').click();
+    cy.dataCy("name-input").type("Test User");
+    cy.dataCy("email-input").type("existing@example.com");
+    cy.dataCy("submit-button").click();
 
-    cy.wait('@createUser');
-    cy.dataCy('form-error').should('contain', 'Email already exists');
+    cy.wait("@createUser");
+    cy.dataCy("form-error").should("contain", "Email already exists");
   });
 
-  it('should handle file upload', () => {
-    cy.dataCy('avatar-input').selectFile('cypress/fixtures/avatar.png');
-    cy.dataCy('avatar-preview').should('be.visible');
+  it("should handle file upload", () => {
+    cy.dataCy("avatar-input").selectFile("cypress/fixtures/avatar.png");
+    cy.dataCy("avatar-preview").should("be.visible");
   });
 });
 ```
@@ -562,52 +553,52 @@ interface TestCase {
 
 const testCases: TestCase[] = [
   {
-    description: 'valid credentials',
-    input: { email: 'user@example.com', password: 'ValidPass123!' },
+    description: "valid credentials",
+    input: { email: "user@example.com", password: "ValidPass123!" },
     shouldSucceed: true,
   },
   {
-    description: 'empty email',
-    input: { email: '', password: 'password123' },
-    expectedError: 'Email is required',
+    description: "empty email",
+    input: { email: "", password: "password123" },
+    expectedError: "Email is required",
   },
   {
-    description: 'invalid email format',
-    input: { email: 'invalid-email', password: 'password123' },
-    expectedError: 'Please enter a valid email',
+    description: "invalid email format",
+    input: { email: "invalid-email", password: "password123" },
+    expectedError: "Please enter a valid email",
   },
   {
-    description: 'short password',
-    input: { email: 'user@example.com', password: '123' },
-    expectedError: 'Password must be at least 8 characters',
+    description: "short password",
+    input: { email: "user@example.com", password: "123" },
+    expectedError: "Password must be at least 8 characters",
   },
   {
-    description: 'password without uppercase',
-    input: { email: 'user@example.com', password: 'password123!' },
-    expectedError: 'Password must contain an uppercase letter',
+    description: "password without uppercase",
+    input: { email: "user@example.com", password: "password123!" },
+    expectedError: "Password must contain an uppercase letter",
   },
 ];
 
-describe('Form Validation', () => {
+describe("Form Validation", () => {
   beforeEach(() => {
-    cy.visit('/register');
+    cy.visit("/register");
   });
 
   testCases.forEach(({ description, input, expectedError, shouldSucceed }) => {
     it(`handles ${description}`, () => {
       if (input.email) {
-        cy.dataCy('email-input').type(input.email);
+        cy.dataCy("email-input").type(input.email);
       }
       if (input.password) {
-        cy.dataCy('password-input').type(input.password);
+        cy.dataCy("password-input").type(input.password);
       }
 
-      cy.dataCy('submit-button').click();
+      cy.dataCy("submit-button").click();
 
       if (shouldSucceed) {
-        cy.url().should('include', '/dashboard');
+        cy.url().should("include", "/dashboard");
       } else if (expectedError) {
-        cy.get('[role="alert"]').should('contain', expectedError);
+        cy.get('[role="alert"]').should("contain", expectedError);
       }
     });
   });
@@ -749,7 +740,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -760,10 +751,10 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          wait-on: 'http://localhost:3000'
+          wait-on: "http://localhost:3000"
           record: true
           parallel: true
-          group: 'E2E Tests'
+          group: "E2E Tests"
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

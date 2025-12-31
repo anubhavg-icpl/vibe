@@ -100,23 +100,14 @@ remix-project/
 
 ```tsx
 // app/root.tsx
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useLoaderData,
-} from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from "@remix-run/react";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 
 import { getUser } from "~/lib/session.server";
 import stylesheet from "~/styles/tailwind.css?url";
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
-];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: stylesheet }];
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);
@@ -252,11 +243,7 @@ export default function UsersIndex() {
                   <Form method="post" className="inline">
                     <input type="hidden" name="intent" value="delete" />
                     <input type="hidden" name="userId" value={user.id} />
-                    <button
-                      type="submit"
-                      disabled={isDeleting}
-                      className="text-red-600 hover:underline"
-                    >
+                    <button type="submit" disabled={isDeleting} className="text-red-600 hover:underline">
                       Delete
                     </button>
                   </Form>
@@ -306,10 +293,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
 
   const result = UpdateUserSchema.safeParse(data);
   if (!result.success) {
-    return json(
-      { errors: result.error.flatten().fieldErrors },
-      { status: 400 }
-    );
+    return json({ errors: result.error.flatten().fieldErrors }, { status: 400 });
   }
 
   await updateUser(params.userId!, result.data);
@@ -327,14 +311,8 @@ export default function UserDetail() {
       <Form method="post" className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Name</label>
-          <input
-            name="name"
-            defaultValue={user.name}
-            className="mt-1 block w-full border rounded px-3 py-2"
-          />
-          {actionData?.errors?.name && (
-            <p className="text-red-500 text-sm">{actionData.errors.name}</p>
-          )}
+          <input name="name" defaultValue={user.name} className="mt-1 block w-full border rounded px-3 py-2" />
+          {actionData?.errors?.name && <p className="text-red-500 text-sm">{actionData.errors.name}</p>}
         </div>
 
         <div>
@@ -349,20 +327,13 @@ export default function UserDetail() {
 
         <div>
           <label className="block text-sm font-medium">Role</label>
-          <select
-            name="role"
-            defaultValue={user.role}
-            className="mt-1 block w-full border rounded px-3 py-2"
-          >
+          <select name="role" defaultValue={user.role} className="mt-1 block w-full border rounded px-3 py-2">
             <option value="user">User</option>
             <option value="admin">Admin</option>
           </select>
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
+        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
           Save Changes
         </button>
       </Form>

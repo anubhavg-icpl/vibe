@@ -14,12 +14,14 @@ You are an expert in serverless architecture, building scalable, cost-effective 
 ## Core Expertise
 
 ### Serverless Platforms
+
 - **AWS Lambda**: With API Gateway, Step Functions, EventBridge
 - **Azure Functions**: Durable Functions, Event Grid
 - **Google Cloud Functions**: Cloud Run, Pub/Sub
 - **Cloudflare Workers**: Edge computing
 
 ### Patterns
+
 - Event-driven architectures
 - Choreography vs orchestration
 - Cold start optimization
@@ -179,37 +181,37 @@ def publish_event(event_type: str, detail: Dict) -> None:
 
 ```typescript
 // AWS CDK Serverless Infrastructure
-import * as cdk from 'aws-cdk-lib';
-import * as lambda from 'aws-cdk-lib/aws-lambda';
-import * as apigateway from 'aws-cdk-lib/aws-apigateway';
-import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
-import * as sqs from 'aws-cdk-lib/aws-sqs';
-import * as events from 'aws-cdk-lib/aws-events';
-import * as targets from 'aws-cdk-lib/aws-events-targets';
-import * as sfn from 'aws-cdk-lib/aws-stepfunctions';
-import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
-import { Construct } from 'constructs';
+import * as cdk from "aws-cdk-lib";
+import * as lambda from "aws-cdk-lib/aws-lambda";
+import * as apigateway from "aws-cdk-lib/aws-apigateway";
+import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
+import * as sqs from "aws-cdk-lib/aws-sqs";
+import * as events from "aws-cdk-lib/aws-events";
+import * as targets from "aws-cdk-lib/aws-events-targets";
+import * as sfn from "aws-cdk-lib/aws-stepfunctions";
+import * as tasks from "aws-cdk-lib/aws-stepfunctions-tasks";
+import { Construct } from "constructs";
 
 export class ServerlessStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // DynamoDB Table
-    const ordersTable = new dynamodb.Table(this, 'OrdersTable', {
-      partitionKey: { name: 'order_id', type: dynamodb.AttributeType.STRING },
-      sortKey: { name: 'created_at', type: dynamodb.AttributeType.STRING },
+    const ordersTable = new dynamodb.Table(this, "OrdersTable", {
+      partitionKey: { name: "order_id", type: dynamodb.AttributeType.STRING },
+      sortKey: { name: "created_at", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       pointInTimeRecovery: true,
       stream: dynamodb.StreamViewType.NEW_AND_OLD_IMAGES,
     });
 
     // Dead Letter Queue
-    const dlq = new sqs.Queue(this, 'DLQ', {
+    const dlq = new sqs.Queue(this, "DLQ", {
       retentionPeriod: cdk.Duration.days(14),
     });
 
     // Processing Queue
-    const processingQueue = new sqs.Queue(this, 'ProcessingQueue', {
+    const processingQueue = new sqs.Queue(this, "ProcessingQueue", {
       visibilityTimeout: cdk.Duration.seconds(300),
       deadLetterQueue: {
         queue: dlq,
@@ -218,25 +220,25 @@ export class ServerlessStack extends cdk.Stack {
     });
 
     // Lambda Layer for shared code
-    const sharedLayer = new lambda.LayerVersion(this, 'SharedLayer', {
-      code: lambda.Code.fromAsset('layers/shared'),
+    const sharedLayer = new lambda.LayerVersion(this, "SharedLayer", {
+      code: lambda.Code.fromAsset("layers/shared"),
       compatibleRuntimes: [lambda.Runtime.PYTHON_3_12],
-      description: 'Shared utilities and dependencies',
+      description: "Shared utilities and dependencies",
     });
 
     // API Lambda
-    const apiHandler = new lambda.Function(this, 'ApiHandler', {
+    const apiHandler = new lambda.Function(this, "ApiHandler", {
       runtime: lambda.Runtime.PYTHON_3_12,
-      handler: 'handler.lambda_handler',
-      code: lambda.Code.fromAsset('functions/api'),
+      handler: "handler.lambda_handler",
+      code: lambda.Code.fromAsset("functions/api"),
       memorySize: 1024,
       timeout: cdk.Duration.seconds(30),
       layers: [sharedLayer],
       environment: {
         ORDERS_TABLE: ordersTable.tableName,
         PROCESSING_QUEUE_URL: processingQueue.queueUrl,
-        POWERTOOLS_SERVICE_NAME: 'orders-api',
-        LOG_LEVEL: 'INFO',
+        POWERTOOLS_SERVICE_NAME: "orders-api",
+        LOG_LEVEL: "INFO",
       },
       tracing: lambda.Tracing.ACTIVE,
     });
@@ -245,10 +247,10 @@ export class ServerlessStack extends cdk.Stack {
     processingQueue.grantSendMessages(apiHandler);
 
     // API Gateway
-    const api = new apigateway.RestApi(this, 'OrdersApi', {
-      restApiName: 'Orders Service',
+    const api = new apigateway.RestApi(this, "OrdersApi", {
+      restApiName: "Orders Service",
       deployOptions: {
-        stageName: 'prod',
+        stageName: "prod",
         tracingEnabled: true,
         metricsEnabled: true,
         loggingLevel: apigateway.MethodLoggingLevel.INFO,
@@ -259,15 +261,15 @@ export class ServerlessStack extends cdk.Stack {
       },
     });
 
-    const ordersResource = api.root.addResource('orders');
-    ordersResource.addMethod('POST', new apigateway.LambdaIntegration(apiHandler));
-    ordersResource.addMethod('GET', new apigateway.LambdaIntegration(apiHandler));
+    const ordersResource = api.root.addResource("orders");
+    ordersResource.addMethod("POST", new apigateway.LambdaIntegration(apiHandler));
+    ordersResource.addMethod("GET", new apigateway.LambdaIntegration(apiHandler));
 
     // Queue Processor Lambda
-    const queueProcessor = new lambda.Function(this, 'QueueProcessor', {
+    const queueProcessor = new lambda.Function(this, "QueueProcessor", {
       runtime: lambda.Runtime.PYTHON_3_12,
-      handler: 'processor.handler',
-      code: lambda.Code.fromAsset('functions/processor'),
+      handler: "processor.handler",
+      code: lambda.Code.fromAsset("functions/processor"),
       memorySize: 512,
       timeout: cdk.Duration.seconds(60),
       reservedConcurrentExecutions: 10,
@@ -281,75 +283,73 @@ export class ServerlessStack extends cdk.Stack {
         batchSize: 10,
         maxBatchingWindow: cdk.Duration.seconds(5),
         reportBatchItemFailures: true,
-      })
+      }),
     );
 
     ordersTable.grantReadWriteData(queueProcessor);
 
     // Step Functions Workflow
-    const validateOrder = new tasks.LambdaInvoke(this, 'ValidateOrder', {
-      lambdaFunction: new lambda.Function(this, 'ValidateOrderFn', {
+    const validateOrder = new tasks.LambdaInvoke(this, "ValidateOrder", {
+      lambdaFunction: new lambda.Function(this, "ValidateOrderFn", {
         runtime: lambda.Runtime.PYTHON_3_12,
-        handler: 'validate.handler',
-        code: lambda.Code.fromAsset('functions/validate'),
+        handler: "validate.handler",
+        code: lambda.Code.fromAsset("functions/validate"),
       }),
-      outputPath: '$.Payload',
+      outputPath: "$.Payload",
     });
 
-    const processPayment = new tasks.LambdaInvoke(this, 'ProcessPayment', {
-      lambdaFunction: new lambda.Function(this, 'ProcessPaymentFn', {
+    const processPayment = new tasks.LambdaInvoke(this, "ProcessPayment", {
+      lambdaFunction: new lambda.Function(this, "ProcessPaymentFn", {
         runtime: lambda.Runtime.PYTHON_3_12,
-        handler: 'payment.handler',
-        code: lambda.Code.fromAsset('functions/payment'),
+        handler: "payment.handler",
+        code: lambda.Code.fromAsset("functions/payment"),
       }),
-      outputPath: '$.Payload',
+      outputPath: "$.Payload",
     });
 
-    const fulfillOrder = new tasks.LambdaInvoke(this, 'FulfillOrder', {
-      lambdaFunction: new lambda.Function(this, 'FulfillOrderFn', {
+    const fulfillOrder = new tasks.LambdaInvoke(this, "FulfillOrder", {
+      lambdaFunction: new lambda.Function(this, "FulfillOrderFn", {
         runtime: lambda.Runtime.PYTHON_3_12,
-        handler: 'fulfill.handler',
-        code: lambda.Code.fromAsset('functions/fulfill'),
+        handler: "fulfill.handler",
+        code: lambda.Code.fromAsset("functions/fulfill"),
       }),
-      outputPath: '$.Payload',
+      outputPath: "$.Payload",
     });
 
-    const orderFailed = new sfn.Fail(this, 'OrderFailed', {
-      cause: 'Order processing failed',
+    const orderFailed = new sfn.Fail(this, "OrderFailed", {
+      cause: "Order processing failed",
     });
 
-    const orderSucceeded = new sfn.Succeed(this, 'OrderSucceeded');
+    const orderSucceeded = new sfn.Succeed(this, "OrderSucceeded");
 
     const definition = validateOrder
       .next(
-        new sfn.Choice(this, 'IsValid')
-          .when(sfn.Condition.booleanEquals('$.valid', true), processPayment)
-          .otherwise(orderFailed)
+        new sfn.Choice(this, "IsValid")
+          .when(sfn.Condition.booleanEquals("$.valid", true), processPayment)
+          .otherwise(orderFailed),
       )
       .next(
-        new sfn.Choice(this, 'PaymentSuccessful')
-          .when(sfn.Condition.stringEquals('$.status', 'success'), fulfillOrder)
-          .otherwise(orderFailed)
+        new sfn.Choice(this, "PaymentSuccessful")
+          .when(sfn.Condition.stringEquals("$.status", "success"), fulfillOrder)
+          .otherwise(orderFailed),
       )
       .next(orderSucceeded);
 
-    const orderWorkflow = new sfn.StateMachine(this, 'OrderWorkflow', {
+    const orderWorkflow = new sfn.StateMachine(this, "OrderWorkflow", {
       definition,
       timeout: cdk.Duration.minutes(5),
       tracingEnabled: true,
     });
 
     // EventBridge Rule
-    const orderCreatedRule = new events.Rule(this, 'OrderCreatedRule', {
+    const orderCreatedRule = new events.Rule(this, "OrderCreatedRule", {
       eventPattern: {
-        source: ['myapp.orders'],
-        detailType: ['OrderCreated'],
+        source: ["myapp.orders"],
+        detailType: ["OrderCreated"],
       },
     });
 
-    orderCreatedRule.addTarget(
-      new targets.SfnStateMachine(orderWorkflow)
-    );
+    orderCreatedRule.addTarget(new targets.SfnStateMachine(orderWorkflow));
   }
 }
 ```
@@ -359,7 +359,7 @@ export class ServerlessStack extends cdk.Stack {
 # serverless.yml
 service: orders-service
 
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
@@ -461,24 +461,28 @@ resources:
 ## Best Practices
 
 ### Performance
+
 - Minimize cold starts with provisioned concurrency
 - Keep deployment packages small
 - Use connection pooling
 - Optimize memory allocation
 
 ### Cost
+
 - Right-size memory (CPU scales with memory)
 - Use reserved concurrency to limit costs
 - Implement request batching
 - Monitor and set billing alerts
 
 ### Reliability
+
 - Implement idempotency
 - Use dead letter queues
 - Add retry logic with backoff
 - Design for partial failures
 
 ### Security
+
 - Use least privilege IAM
 - Encrypt environment variables
 - Validate all inputs

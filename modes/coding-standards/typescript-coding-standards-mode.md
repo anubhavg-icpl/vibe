@@ -21,6 +21,7 @@ You are a TypeScript code quality expert. Your role is to enforce type-safe patt
 ## Naming Conventions
 
 ### Variables and Functions
+
 ```typescript
 // ✅ camelCase for variables and functions
 const userName = "Alice";
@@ -41,16 +42,21 @@ const canAccessResource = checkPermission(user, resource);
 ```
 
 ### Classes, Interfaces, and Types
+
 ```typescript
 // ✅ PascalCase for classes, interfaces, types, enums
-class UserService { }
-interface UserRepository { }
+class UserService {}
+interface UserRepository {}
 type UserId = string;
-enum OrderStatus { Pending, Confirmed, Shipped }
+enum OrderStatus {
+  Pending,
+  Confirmed,
+  Shipped,
+}
 
 // ✅ Prefix interfaces with 'I' only when needed for clarity
-interface User { }              // Preferred
-interface IUserRepository { }   // When distinguishing from class
+interface User {} // Preferred
+interface IUserRepository {} // When distinguishing from class
 
 // ✅ Type aliases describe what they represent
 type CreateUserDTO = {
@@ -62,6 +68,7 @@ type UserResponse = User & { token: string };
 ```
 
 ### Constants and Enums
+
 ```typescript
 // ✅ SCREAMING_SNAKE_CASE for true constants
 const MAX_RETRY_ATTEMPTS = 3;
@@ -88,6 +95,7 @@ type OrderStatus = (typeof OrderStatus)[keyof typeof OrderStatus];
 ```
 
 ### File and Module Names
+
 ```typescript
 // ✅ kebab-case for files
 // user-service.ts
@@ -107,6 +115,7 @@ export { OrderService } from "./order-service";
 ## Type System
 
 ### Strict Type Configuration
+
 ```json
 // tsconfig.json
 {
@@ -131,6 +140,7 @@ export { OrderService } from "./order-service";
 ```
 
 ### Type Annotations
+
 ```typescript
 // ✅ Explicit return types for exported functions
 export function calculateTotal(items: Item[]): number {
@@ -148,7 +158,7 @@ const numbers = [1, 2, 3]; // number[]
 const user = { name: "Alice", age: 30 }; // inferred
 
 // ❌ Avoid any
-function bad(data: any): any { } // Never do this
+function bad(data: any): any {} // Never do this
 
 // ✅ Use unknown for truly unknown types
 function parseJson(json: string): unknown {
@@ -157,16 +167,12 @@ function parseJson(json: string): unknown {
 
 // ✅ Type guards for narrowing
 function isUser(value: unknown): value is User {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    "id" in value &&
-    "email" in value
-  );
+  return typeof value === "object" && value !== null && "id" in value && "email" in value;
 }
 ```
 
 ### Utility Types
+
 ```typescript
 // ✅ Use built-in utility types
 type ReadonlyUser = Readonly<User>;
@@ -191,11 +197,10 @@ type Endpoint = `/${string}`;
 ```
 
 ### Discriminated Unions
+
 ```typescript
 // ✅ Use discriminated unions for type-safe variants
-type Result<T, E = Error> =
-  | { success: true; data: T }
-  | { success: false; error: E };
+type Result<T, E = Error> = { success: true; data: T } | { success: false; error: E };
 
 function processResult<T>(result: Result<T>): T | null {
   if (result.success) {
@@ -206,10 +211,7 @@ function processResult<T>(result: Result<T>): T | null {
 }
 
 // ✅ API response types
-type ApiResponse<T> =
-  | { status: "loading" }
-  | { status: "success"; data: T }
-  | { status: "error"; error: string };
+type ApiResponse<T> = { status: "loading" } | { status: "success"; data: T } | { status: "error"; error: string };
 
 // ✅ Exhaustive switch
 function handleResponse<T>(response: ApiResponse<T>): string {
@@ -229,6 +231,7 @@ function handleResponse<T>(response: ApiResponse<T>): string {
 ```
 
 ### Generics
+
 ```typescript
 // ✅ Meaningful generic names
 function first<T>(items: T[]): T | undefined {
@@ -279,6 +282,7 @@ class Result<T, E = Error> {
 ## Code Style
 
 ### ESLint Configuration
+
 ```javascript
 // eslint.config.js
 import eslint from "@eslint/js";
@@ -309,11 +313,12 @@ export default tseslint.config(
       "prefer-const": "error",
       "no-var": "error",
     },
-  }
+  },
 );
 ```
 
 ### Prettier Configuration
+
 ```json
 // .prettierrc
 {
@@ -328,6 +333,7 @@ export default tseslint.config(
 ```
 
 ### Imports
+
 ```typescript
 // ✅ Use type imports for types
 import type { User, UserRepository } from "./types";
@@ -359,6 +365,7 @@ export type { UserDTO, OrderDTO } from "./types";
 ## Error Handling
 
 ### Custom Errors
+
 ```typescript
 // ✅ Create error hierarchy
 class AppError extends Error {
@@ -396,11 +403,10 @@ class UnauthorizedError extends AppError {
 ```
 
 ### Result Type Pattern
+
 ```typescript
 // ✅ Use Result for expected errors
-type Result<T, E = Error> =
-  | { ok: true; value: T }
-  | { ok: false; error: E };
+type Result<T, E = Error> = { ok: true; value: T } | { ok: false; error: E };
 
 const ok = <T>(value: T): Result<T, never> => ({ ok: true, value });
 const err = <E>(error: E): Result<never, E> => ({ ok: false, error });
@@ -428,6 +434,7 @@ if (result.ok) {
 ```
 
 ### Try-Catch Best Practices
+
 ```typescript
 // ✅ Type-safe error handling
 async function processData(data: unknown): Promise<ProcessedData> {
@@ -470,6 +477,7 @@ async function withConnection<T>(fn: (conn: Connection) => Promise<T>): Promise<
 ## Async Programming
 
 ### Async/Await
+
 ```typescript
 // ✅ Always await promises
 async function fetchData(url: string): Promise<Data> {
@@ -503,10 +511,7 @@ async function fetchAllWithResults(ids: string[]): Promise<Map<string, User | Er
 }
 
 // ✅ Race with timeout
-async function fetchWithTimeout<T>(
-  promise: Promise<T>,
-  timeoutMs: number,
-): Promise<T> {
+async function fetchWithTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
   const timeout = new Promise<never>((_, reject) => {
     setTimeout(() => reject(new TimeoutError()), timeoutMs);
   });
@@ -515,11 +520,10 @@ async function fetchWithTimeout<T>(
 ```
 
 ### Async Iterators
+
 ```typescript
 // ✅ Async generators for streaming
-async function* fetchPages<T>(
-  fetcher: (page: number) => Promise<T[]>,
-): AsyncGenerator<T, void, undefined> {
+async function* fetchPages<T>(fetcher: (page: number) => Promise<T[]>): AsyncGenerator<T, void, undefined> {
   let page = 1;
   while (true) {
     const items = await fetcher(page);
@@ -540,6 +544,7 @@ for await (const item of fetchPages(fetchUsers)) {
 ## Functions
 
 ### Function Design
+
 ```typescript
 // ✅ Single responsibility
 function validateEmail(email: string): boolean {
@@ -572,6 +577,7 @@ function find(arg: string | ((item: User) => boolean)): User | undefined {
 ```
 
 ### Pure Functions
+
 ```typescript
 // ✅ Prefer pure functions
 function addItem<T>(items: readonly T[], item: T): T[] {
@@ -596,6 +602,7 @@ function bad(items: Item[]): void {
 ## Classes
 
 ### Class Design
+
 ```typescript
 // ✅ Use readonly for immutable properties
 class User {
@@ -649,6 +656,7 @@ abstract class BaseRepository<T extends { id: string }> {
 ```
 
 ### Dependency Injection
+
 ```typescript
 // ✅ Inject dependencies through constructor
 interface Logger {
@@ -688,6 +696,7 @@ function createUserService(): UserService {
 ## Testing
 
 ### Unit Tests
+
 ```typescript
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
@@ -730,6 +739,7 @@ describe("UserService", () => {
 ```
 
 ### Type Testing
+
 ```typescript
 import { expectType, expectError } from "tsd";
 
@@ -745,7 +755,8 @@ expectError(user.invalidProperty); // Property doesn't exist
 ## Documentation
 
 ### TSDoc Comments
-```typescript
+
+````typescript
 /**
  * Creates a new user account in the system.
  *
@@ -787,7 +798,7 @@ export interface Repository<T extends { id: string }> {
    */
   findById(id: string): Promise<T | null>;
 }
-```
+````
 
 ## Validation (Zod)
 

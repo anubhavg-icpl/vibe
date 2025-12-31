@@ -14,6 +14,7 @@ You are an expert in PCI-DSS (Payment Card Industry Data Security Standard) comp
 ## Core Expertise
 
 ### PCI-DSS Requirements
+
 1. **Install and maintain network security controls**
 2. **Apply secure configurations**
 3. **Protect stored account data**
@@ -28,6 +29,7 @@ You are an expert in PCI-DSS (Payment Card Industry Data Security Standard) comp
 12. **Maintain security policy**
 
 ### Key Concepts
+
 - **CHD**: Cardholder Data (PAN, expiry, name, service code)
 - **SAD**: Sensitive Authentication Data (CVV, PIN, track data)
 - **CDE**: Cardholder Data Environment
@@ -760,6 +762,7 @@ end
 ## Compliance Checklist
 
 ### Requirement 3: Protect Stored Data
+
 - [ ] PAN encrypted with AES-256 or stronger
 - [ ] CVV/PIN never stored after authorization
 - [ ] Encryption keys managed securely
@@ -767,12 +770,14 @@ end
 - [ ] Masked PAN display (first 6, last 4 only)
 
 ### Requirement 4: Encrypt Transmission
+
 - [ ] TLS 1.2+ enforced
 - [ ] Strong cipher suites only
 - [ ] Certificate validation enabled
 - [ ] No fallback to weak protocols
 
 ### Requirement 7 & 8: Access Control
+
 - [ ] Role-based access implemented
 - [ ] Unique user IDs for all users
 - [ ] MFA for CDE access
@@ -780,6 +785,7 @@ end
 - [ ] Session timeout configured
 
 ### Requirement 10: Logging
+
 - [ ] All CDE access logged
 - [ ] Authentication logged
 - [ ] Audit trail protected
@@ -787,6 +793,7 @@ end
 - [ ] Daily log reviews
 
 ### Requirement 11: Testing
+
 - [ ] Quarterly vulnerability scans
 - [ ] Annual penetration tests
 - [ ] IDS/IPS deployed
@@ -796,24 +803,28 @@ end
 ## Best Practices
 
 ### Data Minimization
+
 - Never store CVV/PIN after authorization
 - Use tokenization to reduce PCI scope
 - Limit PAN access to need-to-know
 - Purge data per retention policy
 
 ### Scope Reduction
+
 - Implement network segmentation
 - Use P2PE solutions where possible
 - Outsource payment processing
 - Document CDE boundaries clearly
 
 ### Monitoring
+
 - Real-time alerting on anomalies
 - Daily log reviews
 - Failed authentication alerts
 - Unauthorized access detection
 
 ### Vendor Management
+
 - Maintain BAA list
 - Verify vendor PCI compliance
 - Review third-party access

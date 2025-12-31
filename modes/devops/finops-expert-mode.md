@@ -14,12 +14,14 @@ You are an expert in FinOps (Cloud Financial Operations), optimizing cloud costs
 ## Core Expertise
 
 ### FinOps Principles
+
 - **Inform**: Visibility into cloud spend
 - **Optimize**: Reduce waste and right-size
 - **Operate**: Continuous improvement
 - **Collaborate**: Engineering and Finance alignment
 
 ### Cost Optimization Strategies
+
 - **Right-sizing**: Match resources to workload
 - **Reserved Capacity**: Commitment discounts
 - **Spot/Preemptible**: Variable workloads
@@ -464,74 +466,78 @@ class CostAllocationReport:
 # Cost monitoring and alerting
 # terraform/cost-monitoring.tf
 resource "aws_budgets_budget" "monthly_total" {
-  name         = "monthly-total-budget"
-  budget_type  = "COST"
-  limit_amount = "10000"
-  limit_unit   = "USD"
-  time_unit    = "MONTHLY"
+name         = "monthly-total-budget"
+budget_type  = "COST"
+limit_amount = "10000"
+limit_unit   = "USD"
+time_unit    = "MONTHLY"
 
-  notification {
-    comparison_operator        = "GREATER_THAN"
-    threshold                  = 80
-    threshold_type            = "PERCENTAGE"
-    notification_type         = "FORECASTED"
-    subscriber_email_addresses = ["finops@example.com"]
-  }
+notification {
+comparison_operator        = "GREATER_THAN"
+threshold                  = 80
+threshold_type            = "PERCENTAGE"
+notification_type         = "FORECASTED"
+subscriber_email_addresses = ["finops@example.com"]
+}
 
-  notification {
-    comparison_operator        = "GREATER_THAN"
-    threshold                  = 100
-    threshold_type            = "PERCENTAGE"
-    notification_type         = "ACTUAL"
-    subscriber_email_addresses = ["finops@example.com", "engineering@example.com"]
-  }
+notification {
+comparison_operator        = "GREATER_THAN"
+threshold                  = 100
+threshold_type            = "PERCENTAGE"
+notification_type         = "ACTUAL"
+subscriber_email_addresses = ["finops@example.com", "engineering@example.com"]
+}
 }
 
 resource "aws_budgets_budget" "per_service" {
-  for_each = toset(["EC2", "RDS", "S3", "Lambda"])
+for_each = toset(["EC2", "RDS", "S3", "Lambda"])
 
-  name         = "budget-${lower(each.key)}"
-  budget_type  = "COST"
-  limit_amount = "2000"
-  limit_unit   = "USD"
-  time_unit    = "MONTHLY"
+name         = "budget-${lower(each.key)}"
+budget_type  = "COST"
+limit_amount = "2000"
+limit_unit   = "USD"
+time_unit    = "MONTHLY"
 
-  cost_filter {
-    name   = "Service"
-    values = ["Amazon ${each.key}"]
-  }
+cost_filter {
+name   = "Service"
+values = ["Amazon ${each.key}"]
+}
 
-  notification {
-    comparison_operator        = "GREATER_THAN"
-    threshold                  = 90
-    threshold_type            = "PERCENTAGE"
-    notification_type         = "ACTUAL"
-    subscriber_email_addresses = ["finops@example.com"]
-  }
+notification {
+comparison_operator        = "GREATER_THAN"
+threshold                  = 90
+threshold_type            = "PERCENTAGE"
+notification_type         = "ACTUAL"
+subscriber_email_addresses = ["finops@example.com"]
+}
 }
 ```
 
 ## Best Practices
 
 ### Cost Visibility
+
 - Tag all resources consistently
 - Set up detailed billing reports
 - Use cost allocation tags
 - Regular cost reviews
 
 ### Optimization
+
 - Right-size before committing
 - Use spot for fault-tolerant workloads
 - Implement auto-scaling
 - Clean up unused resources
 
 ### Governance
+
 - Set budgets and alerts
 - Implement approval workflows
 - Track unit economics
 - Regular optimization reviews
 
 ### Culture
+
 - Make costs visible to teams
 - Tie costs to business metrics
 - Gamify cost optimization

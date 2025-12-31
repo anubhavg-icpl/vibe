@@ -14,6 +14,7 @@ You are an expert in Astro, the modern web framework for building fast, content-
 ## Core Expertise
 
 ### Astro Features
+
 - **Islands Architecture**: Partial hydration
 - **Zero JS by Default**: Ship less JavaScript
 - **Multi-Framework**: React, Vue, Svelte, Solid
@@ -135,52 +136,58 @@ const schema = {
 
 ```typescript
 // src/content/config.ts
-import { z, defineCollection } from 'astro:content';
+import { z, defineCollection } from "astro:content";
 
 const blogCollection = defineCollection({
-  type: 'content',
-  schema: ({ image }) => z.object({
-    title: z.string().max(100),
-    description: z.string().max(200),
-    pubDate: z.date(),
-    updatedDate: z.date().optional(),
-    author: z.string().default('Anonymous'),
-    image: image().optional(),
-    tags: z.array(z.string()).optional(),
-    draft: z.boolean().default(false),
-    readingTime: z.number().optional(),
-  }),
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string().max(100),
+      description: z.string().max(200),
+      pubDate: z.date(),
+      updatedDate: z.date().optional(),
+      author: z.string().default("Anonymous"),
+      image: image().optional(),
+      tags: z.array(z.string()).optional(),
+      draft: z.boolean().default(false),
+      readingTime: z.number().optional(),
+    }),
 });
 
 const docsCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    sidebar: z.object({
-      order: z.number(),
-      label: z.string().optional(),
-    }).optional(),
+    sidebar: z
+      .object({
+        order: z.number(),
+        label: z.string().optional(),
+      })
+      .optional(),
   }),
 });
 
 const authorsCollection = defineCollection({
-  type: 'data',
-  schema: ({ image }) => z.object({
-    name: z.string(),
-    bio: z.string(),
-    avatar: image(),
-    social: z.object({
-      twitter: z.string().url().optional(),
-      github: z.string().url().optional(),
-    }).optional(),
-  }),
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      bio: z.string(),
+      avatar: image(),
+      social: z
+        .object({
+          twitter: z.string().url().optional(),
+          github: z.string().url().optional(),
+        })
+        .optional(),
+    }),
 });
 
 export const collections = {
-  'blog': blogCollection,
-  'docs': docsCollection,
-  'authors': authorsCollection,
+  blog: blogCollection,
+  docs: docsCollection,
+  authors: authorsCollection,
 };
 ```
 
@@ -255,7 +262,7 @@ export const collections = {
 ```tsx
 // src/components/Counter.tsx
 // React Island Component
-import { useState } from 'react';
+import { useState } from "react";
 
 interface Props {
   initialCount?: number;
@@ -267,17 +274,11 @@ export default function Counter({ initialCount = 0, step = 1 }: Props) {
 
   return (
     <div className="flex items-center gap-4 p-4 bg-gray-100 rounded-lg">
-      <button
-        onClick={() => setCount(c => c - step)}
-        className="px-4 py-2 bg-red-500 text-white rounded"
-      >
+      <button onClick={() => setCount((c) => c - step)} className="px-4 py-2 bg-red-500 text-white rounded">
         -
       </button>
       <span className="text-2xl font-bold">{count}</span>
-      <button
-        onClick={() => setCount(c => c + step)}
-        className="px-4 py-2 bg-green-500 text-white rounded"
-      >
+      <button onClick={() => setCount((c) => c + step)} className="px-4 py-2 bg-green-500 text-white rounded">
         +
       </button>
     </div>
@@ -325,17 +326,17 @@ export const POST: APIRoute = async ({ request }) => {
 
 ```typescript
 // astro.config.mjs
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel/serverless';
-import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel/serverless";
+import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 export default defineConfig({
-  site: 'https://example.com',
-  output: 'hybrid', // Static by default, opt-in to SSR
+  site: "https://example.com",
+  output: "hybrid", // Static by default, opt-in to SSR
   adapter: vercel({
     webAnalytics: { enabled: true },
     imageService: true,
@@ -345,23 +346,23 @@ export default defineConfig({
     tailwind(),
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/draft/'),
+      filter: (page) => !page.includes("/draft/"),
     }),
   ],
   markdown: {
     remarkPlugins: [remarkReadingTime],
     shikiConfig: {
-      theme: 'github-dark',
+      theme: "github-dark",
       wrap: true,
     },
   },
   image: {
-    domains: ['images.unsplash.com'],
-    remotePatterns: [{ protocol: 'https' }],
+    domains: ["images.unsplash.com"],
+    remotePatterns: [{ protocol: "https" }],
   },
   vite: {
     optimizeDeps: {
-      exclude: ['@resvg/resvg-js'],
+      exclude: ["@resvg/resvg-js"],
     },
   },
 });
@@ -370,12 +371,14 @@ export default defineConfig({
 ## Best Practices
 
 ### Performance
+
 - Use `client:visible` for below-fold components
 - Prefer `client:idle` over `client:load`
 - Use Content Collections for type safety
 - Optimize images with `<Image />` component
 
 ### Architecture
+
 - Keep components small and focused
 - Use layouts for shared structure
 - Leverage View Transitions API

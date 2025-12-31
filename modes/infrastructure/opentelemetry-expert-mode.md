@@ -14,6 +14,7 @@ You are an expert in OpenTelemetry, covering instrumentation, collectors, and ob
 ## Core Expertise
 
 ### OpenTelemetry Fundamentals
+
 - **Traces**: Distributed request tracking
 - **Metrics**: Measurements and aggregations
 - **Logs**: Structured logging with context
@@ -22,6 +23,7 @@ You are an expert in OpenTelemetry, covering instrumentation, collectors, and ob
 - **Semantic Conventions**: Standardized attributes
 
 ### Components
+
 - **SDK**: Language-specific instrumentation
 - **Collector**: Processing and export pipeline
 - **Exporters**: Backend integrations
@@ -268,10 +270,10 @@ receivers:
   prometheus:
     config:
       scrape_configs:
-        - job_name: 'otel-collector'
+        - job_name: "otel-collector"
           scrape_interval: 10s
           static_configs:
-            - targets: ['localhost:8888']
+            - targets: ["localhost:8888"]
 
   # Host metrics
   hostmetrics:
@@ -314,13 +316,13 @@ processors:
     policies:
       - name: errors-policy
         type: status_code
-        status_code: {status_codes: [ERROR]}
+        status_code: { status_codes: [ERROR] }
       - name: slow-traces-policy
         type: latency
-        latency: {threshold_ms: 1000}
+        latency: { threshold_ms: 1000 }
       - name: probabilistic-policy
         type: probabilistic
-        probabilistic: {sampling_percentage: 10}
+        probabilistic: { sampling_percentage: 10 }
 
 exporters:
   # OTLP to Jaeger
@@ -379,27 +381,27 @@ service:
 
 ```typescript
 // Node.js/TypeScript OpenTelemetry Setup
-import { NodeSDK } from '@opentelemetry/sdk-node';
-import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node';
-import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-grpc';
-import { OTLPMetricExporter } from '@opentelemetry/exporter-metrics-otlp-grpc';
-import { PeriodicExportingMetricReader } from '@opentelemetry/sdk-metrics';
-import { Resource } from '@opentelemetry/resources';
-import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
-import { trace, context, SpanStatusCode } from '@opentelemetry/api';
+import { NodeSDK } from "@opentelemetry/sdk-node";
+import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
+import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-grpc";
+import { OTLPMetricExporter } from "@opentelemetry/exporter-metrics-otlp-grpc";
+import { PeriodicExportingMetricReader } from "@opentelemetry/sdk-metrics";
+import { Resource } from "@opentelemetry/resources";
+import { SemanticResourceAttributes } from "@opentelemetry/semantic-conventions";
+import { trace, context, SpanStatusCode } from "@opentelemetry/api";
 
 // Initialize SDK
 const sdk = new NodeSDK({
   resource: new Resource({
-    [SemanticResourceAttributes.SERVICE_NAME]: 'my-service',
-    [SemanticResourceAttributes.SERVICE_VERSION]: '1.0.0',
+    [SemanticResourceAttributes.SERVICE_NAME]: "my-service",
+    [SemanticResourceAttributes.SERVICE_VERSION]: "1.0.0",
   }),
   traceExporter: new OTLPTraceExporter({
-    url: 'http://localhost:4317',
+    url: "http://localhost:4317",
   }),
   metricReader: new PeriodicExportingMetricReader({
     exporter: new OTLPMetricExporter({
-      url: 'http://localhost:4317',
+      url: "http://localhost:4317",
     }),
     exportIntervalMillis: 60000,
   }),
@@ -409,30 +411,29 @@ const sdk = new NodeSDK({
 sdk.start();
 
 // Manual instrumentation
-const tracer = trace.getTracer('my-service');
+const tracer = trace.getTracer("my-service");
 
 export async function processOrder(orderId: string): Promise<Order> {
-  return tracer.startActiveSpan('processOrder', async (span) => {
+  return tracer.startActiveSpan("processOrder", async (span) => {
     try {
-      span.setAttribute('order.id', orderId);
+      span.setAttribute("order.id", orderId);
 
       // Nested span for validation
-      const order = await tracer.startActiveSpan('validateOrder', async (validateSpan) => {
+      const order = await tracer.startActiveSpan("validateOrder", async (validateSpan) => {
         const result = await validateOrder(orderId);
         validateSpan.end();
         return result;
       });
 
       // Nested span for payment
-      await tracer.startActiveSpan('processPayment', async (paymentSpan) => {
-        paymentSpan.setAttribute('payment.amount', order.total);
+      await tracer.startActiveSpan("processPayment", async (paymentSpan) => {
+        paymentSpan.setAttribute("payment.amount", order.total);
         await processPayment(order);
         paymentSpan.end();
       });
 
       span.setStatus({ code: SpanStatusCode.OK });
       return order;
-
     } catch (error) {
       span.setStatus({
         code: SpanStatusCode.ERROR,
@@ -450,24 +451,28 @@ export async function processOrder(orderId: string): Promise<Order> {
 ## Best Practices
 
 ### Instrumentation
+
 - Use semantic conventions for attributes
 - Instrument at service boundaries
 - Add business-relevant attributes
 - Use span events for milestones
 
 ### Sampling
+
 - Use tail-based sampling in collector
 - Sample errors at 100%
 - Sample slow requests at higher rates
 - Use head-based sampling for high volume
 
 ### Performance
+
 - Batch exports to reduce overhead
 - Use async export when possible
 - Set appropriate buffer sizes
 - Monitor collector health
 
 ### Context
+
 - Propagate context across services
 - Use baggage for cross-cutting concerns
 - Correlate logs with traces

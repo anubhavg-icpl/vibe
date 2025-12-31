@@ -14,6 +14,7 @@ You are an expert in Chaos Mesh, the powerful Kubernetes-native chaos engineerin
 ## Core Expertise
 
 ### Chaos Mesh Features
+
 - **Pod Chaos**: pod-kill, pod-failure, container-kill
 - **Network Chaos**: partition, delay, loss, duplicate, corrupt
 - **Stress Chaos**: CPU, memory stress testing
@@ -36,7 +37,7 @@ metadata:
   namespace: chaos-testing
 spec:
   action: pod-kill
-  mode: one  # one, all, fixed, fixed-percent, random-max-percent
+  mode: one # one, all, fixed, fixed-percent, random-max-percent
   selector:
     namespaces:
       - default
@@ -97,7 +98,7 @@ spec:
       - default
     labelSelectors:
       app: tikv
-  direction: both  # to, from, both
+  direction: both # to, from, both
   target:
     mode: all
     selector:
@@ -212,7 +213,7 @@ spec:
   stressors:
     cpu:
       workers: 4
-      load: 80  # percentage
+      load: 80 # percentage
   duration: "5m"
   containerNames:
     - main
@@ -275,7 +276,7 @@ spec:
       app: storage
   volumePath: /data
   path: "*.log"
-  errno: 5  # EIO - I/O error
+  errno: 5 # EIO - I/O error
   percent: 100
   duration: "1m"
 ---
@@ -294,7 +295,7 @@ spec:
   volumePath: /data
   path: "/data/config/*"
   attr:
-    perm: 0000  # Remove all permissions
+    perm: 0000 # Remove all permissions
   percent: 100
   duration: "30s"
 ```
@@ -313,7 +314,7 @@ spec:
       - default
     labelSelectors:
       app: scheduler
-  timeOffset: "+1h"  # Move clock forward 1 hour
+  timeOffset: "+1h" # Move clock forward 1 hour
   duration: "5m"
   containerNames:
     - main
@@ -329,7 +330,7 @@ spec:
   selector:
     labelSelectors:
       app: tls-service
-  timeOffset: "+365d"  # Move clock forward 1 year
+  timeOffset: "+365d" # Move clock forward 1 year
   duration: "2m"
 ```
 
@@ -463,7 +464,7 @@ spec:
   target: servlet
   class: com.example.service.OrderService
   method: createOrder
-  latency: 2000  # 2 seconds
+  latency: 2000 # 2 seconds
   duration: "3m"
 ---
 apiVersion: chaos-mesh.org/v1alpha1
@@ -491,7 +492,7 @@ spec:
     labelSelectors:
       app: java-app
   cpuCount: 2
-  memoryType: heap  # heap, stack
+  memoryType: heap # heap, stack
   duration: "5m"
 ```
 
@@ -841,6 +842,7 @@ class ChaosMeshClient:
 ## Best Practices
 
 ### Experiment Design
+
 - Use Dashboard for visual experiment management
 - Start with single-fault experiments
 - Graduate to multi-fault Workflows
@@ -848,6 +850,7 @@ class ChaosMeshClient:
 - Use StatusCheck for automated validation
 
 ### Safety
+
 - Set appropriate durations
 - Use selective targeting with labels
 - Enable RBAC for chaos resources
@@ -855,6 +858,7 @@ class ChaosMeshClient:
 - Have abort procedures ready
 
 ### Integration
+
 - Integrate with CI/CD for automated testing
 - Export metrics to Prometheus/Grafana
 - Use webhooks for notifications

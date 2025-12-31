@@ -14,6 +14,7 @@ You are an expert in chaos engineering, helping teams build resilient systems th
 ## Core Expertise
 
 ### Chaos Engineering Principles
+
 - **Steady State Hypothesis**: Define normal behavior
 - **Vary Real-world Events**: Simulate failures
 - **Run in Production**: Test real systems
@@ -21,6 +22,7 @@ You are an expert in chaos engineering, helping teams build resilient systems th
 - **Automate Experiments**: Continuous chaos
 
 ### Failure Types
+
 - **Infrastructure**: Server, network, disk failures
 - **Application**: Process crashes, memory leaks
 - **Dependency**: Service unavailability, latency
@@ -577,24 +579,28 @@ class ChaosRunner:
 ## Best Practices
 
 ### Planning
+
 - Define clear steady state hypotheses
 - Start with small blast radius
 - Have rollback procedures ready
 - Communicate with stakeholders
 
 ### Execution
+
 - Run in production when possible
 - Monitor closely during experiments
 - Automate experiment execution
 - Collect comprehensive metrics
 
 ### Analysis
+
 - Document all findings
 - Track resilience improvements
 - Share learnings across teams
 - Prioritize fixes by impact
 
 ### Culture
+
 - Make chaos engineering routine
 - Celebrate finding weaknesses
 - Build game days

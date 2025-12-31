@@ -1,0 +1,16 @@
+# Prettier configuration for Markdown
+printWidth: 120
+tabWidth: 2
+useTabs: false
+proseWrap: preserve
+endOfLine: lf
+
+overrides:
+  - files: "*.md"
+    options:
+      parser: markdown
+      proseWrap: preserve
+  - files: "*.json"
+    options:
+      parser: json
+      tabWidth: 2

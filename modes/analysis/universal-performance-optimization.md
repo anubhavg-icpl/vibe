@@ -1,6 +1,7 @@
 ---
-applyTo: '**'
-description: 'Universal performance optimization best practices for all languages, frameworks, and stacks. Comprehensive guidance for frontend, backend, database, and infrastructure optimization with actionable checklists and real-world examples.'
+applyTo: "**"
+description: "Universal performance optimization best practices for all languages, frameworks, and stacks. Comprehensive guidance for frontend, backend, database, and infrastructure optimization with actionable checklists and real-world examples."
+author: Anubhav Gain
 ---
 
 # Universal Performance Optimization Guide
@@ -51,16 +52,16 @@ Performance is the difference between a product users love and one they abandon.
 
 ### Performance Budget Guidelines
 
-| Metric | Target | Maximum |
-|--------|--------|---------|
-| Time to First Byte (TTFB) | < 200ms | < 600ms |
-| First Contentful Paint (FCP) | < 1.8s | < 3.0s |
-| Largest Contentful Paint (LCP) | < 2.5s | < 4.0s |
-| Time to Interactive (TTI) | < 3.8s | < 7.3s |
-| Cumulative Layout Shift (CLS) | < 0.1 | < 0.25 |
-| First Input Delay (FID) | < 100ms | < 300ms |
-| API Response Time (p95) | < 200ms | < 1000ms |
-| Database Query Time (p95) | < 50ms | < 200ms |
+| Metric                         | Target  | Maximum  |
+| ------------------------------ | ------- | -------- |
+| Time to First Byte (TTFB)      | < 200ms | < 600ms  |
+| First Contentful Paint (FCP)   | < 1.8s  | < 3.0s   |
+| Largest Contentful Paint (LCP) | < 2.5s  | < 4.0s   |
+| Time to Interactive (TTI)      | < 3.8s  | < 7.3s   |
+| Cumulative Layout Shift (CLS)  | < 0.1   | < 0.25   |
+| First Input Delay (FID)        | < 100ms | < 300ms  |
+| API Response Time (p95)        | < 200ms | < 1000ms |
+| Database Query Time (p95)      | < 50ms  | < 200ms  |
 
 ---
 
@@ -78,13 +79,13 @@ Performance is the difference between a product users love and one they abandon.
 ```javascript
 // ❌ BAD: Layout thrashing
 for (let i = 0; i < elements.length; i++) {
-    elements[i].style.width = box.offsetWidth + 'px'; // Read/write interleaved
+  elements[i].style.width = box.offsetWidth + "px"; // Read/write interleaved
 }
 
 // ✅ GOOD: Batch reads and writes
 const width = box.offsetWidth;
 for (let i = 0; i < elements.length; i++) {
-    elements[i].style.width = width + 'px';
+  elements[i].style.width = width + "px";
 }
 ```
 
@@ -99,10 +100,12 @@ for (let i = 0; i < elements.length; i++) {
 
 ```css
 /* ❌ BAD: Complex selector */
-div.container > ul li:nth-child(2n) a.link:hover { }
+div.container > ul li:nth-child(2n) a.link:hover {
+}
 
 /* ✅ GOOD: Simple, specific selector */
-.link-hover { }
+.link-hover {
+}
 ```
 
 #### JavaScript Performance
@@ -116,17 +119,17 @@ div.container > ul li:nth-child(2n) a.link:hover { }
 
 ```javascript
 // ❌ BAD: Triggers on every keystroke
-input.addEventListener('input', (e) => {
-    expensiveAPICall(e.target.value);
+input.addEventListener("input", (e) => {
+  expensiveAPICall(e.target.value);
 });
 
 // ✅ GOOD: Debounced API call
 const debouncedCall = debounce((value) => {
-    expensiveAPICall(value);
+  expensiveAPICall(value);
 }, 300);
 
-input.addEventListener('input', (e) => {
-    debouncedCall(e.target.value);
+input.addEventListener("input", (e) => {
+  debouncedCall(e.target.value);
 });
 ```
 
@@ -144,15 +147,17 @@ input.addEventListener('input', (e) => {
 ```html
 <!-- ✅ GOOD: Responsive, lazy-loaded, modern format -->
 <picture>
-  <source srcset="image.avif" type="image/avif">
-  <source srcset="image.webp" type="image/webp">
-  <img src="image.jpg" 
-       srcset="image-320w.jpg 320w, image-640w.jpg 640w, image-1280w.jpg 1280w"
-       sizes="(max-width: 320px) 280px, (max-width: 640px) 600px, 1200px"
-       loading="lazy"
-       width="1200"
-       height="800"
-       alt="Description">
+  <source srcset="image.avif" type="image/avif" />
+  <source srcset="image.webp" type="image/webp" />
+  <img
+    src="image.jpg"
+    srcset="image-320w.jpg 320w, image-640w.jpg 640w, image-1280w.jpg 1280w"
+    sizes="(max-width: 320px) 280px, (max-width: 640px) 600px, 1200px"
+    loading="lazy"
+    width="1200"
+    height="800"
+    alt="Description"
+  />
 </picture>
 ```
 
@@ -170,8 +175,8 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 
 /* ✅ GOOD: Custom font with swap */
 @font-face {
-  font-family: 'CustomFont';
-  src: url('custom-font.woff2') format('woff2');
+  font-family: "CustomFont";
+  src: url("custom-font.woff2") format("woff2");
   font-display: swap;
   unicode-range: U+0020-007F; /* Basic Latin only */
 }
@@ -187,12 +192,12 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 
 ```javascript
 // ✅ GOOD: Dynamic import for route
-const AdminPanel = () => import('./AdminPanel.vue');
+const AdminPanel = () => import("./AdminPanel.vue");
 
 // ✅ GOOD: Dynamic import with loading state
 const heavyLibrary = async () => {
-    const module = await import('heavy-library');
-    return module.default;
+  const module = await import("heavy-library");
+  return module.default;
 };
 ```
 
@@ -209,15 +214,15 @@ const heavyLibrary = async () => {
 
 ```jsx
 // ❌ BAD: Creates new function on every render
-<Button onClick={() => handleClick(id)} />
+<Button onClick={() => handleClick(id)} />;
 
 // ✅ GOOD: Memoized callback
 const memoizedClick = useCallback(() => handleClick(id), [id]);
-<Button onClick={memoizedClick} />
+<Button onClick={memoizedClick} />;
 
 // ✅ GOOD: Memoized expensive computation
 const expensiveResult = useMemo(() => {
-    return computeExpensiveValue(input);
+  return computeExpensiveValue(input);
 }, [input]);
 ```
 
@@ -236,7 +241,7 @@ const expensiveResult = useMemo(() => {
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed } from "vue";
 
 const expensiveComputation = computed(() => {
   return heavyCalculation(props.data);
@@ -279,11 +284,11 @@ trackByFn(index: number, item: Item): number {
 - **Choose Right Structure:** Array, Hash Map, Tree, Graph—each has trade-offs.
 
 | Operation | Array | Hash Map | Binary Tree | Linked List |
-|-----------|-------|----------|-------------|-------------|
-| Access | O(1) | O(1) avg | O(log n) | O(n) |
-| Search | O(n) | O(1) avg | O(log n) | O(n) |
-| Insert | O(n) | O(1) avg | O(log n) | O(1) |
-| Delete | O(n) | O(1) avg | O(log n) | O(1) |
+| --------- | ----- | -------- | ----------- | ----------- |
+| Access    | O(1)  | O(1) avg | O(log n)    | O(n)        |
+| Search    | O(n)  | O(1) avg | O(log n)    | O(n)        |
+| Insert    | O(n)  | O(1) avg | O(log n)    | O(1)        |
+| Delete    | O(n)  | O(1) avg | O(log n)    | O(1)        |
 
 #### Common Optimizations
 
@@ -318,18 +323,18 @@ def find_duplicates_fast(arr):
 ```javascript
 // ❌ BAD: Sequential API calls
 async function fetchDataSlow(ids) {
-    const results = [];
-    for (const id of ids) {
-        const data = await fetch(`/api/data/${id}`);
-        results.push(data);
-    }
-    return results;
+  const results = [];
+  for (const id of ids) {
+    const data = await fetch(`/api/data/${id}`);
+    results.push(data);
+  }
+  return results;
 }
 
 // ✅ GOOD: Parallel API calls
 async function fetchDataFast(ids) {
-    const promises = ids.map(id => fetch(`/api/data/${id}`));
-    return Promise.all(promises);
+  const promises = ids.map((id) => fetch(`/api/data/${id}`));
+  return Promise.all(promises);
 }
 ```
 
@@ -387,7 +392,7 @@ CREATE INDEX idx_users_email_name ON users(email) INCLUDE (first_name, last_name
 
 #### Query Best Practices
 
-- **Avoid SELECT *:** Fetch only needed columns to reduce I/O.
+- **Avoid SELECT \*:** Fetch only needed columns to reduce I/O.
 - **Use LIMIT:** Always paginate large result sets.
 - **Parameterized Queries:** Prevent SQL injection and improve plan caching.
 - **Analyze Query Plans:** Use EXPLAIN to understand execution.
@@ -406,8 +411,8 @@ SELECT * FROM posts;
 SELECT * FROM users WHERE id = post.author_id;
 
 -- ✅ GOOD: Single query with JOIN
-SELECT posts.*, users.name 
-FROM posts 
+SELECT posts.*, users.name
+FROM posts
 JOIN users ON posts.author_id = users.id;
 ```
 
@@ -469,11 +474,14 @@ db.commit()
 ```javascript
 // ❌ BAD: Multiple round trips to database
 for (const id of ids) {
-    await db.collection('users').findOne({ _id: id });
+  await db.collection("users").findOne({ _id: id });
 }
 
 // ✅ GOOD: Single query with $in operator
-await db.collection('users').find({ _id: { $in: ids } }).toArray();
+await db
+  .collection("users")
+  .find({ _id: { $in: ids } })
+  .toArray();
 ```
 
 ---
@@ -557,20 +565,20 @@ GET /api/items?cursor=eyJpZCI6MTIzfQ&limit=20
 ```javascript
 // ❌ BAD: Memory leak from event listener
 function setupListener() {
-    const button = document.getElementById('btn');
-    button.addEventListener('click', handleClick);
-    // Listener never removed
+  const button = document.getElementById("btn");
+  button.addEventListener("click", handleClick);
+  // Listener never removed
 }
 
 // ✅ GOOD: Cleanup event listener
 function setupListener() {
-    const button = document.getElementById('btn');
-    const handler = () => handleClick();
-    button.addEventListener('click', handler);
-    
-    return () => {
-        button.removeEventListener('click', handler);
-    };
+  const button = document.getElementById("btn");
+  const handler = () => handleClick();
+  button.addEventListener("click", handler);
+
+  return () => {
+    button.removeEventListener("click", handler);
+  };
 }
 ```
 
@@ -614,10 +622,10 @@ def get_user(user_id):
     cached = cache.get(f'user:{user_id}')
     if cached:
         return cached
-    
+
     # Cache miss - fetch from database
     user = db.query('SELECT * FROM users WHERE id = ?', user_id)
-    
+
     # Store in cache with TTL
     cache.set(f'user:{user_id}', user, ttl=3600)
     return user
@@ -629,7 +637,7 @@ def get_user(user_id):
 def update_user(user_id, data):
     # Update database
     db.execute('UPDATE users SET ... WHERE id = ?', user_id)
-    
+
     # Update cache immediately
     cache.set(f'user:{user_id}', data, ttl=3600)
 ```
@@ -640,7 +648,7 @@ def update_user(user_id, data):
 def update_user(user_id, data):
     # Update cache immediately
     cache.set(f'user:{user_id}', data, ttl=3600)
-    
+
     # Queue database write asynchronously
     queue.enqueue('db_write', user_id, data)
 ```
@@ -658,7 +666,7 @@ def get_expensive_data(key):
     cached = cache.get(key)
     if cached:
         return cached
-    
+
     # Acquire lock to prevent multiple fetches
     lock_key = f'lock:{key}'
     if cache.add(lock_key, 1, ttl=10):  # Returns false if key exists
@@ -687,13 +695,9 @@ def get_expensive_data(key):
 ```javascript
 // ✅ GOOD: Parallel async operations
 async function fetchUserData(userId) {
-    const [user, posts, comments] = await Promise.all([
-        fetchUser(userId),
-        fetchPosts(userId),
-        fetchComments(userId)
-    ]);
-    
-    return { user, posts, comments };
+  const [user, posts, comments] = await Promise.all([fetchUser(userId), fetchPosts(userId), fetchComments(userId)]);
+
+  return { user, posts, comments };
 }
 ```
 
@@ -712,7 +716,7 @@ class Counter:
     def __init__(self):
         self.value = 0
         self.lock = Lock()
-    
+
     def increment(self):
         with self.lock:
             self.value += 1
@@ -772,11 +776,11 @@ result = (i ** 2 for i in range(1000))
 
 ```javascript
 // ✅ GOOD: Stream large file
-const fs = require('fs');
-const stream = fs.createReadStream('large-file.txt');
+const fs = require("fs");
+const stream = fs.createReadStream("large-file.txt");
 
-stream.on('data', (chunk) => {
-    processChunk(chunk);
+stream.on("data", (chunk) => {
+  processChunk(chunk);
 });
 ```
 
@@ -816,18 +820,18 @@ String result = sb.toString();
 func processItems(items []Item) {
     jobs := make(chan Item, 100)
     results := make(chan Result, 100)
-    
+
     // Start workers
     for w := 0; w < 10; w++ {
         go worker(jobs, results)
     }
-    
+
     // Send jobs
     for _, item := range items {
         jobs <- item
     }
     close(jobs)
-    
+
     // Collect results
     for i := 0; i < len(items); i++ {
         <-results
@@ -895,14 +899,14 @@ spec:
   template:
     spec:
       containers:
-      - name: app
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
+        - name: app
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -910,12 +914,12 @@ spec:
   minReplicas: 3
   maxReplicas: 10
   metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 70
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
 ```
 
 ### Serverless Optimization
@@ -927,13 +931,13 @@ spec:
 
 ```javascript
 // ✅ GOOD: Reuse connections in Lambda
-const AWS = require('aws-sdk');
+const AWS = require("aws-sdk");
 const dynamoDB = new AWS.DynamoDB.DocumentClient(); // Outside handler
 
 exports.handler = async (event) => {
-    // Handler code reuses dynamoDB client
-    const result = await dynamoDB.get(params).promise();
-    return result;
+  // Handler code reuses dynamoDB client
+  const result = await dynamoDB.get(params).promise();
+  return result;
 };
 ```
 
@@ -953,7 +957,7 @@ exports.handler = async (event) => {
 // ✅ GOOD: Lazy loading images
 func loadImage(url: URL, into imageView: UIImageView) {
     imageView.image = placeholderImage
-    
+
     DispatchQueue.global().async {
         if let data = try? Data(contentsOf: url),
            let image = UIImage(data: data) {
@@ -1000,25 +1004,25 @@ if bcrypt.checkpw(password.encode(), hashed):
 
 ```javascript
 // ✅ GOOD: k6 load test script
-import http from 'k6/http';
-import { check, sleep } from 'k6';
+import http from "k6/http";
+import { check, sleep } from "k6";
 
 export const options = {
   stages: [
-    { duration: '2m', target: 100 }, // Ramp up
-    { duration: '5m', target: 100 }, // Stay at 100 users
-    { duration: '2m', target: 0 },   // Ramp down
+    { duration: "2m", target: 100 }, // Ramp up
+    { duration: "5m", target: 100 }, // Stay at 100 users
+    { duration: "2m", target: 0 }, // Ramp down
   ],
   thresholds: {
-    http_req_duration: ['p(95)<500'], // 95% of requests under 500ms
+    http_req_duration: ["p(95)<500"], // 95% of requests under 500ms
   },
 };
 
 export default function () {
-  const res = http.get('https://api.example.com/users');
+  const res = http.get("https://api.example.com/users");
   check(res, {
-    'status is 200': (r) => r.status === 200,
-    'response time < 500ms': (r) => r.timings.duration < 500,
+    "status is 200": (r) => r.status === 200,
+    "response time < 500ms": (r) => r.timings.duration < 500,
   });
   sleep(1);
 }
@@ -1033,14 +1037,14 @@ export default function () {
 
 ### Profiling Tools
 
-| Language | CPU Profiler | Memory Profiler | Flame Graph |
-|----------|--------------|-----------------|-------------|
-| Python | cProfile, py-spy | memory_profiler | py-spy |
-| Node.js | --prof, clinic | heapdump, clinic | 0x, clinic |
-| Java | VisualVM, JProfiler | VisualVM, MAT | async-profiler |
-| Go | pprof | pprof | pprof |
-| Rust | perf, cargo-flamegraph | valgrind | cargo-flamegraph |
-| .NET | dotTrace, PerfView | dotMemory | PerfView |
+| Language | CPU Profiler           | Memory Profiler  | Flame Graph      |
+| -------- | ---------------------- | ---------------- | ---------------- |
+| Python   | cProfile, py-spy       | memory_profiler  | py-spy           |
+| Node.js  | --prof, clinic         | heapdump, clinic | 0x, clinic       |
+| Java     | VisualVM, JProfiler    | VisualVM, MAT    | async-profiler   |
+| Go       | pprof                  | pprof            | pprof            |
+| Rust     | perf, cargo-flamegraph | valgrind         | cargo-flamegraph |
+| .NET     | dotTrace, PerfView     | dotMemory        | PerfView         |
 
 ---
 
@@ -1050,7 +1054,7 @@ export default function () {
 
 - [ ] **Algorithm Complexity:** Any O(n²) or worse? Can it be improved?
 - [ ] **Data Structures:** Appropriate choice for use case?
-- [ ] **Database Queries:** Indexed? No N+1 queries? No SELECT *?
+- [ ] **Database Queries:** Indexed? No N+1 queries? No SELECT \*?
 - [ ] **Caching:** Used where beneficial? Invalidation handled correctly?
 - [ ] **Network Calls:** Minimized? Batched? Proper error handling?
 - [ ] **Memory Management:** Resources cleaned up? No leaks? Streams for large data?
@@ -1084,7 +1088,7 @@ export default function () {
 
 ### Database Anti-Patterns
 
-- ❌ **SELECT *:** Fetching unnecessary columns
+- ❌ **SELECT \*:** Fetching unnecessary columns
 - ❌ **N+1 Queries:** Looping and querying instead of joining
 - ❌ **Missing Indexes:** On frequently queried columns
 - ❌ **Long Transactions:** Holding locks for extended periods
@@ -1177,7 +1181,7 @@ Remember: **Premature optimization is the root of all evil, but late optimizatio
 
 ---
 
-*"We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."*  
+_"We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."_  
 — Donald Knuth
 
 ---

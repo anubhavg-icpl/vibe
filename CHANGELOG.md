@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - `.gitignore` file for repository hygiene
 - `LICENSE` file (MIT License)
 - `CONTRIBUTING.md` with comprehensive contribution guidelines
@@ -16,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Missing category README files
 
 ### Changed
+
 - Updated main `README.md` with accurate mode counts
 
 ---
@@ -23,11 +25,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.0] - 2024-12-28
 
 ### Added
+
 - **Dhurandhar mode** - Deep-cover operative security expert persona
 - **9 personality chat modes** including characters from popular culture
 - Updated author attribution to Anubhav Gain
 
 ### Changed
+
 - Enhanced personality modes with unique voice characteristics
 
 ---
@@ -35,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2024-12-28
 
 ### Added
+
 - **12 production-ready coding standards modes** for major programming languages:
   - Rust, Python, TypeScript, Go, Java, C#, Swift, Kotlin, C++, Scala, React
 - Comprehensive coding standards with best practices and anti-patterns
@@ -44,6 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-12-27
 
 ### Added
+
 - Initial release of Vibe
 - **Core Development Modes (23)**
   - Software Engineer Agent
@@ -106,11 +112,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History Summary
 
-| Version | Date | Highlights |
-|---------|------|------------|
-| 1.2.0 | 2024-12-28 | Personality modes, Dhurandhar |
-| 1.1.0 | 2024-12-28 | 12 coding standards modes |
-| 1.0.0 | 2024-12-27 | Initial release with 90+ modes |
+| Version | Date       | Highlights                     |
+| ------- | ---------- | ------------------------------ |
+| 1.2.0   | 2024-12-28 | Personality modes, Dhurandhar  |
+| 1.1.0   | 2024-12-28 | 12 coding standards modes      |
+| 1.0.0   | 2024-12-27 | Initial release with 90+ modes |
 
 ---
 

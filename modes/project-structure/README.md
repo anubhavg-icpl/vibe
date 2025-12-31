@@ -4,27 +4,29 @@ Production-ready project structure validation and scaffolding agents for modern 
 
 ## Available Modes (14 Total)
 
-| Mode | Technology | Key Features |
-|------|------------|--------------|
-| [rust-project-architect-mode](./rust-project-architect-mode.md) | Rust | Cargo workspaces, Rust 2024 edition, xtask automation |
-| [python-project-architect-mode](./python-project-architect-mode.md) | Python | src layout, pyproject.toml, uv/poetry, modern tooling |
-| [nextjs-project-architect-mode](./nextjs-project-architect-mode.md) | Next.js 14/15/16 | App Router, Server Components, proxy.ts (16+), Turbopack |
-| [dotnet-project-architect-mode](./dotnet-project-architect-mode.md) | .NET 8/9 | Clean Architecture, DDD, CQRS, Minimal APIs |
-| [java-spring-project-architect-mode](./java-spring-project-architect-mode.md) | Java Spring Boot 3.x | Hexagonal Architecture, Ports & Adapters, ArchUnit |
-| [go-project-architect-mode](./go-project-architect-mode.md) | Go | golang-standards layout, flat to hexagonal patterns |
-| [swift-ios-project-architect-mode](./swift-ios-project-architect-mode.md) | Swift/iOS | SwiftUI, TCA, modular SPM architecture |
-| [swift-macos-project-architect-mode](./swift-macos-project-architect-mode.md) | Swift/macOS | SwiftUI + AppKit, Xcode, sandboxing, multi-window |
-| [kotlin-android-project-architect-mode](./kotlin-android-project-architect-mode.md) | Kotlin/Android | Clean Architecture, multi-module, Jetpack Compose |
-| [typescript-node-project-architect-mode](./typescript-node-project-architect-mode.md) | TypeScript/Node.js | Turborepo monorepo, pnpm workspaces, Biome |
-| [react-vite-project-architect-mode](./react-vite-project-architect-mode.md) | React/Vite | Feature-based structure, TanStack Query, Zustand |
-| [scala-sbt-project-architect-mode](./scala-sbt-project-architect-mode.md) | Scala/sbt | Typelevel stack, Cats Effect, functional patterns |
-| [cpp-cmake-project-architect-mode](./cpp-cmake-project-architect-mode.md) | C/C++/CMake | Modern CMake 3.21+, vcpkg/Conan, clang-tidy |
-| [browser-extension-project-architect-mode](./browser-extension-project-architect-mode.md) | Browser Extensions | Manifest V3, TypeScript, multi-browser (Chrome/Firefox/Safari) |
+| Mode                                                                                      | Technology           | Key Features                                                   |
+| ----------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------- |
+| [rust-project-architect-mode](./rust-project-architect-mode.md)                           | Rust                 | Cargo workspaces, Rust 2024 edition, xtask automation          |
+| [python-project-architect-mode](./python-project-architect-mode.md)                       | Python               | src layout, pyproject.toml, uv/poetry, modern tooling          |
+| [nextjs-project-architect-mode](./nextjs-project-architect-mode.md)                       | Next.js 14/15/16     | App Router, Server Components, proxy.ts (16+), Turbopack       |
+| [dotnet-project-architect-mode](./dotnet-project-architect-mode.md)                       | .NET 8/9             | Clean Architecture, DDD, CQRS, Minimal APIs                    |
+| [java-spring-project-architect-mode](./java-spring-project-architect-mode.md)             | Java Spring Boot 3.x | Hexagonal Architecture, Ports & Adapters, ArchUnit             |
+| [go-project-architect-mode](./go-project-architect-mode.md)                               | Go                   | golang-standards layout, flat to hexagonal patterns            |
+| [swift-ios-project-architect-mode](./swift-ios-project-architect-mode.md)                 | Swift/iOS            | SwiftUI, TCA, modular SPM architecture                         |
+| [swift-macos-project-architect-mode](./swift-macos-project-architect-mode.md)             | Swift/macOS          | SwiftUI + AppKit, Xcode, sandboxing, multi-window              |
+| [kotlin-android-project-architect-mode](./kotlin-android-project-architect-mode.md)       | Kotlin/Android       | Clean Architecture, multi-module, Jetpack Compose              |
+| [typescript-node-project-architect-mode](./typescript-node-project-architect-mode.md)     | TypeScript/Node.js   | Turborepo monorepo, pnpm workspaces, Biome                     |
+| [react-vite-project-architect-mode](./react-vite-project-architect-mode.md)               | React/Vite           | Feature-based structure, TanStack Query, Zustand               |
+| [scala-sbt-project-architect-mode](./scala-sbt-project-architect-mode.md)                 | Scala/sbt            | Typelevel stack, Cats Effect, functional patterns              |
+| [cpp-cmake-project-architect-mode](./cpp-cmake-project-architect-mode.md)                 | C/C++/CMake          | Modern CMake 3.21+, vcpkg/Conan, clang-tidy                    |
+| [browser-extension-project-architect-mode](./browser-extension-project-architect-mode.md) | Browser Extensions   | Manifest V3, TypeScript, multi-browser (Chrome/Firefox/Safari) |
 
 ## What These Modes Do
 
 ### 1. Validate Existing Projects
+
 Analyze your project structure and provide:
+
 - ✅ What's done correctly
 - ⚠️ Warnings (non-critical improvements)
 - ❌ Issues (critical problems)
@@ -32,7 +34,9 @@ Analyze your project structure and provide:
 - 🔧 Fix commands
 
 ### 2. Scaffold New Projects
+
 Generate production-ready project structures with:
+
 - Proper directory organization
 - Configuration files (linting, formatting, testing)
 - CI/CD workflows
@@ -40,7 +44,9 @@ Generate production-ready project structures with:
 - Documentation templates
 
 ### 3. Best Practices Enforcement
+
 Each mode enforces modern best practices:
+
 - **Security**: Dependency auditing, vulnerability scanning
 - **Type Safety**: Strict type checking configurations
 - **Testing**: Unit, integration, and e2e test structures
@@ -51,31 +57,32 @@ Each mode enforces modern best practices:
 
 ### Backend
 
-| Stack | Structure | Architecture |
-|-------|-----------|--------------|
-| **Rust** | `crates/` workspace | Flat → Modular |
-| **Go** | `cmd/`, `internal/`, `pkg/` | Flat → Hexagonal |
-| **Java Spring** | `domain/`, `application/`, `infrastructure/` | Hexagonal (Ports & Adapters) |
-| **.NET** | `src/Domain/`, `Application/`, `Infrastructure/` | Clean Architecture + CQRS |
-| **Node.js/TS** | `apps/`, `packages/` (monorepo) | Turborepo workspaces |
-| **Python** | `src/package_name/` | src layout + pyproject.toml |
-| **Scala** | `modules/`, `src/main/scala/` | Tagless final, Typelevel |
-| **C/C++** | `src/`, `include/`, `lib/` | Modern CMake targets |
+| Stack           | Structure                                        | Architecture                 |
+| --------------- | ------------------------------------------------ | ---------------------------- |
+| **Rust**        | `crates/` workspace                              | Flat → Modular               |
+| **Go**          | `cmd/`, `internal/`, `pkg/`                      | Flat → Hexagonal             |
+| **Java Spring** | `domain/`, `application/`, `infrastructure/`     | Hexagonal (Ports & Adapters) |
+| **.NET**        | `src/Domain/`, `Application/`, `Infrastructure/` | Clean Architecture + CQRS    |
+| **Node.js/TS**  | `apps/`, `packages/` (monorepo)                  | Turborepo workspaces         |
+| **Python**      | `src/package_name/`                              | src layout + pyproject.toml  |
+| **Scala**       | `modules/`, `src/main/scala/`                    | Tagless final, Typelevel     |
+| **C/C++**       | `src/`, `include/`, `lib/`                       | Modern CMake targets         |
 
 ### Frontend/Mobile/Desktop
 
-| Stack | Structure | Architecture |
-|-------|-----------|--------------|
-| **Next.js** | `src/app/`, `components/`, `lib/` | App Router + Server Components |
-| **React/Vite** | `src/features/`, `components/`, `hooks/` | Feature-based + TanStack |
-| **iOS/Swift** | `Features/`, `Core/`, `Packages/` | TCA or MVVM + Coordinator |
-| **macOS/Swift** | `App/`, `Features/`, `Packages/` | SwiftUI + AppKit hybrid |
-| **Android/Kotlin** | `feature/`, `domain/`, `data/`, `core/` | Clean Architecture + Multi-module |
-| **Browser Extensions** | `src/`, `public/`, per-browser manifests | Manifest V3, multi-browser |
+| Stack                  | Structure                                | Architecture                      |
+| ---------------------- | ---------------------------------------- | --------------------------------- |
+| **Next.js**            | `src/app/`, `components/`, `lib/`        | App Router + Server Components    |
+| **React/Vite**         | `src/features/`, `components/`, `hooks/` | Feature-based + TanStack          |
+| **iOS/Swift**          | `Features/`, `Core/`, `Packages/`        | TCA or MVVM + Coordinator         |
+| **macOS/Swift**        | `App/`, `Features/`, `Packages/`         | SwiftUI + AppKit hybrid           |
+| **Android/Kotlin**     | `feature/`, `domain/`, `data/`, `core/`  | Clean Architecture + Multi-module |
+| **Browser Extensions** | `src/`, `public/`, per-browser manifests | Manifest V3, multi-browser        |
 
 ## Usage Examples
 
 ### Validate a Project
+
 ```
 "Validate my Rust workspace structure"
 "Check if my Python project follows best practices"
@@ -85,6 +92,7 @@ Each mode enforces modern best practices:
 ```
 
 ### Scaffold a New Project
+
 ```
 "Create a new Rust workspace for a CLI tool with a core library"
 "Set up a Python package with FastAPI and proper testing"
@@ -95,6 +103,7 @@ Each mode enforces modern best practices:
 ```
 
 ### Migrate/Upgrade
+
 ```
 "Migrate my Next.js app from middleware.ts to proxy.ts (16.x)"
 "Convert my Python project to src layout"
@@ -105,30 +114,33 @@ Each mode enforces modern best practices:
 ## Key Technologies & Versions
 
 ### Backend
-| Technology | Version | Key Features |
-|------------|---------|--------------|
-| Rust | 2024 edition | Resolver v3, workspace deps |
-| Go | 1.23+ | Structured logging (slog) |
-| Java | 21+ | Spring Boot 3.4.x, records |
-| .NET | 9.0 | Minimal APIs, Native AOT |
-| Node.js | 22+ | ESM, native test runner |
-| Python | 3.12+ | pyproject.toml, uv |
-| Scala | 3.4.x/3.5.x | Cats Effect 3, http4s, ZIO 2 |
-| C/C++ | C++20/23 | CMake 3.21+, vcpkg, Conan |
+
+| Technology | Version      | Key Features                 |
+| ---------- | ------------ | ---------------------------- |
+| Rust       | 2024 edition | Resolver v3, workspace deps  |
+| Go         | 1.23+        | Structured logging (slog)    |
+| Java       | 21+          | Spring Boot 3.4.x, records   |
+| .NET       | 9.0          | Minimal APIs, Native AOT     |
+| Node.js    | 22+          | ESM, native test runner      |
+| Python     | 3.12+        | pyproject.toml, uv           |
+| Scala      | 3.4.x/3.5.x  | Cats Effect 3, http4s, ZIO 2 |
+| C/C++      | C++20/23     | CMake 3.21+, vcpkg, Conan    |
 
 ### Frontend/Mobile/Desktop
-| Technology | Version | Key Features |
-|------------|---------|--------------|
-| Next.js | 14/15/16 | App Router, Turbopack, `"use cache"` |
-| React | 18.x/19.x | Vite 6, TanStack Query, Zustand |
-| Swift/iOS | iOS 17+ | SwiftUI, TCA 1.x |
-| Swift/macOS | macOS 14+ | SwiftUI + AppKit, multi-window |
-| Kotlin/Android | Kotlin 2.1 | Compose, Hilt, Coroutines |
-| Browser Extensions | Manifest V3 | TypeScript, Chrome/Firefox/Safari |
+
+| Technology         | Version     | Key Features                         |
+| ------------------ | ----------- | ------------------------------------ |
+| Next.js            | 14/15/16    | App Router, Turbopack, `"use cache"` |
+| React              | 18.x/19.x   | Vite 6, TanStack Query, Zustand      |
+| Swift/iOS          | iOS 17+     | SwiftUI, TCA 1.x                     |
+| Swift/macOS        | macOS 14+   | SwiftUI + AppKit, multi-window       |
+| Kotlin/Android     | Kotlin 2.1  | Compose, Hilt, Coroutines            |
+| Browser Extensions | Manifest V3 | TypeScript, Chrome/Firefox/Safari    |
 
 ## Architectural Patterns
 
 ### Hexagonal Architecture (Ports & Adapters)
+
 Used by: **Java Spring**, **Go** (large projects), **.NET**
 
 ```
@@ -147,6 +159,7 @@ Used by: **Java Spring**, **Go** (large projects), **.NET**
 ```
 
 ### Clean Architecture
+
 Used by: **.NET**, **Kotlin/Android**, **Swift/iOS**
 
 ```
@@ -156,6 +169,7 @@ Presentation → Application → Domain ← Infrastructure
 ```
 
 ### Feature-Based Modular
+
 Used by: **Next.js**, **Kotlin/Android**, **Swift/iOS**
 
 ```
@@ -172,6 +186,7 @@ feature/
 ## Directory Structure Summary
 
 ### Rust
+
 ```
 my-workspace/
 ├── Cargo.toml          # Virtual manifest
@@ -180,6 +195,7 @@ my-workspace/
 ```
 
 ### Python
+
 ```
 my-project/
 ├── pyproject.toml      # Single source of truth
@@ -188,6 +204,7 @@ my-project/
 ```
 
 ### Next.js (14/15/16)
+
 ```
 my-app/
 ├── src/
@@ -199,6 +216,7 @@ my-app/
 ```
 
 ### Java Spring (Hexagonal)
+
 ```
 src/main/java/com/example/
 ├── domain/             # Pure business logic
@@ -207,6 +225,7 @@ src/main/java/com/example/
 ```
 
 ### Go
+
 ```
 my-app/
 ├── cmd/api/            # Entry points
@@ -215,6 +234,7 @@ my-app/
 ```
 
 ### Kotlin/Android
+
 ```
 my-android-app/
 ├── app/                # Main application
@@ -225,6 +245,7 @@ my-android-app/
 ```
 
 ### TypeScript/Node.js (Turborepo)
+
 ```
 my-platform/
 ├── apps/               # Applications
@@ -234,6 +255,7 @@ my-platform/
 ```
 
 ### React/Vite
+
 ```
 my-react-app/
 ├── src/
@@ -246,6 +268,7 @@ my-react-app/
 ```
 
 ### Scala/sbt
+
 ```
 my-scala-app/
 ├── build.sbt           # Build definition
@@ -255,6 +278,7 @@ my-scala-app/
 ```
 
 ### C/C++ (CMake)
+
 ```
 my-cpp-project/
 ├── CMakeLists.txt      # Root build
@@ -265,6 +289,7 @@ my-cpp-project/
 ```
 
 ### macOS/Swift (Xcode)
+
 ```
 MyMacApp/
 ├── MyMacApp.xcodeproj
@@ -275,6 +300,7 @@ MyMacApp/
 ```
 
 ### Browser Extension
+
 ```
 my-extension/
 ├── src/
@@ -302,6 +328,7 @@ When adding new project structure modes:
 ## Sources & References
 
 ### Official Documentation
+
 - [Cargo Book - Package Layout](https://doc.rust-lang.org/cargo/guide/project-layout.html)
 - [Python Packaging User Guide](https://packaging.python.org/)
 - [Next.js Project Structure](https://nextjs.org/docs/app/getting-started/project-structure)
@@ -319,6 +346,7 @@ When adding new project structure modes:
 - [Firefox Add-ons Documentation](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
 
 ### Community Best Practices
+
 - [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
 - [Ardalis Clean Architecture Template](https://github.com/ardalis/CleanArchitecture)
 - [Now in Android Sample](https://github.com/android/nowinandroid)

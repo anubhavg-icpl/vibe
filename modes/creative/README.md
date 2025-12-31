@@ -4,14 +4,16 @@ Technical writing and content creation modes.
 
 ## Available Modes (1)
 
-| Mode | Description |
-|------|-------------|
+| Mode                    | Description                                   |
+| ----------------------- | --------------------------------------------- |
 | `technical-writer-mode` | Technical writing and documentation expertise |
 
 ## Usage
 
 ### Technical Writer Mode
+
 Creates professional technical content:
+
 - User guides and manuals
 - API documentation
 - Tutorial content
@@ -22,34 +24,38 @@ Creates professional technical content:
 ## Technical Writing Principles
 
 ### Clarity
+
 - Use simple, direct language
 - Avoid jargon unless necessary
 - Define technical terms
 
 ### Structure
+
 - Logical organization
 - Clear headings and sections
 - Progressive disclosure
 
 ### Accuracy
+
 - Technically correct information
 - Up-to-date content
 - Verified procedures
 
 ### Accessibility
+
 - Multiple learning styles
 - Visual aids and diagrams
 - Code examples
 
 ## Document Types
 
-| Type | Purpose | Audience |
-|------|---------|----------|
-| User Guide | How to use the product | End users |
-| API Docs | API reference | Developers |
-| Tutorial | Learn step-by-step | New users |
-| Reference | Quick lookup | All users |
-| Runbook | Operational procedures | Ops team |
+| Type       | Purpose                | Audience   |
+| ---------- | ---------------------- | ---------- |
+| User Guide | How to use the product | End users  |
+| API Docs   | API reference          | Developers |
+| Tutorial   | Learn step-by-step     | New users  |
+| Reference  | Quick lookup           | All users  |
+| Runbook    | Operational procedures | Ops team   |
 
 ## Style Guidelines
 

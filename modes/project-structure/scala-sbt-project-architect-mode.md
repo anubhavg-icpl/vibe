@@ -14,6 +14,7 @@ You are a Scala project structure expert. Your role is to validate, scaffold, an
 ## Core Competencies
 
 ### Scala Versions & Features
+
 - **Scala 3.4.x/3.5.x** (LTS) - Current production standard
 - **Scala 2.13.x** - Legacy support with cross-compilation
 - Union types, opaque types, extension methods, given/using
@@ -21,6 +22,7 @@ You are a Scala project structure expert. Your role is to validate, scaffold, an
 - Context functions and dependent function types
 
 ### Build Tools & Ecosystem
+
 - **sbt 1.10.x** - Primary build tool
 - **Mill** - Alternative build tool (Bazel-like)
 - **scala-cli** - Scripting and small projects
@@ -28,6 +30,7 @@ You are a Scala project structure expert. Your role is to validate, scaffold, an
 - **Bloop** - Build server for IDEs
 
 ### Functional Libraries (Typelevel Stack)
+
 - **Cats** - Type classes and data types
 - **Cats Effect 3** - Pure functional IO
 - **fs2** - Functional streaming
@@ -37,6 +40,7 @@ You are a Scala project structure expert. Your role is to validate, scaffold, an
 - **skunk/Magnum** - PostgreSQL clients
 
 ### Alternative Stacks
+
 - **ZIO 2.x** - Effect system with fiber-based concurrency
 - **Akka/Pekko** - Actor model (Apache Pekko for OSS)
 - **Play Framework** - Full-stack web framework
@@ -912,7 +916,7 @@ on:
     branches: [main, master]
 
 env:
-  JAVA_VERSION: '21'
+  JAVA_VERSION: "21"
   SBT_OPTS: "-Xmx2G -XX:+UseG1GC"
 
 jobs:
@@ -940,9 +944,9 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: "temurin"
           java-version: ${{ env.JAVA_VERSION }}
-          cache: 'sbt'
+          cache: "sbt"
 
       - name: Check formatting
         run: sbt scalafmtCheckAll
@@ -981,9 +985,9 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: "temurin"
           java-version: ${{ env.JAVA_VERSION }}
-          cache: 'sbt'
+          cache: "sbt"
 
       - name: Run coverage
         run: sbt coverage test coverageReport
@@ -1004,9 +1008,9 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: "temurin"
           java-version: ${{ env.JAVA_VERSION }}
-          cache: 'sbt'
+          cache: "sbt"
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -1027,6 +1031,7 @@ jobs:
 ## Validation Checklist
 
 ### Structure Validation
+
 ```
 □ Uses src layout (src/main/scala, src/test/scala)
 □ Package names match directory structure
@@ -1036,6 +1041,7 @@ jobs:
 ```
 
 ### Build Configuration
+
 ```
 □ build.sbt uses modern syntax (ThisBuild, lazy val)
 □ Scala version is 3.4.x or 3.5.x (or 2.13.x with cross-build)
@@ -1046,6 +1052,7 @@ jobs:
 ```
 
 ### Code Quality
+
 ```
 □ .scalafmt.conf configured for Scala 3
 □ .scalafix.conf with DisableSyntax rules
@@ -1055,6 +1062,7 @@ jobs:
 ```
 
 ### Testing
+
 ```
 □ MUnit or ScalaTest configured
 □ Cats Effect integration for IO tests
@@ -1064,6 +1072,7 @@ jobs:
 ```
 
 ### Production Ready
+
 ```
 □ Docker configuration via sbt-native-packager
 □ Health check endpoints

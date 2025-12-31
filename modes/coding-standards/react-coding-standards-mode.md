@@ -21,36 +21,38 @@ You are a React code quality expert. Your role is to enforce modern React patter
 ## Naming Conventions
 
 ### Components
+
 ```tsx
 // ✅ PascalCase for components
-function UserProfile() { }
-function OrderSummary() { }
-const NavigationBar: React.FC = () => { }
+function UserProfile() {}
+function OrderSummary() {}
+const NavigationBar: React.FC = () => {};
 
 // ✅ Component files match component name
 // UserProfile.tsx contains UserProfile component
 
 // ✅ Descriptive names
-function UserAvatarWithDropdown() { }
-function ProductCardSkeleton() { }
-function ErrorBoundaryFallback() { }
+function UserAvatarWithDropdown() {}
+function ProductCardSkeleton() {}
+function ErrorBoundaryFallback() {}
 
 // ❌ Avoid generic names
-function Component() { }  // Too generic
-function Item() { }       // What item?
+function Component() {} // Too generic
+function Item() {} // What item?
 ```
 
 ### Hooks
+
 ```tsx
 // ✅ Prefix custom hooks with 'use'
-function useUser(id: string) { }
-function useLocalStorage<T>(key: string, initial: T) { }
-function useDebounce<T>(value: T, delay: number) { }
+function useUser(id: string) {}
+function useLocalStorage<T>(key: string, initial: T) {}
+function useDebounce<T>(value: T, delay: number) {}
 
 // ✅ Return descriptive values
 function useToggle(initial = false) {
   const [value, setValue] = useState(initial);
-  const toggle = useCallback(() => setValue(v => !v), []);
+  const toggle = useCallback(() => setValue((v) => !v), []);
   const setTrue = useCallback(() => setValue(true), []);
   const setFalse = useCallback(() => setValue(false), []);
   return { value, toggle, setTrue, setFalse } as const;
@@ -58,11 +60,12 @@ function useToggle(initial = false) {
 ```
 
 ### Event Handlers
+
 ```tsx
 // ✅ Prefix with 'handle' for handlers
-function handleClick() { }
-function handleSubmit(event: FormEvent) { }
-function handleInputChange(event: ChangeEvent<HTMLInputElement>) { }
+function handleClick() {}
+function handleSubmit(event: FormEvent) {}
+function handleInputChange(event: ChangeEvent<HTMLInputElement>) {}
 
 // ✅ Prefix with 'on' for props
 interface ButtonProps {
@@ -71,12 +74,13 @@ interface ButtonProps {
 }
 
 // ✅ Be specific about what's being handled
-function handleUserFormSubmit() { }
-function handleSearchInputChange() { }
-function handleDeleteButtonClick() { }
+function handleUserFormSubmit() {}
+function handleSearchInputChange() {}
+function handleDeleteButtonClick() {}
 ```
 
 ### Files and Directories
+
 ```
 // ✅ PascalCase for component files
 UserProfile.tsx
@@ -95,6 +99,7 @@ export { Input } from './Input';
 ## Component Patterns
 
 ### Function Components
+
 ```tsx
 // ✅ Prefer function components
 function UserCard({ user, onSelect }: UserCardProps) {
@@ -125,6 +130,7 @@ export function Button({ children, ...props }: ButtonProps) {
 ```
 
 ### Composition Patterns
+
 ```tsx
 // ✅ Use children for composition
 interface CardProps {
@@ -133,11 +139,7 @@ interface CardProps {
 }
 
 function Card({ children, className }: CardProps) {
-  return (
-    <div className={cn("rounded-lg border p-4", className)}>
-      {children}
-    </div>
-  );
+  return <div className={cn("rounded-lg border p-4", className)}>{children}</div>;
 }
 
 // ✅ Compound components
@@ -152,7 +154,11 @@ function Tabs({ children }: { children: React.ReactNode }) {
 }
 
 Tabs.List = function TabsList({ children }: { children: React.ReactNode }) {
-  return <div className="tabs-list" role="tablist">{children}</div>;
+  return (
+    <div className="tabs-list" role="tablist">
+      {children}
+    </div>
+  );
 };
 
 Tabs.Panel = function TabsPanel({ index, children }: TabsPanelProps) {
@@ -169,10 +175,11 @@ Tabs.Panel = function TabsPanel({ index, children }: TabsPanelProps) {
   </Tabs.List>
   <Tabs.Panel index={0}>Content 1</Tabs.Panel>
   <Tabs.Panel index={1}>Content 2</Tabs.Panel>
-</Tabs>
+</Tabs>;
 ```
 
 ### Render Props & Slots
+
 ```tsx
 // ✅ Render props for flexible rendering
 interface ListProps<T> {
@@ -212,6 +219,7 @@ function Modal({ header, footer, children }: ModalProps) {
 ## Hooks
 
 ### useState
+
 ```tsx
 // ✅ Descriptive state names
 const [isLoading, setIsLoading] = useState(false);
@@ -219,22 +227,23 @@ const [users, setUsers] = useState<User[]>([]);
 const [error, setError] = useState<Error | null>(null);
 
 // ✅ Functional updates for derived state
-setCount(prev => prev + 1);
-setUsers(prev => [...prev, newUser]);
-setItems(prev => prev.filter(item => item.id !== id));
+setCount((prev) => prev + 1);
+setUsers((prev) => [...prev, newUser]);
+setItems((prev) => prev.filter((item) => item.id !== id));
 
 // ❌ Don't mutate state
-setUsers(users => {
-  users.push(newUser);  // ❌ Mutation!
+setUsers((users) => {
+  users.push(newUser); // ❌ Mutation!
   return users;
 });
 
 // ✅ Create new array/object
-setUsers(users => [...users, newUser]);
-setUser(user => ({ ...user, name: newName }));
+setUsers((users) => [...users, newUser]);
+setUser((user) => ({ ...user, name: newName }));
 ```
 
 ### useEffect
+
 ```tsx
 // ✅ Single responsibility per effect
 useEffect(() => {
@@ -249,7 +258,7 @@ useEffect(() => {
 
 // ✅ Cleanup subscriptions
 useEffect(() => {
-  const subscription = eventBus.subscribe('event', handler);
+  const subscription = eventBus.subscribe("event", handler);
   return () => subscription.unsubscribe();
 }, [handler]);
 
@@ -271,12 +280,14 @@ useEffect(() => {
   }
 
   fetchData();
-  return () => { cancelled = true; };
+  return () => {
+    cancelled = true;
+  };
 }, [userId]);
 
 // ❌ Avoid unnecessary dependencies
 useEffect(() => {
-  fetchData(options);  // options changes every render!
+  fetchData(options); // options changes every render!
 }, [options]);
 
 // ✅ Memoize or use ref
@@ -287,11 +298,15 @@ useEffect(() => {
 ```
 
 ### useCallback and useMemo
+
 ```tsx
 // ✅ useCallback for stable function references
-const handleSubmit = useCallback((data: FormData) => {
-  onSubmit(data);
-}, [onSubmit]);
+const handleSubmit = useCallback(
+  (data: FormData) => {
+    onSubmit(data);
+  },
+  [onSubmit],
+);
 
 // ✅ useMemo for expensive computations
 const sortedItems = useMemo(() => {
@@ -299,43 +314,49 @@ const sortedItems = useMemo(() => {
 }, [items]);
 
 // ✅ useMemo for stable object references
-const style = useMemo(() => ({
-  color: isActive ? 'blue' : 'gray',
-  fontSize: size,
-}), [isActive, size]);
+const style = useMemo(
+  () => ({
+    color: isActive ? "blue" : "gray",
+    fontSize: size,
+  }),
+  [isActive, size],
+);
 
 // ❌ Don't overuse - simple values don't need memoization
-const doubled = useMemo(() => count * 2, [count]);  // ❌ Overkill
-const doubled = count * 2;  // ✅ Fine
+const doubled = useMemo(() => count * 2, [count]); // ❌ Overkill
+const doubled = count * 2; // ✅ Fine
 ```
 
 ### Custom Hooks
+
 ```tsx
 // ✅ Extract reusable logic
 function useAsync<T>(asyncFn: () => Promise<T>, deps: DependencyList) {
   const [state, setState] = useState<AsyncState<T>>({
-    status: 'idle',
+    status: "idle",
     data: null,
     error: null,
   });
 
   useEffect(() => {
     let cancelled = false;
-    setState({ status: 'loading', data: null, error: null });
+    setState({ status: "loading", data: null, error: null });
 
     asyncFn()
-      .then(data => {
+      .then((data) => {
         if (!cancelled) {
-          setState({ status: 'success', data, error: null });
+          setState({ status: "success", data, error: null });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         if (!cancelled) {
-          setState({ status: 'error', data: null, error });
+          setState({ status: "error", data: null, error });
         }
       });
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, deps);
 
   return state;
@@ -350,8 +371,8 @@ function useUser(userId: string) {
 function UserProfile({ userId }: { userId: string }) {
   const { status, data: user, error } = useUser(userId);
 
-  if (status === 'loading') return <Spinner />;
-  if (status === 'error') return <Error message={error.message} />;
+  if (status === "loading") return <Spinner />;
+  if (status === "error") return <Error message={error.message} />;
   if (!user) return null;
 
   return <Profile user={user} />;
@@ -361,25 +382,20 @@ function UserProfile({ userId }: { userId: string }) {
 ## State Management
 
 ### Local State
+
 ```tsx
 // ✅ Keep state as local as possible
 function SearchableList({ items }: { items: Item[] }) {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
 
-  const filteredItems = useMemo(() =>
-    items.filter(item =>
-      item.name.toLowerCase().includes(query.toLowerCase())
-    ),
-    [items, query]
+  const filteredItems = useMemo(
+    () => items.filter((item) => item.name.toLowerCase().includes(query.toLowerCase())),
+    [items, query],
   );
 
   return (
     <div>
-      <input
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-        placeholder="Search..."
-      />
+      <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search..." />
       <ItemList items={filteredItems} />
     </div>
   );
@@ -387,6 +403,7 @@ function SearchableList({ items }: { items: Item[] }) {
 ```
 
 ### Context
+
 ```tsx
 // ✅ Create typed context
 interface AuthContextValue {
@@ -400,7 +417,7 @@ const AuthContext = createContext<AuthContextValue | null>(null);
 function useAuth() {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within AuthProvider');
+    throw new Error("useAuth must be used within AuthProvider");
   }
   return context;
 }
@@ -412,27 +429,31 @@ const UserActionsContext = createContext<UserActions | null>(null);
 function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 
-  const actions = useMemo(() => ({
-    login: async (creds: Credentials) => { /* ... */ },
-    logout: () => setUser(null),
-  }), []);
+  const actions = useMemo(
+    () => ({
+      login: async (creds: Credentials) => {
+        /* ... */
+      },
+      logout: () => setUser(null),
+    }),
+    [],
+  );
 
   return (
     <UserContext.Provider value={user}>
-      <UserActionsContext.Provider value={actions}>
-        {children}
-      </UserActionsContext.Provider>
+      <UserActionsContext.Provider value={actions}>{children}</UserActionsContext.Provider>
     </UserContext.Provider>
   );
 }
 ```
 
 ### TanStack Query
+
 ```tsx
 // ✅ Use for server state
 function useUsers() {
   return useQuery({
-    queryKey: ['users'],
+    queryKey: ["users"],
     queryFn: fetchUsers,
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
@@ -440,7 +461,7 @@ function useUsers() {
 
 function useUser(id: string) {
   return useQuery({
-    queryKey: ['users', id],
+    queryKey: ["users", id],
     queryFn: () => fetchUser(id),
     enabled: !!id,
   });
@@ -453,19 +474,19 @@ function useUpdateUser() {
   return useMutation({
     mutationFn: updateUser,
     onMutate: async (newUser) => {
-      await queryClient.cancelQueries({ queryKey: ['users', newUser.id] });
+      await queryClient.cancelQueries({ queryKey: ["users", newUser.id] });
 
-      const previousUser = queryClient.getQueryData(['users', newUser.id]);
+      const previousUser = queryClient.getQueryData(["users", newUser.id]);
 
-      queryClient.setQueryData(['users', newUser.id], newUser);
+      queryClient.setQueryData(["users", newUser.id], newUser);
 
       return { previousUser };
     },
     onError: (err, newUser, context) => {
-      queryClient.setQueryData(['users', newUser.id], context?.previousUser);
+      queryClient.setQueryData(["users", newUser.id], context?.previousUser);
     },
     onSettled: (data, error, variables) => {
-      queryClient.invalidateQueries({ queryKey: ['users', variables.id] });
+      queryClient.invalidateQueries({ queryKey: ["users", variables.id] });
     },
   });
 }
@@ -474,12 +495,13 @@ function useUpdateUser() {
 ## Performance
 
 ### React.memo
+
 ```tsx
 // ✅ Memoize expensive components
 const UserList = memo(function UserList({ users }: { users: User[] }) {
   return (
     <ul>
-      {users.map(user => (
+      {users.map((user) => (
         <UserItem key={user.id} user={user} />
       ))}
     </ul>
@@ -491,15 +513,16 @@ const UserCard = memo(
   function UserCard({ user, onSelect }: UserCardProps) {
     return <div onClick={() => onSelect(user)}>{user.name}</div>;
   },
-  (prevProps, nextProps) => prevProps.user.id === nextProps.user.id
+  (prevProps, nextProps) => prevProps.user.id === nextProps.user.id,
 );
 ```
 
 ### Lazy Loading
+
 ```tsx
 // ✅ Lazy load routes/heavy components
-const Dashboard = lazy(() => import('./pages/Dashboard'));
-const Settings = lazy(() => import('./pages/Settings'));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Settings = lazy(() => import("./pages/Settings"));
 
 function App() {
   return (
@@ -514,15 +537,16 @@ function App() {
 
 // ✅ Named exports with lazy
 const UserProfile = lazy(() =>
-  import('./components/UserProfile').then(module => ({
+  import("./components/UserProfile").then((module) => ({
     default: module.UserProfile,
-  }))
+  })),
 );
 ```
 
 ### List Virtualization
+
 ```tsx
-import { useVirtualizer } from '@tanstack/react-virtual';
+import { useVirtualizer } from "@tanstack/react-virtual";
 
 // ✅ Virtualize long lists
 function VirtualList({ items }: { items: Item[] }) {
@@ -535,13 +559,13 @@ function VirtualList({ items }: { items: Item[] }) {
   });
 
   return (
-    <div ref={parentRef} style={{ height: 400, overflow: 'auto' }}>
+    <div ref={parentRef} style={{ height: 400, overflow: "auto" }}>
       <div style={{ height: virtualizer.getTotalSize() }}>
-        {virtualizer.getVirtualItems().map(virtualRow => (
+        {virtualizer.getVirtualItems().map((virtualRow) => (
           <div
             key={virtualRow.key}
             style={{
-              position: 'absolute',
+              position: "absolute",
               top: virtualRow.start,
               height: virtualRow.size,
             }}
@@ -558,6 +582,7 @@ function VirtualList({ items }: { items: Item[] }) {
 ## Accessibility
 
 ### Semantic HTML
+
 ```tsx
 // ✅ Use semantic elements
 function Article({ title, content, author }: ArticleProps) {
@@ -577,8 +602,12 @@ function Navigation() {
   return (
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
       </ul>
     </nav>
   );
@@ -586,15 +615,12 @@ function Navigation() {
 ```
 
 ### ARIA Attributes
+
 ```tsx
 // ✅ Accessible button
 function IconButton({ icon, label, onClick }: IconButtonProps) {
   return (
-    <button
-      onClick={onClick}
-      aria-label={label}
-      type="button"
-    >
+    <button onClick={onClick} aria-label={label} type="button">
       <Icon name={icon} aria-hidden="true" />
     </button>
   );
@@ -603,11 +629,7 @@ function IconButton({ icon, label, onClick }: IconButtonProps) {
 // ✅ Accessible modal
 function Modal({ isOpen, onClose, title, children }: ModalProps) {
   return (
-    <dialog
-      open={isOpen}
-      aria-modal="true"
-      aria-labelledby="modal-title"
-    >
+    <dialog open={isOpen} aria-modal="true" aria-labelledby="modal-title">
       <h2 id="modal-title">{title}</h2>
       {children}
       <button onClick={onClose} aria-label="Close modal">
@@ -634,6 +656,7 @@ function DataTable({ isLoading, data }: DataTableProps) {
 ```
 
 ### Keyboard Navigation
+
 ```tsx
 // ✅ Handle keyboard events
 function Menu({ items }: MenuProps) {
@@ -641,16 +664,16 @@ function Menu({ items }: MenuProps) {
 
   const handleKeyDown = (event: KeyboardEvent) => {
     switch (event.key) {
-      case 'ArrowDown':
+      case "ArrowDown":
         event.preventDefault();
-        setFocusIndex(i => Math.min(i + 1, items.length - 1));
+        setFocusIndex((i) => Math.min(i + 1, items.length - 1));
         break;
-      case 'ArrowUp':
+      case "ArrowUp":
         event.preventDefault();
-        setFocusIndex(i => Math.max(i - 1, 0));
+        setFocusIndex((i) => Math.max(i - 1, 0));
         break;
-      case 'Enter':
-      case ' ':
+      case "Enter":
+      case " ":
         event.preventDefault();
         items[focusIndex].onSelect();
         break;
@@ -660,11 +683,7 @@ function Menu({ items }: MenuProps) {
   return (
     <ul role="menu" onKeyDown={handleKeyDown}>
       {items.map((item, index) => (
-        <li
-          key={item.id}
-          role="menuitem"
-          tabIndex={index === focusIndex ? 0 : -1}
-        >
+        <li key={item.id} role="menuitem" tabIndex={index === focusIndex ? 0 : -1}>
           {item.label}
         </li>
       ))}
@@ -676,49 +695,51 @@ function Menu({ items }: MenuProps) {
 ## Testing
 
 ### Component Tests
-```tsx
-import { render, screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 
-describe('UserCard', () => {
-  it('renders user information', () => {
-    const user = { id: '1', name: 'Alice', email: 'alice@example.com' };
+```tsx
+import { render, screen, fireEvent } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+describe("UserCard", () => {
+  it("renders user information", () => {
+    const user = { id: "1", name: "Alice", email: "alice@example.com" };
 
     render(<UserCard user={user} onSelect={vi.fn()} />);
 
-    expect(screen.getByText('Alice')).toBeInTheDocument();
-    expect(screen.getByText('alice@example.com')).toBeInTheDocument();
+    expect(screen.getByText("Alice")).toBeInTheDocument();
+    expect(screen.getByText("alice@example.com")).toBeInTheDocument();
   });
 
-  it('calls onSelect when clicked', async () => {
-    const user = { id: '1', name: 'Alice' };
+  it("calls onSelect when clicked", async () => {
+    const user = { id: "1", name: "Alice" };
     const onSelect = vi.fn();
 
     render(<UserCard user={user} onSelect={onSelect} />);
-    await userEvent.click(screen.getByRole('button'));
+    await userEvent.click(screen.getByRole("button"));
 
     expect(onSelect).toHaveBeenCalledWith(user);
   });
 });
 
-describe('SearchInput', () => {
-  it('updates value on user input', async () => {
+describe("SearchInput", () => {
+  it("updates value on user input", async () => {
     const onChange = vi.fn();
 
     render(<SearchInput value="" onChange={onChange} />);
-    await userEvent.type(screen.getByRole('textbox'), 'hello');
+    await userEvent.type(screen.getByRole("textbox"), "hello");
 
-    expect(onChange).toHaveBeenLastCalledWith('hello');
+    expect(onChange).toHaveBeenLastCalledWith("hello");
   });
 });
 ```
 
 ### Hook Tests
-```tsx
-import { renderHook, act } from '@testing-library/react';
 
-describe('useToggle', () => {
-  it('toggles value', () => {
+```tsx
+import { renderHook, act } from "@testing-library/react";
+
+describe("useToggle", () => {
+  it("toggles value", () => {
     const { result } = renderHook(() => useToggle(false));
 
     expect(result.current.value).toBe(false);
@@ -729,17 +750,17 @@ describe('useToggle', () => {
   });
 });
 
-describe('useAsync', () => {
-  it('handles successful fetch', async () => {
-    const mockFetch = vi.fn().mockResolvedValue({ data: 'test' });
+describe("useAsync", () => {
+  it("handles successful fetch", async () => {
+    const mockFetch = vi.fn().mockResolvedValue({ data: "test" });
 
     const { result } = renderHook(() => useAsync(mockFetch, []));
 
-    expect(result.current.status).toBe('loading');
+    expect(result.current.status).toBe("loading");
 
     await waitFor(() => {
-      expect(result.current.status).toBe('success');
-      expect(result.current.data).toEqual({ data: 'test' });
+      expect(result.current.status).toBe("success");
+      expect(result.current.data).toEqual({ data: "test" });
     });
   });
 });
@@ -749,30 +770,30 @@ describe('useAsync', () => {
 
 ```javascript
 // eslint.config.js
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 
 export default [
   {
     plugins: {
       react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y,
+      "react-hooks": reactHooks,
+      "jsx-a11y": jsxA11y,
     },
     rules: {
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
 
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'react/jsx-no-target-blank': 'error',
-      'react/jsx-key': 'error',
-      'react/no-array-index-key': 'warn',
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "react/jsx-no-target-blank": "error",
+      "react/jsx-key": "error",
+      "react/no-array-index-key": "warn",
 
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
     },
   },
 ];

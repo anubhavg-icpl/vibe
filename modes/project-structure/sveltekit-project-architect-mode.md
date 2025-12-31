@@ -139,11 +139,11 @@ sveltekit-project/
 
 ```typescript
 // src/routes/+layout.server.ts
-import type { LayoutServerLoad } from './$types';
-import { getUser } from '$lib/server/auth';
+import type { LayoutServerLoad } from "./$types";
+import { getUser } from "$lib/server/auth";
 
 export const load: LayoutServerLoad = async ({ cookies }) => {
-  const sessionId = cookies.get('session');
+  const sessionId = cookies.get("session");
   const user = sessionId ? await getUser(sessionId) : null;
 
   return { user };
@@ -251,23 +251,20 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
 
 ```typescript
 // src/routes/(app)/users/+page.server.ts
-import type { PageServerLoad, Actions } from './$types';
-import { fail, redirect } from '@sveltejs/kit';
-import { db } from '$lib/server/db';
-import { z } from 'zod';
+import type { PageServerLoad, Actions } from "./$types";
+import { fail, redirect } from "@sveltejs/kit";
+import { db } from "$lib/server/db";
+import { z } from "zod";
 
 const PER_PAGE = 10;
 
 export const load: PageServerLoad = async ({ url }) => {
-  const page = parseInt(url.searchParams.get('page') || '1');
-  const search = url.searchParams.get('q') || '';
+  const page = parseInt(url.searchParams.get("page") || "1");
+  const search = url.searchParams.get("q") || "";
 
   const where = search
     ? {
-        OR: [
-          { name: { contains: search, mode: 'insensitive' } },
-          { email: { contains: search, mode: 'insensitive' } },
-        ],
+        OR: [{ name: { contains: search, mode: "insensitive" } }, { email: { contains: search, mode: "insensitive" } }],
       }
     : {};
 
@@ -276,7 +273,7 @@ export const load: PageServerLoad = async ({ url }) => {
       where,
       skip: (page - 1) * PER_PAGE,
       take: PER_PAGE,
-      orderBy: { createdAt: 'desc' },
+      orderBy: { createdAt: "desc" },
     }),
     db.user.count({ where }),
   ]);
@@ -292,13 +289,13 @@ export const load: PageServerLoad = async ({ url }) => {
 export const actions: Actions = {
   delete: async ({ request }) => {
     const formData = await request.formData();
-    const id = formData.get('id') as string;
+    const id = formData.get("id") as string;
 
     try {
       await db.user.delete({ where: { id } });
       return { success: true };
     } catch (error) {
-      return fail(500, { error: 'Failed to delete user' });
+      return fail(500, { error: "Failed to delete user" });
     }
   },
 
@@ -309,7 +306,7 @@ export const actions: Actions = {
     const schema = z.object({
       name: z.string().min(2),
       email: z.string().email(),
-      role: z.enum(['user', 'admin']),
+      role: z.enum(["user", "admin"]),
     });
 
     const result = schema.safeParse(data);
@@ -328,12 +325,12 @@ export const actions: Actions = {
 
 ```typescript
 // src/hooks.server.ts
-import type { Handle } from '@sveltejs/kit';
-import { db } from '$lib/server/db';
+import type { Handle } from "@sveltejs/kit";
+import { db } from "$lib/server/db";
 
 export const handle: Handle = async ({ event, resolve }) => {
   // Get session from cookie
-  const sessionId = event.cookies.get('session');
+  const sessionId = event.cookies.get("session");
 
   if (sessionId) {
     const session = await db.session.findUnique({
@@ -345,17 +342,16 @@ export const handle: Handle = async ({ event, resolve }) => {
       event.locals.user = session.user;
     } else {
       // Clear expired session
-      event.cookies.delete('session', { path: '/' });
+      event.cookies.delete("session", { path: "/" });
     }
   }
 
   // Protected routes
-  if (event.url.pathname.startsWith('/dashboard') ||
-      event.url.pathname.startsWith('/users')) {
+  if (event.url.pathname.startsWith("/dashboard") || event.url.pathname.startsWith("/users")) {
     if (!event.locals.user) {
       return new Response(null, {
         status: 303,
-        headers: { location: '/login' },
+        headers: { location: "/login" },
       });
     }
   }
@@ -366,13 +362,13 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 ```typescript
 // src/routes/api/users/+server.ts
-import type { RequestHandler } from './$types';
-import { json } from '@sveltejs/kit';
-import { db } from '$lib/server/db';
+import type { RequestHandler } from "./$types";
+import { json } from "@sveltejs/kit";
+import { db } from "$lib/server/db";
 
 export const GET: RequestHandler = async ({ url }) => {
-  const page = parseInt(url.searchParams.get('page') || '1');
-  const limit = parseInt(url.searchParams.get('limit') || '10');
+  const page = parseInt(url.searchParams.get("page") || "1");
+  const limit = parseInt(url.searchParams.get("limit") || "10");
 
   const users = await db.user.findMany({
     skip: (page - 1) * limit,
@@ -408,8 +404,8 @@ export const POST: RequestHandler = async ({ request }) => {
 
 ```javascript
 // svelte.config.js
-import adapter from '@sveltejs/adapter-node';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import adapter from "@sveltejs/adapter-node";
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -417,7 +413,7 @@ const config = {
   kit: {
     adapter: adapter(),
     alias: {
-      $components: 'src/lib/components',
+      $components: "src/lib/components",
     },
   },
 };

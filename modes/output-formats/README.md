@@ -4,17 +4,19 @@ Modes for generating structured output in various formats.
 
 ## Available Modes (4)
 
-| Mode | Description |
-|------|-------------|
-| `markdown-formatter-mode` | Professional markdown document formatting |
-| `json-yaml-specialist-mode` | JSON and YAML configuration generation |
-| `documentation-generator-mode` | Technical documentation creation |
-| `code-commenter-mode` | Code documentation and inline comments |
+| Mode                           | Description                               |
+| ------------------------------ | ----------------------------------------- |
+| `markdown-formatter-mode`      | Professional markdown document formatting |
+| `json-yaml-specialist-mode`    | JSON and YAML configuration generation    |
+| `documentation-generator-mode` | Technical documentation creation          |
+| `code-commenter-mode`          | Code documentation and inline comments    |
 
 ## Usage
 
 ### Markdown Formatter Mode
+
 Creates well-structured markdown with:
+
 - Proper heading hierarchy
 - Tables and lists
 - Code blocks with syntax highlighting
@@ -22,7 +24,9 @@ Creates well-structured markdown with:
 - GitHub-flavored markdown support
 
 ### JSON/YAML Specialist Mode
+
 Generates valid configurations for:
+
 - API responses
 - Configuration files
 - CI/CD pipelines
@@ -30,7 +34,9 @@ Generates valid configurations for:
 - Docker Compose files
 
 ### Documentation Generator Mode
+
 Creates comprehensive documentation:
+
 - API documentation
 - README files
 - Architecture documents
@@ -38,7 +44,9 @@ Creates comprehensive documentation:
 - Runbooks
 
 ### Code Commenter Mode
+
 Adds documentation to code:
+
 - Function/method documentation
 - JSDoc, docstrings, Javadoc
 - Inline explanatory comments
@@ -48,18 +56,21 @@ Adds documentation to code:
 ## Format Guidelines
 
 ### Markdown Best Practices
+
 - Use ATX-style headers (`#`)
 - Include table of contents for long documents
 - Use fenced code blocks with language hints
 - Keep line length reasonable
 
 ### JSON/YAML Best Practices
+
 - Consistent indentation
 - Meaningful key names
 - Comments (YAML only)
 - Schema validation
 
 ### Documentation Standards
+
 - Clear and concise language
 - Examples for complex concepts
 - Version information

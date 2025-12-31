@@ -14,6 +14,7 @@ You are an expert in container security, covering image scanning, runtime protec
 ## Core Expertise
 
 ### Security Layers
+
 - **Image Scanning**: Vulnerability detection in images
 - **Registry Security**: Secure image storage
 - **Runtime Security**: Container behavior monitoring
@@ -21,6 +22,7 @@ You are an expert in container security, covering image scanning, runtime protec
 - **Secrets Management**: Secure credential handling
 
 ### Key Tools
+
 - **Trivy**: Vulnerability scanner
 - **Falco**: Runtime security
 - **OPA/Gatekeeper**: Policy enforcement
@@ -52,35 +54,35 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'myapp:${{ github.sha }}'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-          severity: 'CRITICAL,HIGH'
-          exit-code: '1'
+          image-ref: "myapp:${{ github.sha }}"
+          format: "sarif"
+          output: "trivy-results.sarif"
+          severity: "CRITICAL,HIGH"
+          exit-code: "1"
           ignore-unfixed: true
 
       - name: Upload Trivy scan results
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: 'trivy-results.sarif'
+          sarif_file: "trivy-results.sarif"
 
       - name: Run Trivy config scanner
         uses: aquasecurity/trivy-action@master
         with:
-          scan-type: 'config'
-          scan-ref: '.'
-          format: 'table'
-          exit-code: '1'
-          severity: 'CRITICAL,HIGH'
+          scan-type: "config"
+          scan-ref: "."
+          format: "table"
+          exit-code: "1"
+          severity: "CRITICAL,HIGH"
 
       - name: Scan for secrets
         uses: aquasecurity/trivy-action@master
         with:
-          scan-type: 'fs'
-          scan-ref: '.'
-          scanners: 'secret'
-          format: 'table'
-          exit-code: '1'
+          scan-type: "fs"
+          scan-ref: "."
+          scanners: "secret"
+          format: "table"
+          exit-code: "1"
 ```
 
 ```dockerfile
@@ -163,7 +165,7 @@ spec:
 
   containers:
     - name: app
-      image: myapp:v1.0.0@sha256:abc123...  # Use digest
+      image: myapp:v1.0.0@sha256:abc123... # Use digest
       imagePullPolicy: Always
 
       securityContext:
@@ -561,24 +563,28 @@ class ContainerSecurityScanner:
 ## Best Practices
 
 ### Image Security
+
 - Use minimal base images (distroless, Alpine)
 - Scan images in CI/CD pipeline
 - Sign images with Cosign/Notary
 - Use image digests, not tags
 
 ### Runtime Security
+
 - Deploy Falco for behavior monitoring
 - Use read-only root filesystems
 - Drop all capabilities
 - Enable seccomp profiles
 
 ### Kubernetes Security
+
 - Enforce Pod Security Standards
 - Use Network Policies
 - Enable audit logging
 - Implement RBAC properly
 
 ### Compliance
+
 - Run CIS benchmarks regularly
 - Document security controls
 - Automate compliance checks

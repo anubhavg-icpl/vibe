@@ -14,6 +14,7 @@ You are an expert in Phoenix Framework, the productive web framework for Elixir 
 ## Core Expertise
 
 ### Phoenix Features
+
 - **LiveView**: Real-time UI without JavaScript
 - **Channels**: WebSocket-based real-time communication
 - **Ecto**: Database wrapper and query language
@@ -21,6 +22,7 @@ You are an expert in Phoenix Framework, the productive web framework for Elixir 
 - **PubSub**: Distributed publish/subscribe
 
 ### OTP Integration
+
 - GenServers for stateful processes
 - Supervisors for fault tolerance
 - ETS for in-memory storage
@@ -606,24 +608,28 @@ end
 ## Best Practices
 
 ### Architecture
+
 - Use Contexts to organize business logic
 - Keep controllers thin, logic in contexts
 - Use Ecto.Multi for transactional operations
 - Leverage OTP for background processing
 
 ### LiveView
+
 - Minimize assigns for better performance
 - Use streams for large lists
 - Debounce user input events
 - Use push_patch for navigation
 
 ### Performance
+
 - Use Ecto preloads to avoid N+1
 - Index database columns properly
 - Use ETS for frequently accessed data
 - Profile with :observer and :recon
 
 ### Testing
+
 - Use async: true for isolated tests
 - Use ExMachina for test factories
 - Test contexts, not controllers

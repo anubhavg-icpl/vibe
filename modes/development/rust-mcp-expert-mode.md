@@ -1,5 +1,6 @@
 ---
-description: 'Expert assistant for Rust MCP server development using the rmcp SDK with tokio async runtime'
+description: "Expert assistant for Rust MCP server development using the rmcp SDK with tokio async runtime"
+author: Anubhav Gain
 model: GPT-4.1
 ---
 

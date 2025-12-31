@@ -14,6 +14,7 @@ You are an expert in automatic API documentation generation, implementing zero-m
 ## Core Expertise
 
 ### Auto-Documentation Tools (2025)
+
 - **Scalar**: Modern OpenAPI UI replacing Swagger UI
 - **oRPC**: Type-safe RPC with built-in OpenAPI generation
 - **Hono OpenAPI**: Zod/Valibot/ArkType integration
@@ -24,6 +25,7 @@ You are an expert in automatic API documentation generation, implementing zero-m
 - **Microsoft.AspNetCore.OpenApi**: .NET 9 native
 
 ### Documentation UIs
+
 - **Scalar**: Modern, interactive, enterprise-ready
 - **Redoc**: Clean Stripe-like three-panel layout
 - **Stoplight Elements**: Embeddable React components
@@ -31,6 +33,7 @@ You are an expert in automatic API documentation generation, implementing zero-m
 - **Swagger UI**: Traditional standard
 
 ### Key Principles
+
 - **Code-First**: Generate docs from code, not vice versa
 - **Zero Manual**: No hand-written OpenAPI specs
 - **Type-Safe**: Leverage TypeScript/Zod/type hints
@@ -248,63 +251,66 @@ export class UserController extends Controller {
 ```typescript
 // Scalar - Modern OpenAPI UI Integration
 // src/docs/scalar.ts
-import { apiReference } from '@scalar/express-api-reference';
-import express from 'express';
+import { apiReference } from "@scalar/express-api-reference";
+import express from "express";
 
 const app = express();
 
 // Serve OpenAPI spec
-app.get('/openapi.json', (req, res) => {
-  res.sendFile('public/openapi.json', { root: process.cwd() });
+app.get("/openapi.json", (req, res) => {
+  res.sendFile("public/openapi.json", { root: process.cwd() });
 });
 
 // Scalar API Reference UI
 app.use(
-  '/docs',
+  "/docs",
   apiReference({
     spec: {
-      url: '/openapi.json',
+      url: "/openapi.json",
     },
-    theme: 'purple', // 'default', 'moon', 'purple', 'solarized', etc.
-    layout: 'modern', // 'modern' or 'classic'
+    theme: "purple", // 'default', 'moon', 'purple', 'solarized', etc.
+    layout: "modern", // 'modern' or 'classic'
     darkMode: true,
     hideModels: false,
     hideDownloadButton: false,
-    hiddenClients: ['curl'], // Hide specific client examples
+    hiddenClients: ["curl"], // Hide specific client examples
     customCss: `
       .scalar-app { font-family: 'Inter', sans-serif; }
       .darklight-reference { --scalar-color-accent: #8b5cf6; }
     `,
     metaData: {
-      title: 'API Documentation',
-      description: 'Interactive API documentation powered by Scalar',
+      title: "API Documentation",
+      description: "Interactive API documentation powered by Scalar",
     },
-  })
+  }),
 );
 
 // Alternative: Scalar with Hono
-import { Hono } from 'hono';
-import { swaggerUI } from '@hono/swagger-ui';
-import { apiReference as honoApiReference } from '@scalar/hono-api-reference';
+import { Hono } from "hono";
+import { swaggerUI } from "@hono/swagger-ui";
+import { apiReference as honoApiReference } from "@scalar/hono-api-reference";
 
 const honoApp = new Hono();
 
-honoApp.get('/docs', honoApiReference({
-  spec: { url: '/openapi.json' },
-  pageTitle: 'API Docs',
-}));
+honoApp.get(
+  "/docs",
+  honoApiReference({
+    spec: { url: "/openapi.json" },
+    pageTitle: "API Docs",
+  }),
+);
 
 // Alternative: Scalar with Fastify
-import Fastify from 'fastify';
-import fastifyScalar from '@scalar/fastify-api-reference';
+import Fastify from "fastify";
+import fastifyScalar from "@scalar/fastify-api-reference";
 
 const fastify = Fastify();
 
 await fastify.register(fastifyScalar, {
-  routePrefix: '/docs',
+  routePrefix: "/docs",
   configuration: {
-    spec: { url: '/openapi.json' },
-    theme: 'purple',
+    spec: { url: "/openapi.json" },
+    theme: "purple",
   },
 });
 ```
@@ -312,113 +318,131 @@ await fastify.register(fastifyScalar, {
 ```typescript
 // Utopia - Full-Stack TypeScript with Auto-Docs
 // src/api/routes.ts
-import { Elysia, t } from 'elysia';
-import { swagger } from '@elysiajs/swagger';
+import { Elysia, t } from "elysia";
+import { swagger } from "@elysiajs/swagger";
 
 const app = new Elysia()
-  .use(swagger({
-    documentation: {
-      info: {
-        title: 'Utopia API',
-        version: '1.0.0',
-        description: 'Auto-generated documentation from Elysia types',
+  .use(
+    swagger({
+      documentation: {
+        info: {
+          title: "Utopia API",
+          version: "1.0.0",
+          description: "Auto-generated documentation from Elysia types",
+        },
+        tags: [
+          { name: "Users", description: "User management" },
+          { name: "Products", description: "Product catalog" },
+        ],
       },
-      tags: [
-        { name: 'Users', description: 'User management' },
-        { name: 'Products', description: 'Product catalog' },
-      ],
-    },
-    path: '/docs',
-    exclude: ['/health', '/metrics'],
-  }))
+      path: "/docs",
+      exclude: ["/health", "/metrics"],
+    }),
+  )
   // Types automatically generate OpenAPI schemas
-  .get('/users', ({ query }) => {
-    return db.users.findMany({
-      skip: (query.page - 1) * query.limit,
-      take: query.limit,
-    });
-  }, {
-    query: t.Object({
-      page: t.Number({ default: 1, minimum: 1 }),
-      limit: t.Number({ default: 20, maximum: 100 }),
-      search: t.Optional(t.String()),
-    }),
-    response: t.Object({
-      data: t.Array(t.Object({
-        id: t.String(),
-        email: t.String({ format: 'email' }),
-        name: t.String(),
-        role: t.Union([t.Literal('admin'), t.Literal('user')]),
-      })),
-      pagination: t.Object({
-        page: t.Number(),
-        limit: t.Number(),
-        total: t.Number(),
-      }),
-    }),
-    detail: {
-      summary: 'List all users',
-      tags: ['Users'],
+  .get(
+    "/users",
+    ({ query }) => {
+      return db.users.findMany({
+        skip: (query.page - 1) * query.limit,
+        take: query.limit,
+      });
     },
-  })
-  .post('/users', async ({ body }) => {
-    const user = await db.users.create({ data: body });
-    return user;
-  }, {
-    body: t.Object({
-      email: t.String({ format: 'email' }),
-      name: t.String({ minLength: 2, maxLength: 100 }),
-      password: t.String({ minLength: 8 }),
-    }),
-    response: {
-      201: t.Object({
-        id: t.String(),
-        email: t.String(),
-        name: t.String(),
+    {
+      query: t.Object({
+        page: t.Number({ default: 1, minimum: 1 }),
+        limit: t.Number({ default: 20, maximum: 100 }),
+        search: t.Optional(t.String()),
       }),
-      400: t.Object({
-        message: t.String(),
-        errors: t.Array(t.Object({
-          field: t.String(),
+      response: t.Object({
+        data: t.Array(
+          t.Object({
+            id: t.String(),
+            email: t.String({ format: "email" }),
+            name: t.String(),
+            role: t.Union([t.Literal("admin"), t.Literal("user")]),
+          }),
+        ),
+        pagination: t.Object({
+          page: t.Number(),
+          limit: t.Number(),
+          total: t.Number(),
+        }),
+      }),
+      detail: {
+        summary: "List all users",
+        tags: ["Users"],
+      },
+    },
+  )
+  .post(
+    "/users",
+    async ({ body }) => {
+      const user = await db.users.create({ data: body });
+      return user;
+    },
+    {
+      body: t.Object({
+        email: t.String({ format: "email" }),
+        name: t.String({ minLength: 2, maxLength: 100 }),
+        password: t.String({ minLength: 8 }),
+      }),
+      response: {
+        201: t.Object({
+          id: t.String(),
+          email: t.String(),
+          name: t.String(),
+        }),
+        400: t.Object({
           message: t.String(),
-        })),
+          errors: t.Array(
+            t.Object({
+              field: t.String(),
+              message: t.String(),
+            }),
+          ),
+        }),
+      },
+      detail: {
+        summary: "Create new user",
+        tags: ["Users"],
+      },
+    },
+  )
+  .get(
+    "/users/:id",
+    ({ params, error }) => {
+      const user = db.users.findUnique({ where: { id: params.id } });
+      if (!user) return error(404, { message: "User not found" });
+      return user;
+    },
+    {
+      params: t.Object({
+        id: t.String({ description: "User unique identifier" }),
       }),
+      response: {
+        200: t.Object({
+          id: t.String(),
+          email: t.String(),
+          name: t.String(),
+          role: t.String(),
+          createdAt: t.String(),
+        }),
+        404: t.Object({ message: t.String() }),
+      },
+      detail: {
+        summary: "Get user by ID",
+        tags: ["Users"],
+      },
     },
-    detail: {
-      summary: 'Create new user',
-      tags: ['Users'],
-    },
-  })
-  .get('/users/:id', ({ params, error }) => {
-    const user = db.users.findUnique({ where: { id: params.id } });
-    if (!user) return error(404, { message: 'User not found' });
-    return user;
-  }, {
-    params: t.Object({
-      id: t.String({ description: 'User unique identifier' }),
-    }),
-    response: {
-      200: t.Object({
-        id: t.String(),
-        email: t.String(),
-        name: t.String(),
-        role: t.String(),
-        createdAt: t.String(),
-      }),
-      404: t.Object({ message: t.String() }),
-    },
-    detail: {
-      summary: 'Get user by ID',
-      tags: ['Users'],
-    },
-  });
+  );
 
 // Elysia Eden - Type-safe client auto-generated from same types
 // client.ts
-import { edenTreaty } from '@elysiajs/eden';
-import type { App } from './api/routes';
+import { edenTreaty } from "@elysiajs/eden";
+import type { App } from "./api/routes";
 
-const api = edenTreaty<App>('http://localhost:3000');
+const api = edenTreaty<App>("http://localhost:3000");
 
 // Full type safety - types from server
 const { data, error } = await api.users.get({
@@ -658,7 +682,7 @@ import {
   HttpCode,
   HttpStatus,
   UseGuards,
-} from '@nestjs/common';
+} from "@nestjs/common";
 import {
   ApiTags,
   ApiOperation,
@@ -671,58 +695,58 @@ import {
   ApiPropertyOptional,
   ApiExtraModels,
   getSchemaPath,
-} from '@nestjs/swagger';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+} from "@nestjs/swagger";
+import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 
 // DTOs automatically become OpenAPI schemas
 class CreateUserDto {
   @ApiProperty({
     description: "User's email address",
-    example: 'john@example.com',
-    format: 'email',
+    example: "john@example.com",
+    format: "email",
   })
   email: string;
 
   @ApiProperty({
     description: "User's full name",
-    example: 'John Doe',
+    example: "John Doe",
     minLength: 2,
     maxLength: 100,
   })
   name: string;
 
   @ApiProperty({
-    description: 'Password (min 8 characters)',
+    description: "Password (min 8 characters)",
     minLength: 8,
   })
   password: string;
 }
 
 class UpdateUserDto {
-  @ApiPropertyOptional({ description: 'Updated name' })
+  @ApiPropertyOptional({ description: "Updated name" })
   name?: string;
 
   @ApiPropertyOptional({
-    enum: ['admin', 'user', 'guest'],
-    description: 'User role',
+    enum: ["admin", "user", "guest"],
+    description: "User role",
   })
-  role?: 'admin' | 'user' | 'guest';
+  role?: "admin" | "user" | "guest";
 }
 
 class UserResponseDto {
-  @ApiProperty({ example: 'usr_123abc' })
+  @ApiProperty({ example: "usr_123abc" })
   id: string;
 
-  @ApiProperty({ example: 'john@example.com' })
+  @ApiProperty({ example: "john@example.com" })
   email: string;
 
-  @ApiProperty({ example: 'John Doe' })
+  @ApiProperty({ example: "John Doe" })
   name: string;
 
-  @ApiProperty({ enum: ['admin', 'user', 'guest'] })
+  @ApiProperty({ enum: ["admin", "user", "guest"] })
   role: string;
 
-  @ApiProperty({ example: '2024-01-15T10:30:00Z' })
+  @ApiProperty({ example: "2024-01-15T10:30:00Z" })
   createdAt: Date;
 }
 
@@ -745,105 +769,102 @@ class PaginatedUsersDto {
   pagination: PaginationDto;
 }
 
-@ApiTags('Users')
+@ApiTags("Users")
 @ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
-@Controller('users')
+@Controller("users")
 export class UsersController {
   @Get()
   @ApiOperation({
-    summary: 'List all users',
-    description: 'Retrieve paginated list of users with optional search',
+    summary: "List all users",
+    description: "Retrieve paginated list of users with optional search",
   })
-  @ApiQuery({ name: 'page', required: false, type: Number, example: 1 })
-  @ApiQuery({ name: 'limit', required: false, type: Number, example: 20 })
-  @ApiQuery({ name: 'search', required: false, type: String })
+  @ApiQuery({ name: "page", required: false, type: Number, example: 1 })
+  @ApiQuery({ name: "limit", required: false, type: Number, example: 20 })
+  @ApiQuery({ name: "search", required: false, type: String })
   @ApiResponse({
     status: 200,
-    description: 'Paginated list of users',
+    description: "Paginated list of users",
     type: PaginatedUsersDto,
   })
-  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 401, description: "Unauthorized" })
   async findAll(
-    @Query('page') page = 1,
-    @Query('limit') limit = 20,
-    @Query('search') search?: string,
+    @Query("page") page = 1,
+    @Query("limit") limit = 20,
+    @Query("search") search?: string,
   ): Promise<PaginatedUsersDto> {
     return this.usersService.findAll({ page, limit, search });
   }
 
-  @Get(':id')
-  @ApiOperation({ summary: 'Get user by ID' })
-  @ApiParam({ name: 'id', description: 'User unique identifier' })
+  @Get(":id")
+  @ApiOperation({ summary: "Get user by ID" })
+  @ApiParam({ name: "id", description: "User unique identifier" })
   @ApiResponse({ status: 200, type: UserResponseDto })
-  @ApiResponse({ status: 404, description: 'User not found' })
-  async findOne(@Param('id') id: string): Promise<UserResponseDto> {
+  @ApiResponse({ status: 404, description: "User not found" })
+  async findOne(@Param("id") id: string): Promise<UserResponseDto> {
     return this.usersService.findById(id);
   }
 
   @Post()
   @HttpCode(HttpStatus.CREATED)
-  @ApiOperation({ summary: 'Create new user' })
+  @ApiOperation({ summary: "Create new user" })
   @ApiBody({ type: CreateUserDto })
   @ApiResponse({
     status: 201,
-    description: 'User created successfully',
+    description: "User created successfully",
     type: UserResponseDto,
   })
-  @ApiResponse({ status: 400, description: 'Validation error' })
-  @ApiResponse({ status: 409, description: 'Email already exists' })
+  @ApiResponse({ status: 400, description: "Validation error" })
+  @ApiResponse({ status: 409, description: "Email already exists" })
   async create(@Body() dto: CreateUserDto): Promise<UserResponseDto> {
     return this.usersService.create(dto);
   }
 
-  @Put(':id')
-  @ApiOperation({ summary: 'Update user' })
+  @Put(":id")
+  @ApiOperation({ summary: "Update user" })
   @ApiResponse({ status: 200, type: UserResponseDto })
-  @ApiResponse({ status: 404, description: 'User not found' })
-  async update(
-    @Param('id') id: string,
-    @Body() dto: UpdateUserDto,
-  ): Promise<UserResponseDto> {
+  @ApiResponse({ status: 404, description: "User not found" })
+  async update(@Param("id") id: string, @Body() dto: UpdateUserDto): Promise<UserResponseDto> {
     return this.usersService.update(id, dto);
   }
 
-  @Delete(':id')
+  @Delete(":id")
   @HttpCode(HttpStatus.NO_CONTENT)
-  @ApiOperation({ summary: 'Delete user' })
-  @ApiResponse({ status: 204, description: 'User deleted' })
-  @ApiResponse({ status: 404, description: 'User not found' })
-  async remove(@Param('id') id: string): Promise<void> {
+  @ApiOperation({ summary: "Delete user" })
+  @ApiResponse({ status: 204, description: "User deleted" })
+  @ApiResponse({ status: 404, description: "User not found" })
+  async remove(@Param("id") id: string): Promise<void> {
     await this.usersService.remove(id);
   }
 }
 
 // main.ts - Setup with Scalar
-import { NestFactory } from '@nestjs/core';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { apiReference } from '@scalar/nestjs-api-reference';
+import { NestFactory } from "@nestjs/core";
+import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
+import { apiReference } from "@scalar/nestjs-api-reference";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('User Management API')
-    .setDescription('Auto-generated API documentation')
-    .setVersion('1.0.0')
+    .setTitle("User Management API")
+    .setDescription("Auto-generated API documentation")
+    .setVersion("1.0.0")
     .addBearerAuth()
-    .addTag('Users', 'User management endpoints')
+    .addTag("Users", "User management endpoints")
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
 
   // Swagger UI
-  SwaggerModule.setup('swagger', app, document);
+  SwaggerModule.setup("swagger", app, document);
 
   // Scalar UI (modern alternative)
   app.use(
-    '/docs',
+    "/docs",
     apiReference({
       spec: { content: document },
-      theme: 'purple',
+      theme: "purple",
     }),
   );
 
@@ -1011,57 +1032,55 @@ func DeleteUser(c *gin.Context) {
 ```typescript
 // Express + swagger-autogen (Zero Decorator Approach)
 // swagger.js
-const swaggerAutogen = require('swagger-autogen')({ openapi: '3.0.0' });
+const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 
 const doc = {
   info: {
-    title: 'User Management API',
-    version: '1.0.0',
-    description: 'Auto-generated from Express routes',
+    title: "User Management API",
+    version: "1.0.0",
+    description: "Auto-generated from Express routes",
   },
-  host: 'localhost:3000',
-  basePath: '/api/v1',
-  schemes: ['http', 'https'],
+  host: "localhost:3000",
+  basePath: "/api/v1",
+  schemes: ["http", "https"],
   securityDefinitions: {
     bearerAuth: {
-      type: 'http',
-      scheme: 'bearer',
-      bearerFormat: 'JWT',
+      type: "http",
+      scheme: "bearer",
+      bearerFormat: "JWT",
     },
   },
-  tags: [
-    { name: 'Users', description: 'User management' },
-  ],
+  tags: [{ name: "Users", description: "User management" }],
   definitions: {
     User: {
-      id: 'usr_123',
-      email: 'john@example.com',
-      name: 'John Doe',
-      role: 'user',
-      createdAt: '2024-01-15T10:30:00Z',
+      id: "usr_123",
+      email: "john@example.com",
+      name: "John Doe",
+      role: "user",
+      createdAt: "2024-01-15T10:30:00Z",
     },
     CreateUser: {
-      $email: 'john@example.com',
-      $name: 'John Doe',
-      $password: 'securepass123',
+      $email: "john@example.com",
+      $name: "John Doe",
+      $password: "securepass123",
     },
     Error: {
-      message: 'Error message',
-      code: 'ERROR_CODE',
+      message: "Error message",
+      code: "ERROR_CODE",
     },
   },
 };
 
-const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/*.js'];
+const outputFile = "./swagger.json";
+const endpointsFiles = ["./routes/*.js"];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
 
 // routes/users.js - Auto-detected by swagger-autogen
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   // #swagger.tags = ['Users']
   // #swagger.summary = 'List all users'
   // #swagger.parameters['page'] = { in: 'query', type: 'integer', default: 1 }
@@ -1074,7 +1093,7 @@ router.get('/', async (req, res) => {
   res.json(users);
 });
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   // #swagger.tags = ['Users']
   // #swagger.summary = 'Create new user'
   /* #swagger.requestBody = {
@@ -1098,9 +1117,9 @@ module.exports = router;
 ```typescript
 // oRPC - Type-Safe RPC with Built-in OpenAPI (2025)
 // The "o" in oRPC = OpenAPI-first
-import { initORPC } from '@orpc/server';
-import { z } from 'zod';
-import { OpenAPIGenerator } from '@orpc/openapi';
+import { initORPC } from "@orpc/server";
+import { z } from "zod";
+import { OpenAPIGenerator } from "@orpc/openapi";
 
 const orpc = initORPC;
 
@@ -1108,52 +1127,64 @@ const orpc = initORPC;
 const userRouter = orpc.router({
   // Schema automatically becomes OpenAPI spec
   list: orpc
-    .input(z.object({
-      page: z.number().min(1).default(1),
-      limit: z.number().min(1).max(100).default(20),
-      search: z.string().optional(),
-    }))
-    .output(z.object({
-      data: z.array(z.object({
-        id: z.string(),
-        email: z.string().email(),
-        name: z.string(),
-        role: z.enum(['admin', 'user', 'guest']),
-      })),
-      pagination: z.object({
-        page: z.number(),
-        limit: z.number(),
-        total: z.number(),
+    .input(
+      z.object({
+        page: z.number().min(1).default(1),
+        limit: z.number().min(1).max(100).default(20),
+        search: z.string().optional(),
       }),
-    }))
+    )
+    .output(
+      z.object({
+        data: z.array(
+          z.object({
+            id: z.string(),
+            email: z.string().email(),
+            name: z.string(),
+            role: z.enum(["admin", "user", "guest"]),
+          }),
+        ),
+        pagination: z.object({
+          page: z.number(),
+          limit: z.number(),
+          total: z.number(),
+        }),
+      }),
+    )
     .query(async ({ input }) => {
       return userService.findAll(input);
     }),
 
   create: orpc
-    .input(z.object({
-      email: z.string().email(),
-      name: z.string().min(2).max(100),
-      password: z.string().min(8),
-    }))
-    .output(z.object({
-      id: z.string(),
-      email: z.string(),
-      name: z.string(),
-    }))
+    .input(
+      z.object({
+        email: z.string().email(),
+        name: z.string().min(2).max(100),
+        password: z.string().min(8),
+      }),
+    )
+    .output(
+      z.object({
+        id: z.string(),
+        email: z.string(),
+        name: z.string(),
+      }),
+    )
     .mutation(async ({ input }) => {
       return userService.create(input);
     }),
 
   getById: orpc
     .input(z.object({ id: z.string() }))
-    .output(z.object({
-      id: z.string(),
-      email: z.string(),
-      name: z.string(),
-      role: z.string(),
-      createdAt: z.date(),
-    }))
+    .output(
+      z.object({
+        id: z.string(),
+        email: z.string(),
+        name: z.string(),
+        role: z.string(),
+        createdAt: z.date(),
+      }),
+    )
     .query(async ({ input }) => {
       return userService.findById(input.id);
     }),
@@ -1161,9 +1192,9 @@ const userRouter = orpc.router({
 
 // Generate OpenAPI spec automatically
 const openAPIGenerator = new OpenAPIGenerator({
-  title: 'User Management API',
-  version: '1.0.0',
-  description: 'Auto-generated from oRPC procedures',
+  title: "User Management API",
+  version: "1.0.0",
+  description: "Auto-generated from oRPC procedures",
 });
 
 const openAPISpec = openAPIGenerator.generate(userRouter);
@@ -1176,38 +1207,44 @@ const openAPISpec = openAPIGenerator.generate(userRouter);
 ```typescript
 // Hono OpenAPI with @hono/zod-openapi
 // Automatic OpenAPI from Zod schemas
-import { OpenAPIHono, createRoute, z } from '@hono/zod-openapi';
-import { swaggerUI } from '@hono/swagger-ui';
-import { apiReference } from '@scalar/hono-api-reference';
+import { OpenAPIHono, createRoute, z } from "@hono/zod-openapi";
+import { swaggerUI } from "@hono/swagger-ui";
+import { apiReference } from "@scalar/hono-api-reference";
 
 const app = new OpenAPIHono();
 
 // Define schemas once - used for validation AND documentation
-const UserSchema = z.object({
-  id: z.string().openapi({ example: 'usr_123' }),
-  email: z.string().email().openapi({ example: 'john@example.com' }),
-  name: z.string().openapi({ example: 'John Doe' }),
-  role: z.enum(['admin', 'user', 'guest']),
-  createdAt: z.string().datetime(),
-}).openapi('User');
+const UserSchema = z
+  .object({
+    id: z.string().openapi({ example: "usr_123" }),
+    email: z.string().email().openapi({ example: "john@example.com" }),
+    name: z.string().openapi({ example: "John Doe" }),
+    role: z.enum(["admin", "user", "guest"]),
+    createdAt: z.string().datetime(),
+  })
+  .openapi("User");
 
-const CreateUserSchema = z.object({
-  email: z.string().email(),
-  name: z.string().min(2).max(100),
-  password: z.string().min(8),
-}).openapi('CreateUser');
+const CreateUserSchema = z
+  .object({
+    email: z.string().email(),
+    name: z.string().min(2).max(100),
+    password: z.string().min(8),
+  })
+  .openapi("CreateUser");
 
-const ErrorSchema = z.object({
-  message: z.string(),
-  code: z.string(),
-}).openapi('Error');
+const ErrorSchema = z
+  .object({
+    message: z.string(),
+    code: z.string(),
+  })
+  .openapi("Error");
 
 // Routes with automatic OpenAPI generation
 const listUsersRoute = createRoute({
-  method: 'get',
-  path: '/users',
-  tags: ['Users'],
-  summary: 'List all users',
+  method: "get",
+  path: "/users",
+  tags: ["Users"],
+  summary: "List all users",
   request: {
     query: z.object({
       page: z.coerce.number().min(1).default(1),
@@ -1218,7 +1255,7 @@ const listUsersRoute = createRoute({
   responses: {
     200: {
       content: {
-        'application/json': {
+        "application/json": {
           schema: z.object({
             data: z.array(UserSchema),
             pagination: z.object({
@@ -1229,67 +1266,70 @@ const listUsersRoute = createRoute({
           }),
         },
       },
-      description: 'Paginated list of users',
+      description: "Paginated list of users",
     },
     401: {
-      content: { 'application/json': { schema: ErrorSchema } },
-      description: 'Unauthorized',
+      content: { "application/json": { schema: ErrorSchema } },
+      description: "Unauthorized",
     },
   },
 });
 
 const createUserRoute = createRoute({
-  method: 'post',
-  path: '/users',
-  tags: ['Users'],
-  summary: 'Create new user',
+  method: "post",
+  path: "/users",
+  tags: ["Users"],
+  summary: "Create new user",
   request: {
     body: {
-      content: { 'application/json': { schema: CreateUserSchema } },
+      content: { "application/json": { schema: CreateUserSchema } },
     },
   },
   responses: {
     201: {
-      content: { 'application/json': { schema: UserSchema } },
-      description: 'User created',
+      content: { "application/json": { schema: UserSchema } },
+      description: "User created",
     },
     400: {
-      content: { 'application/json': { schema: ErrorSchema } },
-      description: 'Validation error',
+      content: { "application/json": { schema: ErrorSchema } },
+      description: "Validation error",
     },
   },
 });
 
 // Register routes
 app.openapi(listUsersRoute, async (c) => {
-  const { page, limit, search } = c.req.valid('query');
+  const { page, limit, search } = c.req.valid("query");
   const result = await userService.findAll({ page, limit, search });
   return c.json(result, 200);
 });
 
 app.openapi(createUserRoute, async (c) => {
-  const body = c.req.valid('json');
+  const body = c.req.valid("json");
   const user = await userService.create(body);
   return c.json(user, 201);
 });
 
 // Serve OpenAPI spec
-app.doc('/openapi.json', {
-  openapi: '3.1.0',
+app.doc("/openapi.json", {
+  openapi: "3.1.0",
   info: {
-    title: 'User Management API',
-    version: '1.0.0',
+    title: "User Management API",
+    version: "1.0.0",
   },
 });
 
 // Scalar UI - Modern API documentation
-app.get('/docs', apiReference({
-  spec: { url: '/openapi.json' },
-  theme: 'purple',
-}));
+app.get(
+  "/docs",
+  apiReference({
+    spec: { url: "/openapi.json" },
+    theme: "purple",
+  }),
+);
 
 // Alternative: Swagger UI
-app.get('/swagger', swaggerUI({ url: '/openapi.json' }));
+app.get("/swagger", swaggerUI({ url: "/openapi.json" }));
 
 export default app;
 ```
@@ -1297,39 +1337,45 @@ export default app;
 ```typescript
 // hono-openapi (Alternative - Works with existing Hono apps)
 // Minimal changes to existing codebase
-import { Hono } from 'hono';
-import { describeRoute, openAPISpecs } from 'hono-openapi';
-import { resolver, validator as zValidator } from 'hono-openapi/zod';
-import { z } from 'zod';
+import { Hono } from "hono";
+import { describeRoute, openAPISpecs } from "hono-openapi";
+import { resolver, validator as zValidator } from "hono-openapi/zod";
+import { z } from "zod";
 
 const app = new Hono();
 
 // Add OpenAPI to existing routes with minimal changes
 app.get(
-  '/users',
+  "/users",
   describeRoute({
-    summary: 'List users',
-    tags: ['Users'],
+    summary: "List users",
+    tags: ["Users"],
     responses: {
-      200: { description: 'Success' },
+      200: { description: "Success" },
     },
   }),
-  zValidator('query', z.object({
-    page: z.coerce.number().default(1),
-    limit: z.coerce.number().default(20),
-  })),
+  zValidator(
+    "query",
+    z.object({
+      page: z.coerce.number().default(1),
+      limit: z.coerce.number().default(20),
+    }),
+  ),
   async (c) => {
-    const query = c.req.valid('query');
+    const query = c.req.valid("query");
     return c.json(await userService.findAll(query));
-  }
+  },
 );
 
 // Generate OpenAPI spec
-app.get('/openapi.json', openAPISpecs(app, {
-  documentation: {
-    info: { title: 'API', version: '1.0.0' },
-  },
-}));
+app.get(
+  "/openapi.json",
+  openAPISpecs(app, {
+    documentation: {
+      info: { title: "API", version: "1.0.0" },
+    },
+  }),
+);
 ```
 
 ```csharp
@@ -1398,24 +1444,28 @@ public record PaginatedResponse<T>(T[] Data, int Page, int Limit, int Total);
 ## Best Practices
 
 ### Code-First Documentation
+
 - Let types/models drive documentation
 - Use decorators/annotations for metadata
 - Keep docs close to code (same file)
 - Automate generation in CI/CD
 
 ### Schema Design
+
 - Use descriptive field names
 - Add examples for all types
 - Document enums and constraints
 - Include validation rules in schema
 
 ### API Descriptions
+
 - Write clear endpoint summaries
 - Document all response codes
 - Include request/response examples
 - Mark deprecated endpoints
 
 ### Tooling Integration
+
 - Generate on every build
 - Version control OpenAPI spec
 - Use Scalar for modern UI
@@ -1423,33 +1473,34 @@ public record PaginatedResponse<T>(T[] Data, int Page, int Limit, int Total);
 
 ## Tool Comparison
 
-| Tool | Language | Approach | UI | Cross-Language |
-|------|----------|----------|-----|----------------|
-| **oRPC** | TypeScript | Zod schemas | Scalar/Swagger | ✅ OpenAPI export |
-| **Hono OpenAPI** | TypeScript | Zod schemas | Scalar/Swagger | ✅ OpenAPI export |
-| **FastAPI** | Python | Type hints | Built-in | ✅ OpenAPI export |
-| **tsoa** | TypeScript | Decorators | Swagger/Scalar | ✅ OpenAPI export |
-| **NestJS Swagger** | TypeScript | Decorators | Swagger/Scalar | ✅ OpenAPI export |
-| **.NET 9 OpenAPI** | C# | Records/Minimal API | Scalar | ✅ OpenAPI export |
-| **swaggo** | Go | Comments | Swagger | ✅ OpenAPI export |
-| **Elysia** | TypeScript | Types | Built-in | ✅ OpenAPI export |
-| **swagger-autogen** | JavaScript | Comments | Swagger | ✅ OpenAPI export |
+| Tool                | Language   | Approach            | UI             | Cross-Language    |
+| ------------------- | ---------- | ------------------- | -------------- | ----------------- |
+| **oRPC**            | TypeScript | Zod schemas         | Scalar/Swagger | ✅ OpenAPI export |
+| **Hono OpenAPI**    | TypeScript | Zod schemas         | Scalar/Swagger | ✅ OpenAPI export |
+| **FastAPI**         | Python     | Type hints          | Built-in       | ✅ OpenAPI export |
+| **tsoa**            | TypeScript | Decorators          | Swagger/Scalar | ✅ OpenAPI export |
+| **NestJS Swagger**  | TypeScript | Decorators          | Swagger/Scalar | ✅ OpenAPI export |
+| **.NET 9 OpenAPI**  | C#         | Records/Minimal API | Scalar         | ✅ OpenAPI export |
+| **swaggo**          | Go         | Comments            | Swagger        | ✅ OpenAPI export |
+| **Elysia**          | TypeScript | Types               | Built-in       | ✅ OpenAPI export |
+| **swagger-autogen** | JavaScript | Comments            | Swagger        | ✅ OpenAPI export |
 
 ## Documentation UI Comparison
 
-| UI | Style | Features | Best For |
-|----|-------|----------|----------|
-| **Scalar** | Modern/Purple | Try-it, themes, fast | Production APIs |
-| **Redoc** | Stripe-like | Three-panel, clean | Public docs |
-| **Swagger UI** | Classic | Try-it, familiar | Internal APIs |
-| **RapiDoc** | Minimal | Fast, customizable | Simple APIs |
-| **Stoplight** | Enterprise | Full platform | Large teams |
+| UI             | Style         | Features             | Best For        |
+| -------------- | ------------- | -------------------- | --------------- |
+| **Scalar**     | Modern/Purple | Try-it, themes, fast | Production APIs |
+| **Redoc**      | Stripe-like   | Three-panel, clean   | Public docs     |
+| **Swagger UI** | Classic       | Try-it, familiar     | Internal APIs   |
+| **RapiDoc**    | Minimal       | Fast, customizable   | Simple APIs     |
+| **Stoplight**  | Enterprise    | Full platform        | Large teams     |
 
 Automatic API documentation powers **Stripe, Twilio, and GitHub's** developer experience.
 
 You implement zero-manual-intervention API documentation that stays in sync with your code automatically.
 
 ## Sources
+
 - [Scalar vs Swagger Analysis](https://thedataguy.pro/blog/2025/08/swagger-vs-scalar-api-documentation/)
 - [Best API Docs Tools 2025](https://apisyouwonthate.com/blog/top-5-best-api-docs-tools/)
 - [Hono OpenAPI](https://hono.dev/examples/hono-openapi)

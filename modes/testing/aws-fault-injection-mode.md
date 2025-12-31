@@ -14,6 +14,7 @@ You are an expert in AWS Fault Injection Simulator (FIS), Amazon's fully managed
 ## Core Expertise
 
 ### AWS FIS Capabilities
+
 - **EC2 Actions**: Stop, terminate, reboot instances
 - **ECS Actions**: Drain containers, stop tasks
 - **EKS Actions**: Pod and node disruptions
@@ -22,6 +23,7 @@ You are an expert in AWS Fault Injection Simulator (FIS), Amazon's fully managed
 - **SSM Actions**: Run stress commands
 
 ### Integration Points
+
 - AWS Systems Manager (SSM)
 - Amazon CloudWatch
 - AWS IAM for permissions
@@ -157,9 +159,7 @@ You are an expert in AWS Fault Injection Simulator (FIS), Amazon's fully managed
   "targets": {
     "rdsInstance": {
       "resourceType": "aws:rds:db",
-      "resourceArns": [
-        "arn:aws:rds:us-east-1:123456789012:db:production-db"
-      ],
+      "resourceArns": ["arn:aws:rds:us-east-1:123456789012:db:production-db"],
       "selectionMode": "ALL"
     }
   },
@@ -744,18 +744,21 @@ def run_chaos_experiment():
 ## Best Practices
 
 ### Experiment Design
+
 - Use stop conditions to automatically halt on SLO breach
 - Start with non-production environments
 - Tag resources for precise targeting
 - Use COUNT or PERCENT for gradual rollout
 
 ### Safety
+
 - Implement CloudWatch alarms as stop conditions
 - Use IAM conditions to limit blast radius
 - Run experiments during business hours initially
 - Have rollback procedures documented
 
 ### Integration
+
 - Integrate with CI/CD pipelines
 - Export results to CloudWatch
 - Use EventBridge for notifications

@@ -4,16 +4,18 @@ Enterprise software, business intelligence, and CRM development modes.
 
 ## Available Modes (3)
 
-| Mode | Description |
-|------|-------------|
-| `power-bi-expert-mode` | Power BI dashboards, DAX, and data modeling |
+| Mode                        | Description                                    |
+| --------------------------- | ---------------------------------------------- |
+| `power-bi-expert-mode`      | Power BI dashboards, DAX, and data modeling    |
 | `salesforce-developer-mode` | Salesforce Apex, LWC, and platform development |
-| `atlassian-expert-mode` | Jira, Confluence, and workflow automation |
+| `atlassian-expert-mode`     | Jira, Confluence, and workflow automation      |
 
 ## Usage
 
 ### Power BI Expert Mode
+
 Expertise in:
+
 - DAX formulas and measures
 - Data modeling (star schema)
 - Power Query (M language)
@@ -23,7 +25,9 @@ Expertise in:
 - Performance optimization
 
 ### Salesforce Developer Mode
+
 Covers:
+
 - Apex classes and triggers
 - Lightning Web Components (LWC)
 - SOQL/SOSL queries
@@ -33,7 +37,9 @@ Covers:
 - Test coverage and deployment
 
 ### Atlassian Expert Mode
+
 Includes:
+
 - Jira project configuration
 - JQL (Jira Query Language)
 - Workflow automation
@@ -46,14 +52,14 @@ Includes:
 
 These modes support common enterprise scenarios:
 
-| Scenario | Recommended Mode |
-|----------|-----------------|
-| Sales analytics | Power BI + Salesforce |
-| Project management | Atlassian |
-| Customer 360 | Salesforce |
-| Executive dashboards | Power BI |
-| Team collaboration | Atlassian (Confluence) |
-| Workflow automation | Salesforce (Flow) + Atlassian |
+| Scenario             | Recommended Mode              |
+| -------------------- | ----------------------------- |
+| Sales analytics      | Power BI + Salesforce         |
+| Project management   | Atlassian                     |
+| Customer 360         | Salesforce                    |
+| Executive dashboards | Power BI                      |
+| Team collaboration   | Atlassian (Confluence)        |
+| Workflow automation  | Salesforce (Flow) + Atlassian |
 
 ## Best Practices
 

@@ -4,17 +4,19 @@ UI/UX design, design systems, and user research modes.
 
 ## Available Modes (4)
 
-| Mode | Description |
-|------|-------------|
+| Mode                           | Description                                    |
+| ------------------------------ | ---------------------------------------------- |
 | `design-system-architect-mode` | Design system creation and component libraries |
-| `ux-researcher-mode` | User research, usability testing, and insights |
-| `ui-designer-mode` | Visual design, layouts, and interface design |
-| `accessibility-designer-mode` | Inclusive design and WCAG compliance |
+| `ux-researcher-mode`           | User research, usability testing, and insights |
+| `ui-designer-mode`             | Visual design, layouts, and interface design   |
+| `accessibility-designer-mode`  | Inclusive design and WCAG compliance           |
 
 ## Usage
 
 ### Design System Architect Mode
+
 Expertise in:
+
 - Component library architecture
 - Design tokens
 - Atomic design methodology
@@ -23,7 +25,9 @@ Expertise in:
 - Cross-platform consistency
 
 ### UX Researcher Mode
+
 Covers:
+
 - User interviews
 - Usability testing
 - Survey design
@@ -32,7 +36,9 @@ Covers:
 - A/B testing analysis
 
 ### UI Designer Mode
+
 Includes:
+
 - Visual hierarchy
 - Typography systems
 - Color theory
@@ -41,7 +47,9 @@ Includes:
 - Interaction design
 
 ### Accessibility Designer Mode
+
 Focuses on:
+
 - WCAG 2.1 AA/AAA guidelines
 - Inclusive design principles
 - Screen reader optimization

@@ -14,6 +14,7 @@ You are an expert in application security testing, covering static analysis (SAS
 ## Core Expertise
 
 ### SAST (Static Application Security Testing)
+
 - **Code Analysis**: Pattern matching, data flow analysis
 - **Tools**: Semgrep, SonarQube, CodeQL, Snyk Code
 - **Coverage**: Source code, dependencies, IaC
@@ -21,6 +22,7 @@ You are an expert in application security testing, covering static analysis (SAS
 - **Custom Rules**: Writing security rules
 
 ### DAST (Dynamic Application Security Testing)
+
 - **Runtime Analysis**: API testing, crawling
 - **Tools**: OWASP ZAP, Burp Suite, Nuclei
 - **Authentication**: Handling auth in scans
@@ -353,7 +355,7 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '0 0 * * *'  # Daily
+    - cron: "0 0 * * *" # Daily
 
 jobs:
   sast:
@@ -392,10 +394,10 @@ jobs:
       - name: Run Trivy
         uses: aquasecurity/trivy-action@master
         with:
-          scan-type: 'fs'
-          severity: 'CRITICAL,HIGH'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
+          scan-type: "fs"
+          severity: "CRITICAL,HIGH"
+          format: "sarif"
+          output: "trivy-results.sarif"
 
   dast:
     name: DAST Scan
@@ -405,8 +407,8 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.7.0
         with:
-          target: 'https://staging.example.com'
-          rules_file_name: '.zap/rules.tsv'
+          target: "https://staging.example.com"
+          rules_file_name: ".zap/rules.tsv"
 
   container-scan:
     name: Container Scan
@@ -420,14 +422,15 @@ jobs:
       - name: Run Trivy container scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'app:${{ github.sha }}'
-          severity: 'CRITICAL,HIGH'
-          exit-code: '1'
+          image-ref: "app:${{ github.sha }}"
+          severity: "CRITICAL,HIGH"
+          exit-code: "1"
 ```
 
 ## Best Practices
 
 ### SAST
+
 - Run on every commit
 - Use multiple tools for coverage
 - Tune rules to reduce false positives
@@ -435,6 +438,7 @@ jobs:
 - Track and trend findings over time
 
 ### DAST
+
 - Run against staging environments
 - Authenticate scans properly
 - Schedule regular full scans
@@ -442,12 +446,14 @@ jobs:
 - Combine with manual testing
 
 ### CI/CD Integration
+
 - Fail builds on critical/high findings
 - Generate SARIF for GitHub integration
 - Deduplicate findings across tools
 - Provide fix guidance to developers
 
 ### Remediation
+
 - Prioritize by severity and exploitability
 - Track remediation SLAs
 - Verify fixes with re-scanning

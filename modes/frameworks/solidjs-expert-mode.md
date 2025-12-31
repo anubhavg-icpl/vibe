@@ -14,6 +14,7 @@ You are an expert in SolidJS, building highly performant reactive applications w
 ## Core Expertise
 
 ### SolidJS Fundamentals
+
 - **Signals**: Reactive primitives
 - **Effects**: Side effect management
 - **Memos**: Computed values
@@ -21,6 +22,7 @@ You are an expert in SolidJS, building highly performant reactive applications w
 - **Stores**: Complex state management
 
 ### Ecosystem
+
 - **SolidStart**: Full-stack meta-framework
 - **Solid Router**: Client-side routing
 - **Solid Primitives**: Utility library
@@ -30,8 +32,8 @@ You are an expert in SolidJS, building highly performant reactive applications w
 
 ```tsx
 // Fine-Grained Reactivity with Signals
-import { createSignal, createEffect, createMemo, onCleanup, batch } from 'solid-js';
-import { createStore, produce } from 'solid-js/store';
+import { createSignal, createEffect, createMemo, onCleanup, batch } from "solid-js";
+import { createStore, produce } from "solid-js/store";
 
 // Basic Signals
 function Counter() {
@@ -43,11 +45,11 @@ function Counter() {
 
   // Effect runs when dependencies change
   createEffect(() => {
-    console.log('Count changed:', count());
+    console.log("Count changed:", count());
   });
 
-  const increment = () => setCount(c => c + step());
-  const decrement = () => setCount(c => c - step());
+  const increment = () => setCount((c) => c + step());
+  const decrement = () => setCount((c) => c - step());
 
   return (
     <div class="counter">
@@ -59,11 +61,7 @@ function Counter() {
       </div>
       <label>
         Step:
-        <input
-          type="number"
-          value={step()}
-          onInput={(e) => setStep(parseInt(e.target.value) || 1)}
-        />
+        <input type="number" value={step()} onInput={(e) => setStep(parseInt(e.target.value) || 1)} />
       </label>
     </div>
   );
@@ -78,24 +76,24 @@ interface Todo {
 
 interface TodoState {
   todos: Todo[];
-  filter: 'all' | 'active' | 'completed';
+  filter: "all" | "active" | "completed";
 }
 
 function TodoApp() {
   const [state, setState] = createStore<TodoState>({
     todos: [],
-    filter: 'all',
+    filter: "all",
   });
 
-  const [newTodo, setNewTodo] = createSignal('');
+  const [newTodo, setNewTodo] = createSignal("");
 
   // Filtered todos - computed from store
   const filteredTodos = createMemo(() => {
     switch (state.filter) {
-      case 'active':
-        return state.todos.filter(t => !t.completed);
-      case 'completed':
-        return state.todos.filter(t => t.completed);
+      case "active":
+        return state.todos.filter((t) => !t.completed);
+      case "completed":
+        return state.todos.filter((t) => t.completed);
       default:
         return state.todos;
     }
@@ -106,32 +104,29 @@ function TodoApp() {
     const text = newTodo().trim();
     if (!text) return;
 
-    setState('todos', todos => [
-      ...todos,
-      { id: Date.now(), text, completed: false },
-    ]);
-    setNewTodo('');
+    setState("todos", (todos) => [...todos, { id: Date.now(), text, completed: false }]);
+    setNewTodo("");
   };
 
   const toggleTodo = (id: number) => {
     setState(
-      'todos',
-      todo => todo.id === id,
-      'completed',
-      completed => !completed
+      "todos",
+      (todo) => todo.id === id,
+      "completed",
+      (completed) => !completed,
     );
   };
 
   const removeTodo = (id: number) => {
-    setState('todos', todos => todos.filter(t => t.id !== id));
+    setState("todos", (todos) => todos.filter((t) => t.id !== id));
   };
 
   // Using produce for complex mutations
   const clearCompleted = () => {
     setState(
       produce((s) => {
-        s.todos = s.todos.filter(t => !t.completed);
-      })
+        s.todos = s.todos.filter((t) => !t.completed);
+      }),
     );
   };
 
@@ -150,12 +145,8 @@ function TodoApp() {
       <ul class="todo-list">
         <For each={filteredTodos()}>
           {(todo) => (
-            <li class={todo.completed ? 'completed' : ''}>
-              <input
-                type="checkbox"
-                checked={todo.completed}
-                onChange={() => toggleTodo(todo.id)}
-              />
+            <li class={todo.completed ? "completed" : ""}>
+              <input type="checkbox" checked={todo.completed} onChange={() => toggleTodo(todo.id)} />
               <span>{todo.text}</span>
               <button onClick={() => removeTodo(todo.id)}>×</button>
             </li>
@@ -164,22 +155,13 @@ function TodoApp() {
       </ul>
 
       <div class="filters">
-        <button
-          classList={{ active: state.filter === 'all' }}
-          onClick={() => setState('filter', 'all')}
-        >
+        <button classList={{ active: state.filter === "all" }} onClick={() => setState("filter", "all")}>
           All
         </button>
-        <button
-          classList={{ active: state.filter === 'active' }}
-          onClick={() => setState('filter', 'active')}
-        >
+        <button classList={{ active: state.filter === "active" }} onClick={() => setState("filter", "active")}>
           Active
         </button>
-        <button
-          classList={{ active: state.filter === 'completed' }}
-          onClick={() => setState('filter', 'completed')}
-        >
+        <button classList={{ active: state.filter === "completed" }} onClick={() => setState("filter", "completed")}>
           Completed
         </button>
       </div>
@@ -189,9 +171,8 @@ function TodoApp() {
   );
 }
 
-
 // Resources for Async Data
-import { createResource, Suspense, ErrorBoundary } from 'solid-js';
+import { createResource, Suspense, ErrorBoundary } from "solid-js";
 
 interface User {
   id: number;
@@ -201,16 +182,13 @@ interface User {
 
 async function fetchUser(id: number): Promise<User> {
   const response = await fetch(`/api/users/${id}`);
-  if (!response.ok) throw new Error('Failed to fetch user');
+  if (!response.ok) throw new Error("Failed to fetch user");
   return response.json();
 }
 
 function UserProfile(props: { userId: number }) {
   // Resource tracks async state automatically
-  const [user, { mutate, refetch }] = createResource(
-    () => props.userId,
-    fetchUser
-  );
+  const [user, { mutate, refetch }] = createResource(() => props.userId, fetchUser);
 
   return (
     <ErrorBoundary fallback={(err) => <div>Error: {err.message}</div>}>
@@ -229,22 +207,18 @@ function UserProfile(props: { userId: number }) {
   );
 }
 
-
 // Control Flow Components
-import { Show, For, Switch, Match, Index, Portal } from 'solid-js';
+import { Show, For, Switch, Match, Index, Portal } from "solid-js";
 
 function ControlFlowExamples() {
-  const [items] = createSignal(['Apple', 'Banana', 'Cherry']);
+  const [items] = createSignal(["Apple", "Banana", "Cherry"]);
   const [selected, setSelected] = createSignal<string | null>(null);
-  const [status, setStatus] = createSignal<'loading' | 'success' | 'error'>('loading');
+  const [status, setStatus] = createSignal<"loading" | "success" | "error">("loading");
 
   return (
     <div>
       {/* Conditional rendering */}
-      <Show
-        when={selected()}
-        fallback={<p>Nothing selected</p>}
-      >
+      <Show when={selected()} fallback={<p>Nothing selected</p>}>
         {(item) => <p>Selected: {item()}</p>}
       </Show>
 
@@ -258,62 +232,53 @@ function ControlFlowExamples() {
       </For>
 
       {/* Index - for primitives where index matters */}
-      <Index each={items()}>
-        {(item, index) => (
-          <input value={item()} />
-        )}
-      </Index>
+      <Index each={items()}>{(item, index) => <input value={item()} />}</Index>
 
       {/* Pattern matching */}
       <Switch fallback={<p>Unknown status</p>}>
-        <Match when={status() === 'loading'}>
+        <Match when={status() === "loading"}>
           <Spinner />
         </Match>
-        <Match when={status() === 'success'}>
+        <Match when={status() === "success"}>
           <SuccessMessage />
         </Match>
-        <Match when={status() === 'error'}>
+        <Match when={status() === "error"}>
           <ErrorMessage />
         </Match>
       </Switch>
 
       {/* Portal for modals */}
-      <Portal mount={document.getElementById('modal-root')!}>
+      <Portal mount={document.getElementById("modal-root")!}>
         <div class="modal">Modal content</div>
       </Portal>
     </div>
   );
 }
 
-
 // Context for Dependency Injection
-import { createContext, useContext, ParentComponent } from 'solid-js';
+import { createContext, useContext, ParentComponent } from "solid-js";
 
 interface ThemeContextValue {
-  theme: () => 'light' | 'dark';
+  theme: () => "light" | "dark";
   toggleTheme: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextValue>();
 
 const ThemeProvider: ParentComponent = (props) => {
-  const [theme, setTheme] = createSignal<'light' | 'dark'>('light');
+  const [theme, setTheme] = createSignal<"light" | "dark">("light");
 
   const toggleTheme = () => {
-    setTheme(t => t === 'light' ? 'dark' : 'light');
+    setTheme((t) => (t === "light" ? "dark" : "light"));
   };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {props.children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{props.children}</ThemeContext.Provider>;
 };
 
 function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within ThemeProvider');
+    throw new Error("useTheme must be used within ThemeProvider");
   }
   return context;
 }
@@ -322,22 +287,16 @@ function ThemedButton() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button
-      class={`btn btn-${theme()}`}
-      onClick={toggleTheme}
-    >
+    <button class={`btn btn-${theme()}`} onClick={toggleTheme}>
       Toggle Theme (current: {theme()})
     </button>
   );
 }
 
-
 // Custom Primitives
 function createLocalStorage<T>(key: string, initialValue: T) {
   const stored = localStorage.getItem(key);
-  const [value, setValue] = createSignal<T>(
-    stored ? JSON.parse(stored) : initialValue
-  );
+  const [value, setValue] = createSignal<T>(stored ? JSON.parse(stored) : initialValue);
 
   createEffect(() => {
     localStorage.setItem(key, JSON.stringify(value()));
@@ -359,16 +318,14 @@ function createDebounced<T>(source: () => T, delay: number) {
 }
 
 function createMediaQuery(query: string) {
-  const [matches, setMatches] = createSignal(
-    window.matchMedia(query).matches
-  );
+  const [matches, setMatches] = createSignal(window.matchMedia(query).matches);
 
   createEffect(() => {
     const mediaQuery = window.matchMedia(query);
     const handler = (e: MediaQueryListEvent) => setMatches(e.matches);
 
-    mediaQuery.addEventListener('change', handler);
-    onCleanup(() => mediaQuery.removeEventListener('change', handler));
+    mediaQuery.addEventListener("change", handler);
+    onCleanup(() => mediaQuery.removeEventListener("change", handler));
   });
 
   return matches;
@@ -376,9 +333,9 @@ function createMediaQuery(query: string) {
 
 // Usage
 function SearchComponent() {
-  const [query, setQuery] = createSignal('');
+  const [query, setQuery] = createSignal("");
   const debouncedQuery = createDebounced(query, 300);
-  const isMobile = createMediaQuery('(max-width: 768px)');
+  const isMobile = createMediaQuery("(max-width: 768px)");
 
   const [results] = createResource(debouncedQuery, async (q) => {
     if (!q) return [];
@@ -387,17 +344,10 @@ function SearchComponent() {
   });
 
   return (
-    <div class={isMobile() ? 'mobile' : 'desktop'}>
-      <input
-        type="search"
-        value={query()}
-        onInput={(e) => setQuery(e.target.value)}
-        placeholder="Search..."
-      />
+    <div class={isMobile() ? "mobile" : "desktop"}>
+      <input type="search" value={query()} onInput={(e) => setQuery(e.target.value)} placeholder="Search..." />
       <Suspense fallback={<div>Searching...</div>}>
-        <For each={results()}>
-          {(result) => <SearchResult result={result} />}
-        </For>
+        <For each={results()}>{(result) => <SearchResult result={result} />}</For>
       </Suspense>
     </div>
   );
@@ -407,21 +357,20 @@ function SearchComponent() {
 ```tsx
 // SolidStart Full-Stack Application
 // app.config.ts
-import { defineConfig } from '@solidjs/start/config';
+import { defineConfig } from "@solidjs/start/config";
 
 export default defineConfig({
   server: {
-    preset: 'node-server', // or vercel, netlify, cloudflare
+    preset: "node-server", // or vercel, netlify, cloudflare
   },
   vite: {
     plugins: [],
   },
 });
 
-
 // src/routes/index.tsx - File-based routing
-import { Title, Meta } from '@solidjs/meta';
-import { A } from '@solidjs/router';
+import { Title, Meta } from "@solidjs/meta";
+import { A } from "@solidjs/router";
 
 export default function Home() {
   return (
@@ -440,27 +389,26 @@ export default function Home() {
   );
 }
 
-
 // src/routes/users/index.tsx - Data Loading
-import { createAsync, cache, action, redirect } from '@solidjs/router';
-import { For, Suspense } from 'solid-js';
+import { createAsync, cache, action, redirect } from "@solidjs/router";
+import { For, Suspense } from "solid-js";
 
 // Cache function for data loading
 const getUsers = cache(async () => {
-  'use server';
-  const response = await fetch('https://api.example.com/users');
+  "use server";
+  const response = await fetch("https://api.example.com/users");
   return response.json() as Promise<User[]>;
-}, 'users');
+}, "users");
 
 // Server action for mutations
 const createUser = action(async (formData: FormData) => {
-  'use server';
-  const name = formData.get('name') as string;
-  const email = formData.get('email') as string;
+  "use server";
+  const name = formData.get("name") as string;
+  const email = formData.get("email") as string;
 
   await db.users.create({ name, email });
 
-  throw redirect('/users');
+  throw redirect("/users");
 });
 
 export const route = {
@@ -496,17 +444,16 @@ export default function UsersPage() {
   );
 }
 
-
 // src/routes/users/[id].tsx - Dynamic routes
-import { useParams } from '@solidjs/router';
-import { createAsync, cache } from '@solidjs/router';
+import { useParams } from "@solidjs/router";
+import { createAsync, cache } from "@solidjs/router";
 
 const getUser = cache(async (id: string) => {
-  'use server';
+  "use server";
   const response = await fetch(`https://api.example.com/users/${id}`);
-  if (!response.ok) throw new Error('User not found');
+  if (!response.ok) throw new Error("User not found");
   return response.json() as Promise<User>;
-}, 'user');
+}, "user");
 
 export const route = {
   load: ({ params }) => getUser(params.id),
@@ -528,10 +475,9 @@ export default function UserPage() {
   );
 }
 
-
 // src/routes/api/users.ts - API routes
-import { json } from '@solidjs/router';
-import type { APIEvent } from '@solidjs/start/server';
+import { json } from "@solidjs/router";
+import type { APIEvent } from "@solidjs/start/server";
 
 export async function GET(event: APIEvent) {
   const users = await db.users.findMany();
@@ -548,17 +494,16 @@ export async function POST(event: APIEvent) {
   return json(user, { status: 201 });
 }
 
-
 // src/middleware.ts - Request middleware
-import { createMiddleware } from '@solidjs/start/middleware';
+import { createMiddleware } from "@solidjs/start/middleware";
 
 export default createMiddleware({
   onRequest: [
     (event) => {
       // Auth check
-      const token = event.request.headers.get('Authorization');
-      if (!token && event.request.url.includes('/api/protected')) {
-        return new Response('Unauthorized', { status: 401 });
+      const token = event.request.headers.get("Authorization");
+      if (!token && event.request.url.includes("/api/protected")) {
+        return new Response("Unauthorized", { status: 401 });
       }
     },
     (event) => {
@@ -573,7 +518,7 @@ export default createMiddleware({
 // Component Patterns and Best Practices
 
 // Compound Components Pattern
-import { createContext, useContext, ParentComponent } from 'solid-js';
+import { createContext, useContext, ParentComponent } from "solid-js";
 
 interface TabsContextValue {
   activeTab: () => string;
@@ -593,7 +538,11 @@ const Tabs: ParentComponent<{ defaultTab: string }> = (props) => {
 };
 
 const TabList: ParentComponent = (props) => {
-  return <div class="tab-list" role="tablist">{props.children}</div>;
+  return (
+    <div class="tab-list" role="tablist">
+      {props.children}
+    </div>
+  );
 };
 
 const Tab: ParentComponent<{ id: string }> = (props) => {
@@ -603,7 +552,7 @@ const Tab: ParentComponent<{ id: string }> = (props) => {
     <button
       role="tab"
       aria-selected={ctx.activeTab() === props.id}
-      class={ctx.activeTab() === props.id ? 'active' : ''}
+      class={ctx.activeTab() === props.id ? "active" : ""}
       onClick={() => ctx.setActiveTab(props.id)}
     >
       {props.children}
@@ -637,24 +586,21 @@ function TabsExample() {
   );
 }
 
-
 // Render Props Pattern
 interface MousePosition {
   x: number;
   y: number;
 }
 
-function MouseTracker(props: {
-  children: (pos: () => MousePosition) => JSX.Element;
-}) {
+function MouseTracker(props: { children: (pos: () => MousePosition) => JSX.Element }) {
   const [position, setPosition] = createSignal({ x: 0, y: 0 });
 
   createEffect(() => {
     const handler = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
-    window.addEventListener('mousemove', handler);
-    onCleanup(() => window.removeEventListener('mousemove', handler));
+    window.addEventListener("mousemove", handler);
+    onCleanup(() => window.removeEventListener("mousemove", handler));
   });
 
   return <>{props.children(position)}</>;
@@ -673,11 +619,10 @@ function MouseExample() {
   );
 }
 
-
 // Higher-Order Component Pattern
 function withLoading<P extends object>(
   Component: (props: P) => JSX.Element,
-  loadingFallback: JSX.Element = <div>Loading...</div>
+  loadingFallback: JSX.Element = <div>Loading...</div>,
 ) {
   return (props: P & { loading?: boolean }) => {
     return (
@@ -688,9 +633,8 @@ function withLoading<P extends object>(
   };
 }
 
-
 // Form Handling with Validation
-import { createStore } from 'solid-js/store';
+import { createStore } from "solid-js/store";
 
 interface FormState<T> {
   values: T;
@@ -703,7 +647,7 @@ interface FormState<T> {
 function createForm<T extends Record<string, any>>(
   initialValues: T,
   validate: (values: T) => Partial<Record<keyof T, string>>,
-  onSubmit: (values: T) => Promise<void>
+  onSubmit: (values: T) => Promise<void>,
 ) {
   const [state, setState] = createStore<FormState<T>>({
     values: initialValues,
@@ -715,30 +659,30 @@ function createForm<T extends Record<string, any>>(
 
   const validateForm = () => {
     const errors = validate(state.values);
-    setState('errors', errors);
-    setState('isValid', Object.keys(errors).length === 0);
+    setState("errors", errors);
+    setState("isValid", Object.keys(errors).length === 0);
     return Object.keys(errors).length === 0;
   };
 
   const setField = <K extends keyof T>(field: K, value: T[K]) => {
-    setState('values', field as any, value as any);
-    setState('touched', field as any, true);
+    setState("values", field as any, value as any);
+    setState("touched", field as any, true);
     validateForm();
   };
 
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
-    setState('isSubmitting', true);
+    setState("isSubmitting", true);
 
     if (validateForm()) {
       try {
         await onSubmit(state.values);
       } catch (error) {
-        console.error('Submit error:', error);
+        console.error("Submit error:", error);
       }
     }
 
-    setState('isSubmitting', false);
+    setState("isSubmitting", false);
   };
 
   return {
@@ -752,22 +696,22 @@ function createForm<T extends Record<string, any>>(
 // Usage
 function RegistrationForm() {
   const { state, setField, handleSubmit } = createForm(
-    { email: '', password: '', confirmPassword: '' },
+    { email: "", password: "", confirmPassword: "" },
     (values) => {
       const errors: Record<string, string> = {};
-      if (!values.email.includes('@')) errors.email = 'Invalid email';
-      if (values.password.length < 8) errors.password = 'Password too short';
+      if (!values.email.includes("@")) errors.email = "Invalid email";
+      if (values.password.length < 8) errors.password = "Password too short";
       if (values.password !== values.confirmPassword) {
-        errors.confirmPassword = 'Passwords must match';
+        errors.confirmPassword = "Passwords must match";
       }
       return errors;
     },
     async (values) => {
-      await fetch('/api/register', {
-        method: 'POST',
+      await fetch("/api/register", {
+        method: "POST",
         body: JSON.stringify(values),
       });
-    }
+    },
   );
 
   return (
@@ -776,7 +720,7 @@ function RegistrationForm() {
         <input
           type="email"
           value={state.values.email}
-          onInput={(e) => setField('email', e.target.value)}
+          onInput={(e) => setField("email", e.target.value)}
           classList={{ error: !!state.errors.email }}
         />
         <Show when={state.touched.email && state.errors.email}>
@@ -785,11 +729,7 @@ function RegistrationForm() {
       </div>
 
       <div>
-        <input
-          type="password"
-          value={state.values.password}
-          onInput={(e) => setField('password', e.target.value)}
-        />
+        <input type="password" value={state.values.password} onInput={(e) => setField("password", e.target.value)} />
         <Show when={state.touched.password && state.errors.password}>
           <span class="error">{state.errors.password}</span>
         </Show>
@@ -799,7 +739,7 @@ function RegistrationForm() {
         <input
           type="password"
           value={state.values.confirmPassword}
-          onInput={(e) => setField('confirmPassword', e.target.value)}
+          onInput={(e) => setField("confirmPassword", e.target.value)}
         />
         <Show when={state.touched.confirmPassword && state.errors.confirmPassword}>
           <span class="error">{state.errors.confirmPassword}</span>
@@ -807,7 +747,7 @@ function RegistrationForm() {
       </div>
 
       <button type="submit" disabled={!state.isValid || state.isSubmitting}>
-        {state.isSubmitting ? 'Submitting...' : 'Register'}
+        {state.isSubmitting ? "Submitting..." : "Register"}
       </button>
     </form>
   );
@@ -816,8 +756,8 @@ function RegistrationForm() {
 
 ```tsx
 // Testing SolidJS Components
-import { render, fireEvent, screen } from '@solidjs/testing-library';
-import { describe, it, expect, vi } from 'vitest';
+import { render, fireEvent, screen } from "@solidjs/testing-library";
+import { describe, it, expect, vi } from "vitest";
 
 // Component to test
 function Counter(props: { initialCount?: number }) {
@@ -825,66 +765,66 @@ function Counter(props: { initialCount?: number }) {
   return (
     <div>
       <span data-testid="count">{count()}</span>
-      <button onClick={() => setCount(c => c + 1)}>Increment</button>
-      <button onClick={() => setCount(c => c - 1)}>Decrement</button>
+      <button onClick={() => setCount((c) => c + 1)}>Increment</button>
+      <button onClick={() => setCount((c) => c - 1)}>Decrement</button>
     </div>
   );
 }
 
-describe('Counter', () => {
-  it('renders initial count', () => {
+describe("Counter", () => {
+  it("renders initial count", () => {
     render(() => <Counter initialCount={5} />);
-    expect(screen.getByTestId('count')).toHaveTextContent('5');
+    expect(screen.getByTestId("count")).toHaveTextContent("5");
   });
 
-  it('increments count when clicking increment', async () => {
+  it("increments count when clicking increment", async () => {
     render(() => <Counter />);
 
-    const incrementBtn = screen.getByText('Increment');
+    const incrementBtn = screen.getByText("Increment");
     fireEvent.click(incrementBtn);
 
-    expect(screen.getByTestId('count')).toHaveTextContent('1');
+    expect(screen.getByTestId("count")).toHaveTextContent("1");
   });
 
-  it('decrements count when clicking decrement', async () => {
+  it("decrements count when clicking decrement", async () => {
     render(() => <Counter initialCount={10} />);
 
-    const decrementBtn = screen.getByText('Decrement');
+    const decrementBtn = screen.getByText("Decrement");
     fireEvent.click(decrementBtn);
 
-    expect(screen.getByTestId('count')).toHaveTextContent('9');
+    expect(screen.getByTestId("count")).toHaveTextContent("9");
   });
 });
 
 // Testing with stores
-describe('TodoApp', () => {
-  it('adds a new todo', async () => {
+describe("TodoApp", () => {
+  it("adds a new todo", async () => {
     render(() => <TodoApp />);
 
-    const input = screen.getByPlaceholderText('What needs to be done?');
-    const addBtn = screen.getByText('Add');
+    const input = screen.getByPlaceholderText("What needs to be done?");
+    const addBtn = screen.getByText("Add");
 
-    fireEvent.input(input, { target: { value: 'New todo' } });
+    fireEvent.input(input, { target: { value: "New todo" } });
     fireEvent.click(addBtn);
 
-    expect(screen.getByText('New todo')).toBeInTheDocument();
+    expect(screen.getByText("New todo")).toBeInTheDocument();
   });
 });
 
 // Testing async resources
-describe('UserProfile', () => {
-  it('shows loading state then user data', async () => {
-    vi.spyOn(global, 'fetch').mockResolvedValue({
+describe("UserProfile", () => {
+  it("shows loading state then user data", async () => {
+    vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: () => Promise.resolve({ id: 1, name: 'John', email: 'john@example.com' }),
+      json: () => Promise.resolve({ id: 1, name: "John", email: "john@example.com" }),
     } as Response);
 
     render(() => <UserProfile userId={1} />);
 
-    expect(screen.getByText('Loading user...')).toBeInTheDocument();
+    expect(screen.getByText("Loading user...")).toBeInTheDocument();
 
-    await screen.findByText('John');
-    expect(screen.getByText('john@example.com')).toBeInTheDocument();
+    await screen.findByText("John");
+    expect(screen.getByText("john@example.com")).toBeInTheDocument();
   });
 });
 ```
@@ -892,24 +832,28 @@ describe('UserProfile', () => {
 ## Best Practices
 
 ### Reactivity
+
 - Keep signals granular for fine-grained updates
 - Use `createMemo` for expensive computations
 - Prefer `batch` for multiple updates
 - Avoid accessing signals in JSX callbacks unnecessarily
 
 ### Performance
+
 - SolidJS doesn't re-render - no need for React.memo
 - Use `<Index>` for primitive arrays where index matters
 - Use `<For>` for objects/arrays with stable identity
 - Lazy load components with `lazy()`
 
 ### State Management
+
 - Use signals for local component state
 - Use stores for complex nested state
 - Use context for dependency injection
 - Resources for async data with Suspense
 
 ### TypeScript
+
 - Define prop interfaces explicitly
 - Use generics for reusable primitives
 - Type context values properly
