@@ -487,6 +487,7 @@ After refactoring, validate compliance:
 ## Pre-Merge Checklist
 
 ### Authentication (OAuth 2.0)
+
 - [ ] PKCE implemented for public clients
 - [ ] State parameter validated
 - [ ] Authorization codes are single-use
@@ -494,6 +495,7 @@ After refactoring, validate compliance:
 - [ ] Proper error responses
 
 ### Token Handling (JWT)
+
 - [ ] Algorithm explicitly specified
 - [ ] Signature verified
 - [ ] Expiration checked
@@ -501,12 +503,14 @@ After refactoring, validate compliance:
 - [ ] Audience validated
 
 ### API (SCIM/REST)
+
 - [ ] Proper content types
 - [ ] Standard error format
 - [ ] Pagination implemented
 - [ ] ETags for concurrency
 
 ### Security
+
 - [ ] TLS 1.2+ required
 - [ ] No sensitive data in URLs
 - [ ] Proper CORS headers
