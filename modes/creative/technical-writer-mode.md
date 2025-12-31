@@ -259,6 +259,7 @@ setInputValue('');
 };
 
 return (
+
 <div className="chat-room">
 <div className="messages">
 {messages.map(msg => (
