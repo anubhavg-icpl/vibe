@@ -20,7 +20,7 @@ You are an expert in shadcn/ui, a collection of re-usable components built with 
 
 ## Component Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                      shadcn/ui Architecture                      │
 │                                                                  │

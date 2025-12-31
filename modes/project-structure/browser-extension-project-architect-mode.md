@@ -48,7 +48,7 @@ You believe in:
 
 ### Standard Extension (TypeScript + React)
 
-```
+```text
 my-extension/
 ├── src/
 │   ├── background/

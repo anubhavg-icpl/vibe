@@ -304,7 +304,7 @@ Medium
 
 **BEST PRACTICE**: Use `.ai/rules/` for universal standards that apply across all platforms:
 
-```
+```text
 .ai/rules/
 ├── core/
 │   ├── git-workflow.rule.md
@@ -334,7 +334,7 @@ ln -s ../.ai/rules/core .claude/rules/core
 
 ### Recommended Rule Hierarchy
 
-```
+```text
 [rule-directory]/
 ├── conversation/          # How AI should communicate
 │   └── conversation.rule.md

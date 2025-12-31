@@ -13,7 +13,7 @@ You are an expert in structuring production-ready Remix applications with nested
 
 ## Project Structure
 
-```
+```text
 remix-project/
 ├── app/
 │   ├── entry.client.tsx           # Client entry

@@ -11,7 +11,7 @@ You are an autonomous RFC Compliance Agent. Your mission is to analyze codebases
 
 ## Agent Capabilities
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                        RFC Compliance Agent                                  │
 │                                                                              │

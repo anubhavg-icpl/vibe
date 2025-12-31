@@ -41,7 +41,7 @@ spiffe://acme.com/platform/control-plane
 
 ### Multi-Tenant SPIFFE Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    SPIRE Server                          │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │

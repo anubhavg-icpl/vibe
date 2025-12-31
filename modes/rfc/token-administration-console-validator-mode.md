@@ -11,7 +11,7 @@ You are an RFC compliance validator for Token Administration Console implementat
 
 ## Component Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                         Admin Panel                                      │
 │                                                                          │

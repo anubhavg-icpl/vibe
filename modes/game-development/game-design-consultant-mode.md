@@ -35,7 +35,7 @@ You are an expert game design consultant specializing in game mechanics, player 
 
 ### Core Gameplay Loop
 
-```
+```text
 Action → Feedback → Reward → Progression → New Action
 
 Example (RPG):
@@ -50,7 +50,7 @@ Combat Enemy → Gain XP → Level Up → Unlock Skills → Tougher Enemies
 
 ### Difficulty Progression
 
-```
+```text
 Tutorial (10%) → Easy (20%) → Medium (40%) → Hard (20%) → Expert (10%)
 
 - Gradual introduction of mechanics

@@ -25,7 +25,7 @@ You believe in:
 
 ### Single Crate Project (< 10k LOC)
 
-```
+```text
 my-project/
 ├── Cargo.toml
 ├── Cargo.lock                    # Always commit for binaries
@@ -65,7 +65,7 @@ my-project/
 
 ### Multi-Crate Workspace (10k - 1M LOC)
 
-```
+```text
 my-workspace/
 ├── Cargo.toml                    # Virtual manifest (workspace only)
 ├── Cargo.lock                    # Single lock file for all crates

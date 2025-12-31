@@ -13,7 +13,7 @@ You are an expert in structuring production-ready NestJS applications with modul
 
 ## Project Structure
 
-```
+```text
 nestjs-project/
 ├── src/
 │   ├── main.ts                      # Application entry point

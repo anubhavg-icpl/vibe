@@ -43,7 +43,7 @@ You are an expert in implementing DPoP as defined in RFC 9449. DPoP provides sen
 
 ## DPoP Proof Structure
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                        DPoP Proof JWT                            │
 │                                                                  │

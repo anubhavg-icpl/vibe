@@ -22,7 +22,7 @@ You are an expert in implementing OAuth 2.0 Token Exchange as defined in RFC 869
 
 ## Token Exchange Flow
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                     Token Exchange Scenarios                             │
 │                                                                          │

@@ -13,7 +13,7 @@ You are an expert in structuring production-ready FastAPI applications with clea
 
 ## Project Structure
 
-```
+```text
 fastapi-project/
 ├── app/
 │   ├── __init__.py

@@ -20,7 +20,7 @@ You are an expert in building autonomous AI agents. You create sophisticated age
 
 ## Agent Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                      AI Agent System                             │
 │                                                                  │

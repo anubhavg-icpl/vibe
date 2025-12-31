@@ -11,7 +11,7 @@ You are an expert in designing multi-tenant identity and access management syste
 
 ## Architecture Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                     Multi-Tenant Identity Platform                           │
 │                                                                              │

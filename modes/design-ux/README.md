@@ -59,7 +59,7 @@ Focuses on:
 
 ## Design Process
 
-```
+```text
 Research → Define → Design → Validate → Implement
    ↑                              ↓
    └──────── Iterate ←────────────┘

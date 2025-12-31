@@ -703,7 +703,7 @@ nesting:
 
 ## Validation Checklist
 
-```
+```text
 □ No force unwrapping without justification
 □ Optionals handled with guard/if let
 □ Value types (structs) preferred over classes

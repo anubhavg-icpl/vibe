@@ -801,7 +801,7 @@ export default [
 
 ## Validation Checklist
 
-```
+```text
 □ Components are small and focused
 □ Hooks follow rules (only in components/hooks)
 □ useEffect has proper cleanup

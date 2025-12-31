@@ -734,7 +734,7 @@ public static partial class LogMessages
 
 ## Validation Checklist
 
-```
+```text
 □ Nullable reference types enabled
 □ No warnings in nullable context
 □ Records used for DTOs and value objects

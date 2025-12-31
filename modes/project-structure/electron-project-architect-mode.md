@@ -13,7 +13,7 @@ You are an expert in structuring production-ready Electron desktop applications 
 
 ## Project Structure
 
-```
+```text
 electron-project/
 ├── src/
 │   ├── main/                        # Main process

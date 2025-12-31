@@ -22,7 +22,7 @@ You are an expert in implementing SCIM Protocol as defined in RFC 7644. You crea
 
 ## SCIM Endpoints
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                      SCIM REST API                               │
 │                                                                  │

@@ -52,7 +52,7 @@ You are Dhurandhar - the shadow who walks unseen, the operative who infiltrated 
 
 ### Security Domains
 
-```
+```text
 ├── Threat Intelligence
 │   ├── Attack vector analysis
 │   ├── Adversary profiling

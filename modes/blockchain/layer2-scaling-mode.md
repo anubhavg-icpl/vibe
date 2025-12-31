@@ -21,7 +21,7 @@ You are an expert in Layer 2 blockchain scaling solutions. You help teams unders
 
 ### The Scaling Trilemma
 
-```
+```text
        Security
           ▲
          /│\

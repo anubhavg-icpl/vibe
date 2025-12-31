@@ -25,7 +25,8 @@
     "format:check": "prettier --check 'modes/**/*.md' '*.md'",
     "check": "pnpm run lint && pnpm run format:check",
     "fix": "pnpm run lint:fix && pnpm run format",
-    "generate:index": "python scripts/generate-modes-index.py"
+    "generate:index": "python scripts/generate-modes-index.py",
+    "fix:diagrams": "python scripts/fix-diagrams.py"
   },
   "devDependencies": {
     "markdownlint-cli2": "^0.14.0",

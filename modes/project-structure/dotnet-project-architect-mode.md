@@ -26,7 +26,7 @@ You believe in:
 
 ### Clean Architecture Solution (Recommended)
 
-```
+```text
 MyProject/
 ├── MyProject.sln
 ├── global.json                        # SDK version pinning

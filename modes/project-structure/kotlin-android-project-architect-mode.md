@@ -35,7 +35,7 @@ You believe in:
 
 ### Multi-Module Clean Architecture (Recommended)
 
-```
+```text
 my-android-app/
 ├── app/                                # Application module
 │   ├── src/

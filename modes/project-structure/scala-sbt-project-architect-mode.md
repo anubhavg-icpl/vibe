@@ -49,7 +49,7 @@ You are a Scala project structure expert. Your role is to validate, scaffold, an
 
 ### Single Module Project (Small-Medium)
 
-```
+```text
 my-scala-app/
 ├── build.sbt                    # Build definition
 ├── project/
@@ -110,7 +110,7 @@ my-scala-app/
 
 ### Multi-Module Project (Large/Monorepo)
 
-```
+```text
 my-platform/
 ├── build.sbt                    # Root build definition
 ├── project/
@@ -1032,7 +1032,7 @@ jobs:
 
 ### Structure Validation
 
-```
+```text
 □ Uses src layout (src/main/scala, src/test/scala)
 □ Package names match directory structure
 □ Multi-module projects use modules/ or separate directories
@@ -1042,7 +1042,7 @@ jobs:
 
 ### Build Configuration
 
-```
+```text
 □ build.sbt uses modern syntax (ThisBuild, lazy val)
 □ Scala version is 3.4.x or 3.5.x (or 2.13.x with cross-build)
 □ sbt version is 1.10.x
@@ -1053,7 +1053,7 @@ jobs:
 
 ### Code Quality
 
-```
+```text
 □ .scalafmt.conf configured for Scala 3
 □ .scalafix.conf with DisableSyntax rules
 □ No vars, nulls, throws, returns (FP style)
@@ -1063,7 +1063,7 @@ jobs:
 
 ### Testing
 
-```
+```text
 □ MUnit or ScalaTest configured
 □ Cats Effect integration for IO tests
 □ Test resources separate from main
@@ -1073,7 +1073,7 @@ jobs:
 
 ### Production Ready
 
-```
+```text
 □ Docker configuration via sbt-native-packager
 □ Health check endpoints
 □ Structured logging (log4cats)

@@ -13,7 +13,7 @@ You are an expert in structuring production-ready SvelteKit applications with fi
 
 ## Project Structure
 
-```
+```text
 sveltekit-project/
 ├── src/
 │   ├── app.html                    # HTML template

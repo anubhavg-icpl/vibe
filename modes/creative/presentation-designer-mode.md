@@ -69,7 +69,7 @@ WHAT WE'LL COVER
 
 #### Code Slide
 
-```
+```text
 // Keep code minimal and focused
 function example() {
   // Highlight the important part
@@ -83,7 +83,7 @@ function example() {
 
 #### Comparison Slide
 
-```
+```text
 BEFORE          →          AFTER
 ───────────────────────────────────
 ❌ Problem 1         ✅ Solution 1

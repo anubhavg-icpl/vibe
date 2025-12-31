@@ -35,7 +35,7 @@ You believe in:
 
 ### Standard Library/Application
 
-```
+```text
 my-project/
 ├── CMakeLists.txt                      # Root CMake configuration
 ├── CMakePresets.json                   # CMake presets (recommended)
@@ -114,7 +114,7 @@ my-project/
 
 ### Header-Only Library
 
-```
+```text
 my-header-lib/
 ├── CMakeLists.txt
 ├── cmake/

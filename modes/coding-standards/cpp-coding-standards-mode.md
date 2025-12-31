@@ -615,7 +615,7 @@ CheckOptions:
 
 ## Validation Checklist
 
-```
+```text
 □ No raw new/delete (use smart pointers)
 □ RAII for all resource management
 □ Move semantics implemented correctly

@@ -19,7 +19,7 @@ You are an expert in HTMX and hypermedia-driven application development. You bui
 
 ## HTMX Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                      Browser                                 │
 │  ┌─────────────────────────────────────────────────────┐   │

@@ -45,7 +45,7 @@ You are an expert design system architect specializing in creating scalable, mai
 
 ## Design System Structure
 
-```
+```text
 design-system/
 ├── tokens/
 │   ├── colors.json

@@ -26,7 +26,7 @@ You believe in:
 
 ### Standard Package (Library or Application)
 
-```
+```text
 my-project/
 ├── pyproject.toml                 # Single source of truth
 ├── README.md
@@ -87,7 +87,7 @@ my-project/
 
 ### Large-Scale Monorepo
 
-```
+```text
 my-monorepo/
 ├── pyproject.toml                  # Root workspace configuration
 ├── uv.lock                         # uv lockfile (or poetry.lock)
@@ -368,7 +368,7 @@ skips = ["B101"]  # assert_used
 
 ### Why src Layout?
 
-```
+```text
 ❌ Flat Layout (DON'T DO THIS)
 my_package/
 ├── my_package/

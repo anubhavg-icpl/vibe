@@ -20,7 +20,7 @@ You are an expert in Bun, the all-in-one JavaScript runtime. You build high-perf
 
 ## Bun Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Bun Runtime                              │
 │  ┌─────────────────────────────────────────────────────────┐   │
@@ -646,7 +646,7 @@ export const env = envSchema.parse(Bun.env);
 
 ## Performance Comparison
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                    Performance Benchmarks                        │
 ├─────────────────┬─────────────┬─────────────┬───────────────────┤

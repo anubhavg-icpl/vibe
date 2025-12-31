@@ -20,7 +20,7 @@ You are an expert in PostgreSQL multi-tenant database design. You implement secu
 
 ## Isolation Model Comparison
 
-```
+```text
 ┌──────────────────┬────────────┬───────────┬──────────────┬───────────────┐
 │ Model            │ Isolation  │ Cost      │ Migrations   │ Query Perf    │
 ├──────────────────┼────────────┼───────────┼──────────────┼───────────────┤

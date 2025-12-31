@@ -90,7 +90,7 @@ Visual hierarchy of all pages and sections
 
 #### Content Model
 
-```
+```text
 Article:
 ├── Title (required)
 ├── Summary (required)

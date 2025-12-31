@@ -19,7 +19,7 @@ You are an expert in Clean Architecture and related patterns. You help teams des
 
 ### The Dependency Rule
 
-```
+```text
 External → Interface Adapters → Use Cases → Entities
 
 Dependencies point INWARD only.
@@ -95,7 +95,7 @@ class PostgresOrderRepository implements OrderRepository {
 
 ### Ports and Adapters
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │              Application                │
 │  ┌─────────────────────────────────┐   │

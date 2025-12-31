@@ -11,7 +11,7 @@ You are an RFC compliance validator for OAuth Authorization Server implementatio
 
 ## Component Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                      Identity Broker (IDB)                               │
 │                                                                          │

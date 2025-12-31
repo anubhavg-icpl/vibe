@@ -26,7 +26,7 @@ You believe in:
 
 ### Hexagonal Architecture (Recommended)
 
-```
+```text
 my-spring-app/
 ├── pom.xml                             # Maven (or build.gradle.kts for Gradle)
 ├── .mvn/

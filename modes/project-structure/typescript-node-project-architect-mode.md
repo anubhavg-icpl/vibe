@@ -37,7 +37,7 @@ You believe in:
 
 ### Single Package (API/Service)
 
-```
+```text
 my-api/
 ├── src/
 │   ├── index.ts                       # Entry point
@@ -123,7 +123,7 @@ my-api/
 
 ### Turborepo Monorepo (Recommended for Multiple Apps)
 
-```
+```text
 my-platform/
 ├── apps/
 │   ├── api/                           # Backend API
