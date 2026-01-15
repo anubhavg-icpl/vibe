@@ -65,7 +65,7 @@ Game Development ..................... 3 modes  (Unity, Unreal, Game Design)
 git clone https://github.com/anubhavg-icpl/vibe.git
 ```
 
-*Revolutionary, I know.*
+_Revolutionary, I know._
 
 ### Step 2: Pick a Mode
 
@@ -214,6 +214,13 @@ vibe/
 │   ├── security/           # SAST/DAST, Compliance
 │   ├── testing/            # Chaos, Contract, Security testing
 │   └── ...                 # 20+ more categories
+├── src/                    # VIBE CLI source (TypeScript)
+│   ├── index.ts           # Main CLI entry point
+│   ├── types.ts           # TypeScript type definitions
+│   ├── modes.ts           # Mode discovery and parsing
+│   ├── agents.ts          # Agent configuration
+│   └── installer.ts       # Mode-to-skill conversion
+├── scripts/               # Automation scripts (Python)
 ├── templates/              # Project templates
 └── assets/                 # Logo and other assets
 ```
@@ -232,7 +239,7 @@ Set up rules once, apply everywhere:
 
 **Works with:** Claude Code, Amazon Q, GitHub Copilot, Gemini, Aider
 
-*Finally, consistency across all your AI assistants without copying prompts like it's 2022.*
+_Finally, consistency across all your AI assistants without copying prompts like it's 2022._
 
 ## Popular Modes
 
@@ -301,7 +308,7 @@ A: Bold of you to ask. Yes, it works. 150+ modes don't just write themselves. (A
 A: MIT License. Go wild. Just don't blame us when the Chaos Monkey mode takes down production.
 
 **Q: Why are there personality modes?**
-A: Because sometimes you need Gordon Ramsay to tell you your code is *raw*. It's therapeutic.
+A: Because sometimes you need Gordon Ramsay to tell you your code is _raw_. It's therapeutic.
 
 ## License
 

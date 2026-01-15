@@ -8,6 +8,7 @@ Thank you for your interest in contributing to Vibe! This document provides guid
 - [How to Contribute](#how-to-contribute)
 - [Adding a New Mode](#adding-a-new-mode)
 - [Adding a New Rule](#adding-a-new-rule)
+- [Improving the VIBE CLI](#improving-the-vibe-cli)
 - [Documentation Guidelines](#documentation-guidelines)
 - [Pull Request Process](#pull-request-process)
 - [Style Guide](#style-guide)
@@ -120,8 +121,8 @@ Why this rule exists.
 
 ## Requirements
 
-- [ ] Requirement 1
-- [ ] Requirement 2
+- [ ] Requirement1
+- [ ] Requirement2
 
 ## Examples
 
@@ -137,6 +138,90 @@ Example of correct behavior
 Example of incorrect behavior
 \`\`\`
 ```
+
+## Improving the VIBE CLI
+
+The VIBE CLI (`src/`) is a TypeScript tool that discovers, converts, and installs modes to AI agents.
+
+### CLI Structure
+
+```
+src/
+├── index.ts        # Main CLI entry point with commander.js
+├── types.ts        # TypeScript type definitions
+├── modes.ts        # Mode discovery and parsing logic
+├── agents.ts       # Agent configuration and detection
+└── installer.ts    # Mode-to-skill conversion and installation
+```
+
+### Adding New Features
+
+1. **Support New AI Agent**
+
+   Add to `src/agents.ts`:
+
+   ```typescript
+   export const agents: Record<AgentType, AgentConfig> = {
+     // ... existing agents
+     "new-agent": {
+       name: "new-agent",
+       displayName: "New Agent",
+       skillsDir: ".new-agent/skills",
+       globalSkillsDir: join(home, ".new-agent/skills"),
+       detectInstalled: async () => {
+         return existsSync(join(home, ".new-agent"));
+       },
+     },
+   };
+   ```
+
+2. **Extend Mode Discovery**
+
+   Modify `src/modes.ts` to support new mode formats or metadata fields:
+
+   ```typescript
+   async function parseModeMd(modeMdPath: string): Promise<Mode | null> {
+     // Add new field parsing logic here
+   }
+   ```
+
+3. **Add New CLI Commands**
+
+   Use commander.js in `src/index.ts`:
+
+   ```typescript
+   program
+     .command("new-command")
+     .description("Description of new command")
+     .option("--option", "Option description")
+     .action(async (options) => {
+       // Command implementation
+     });
+   ```
+
+### Development Workflow
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run in development mode
+pnpm run dev -- modes --list
+
+# Build the CLI
+pnpm run build
+
+# Test the built CLI
+node dist/index.js modes --list
+```
+
+### Testing Considerations
+
+- Test mode discovery with various file structures
+- Test conversion to skill format preserves important metadata
+- Test installation paths for each supported agent
+- Test with empty or missing modes directories
+- Test with invalid YAML frontmatter in mode files
 
 ## Documentation Guidelines
 

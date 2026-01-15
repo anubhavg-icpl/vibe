@@ -53,6 +53,28 @@ When you interact with any AI assistant with the Universal Rules Engine active, 
 
 **That's it!** Your AI now automatically follows all loaded rules.
 
+## 🤖 Using VIBE CLI with Rules
+
+You can also use the VIBE CLI to install modes alongside your rules:
+
+```bash
+# Install VIBE CLI
+npm install -g vibe-modes
+
+# List available modes
+vibe modes --list
+
+# Install modes to your AI agent (rules remain separate)
+vibe modes --agent claude-code --global
+```
+
+**How Rules and Modes Work Together:**
+
+- **Rules** (`.ai/rules/`): Baseline behavior, coding standards, workflows
+- **Modes** (`~/.claude/skills/`): Domain-specific expertise, personalities
+
+Both load simultaneously and complement each other. Rules provide the foundation, modes add specialized knowledge.
+
 ## 📚 Understanding Rule Announcements
 
 Every AI response will start with which rules it followed:
@@ -372,7 +394,9 @@ Track these metrics to see the impact:
 - **Full Mode Documentation**: `modes/specialized/universal-rules-engine-mode.md`
 - **Rule System README**: `.ai/rules/README.md`
 - **AWS Blog Article**: [Mastering Amazon Q Developer with Rules](https://aws.amazon.com/blogs/devops/mastering-amazon-q-developer-with-rules/)
-- **Vibe Modes Collection**: Browse all 24 specialized modes
+- **Vibe Modes Collection**: Browse all 283+ specialized modes
+- **VIBE CLI Documentation**: Install modes as skills to AI agents (see README.md)
+- **Contributing Guide**: [CONTRIBUTING.md](CONTRIBUTING.md) - Add custom rules or modes
 
 ## 🤝 Getting Help
 

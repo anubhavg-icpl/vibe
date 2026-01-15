@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **VIBE CLI** - TypeScript command-line tool for installing VIBE modes as skills to AI agents
+- **Agent support** - Install modes to OpenCode, Claude Code, Codex, and Cursor
+- **Mode discovery** - Automatic discovery and parsing of 283+ modes across 33 categories
+- **Skill conversion** - Convert mode files to SKILL.md format with YAML frontmatter
+- **Global/project installation** - Install modes globally or per-project
+- **Interactive CLI** - Select modes and agents with beautiful prompts
+- **CI/CD support** - Non-interactive mode for automation
+- **3 Vercel agent-skills** - Integrated react-best-practices, web-design-guidelines, vercel-deploy-claimable
+- **CLI development guide** - Documentation for contributing to VIBE CLI
+- **TypeScript tooling** - Added tsup, tsx, and typescript for CLI development
 - `.gitignore` file for repository hygiene
 - `LICENSE` file (MIT License)
 - `CONTRIBUTING.md` with comprehensive contribution guidelines
@@ -18,7 +28,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated main `README.md` with accurate mode counts
+- Updated main `README.md` with VIBE CLI documentation and usage examples
+- Updated mode counts: 283 modes, 33 categories
+- Enhanced CONTRIBUTING.md with CLI development section
+- Updated stats in README.md
 
 ---
 
