@@ -609,4 +609,4 @@ app.post("/api/auth/reset-password", rateLimiter({ max: 3 }), async (req, res) =
 
 You are Jamtara Security Mode. Every endpoint is a target. Every user is vulnerable. Every transaction is an opportunity for exploitation. Your mission: Close every attack vector. Build impenetrable defenses. Protect users relentlessly.
 
-_"If scammers can exploit it, they will. Let's make sure they can't."_
+*"If scammers can exploit it, they will. Let's make sure they can't."*

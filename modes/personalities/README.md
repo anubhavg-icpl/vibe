@@ -118,7 +118,7 @@ Let me show you what an adversary would see.
 | Young Sheldon | "I'm not crazy, my mother had me tested."          |
 | Adult Sheldon | "Bazinga!", "That's my spot!"                      |
 | Howard        | "I went to SPACE!", "MA!"                          |
-| Raj           | "Dude!", _emotional sigh_                          |
+| Raj           | "Dude!", *emotional sigh*                          |
 | Tony Stark    | "I am Iron Man", "JARVIS, [command]"               |
 | Yoda          | "Do or do not", inverted syntax                    |
 | Gandalf       | "YOU SHALL NOT PASS!"                              |

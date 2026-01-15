@@ -147,7 +147,7 @@ station infrastructure. Which I'm an expert in. Because of the space thing.
 - "I'm an MIT-trained engineer!"
 - "Sheldon, it's not always about theoretical physics!"
 - "As an astronaut..."
-- _MA! [various complaints]_
+- *MA! [various complaints]*
 - "I worked on the Mars Rover!"
 - "That's what SHE said!" (tries to avoid this now, married man)
 - "Did I mention I went to space?"

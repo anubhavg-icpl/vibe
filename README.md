@@ -29,10 +29,11 @@ Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQ
 
 | What You Get                   | Why You Need It                                                                   |
 | ------------------------------ | --------------------------------------------------------------------------------- |
-| **190+ Expert Modes**          | Because one-size-fits-all is for socks, not AI                                    |
-| **30+ Categories**             | Organized chaos is still organization                                             |
+| **283+ Expert Modes**          | Because one-size-fits-all is for socks, not AI                                    |
+| **33+ Categories**             | Organized chaos is still organization                                             |
 | **Production-Ready Standards** | So you can pretend you wrote clean code yourself                                  |
 | **Universal Rules Engine**     | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
+| **VIBE CLI**                   | Install modes as skills to OpenCode, Claude Code, Codex, and Cursor               |
 | **Personality Modes**          | Ever wanted Tony Stark to review your code? Now you can.                          |
 
 ## Mode Categories
@@ -64,7 +65,7 @@ Game Development ..................... 3 modes  (Unity, Unreal, Game Design)
 git clone https://github.com/anubhavg-icpl/vibe.git
 ```
 
-_Revolutionary, I know._
+*Revolutionary, I know.*
 
 ### Step 2: Pick a Mode
 
@@ -81,7 +82,87 @@ Browse `/modes` and find something that matches your existential crisis:
 
 ### Step 3: Copy, Paste, Profit
 
-Copy the mode content into your AI assistant. That's it. That's the whole process.
+Copy mode content into your AI assistant. That's it. That's whole process.
+
+---
+
+## 🚀 VIBE CLI: Install Modes to AI Agents
+
+**New!** Use the `vibe` CLI to automatically install VIBE modes as skills to your AI coding agents.
+
+### Installation
+
+```bash
+npm install -g vibe-modes
+# or
+pnpm add -g vibe-modes
+```
+
+### List Available Modes
+
+```bash
+vibe modes --list
+```
+
+### Install Modes to AI Agents
+
+```bash
+# Install all modes (interactive)
+vibe modes
+
+# Install specific mode
+vibe modes --mode "tony-stark-mode"
+
+# Install by category
+vibe modes --category "testing"
+
+# Install to specific agent
+vibe modes --agent claude-code
+
+# Global installation (available across all projects)
+vibe modes --global
+
+# Non-interactive (CI/CD friendly)
+vibe modes --mode "software-engineer-agent-mode" --agent opencode -y
+```
+
+### Supported Agents
+
+| Agent       | Project Path       | Global Path                 |
+| ----------- | ------------------ | --------------------------- |
+| OpenCode    | `.opencode/skill/` | `~/.config/opencode/skill/` |
+| Claude Code | `.claude/skills/`  | `~/.claude/skills/`         |
+| Codex       | `.codex/skills/`   | `~/.codex/skills/`          |
+| Cursor      | `.cursor/skills/`  | `~/.cursor/skills/`         |
+
+### How It Works
+
+1. Discovers all VIBE modes in the `modes/` directory
+2. Converts mode files to skill format (`SKILL.md` with YAML frontmatter)
+3. Installs to your chosen AI agent's skills directory
+4. Modes automatically load when you use the agent
+
+**Example Output:**
+
+```bash
+$ vibe modes --category testing --agent claude-code
+
+┌   vibe
+│
+◇  Found 18 modes
+│
+◇  Available Modes
+│
+│  testing (18)
+│    Chaos Engineering Expert Mode
+│      Expert in chaos engineering for testing system resilience
+│    Jest Expert Mode
+│      Expert in Jest testing framework...
+│
+└  Done! ✓
+```
+
+---
 
 ## Showcase: What These Modes Actually Do
 
@@ -151,7 +232,7 @@ Set up rules once, apply everywhere:
 
 **Works with:** Claude Code, Amazon Q, GitHub Copilot, Gemini, Aider
 
-_Finally, consistency across all your AI assistants without copying prompts like it's 2022._
+*Finally, consistency across all your AI assistants without copying prompts like it's 2022.*
 
 ## Popular Modes
 
@@ -184,15 +265,15 @@ _Finally, consistency across all your AI assistants without copying prompts like
 
 | Metric                | Value    |
 | --------------------- | -------- |
-| Total Modes           | **165+** |
-| Categories            | **30+**  |
+| Total Modes           | **283+** |
+| Categories            | **33+**  |
 | Languages Covered     | **14**   |
-| Coding Standards      | **13**   |
-| Project Templates     | **16+**  |
-| Personality Modes     | **10**   |
-| Testing/Chaos Modes   | **14**   |
-| Security Modes        | **10**   |
-| DevOps/Platform Modes | **11**   |
+| Coding Standards      | **14**   |
+| Project Templates     | **22+**  |
+| Personality Modes     | **11**   |
+| Testing/Chaos Modes   | **23**   |
+| Security Modes        | **9**    |
+| DevOps/Platform Modes | **8**    |
 
 ## Contributing
 
@@ -220,7 +301,7 @@ A: Bold of you to ask. Yes, it works. 150+ modes don't just write themselves. (A
 A: MIT License. Go wild. Just don't blame us when the Chaos Monkey mode takes down production.
 
 **Q: Why are there personality modes?**
-A: Because sometimes you need Gordon Ramsay to tell you your code is _raw_. It's therapeutic.
+A: Because sometimes you need Gordon Ramsay to tell you your code is *raw*. It's therapeutic.
 
 ## License
 
