@@ -1,12 +1,21 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2025-12-31T01:10:04.157661Z",
-  "totalModes": 274,
+  "generatedAt": "2026-01-15T11:04:17.583762Z",
+  "totalModes": 283,
   "categories": [
     {
       "name": "ai-ml",
       "title": "AI & Machine Learning",
       "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "ai-ml",
+            "README"
+          ]
+        },
         {
           "slug": "ai-agent-builder-mode",
           "title": "AI Agent Builder Expert",
@@ -205,6 +214,15 @@
       "name": "backend",
       "title": "Backend Development",
       "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "backend",
+            "README"
+          ]
+        },
         {
           "slug": "bun-runtime-mode",
           "title": "Bun Runtime Expert",
@@ -854,6 +872,15 @@
       "title": "DevOps",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "devops",
+            "README"
+          ]
+        },
+        {
           "slug": "aiops-expert-mode",
           "title": "Aiops Expert",
           "description": "",
@@ -983,6 +1010,15 @@
       "title": "Emerging Tech",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "emerging-tech",
+            "README"
+          ]
+        },
+        {
           "slug": "edge-computing-mode",
           "title": "Edge Computing",
           "description": "",
@@ -1094,6 +1130,15 @@
       "title": "Frameworks",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "frameworks",
+            "README"
+          ]
+        },
+        {
           "slug": "astro-expert-mode",
           "title": "Astro Expert",
           "description": "",
@@ -1181,6 +1226,15 @@
       "title": "Frontend Development",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "frontend",
+            "README"
+          ]
+        },
+        {
           "slug": "htmx-hypermedia-mode",
           "title": "HTMX & Hypermedia Expert",
           "description": "Expert in HTMX, hypermedia-driven applications, and modern server-rendered UI patterns",
@@ -1255,6 +1309,15 @@
       "name": "infrastructure",
       "title": "Infrastructure",
       "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "infrastructure",
+            "README"
+          ]
+        },
         {
           "slug": "api-gateway-expert-mode",
           "title": "Api Gateway Expert",
@@ -2084,6 +2147,15 @@
       "title": "RFC Standards",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "rfc",
+            "README"
+          ]
+        },
+        {
           "slug": "identity-governance-connector-validator-mode",
           "title": "Identity Governance Connector Validator",
           "description": "RFC compliance validator for Identity Governance Connector implementations - OAuth 2.0, JWT, Token Exchange",
@@ -2367,6 +2439,15 @@
       "name": "security",
       "title": "Security",
       "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "security",
+            "README"
+          ]
+        },
         {
           "slug": "container-security-mode",
           "title": "Container Security",
