@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-01-15T11:04:17.583762Z",
-  "totalModes": 283,
+  "generatedAt": "2026-01-15T11:58:57.554353Z",
+  "totalModes": 289,
   "categories": [
     {
       "name": "ai-ml",
@@ -239,6 +239,15 @@
           "path": [
             "backend",
             "deno-runtime-mode"
+          ]
+        },
+        {
+          "slug": "graphql-expert-mode",
+          "title": "Graphql Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "graphql-expert-mode"
           ]
         },
         {
@@ -908,6 +917,15 @@
           ]
         },
         {
+          "slug": "github-actions-expert-mode",
+          "title": "Github Actions Expert",
+          "description": "",
+          "path": [
+            "devops",
+            "github-actions-expert-mode"
+          ]
+        },
+        {
           "slug": "gitops-expert-mode",
           "title": "Gitops Expert",
           "description": "",
@@ -941,6 +959,15 @@
           "path": [
             "devops",
             "sre-expert-mode"
+          ]
+        },
+        {
+          "slug": "vite-expert-mode",
+          "title": "Vite Expert",
+          "description": "",
+          "path": [
+            "devops",
+            "vite-expert-mode"
           ]
         }
       ]
@@ -1193,6 +1220,15 @@
           ]
         },
         {
+          "slug": "redux-expert-mode",
+          "title": "Redux Expert",
+          "description": "",
+          "path": [
+            "frameworks",
+            "redux-expert-mode"
+          ]
+        },
+        {
           "slug": "remix-expert-mode",
           "title": "Remix Expert",
           "description": "",
@@ -1217,6 +1253,15 @@
           "path": [
             "frameworks",
             "svelte-expert-mode"
+          ]
+        },
+        {
+          "slug": "tailwind-css-expert-mode",
+          "title": "Tailwind Css Expert",
+          "description": "",
+          "path": [
+            "frameworks",
+            "tailwind-css-expert-mode"
           ]
         }
       ]
@@ -1361,6 +1406,15 @@
           "path": [
             "infrastructure",
             "kafka-expert-mode"
+          ]
+        },
+        {
+          "slug": "kubernetes-expert-mode",
+          "title": "Kubernetes Expert",
+          "description": "",
+          "path": [
+            "infrastructure",
+            "kubernetes-expert-mode"
           ]
         },
         {
