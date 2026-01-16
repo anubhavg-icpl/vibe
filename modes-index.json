@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-01-15T11:58:57.554353Z",
-  "totalModes": 289,
+  "generatedAt": "2026-01-16T03:47:21.474854Z",
+  "totalModes": 299,
   "categories": [
     {
       "name": "ai-ml",
@@ -242,6 +242,15 @@
           ]
         },
         {
+          "slug": "django-expert-mode",
+          "title": "Django Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "django-expert-mode"
+          ]
+        },
+        {
           "slug": "graphql-expert-mode",
           "title": "Graphql Expert",
           "description": "",
@@ -251,12 +260,48 @@
           ]
         },
         {
+          "slug": "jwt-authentication-expert-mode",
+          "title": "Jwt Authentication Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "jwt-authentication-expert-mode"
+          ]
+        },
+        {
+          "slug": "prisma-expert-mode",
+          "title": "Prisma Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "prisma-expert-mode"
+          ]
+        },
+        {
+          "slug": "spring-boot-expert-mode",
+          "title": "Spring Boot Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "spring-boot-expert-mode"
+          ]
+        },
+        {
           "slug": "trpc-fullstack-mode",
           "title": "tRPC & Type-Safe Stack Expert",
           "description": "Expert in tRPC, Drizzle ORM, and Zod for end-to-end type-safe full-stack TypeScript applications",
           "path": [
             "backend",
             "trpc-fullstack-mode"
+          ]
+        },
+        {
+          "slug": "typeorm-expert-mode",
+          "title": "Typeorm Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "typeorm-expert-mode"
           ]
         }
       ]
@@ -629,6 +674,15 @@
           "path": [
             "database",
             "postgresql-multitenancy-mode"
+          ]
+        },
+        {
+          "slug": "postgresql-performance-mode",
+          "title": "Postgresql Performance",
+          "description": "",
+          "path": [
+            "database",
+            "postgresql-performance-mode"
           ]
         },
         {
@@ -1287,6 +1341,24 @@
             "frontend",
             "htmx-hypermedia-mode"
           ]
+        },
+        {
+          "slug": "jotai-expert-mode",
+          "title": "Jotai Expert",
+          "description": "",
+          "path": [
+            "frontend",
+            "jotai-expert-mode"
+          ]
+        },
+        {
+          "slug": "zustand-expert-mode",
+          "title": "Zustand Expert",
+          "description": "",
+          "path": [
+            "frontend",
+            "zustand-expert-mode"
+          ]
         }
       ]
     },
@@ -1379,6 +1451,15 @@
           "path": [
             "infrastructure",
             "distributed-tracing-mode"
+          ]
+        },
+        {
+          "slug": "docker-advanced-mode",
+          "title": "Docker Advanced",
+          "description": "",
+          "path": [
+            "infrastructure",
+            "docker-advanced-mode"
           ]
         },
         {
@@ -1598,6 +1679,15 @@
           "path": [
             "learning",
             "README"
+          ]
+        },
+        {
+          "slug": "algorithms-system-design-interview-mode",
+          "title": "Algorithms System Design Interview",
+          "description": "",
+          "path": [
+            "learning",
+            "algorithms-system-design-interview-mode"
           ]
         },
         {
