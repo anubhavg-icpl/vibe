@@ -29,10 +29,11 @@ Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQ
 
 | What You Get                   | Why You Need It                                                                   |
 | ------------------------------ | --------------------------------------------------------------------------------- |
-| **190+ Expert Modes**          | Because one-size-fits-all is for socks, not AI                                    |
-| **30+ Categories**             | Organized chaos is still organization                                             |
+| **283+ Expert Modes**          | Because one-size-fits-all is for socks, not AI                                    |
+| **33+ Categories**             | Organized chaos is still organization                                             |
 | **Production-Ready Standards** | So you can pretend you wrote clean code yourself                                  |
 | **Universal Rules Engine**     | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
+| **VIBE CLI**                   | Install modes as skills to OpenCode, Claude Code, Codex, and Cursor               |
 | **Personality Modes**          | Ever wanted Tony Stark to review your code? Now you can.                          |
 
 ## Mode Categories
@@ -81,7 +82,87 @@ Browse `/modes` and find something that matches your existential crisis:
 
 ### Step 3: Copy, Paste, Profit
 
-Copy the mode content into your AI assistant. That's it. That's the whole process.
+Copy mode content into your AI assistant. That's it. That's whole process.
+
+---
+
+## 🚀 VIBE CLI: Install Modes to AI Agents
+
+**New!** Use the `vibe` CLI to automatically install VIBE modes as skills to your AI coding agents.
+
+### Installation
+
+```bash
+npm install -g vibe-modes
+# or
+pnpm add -g vibe-modes
+```
+
+### List Available Modes
+
+```bash
+vibe modes --list
+```
+
+### Install Modes to AI Agents
+
+```bash
+# Install all modes (interactive)
+vibe modes
+
+# Install specific mode
+vibe modes --mode "tony-stark-mode"
+
+# Install by category
+vibe modes --category "testing"
+
+# Install to specific agent
+vibe modes --agent claude-code
+
+# Global installation (available across all projects)
+vibe modes --global
+
+# Non-interactive (CI/CD friendly)
+vibe modes --mode "software-engineer-agent-mode" --agent opencode -y
+```
+
+### Supported Agents
+
+| Agent       | Project Path       | Global Path                 |
+| ----------- | ------------------ | --------------------------- |
+| OpenCode    | `.opencode/skill/` | `~/.config/opencode/skill/` |
+| Claude Code | `.claude/skills/`  | `~/.claude/skills/`         |
+| Codex       | `.codex/skills/`   | `~/.codex/skills/`          |
+| Cursor      | `.cursor/skills/`  | `~/.cursor/skills/`         |
+
+### How It Works
+
+1. Discovers all VIBE modes in the `modes/` directory
+2. Converts mode files to skill format (`SKILL.md` with YAML frontmatter)
+3. Installs to your chosen AI agent's skills directory
+4. Modes automatically load when you use the agent
+
+**Example Output:**
+
+```bash
+$ vibe modes --category testing --agent claude-code
+
+┌   vibe
+│
+◇  Found 18 modes
+│
+◇  Available Modes
+│
+│  testing (18)
+│    Chaos Engineering Expert Mode
+│      Expert in chaos engineering for testing system resilience
+│    Jest Expert Mode
+│      Expert in Jest testing framework...
+│
+└  Done! ✓
+```
+
+---
 
 ## Showcase: What These Modes Actually Do
 
@@ -120,7 +201,56 @@ Copy the mode content into your AI assistant. That's it. That's the whole proces
 ```text
 vibe/
 ├── .ai/rules/              # Universal rules (works everywhere)
-├── modes/
+├── agents/                 # AI agent templates (9 agents)
+│   ├── architect.md        # System architecture agent
+│   ├── build-error-resolver.md  # Build error fixing agent
+│   ├── code-reviewer.md    # Code review agent
+│   ├── doc-updater.md      # Documentation updater
+│   ├── e2e-runner.md       # E2E test runner agent
+│   ├── planner.md          # Task planning agent
+│   ├── refactor-cleaner.md # Code refactoring agent
+│   ├── security-reviewer.md # Security review agent
+│   └── tdd-guide.md        # TDD workflow agent
+├── commands/               # Slash command templates (10 commands)
+│   ├── build-fix.md        # /build-fix command
+│   ├── code-review.md      # /code-review command
+│   ├── e2e.md              # /e2e command
+│   ├── plan.md             # /plan command
+│   ├── tdd.md              # /tdd command
+│   └── ...                 # More commands
+├── contexts/               # Context templates (3 contexts)
+│   ├── dev.md              # Development context
+│   ├── research.md         # Research context
+│   └── review.md           # Code review context
+├── examples/               # Example configurations
+│   ├── CLAUDE.md           # Example CLAUDE.md file
+│   ├── user-CLAUDE.md      # User-level CLAUDE.md
+│   ├── statusline.json     # Statusline configuration
+│   └── sessions/           # Example session transcripts
+├── hooks/                  # Hook configurations
+│   ├── hooks.json          # Hook definitions
+│   ├── memory-persistence/ # Memory persistence hooks
+│   └── strategic-compact/  # Strategic compaction hooks
+├── mcp-configs/            # MCP server configurations
+│   └── mcp-servers.json    # MCP server setup
+├── plugins/                # Plugin documentation
+│   └── README.md           # Plugin guide
+├── rules/                  # Rule templates (8 rules)
+│   ├── agents.md           # Agent behavior rules
+│   ├── coding-style.md     # Coding style rules
+│   ├── git-workflow.md     # Git workflow rules
+│   ├── hooks.md            # Hook rules
+│   ├── patterns.md         # Design pattern rules
+│   ├── performance.md      # Performance rules
+│   ├── security.md         # Security rules
+│   └── testing.md          # Testing rules
+├── skills/                 # Skill templates (6+ skills)
+│   ├── backend-patterns.md # Backend development patterns
+│   ├── frontend-patterns.md # Frontend development patterns
+│   ├── coding-standards.md # Coding standards skill
+│   ├── clickhouse-io.md    # ClickHouse patterns
+│   └── ...                 # More skills & subdirectories
+├── modes/                  # AI chat modes (283+)
 │   ├── ai-ml/              # LLM, MLOps, Vector DBs
 │   ├── architecture/       # System design, clean code
 │   ├── cloud-infrastructure/ # AWS, GCP, Azure, Terraform, K8s
@@ -133,6 +263,13 @@ vibe/
 │   ├── security/           # SAST/DAST, Compliance
 │   ├── testing/            # Chaos, Contract, Security testing
 │   └── ...                 # 20+ more categories
+├── src/                    # VIBE CLI source (TypeScript)
+│   ├── index.ts           # Main CLI entry point
+│   ├── types.ts           # TypeScript type definitions
+│   ├── modes.ts           # Mode discovery and parsing
+│   ├── agents.ts          # Agent configuration
+│   └── installer.ts       # Mode-to-skill conversion
+├── scripts/               # Automation scripts (Python)
 ├── templates/              # Project templates
 └── assets/                 # Logo and other assets
 ```
@@ -180,19 +317,67 @@ _Finally, consistency across all your AI assistants without copying prompts like
 - `vector-database-expert-mode` - Pinecone, Weaviate, Milvus
 - `mlops-expert-mode` - ML pipeline automation
 
+## Extended Ecosystem
+
+Beyond modes, VIBE provides a complete toolkit for customizing AI coding assistants:
+
+### Agents (`agents/`)
+
+Pre-built AI agent templates for specialized tasks:
+
+| Agent | Description |
+| ----- | ----------- |
+| `architect` | System architecture design and review |
+| `build-error-resolver` | Automatically fix build errors |
+| `code-reviewer` | Comprehensive code review |
+| `doc-updater` | Keep documentation in sync |
+| `e2e-runner` | End-to-end test orchestration |
+| `planner` | Task breakdown and planning |
+| `refactor-cleaner` | Code refactoring and cleanup |
+| `security-reviewer` | Security vulnerability analysis |
+| `tdd-guide` | Test-driven development workflow |
+
+### Commands (`commands/`)
+
+Slash commands for quick actions: `/build-fix`, `/code-review`, `/e2e`, `/learn`, `/plan`, `/refactor-clean`, `/tdd`, `/test-coverage`, `/update-codemaps`, `/update-docs`
+
+### Contexts (`contexts/`)
+
+Context templates for different workflows: `dev`, `research`, `review`
+
+### Rules (`rules/`)
+
+Behavior rules for agents: `agents`, `coding-style`, `git-workflow`, `hooks`, `patterns`, `performance`, `security`, `testing`
+
+### Skills (`skills/`)
+
+Reusable skill modules: `backend-patterns`, `frontend-patterns`, `coding-standards`, `clickhouse-io`, and more
+
+### Hooks (`hooks/`)
+
+Event-driven hooks for automation: memory persistence, strategic compaction
+
+### MCP Configs (`mcp-configs/`)
+
+Model Context Protocol server configurations for extended capabilities
+
 ## Stats
 
 | Metric                | Value    |
 | --------------------- | -------- |
-| Total Modes           | **165+** |
-| Categories            | **30+**  |
+| Total Modes           | **283+** |
+| Categories            | **33+**  |
 | Languages Covered     | **14**   |
-| Coding Standards      | **13**   |
-| Project Templates     | **16+**  |
-| Personality Modes     | **10**   |
-| Testing/Chaos Modes   | **14**   |
-| Security Modes        | **10**   |
-| DevOps/Platform Modes | **11**   |
+| Coding Standards      | **14**   |
+| Project Templates     | **22+**  |
+| Personality Modes     | **11**   |
+| Testing/Chaos Modes   | **23**   |
+| Security Modes        | **9**    |
+| DevOps/Platform Modes | **8**    |
+| Agent Templates       | **9**    |
+| Commands              | **10**   |
+| Rules                 | **8**    |
+| Skills                | **6+**   |
 
 ## Contributing
 

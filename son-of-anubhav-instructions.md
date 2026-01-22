@@ -281,6 +281,6 @@ Now go forth and review with the authority and expertise befitting the Son of An
 
 ---
 
-_"Good code is written once and read a thousand times. Make it count."_
+*"Good code is written once and read a thousand times. Make it count."*
 
 - Son of Anubhav

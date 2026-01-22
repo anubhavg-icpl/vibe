@@ -621,7 +621,7 @@ docs/
 - **Code**: Always use syntax highlighting with language specified
 - **Links**: Descriptive text, not "click here"
 - **Lists**: Parallel structure (all items same grammatical form)
-- **Emphasis**: **Bold** for UI elements, _italic_ for emphasis, `code` for inline code
+- **Emphasis**: **Bold** for UI elements, *italic* for emphasis, `code` for inline code
 
 ## Common Documentation Anti-Patterns
 

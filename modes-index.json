@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-01-01T05:48:05.791762Z",
-  "totalModes": 287,
+  "generatedAt": "2026-01-16T05:34:46.189727Z",
+  "totalModes": 303,
   "categories": [
     {
       "name": "ai-ml",
@@ -242,12 +242,84 @@
           ]
         },
         {
+          "slug": "django-expert-mode",
+          "title": "Django Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "django-expert-mode"
+          ]
+        },
+        {
+          "slug": "fastapi-expert-mode",
+          "title": "Fastapi Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "fastapi-expert-mode"
+          ]
+        },
+        {
+          "slug": "flask-expert-mode",
+          "title": "Flask Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "flask-expert-mode"
+          ]
+        },
+        {
+          "slug": "graphql-expert-mode",
+          "title": "Graphql Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "graphql-expert-mode"
+          ]
+        },
+        {
+          "slug": "jwt-authentication-expert-mode",
+          "title": "Jwt Authentication Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "jwt-authentication-expert-mode"
+          ]
+        },
+        {
+          "slug": "prisma-expert-mode",
+          "title": "Prisma Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "prisma-expert-mode"
+          ]
+        },
+        {
+          "slug": "spring-boot-expert-mode",
+          "title": "Spring Boot Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "spring-boot-expert-mode"
+          ]
+        },
+        {
           "slug": "trpc-fullstack-mode",
           "title": "tRPC & Type-Safe Stack Expert",
           "description": "Expert in tRPC, Drizzle ORM, and Zod for end-to-end type-safe full-stack TypeScript applications",
           "path": [
             "backend",
             "trpc-fullstack-mode"
+          ]
+        },
+        {
+          "slug": "typeorm-expert-mode",
+          "title": "Typeorm Expert",
+          "description": "",
+          "path": [
+            "backend",
+            "typeorm-expert-mode"
           ]
         }
       ]
@@ -605,6 +677,15 @@
           ]
         },
         {
+          "slug": "mysql-performance-mode",
+          "title": "Mysql Performance",
+          "description": "",
+          "path": [
+            "database",
+            "mysql-performance-mode"
+          ]
+        },
+        {
           "slug": "postgresql-expert-mode",
           "title": "Postgresql Expert",
           "description": "",
@@ -623,12 +704,30 @@
           ]
         },
         {
+          "slug": "postgresql-performance-mode",
+          "title": "Postgresql Performance",
+          "description": "",
+          "path": [
+            "database",
+            "postgresql-performance-mode"
+          ]
+        },
+        {
           "slug": "redis-expert-mode",
           "title": "Redis Expert",
           "description": "",
           "path": [
             "database",
             "redis-expert-mode"
+          ]
+        },
+        {
+          "slug": "redis-performance-mode",
+          "title": "Redis Performance",
+          "description": "",
+          "path": [
+            "database",
+            "redis-performance-mode"
           ]
         },
         {
@@ -908,6 +1007,15 @@
           ]
         },
         {
+          "slug": "github-actions-expert-mode",
+          "title": "Github Actions Expert",
+          "description": "",
+          "path": [
+            "devops",
+            "github-actions-expert-mode"
+          ]
+        },
+        {
           "slug": "gitops-expert-mode",
           "title": "Gitops Expert",
           "description": "",
@@ -941,6 +1049,15 @@
           "path": [
             "devops",
             "sre-expert-mode"
+          ]
+        },
+        {
+          "slug": "vite-expert-mode",
+          "title": "Vite Expert",
+          "description": "",
+          "path": [
+            "devops",
+            "vite-expert-mode"
           ]
         }
       ]
@@ -1193,6 +1310,15 @@
           ]
         },
         {
+          "slug": "redux-expert-mode",
+          "title": "Redux Expert",
+          "description": "",
+          "path": [
+            "frameworks",
+            "redux-expert-mode"
+          ]
+        },
+        {
           "slug": "remix-expert-mode",
           "title": "Remix Expert",
           "description": "",
@@ -1218,6 +1344,15 @@
             "frameworks",
             "svelte-expert-mode"
           ]
+        },
+        {
+          "slug": "tailwind-css-expert-mode",
+          "title": "Tailwind Css Expert",
+          "description": "",
+          "path": [
+            "frameworks",
+            "tailwind-css-expert-mode"
+          ]
         }
       ]
     },
@@ -1241,6 +1376,24 @@
           "path": [
             "frontend",
             "htmx-hypermedia-mode"
+          ]
+        },
+        {
+          "slug": "jotai-expert-mode",
+          "title": "Jotai Expert",
+          "description": "",
+          "path": [
+            "frontend",
+            "jotai-expert-mode"
+          ]
+        },
+        {
+          "slug": "zustand-expert-mode",
+          "title": "Zustand Expert",
+          "description": "",
+          "path": [
+            "frontend",
+            "zustand-expert-mode"
           ]
         }
       ]
@@ -1337,6 +1490,15 @@
           ]
         },
         {
+          "slug": "docker-advanced-mode",
+          "title": "Docker Advanced",
+          "description": "",
+          "path": [
+            "infrastructure",
+            "docker-advanced-mode"
+          ]
+        },
+        {
           "slug": "elk-stack-mode",
           "title": "Elk Stack",
           "description": "",
@@ -1361,6 +1523,15 @@
           "path": [
             "infrastructure",
             "kafka-expert-mode"
+          ]
+        },
+        {
+          "slug": "kubernetes-expert-mode",
+          "title": "Kubernetes Expert",
+          "description": "",
+          "path": [
+            "infrastructure",
+            "kubernetes-expert-mode"
           ]
         },
         {
@@ -1544,6 +1715,15 @@
           "path": [
             "learning",
             "README"
+          ]
+        },
+        {
+          "slug": "algorithms-system-design-interview-mode",
+          "title": "Algorithms System Design Interview",
+          "description": "",
+          "path": [
+            "learning",
+            "algorithms-system-design-interview-mode"
           ]
         },
         {
@@ -2446,25 +2626,6 @@
           "path": [
             "security",
             "README"
-          ]
-        },
-        {
-          "slug": "api-security-audit-agent-mode",
-          "title": "API Security Audit Agent",
-          "description": "Autonomous agent that audits REST/GraphQL APIs for security vulnerabilities, data exposure, and OWASP API Top 10 compliance",
-          "path": [
-            "security",
-            "api-security-audit-agent-mode"
-          ],
-          "tags": [
-            "agent",
-            "security",
-            "api",
-            "rest",
-            "graphql",
-            "owasp",
-            "audit",
-            "penetration-testing"
           ]
         },
         {

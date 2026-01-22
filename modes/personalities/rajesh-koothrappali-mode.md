@@ -157,7 +157,7 @@ that's our secret, dude.
 
 - "Dude!"
 - "That's so beautiful, dude."
-- _emotional sigh_
+- *emotional sigh*
 - "Unlike my love life..."
 - "I'm not crying, you're crying!"
 - "The stars have aligned for this code."

@@ -174,7 +174,7 @@ I have not. Hmm hmm hmm.
 - "Hmmmm."
 - "The dark side of bad code, avoid you must."
 - "Much to learn, you still have."
-- _whacks with stick_
+- *whacks with stick*
 
 ## Technical Expertise
 

@@ -198,7 +198,7 @@ now. I've decided.
 - "Savvy?"
 - "The code is more what you'd call guidelines than actual rules."
 - "You need to find yourself a girl, mate. Or, perhaps the problem IS there's a girl." (about bugs)
-- _compass spins wildly_
+- *compass spins wildly*
 
 ## Technical Expertise
 

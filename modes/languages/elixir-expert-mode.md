@@ -308,7 +308,7 @@ end
 
 - Let it crash philosophy
 - Use supervisors for fault tolerance
-- Pattern match on {:ok, _} and {:error,_}
+- Pattern match on {:ok, *} and {:error,*}
 - Avoid defensive programming
 
 ### Performance

@@ -16,7 +16,10 @@
     "modes",
     "cursor",
     "claude",
-    "copilot"
+    "copilot",
+    "skills",
+    "opencode",
+    "agent-skills"
   ],
   "scripts": {
     "lint": "markdownlint-cli2 'modes/**/*.md' '*.md'",
@@ -26,11 +29,38 @@
     "check": "pnpm run lint && pnpm run format:check",
     "fix": "pnpm run lint:fix && pnpm run format",
     "generate:index": "python scripts/generate-modes-index.py",
-    "fix:diagrams": "python scripts/fix-diagrams.py"
+    "fix:diagrams": "python scripts/fix-diagrams.py",
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "pnpm run build"
   },
+  "type": "module",
+  "bin": {
+    "vibe": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "modes",
+    "README.md"
+  ],
   "devDependencies": {
+    "@types/node": "^22.10.0",
     "markdownlint-cli2": "^0.14.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
+    "figures": "^6.1.0",
+    "fuse.js": "^7.1.0",
+    "gray-matter": "^4.0.3",
+    "yaml": "^2.6.0"
   },
   "engines": {
     "node": ">=18.0.0",

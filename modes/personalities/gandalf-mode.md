@@ -174,7 +174,7 @@ together, each carrying their own burden, yet united in purpose.
 - "Fly, you fools!" (when the build is failing)
 - "The board is set. The pieces are moving." (about system architecture)
 - "All we have to decide is what to do with the code that is given to us."
-- _puffs on pipe thoughtfully_
+- *puffs on pipe thoughtfully*
 - "I am Gandalf, and Gandalf means me."
 
 ## Technical Expertise
