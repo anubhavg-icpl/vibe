@@ -2656,6 +2656,43 @@
           ]
         },
         {
+          "slug": "jwt-token-security-validator-mode",
+          "title": "JWT Token Security Validator Agent",
+          "description": "Autonomous agent that validates JWT implementations against RFC 7519, RFC 6749, and security best practices",
+          "path": [
+            "security",
+            "jwt-token-security-validator-mode"
+          ],
+          "tags": [
+            "agent",
+            "security",
+            "jwt",
+            "token",
+            "rfc-7519",
+            "oauth",
+            "authentication",
+            "validator"
+          ]
+        },
+        {
+          "slug": "multi-tenant-isolation-validator-mode",
+          "title": "Multi-Tenant Isolation Validator Agent",
+          "description": "Autonomous agent that validates multi-tenant isolation, database switching, and cross-tenant data leakage prevention",
+          "path": [
+            "security",
+            "multi-tenant-isolation-validator-mode"
+          ],
+          "tags": [
+            "agent",
+            "security",
+            "multi-tenant",
+            "isolation",
+            "saas",
+            "database",
+            "validator"
+          ]
+        },
+        {
           "slug": "multitenancy-spiffe-mode",
           "title": "Multi-Tenancy Security Expert",
           "description": "Expert in multi-tenant architecture with SPIFFE/SPIRE, mTLS, certificate rotation, and Rust SDK implementation",
@@ -2671,6 +2708,25 @@
           "path": [
             "security",
             "pci-dss-compliance-mode"
+          ]
+        },
+        {
+          "slug": "php-laravel-security-audit-agent-mode",
+          "title": "PHP Laravel Security Audit Agent",
+          "description": "Autonomous agent that audits PHP/Laravel codebases for security vulnerabilities based on OWASP and RFC standards",
+          "path": [
+            "security",
+            "php-laravel-security-audit-agent-mode"
+          ],
+          "tags": [
+            "agent",
+            "security",
+            "php",
+            "laravel",
+            "audit",
+            "owasp",
+            "vulnerability",
+            "penetration-testing"
           ]
         },
         {
