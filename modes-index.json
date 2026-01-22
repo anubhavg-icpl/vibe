@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-01-16T05:34:46.189727Z",
-  "totalModes": 303,
+  "generatedAt": "2026-01-22T19:25:23.427783Z",
+  "totalModes": 307,
   "categories": [
     {
       "name": "ai-ml",
@@ -2626,6 +2626,25 @@
           "path": [
             "security",
             "README"
+          ]
+        },
+        {
+          "slug": "api-security-audit-agent-mode",
+          "title": "API Security Audit Agent",
+          "description": "Autonomous agent that audits REST/GraphQL APIs for security vulnerabilities, data exposure, and OWASP API Top 10 compliance",
+          "path": [
+            "security",
+            "api-security-audit-agent-mode"
+          ],
+          "tags": [
+            "agent",
+            "security",
+            "api",
+            "rest",
+            "graphql",
+            "owasp",
+            "audit",
+            "penetration-testing"
           ]
         },
         {
