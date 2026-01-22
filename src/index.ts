@@ -4,20 +4,33 @@ import { program } from "commander";
 import * as p from "@clack/prompts";
 import chalk from "chalk";
 import { discoverModes, discoverModesByCategory, getModeDisplayName } from "./modes.js";
-import { installModeForAgent, isModeInstalled, getInstallPath } from "./installer.js";
+import {
+  installModeForAgent,
+  isModeInstalled,
+  getInstallPath,
+  installModesParallel,
+  createInstallTasks,
+} from "./installer.js";
 import { detectInstalledAgents, agents } from "./agents.js";
+import { loadConfig, initConfig, getConfigParallelism, mergeConfigWithOptions, type MergedOptions } from "./config.js";
+import { getCompletionScript, getInstallInstructions, detectShell, type ShellType } from "./completions.js";
+import { formatModesAsJson, formatInstallResultsAsJson, formatModePreviewAsJson, formatError } from "./output.js";
+import {
+  renderHeader,
+  colors,
+  symbols,
+  ModeSearch,
+  renderModePreview,
+  renderInstallResultCard,
+  buildCategoryTree,
+  renderCategoryBadges,
+  renderProgressBar,
+} from "./ui/index.js";
 import type { Mode, AgentType } from "./types.js";
 
 const version = "1.0.0";
 
-interface Options {
-  global?: boolean;
-  agent?: string[];
-  yes?: boolean;
-  mode?: string[];
-  category?: string;
-  list?: boolean;
-}
+type Options = MergedOptions;
 
 program
   .name("vibe")
@@ -30,66 +43,181 @@ program
   .option("-c, --category <category>", "Filter modes by category")
   .option("-l, --list", "List available modes without installing")
   .option("-y, --yes", "Skip confirmation prompts")
+  .option("--json", "Output in JSON format for scripting/CI")
+  .option("--preview <mode>", "Preview a mode before installing")
   .action(async (source: string = "./modes", options: Options) => {
     await main(source, options);
+  });
+
+// Completions subcommand
+program
+  .command("completions [shell]")
+  .description("Generate shell completion scripts")
+  .action((shell?: string) => {
+    const targetShell = (shell as ShellType) || detectShell();
+
+    if (!targetShell) {
+      console.error(colors.error("Could not detect shell. Please specify: bash, zsh, or fish"));
+      process.exit(1);
+    }
+
+    if (!["bash", "zsh", "fish"].includes(targetShell)) {
+      console.error(colors.error(`Unsupported shell: ${targetShell}. Supported: bash, zsh, fish`));
+      process.exit(1);
+    }
+
+    console.log(getCompletionScript(targetShell as ShellType));
+    console.error("");
+    console.error(colors.dim("# Installation instructions:"));
+    console.error(colors.dim(getInstallInstructions(targetShell as ShellType)));
+  });
+
+// Init config subcommand
+program
+  .command("init")
+  .description("Create a .vibeconfig.yaml file in the current directory")
+  .action(async () => {
+    try {
+      const path = await initConfig();
+      console.log(colors.success(`${symbols.check} Created config file: ${path}`));
+    } catch (error) {
+      console.error(colors.error(error instanceof Error ? error.message : "Failed to create config"));
+      process.exit(1);
+    }
   });
 
 program.parse();
 
 async function main(source: string, options: Options) {
-  console.log();
-  p.intro(chalk.bgCyan.black(" vibe "));
+  // Load config and merge with CLI options
+  const config = await loadConfig();
+  const mergedOptions = mergeConfigWithOptions(config, options);
+
+  // Handle JSON output mode differently
+  const jsonOutput = mergedOptions.json;
+
+  if (!jsonOutput) {
+    console.log(renderHeader(version));
+  }
 
   try {
-    const spinner = p.spinner();
+    const spinner = jsonOutput ? null : p.spinner();
 
-    spinner.start("Discovering modes...");
-    const modes = options.category
-      ? await discoverModesByCategory(source, options.category)
+    spinner?.start("Discovering modes...");
+    const modes = mergedOptions.category
+      ? await discoverModesByCategory(source, mergedOptions.category)
       : await discoverModes(source);
 
     if (modes.length === 0) {
-      spinner.stop(chalk.red("No modes found"));
-      p.outro(chalk.red("No valid modes found in the specified path."));
+      spinner?.stop(chalk.red("No modes found"));
+      if (jsonOutput) {
+        console.log(formatError("No valid modes found in the specified path", version));
+      } else {
+        p.outro(chalk.red("No valid modes found in the specified path."));
+      }
       process.exit(1);
     }
 
-    spinner.stop(`Found ${chalk.green(modes.length)} mode${modes.length > 1 ? "s" : ""}`);
+    spinner?.stop(`Found ${colors.success(String(modes.length))} mode${modes.length > 1 ? "s" : ""}`);
 
-    if (options.list) {
-      console.log();
-      p.log.step(chalk.bold("Available Modes"));
-      listModesByCategory(modes);
-      console.log();
-      p.outro("Use --mode <name> or --category <category> to install specific modes");
+    // Preview mode
+    if (mergedOptions.preview) {
+      const modeToPreview = modes.find(
+        (m) =>
+          m.name.toLowerCase() === mergedOptions.preview!.toLowerCase() ||
+          getModeDisplayName(m).toLowerCase() === mergedOptions.preview!.toLowerCase(),
+      );
+
+      if (!modeToPreview) {
+        if (jsonOutput) {
+          console.log(formatError(`Mode not found: ${mergedOptions.preview}`, version));
+        } else {
+          p.log.error(`Mode not found: ${mergedOptions.preview}`);
+        }
+        process.exit(1);
+      }
+
+      if (jsonOutput) {
+        console.log(formatModePreviewAsJson(modeToPreview, agents, version));
+      } else {
+        console.log(renderModePreview(modeToPreview));
+      }
+      process.exit(0);
+    }
+
+    // List modes
+    if (mergedOptions.list) {
+      if (jsonOutput) {
+        console.log(formatModesAsJson(modes, version));
+      } else {
+        console.log();
+        p.log.step(colors.primaryBold("Available Modes"));
+
+        // Show category summary
+        const search = new ModeSearch(modes);
+        const categories = search.getCategories();
+        console.log();
+        console.log("  " + renderCategoryBadges(categories));
+        console.log();
+
+        listModesByCategory(modes);
+        console.log();
+        p.outro("Use --mode <name> or --category <category> to install specific modes");
+      }
       process.exit(0);
     }
 
     let selectedModes: Mode[];
 
-    if (options.mode && options.mode.length > 0) {
-      selectedModes = modes.filter((m) =>
-        options.mode!.some(
-          (name) =>
-            m.name.toLowerCase() === name.toLowerCase() || getModeDisplayName(m).toLowerCase() === name.toLowerCase(),
-        ),
-      );
+    if (mergedOptions.mode && mergedOptions.mode.length > 0) {
+      // Use fuzzy search for mode matching
+      const search = new ModeSearch(modes);
+      const matchedModes: Mode[] = [];
+
+      for (const modeName of mergedOptions.mode) {
+        const results = search.search(modeName);
+        const exactMatch = results.find(
+          (r) =>
+            r.item.name.toLowerCase() === modeName.toLowerCase() ||
+            getModeDisplayName(r.item).toLowerCase() === modeName.toLowerCase(),
+        );
+
+        if (exactMatch) {
+          matchedModes.push(exactMatch.item);
+        } else if (results.length > 0 && results[0].score! < 0.3) {
+          // Good fuzzy match
+          matchedModes.push(results[0].item);
+        }
+      }
+
+      selectedModes = matchedModes;
 
       if (selectedModes.length === 0) {
-        p.log.error(`No matching modes found for: ${options.mode.join(", ")}`);
-        p.log.info("Available modes:");
-        for (const m of modes) {
-          p.log.message(`  - ${getModeDisplayName(m)}`);
+        if (jsonOutput) {
+          console.log(formatError(`No matching modes found for: ${mergedOptions.mode.join(", ")}`, version));
+        } else {
+          p.log.error(`No matching modes found for: ${mergedOptions.mode.join(", ")}`);
+          p.log.info("Available modes:");
+          for (const m of modes.slice(0, 10)) {
+            p.log.message(`  - ${getModeDisplayName(m)}`);
+          }
+          if (modes.length > 10) {
+            p.log.message(colors.dim(`  ... and ${modes.length - 10} more`));
+          }
         }
         process.exit(1);
       }
 
-      p.log.info(
-        `Selected ${selectedModes.length} mode${selectedModes.length !== 1 ? "s" : ""}: ${selectedModes.map((m) => chalk.cyan(getModeDisplayName(m))).join(", ")}`,
-      );
-    } else if (options.yes) {
+      if (!jsonOutput) {
+        p.log.info(
+          `Selected ${selectedModes.length} mode${selectedModes.length !== 1 ? "s" : ""}: ${selectedModes.map((m) => colors.secondary(getModeDisplayName(m))).join(", ")}`,
+        );
+      }
+    } else if (mergedOptions.yes) {
       selectedModes = modes;
-      p.log.info(`Installing all ${modes.length} modes`);
+      if (!jsonOutput) {
+        p.log.info(`Installing all ${modes.length} modes`);
+      }
     } else {
       const modeChoices = modes.map((m) => ({
         value: m,
@@ -113,32 +241,38 @@ async function main(source: string, options: Options) {
 
     let targetAgents: AgentType[];
 
-    if (options.agent && options.agent.length > 0) {
+    if (mergedOptions.agent && mergedOptions.agent.length > 0) {
       const validAgents = ["opencode", "claude-code", "codex", "cursor"];
-      const invalidAgents = options.agent.filter((a) => !validAgents.includes(a));
+      const invalidAgents = mergedOptions.agent.filter((a) => !validAgents.includes(a));
 
       if (invalidAgents.length > 0) {
-        p.log.error(`Invalid agents: ${invalidAgents.join(", ")}`);
-        p.log.info(`Valid agents: ${validAgents.join(", ")}`);
+        if (jsonOutput) {
+          console.log(formatError(`Invalid agents: ${invalidAgents.join(", ")}`, version));
+        } else {
+          p.log.error(`Invalid agents: ${invalidAgents.join(", ")}`);
+          p.log.info(`Valid agents: ${validAgents.join(", ")}`);
+        }
         process.exit(1);
       }
 
-      targetAgents = options.agent as AgentType[];
+      targetAgents = mergedOptions.agent as AgentType[];
     } else {
-      spinner.start("Detecting installed agents...");
+      spinner?.start("Detecting installed agents...");
       const installedAgents = await detectInstalledAgents();
-      spinner.stop(`Detected ${installedAgents.length} agent${installedAgents.length !== 1 ? "s" : ""}`);
+      spinner?.stop(`Detected ${installedAgents.length} agent${installedAgents.length !== 1 ? "s" : ""}`);
 
       if (installedAgents.length === 0) {
-        if (options.yes) {
+        if (mergedOptions.yes) {
           targetAgents = ["opencode", "claude-code", "codex", "cursor"];
-          p.log.info("Installing to all agents (none detected)");
+          if (!jsonOutput) {
+            p.log.info("Installing to all agents (none detected)");
+          }
         } else {
           p.log.warn("No coding agents detected. You can still install modes.");
 
-          const allAgentChoices = Object.entries(agents).map(([key, config]) => ({
+          const allAgentChoices = Object.entries(agents).map(([key, agentConfig]) => ({
             value: key as AgentType,
-            label: config.displayName,
+            label: agentConfig.displayName,
           }));
 
           const selected = await p.multiselect({
@@ -154,19 +288,21 @@ async function main(source: string, options: Options) {
 
           targetAgents = selected as AgentType[];
         }
-      } else if (installedAgents.length === 1 || options.yes) {
+      } else if (installedAgents.length === 1 || mergedOptions.yes) {
         targetAgents = installedAgents;
-        if (installedAgents.length === 1) {
-          const firstAgent = installedAgents[0];
-          p.log.info(`Installing to: ${chalk.cyan(agents[firstAgent].displayName)}`);
-        } else {
-          p.log.info(`Installing to: ${installedAgents.map((a) => chalk.cyan(agents[a].displayName)).join(", ")}`);
+        if (!jsonOutput) {
+          if (installedAgents.length === 1) {
+            const firstAgent = installedAgents[0];
+            p.log.info(`Installing to: ${colors.secondary(agents[firstAgent].displayName)}`);
+          } else {
+            p.log.info(`Installing to: ${installedAgents.map((a) => colors.secondary(agents[a].displayName)).join(", ")}`);
+          }
         }
       } else {
         const agentChoices = installedAgents.map((a) => ({
           value: a,
           label: agents[a].displayName,
-          hint: `${options.global ? agents[a].globalSkillsDir : agents[a].skillsDir}`,
+          hint: `${mergedOptions.global ? agents[a].globalSkillsDir : agents[a].skillsDir}`,
         }));
 
         const selected = await p.multiselect({
@@ -185,9 +321,9 @@ async function main(source: string, options: Options) {
       }
     }
 
-    let installGlobally = options.global ?? false;
+    let installGlobally = mergedOptions.global ?? false;
 
-    if (options.global === undefined && !options.yes) {
+    if (mergedOptions.global === undefined && !mergedOptions.yes && !jsonOutput) {
       const scope = await p.select({
         message: "Installation scope",
         options: [
@@ -204,21 +340,23 @@ async function main(source: string, options: Options) {
       installGlobally = scope as boolean;
     }
 
-    console.log();
-    p.log.step(chalk.bold("Installation Summary"));
+    if (!jsonOutput) {
+      console.log();
+      p.log.step(colors.primaryBold("Installation Summary"));
 
-    for (const mode of selectedModes) {
-      p.log.message(`  ${chalk.cyan(getModeDisplayName(mode))}`);
-      for (const agent of targetAgents) {
-        const path = getInstallPath(mode.name, agent, { global: installGlobally });
-        const installed = await isModeInstalled(mode.name, agent, { global: installGlobally });
-        const status = installed ? chalk.yellow(" (will overwrite)") : "";
-        p.log.message(`    ${chalk.dim("→")} ${agents[agent].displayName}: ${chalk.dim(path)}${status}`);
+      for (const mode of selectedModes) {
+        p.log.message(`  ${colors.secondary(getModeDisplayName(mode))}`);
+        for (const agent of targetAgents) {
+          const path = getInstallPath(mode.name, agent, { global: installGlobally });
+          const installed = await isModeInstalled(mode.name, agent, { global: installGlobally });
+          const status = installed ? colors.warning(" (will overwrite)") : "";
+          p.log.message(`    ${colors.dim(symbols.arrow)} ${agents[agent].displayName}: ${colors.dim(path)}${status}`);
+        }
       }
+      console.log();
     }
-    console.log();
 
-    if (!options.yes) {
+    if (!mergedOptions.yes && !jsonOutput) {
       const confirmed = await p.confirm({ message: "Proceed with installation?" });
 
       if (p.isCancel(confirmed) || !confirmed) {
@@ -227,75 +365,79 @@ async function main(source: string, options: Options) {
       }
     }
 
-    spinner.start("Installing modes...");
+    // Use parallel installation
+    const tasks = createInstallTasks(selectedModes, targetAgents);
+    const parallelism = getConfigParallelism(config);
 
-    const results: { mode: string; agent: string; success: boolean; path: string; error?: string }[] = [];
-
-    for (const mode of selectedModes) {
-      for (const agent of targetAgents) {
-        const result = await installModeForAgent(mode, agent, { global: installGlobally });
-        results.push({
-          mode: getModeDisplayName(mode),
-          agent: agents[agent].displayName,
-          ...result,
-        });
-      }
+    if (!jsonOutput) {
+      spinner?.start("Installing modes...");
     }
 
-    spinner.stop("Installation complete");
+    const startTime = Date.now();
+    let lastProgress = 0;
 
-    console.log();
+    const results = await installModesParallel(
+      tasks,
+      { global: installGlobally, concurrency: parallelism },
+      jsonOutput
+        ? undefined
+        : (progress) => {
+            if (progress.completed > lastProgress) {
+              lastProgress = progress.completed;
+              const bar = renderProgressBar({
+                total: progress.total,
+                current: progress.completed,
+                width: 25,
+              });
+              spinner?.message(`${bar} ${progress.current ? colors.dim(`Installing ${progress.current.mode.name}...`) : ""}`);
+            }
+          },
+    );
+
+    const duration = Date.now() - startTime;
+
+    if (!jsonOutput) {
+      spinner?.stop("Installation complete");
+    }
+
     const successful = results.filter((r) => r.success);
     const failed = results.filter((r) => !r.success);
 
-    if (successful.length > 0) {
-      p.log.success(
-        chalk.green(`Successfully installed ${successful.length} mode${successful.length !== 1 ? "s" : ""}`),
-      );
-      for (const r of successful) {
-        p.log.message(`  ${chalk.green("✓")} ${r.mode} → ${r.agent}`);
-        p.log.message(`    ${chalk.dim(r.path)}`);
-      }
-    }
-
-    if (failed.length > 0) {
+    if (jsonOutput) {
+      console.log(formatInstallResultsAsJson(results, version));
+    } else {
       console.log();
-      p.log.error(chalk.red(`Failed to install ${failed.length} mode${failed.length !== 1 ? "s" : ""}`));
-      for (const r of failed) {
-        p.log.message(`  ${chalk.red("✗")} ${r.mode} → ${r.agent}`);
-        p.log.message(`    ${chalk.dim(r.error)}`);
-      }
+      console.log(renderInstallResultCard(results));
+      console.log();
+      console.log(colors.dim(`Completed in ${(duration / 1000).toFixed(1)}s`));
+      console.log();
+      p.outro(failed.length === 0 ? colors.success("Done!") : colors.warning("Completed with errors"));
     }
 
-    console.log();
-    p.outro(chalk.green("Done!"));
+    process.exit(failed.length > 0 ? 1 : 0);
   } catch (error) {
-    p.log.error(error instanceof Error ? error.message : "Unknown error occurred");
-    p.outro(chalk.red("Installation failed"));
+    if (jsonOutput) {
+      console.log(formatError(error instanceof Error ? error : "Unknown error occurred", version));
+    } else {
+      p.log.error(error instanceof Error ? error.message : "Unknown error occurred");
+      p.outro(chalk.red("Installation failed"));
+    }
     process.exit(1);
   }
 }
 
 function listModesByCategory(modes: Mode[]): void {
-  const categories = new Map<string, Mode[]>();
+  const categories = buildCategoryTree(modes);
 
-  for (const mode of modes) {
-    if (!categories.has(mode.category)) {
-      categories.set(mode.category, []);
+  for (const category of categories) {
+    p.log.message(colors.primaryBold(`${category.name} (${category.count})`));
+    for (const mode of category.modes.slice(0, 5)) {
+      p.log.message(`  ${colors.secondary(getModeDisplayName(mode))}`);
+      p.log.message(`    ${colors.dim(mode.description)}`);
     }
-    categories.get(mode.category)!.push(mode);
-  }
-
-  const sortedCategories = Array.from(categories.entries()).sort((a, b) => b[1].length - a[1].length);
-
-  for (const [category, categoryModes] of sortedCategories) {
-    p.log.message(chalk.bold(`${category} (${categoryModes.length})`));
-    for (const mode of categoryModes.sort((a, b) => a.name.localeCompare(b.name))) {
-      p.log.message(`  ${chalk.cyan(getModeDisplayName(mode))}`);
-      p.log.message(`    ${chalk.dim(mode.description)}`);
+    if (category.modes.length > 5) {
+      p.log.message(colors.dim(`  ... and ${category.modes.length - 5} more`));
     }
-    if (category !== sortedCategories[sortedCategories.length - 1][0]) {
-      console.log();
-    }
+    console.log();
   }
 }

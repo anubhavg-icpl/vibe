@@ -1,4 +1,4 @@
-import { mkdir, cp, access, readFile, writeFile } from "fs/promises";
+import { mkdir, cp, access, readFile, writeFile, readdir } from "fs/promises";
 import { join, basename } from "path";
 import matter from "gray-matter";
 import type { Mode, AgentType } from "./types.js";
@@ -155,4 +155,85 @@ export function getInstallPath(
   const targetBase = options.global ? agent.globalSkillsDir : join(options.cwd || process.cwd(), agent.skillsDir);
 
   return join(targetBase, modeName);
+}
+
+export interface ParallelInstallTask {
+  mode: Mode;
+  agent: AgentType;
+}
+
+export interface ParallelInstallResult {
+  mode: string;
+  agent: string;
+  success: boolean;
+  path: string;
+  error?: string;
+}
+
+export interface ParallelInstallProgress {
+  completed: number;
+  total: number;
+  current: ParallelInstallTask | null;
+  results: ParallelInstallResult[];
+}
+
+export async function installModesParallel(
+  tasks: ParallelInstallTask[],
+  options: { global?: boolean; cwd?: string; concurrency?: number } = {},
+  onProgress?: (progress: ParallelInstallProgress) => void,
+): Promise<ParallelInstallResult[]> {
+  const { concurrency = 4 } = options;
+  const results: ParallelInstallResult[] = [];
+  const queue = [...tasks];
+  let completed = 0;
+
+  const runTask = async (task: ParallelInstallTask): Promise<ParallelInstallResult> => {
+    const result = await installModeForAgent(task.mode, task.agent, options);
+    return {
+      mode: task.mode.name,
+      agent: agents[task.agent].displayName,
+      ...result,
+    };
+  };
+
+  const workers = Array(Math.min(concurrency, queue.length))
+    .fill(null)
+    .map(async () => {
+      while (queue.length > 0) {
+        const task = queue.shift();
+        if (!task) break;
+
+        onProgress?.({
+          completed,
+          total: tasks.length,
+          current: task,
+          results: [...results],
+        });
+
+        const result = await runTask(task);
+        results.push(result);
+        completed++;
+
+        onProgress?.({
+          completed,
+          total: tasks.length,
+          current: null,
+          results: [...results],
+        });
+      }
+    });
+
+  await Promise.all(workers);
+
+  return results;
+}
+
+export function createInstallTasks(modes: Mode[], agentTypes: AgentType[]): ParallelInstallTask[] {
+  const tasks: ParallelInstallTask[] = [];
+  for (const mode of modes) {
+    for (const agent of agentTypes) {
+      tasks.push({ mode, agent });
+    }
+  }
+  return tasks;
 }

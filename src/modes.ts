@@ -10,7 +10,10 @@ async function parseModeMd(modeMdPath: string): Promise<Mode | null> {
     const content = await readFile(modeMdPath, "utf-8");
     const { data, content: bodyContent } = matter(content);
 
-    const name = data.name || basename(dirname(modeMdPath)).replace(/-mode\.md$/, "");
+    // Extract name from filename (e.g., "tony-stark-mode.md" -> "tony-stark-mode")
+    const fileName = basename(modeMdPath);
+    const nameFromFile = fileName.replace(/\.md$/, "");
+    const name = data.name || nameFromFile;
     const description = data.description || extractDescription(bodyContent);
     const category = data.category || extractCategory(modeMdPath);
 
