@@ -201,7 +201,56 @@ $ vibe modes --category testing --agent claude-code
 ```text
 vibe/
 ├── .ai/rules/              # Universal rules (works everywhere)
-├── modes/
+├── agents/                 # AI agent templates (9 agents)
+│   ├── architect.md        # System architecture agent
+│   ├── build-error-resolver.md  # Build error fixing agent
+│   ├── code-reviewer.md    # Code review agent
+│   ├── doc-updater.md      # Documentation updater
+│   ├── e2e-runner.md       # E2E test runner agent
+│   ├── planner.md          # Task planning agent
+│   ├── refactor-cleaner.md # Code refactoring agent
+│   ├── security-reviewer.md # Security review agent
+│   └── tdd-guide.md        # TDD workflow agent
+├── commands/               # Slash command templates (10 commands)
+│   ├── build-fix.md        # /build-fix command
+│   ├── code-review.md      # /code-review command
+│   ├── e2e.md              # /e2e command
+│   ├── plan.md             # /plan command
+│   ├── tdd.md              # /tdd command
+│   └── ...                 # More commands
+├── contexts/               # Context templates (3 contexts)
+│   ├── dev.md              # Development context
+│   ├── research.md         # Research context
+│   └── review.md           # Code review context
+├── examples/               # Example configurations
+│   ├── CLAUDE.md           # Example CLAUDE.md file
+│   ├── user-CLAUDE.md      # User-level CLAUDE.md
+│   ├── statusline.json     # Statusline configuration
+│   └── sessions/           # Example session transcripts
+├── hooks/                  # Hook configurations
+│   ├── hooks.json          # Hook definitions
+│   ├── memory-persistence/ # Memory persistence hooks
+│   └── strategic-compact/  # Strategic compaction hooks
+├── mcp-configs/            # MCP server configurations
+│   └── mcp-servers.json    # MCP server setup
+├── plugins/                # Plugin documentation
+│   └── README.md           # Plugin guide
+├── rules/                  # Rule templates (8 rules)
+│   ├── agents.md           # Agent behavior rules
+│   ├── coding-style.md     # Coding style rules
+│   ├── git-workflow.md     # Git workflow rules
+│   ├── hooks.md            # Hook rules
+│   ├── patterns.md         # Design pattern rules
+│   ├── performance.md      # Performance rules
+│   ├── security.md         # Security rules
+│   └── testing.md          # Testing rules
+├── skills/                 # Skill templates (6+ skills)
+│   ├── backend-patterns.md # Backend development patterns
+│   ├── frontend-patterns.md # Frontend development patterns
+│   ├── coding-standards.md # Coding standards skill
+│   ├── clickhouse-io.md    # ClickHouse patterns
+│   └── ...                 # More skills & subdirectories
+├── modes/                  # AI chat modes (283+)
 │   ├── ai-ml/              # LLM, MLOps, Vector DBs
 │   ├── architecture/       # System design, clean code
 │   ├── cloud-infrastructure/ # AWS, GCP, Azure, Terraform, K8s
@@ -268,6 +317,50 @@ _Finally, consistency across all your AI assistants without copying prompts like
 - `vector-database-expert-mode` - Pinecone, Weaviate, Milvus
 - `mlops-expert-mode` - ML pipeline automation
 
+## Extended Ecosystem
+
+Beyond modes, VIBE provides a complete toolkit for customizing AI coding assistants:
+
+### Agents (`agents/`)
+
+Pre-built AI agent templates for specialized tasks:
+
+| Agent | Description |
+| ----- | ----------- |
+| `architect` | System architecture design and review |
+| `build-error-resolver` | Automatically fix build errors |
+| `code-reviewer` | Comprehensive code review |
+| `doc-updater` | Keep documentation in sync |
+| `e2e-runner` | End-to-end test orchestration |
+| `planner` | Task breakdown and planning |
+| `refactor-cleaner` | Code refactoring and cleanup |
+| `security-reviewer` | Security vulnerability analysis |
+| `tdd-guide` | Test-driven development workflow |
+
+### Commands (`commands/`)
+
+Slash commands for quick actions: `/build-fix`, `/code-review`, `/e2e`, `/learn`, `/plan`, `/refactor-clean`, `/tdd`, `/test-coverage`, `/update-codemaps`, `/update-docs`
+
+### Contexts (`contexts/`)
+
+Context templates for different workflows: `dev`, `research`, `review`
+
+### Rules (`rules/`)
+
+Behavior rules for agents: `agents`, `coding-style`, `git-workflow`, `hooks`, `patterns`, `performance`, `security`, `testing`
+
+### Skills (`skills/`)
+
+Reusable skill modules: `backend-patterns`, `frontend-patterns`, `coding-standards`, `clickhouse-io`, and more
+
+### Hooks (`hooks/`)
+
+Event-driven hooks for automation: memory persistence, strategic compaction
+
+### MCP Configs (`mcp-configs/`)
+
+Model Context Protocol server configurations for extended capabilities
+
 ## Stats
 
 | Metric                | Value    |
@@ -281,6 +374,10 @@ _Finally, consistency across all your AI assistants without copying prompts like
 | Testing/Chaos Modes   | **23**   |
 | Security Modes        | **9**    |
 | DevOps/Platform Modes | **8**    |
+| Agent Templates       | **9**    |
+| Commands              | **10**   |
+| Rules                 | **8**    |
+| Skills                | **6+**   |
 
 ## Contributing
 
