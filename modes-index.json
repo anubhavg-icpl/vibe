@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
   "generatedAt": "2026-01-22T19:25:23.427783Z",
-  "totalModes": 307,
+  "totalModes": 313,
   "categories": [
     {
       "name": "ai-ml",
@@ -2629,6 +2629,28 @@
           ]
         },
         {
+          "slug": "alert-event-pipeline-expert-mode",
+          "title": "Alert & Event Pipeline Expert",
+          "description": "Expert in alert pipelines — single source of truth AlertService, dedup, rate limiting, fan-out (notifications + SignalR + webhook), severity taxonomy, correlation/grouping, alert storms, and audit trails",
+          "path": [
+            "security",
+            "alert-event-pipeline-expert-mode"
+          ],
+          "tags": [
+            "alerting",
+            "events",
+            "signalr",
+            "notifications",
+            "deduplication",
+            "rate-limiting",
+            "alert-storms",
+            "observability",
+            "event-driven",
+            "fan-out",
+            "correlation"
+          ]
+        },
+        {
           "slug": "api-security-audit-agent-mode",
           "title": "API Security Audit Agent",
           "description": "Autonomous agent that audits REST/GraphQL APIs for security vulnerabilities, data exposure, and OWASP API Top 10 compliance",
@@ -2648,12 +2670,101 @@
           ]
         },
         {
+          "slug": "artifact-supply-chain-integrity-expert-mode",
+          "title": "Artifact Supply-Chain Integrity Expert",
+          "description": "Expert in artifact integrity — SHA256/HMAC verification, Sigstore/cosign signatures, SLSA provenance, SBOM generation, in-toto attestations, and tamper-proof agent/binary distribution",
+          "path": [
+            "security",
+            "artifact-supply-chain-integrity-expert-mode"
+          ],
+          "tags": [
+            "supply-chain",
+            "sha256",
+            "hmac",
+            "sigstore",
+            "cosign",
+            "slsa",
+            "sbom",
+            "in-toto",
+            "artifact-verification",
+            "code-signing",
+            "tamper-proof",
+            "integrity"
+          ]
+        },
+        {
+          "slug": "cloud-secret-provider-expert-mode",
+          "title": "Cloud Secret Provider Expert",
+          "description": "Expert in ISecretProvider abstractions, chained providers (env var → AWS Secrets Manager → Vault → GCP/Azure KV), caching with TTL + invalidation, graceful failure modes, secret rotation, and zero-leak logging",
+          "path": [
+            "security",
+            "cloud-secret-provider-expert-mode"
+          ],
+          "tags": [
+            "secrets",
+            "aws-secrets-manager",
+            "vault",
+            "gcp-secret-manager",
+            "azure-key-vault",
+            "isecretprovider",
+            "chained-provider",
+            "caching",
+            "rotation",
+            "zero-leak",
+            "dotnet"
+          ]
+        },
+        {
+          "slug": "conditional-access-authorization-expert-mode",
+          "title": "Conditional Access & Authorization Expert",
+          "description": "Expert in conditional access policies, policy-based authorization, IP/device/role/time-based gates, risk-based access, and deny-by-default middleware across ASP.NET Core, Microsoft Entra, Okta, and OPA",
+          "path": [
+            "security",
+            "conditional-access-authorization-expert-mode"
+          ],
+          "tags": [
+            "authorization",
+            "conditional-access",
+            "aspnet-core",
+            "entra",
+            "okta",
+            "opa",
+            "rbac",
+            "abac",
+            "deny-by-default",
+            "zero-trust",
+            "policy-engine"
+          ]
+        },
+        {
           "slug": "container-security-mode",
           "title": "Container Security",
           "description": "",
           "path": [
             "security",
             "container-security-mode"
+          ]
+        },
+        {
+          "slug": "database-credential-hygiene-expert-mode",
+          "title": "Database Credential Hygiene Expert",
+          "description": "Expert in separating DB config (host/port/db/user) from DB secret (password), runtime connection-string assembly via ISecretProvider, dynamic credentials, IAM/RDS auth, SCRAM/SSL, connection pooling under rotation, and zero password-in-catalog guarantees",
+          "path": [
+            "security",
+            "database-credential-hygiene-expert-mode"
+          ],
+          "tags": [
+            "database",
+            "postgresql",
+            "npgsql",
+            "connection-string",
+            "password-rotation",
+            "iam-auth",
+            "rds-auth",
+            "scram",
+            "ssl-mode",
+            "secret-provider",
+            "zero-trust-db"
           ]
         },
         {
@@ -2773,6 +2884,27 @@
           "path": [
             "security",
             "soc2-compliance-mode"
+          ]
+        },
+        {
+          "slug": "tenant-isolation-architect-mode",
+          "title": "Tenant Isolation Architect",
+          "description": "Expert in multi-tenant data isolation — database-per-tenant, schema-per-tenant, shared-with-RLS; immutable tenant context, per-request DbContextFactory, cross-tenant leak prevention, and tenant-scoped caching, queues, and search indexes",
+          "path": [
+            "security",
+            "tenant-isolation-architect-mode"
+          ],
+          "tags": [
+            "multitenancy",
+            "tenant-isolation",
+            "ef-core",
+            "dbcontext",
+            "row-level-security",
+            "rls",
+            "finbuckle",
+            "cross-tenant-leak",
+            "data-isolation",
+            "postgresql"
           ]
         }
       ]
