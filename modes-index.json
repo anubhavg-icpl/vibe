@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T10:23:22.926308Z",
-  "totalModes": 476,
+  "generatedAt": "2026-05-04T10:46:57.673696Z",
+  "totalModes": 511,
   "categories": [
     {
       "name": "ai-engineering",
@@ -1007,6 +1007,531 @@
           "path": [
             "design-systems",
             "README"
+          ]
+        },
+        {
+          "slug": "acd-brutalist-the-verge-design-mode",
+          "title": "The Verge \u2014 Neon Brutalist Design Mode",
+          "description": "Reference DESIGN.md for hard-edge editorial publishing with saturated single-hue accent.",
+          "path": [
+            "design-systems",
+            "acd-brutalist-the-verge-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "brutalist",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-bmw-design-mode",
+          "title": "BMW \u2014 Editorial Performance Blue Design Mode",
+          "description": "Reference DESIGN.md for luxury automotive editorial that needs to feel engineered. White slabs, full-bleed performance photography, BMW corporate blue rising into a deeper blue at active states, restrained Helvetica-grade typography.",
+          "path": [
+            "design-systems",
+            "acd-cinematic-bmw-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-cohere-design-mode",
+          "title": "Cohere \u2014 Enterprise AI Gradient Design Mode",
+          "description": "Reference DESIGN.md for enterprise-AI brands that need to feel premium, dark, and quietly futuristic. Ink canvas, Unica grotesque type, saturated coral-to-violet brand gradient deployed as backdrop and accent rule, full-pill buttons, gen...",
+          "path": [
+            "design-systems",
+            "acd-cinematic-cohere-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-ferrari-design-mode",
+          "title": "Ferrari \u2014 Chiaroscuro Rosso Corsa Design Mode",
+          "description": "Reference DESIGN.md for performance brands that need to feel theatrical. High-contrast black-and-white frames cut by Rosso Corsa red, sharp 0-radius components, FerrariSans across the entire page, photography that treats the car as sculp...",
+          "path": [
+            "design-systems",
+            "acd-cinematic-ferrari-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-lamborghini-design-mode",
+          "title": "Lamborghini \u2014 Black Cathedral Gold Design Mode",
+          "description": "Reference DESIGN.md for hyper-luxury that needs to feel forged. True-black canvas, oversized LamboType nameplates at 120px+, hexagonal angle motifs, single warm-gold accent for primary actions, photography lit like a vault.",
+          "path": [
+            "design-systems",
+            "acd-cinematic-lamborghini-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-minimax-design-mode",
+          "title": "MiniMax \u2014 Cinematic Lab Design Mode",
+          "description": "Reference DESIGN.md for AI-lab cinematic: pure black canvas, neon-lime accent on charcoal chrome, geometric DM Sans / Outfit type, pill-shaped CTAs.",
+          "path": [
+            "design-systems",
+            "acd-cinematic-minimax-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-nvidia-design-mode",
+          "title": "NVIDIA \u2014 Cinematic Compute Design Mode",
+          "description": "Reference DESIGN.md for GPU-vendor cinematic: chrome-black canvas, signature green action, video-led hero, hard-edged grotesque headlines.",
+          "path": [
+            "design-systems",
+            "acd-cinematic-nvidia-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-renault-design-mode",
+          "title": "Renault \u2014 Aurora Pop Geometric Design Mode",
+          "description": "Reference DESIGN.md for European mobility brands that need to feel modern and warm at once. Paper-white canvas with full-bleed aurora gradients (yellow \u2192 magenta \u2192 cyan), the diamond logomark as primary geometric anchor, NouvelR across t...",
+          "path": [
+            "design-systems",
+            "acd-cinematic-renault-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-runway-design-mode",
+          "title": "RunwayML \u2014 Cinematic Dark Design Mode",
+          "description": "Reference DESIGN.md for film-grade dark UI, oversized type, motion-forward hero sections.",
+          "path": [
+            "design-systems",
+            "acd-cinematic-runway-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-cinematic-tavus-design-mode",
+          "title": "Tavus \u2014 Cinematic Conversational AI Design Mode",
+          "description": "Reference DESIGN.md for video-AI products that need to feel premium and human at once. Cream off-white canvas with deep ink contrast, one warm pink accent, oversized display serif intercut with a compact display grotesque.",
+          "path": [
+            "design-systems",
+            "acd-cinematic-tavus-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "cinematic",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-data-dense-clickhouse-design-mode",
+          "title": "ClickHouse \u2014 Data-Dense Pro Design Mode",
+          "description": "Reference DESIGN.md for dashboard-first, chart-heavy, saturated-on-charcoal dev-tool aesthetic.",
+          "path": [
+            "design-systems",
+            "acd-data-dense-clickhouse-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "data-dense",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-data-dense-datadog-design-mode",
+          "title": "Datadog \u2014 Observability Density Design Mode",
+          "description": "Reference DESIGN.md for monitoring dashboards: deep navy chrome, royal-purple brand, warm-cool categorical chart palette tuned for stacked time series at 1px tick precision.",
+          "path": [
+            "design-systems",
+            "acd-data-dense-datadog-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "data-dense",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-data-dense-mongodb-design-mode",
+          "title": "MongoDB \u2014 Data-Dense Atlas Design Mode",
+          "description": "Reference DESIGN.md for developer database UIs: forest-green leaf brand, deep slate chrome, dashboard-first density with marketing surfaces in light editorial.",
+          "path": [
+            "design-systems",
+            "acd-data-dense-mongodb-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "data-dense",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-data-dense-posthog-design-mode",
+          "title": "PostHog \u2014 Friendly Data-Dense Design Mode",
+          "description": "Reference DESIGN.md for analytics products that don't want to feel cold. Saturated cobalt + warning yellow on white. Hedgehog-tier personality without losing chart density.",
+          "path": [
+            "design-systems",
+            "acd-data-dense-posthog-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "data-dense",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-editorial-linear-design-mode",
+          "title": "Linear \u2014 Editorial Minimalism Design Mode",
+          "description": "Reference DESIGN.md for calm-neutral SaaS with one surgical purple accent.",
+          "path": [
+            "design-systems",
+            "acd-editorial-linear-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "editorial",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-editorial-vercel-design-mode",
+          "title": "Vercel \u2014 Editorial Grayscale Design Mode",
+          "description": "Reference DESIGN.md for grayscale-only editorial. No accent. Geometry and type carry the entire identity.",
+          "path": [
+            "design-systems",
+            "acd-editorial-vercel-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "editorial",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-glass-apple-design-mode",
+          "title": "Apple \u2014 Glass / Soft-Futurism Reference Design Mode",
+          "description": "Reference DESIGN.md for premium consumer software with translucent surfaces. SF Pro everywhere, system tints sparingly, vibrancy materials over solid fills.",
+          "path": [
+            "design-systems",
+            "acd-glass-apple-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "glass",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-glass-arc-design-mode",
+          "title": "Arc Browser \u2014 Glass / Soft-Futurism Design Mode",
+          "description": "Reference DESIGN.md for frosted translucency, pastel gradients, soft geometry.",
+          "path": [
+            "design-systems",
+            "acd-glass-arc-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "glass",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-indie-granola-design-mode",
+          "title": "Granola \u2014 Cult / Indie Design Mode",
+          "description": "Reference DESIGN.md for warm-glass AI notetaker aesthetic. Not in VoltAgent's catalog. Worth cloning.",
+          "path": [
+            "design-systems",
+            "acd-indie-granola-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "indie",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-playful-canva-design-mode",
+          "title": "Canva \u2014 Design Platform Playful Design Mode",
+          "description": "Reference DESIGN.md for design tools that need to feel friendly and full-spectrum without sliding into kitsch. Canva-purple action, periwinkle and sky support tones, generous radii, gradient surfaces used as backdrops not buttons.",
+          "path": [
+            "design-systems",
+            "acd-playful-canva-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "playful",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-playful-figma-design-mode",
+          "title": "Figma \u2014 Playful Color Design Mode",
+          "description": "Reference DESIGN.md for multi-color, rounded, illustration-friendly SaaS.",
+          "path": [
+            "design-systems",
+            "acd-playful-figma-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "playful",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-playful-toss-design-mode",
+          "title": "Toss \u2014 Playful Fintech Design Mode",
+          "description": "Reference DESIGN.md for Korean-fintech playful: Toss Blue against bright white, Toss Product Sans paired with Noto Sans KR, generous radii, friendly mood, mobile-first density.",
+          "path": [
+            "design-systems",
+            "acd-playful-toss-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "playful",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-granola-x-criterion-design-mode",
+          "title": "Granola \u00d7 Criterion \u2014 Premium Notes With Gravitas Design Mode",
+          "description": "Remix. Granola's warm cream + frosted glass + Criterion Collection's film-archive editorial rigor. For premium consumer apps that want to feel like a curated library, not a productivity tool.",
+          "path": [
+            "design-systems",
+            "acd-remix-granola-x-criterion-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-linear-x-claude-design-mode",
+          "title": "Linear \u00d7 Claude \u2014 Editorial SaaS with a Soul Design Mode",
+          "description": "Remix example. Linear's surgical density + Claude's warm editorial restraint. Inherits Linear geometry, swaps accent to terracotta, keeps Inter for UI but adds Tiempos for headlines.",
+          "path": [
+            "design-systems",
+            "acd-remix-linear-x-claude-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-mercury-x-linear-design-mode",
+          "title": "Mercury \u00d7 Linear \u2014 Surgical Density On Warm Paper Design Mode",
+          "description": "Remix. Mercury's cream-canvas fintech warmth + Linear's surgical UI density. For B2B finance dashboards, billing consoles, and treasury tools that need Linear-grade information density without losing the trust-broadcasting warmth Mercury...",
+          "path": [
+            "design-systems",
+            "acd-remix-mercury-x-linear-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-notion-x-duolingo-design-mode",
+          "title": "Notion \u00d7 Duolingo \u2014 Friendly Education SaaS Design Mode",
+          "description": "Remix. Notion's warm neutral document surface + Duolingo's saturated greens, rounded corners, and tactile feedback. For learning platforms, courses, and education tools that want to feel like a serious workspace and a friendly tutor at o...",
+          "path": [
+            "design-systems",
+            "acd-remix-notion-x-duolingo-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-ollama-x-elevenlabs-design-mode",
+          "title": "Ollama \u00d7 ElevenLabs \u2014 CLI Tool With A Cinematic Hero Design Mode",
+          "description": "Remix. Ollama's pure terminal monochrome + ElevenLabs' cinematic dark gradients and electric-blue motion. For CLI / OSS tool landing pages that want the hero to feel like a product film, then settle into terminal density below the fold.",
+          "path": [
+            "design-systems",
+            "acd-remix-ollama-x-elevenlabs-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-stripe-x-a24-design-mode",
+          "title": "Stripe \u00d7 A24 \u2014 Fintech Pitch With Personality Design Mode",
+          "description": "Remix. Stripe's grid + A24's poster boldness. For pitch decks, investor sites, premium fintech that needs to feel less corporate.",
+          "path": [
+            "design-systems",
+            "acd-remix-stripe-x-a24-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-vercel-x-pitchfork-design-mode",
+          "title": "Vercel \u00d7 Pitchfork \u2014 Editorial Docs With An Opinion Design Mode",
+          "description": "Remix. Vercel's grayscale-only restraint + Pitchfork's `#ff5d1f` orange and editorial serif. For docs, changelogs, and developer-marketing pages that want to read like a magazine review without losing technical credibility.",
+          "path": [
+            "design-systems",
+            "acd-remix-vercel-x-pitchfork-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-remix-warp-x-sentry-design-mode",
+          "title": "Warp \u00d7 Sentry \u2014 Developer Dashboard With Warmth Design Mode",
+          "description": "Remix. Warp's mono grid + Sentry's lilac purple. Dashboards that don't read as funeral parlors.",
+          "path": [
+            "design-systems",
+            "acd-remix-warp-x-sentry-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "remix",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-terminal-ollama-design-mode",
+          "title": "Ollama \u2014 Terminal-Core Design Mode",
+          "description": "Reference DESIGN.md for monochrome, mono-everywhere, CLI-first aesthetic.",
+          "path": [
+            "design-systems",
+            "acd-terminal-ollama-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "terminal",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-terminal-opencode-design-mode",
+          "title": "OpenCode AI \u2014 Terminal Native Design Mode",
+          "description": "Reference DESIGN.md for OSS terminal coding agent: near-black canvas, off-white text, phosphor-green action, IBM Plex Mono everywhere, hard edges.",
+          "path": [
+            "design-systems",
+            "acd-terminal-opencode-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "terminal",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-terminal-warp-design-mode",
+          "title": "Warp \u2014 Modern Terminal-Core Design Mode",
+          "description": "Reference DESIGN.md for terminal-aesthetic with chromatic warmth. Mono-first, but neon teal and coral break the ascetic.",
+          "path": [
+            "design-systems",
+            "acd-terminal-warp-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "terminal",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-warm-claude-design-mode",
+          "title": "Claude (Anthropic) \u2014 Warm Editorial Design Mode",
+          "description": "Reference DESIGN.md for a terracotta-on-cream editorial aesthetic. Drop into Claude Design \u2192 scaffolds the full system.",
+          "path": [
+            "design-systems",
+            "acd-warm-claude-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "warm",
+            "claude-design"
+          ]
+        },
+        {
+          "slug": "acd-warm-mercury-design-mode",
+          "title": "Mercury \u2014 Banking Editorial Warmth Design Mode",
+          "description": "Reference DESIGN.md for fintech that wants to feel calm and considered, not chrome-and-glass cold. Cream canvas, indigo action, dashboard density that still reads like editorial.",
+          "path": [
+            "design-systems",
+            "acd-warm-mercury-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "warm",
+            "claude-design"
           ]
         },
         {
