@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:53:43.571170Z",
-  "totalModes": 768,
+  "generatedAt": "2026-05-04T12:04:09.574967Z",
+  "totalModes": 779,
   "categories": [
     {
       "name": "ai-engineering",
@@ -917,6 +917,33 @@
       "title": "Android Platform",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "android-platform",
+            "README"
+          ]
+        },
+        {
+          "slug": "android-15-features-expert-mode",
+          "title": "Android 15 Features Expert",
+          "description": "Headline Android 15 (API 35) developer features \u2014 edge-to-edge, predictive back, foreground service types, NFC observe mode, satellite, Private Space, screen recording detection",
+          "path": [
+            "android-platform",
+            "android-15-features-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-15",
+            "api-35",
+            "edge-to-edge",
+            "predictive-back",
+            "foreground-services",
+            "nfc"
+          ]
+        },
+        {
           "slug": "android-agent-skills-expert-mode",
           "title": "Android Agent Skills Expert",
           "description": "Authoring, distributing, and consuming Android skills (SKILL.md format, .skills/ layout, android CLI integration) for Gemini and other agent runtimes",
@@ -951,6 +978,42 @@
           ]
         },
         {
+          "slug": "android-baseline-profiles-expert-mode",
+          "title": "Android Baseline Profiles Expert",
+          "description": "Baseline + startup profiles, Macrobenchmark, profileinstaller, AGP plugin, and R8 \u2014 the full Android startup-and-runtime perf pipeline",
+          "path": [
+            "android-platform",
+            "android-baseline-profiles-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "baseline-profiles",
+            "startup-profiles",
+            "macrobenchmark",
+            "r8",
+            "profileinstaller",
+            "app-startup"
+          ]
+        },
+        {
+          "slug": "android-health-fitness-expert-mode",
+          "title": "Android Health & Fitness Expert",
+          "description": "Health Connect (FHIR + structured types), Health Services on Wear OS, sensor APIs, sleep/workout sessions, and Google Fit migration",
+          "path": [
+            "android-platform",
+            "android-health-fitness-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "health-connect",
+            "health-services",
+            "wear-os",
+            "fhir",
+            "fitness",
+            "sensors"
+          ]
+        },
+        {
           "slug": "android-large-screens-expert-mode",
           "title": "Android Large Screens Expert",
           "description": "Foldables, tablets, and desktop displays \u2014 window size classes, fold awareness, drag and drop, multi-window, and adaptive Compose layouts",
@@ -968,6 +1031,98 @@
           ]
         },
         {
+          "slug": "android-media-expert-mode",
+          "title": "Android Media Expert",
+          "description": "Media3 / ExoPlayer 1.x for playback, MediaSession, MediaController, DRM (Widevine), DASH/HLS streaming, and Compose Media UI",
+          "path": [
+            "android-platform",
+            "android-media-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "media3",
+            "exoplayer",
+            "drm",
+            "widevine",
+            "dash",
+            "hls",
+            "mediasession"
+          ]
+        },
+        {
+          "slug": "android-ml-on-device-expert-mode",
+          "title": "Android On-Device ML Expert",
+          "description": "AICore + Gemini Nano, ML Kit GenAI APIs, LiteRT (formerly TFLite), and MediaPipe LLM Inference for on-device AI on Android",
+          "path": [
+            "android-platform",
+            "android-ml-on-device-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "on-device-ai",
+            "gemini-nano",
+            "aicore",
+            "ml-kit",
+            "litert",
+            "mediapipe",
+            "llm-inference"
+          ]
+        },
+        {
+          "slug": "android-ndk-expert-mode",
+          "title": "Android NDK Expert",
+          "description": "Native Android development with NDK \u2014 CMake, JNI, Prefab AAR packaging, NEON SIMD, and native crash debugging",
+          "path": [
+            "android-platform",
+            "android-ndk-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "ndk",
+            "jni",
+            "cmake",
+            "native",
+            "c-cpp",
+            "neon",
+            "prefab"
+          ]
+        },
+        {
+          "slug": "android-privacy-expert-mode",
+          "title": "Android Privacy Expert",
+          "description": "Photo picker, partial photo permissions, per-app language, package visibility, scoped storage, and runtime permission rationales",
+          "path": [
+            "android-platform",
+            "android-privacy-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "privacy",
+            "photo-picker",
+            "permissions",
+            "scoped-storage",
+            "per-app-language"
+          ]
+        },
+        {
+          "slug": "android-security-expert-mode",
+          "title": "Android Security Expert",
+          "description": "Play Integrity, BiometricPrompt, KeyStore + key attestation, Credential Manager, Network Security Config, and Encrypted DataStore",
+          "path": [
+            "android-platform",
+            "android-security-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "security",
+            "play-integrity",
+            "biometric",
+            "keystore",
+            "credential-manager",
+            "network-security"
+          ]
+        },
+        {
           "slug": "android-tv-expert-mode",
           "title": "Android TV Expert",
           "description": "Compose for TV, tv-material library, focus management, channels, recommendations, and remote-first UX",
@@ -982,6 +1137,23 @@
             "tv-material",
             "focus-management",
             "leanback"
+          ]
+        },
+        {
+          "slug": "camerax-expert-mode",
+          "title": "CameraX Expert",
+          "description": "CameraX 1.4+ use cases, Compose integration, extensions, video recording, and concurrent camera composition",
+          "path": [
+            "android-platform",
+            "camerax-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "camerax",
+            "camera",
+            "video",
+            "compose",
+            "lifecycle"
           ]
         },
         {
@@ -1031,6 +1203,24 @@
             "ui",
             "kotlin",
             "declarative-ui"
+          ]
+        },
+        {
+          "slug": "kotlin-multiplatform-expert-mode",
+          "title": "Kotlin Multiplatform Expert",
+          "description": "KMP project setup, expect/actual, Compose Multiplatform, Ktor, SQLDelight, kotlinx coroutines/serialization, and iOS interop",
+          "path": [
+            "android-platform",
+            "kotlin-multiplatform-expert-mode"
+          ],
+          "tags": [
+            "kotlin",
+            "kotlin-multiplatform",
+            "kmp",
+            "compose-multiplatform",
+            "ktor",
+            "sqldelight",
+            "ios"
           ]
         },
         {
