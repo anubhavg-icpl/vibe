@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:17:20.311746Z",
-  "totalModes": 607,
+  "generatedAt": "2026-05-04T11:28:02.971282Z",
+  "totalModes": 710,
   "categories": [
     {
       "name": "ai-engineering",
@@ -5808,9 +5808,680 @@
       ]
     },
     {
+      "name": "llm-eval-ops",
+      "title": "Llm Eval Ops",
+      "modes": [
+        {
+          "slug": "arize-phoenix-expert-mode",
+          "title": "Arize Phoenix Expert",
+          "description": "Open-source LLM tracing and evaluation built on OpenInference and OpenTelemetry",
+          "path": [
+            "llm-eval-ops",
+            "arize-phoenix-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "observability",
+            "phoenix",
+            "arize",
+            "openinference",
+            "opentelemetry"
+          ]
+        },
+        {
+          "slug": "canary-llm-deploy-expert-mode",
+          "title": "Canary LLM Deploy Expert",
+          "description": "Safe LLM deploys \u2014 canary, shadow traffic, rollback triggers, eval-gated promotion",
+          "path": [
+            "llm-eval-ops",
+            "canary-llm-deploy-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "canary",
+            "shadow-traffic",
+            "rollback",
+            "deploy"
+          ]
+        },
+        {
+          "slug": "deepeval-expert-mode",
+          "title": "DeepEval Expert",
+          "description": "DeepEval (Confident AI) \u2014 pytest-native LLM evals with G-Eval, Hallucination, Toxicity, Bias",
+          "path": [
+            "llm-eval-ops",
+            "deepeval-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "deepeval",
+            "confident-ai",
+            "pytest",
+            "g-eval",
+            "regression"
+          ]
+        },
+        {
+          "slug": "helicone-expert-mode",
+          "title": "Helicone Expert",
+          "description": "Helicone proxy/observability \u2014 cost tracking, semantic caching, rate limits, prompt versioning",
+          "path": [
+            "llm-eval-ops",
+            "helicone-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "observability",
+            "helicone",
+            "proxy",
+            "caching"
+          ]
+        },
+        {
+          "slug": "langfuse-expert-mode",
+          "title": "Langfuse Expert",
+          "description": "Self-hostable open-source LLM observability with tracing, scoring, datasets, and prompt management",
+          "path": [
+            "llm-eval-ops",
+            "langfuse-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "observability",
+            "langfuse",
+            "opentelemetry",
+            "tracing"
+          ]
+        },
+        {
+          "slug": "langsmith-expert-mode",
+          "title": "LangSmith Expert",
+          "description": "LangChain's hosted LLM observability and evaluation platform \u2014 traces, datasets, evaluators, hub",
+          "path": [
+            "llm-eval-ops",
+            "langsmith-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "observability",
+            "langsmith",
+            "langchain",
+            "evaluators"
+          ]
+        },
+        {
+          "slug": "llm-cost-expert-mode",
+          "title": "LLM Cost Expert",
+          "description": "Token economics, prompt caching, model routing \u2014 engineering LLM apps for sustainable spend",
+          "path": [
+            "llm-eval-ops",
+            "llm-cost-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "cost-optimization",
+            "prompt-caching",
+            "routing"
+          ]
+        },
+        {
+          "slug": "lm-eval-harness-expert-mode",
+          "title": "LM Eval Harness Expert",
+          "description": "EleutherAI lm-evaluation-harness \u2014 MMLU, ARC, HellaSwag, GSM8K, IFEval, BBH benchmarks",
+          "path": [
+            "llm-eval-ops",
+            "lm-eval-harness-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "lm-eval-harness",
+            "benchmarks",
+            "mmlu",
+            "gsm8k",
+            "ifeval",
+            "bbh"
+          ]
+        },
+        {
+          "slug": "mlflow-llm-expert-mode",
+          "title": "MLflow LLM Expert",
+          "description": "MLflow Tracing for LLMs, Prompt Engineering UI, mlflow.evaluate(), prompt registry",
+          "path": [
+            "llm-eval-ops",
+            "mlflow-llm-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "observability",
+            "mlflow",
+            "prompt-registry",
+            "tracing"
+          ]
+        },
+        {
+          "slug": "model-card-expert-mode",
+          "title": "Model Card Expert",
+          "description": "Authoring HuggingFace Model Cards, NIST AI RMF / Inspect AI eval reports, transparency notes",
+          "path": [
+            "llm-eval-ops",
+            "model-card-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "model-card",
+            "transparency",
+            "nist-ai-rmf",
+            "inspect-ai",
+            "governance"
+          ]
+        },
+        {
+          "slug": "openai-evals-expert-mode",
+          "title": "OpenAI Evals Expert",
+          "description": "openai/evals framework \u2014 registry layout, model-graded patterns, custom YAML evals",
+          "path": [
+            "llm-eval-ops",
+            "openai-evals-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "openai-evals",
+            "model-graded",
+            "registry",
+            "oaieval"
+          ]
+        },
+        {
+          "slug": "opentelemetry-llm-expert-mode",
+          "title": "OpenTelemetry LLM Expert",
+          "description": "OpenTelemetry GenAI semantic conventions \u2014 standardized LLM spans for any vendor",
+          "path": [
+            "llm-eval-ops",
+            "opentelemetry-llm-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "observability",
+            "opentelemetry",
+            "gen-ai",
+            "semconv"
+          ]
+        },
+        {
+          "slug": "prompt-management-expert-mode",
+          "title": "Prompt Management Expert",
+          "description": "Versioned prompt registries, A/B rollouts, env-aware config across Langfuse, LangSmith, Promptfoo",
+          "path": [
+            "llm-eval-ops",
+            "prompt-management-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "prompt-management",
+            "versioning",
+            "ab-testing"
+          ]
+        },
+        {
+          "slug": "promptfoo-expert-mode",
+          "title": "Promptfoo Expert",
+          "description": "Promptfoo CLI for systematic prompt testing, model comparison, and red-team plugins",
+          "path": [
+            "llm-eval-ops",
+            "promptfoo-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "promptfoo",
+            "prompt-testing",
+            "red-team",
+            "ci"
+          ]
+        },
+        {
+          "slug": "ragas-expert-mode",
+          "title": "RAGAS Expert",
+          "description": "RAGAS metrics for RAG and agent evaluation \u2014 faithfulness, relevancy, context precision/recall",
+          "path": [
+            "llm-eval-ops",
+            "ragas-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "ragas",
+            "rag",
+            "metrics",
+            "faithfulness"
+          ]
+        },
+        {
+          "slug": "redteam-llm-expert-mode",
+          "title": "LLM Red-Team Expert",
+          "description": "Jailbreak suites, garak, PyRIT, Promptfoo red-team \u2014 adversarial testing for LLM apps",
+          "path": [
+            "llm-eval-ops",
+            "redteam-llm-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "security",
+            "red-team",
+            "jailbreak",
+            "garak",
+            "pyrit",
+            "harmbench"
+          ]
+        },
+        {
+          "slug": "semantic-cache-expert-mode",
+          "title": "Semantic Cache Expert",
+          "description": "GPTCache, Helicone cache, LangChain semantic cache \u2014 embedding-based dedup for LLM apps",
+          "path": [
+            "llm-eval-ops",
+            "semantic-cache-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "semantic-cache",
+            "gptcache",
+            "embeddings",
+            "ttl"
+          ]
+        },
+        {
+          "slug": "wandb-prompts-expert-mode",
+          "title": "W&B Weave / Prompts Expert",
+          "description": "Weights & Biases Weave \u2014 trace agents, log datasets, run evaluations, compare runs",
+          "path": [
+            "llm-eval-ops",
+            "wandb-prompts-expert-mode"
+          ],
+          "tags": [
+            "llm-eval",
+            "llmops",
+            "observability",
+            "wandb",
+            "weave",
+            "evaluation"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "llm-training",
+      "title": "Llm Training",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "llm-training",
+            "README"
+          ]
+        },
+        {
+          "slug": "axolotl-expert-mode",
+          "title": "Axolotl Expert",
+          "description": "Axolotl \u2014 YAML-driven LLM fine-tuning with LoRA/QLoRA, DPO/GRPO, DeepSpeed, FSDP",
+          "path": [
+            "llm-training",
+            "axolotl-expert-mode"
+          ],
+          "tags": [
+            "axolotl",
+            "fine-tuning",
+            "framework",
+            "yaml",
+            "deepspeed",
+            "fsdp"
+          ]
+        },
+        {
+          "slug": "distillation-expert-mode",
+          "title": "Knowledge Distillation Expert",
+          "description": "Teacher-student LLM distillation \u2014 logits, on-policy distillation, context distillation",
+          "path": [
+            "llm-training",
+            "distillation-expert-mode"
+          ],
+          "tags": [
+            "distillation",
+            "fine-tuning",
+            "training",
+            "compression"
+          ]
+        },
+        {
+          "slug": "dora-expert-mode",
+          "title": "DoRA Expert",
+          "description": "Weight-Decomposed Low-Rank Adaptation \u2014 magnitude + direction split for better LoRA quality",
+          "path": [
+            "llm-training",
+            "dora-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "dora",
+            "lora",
+            "peft"
+          ]
+        },
+        {
+          "slug": "dpo-expert-mode",
+          "title": "DPO Expert",
+          "description": "Direct Preference Optimization \u2014 preference alignment without an explicit reward model",
+          "path": [
+            "llm-training",
+            "dpo-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "dpo",
+            "preference-optimization",
+            "alignment",
+            "rlhf"
+          ]
+        },
+        {
+          "slug": "grpo-expert-mode",
+          "title": "GRPO Expert",
+          "description": "Group Relative Policy Optimization \u2014 DeepSeek-R1 style reasoning RL with verifiable rewards",
+          "path": [
+            "llm-training",
+            "grpo-expert-mode"
+          ],
+          "tags": [
+            "grpo",
+            "rl",
+            "reasoning",
+            "deepseek",
+            "training",
+            "alignment"
+          ]
+        },
+        {
+          "slug": "kto-expert-mode",
+          "title": "KTO Expert",
+          "description": "Kahneman-Tversky Optimization \u2014 preference alignment from binary feedback instead of paired comparisons",
+          "path": [
+            "llm-training",
+            "kto-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "kto",
+            "preference-optimization",
+            "alignment"
+          ]
+        },
+        {
+          "slug": "lora-expert-mode",
+          "title": "LoRA Expert",
+          "description": "Low-Rank Adaptation for parameter-efficient fine-tuning of LLMs",
+          "path": [
+            "llm-training",
+            "lora-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "peft",
+            "lora",
+            "training",
+            "adapters"
+          ]
+        },
+        {
+          "slug": "merge-experts-mode",
+          "title": "Model Merging Expert",
+          "description": "MergeKit recipes \u2014 SLERP, TIES, DARE, model soups, task arithmetic, MoE merging",
+          "path": [
+            "llm-training",
+            "merge-experts-mode"
+          ],
+          "tags": [
+            "merging",
+            "mergekit",
+            "slerp",
+            "ties",
+            "dare",
+            "model-soups"
+          ]
+        },
+        {
+          "slug": "orpo-expert-mode",
+          "title": "ORPO Expert",
+          "description": "Odds-Ratio Preference Optimization \u2014 single-stage SFT + preference alignment without a reference model",
+          "path": [
+            "llm-training",
+            "orpo-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "orpo",
+            "preference-optimization",
+            "alignment"
+          ]
+        },
+        {
+          "slug": "peft-expert-mode",
+          "title": "PEFT Expert",
+          "description": "HuggingFace PEFT library survey \u2014 LoRA, IA3, prompt tuning, prefix tuning, AdaLoRA, OFT/BOFT, VeRA",
+          "path": [
+            "llm-training",
+            "peft-expert-mode"
+          ],
+          "tags": [
+            "peft",
+            "lora",
+            "ia3",
+            "prompt-tuning",
+            "prefix-tuning",
+            "adalora",
+            "fine-tuning"
+          ]
+        },
+        {
+          "slug": "qlora-expert-mode",
+          "title": "QLoRA Expert",
+          "description": "4-bit quantized LoRA fine-tuning with NF4, double quantization, and paged optimizers",
+          "path": [
+            "llm-training",
+            "qlora-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "qlora",
+            "quantization",
+            "peft",
+            "bitsandbytes"
+          ]
+        },
+        {
+          "slug": "rlaif-expert-mode",
+          "title": "RLAIF / Constitutional AI Expert",
+          "description": "RL from AI Feedback \u2014 principle-driven critique, AI judges, scaling preference labeling without humans",
+          "path": [
+            "llm-training",
+            "rlaif-expert-mode"
+          ],
+          "tags": [
+            "rlaif",
+            "constitutional-ai",
+            "alignment",
+            "ai-feedback",
+            "llm-judge"
+          ]
+        },
+        {
+          "slug": "rlhf-expert-mode",
+          "title": "Classical RLHF Expert",
+          "description": "Reward-model + PPO RLHF pipeline \u2014 when it still beats DPO and how to run it correctly",
+          "path": [
+            "llm-training",
+            "rlhf-expert-mode"
+          ],
+          "tags": [
+            "rlhf",
+            "ppo",
+            "reward-model",
+            "alignment",
+            "training"
+          ]
+        },
+        {
+          "slug": "sft-expert-mode",
+          "title": "SFT Expert",
+          "description": "Supervised fine-tuning fundamentals \u2014 chat templates, packing, completion-only loss, NEFTune",
+          "path": [
+            "llm-training",
+            "sft-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "sft",
+            "training",
+            "instruction-tuning"
+          ]
+        },
+        {
+          "slug": "simpo-expert-mode",
+          "title": "SimPO Expert",
+          "description": "Simple Preference Optimization \u2014 reference-free, length-normalized preference alignment",
+          "path": [
+            "llm-training",
+            "simpo-expert-mode"
+          ],
+          "tags": [
+            "fine-tuning",
+            "simpo",
+            "preference-optimization",
+            "alignment"
+          ]
+        },
+        {
+          "slug": "trl-expert-mode",
+          "title": "TRL Expert",
+          "description": "HuggingFace TRL \u2014 SFTTrainer, DPOTrainer, PPOTrainer, GRPOTrainer, RewardTrainer",
+          "path": [
+            "llm-training",
+            "trl-expert-mode"
+          ],
+          "tags": [
+            "trl",
+            "huggingface",
+            "training",
+            "framework",
+            "fine-tuning"
+          ]
+        },
+        {
+          "slug": "unsloth-expert-mode",
+          "title": "Unsloth Expert",
+          "description": "Unsloth \u2014 2x faster LLM fine-tuning with 70% less VRAM via fused Triton kernels",
+          "path": [
+            "llm-training",
+            "unsloth-expert-mode"
+          ],
+          "tags": [
+            "unsloth",
+            "fine-tuning",
+            "performance",
+            "lora",
+            "qlora"
+          ]
+        }
+      ]
+    },
+    {
       "name": "local-llm",
       "title": "Local Llm",
       "modes": [
+        {
+          "slug": "exllama-awq-gptq-expert-mode",
+          "title": "ExLlama / AWQ / GPTQ Expert",
+          "description": "Quantize and serve LLMs on consumer GPUs with ExLlamaV2/V3 (EXL2/EXL3), AWQ, and GPTQ",
+          "path": [
+            "local-llm",
+            "exllama-awq-gptq-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "exllama",
+            "exllamav3",
+            "exl2",
+            "exl3",
+            "awq",
+            "gptq",
+            "quantization",
+            "consumer-gpu"
+          ]
+        },
+        {
+          "slug": "gguf-quantization-expert-mode",
+          "title": "GGUF Quantization Expert",
+          "description": "Convert HF safetensors to GGUF, run llama-imatrix, choose K-quants vs IQ-quants, and quantize models for llama.cpp",
+          "path": [
+            "local-llm",
+            "gguf-quantization-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "gguf",
+            "quantization",
+            "llama-cpp",
+            "imatrix",
+            "k-quants",
+            "iq-quants"
+          ]
+        },
+        {
+          "slug": "jan-ai-expert-mode",
+          "title": "Jan.ai Expert",
+          "description": "Use Jan.ai open-source desktop assistant as a local LLM hub, OpenAI-compatible server on port 1337, and MCP host",
+          "path": [
+            "local-llm",
+            "jan-ai-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "jan-ai",
+            "cortex",
+            "openai-compat",
+            "mcp",
+            "desktop",
+            "offline"
+          ]
+        },
+        {
+          "slug": "litellm-proxy-expert-mode",
+          "title": "LiteLLM Proxy Expert",
+          "description": "Run LiteLLM as a unified gateway over local + cloud LLMs with router config, virtual keys, budgets, fallbacks, and Redis caching",
+          "path": [
+            "local-llm",
+            "litellm-proxy-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "litellm",
+            "proxy",
+            "gateway",
+            "router",
+            "virtual-keys",
+            "redis",
+            "fallbacks"
+          ]
+        },
         {
           "slug": "llama-cpp-expert-mode",
           "title": "llama.cpp Expert",
@@ -5826,6 +6497,208 @@
             "gguf",
             "quantization",
             "inference"
+          ]
+        },
+        {
+          "slug": "llama-cpp-server-expert-mode",
+          "title": "llama-server Expert",
+          "description": "Run llama.cpp's HTTP server with OpenAI-compatible endpoints, slots, multimodal, and reverse proxies",
+          "path": [
+            "local-llm",
+            "llama-cpp-server-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "llama-cpp",
+            "llama-server",
+            "openai-compat",
+            "http-api",
+            "multimodal"
+          ]
+        },
+        {
+          "slug": "llamafile-expert-mode",
+          "title": "llamafile Expert",
+          "description": "Build and run Mozilla llamafile single-file LLM executables with Cosmopolitan Libc / APE",
+          "path": [
+            "local-llm",
+            "llamafile-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "llamafile",
+            "mozilla",
+            "cosmopolitan",
+            "ape",
+            "single-file",
+            "edge"
+          ]
+        },
+        {
+          "slug": "lm-studio-expert-mode",
+          "title": "LM Studio Expert",
+          "description": "Run LM Studio with the lms CLI, headless llmster daemon, REST API, and MLX backend on Apple Silicon",
+          "path": [
+            "local-llm",
+            "lm-studio-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "lm-studio",
+            "mlx",
+            "apple-silicon",
+            "lms-cli",
+            "headless",
+            "openai-compat"
+          ]
+        },
+        {
+          "slug": "localai-expert-mode",
+          "title": "LocalAI Expert",
+          "description": "Self-host LocalAI (mudler) as an OpenAI/Anthropic/ElevenLabs drop-in for LLMs, vision, audio, image and embeddings on any hardware",
+          "path": [
+            "local-llm",
+            "localai-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "localai",
+            "mudler",
+            "openai-compat",
+            "multi-modal",
+            "docker",
+            "gallery"
+          ]
+        },
+        {
+          "slug": "mlx-apple-silicon-expert-mode",
+          "title": "MLX Apple Silicon Expert",
+          "description": "Run, quantize, fine-tune (LoRA/QLoRA), and serve LLMs and VLMs natively on Apple Silicon with MLX and mlx-lm",
+          "path": [
+            "local-llm",
+            "mlx-apple-silicon-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "mlx",
+            "apple-silicon",
+            "mlx-lm",
+            "mlx-vlm",
+            "lora",
+            "qlora",
+            "unified-memory"
+          ]
+        },
+        {
+          "slug": "ollama-docker-deploy-expert-mode",
+          "title": "Ollama Docker Deploy Expert",
+          "description": "Production self-host Ollama in Docker/Compose with GPU passthrough, model preload, reverse proxy auth, and multi-GPU",
+          "path": [
+            "local-llm",
+            "ollama-docker-deploy-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "ollama",
+            "docker",
+            "docker-compose",
+            "deploy",
+            "gpu-passthrough",
+            "self-hosted"
+          ]
+        },
+        {
+          "slug": "sglang-expert-mode",
+          "title": "SGLang Expert",
+          "description": "Serve LLMs with SGLang's RadixAttention, structured outputs (compressed FSM), tensor parallel, DP-attention, and PD disaggregation",
+          "path": [
+            "local-llm",
+            "sglang-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "sglang",
+            "radixattention",
+            "structured-outputs",
+            "tensor-parallel",
+            "dp-attention",
+            "pd-disaggregation"
+          ]
+        },
+        {
+          "slug": "slm-deployment-expert-mode",
+          "title": "Small Language Model (SLM) Deployment Expert",
+          "description": "Pick, quantize, and deploy sub-7B SLMs (Phi-4-mini, Qwen3 0.6-4B, Gemma 3 1B/4B, Llama 3.2 1B/3B, SmolLM3) to edge and constrained hardware",
+          "path": [
+            "local-llm",
+            "slm-deployment-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "slm",
+            "small-language-model",
+            "edge",
+            "phi-4-mini",
+            "qwen3",
+            "gemma3",
+            "llama-3.2",
+            "smollm3"
+          ]
+        },
+        {
+          "slug": "text-generation-webui-expert-mode",
+          "title": "oobabooga text-generation-webui Expert",
+          "description": "Run oobabooga's textgen with multiple backends, OpenAI/Anthropic-compatible API, characters, training tab, and portable installer",
+          "path": [
+            "local-llm",
+            "text-generation-webui-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "oobabooga",
+            "text-generation-webui",
+            "textgen",
+            "openai-api",
+            "characters",
+            "training",
+            "lora"
+          ]
+        },
+        {
+          "slug": "tgi-huggingface-expert-mode",
+          "title": "TGI (Hugging Face Text Generation Inference) Expert",
+          "description": "Deploy HuggingFace TGI in Docker with sharding, AWQ/GPTQ/EETQ/bitsandbytes quantization, and the OpenAI-compatible Messages API",
+          "path": [
+            "local-llm",
+            "tgi-huggingface-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "tgi",
+            "huggingface",
+            "docker",
+            "sharding",
+            "quantization",
+            "messages-api"
+          ]
+        },
+        {
+          "slug": "vllm-local-deploy-expert-mode",
+          "title": "vLLM Local Deploy Expert",
+          "description": "Self-host vLLM in Docker for high-throughput local inference with tensor parallelism, prefix caching, and AWQ/GPTQ quantization",
+          "path": [
+            "local-llm",
+            "vllm-local-deploy-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "vllm",
+            "docker",
+            "deploy",
+            "tensor-parallel",
+            "prefix-caching",
+            "awq",
+            "gptq"
           ]
         }
       ]
@@ -6214,6 +7087,286 @@
       ]
     },
     {
+      "name": "multimodal-ai",
+      "title": "Multimodal Ai",
+      "modes": [
+        {
+          "slug": "animatediff-svd-expert-mode",
+          "title": "AnimateDiff & Stable Video Diffusion Expert",
+          "description": "AnimateDiff motion modules + SVD image-to-video, frame interpolation, video LoRAs",
+          "path": [
+            "multimodal-ai",
+            "animatediff-svd-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "video-gen",
+            "animatediff",
+            "svd",
+            "motion",
+            "diffusion"
+          ]
+        },
+        {
+          "slug": "cog-video-expert-mode",
+          "title": "CogVideoX & Mochi Video Diffusion Expert",
+          "description": "CogVideoX, Mochi-1, Hunyuan, LTX video diffusion - training and inference patterns",
+          "path": [
+            "multimodal-ai",
+            "cog-video-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "video-gen",
+            "cogvideox",
+            "mochi",
+            "hunyuan",
+            "ltx",
+            "dit"
+          ]
+        },
+        {
+          "slug": "comfyui-expert-mode",
+          "title": "ComfyUI Expert",
+          "description": "ComfyUI graph design, custom nodes, workflow JSON, queue, API integration",
+          "path": [
+            "multimodal-ai",
+            "comfyui-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "comfyui",
+            "workflow",
+            "diffusion"
+          ]
+        },
+        {
+          "slug": "controlnet-expert-mode",
+          "title": "ControlNet Expert",
+          "description": "ControlNet variants - canny, depth, openpose, lineart, tile, inpaint - and multi-controlnet stacking",
+          "path": [
+            "multimodal-ai",
+            "controlnet-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "controlnet",
+            "conditioning",
+            "diffusion"
+          ]
+        },
+        {
+          "slug": "diffusers-library-expert-mode",
+          "title": "HuggingFace Diffusers Library Expert",
+          "description": "HF diffusers - pipelines, schedulers, IP-Adapter loading, LoRA loading, custom model loading",
+          "path": [
+            "multimodal-ai",
+            "diffusers-library-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "diffusers",
+            "huggingface",
+            "lora",
+            "ip-adapter"
+          ]
+        },
+        {
+          "slug": "elevenlabs-expert-mode",
+          "title": "ElevenLabs Expert",
+          "description": "ElevenLabs TTS, voice cloning, conversational AI, sound effects, music",
+          "path": [
+            "multimodal-ai",
+            "elevenlabs-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "audio",
+            "tts",
+            "voice-cloning",
+            "elevenlabs"
+          ]
+        },
+        {
+          "slug": "flux-expert-mode",
+          "title": "Flux.1 Expert",
+          "description": "Black Forest Labs FLUX.1 image generation - dev/schnell/pro, ControlNet, LoRA training (ai-toolkit, simpletuner)",
+          "path": [
+            "multimodal-ai",
+            "flux-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "flux",
+            "diffusion",
+            "lora",
+            "controlnet"
+          ]
+        },
+        {
+          "slug": "ip-adapter-expert-mode",
+          "title": "IP-Adapter Expert",
+          "description": "IP-Adapter for image-conditioned generation - plus, face ID, full-face, instant-style",
+          "path": [
+            "multimodal-ai",
+            "ip-adapter-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "ip-adapter",
+            "conditioning",
+            "face-id"
+          ]
+        },
+        {
+          "slug": "multimodal-embedding-expert-mode",
+          "title": "Multimodal Embedding Expert",
+          "description": "Multimodal embeddings - jina-clip-v2, voyage-multimodal-3, ColPali, nomic-embed-multimodal",
+          "path": [
+            "multimodal-ai",
+            "multimodal-embedding-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "embeddings",
+            "retrieval",
+            "clip",
+            "colpali",
+            "jina",
+            "voyage"
+          ]
+        },
+        {
+          "slug": "ocr-vlm-expert-mode",
+          "title": "OCR & Document VLM Expert",
+          "description": "OCR with VLMs - Mistral OCR, Surya, GOT-OCR2.0 - and PDF parsing pipelines (Marker, Docling, Unstructured)",
+          "path": [
+            "multimodal-ai",
+            "ocr-vlm-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "ocr",
+            "document",
+            "pdf",
+            "mistral-ocr",
+            "surya",
+            "marker",
+            "docling"
+          ]
+        },
+        {
+          "slug": "sd3-expert-mode",
+          "title": "Stable Diffusion 3 / 3.5 Expert",
+          "description": "SD3 / SD3.5 Large, MMDiT architecture, T5-XXL prompting, differences from SDXL",
+          "path": [
+            "multimodal-ai",
+            "sd3-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "sd3",
+            "diffusion",
+            "mmdit",
+            "t5"
+          ]
+        },
+        {
+          "slug": "sdxl-expert-mode",
+          "title": "SDXL Expert",
+          "description": "Stable Diffusion XL - base + refiner, LoRA, IP-Adapter, samplers, schedulers",
+          "path": [
+            "multimodal-ai",
+            "sdxl-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "sdxl",
+            "diffusion",
+            "lora",
+            "ip-adapter"
+          ]
+        },
+        {
+          "slug": "suno-udio-music-expert-mode",
+          "title": "AI Music Generation Expert (Suno, Udio, MusicGen, Stable Audio)",
+          "description": "AI music gen patterns - Suno, Udio, Stable Audio, MusicGen, ACE-Step, YuE",
+          "path": [
+            "multimodal-ai",
+            "suno-udio-music-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "audio",
+            "music",
+            "suno",
+            "udio",
+            "musicgen",
+            "stable-audio"
+          ]
+        },
+        {
+          "slug": "vision-llm-expert-mode",
+          "title": "Vision LLM Expert",
+          "description": "VLM landscape - Claude, GPT-4o, Llama 3.2 Vision, Qwen2.5-VL, Pixtral, MiniCPM-V, InternVL",
+          "path": [
+            "multimodal-ai",
+            "vision-llm-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "vision",
+            "vlm",
+            "llm",
+            "ocr",
+            "charts"
+          ]
+        },
+        {
+          "slug": "whisper-expert-mode",
+          "title": "Whisper ASR Expert",
+          "description": "Whisper variants - large-v3, faster-whisper, distil-whisper, whisper-cpp - VAD, diarization, real-time",
+          "path": [
+            "multimodal-ai",
+            "whisper-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "audio",
+            "asr",
+            "whisper",
+            "diarization",
+            "transcription"
+          ]
+        },
+        {
+          "slug": "xtts-coqui-expert-mode",
+          "title": "Open-Source TTS Expert (XTTS, Coqui, F5-TTS, StyleTTS2)",
+          "description": "Self-hosted voice cloning - XTTS-v2, Coqui TTS, F5-TTS, StyleTTS2, Kokoro, Chatterbox",
+          "path": [
+            "multimodal-ai",
+            "xtts-coqui-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "audio",
+            "tts",
+            "voice-cloning",
+            "open-source",
+            "xtts",
+            "f5-tts"
+          ]
+        }
+      ]
+    },
+    {
       "name": "output-formats",
       "title": "Output Formats",
       "modes": [
@@ -6374,6 +7527,104 @@
           "path": [
             "personalities",
             "young-sheldon-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pi-dev",
+      "title": "Pi Dev",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "pi-dev",
+            "README"
+          ]
+        },
+        {
+          "slug": "pi-coding-agent-expert-mode",
+          "title": "Pi Coding Agent Expert",
+          "description": "Using pi-coding-agent and its cross-tool skill format with Claude Code, Codex CLI, Amp, and Droid",
+          "path": [
+            "pi-dev",
+            "pi-coding-agent-expert-mode"
+          ],
+          "tags": [
+            "pi-dev",
+            "pi-coding-agent",
+            "claude-code",
+            "codex-cli",
+            "amp",
+            "droid",
+            "cross-tool"
+          ]
+        },
+        {
+          "slug": "pi-extensions-expert-mode",
+          "title": "Pi Extensions Expert",
+          "description": "Authoring TypeScript extensions for the pi-coding-agent (lifecycle hooks, custom tools, UI, providers)",
+          "path": [
+            "pi-dev",
+            "pi-extensions-expert-mode"
+          ],
+          "tags": [
+            "pi-dev",
+            "pi-coding-agent",
+            "extensions",
+            "typescript",
+            "agent-tooling"
+          ]
+        },
+        {
+          "slug": "pi-packages-expert-mode",
+          "title": "Pi Packages Expert",
+          "description": "Authoring, publishing, installing, and filtering pi-coding-agent packages (npm, git, local)",
+          "path": [
+            "pi-dev",
+            "pi-packages-expert-mode"
+          ],
+          "tags": [
+            "pi-dev",
+            "pi-coding-agent",
+            "packages",
+            "npm",
+            "distribution"
+          ]
+        },
+        {
+          "slug": "pi-prompt-templates-expert-mode",
+          "title": "Pi Prompt Templates Expert",
+          "description": "Authoring Markdown prompt templates for pi-coding-agent (frontmatter, argument variables, discovery)",
+          "path": [
+            "pi-dev",
+            "pi-prompt-templates-expert-mode"
+          ],
+          "tags": [
+            "pi-dev",
+            "pi-coding-agent",
+            "prompts",
+            "templates",
+            "markdown"
+          ]
+        },
+        {
+          "slug": "pi-skill-author-expert-mode",
+          "title": "Pi Skill Author Expert",
+          "description": "Authoring SKILL.md capability docs for pi-coding-agent that stay compatible with Claude Code, Codex CLI, Amp, and Droid",
+          "path": [
+            "pi-dev",
+            "pi-skill-author-expert-mode"
+          ],
+          "tags": [
+            "pi-dev",
+            "pi-coding-agent",
+            "skills",
+            "claude-code",
+            "cross-tool",
+            "authoring"
           ]
         }
       ]
@@ -6638,6 +7889,244 @@
           "path": [
             "project-structure",
             "typescript-node-project-architect-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rag-advanced",
+      "title": "Rag Advanced",
+      "modes": [
+        {
+          "slug": "agentic-rag-expert-mode",
+          "title": "Agentic RAG Expert",
+          "description": "Agent loops over retrieval \u2014 tool-calling search, query decomposition, iterative refinement",
+          "path": [
+            "rag-advanced",
+            "agentic-rag-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "agentic-rag",
+            "agents",
+            "tool-calling",
+            "react",
+            "llamaindex"
+          ]
+        },
+        {
+          "slug": "colbert-expert-mode",
+          "title": "ColBERT Expert",
+          "description": "ColBERT v2 / late interaction retrieval, MaxSim, RAGatouille, indexing tradeoffs",
+          "path": [
+            "rag-advanced",
+            "colbert-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "retrieval",
+            "colbert",
+            "late-interaction",
+            "ragatouille"
+          ]
+        },
+        {
+          "slug": "contextual-retrieval-expert-mode",
+          "title": "Contextual Retrieval Expert",
+          "description": "Anthropic's Contextual Retrieval \u2014 prepend chunk-specific context before embedding",
+          "path": [
+            "rag-advanced",
+            "contextual-retrieval-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "contextual-retrieval",
+            "anthropic",
+            "prompt-caching",
+            "bm25"
+          ]
+        },
+        {
+          "slug": "crag-expert-mode",
+          "title": "Corrective RAG (CRAG) Expert",
+          "description": "Retrieval evaluator + web search fallback when knowledge base is insufficient",
+          "path": [
+            "rag-advanced",
+            "crag-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "crag",
+            "corrective-rag",
+            "retrieval-evaluator",
+            "web-search-fallback"
+          ]
+        },
+        {
+          "slug": "graphrag-expert-mode",
+          "title": "GraphRAG Expert",
+          "description": "Microsoft GraphRAG \u2014 entity/community extraction, hierarchical summarization, local vs global queries",
+          "path": [
+            "rag-advanced",
+            "graphrag-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "graphrag",
+            "knowledge-graph",
+            "microsoft",
+            "hierarchical"
+          ]
+        },
+        {
+          "slug": "hybrid-search-expert-mode",
+          "title": "Hybrid Search Expert",
+          "description": "BM25 + dense vectors fused with RRF, alpha tuning, and SPLADE sparse-dense",
+          "path": [
+            "rag-advanced",
+            "hybrid-search-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "retrieval",
+            "hybrid-search",
+            "bm25",
+            "rrf",
+            "splade"
+          ]
+        },
+        {
+          "slug": "hyde-expert-mode",
+          "title": "HyDE Expert",
+          "description": "Hypothetical Document Embeddings \u2014 generate a fake answer, embed that, then retrieve",
+          "path": [
+            "rag-advanced",
+            "hyde-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "retrieval",
+            "hyde",
+            "query-transformation",
+            "embeddings"
+          ]
+        },
+        {
+          "slug": "late-chunking-expert-mode",
+          "title": "Late Chunking Expert",
+          "description": "Jina's late chunking \u2014 embed long context first, then chunk the embeddings",
+          "path": [
+            "rag-advanced",
+            "late-chunking-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "late-chunking",
+            "jina",
+            "long-context",
+            "embeddings"
+          ]
+        },
+        {
+          "slug": "multimodal-rag-expert-mode",
+          "title": "Multimodal RAG Expert",
+          "description": "RAG over images+text \u2014 ColPali, DSE, jina-embeddings-v4, voyage-multimodal-3, PDF chunking",
+          "path": [
+            "rag-advanced",
+            "multimodal-rag-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "multimodal",
+            "colpali",
+            "vision",
+            "pdf",
+            "jina-v4",
+            "voyage-multimodal"
+          ]
+        },
+        {
+          "slug": "parent-child-retriever-expert-mode",
+          "title": "Parent-Child Retriever Expert",
+          "description": "Small chunks for retrieval, large parents for context \u2014 sentence-window, multi-vector",
+          "path": [
+            "rag-advanced",
+            "parent-child-retriever-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "parent-document",
+            "multi-vector",
+            "sentence-window",
+            "llamaindex",
+            "langchain"
+          ]
+        },
+        {
+          "slug": "query-rewriting-expert-mode",
+          "title": "Query Rewriting Expert",
+          "description": "Query expansion, decomposition, multi-query retrieval, step-back prompting",
+          "path": [
+            "rag-advanced",
+            "query-rewriting-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "query-rewriting",
+            "query-expansion",
+            "multi-query",
+            "step-back",
+            "decomposition"
+          ]
+        },
+        {
+          "slug": "raptor-expert-mode",
+          "title": "RAPTOR Expert",
+          "description": "RAPTOR \u2014 recursive abstractive summarization tree for long-document RAG",
+          "path": [
+            "rag-advanced",
+            "raptor-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "raptor",
+            "hierarchical",
+            "summarization",
+            "long-document"
+          ]
+        },
+        {
+          "slug": "rerank-expert-mode",
+          "title": "Reranker Expert",
+          "description": "Cross-encoder rerankers \u2014 Cohere Rerank, Jina, BGE, Voyage, ColBERT-as-reranker",
+          "path": [
+            "rag-advanced",
+            "rerank-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "retrieval",
+            "rerank",
+            "cross-encoder",
+            "cohere",
+            "jina",
+            "voyage"
+          ]
+        },
+        {
+          "slug": "self-rag-expert-mode",
+          "title": "Self-RAG Expert",
+          "description": "Self-RAG \u2014 model decides when to retrieve and critiques evidence with reflection tokens",
+          "path": [
+            "rag-advanced",
+            "self-rag-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "self-rag",
+            "reflection-tokens",
+            "adaptive-retrieval",
+            "asai"
           ]
         }
       ]
@@ -7567,6 +9056,299 @@
           "path": [
             "ui-ux",
             "shadcn-ui-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vector-stores",
+      "title": "Vector Stores",
+      "modes": [
+        {
+          "slug": "chroma-expert-mode",
+          "title": "Chroma Expert",
+          "description": "Deep expertise in Chroma 1.0+ \u2014 collections, multi-modal (OpenCLIP), distance metrics, persistence options, server vs embedded, Rust core performance",
+          "path": [
+            "vector-stores",
+            "chroma-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "chroma",
+            "embedded",
+            "multi-modal",
+            "openclip",
+            "hnsw",
+            "sqlite"
+          ]
+        },
+        {
+          "slug": "code-embed-expert-mode",
+          "title": "Code Embeddings Expert",
+          "description": "Deep expertise in code-specific embedding models \u2014 voyage-code-3, jina-embeddings-v2-base-code, jina-code-embeddings, CodeRankEmbed, GraphCodeBERT",
+          "path": [
+            "vector-stores",
+            "code-embed-expert-mode"
+          ],
+          "tags": [
+            "embeddings",
+            "code-search",
+            "voyage-code-3",
+            "jina-code",
+            "coderankembed",
+            "semantic-code-retrieval"
+          ]
+        },
+        {
+          "slug": "embedding-model-picker-expert-mode",
+          "title": "Embedding Model Picker Expert",
+          "description": "Decision guide for picking embedding models in 2025-2026 \u2014 OpenAI, Cohere, Voyage, Jina, BGE, E5, Nomic, Stella, Snowflake Arctic; reading MTEB; trading dimension/cost/quality",
+          "path": [
+            "vector-stores",
+            "embedding-model-picker-expert-mode"
+          ],
+          "tags": [
+            "embeddings",
+            "mteb",
+            "model-selection",
+            "openai",
+            "cohere",
+            "voyage",
+            "jina",
+            "bge",
+            "nomic"
+          ]
+        },
+        {
+          "slug": "lancedb-expert-mode",
+          "title": "LanceDB Expert",
+          "description": "Deep expertise in LanceDB \u2014 Lance columnar format, embedded + serverless modes, S3-backed tables, full-text search, versioning, and multimodal lakehouse",
+          "path": [
+            "vector-stores",
+            "lancedb-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "lancedb",
+            "lance-format",
+            "embedded",
+            "full-text-search",
+            "versioning",
+            "multimodal"
+          ]
+        },
+        {
+          "slug": "marqo-expert-mode",
+          "title": "Marqo Expert",
+          "description": "Deep expertise in Marqo \u2014 end-to-end vector search with embedding inference baked in, ONNX/GPU acceleration, and ecommerce-specialized models",
+          "path": [
+            "vector-stores",
+            "marqo-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "marqo",
+            "embeddings",
+            "onnx",
+            "multimodal",
+            "ecommerce-search"
+          ]
+        },
+        {
+          "slug": "milvus-expert-mode",
+          "title": "Milvus Expert",
+          "description": "Deep expertise in Milvus 2.5+ \u2014 index zoo (HNSW/DiskANN/IVF/SCANN/CAGRA), partitions, multi-vector hybrid search, GPU indexes, and Milvus Lite",
+          "path": [
+            "vector-stores",
+            "milvus-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "milvus",
+            "diskann",
+            "hnsw",
+            "gpu-index",
+            "hybrid-search",
+            "partitions"
+          ]
+        },
+        {
+          "slug": "mongodb-atlas-vector-expert-mode",
+          "title": "MongoDB Atlas Vector Search Expert",
+          "description": "Deep expertise in MongoDB Atlas Vector Search \u2014 $vectorSearch aggregation stage, $rankFusion / $scoreFusion hybrid, and HNSW index management",
+          "path": [
+            "vector-stores",
+            "mongodb-atlas-vector-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "mongodb",
+            "atlas",
+            "vector-search",
+            "hybrid-search",
+            "aggregation",
+            "hnsw"
+          ]
+        },
+        {
+          "slug": "multilingual-embed-expert-mode",
+          "title": "Multilingual Embeddings Expert",
+          "description": "Deep expertise in multilingual embedding models \u2014 BGE-M3 (dense+sparse+ColBERT), multilingual-e5, Jina v3, Cohere multilingual, Nomic v2, Arctic-Embed",
+          "path": [
+            "vector-stores",
+            "multilingual-embed-expert-mode"
+          ],
+          "tags": [
+            "embeddings",
+            "multilingual",
+            "bge-m3",
+            "e5",
+            "jina-v3",
+            "cohere",
+            "nomic",
+            "cross-lingual"
+          ]
+        },
+        {
+          "slug": "opensearch-vector-expert-mode",
+          "title": "OpenSearch Vector Search Expert",
+          "description": "Deep expertise in OpenSearch k-NN \u2014 Lucene/Faiss/NMSLIB engines, neural sparse, hybrid query DSL, and ML Commons inference",
+          "path": [
+            "vector-stores",
+            "opensearch-vector-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "opensearch",
+            "knn",
+            "faiss",
+            "lucene",
+            "neural-sparse",
+            "hybrid-search"
+          ]
+        },
+        {
+          "slug": "pgvector-expert-mode",
+          "title": "pgvector Expert",
+          "description": "Deep expertise in pgvector 0.8+ for PostgreSQL \u2014 HNSW/IVFFlat tuning, halfvec/sparsevec, hybrid search with tsvector + RRF, and pgvectorscale (DiskANN)",
+          "path": [
+            "vector-stores",
+            "pgvector-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "pgvector",
+            "postgres",
+            "hnsw",
+            "ivfflat",
+            "hybrid-search",
+            "pgvectorscale",
+            "diskann"
+          ]
+        },
+        {
+          "slug": "pinecone-expert-mode",
+          "title": "Pinecone Expert",
+          "description": "Deep expertise in Pinecone serverless \u2014 namespaces, sparse-dense indexes, integrated inference (embed + rerank), and dedicated read nodes",
+          "path": [
+            "vector-stores",
+            "pinecone-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "pinecone",
+            "serverless",
+            "hybrid-search",
+            "integrated-inference",
+            "namespaces"
+          ]
+        },
+        {
+          "slug": "qdrant-expert-mode",
+          "title": "Qdrant Expert",
+          "description": "Deep expertise in Qdrant \u2014 payload filtering, scalar/binary/PQ quantization, multi-vector, dense+sparse hybrid, and distributed mode",
+          "path": [
+            "vector-stores",
+            "qdrant-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "qdrant",
+            "hnsw",
+            "quantization",
+            "hybrid-search",
+            "sparse-vectors",
+            "multi-vector"
+          ]
+        },
+        {
+          "slug": "redis-vector-expert-mode",
+          "title": "Redis Vector Expert",
+          "description": "Deep expertise in Redis Stack / RediSearch \u2014 vector index types (FLAT, HNSW, SVS-VAMANA), KNN + range queries, hybrid filter syntax",
+          "path": [
+            "vector-stores",
+            "redis-vector-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "redis",
+            "redisearch",
+            "hnsw",
+            "knn",
+            "hybrid-search",
+            "in-memory"
+          ]
+        },
+        {
+          "slug": "turbopuffer-expert-mode",
+          "title": "Turbopuffer Expert",
+          "description": "Deep expertise in Turbopuffer \u2014 object-storage-first vector + full-text search, three-tier caching, and ~$0.02/GB cold storage economics",
+          "path": [
+            "vector-stores",
+            "turbopuffer-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "turbopuffer",
+            "object-storage",
+            "s3",
+            "namespaces",
+            "cost-optimization"
+          ]
+        },
+        {
+          "slug": "vespa-expert-mode",
+          "title": "Vespa Expert",
+          "description": "Deep expertise in Vespa \u2014 tensor framework, ranking expressions, ColBERT MaxSim, sparse + dense in one query, and multi-phase ranking",
+          "path": [
+            "vector-stores",
+            "vespa-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "vespa",
+            "tensors",
+            "ranking",
+            "colbert",
+            "hybrid-search",
+            "learning-to-rank"
+          ]
+        },
+        {
+          "slug": "weaviate-expert-mode",
+          "title": "Weaviate Expert",
+          "description": "Deep expertise in Weaviate v1.27+ \u2014 collections, named vectors, vectorizer modules, hybrid search, and per-tenant shard isolation at million-tenant scale",
+          "path": [
+            "vector-stores",
+            "weaviate-expert-mode"
+          ],
+          "tags": [
+            "vector-db",
+            "weaviate",
+            "hybrid-search",
+            "multi-tenancy",
+            "named-vectors",
+            "modules"
           ]
         }
       ]
