@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:30:29.845368Z",
-  "totalModes": 725,
+  "generatedAt": "2026-05-04T11:30:48.594025Z",
+  "totalModes": 726,
   "categories": [
     {
       "name": "ai-engineering",
@@ -7192,6 +7192,15 @@
       "name": "multimodal-ai",
       "title": "Multimodal Ai",
       "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "multimodal-ai",
+            "README"
+          ]
+        },
         {
           "slug": "animatediff-svd-expert-mode",
           "title": "AnimateDiff & Stable Video Diffusion Expert",
