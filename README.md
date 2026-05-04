@@ -1,7 +1,7 @@
-# VIBE - AI Chat Modes Collection
+# VIBE — AI Chat Modes, Skills, Agents & Plugins
 
 <p align="center">
-  <img src="assets/vibe-logo.svg" alt="VIBE Logo" width="400"/>
+  <img src="assets/vibe-logo.svg" alt="VIBE Logo" width="500"/>
 </p>
 
 <p align="center">
@@ -9,88 +9,171 @@
 </p>
 
 <p align="center">
+  <a href="#what-is-this">What Is This</a> •
   <a href="#features">Features</a> •
-  <a href="#modes">Modes</a> •
+  <a href="#mode-categories">Modes</a> •
   <a href="#getting-started">Get Started</a> •
+  <a href="#vibe-cli">CLI</a> •
+  <a href="#stats">Stats</a> •
   <a href="#contributing">Contributing</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Modes-754-c084fc?style=flat-square" alt="Modes">
+  <img src="https://img.shields.io/badge/Categories-52-a78bfa?style=flat-square" alt="Categories">
+  <img src="https://img.shields.io/badge/Skills-675-7c3aed?style=flat-square" alt="Skills">
+  <img src="https://img.shields.io/badge/Agents-216-6366f1?style=flat-square" alt="Agents">
+  <img src="https://img.shields.io/badge/Plugins-122-3b82f6?style=flat-square" alt="Plugins">
+  <img src="https://img.shields.io/badge/Commands-127-0ea5e9?style=flat-square" alt="Commands">
+  <img src="https://img.shields.io/badge/Rules-111-06b6d4?style=flat-square" alt="Rules">
+  <img src="https://img.shields.io/badge/Prompts-106-14b8a6?style=flat-square" alt="Prompts">
+  <img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="License">
 </p>
 
 ---
 
 ## What Is This?
 
-Oh, just a **humble collection of 200+ AI chat modes** that'll make your AI assistant go from "generic helpful bot" to "actually knows what it's doing." You're welcome.
+A **massive collection of AI chat modes, skills, subagents, slash commands, plugins, output-styles, prompts, and recipes** that turn your AI assistant from "generic helpful bot" into "actually knows what it's doing across 754 specific domains."
 
-Did your AI just suggest using `var` in TypeScript? Does it keep recommending jQuery in 2024? Does it think "security best practices" means adding `// TODO: add security` comments?
+Was 200 modes when this started. Then we kept going. And going. And going.
 
-**Yeah, we fixed that.**
+Did your AI just suggest using `var` in TypeScript? Recommend jQuery in 2026? Think "security best practices" means a `// TODO: add security` comment? Hallucinate APIs that don't exist? Think Polars is just "Pandas but newer"?
+
+**Yeah, we fixed that — 754 times over.**
 
 ## Features
 
-| What You Get                   | Why You Need It                                                                   |
-| ------------------------------ | --------------------------------------------------------------------------------- |
-| **283+ Expert Modes**          | Because one-size-fits-all is for socks, not AI                                    |
-| **33+ Categories**             | Organized chaos is still organization                                             |
-| **Production-Ready Standards** | So you can pretend you wrote clean code yourself                                  |
-| **Universal Rules Engine**     | Works with Claude, Copilot, Gemini, and that AI your company built in a hackathon |
-| **VIBE CLI**                   | Install modes as skills to OpenCode, Claude Code, Codex, and Cursor               |
-| **Personality Modes**          | Ever wanted Tony Stark to review your code? Now you can.                          |
+| What You Get                          | Why You Need It                                                                   |
+| ------------------------------------- | --------------------------------------------------------------------------------- |
+| **754 expert modes**                  | Because one-size-fits-all is for socks, not AI                                    |
+| **52 categories**                     | Organized chaos is still organization                                             |
+| **675 skills**                        | Reusable Claude/Codex/Amp/Droid skill bundles                                     |
+| **216 subagents** in 10 sub-categories | Specialized workers for orchestration, QA, data, infra, language experts, etc.   |
+| **127 slash commands** in 8 sub-cats  | `/architecture`, `/devops`, `/security`, `/testing`, `/git`, `/refactoring`...    |
+| **122 plugins**                       | Ready-to-install plugin trees with their own agents + commands                    |
+| **111 rules**                         | Universal behavior policies that work across Claude / Copilot / Gemini / Aider    |
+| **106 prompt templates**              | Domain prompts from the AI Engineering from Scratch curriculum + more             |
+| **18 recipes**                        | End-to-end workflows (landing-page-in-20-min, repo-to-design-system, etc.)        |
+| **33 Mythos security modes**          | Defensive vuln-discovery / red-team / patching / disclosure inspired by Project Glasswing |
+| **174 design-system modes**           | Airbnb / Apple / Bento / Brutalist / Cinematic / Glass — pick an aesthetic       |
+| **Production-grounded content**       | Every web-researched mode cites real URLs. No invented APIs. No hallucinated CVEs |
+| **VIBE CLI**                          | Install modes as skills to OpenCode, Claude Code, Codex, Cursor                   |
+| **Engineer-persona modes**            | Code review by DHH, Carmack, Torvalds, antirez, Rich Hickey, Kleppmann (cited)    |
 
 ## Mode Categories
 
-### The Serious Stuff
+### The Stack You Actually Use (the new stuff)
 
 ```
-Development & Architecture ........... 17 modes (for when you want things done right)
-Cloud & Infrastructure ............... 11 modes (because "it works on my machine" isn't a deployment strategy)
-Languages & Standards ................ 31 modes (14 languages, 13 coding standards, 4 databases)
-Security & Compliance ................ 8 modes  (SOC 2, GDPR, SAST/DAST - all the acronyms)
-AI/ML & Emerging Tech ................ 9 modes  (LLMs, MLOps, WebAssembly - the future is now)
-DevOps & Platform Engineering ........ 8 modes  (GitOps, SRE, AIOps, Chaos Engineering)
-Testing ............................. 14 modes (Chaos Monkey, Gremlin, LitmusChaos, Chaos Mesh - break things professionally)
+ai-frameworks .................. 18 modes  (LangGraph, CrewAI, Pydantic AI, Mastra, DSPy, vLLM, Ollama)
+ai-engineering ................. 20 modes  (math, ML, DL, NLP, LLMs, transformers, agents — full curriculum)
+rag-advanced ................... 17 modes  (HyDE, ColBERT, GraphRAG, late-chunking, self-RAG, CRAG, RAPTOR)
+llm-training ................... 19 modes  (LoRA, QLoRA, DoRA, DPO, ORPO, KTO, SimPO, GRPO, axolotl, unsloth)
+llm-eval-ops ................... 18 modes  (Langfuse, LangSmith, Helicone, Phoenix, RAGAS, DeepEval, Promptfoo)
+multimodal-ai .................. 19 modes  (Flux, SDXL, SD3.5, ComfyUI, ControlNet, Whisper, ElevenLabs, VLMs)
+vector-stores .................. 18 modes  (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Vespa, LanceDB, Chroma)
+local-llm ...................... 19 modes  (llama.cpp, Ollama deploy, vLLM local, MLX, GGUF, SLMs)
+model-authoring ................ 17 modes  (Modelfile, GGUF conversion, chat templates, tokenizers, publishing)
+modern-web ..................... 18 modes  (Vite, Bun, Astro, Solid, Qwik, SvelteKit, Tailwind v4, shadcn)
+edge-platforms ................. 16 modes  (Cloudflare Workers, Vercel, Fly, Supabase, Convex, Modal, Replicate)
+data-platforms ................. 19 modes  (DuckDB, ClickHouse, Polars, Iceberg, Delta, Materialize, Ray, Kafka)
+android-cli .................... 13 modes  (Google's agent-first CLI: skills, sdk, emulator, run, layout, screen)
+android-platform ............... 17 modes  (Compose, Wear OS, TV, large screens, NDK, CameraX, Gemini in AS)
+pi-dev .........................  5 modes  (pi.dev extensions, prompt-templates, packages, coding-agent)
 ```
 
-### The Fun Stuff
+### Defense in Depth — the Mythos suite
+
+Inspired by Anthropic's Project Glasswing & Claude Mythos Preview. Defensive-first framing throughout. Real CVEs only — no fabrications.
 
 ```
-Personality Modes .................... 10 modes (Sheldon Cooper as your code reviewer? Yes please)
-Game Development ..................... 3 modes  (Unity, Unreal, Game Design)
+mythos/discovery ...............  9 modes  (zero-day-hunter, commit-archeologist, fuzzing-strategist, PoC-builder)
+mythos/offense .................  8 modes  (exploit-dev, kernel-privesc, adversary-emulator — auth-gated)
+mythos/defense .................  8 modes  (patch-generator, adversarial-validator, OSS-maintainer-helper, CVD)
+mythos/specialty ...............  8 modes  (crypto, supply-chain, sandbox-escape, ICS, mobile, AI-LLM-probe, CTI)
+```
+
+### Aesthetic & Design
+
+```
+design-systems ................. 174 modes  (Airbnb, Apple, Bento, Brutalist, Cinematic, Glass, Indie, Playful + 35 from awesome-claude-design)
+design-ux ......................   5 modes  (UI design, design tokens, design system architect)
+ui-ux ..........................   6 modes  (UX research, accessibility designer)
+creative .......................   5 modes
+```
+
+### People & Personalities
+
+```
+engineer-personas .............. 19 modes  (DHH, Carmack, Torvalds, Antirez, Bellard, Rich Hickey, Kleppmann + 12 more)
+personalities .................. 10 modes  (Tony Stark, Sheldon, Gordon Ramsay-as-code-reviewer, etc.)
+```
+
+### The Classic Stuff
+
+```
+testing ........................ 22 modes   (chaos eng, contract, security testing, BDD, mutation)
+languages ...................... 14 modes   (Rust, Go, TS, Python, Kotlin, Swift, Zig, Elixir, etc.)
+frameworks ..................... 11 modes   (NestJS, FastAPI, Svelte, Remix, Nuxt, Phoenix)
+backend ........................ 11 modes
+infrastructure ................. 10 modes   (Kafka, Istio, OpenTelemetry, ArgoCD)
+cloud-infrastructure ...........  6 modes   (AWS, GCP, Azure, Terraform, K8s)
+devops .........................  9 modes   (GitOps, SRE, FinOps, AIOps, Chaos)
+security ....................... 18 modes   (SAST/DAST, SOC2, GDPR + 6 enterprise sign-off)
+database .......................  9 modes
+architecture ...................  7 modes
+documentation ..................  5 modes
+debugging ......................  5 modes
+refactoring ....................  5 modes
+planning .......................  5 modes
+mobile .........................  5 modes
+game-development ...............  5 modes
+blockchain .....................  5 modes
+emerging-tech ..................  5 modes
+ebpf ........................... (subdir)   eBPF program type docs (security/network/observability)
+rfc ............................ 16 modes   IETF/W3C standards (HTTP/2, OAuth 2.1, gRPC, etc.)
+project-structure .............. 21 modes
+specialized ....................  7 modes
++ 10 more ......................  (analysis, learning, output-formats, coding-standards, ...)
 ```
 
 ## Getting Started
 
-### Step 1: Clone This Repo
+### Step 1: Clone
 
 ```bash
 git clone https://github.com/anubhavg-icpl/vibe.git
 ```
 
-_Revolutionary, I know._
-
 ### Step 2: Pick a Mode
 
-Browse `/modes` and find something that matches your existential crisis:
+Browse `/modes` and find something matching your situation. Examples:
 
-| You Want To...                          | Use This Mode                  |
-| --------------------------------------- | ------------------------------ |
-| Write code that doesn't suck            | `software-engineer-agent-mode` |
-| Pretend you understand system design    | `principal-engineer-mode`      |
-| Find security holes (before hackers do) | `wg-code-sentinel-mode`        |
-| Build ML pipelines                      | `mlops-expert-mode`            |
-| Break production (professionally)       | `netflix-chaos-suite-mode`     |
-| Make your AI sound like Iron Man        | `tony-stark-mode`              |
+| You Want To...                                          | Use This Mode                                            |
+| ------------------------------------------------------- | -------------------------------------------------------- |
+| Write code that doesn't suck                            | `software-engineer-agent-mode`                           |
+| Think like DHH about a microservices proposal           | `modes/engineer-personas/dhh-style-mode`                 |
+| Have Carmack-grade simplicity in your review            | `modes/engineer-personas/carmack-style-mode`             |
+| Build a RAG with reranking + hybrid search              | `modes/rag-advanced/hybrid-search-expert-mode`           |
+| Fine-tune with QLoRA on a single GPU                    | `modes/llm-training/qlora-expert-mode`                   |
+| Deploy llama.cpp behind nginx with auth                 | `modes/local-llm/llama-cpp-server-expert-mode`           |
+| Write an Ollama Modelfile for your fine-tune            | `modes/model-authoring/ollama-modelfile-expert-mode`     |
+| Hunt vulnerabilities like Mythos Preview                | `modes/mythos/discovery/mythos-zero-day-hunter-mode`     |
+| Build UI with Airbnb's design language                  | `modes/design-systems/airbnb-design-mode`                |
+| Use Cloudflare Workers + D1 + Durable Objects properly  | `modes/edge-platforms/cloudflare-workers-expert-mode`    |
+| Spin up a project with Google's android CLI             | `modes/android-cli/android-create-template-expert-mode`  |
+| Make your AI sound like Iron Man                        | `modes/personalities/tony-stark-mode`                    |
 
 ### Step 3: Copy, Paste, Profit
 
-Copy mode content into your AI assistant. That's it. That's whole process.
+Copy mode content into your AI assistant. Done.
 
 ---
 
-## 🚀 VIBE CLI: Install Modes to AI Agents
+## VIBE CLI — Install Modes as Skills
 
-**New!** Use the `vibe` CLI to automatically install VIBE modes as skills to your AI coding agents.
-
-### Installation
+Use the `vibe` CLI to auto-install modes as skills for your AI coding agent.
 
 ```bash
 npm install -g vibe-modes
@@ -98,32 +181,14 @@ npm install -g vibe-modes
 pnpm add -g vibe-modes
 ```
 
-### List Available Modes
-
 ```bash
-vibe modes --list
-```
-
-### Install Modes to AI Agents
-
-```bash
-# Install all modes (interactive)
-vibe modes
-
-# Install specific mode
-vibe modes --mode "tony-stark-mode"
-
-# Install by category
-vibe modes --category "testing"
-
-# Install to specific agent
-vibe modes --agent claude-code
-
-# Global installation (available across all projects)
-vibe modes --global
-
-# Non-interactive (CI/CD friendly)
-vibe modes --mode "software-engineer-agent-mode" --agent opencode -y
+vibe modes --list                                       # list everything
+vibe modes                                              # interactive picker
+vibe modes --mode "tony-stark-mode"                     # install one
+vibe modes --category "rag-advanced"                    # install a category
+vibe modes --agent claude-code                          # specify target agent
+vibe modes --global                                     # user-level install
+vibe modes --mode "carmack-style-mode" --agent opencode -y   # CI-friendly
 ```
 
 ### Supported Agents
@@ -137,251 +202,146 @@ vibe modes --mode "software-engineer-agent-mode" --agent opencode -y
 
 ### How It Works
 
-1. Discovers all VIBE modes in the `modes/` directory
-2. Converts mode files to skill format (`SKILL.md` with YAML frontmatter)
-3. Installs to your chosen AI agent's skills directory
-4. Modes automatically load when you use the agent
+1. Discovers all VIBE modes under `modes/`
+2. Converts each to skill format (`SKILL.md` with YAML frontmatter)
+3. Drops them into the chosen agent's skills directory
+4. The agent loads them automatically on next session
 
-**Example Output:**
+---
 
-```bash
-$ vibe modes --category testing --agent claude-code
+## Bundled External Collections
 
-┌   vibe
-│
-◇  Found 18 modes
-│
-◇  Available Modes
-│
-│  testing (18)
-│    Chaos Engineering Expert Mode
-│      Expert in chaos engineering for testing system resilience
-│    Jest Expert Mode
-│      Expert in Jest testing framework...
-│
-└  Done! ✓
-```
+Vibe ships with several upstream collections, each prefixed for clear provenance:
+
+| Source                                              | What                                                 | Prefix     |
+| --------------------------------------------------- | ---------------------------------------------------- | ---------- |
+| **rohitg00/ai-engineering-from-scratch**            | 361 domain skills + 99 prompts + 20 phase modes      | (none)     |
+| **rohitg00/awesome-claude-design**                  | 35 design-md modes + 6 prompts + 13 recipes          | `acd-`     |
+| **rohitg00/awesome-claude-code-toolkit**            | 136 agents + 42 commands + 37 skills + 120 plugins   | (none)     |
+| **affaan-m/everything-claude-code**                 | 182 skills + 48 agents + 89 rules + 1 plugin tree    | `ecc-`     |
+| **0xDarkMatter/claude-mods**                        | 74 skill dirs + 23 agents + 13 output-styles + tools | `cmods-`   |
+| **badlogic/pi-skills**                              | 8 cross-tool skills (brave-search, gccli, vscode...) | `pi-`      |
+| **open-design/design-systems**                      | 138 design-system modes (139 with README)            | (none)     |
+
+All originals untouched in their dirs of origin.
 
 ---
 
 ## Showcase: What These Modes Actually Do
 
-### Example: Security Review Mode
+### `mythos-zero-day-hunter-mode` (defensive)
 
-**Without Vibe:**
+> "I read this codebase. The fuzz harness covers `parser_main` but not `parser_aux` — and `parser_aux` does the same `memcpy` without the bounds check that was added to `parser_main` in commit a1b2c3d. Let me trace the input path... yes, attacker-reachable through `/api/v2/upload`. Here's the PoC, the patch, the regression test, and the GitHub Security Advisory draft. Disclosure window: 90 days unless actively exploited."
 
-> "Your code looks fine! Maybe add some input validation?"
+### `dhh-style-mode`
 
-**With `wg-code-sentinel-mode`:**
+> "Why are you building a separate microservice for this? It's three database queries. Put it in the monolith, ship it Tuesday, and stop reading Hacker News. — DHH (paraphrased from his Rails World 2024 keynote, cited)."
 
-> "Line 47: SQL injection vulnerability. Line 89: Hardcoded AWS credentials (nice). Line 156: You're using `eval()` unironically. Let me walk you through the 17 ways this will get you featured on HaveIBeenPwned."
+### `cloudflare-workers-expert-mode`
 
-### Example: Chaos Engineering Mode
+> "You don't need a queue here — you've got 27 events a minute. Use a Durable Object with `input gates` and a `setAlarm()` for the batch flush. Here's the binding config, the worker code, and the wrangler.toml. Cost at your scale: ~$5/mo."
 
-**Without Vibe:**
+### `qlora-expert-mode`
 
-> "Consider testing your application's resilience."
+> "Single A100 80GB? You can fit Qwen2.5-32B with NF4 + double quant + paged optimizers, rank 64, alpha 128, on `attn` + `mlp` modules. Here's the axolotl YAML. Expect ~2hr/epoch on a 50k-sample dataset. Don't forget to merge before serving."
 
-**With `netflix-chaos-suite-mode`:**
+### `airbnb-design-mode`
 
-> "Deploying Chaos Monkey to randomly terminate instances, Chaos Gorilla to drop AZs, and Chaos Kong to simulate regional failures. Here's your blast radius calculation, rollback procedures, and the exact Prometheus queries to monitor this experiment. Also, maybe don't run this on Friday."
+> "Use Rausch coral (`#ff385c`) only for primary CTAs and the search button — never for body copy or secondary buttons. Cards are 4:3 with 14-20px corner radius, full-bleed photography. Sticky booking panel right-rail on desktop, bottom-anchored Reserve bar on mobile. One typeface (Cereal VF) for everything from 8px legal to 28px headings."
 
-### Example: Platform Engineering Mode
-
-**Without Vibe:**
-
-> "You could build an internal developer portal."
-
-**With `platform-engineering-mode`:**
-
-> "Here's a complete Backstage setup with software templates, Crossplane compositions for self-service infrastructure, and a platform API. Your developers will provision databases faster than they can argue about tabs vs spaces."
+---
 
 ## Repository Structure
 
 ```text
 vibe/
-├── .ai/rules/              # Universal rules (works everywhere)
-├── agents/                 # AI agent templates (9 agents)
-│   ├── architect.md        # System architecture agent
-│   ├── build-error-resolver.md  # Build error fixing agent
-│   ├── code-reviewer.md    # Code review agent
-│   ├── doc-updater.md      # Documentation updater
-│   ├── e2e-runner.md       # E2E test runner agent
-│   ├── planner.md          # Task planning agent
-│   ├── refactor-cleaner.md # Code refactoring agent
-│   ├── security-reviewer.md # Security review agent
-│   └── tdd-guide.md        # TDD workflow agent
-├── commands/               # Slash command templates (10 commands)
-│   ├── build-fix.md        # /build-fix command
-│   ├── code-review.md      # /code-review command
-│   ├── e2e.md              # /e2e command
-│   ├── plan.md             # /plan command
-│   ├── tdd.md              # /tdd command
-│   └── ...                 # More commands
-├── contexts/               # Context templates (3 contexts)
-│   ├── dev.md              # Development context
-│   ├── research.md         # Research context
-│   └── review.md           # Code review context
-├── examples/               # Example configurations
-│   ├── CLAUDE.md           # Example CLAUDE.md file
-│   ├── user-CLAUDE.md      # User-level CLAUDE.md
-│   ├── statusline.json     # Statusline configuration
-│   └── sessions/           # Example session transcripts
-├── hooks/                  # Hook configurations
-│   ├── hooks.json          # Hook definitions
-│   ├── memory-persistence/ # Memory persistence hooks
-│   └── strategic-compact/  # Strategic compaction hooks
-├── mcp-configs/            # MCP server configurations
-│   └── mcp-servers.json    # MCP server setup
-├── plugins/                # Plugin documentation
-│   └── README.md           # Plugin guide
-├── rules/                  # Rule templates (8 rules)
-│   ├── agents.md           # Agent behavior rules
-│   ├── coding-style.md     # Coding style rules
-│   ├── git-workflow.md     # Git workflow rules
-│   ├── hooks.md            # Hook rules
-│   ├── patterns.md         # Design pattern rules
-│   ├── performance.md      # Performance rules
-│   ├── security.md         # Security rules
-│   └── testing.md          # Testing rules
-├── skills/                 # Skill templates (6+ skills)
-│   ├── backend-patterns.md # Backend development patterns
-│   ├── frontend-patterns.md # Frontend development patterns
-│   ├── coding-standards.md # Coding standards skill
-│   ├── clickhouse-io.md    # ClickHouse patterns
-│   └── ...                 # More skills & subdirectories
-├── modes/                  # AI chat modes (283+)
-│   ├── ai-ml/              # LLM, MLOps, Vector DBs
-│   ├── architecture/       # System design, clean code
-│   ├── cloud-infrastructure/ # AWS, GCP, Azure, Terraform, K8s
-│   ├── coding-standards/   # Because consistency matters
-│   ├── devops/             # GitOps, SRE, FinOps, AIOps
-│   ├── frameworks/         # NestJS, FastAPI, Svelte, Remix, Nuxt
-│   ├── infrastructure/     # Kafka, Istio, OpenTelemetry
-│   ├── languages/          # 14 languages
-│   ├── personalities/      # AI personas
-│   ├── security/           # SAST/DAST, Compliance
-│   ├── testing/            # Chaos, Contract, Security testing
-│   └── ...                 # 20+ more categories
-├── src/                    # VIBE CLI source (TypeScript)
-│   ├── index.ts           # Main CLI entry point
-│   ├── types.ts           # TypeScript type definitions
-│   ├── modes.ts           # Mode discovery and parsing
-│   ├── agents.ts          # Agent configuration
-│   └── installer.ts       # Mode-to-skill conversion
-├── scripts/               # Automation scripts (Python)
-├── templates/              # Project templates
-└── assets/                 # Logo and other assets
+├── .ai/rules/                 # Universal rules (works across agents)
+├── agents/                    # 216 subagents, 10 categories + cmods/ + ecc/
+│   ├── business-product/      # PM-style agents
+│   ├── core-development/      # ui-designer, monorepo-architect, websocket-engineer
+│   ├── data-ai/               # data + ML agents
+│   ├── developer-experience/
+│   ├── infrastructure/
+│   ├── language-experts/
+│   ├── orchestration/
+│   ├── quality-assurance/
+│   ├── research-analysis/
+│   ├── specialized-domains/
+│   ├── cmods/                 # 23 from claude-mods
+│   ├── ecc/                   # 48 from everything-claude-code
+│   └── *.md                   # 9 originals (architect, code-reviewer, planner...)
+├── commands/                  # 127 slash commands across categories + ecc/ + cmods/
+│   ├── architecture/, devops/, documentation/, git/, refactoring/,
+│   │   security/, testing/, workflow/
+│   ├── ecc/, cmods/
+│   └── *.md                   # 10 originals
+├── contexts/                  # dev / research / review + ecc-*
+├── examples/                  # CLAUDE.md examples + sessions + ecc/
+├── hooks/                     # Hook configurations + ecc/ + cmods/
+├── mcp-configs/               # MCP server registry + ecc-mcp-servers.json
+├── modes/                     # 754 chat modes — 52 categories (see breakdown above)
+├── output-styles/             # 13 output styles (cmods)
+├── plugins/                   # 122 plugins (each with agents/ + commands/)
+├── prompts/                   # 106 prompt templates (99 ai-eng + 6 acd + 1 readme)
+├── recipes/                   # 18 end-to-end recipes + case-studies/
+├── rules/                     # 111 rules (8 originals + 89 ecc + 9 toolkit + 5 cmods)
+├── scripts/                   # generate-modes-index.py, fix-diagrams.py
+├── skills/                    # 675 skills (vibe + ai-engineering + pi + cmods + ecc + toolkit)
+├── src/                       # VIBE CLI (TypeScript)
+├── templates/                 # claude-md/ + project-starters/ + cmods/
+├── tools/                     # cmods/ (perplexity.py, install scripts)
+├── docs/                      # ecc/ (CLAUDE.md, RULES.md, the-*-guide.md) + cmods/
+├── modes-index.json           # auto-generated index of all modes
+└── modes-index.schema.json    # JSON schema for the index
 ```
 
 ## Universal Rules Engine
 
-Set up rules once, apply everywhere:
-
-```text
-.ai/rules/
-├── base.md          # Core coding standards
-├── security.md      # Security requirements
-├── testing.md       # Test coverage rules
+```
+rules/
+├── coding-style.md         agents.md         git-workflow.md
+├── hooks.md                patterns.md       performance.md
+├── security.md             testing.md
+├── ecc-{language-prefix}-*.md   # 89 language/topic rules from ecc
+├── cmods-*.md                   # 5 from claude-mods
 └── ...
 ```
 
-**Works with:** Claude Code, Amazon Q, GitHub Copilot, Gemini, Aider
+**Works with:** Claude Code, Amazon Q, GitHub Copilot, Gemini, Aider, OpenCode, Codex CLI, Amp, Droid.
 
-_Finally, consistency across all your AI assistants without copying prompts like it's 2022._
-
-## Popular Modes
-
-### Development
-
-- `software-engineer-agent-mode` - Autonomous engineering with zero-confirmation policy
-- `rust-beast-mode` - Comprehensive Rust development
-- `blueprint-mode-v39` - Structured workflows (Debug, Express, Main, Loop)
-
-### Infrastructure & DevOps
-
-- `platform-engineering-mode` - Internal Developer Platforms with Backstage
-- `aiops-expert-mode` - ML-powered anomaly detection and self-healing
-- `netflix-chaos-suite-mode` - Chaos Monkey, Gorilla, Kong, and ChAP
-- `gitops-expert-mode` - ArgoCD, Flux, GitOps patterns
-
-### Security
-
-- `wg-code-sentinel-mode` - Security vulnerability analysis
-- `sast-dast-expert-mode` - Static and dynamic analysis
-- `soc2-compliance-mode` - Compliance automation
-
-### AI/ML
-
-- `llm-expert-mode` - LLM development and fine-tuning
-- `vector-database-expert-mode` - Pinecone, Weaviate, Milvus
-- `mlops-expert-mode` - ML pipeline automation
-
-## Extended Ecosystem
-
-Beyond modes, VIBE provides a complete toolkit for customizing AI coding assistants:
-
-### Agents (`agents/`)
-
-Pre-built AI agent templates for specialized tasks:
-
-| Agent | Description |
-| ----- | ----------- |
-| `architect` | System architecture design and review |
-| `build-error-resolver` | Automatically fix build errors |
-| `code-reviewer` | Comprehensive code review |
-| `doc-updater` | Keep documentation in sync |
-| `e2e-runner` | End-to-end test orchestration |
-| `planner` | Task breakdown and planning |
-| `refactor-cleaner` | Code refactoring and cleanup |
-| `security-reviewer` | Security vulnerability analysis |
-| `tdd-guide` | Test-driven development workflow |
-
-### Commands (`commands/`)
-
-Slash commands for quick actions: `/build-fix`, `/code-review`, `/e2e`, `/learn`, `/plan`, `/refactor-clean`, `/tdd`, `/test-coverage`, `/update-codemaps`, `/update-docs`
-
-### Contexts (`contexts/`)
-
-Context templates for different workflows: `dev`, `research`, `review`
-
-### Rules (`rules/`)
-
-Behavior rules for agents: `agents`, `coding-style`, `git-workflow`, `hooks`, `patterns`, `performance`, `security`, `testing`
-
-### Skills (`skills/`)
-
-Reusable skill modules: `backend-patterns`, `frontend-patterns`, `coding-standards`, `clickhouse-io`, and more
-
-### Hooks (`hooks/`)
-
-Event-driven hooks for automation: memory persistence, strategic compaction
-
-### MCP Configs (`mcp-configs/`)
-
-Model Context Protocol server configurations for extended capabilities
+---
 
 ## Stats
 
-| Metric                | Value    |
-| --------------------- | -------- |
-| Total Modes           | **283+** |
-| Categories            | **33+**  |
-| Languages Covered     | **14**   |
-| Coding Standards      | **14**   |
-| Project Templates     | **22+**  |
-| Personality Modes     | **11**   |
-| Testing/Chaos Modes   | **23**   |
-| Security Modes        | **9**    |
-| DevOps/Platform Modes | **8**    |
-| Agent Templates       | **9**    |
-| Commands              | **10**   |
-| Rules                 | **8**    |
-| Skills                | **6+**   |
+| Metric                         | Value     |
+| ------------------------------ | --------- |
+| **Total Modes**                | **754**   |
+| **Categories**                 | **52**    |
+| Mythos security modes (4 sub)  | 33        |
+| Design-system modes            | 174       |
+| Engineer-persona modes         | 19        |
+| AI / RAG / training / eval     | 109       |
+| Modern-stack (web/edge/data)   | 53        |
+| Local LLM + model-authoring    | 36        |
+| Android (CLI + platform)       | 30        |
+| **Total Skills**               | **675**   |
+| **Total Subagents**            | **216**   |
+| **Total Commands**             | **127**   |
+| **Total Plugins**              | **122**   |
+| **Total Rules**                | **111**   |
+| **Total Prompts**              | **106**   |
+| **Total Recipes**              | **18**    |
+| **Output Styles**              | **13**    |
+| **Templates**                  | **13**    |
+| Languages covered              | 14+       |
+| Project templates              | 22+       |
+| **Bundled external sources**   | **7**     |
+
+---
 
 ## Contributing
 
-Want to add a mode? Found a bug? Have strong opinions about code formatting?
+Want to add a mode? Found a bug? Have strong opinions about formatting?
 
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md)
 2. Open a PR
@@ -389,40 +349,53 @@ Want to add a mode? Found a bug? Have strong opinions about code formatting?
 
 We accept:
 
-- New modes (the weirder, the better)
-- Bug fixes (yes, even documentation has bugs)
-- Improvements (but not "let's rewrite everything in Rust")
+- New modes (the weirder the better — provided you can cite real sources)
+- Bug fixes (yes, even docs have bugs)
+- Improvements (but not "let's rewrite the whole CLI in Rust")
+
+**Mode authoring rules** (per `modes/engineer-personas/` precedent):
+
+- Web-researched modes MUST cite real URLs that you actually fetched
+- Persona modes MUST attribute quotes to verifiable public sources (talks, blog posts, interviews)
+- Security modes MUST carry defensive framing — Mythos offense modes carry mandatory authorization gates
+- No invented APIs, no hallucinated CVE numbers, no fabricated framework features
 
 ## FAQ
 
 **Q: Why is it called "Vibe"?**
-A: Because "A Comprehensive Collection of Specialized AI Chat Modes for Software Engineering" didn't fit on the repo name.
+A: Because "A Comprehensive Collection of 754 Specialized AI Chat Modes Plus 675 Skills, 216 Subagents, 122 Plugins, and 111 Rules" wouldn't fit in the GitHub repo name field.
 
 **Q: Does this actually work?**
-A: Bold of you to ask. Yes, it works. 150+ modes don't just write themselves. (Actually, some of them were written by AI, but let's not get philosophical.)
+A: 754 modes don't write themselves. (Well, some did — but they web-searched first and cited their sources, which is more than most humans bother to do.)
 
 **Q: Can I use these commercially?**
-A: MIT License. Go wild. Just don't blame us when the Chaos Monkey mode takes down production.
+A: MIT License. Go wild. Just don't blame us when `mythos-uac-bypass-creative-mode` refuses to operate on systems you didn't write authorization for. (That's the point. Read the Authorization Gate.)
 
 **Q: Why are there personality modes?**
-A: Because sometimes you need Gordon Ramsay to tell you your code is _raw_. It's therapeutic.
+A: Because sometimes you need Gordon Ramsay to tell you your code is _raw_. Or DHH to tell you that you don't need Kubernetes. Both are therapeutic.
+
+**Q: Why do mythos offense modes refuse so much?**
+A: Because the underlying capability is dual-use, the threat model is real, and the only legitimate path is coordinated disclosure. Read the Authorization Gate sections — they're not boilerplate, they're the contract.
+
+**Q: How do I keep up with new modes?**
+A: `git pull` and check the `modes-index.json` diff. Or watch the repo.
 
 ## License
 
-MIT License - See [LICENSE](LICENSE)
+MIT — see [LICENSE](LICENSE).
 
-Do whatever you want with this. We're not your parents.
+Do whatever you want. We're not your parents.
 
 ---
 
 <p align="center">
-  <strong>Built by developers who got tired of explaining the same things to AI assistants.</strong>
+  <strong>Built by developers who got tired of explaining the same things to AI assistants 754 different ways.</strong>
 </p>
 
 <p align="center">
   <a href="https://github.com/anubhavg-icpl/vibe">Star this repo</a> •
   <a href="https://github.com/anubhavg-icpl/vibe/issues">Report Issues</a> •
-  <a href="FEATURE_GAPS.md">See What's Coming</a>
+  <a href="modes-index.json">Browse the Mode Index</a>
 </p>
 
 ---

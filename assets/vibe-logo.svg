@@ -34,16 +34,16 @@
 
   <!-- Subtitle section -->
   <text x="195" y="45" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#a78bfa" font-weight="600">
-    AI Chat Modes
+    AI Chat Modes + Skills
   </text>
   <text x="195" y="65" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#94a3b8">
-    Professional Collection
+    750 modes · 675 skills · 52 categories
   </text>
 
   <!-- Mode count badge - positioned separately -->
-  <rect x="370" y="32" width="110" height="36" rx="18" fill="#1e1b4b" stroke="url(#vibeGrad)" stroke-width="2"/>
+  <rect x="365" y="32" width="120" height="36" rx="18" fill="#1e1b4b" stroke="url(#vibeGrad)" stroke-width="2"/>
   <text x="425" y="56" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#f0abfc" text-anchor="middle" font-weight="bold">
-    200+ Modes
+    750+ Modes
   </text>
 
   <!-- Decorative elements -->
