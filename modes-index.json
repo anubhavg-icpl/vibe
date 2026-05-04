@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:32:05.365353Z",
-  "totalModes": 728,
+  "generatedAt": "2026-05-04T11:49:55.325408Z",
+  "totalModes": 759,
   "categories": [
     {
       "name": "ai-engineering",
@@ -653,6 +653,248 @@
           "path": [
             "analysis",
             "wg-code-sentinel-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "android-cli",
+      "title": "Android Cli",
+      "modes": [
+        {
+          "slug": "android-cli-expert-mode",
+          "title": "Android CLI Expert",
+          "description": "Master overview of Google's agent-first Android CLI (v0.7, April 2026) \u2014 install, config, global flags, and command map",
+          "path": [
+            "android-cli",
+            "android-cli-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "agent",
+            "cli",
+            "google",
+            "developer-tools",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-cli-init-skills-expert-mode",
+          "title": "Android CLI Init & Skills Bootstrap Expert",
+          "description": "Expert in `android init` and the skill-system bootstrap \u2014 why an agent must run init first, what the android-cli skill installs",
+          "path": [
+            "android-cli",
+            "android-cli-init-skills-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "init",
+            "skills",
+            "agent",
+            "bootstrap",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-create-template-expert-mode",
+          "title": "Android Create Template Expert",
+          "description": "Expert in `android create` \u2014 scaffolding new Android projects from official templates with `--dry-run`, `--name`, `--output`",
+          "path": [
+            "android-cli",
+            "android-create-template-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "create",
+            "template",
+            "scaffolding",
+            "agp-9",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-describe-expert-mode",
+          "title": "Android Describe Expert",
+          "description": "Expert in `android describe` \u2014 JSON project introspection for build targets, output artifact paths, and module graph",
+          "path": [
+            "android-cli",
+            "android-describe-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "describe",
+            "json",
+            "introspection",
+            "agent-context",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-docs-kb-expert-mode",
+          "title": "Android Docs & Knowledge Base Expert",
+          "description": "Expert in `android docs search` and `android docs fetch kb://...` \u2014 querying Android KB and pulling authoritative docs into agent context",
+          "path": [
+            "android-cli",
+            "android-docs-kb-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "docs",
+            "knowledge-base",
+            "kb",
+            "agent-context",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-emulator-cli-expert-mode",
+          "title": "Android Emulator CLI Expert",
+          "description": "Expert in `android emulator create/list/start/stop` \u2014 profiles, scripted emulator pools, Windows caveat",
+          "path": [
+            "android-cli",
+            "android-emulator-cli-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "emulator",
+            "avd",
+            "ci",
+            "testing",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-layout-inspect-expert-mode",
+          "title": "Android Layout Inspector Expert",
+          "description": "Expert in `android layout` \u2014 JSON UI hierarchy dumps, --pretty, --output, --diff snapshot diffs for agent UI inspection",
+          "path": [
+            "android-cli",
+            "android-layout-inspect-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "layout",
+            "ui",
+            "hierarchy",
+            "agent",
+            "testing",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-run-deploy-expert-mode",
+          "title": "Android Run & Deploy Expert",
+          "description": "Expert in `android run` \u2014 APK deploy, multi-APK splits, --activity, --device, --type for activities/services/watch faces/tiles",
+          "path": [
+            "android-cli",
+            "android-run-deploy-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "run",
+            "deploy",
+            "apk",
+            "splits",
+            "wearos",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-sdk-mgmt-expert-mode",
+          "title": "Android SDK Management Expert",
+          "description": "Expert in `android sdk install/list/remove/update` \u2014 channels, version pinning, reproducible team & CI SDK setups",
+          "path": [
+            "android-cli",
+            "android-sdk-mgmt-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "sdk",
+            "sdkmanager",
+            "ci",
+            "reproducibility",
+            "2026"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "android-platform",
+      "title": "Android Platform",
+      "modes": [
+        {
+          "slug": "android-agent-skills-expert-mode",
+          "title": "Android Agent Skills Expert",
+          "description": "Authoring, distributing, and consuming Android skills (SKILL.md format, .skills/ layout, android CLI integration) for Gemini and other agent runtimes",
+          "path": [
+            "android-platform",
+            "android-agent-skills-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-skills",
+            "agent-skills",
+            "gemini",
+            "antigravity",
+            "mcp"
+          ]
+        },
+        {
+          "slug": "compose-performance-expert-mode",
+          "title": "Compose Performance Expert",
+          "description": "Recomposition discipline, stability, Strong Skipping, derivedStateOf, baseline profiles, and Layout Inspector for production Compose apps",
+          "path": [
+            "android-platform",
+            "compose-performance-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "jetpack-compose",
+            "performance",
+            "baseline-profiles",
+            "recomposition"
+          ]
+        },
+        {
+          "slug": "gemini-in-android-studio-expert-mode",
+          "title": "Gemini in Android Studio Expert",
+          "description": "Chat, Agent Mode, code completions, slash commands, MCP servers, and AGENTS.md across the modern Gemini-in-Android-Studio surface",
+          "path": [
+            "android-platform",
+            "gemini-in-android-studio-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-studio",
+            "gemini",
+            "agent-mode",
+            "mcp",
+            "ai-coding-assistant"
+          ]
+        },
+        {
+          "slug": "jetpack-compose-expert-mode",
+          "title": "Jetpack Compose Expert",
+          "description": "Modern Compose UI for Android \u2014 composables, state, side effects, navigation, animations, lazy lists, and Compose Multiplatform considerations",
+          "path": [
+            "android-platform",
+            "jetpack-compose-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "jetpack-compose",
+            "ui",
+            "kotlin",
+            "declarative-ui"
           ]
         }
       ]
@@ -6870,6 +7112,333 @@
           "path": [
             "mobile",
             "react-native-developer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-authoring",
+      "title": "Model Authoring",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "model-authoring",
+            "README"
+          ]
+        },
+        {
+          "slug": "chat-template-expert-mode",
+          "title": "Chat Template Expert",
+          "description": "Author and debug Jinja2 chat_template strings in HF tokenizer_config.json \u2014 ChatML, Llama 3, Qwen, Gemma, Mistral, plus tools / function calling",
+          "path": [
+            "model-authoring",
+            "chat-template-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "chat-template",
+            "jinja2",
+            "tokenizer",
+            "huggingface",
+            "function-calling",
+            "chatml"
+          ]
+        },
+        {
+          "slug": "distil-mini-model-expert-mode",
+          "title": "Distil / Mini Model Expert",
+          "description": "Author small distilled models for shipping \u2014 choose teacher, design distillation recipe, evaluate on real prompts before publish, GGUF quant for footprint",
+          "path": [
+            "model-authoring",
+            "distil-mini-model-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "distillation",
+            "small-models",
+            "slm",
+            "knowledge-distillation",
+            "gguf",
+            "deployment"
+          ]
+        },
+        {
+          "slug": "embedding-model-publish-expert-mode",
+          "title": "Embedding Model Publish Expert",
+          "description": "Publish embedding models \u2014 sentence-transformers config, modules.json, 1_Pooling, MTEB submission, Matryoshka dims, embedding-specific model card",
+          "path": [
+            "model-authoring",
+            "embedding-model-publish-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "embeddings",
+            "sentence-transformers",
+            "mteb",
+            "matryoshka",
+            "retrieval",
+            "publishing"
+          ]
+        },
+        {
+          "slug": "gguf-conversion-expert-mode",
+          "title": "GGUF Conversion Expert",
+          "description": "Convert HF safetensors to GGUF with convert_hf_to_gguf.py \u2014 handle vocab, tied embeddings, sharded checkpoints, and produce reproducible F16/BF16 + quantize pipelines",
+          "path": [
+            "model-authoring",
+            "gguf-conversion-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "gguf",
+            "conversion",
+            "llama-cpp",
+            "safetensors",
+            "quantization",
+            "vocab"
+          ]
+        },
+        {
+          "slug": "gguf-multimodal-mmproj-expert-mode",
+          "title": "GGUF Multimodal mmproj Expert",
+          "description": "Author multimodal GGUF \u2014 mmproj projector files, llama-mtmd-cli, llama-server multimodal endpoint, with LLaVA / MiniCPM-V / InternVL / Qwen2-VL / Gemma 3",
+          "path": [
+            "model-authoring",
+            "gguf-multimodal-mmproj-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "gguf",
+            "multimodal",
+            "mmproj",
+            "llama-cpp",
+            "vision",
+            "mtmd",
+            "libmtmd"
+          ]
+        },
+        {
+          "slug": "lora-adapter-publish-expert-mode",
+          "title": "LoRA Adapter Publish Expert",
+          "description": "Package and publish LoRA adapters \u2014 HF Hub layout, vLLM dynamic loading, llama.cpp LoRA GGUF, Ollama ADAPTER directive, Replicate Cog",
+          "path": [
+            "model-authoring",
+            "lora-adapter-publish-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "lora",
+            "peft",
+            "adapter",
+            "vllm",
+            "llama-cpp",
+            "ollama",
+            "replicate",
+            "cog"
+          ]
+        },
+        {
+          "slug": "mlx-converter-expert-mode",
+          "title": "MLX Converter Expert",
+          "description": "Convert HF safetensors models to MLX format, quantize to 4-bit / 8-bit, publish to mlx-community on HF Hub for Apple Silicon serving",
+          "path": [
+            "model-authoring",
+            "mlx-converter-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "mlx",
+            "apple-silicon",
+            "quantization",
+            "mlx-community",
+            "conversion"
+          ]
+        },
+        {
+          "slug": "model-card-publish-expert-mode",
+          "title": "Model Card Publish Expert",
+          "description": "Author HF model cards \u2014 README.md frontmatter (license, library_name, base_model, datasets, language, pipeline_tag, tags), eval results, intended use, training attribution",
+          "path": [
+            "model-authoring",
+            "model-card-publish-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "model-card",
+            "huggingface",
+            "readme",
+            "frontmatter",
+            "license",
+            "attribution"
+          ]
+        },
+        {
+          "slug": "ollama-library-publisher-expert-mode",
+          "title": "Ollama Library Publisher Expert",
+          "description": "Publish models to ollama.com/library \u2014 namespace setup, ollama push, signing keys, quant tags, parameter-size tags, model card README authoring",
+          "path": [
+            "model-authoring",
+            "ollama-library-publisher-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "ollama",
+            "publishing",
+            "registry",
+            "signing-keys",
+            "quantization",
+            "model-card"
+          ]
+        },
+        {
+          "slug": "ollama-modelfile-expert-mode",
+          "title": "Ollama Modelfile Expert",
+          "description": "Author production Modelfiles with FROM, PARAMETER, TEMPLATE, SYSTEM, ADAPTER, MESSAGE, and LICENSE directives for Llama 3, Qwen, Phi, and Gemma",
+          "path": [
+            "model-authoring",
+            "ollama-modelfile-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "ollama",
+            "modelfile",
+            "gguf",
+            "lora",
+            "go-template",
+            "chat-template"
+          ]
+        },
+        {
+          "slug": "ollama-multimodal-modelfile-expert-mode",
+          "title": "Ollama Multimodal Modelfile Expert",
+          "description": "Author Ollama Modelfiles for vision models \u2014 llava, llama3.2-vision, MiniCPM-V \u2014 with mmproj projector handling and image-token templates",
+          "path": [
+            "model-authoring",
+            "ollama-multimodal-modelfile-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "ollama",
+            "multimodal",
+            "vision",
+            "llava",
+            "llama-vision",
+            "minicpm",
+            "mmproj"
+          ]
+        },
+        {
+          "slug": "prompt-template-marketplace-expert-mode",
+          "title": "Prompt Template Marketplace Expert",
+          "description": "Share and version prompt templates \u2014 LangChain Hub, Langfuse, dotprompt, OpenAI Playground exports, promptfoo configs \u2014 with deprecation patterns",
+          "path": [
+            "model-authoring",
+            "prompt-template-marketplace-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "prompt-management",
+            "langchain-hub",
+            "langfuse",
+            "dotprompt",
+            "promptfoo",
+            "versioning"
+          ]
+        },
+        {
+          "slug": "quantization-format-expert-mode",
+          "title": "Quantization Format Expert",
+          "description": "Pick between GGUF K/IQ quants, AWQ, GPTQ, bitsandbytes NF4, EXL2, MLX 4-bit, NVFP4 \u2014 decision matrix by hardware and serving stack",
+          "path": [
+            "model-authoring",
+            "quantization-format-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "quantization",
+            "awq",
+            "gptq",
+            "gguf",
+            "bitsandbytes",
+            "exl2",
+            "mlx",
+            "nvfp4",
+            "nf4"
+          ]
+        },
+        {
+          "slug": "safetensors-expert-mode",
+          "title": "Safetensors Expert",
+          "description": "Author and inspect safetensors files \u2014 header layout, sharding via model.safetensors.index.json, mmap loading, and PEFT adapter format",
+          "path": [
+            "model-authoring",
+            "safetensors-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "safetensors",
+            "sharding",
+            "peft",
+            "mmap",
+            "security",
+            "huggingface"
+          ]
+        },
+        {
+          "slug": "structured-output-expert-mode",
+          "title": "Structured Output Expert",
+          "description": "Constrained generation across stacks \u2014 Outlines, lm-format-enforcer, llama.cpp GBNF, OpenAI json_schema, vLLM guided_json, Instructor \u2014 with a decision matrix",
+          "path": [
+            "model-authoring",
+            "structured-output-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "structured-output",
+            "json-schema",
+            "gbnf",
+            "outlines",
+            "vllm",
+            "instructor",
+            "function-calling"
+          ]
+        },
+        {
+          "slug": "system-prompt-engineering-expert-mode",
+          "title": "System Prompt Engineering Expert",
+          "description": "Author durable system prompts \u2014 persona, capability scoping, refusal patterns, output format directives, jailbreak hardening, prompt caching, dynamic injection",
+          "path": [
+            "model-authoring",
+            "system-prompt-engineering-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "system-prompt",
+            "prompt-engineering",
+            "jailbreak-defense",
+            "prompt-caching",
+            "instruction-hierarchy"
+          ]
+        },
+        {
+          "slug": "tokenizer-engineering-expert-mode",
+          "title": "Tokenizer Engineering Expert",
+          "description": "Train tokenizers from scratch with HF tokenizers \u2014 BPE / SentencePiece / WordPiece \u2014 extend vocab for new languages or code, and add chat / special tokens",
+          "path": [
+            "model-authoring",
+            "tokenizer-engineering-expert-mode"
+          ],
+          "tags": [
+            "model-authoring",
+            "tokenizer",
+            "bpe",
+            "sentencepiece",
+            "wordpiece",
+            "vocab-extension",
+            "special-tokens"
           ]
         }
       ]
