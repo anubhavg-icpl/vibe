@@ -1,8 +1,203 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-01-22T19:25:23.427783Z",
-  "totalModes": 313,
+  "generatedAt": "2026-05-04T10:23:22.926308Z",
+  "totalModes": 476,
   "categories": [
+    {
+      "name": "ai-engineering",
+      "title": "Ai Engineering",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "ai-engineering",
+            "README"
+          ]
+        },
+        {
+          "slug": "agent-engineering-mode",
+          "title": "Agent Engineering Expert",
+          "description": "Expert in building AI agents from first principles, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "agent-engineering-mode"
+          ]
+        },
+        {
+          "slug": "autonomous-systems-mode",
+          "title": "Autonomous Systems Expert",
+          "description": "Expert in long-horizon, self-improving AI agents that run safely without human intervention, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "autonomous-systems-mode"
+          ]
+        },
+        {
+          "slug": "capstone-projects-mode",
+          "title": "Capstone Projects Expert",
+          "description": "Expert in building portfolio-grade end-to-end AI systems from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "capstone-projects-mode"
+          ]
+        },
+        {
+          "slug": "computer-vision-mode",
+          "title": "Computer Vision Expert",
+          "description": "Expert in computer vision from pixels to understanding across image, video, and 3D, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "computer-vision-mode"
+          ]
+        },
+        {
+          "slug": "deep-learning-core-mode",
+          "title": "Deep Learning Core Expert",
+          "description": "Expert in neural networks from first principles, including building a mini framework, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "deep-learning-core-mode"
+          ]
+        },
+        {
+          "slug": "ethics-safety-alignment-mode",
+          "title": "Ethics, Safety & Alignment Expert",
+          "description": "Expert in alignment, safety, red-teaming, and responsible AI deployment, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "ethics-safety-alignment-mode"
+          ]
+        },
+        {
+          "slug": "generative-ai-mode",
+          "title": "Generative AI Expert",
+          "description": "Expert in generative models for images, video, audio, and 3D from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "generative-ai-mode"
+          ]
+        },
+        {
+          "slug": "infrastructure-and-production-mode",
+          "title": "Infrastructure & Production Expert",
+          "description": "Expert in shipping AI to production at scale \u2014 serving, monitoring, optimization, and FinOps, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "infrastructure-and-production-mode"
+          ]
+        },
+        {
+          "slug": "llm-engineering-mode",
+          "title": "LLM Engineering Expert",
+          "description": "Expert in putting LLMs to work in production applications, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "llm-engineering-mode"
+          ]
+        },
+        {
+          "slug": "llms-from-scratch-mode",
+          "title": "LLMs from Scratch Expert",
+          "description": "Expert in building, training, and understanding large language models end-to-end, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "llms-from-scratch-mode"
+          ]
+        },
+        {
+          "slug": "math-foundations-mode",
+          "title": "Math Foundations Expert",
+          "description": "Expert in the mathematical foundations behind every AI algorithm from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "math-foundations-mode"
+          ]
+        },
+        {
+          "slug": "ml-fundamentals-mode",
+          "title": "ML Fundamentals Expert",
+          "description": "Expert in classical machine learning, the backbone of most production AI, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "ml-fundamentals-mode"
+          ]
+        },
+        {
+          "slug": "multi-agent-and-swarms-mode",
+          "title": "Multi-Agent & Swarms Expert",
+          "description": "Expert in multi-agent coordination, communication protocols, and emergent collective intelligence, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "multi-agent-and-swarms-mode"
+          ]
+        },
+        {
+          "slug": "multimodal-ai-mode",
+          "title": "Multimodal AI Expert",
+          "description": "Expert in models that see, hear, read, and reason across modalities, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "multimodal-ai-mode"
+          ]
+        },
+        {
+          "slug": "nlp-foundations-to-advanced-mode",
+          "title": "NLP Foundations to Advanced Expert",
+          "description": "Expert in natural language processing from text processing through transformers, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "nlp-foundations-to-advanced-mode"
+          ]
+        },
+        {
+          "slug": "reinforcement-learning-mode",
+          "title": "Reinforcement Learning Expert",
+          "description": "Expert in reinforcement learning from MDPs through PPO and RLHF, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "reinforcement-learning-mode"
+          ]
+        },
+        {
+          "slug": "setup-and-tooling-mode",
+          "title": "Setup & Tooling Expert",
+          "description": "Expert in AI engineering development environments, tooling, and workflows from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "setup-and-tooling-mode"
+          ]
+        },
+        {
+          "slug": "speech-and-audio-mode",
+          "title": "Speech & Audio Expert",
+          "description": "Expert in speech recognition, synthesis, and audio AI systems from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "speech-and-audio-mode"
+          ]
+        },
+        {
+          "slug": "tools-and-protocols-mode",
+          "title": "Tools & Protocols Expert",
+          "description": "Expert in tool use, function calling, and MCP \u2014 the interfaces between AI and the real world, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "tools-and-protocols-mode"
+          ]
+        },
+        {
+          "slug": "transformers-deep-dive-mode",
+          "title": "Transformers Deep Dive Expert",
+          "description": "Expert in transformer architectures from self-attention to modern variants, from the AI Engineering from Scratch curriculum",
+          "path": [
+            "ai-engineering",
+            "transformers-deep-dive-mode"
+          ]
+        }
+      ]
+    },
     {
       "name": "ai-ml",
       "title": "AI & Machine Learning",
@@ -802,6 +997,1953 @@
       ]
     },
     {
+      "name": "design-systems",
+      "title": "Design Systems",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "design-systems",
+            "README"
+          ]
+        },
+        {
+          "slug": "agentic-design-mode",
+          "title": "Agentic Design System Expert",
+          "description": "Expert in the Agentic design system - Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.",
+          "path": [
+            "design-systems",
+            "agentic-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "themed"
+          ]
+        },
+        {
+          "slug": "airbnb-design-mode",
+          "title": "Airbnb Design System Expert",
+          "description": "Expert in the Airbnb design system - Travel marketplace. Warm coral accent, photography-driven, rounded UI.",
+          "path": [
+            "design-systems",
+            "airbnb-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "e-commerce"
+          ]
+        },
+        {
+          "slug": "airtable-design-mode",
+          "title": "Airtable Design System Expert",
+          "description": "Expert in the Airtable design system - Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic.",
+          "path": [
+            "design-systems",
+            "airtable-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "design"
+          ]
+        },
+        {
+          "slug": "ant-design-mode",
+          "title": "Ant Design System Expert",
+          "description": "Expert in the Ant design system - Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.",
+          "path": [
+            "design-systems",
+            "ant-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "apple-design-mode",
+          "title": "Apple Design System Expert",
+          "description": "Expert in the Apple design system - Consumer electronics. Premium white space, SF Pro, cinematic imagery.",
+          "path": [
+            "design-systems",
+            "apple-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "application-design-mode",
+          "title": "Application Design System Expert",
+          "description": "Expert in the Application design system - App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.",
+          "path": [
+            "design-systems",
+            "application-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "arc-design-mode",
+          "title": "Arc Browser Design System Expert",
+          "description": "Expert in the Arc Browser design system - \\\"The browser that browses for you.\\\" Translucent surfaces, gradient warmth, sidebar-first layout.",
+          "path": [
+            "design-systems",
+            "arc-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "artistic-design-mode",
+          "title": "Artistic Design System Expert",
+          "description": "Expert in the Artistic design system - High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.",
+          "path": [
+            "design-systems",
+            "artistic-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "atelier-zero-design-mode",
+          "title": "Atelier Zero Design System Expert",
+          "description": "Expert in the Atelier Zero design system - A magazine-grade, collage-driven visual system: warm paper canvas, surreal",
+          "path": [
+            "design-systems",
+            "atelier-zero-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "editorial-studio"
+          ]
+        },
+        {
+          "slug": "bento-design-mode",
+          "title": "Bento Design System Expert",
+          "description": "Expert in the Bento design system - Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces.",
+          "path": [
+            "design-systems",
+            "bento-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "layout"
+          ]
+        },
+        {
+          "slug": "binance-design-mode",
+          "title": "Binance.US Design System Expert",
+          "description": "Expert in the Binance.US design system - Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency.",
+          "path": [
+            "design-systems",
+            "binance-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "fintech"
+          ]
+        },
+        {
+          "slug": "bmw-design-mode",
+          "title": "BMW Design System Expert",
+          "description": "Expert in the BMW design system - Luxury automotive. Dark premium surfaces, precise German engineering aesthetic.",
+          "path": [
+            "design-systems",
+            "bmw-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "automotive"
+          ]
+        },
+        {
+          "slug": "bold-design-mode",
+          "title": "Bold Design System Expert",
+          "description": "Expert in the Bold design system - Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.",
+          "path": [
+            "design-systems",
+            "bold-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "brutalism-design-mode",
+          "title": "Brutalism Design System Expert",
+          "description": "Expert in the Brutalism design system - Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.",
+          "path": [
+            "design-systems",
+            "brutalism-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "bugatti-design-mode",
+          "title": "Bugatti Design System Expert",
+          "description": "Expert in the Bugatti design system - Hypercar brand. Cinema-black canvas, monochrome austerity, monumental display type.",
+          "path": [
+            "design-systems",
+            "bugatti-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "automotive"
+          ]
+        },
+        {
+          "slug": "cafe-design-mode",
+          "title": "Cafe Design System Expert",
+          "description": "Expert in the Cafe design system - Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.",
+          "path": [
+            "design-systems",
+            "cafe-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "cal-design-mode",
+          "title": "Cal.com Design System Expert",
+          "description": "Expert in the Cal.com design system - Open-source scheduling. Clean neutral UI, developer-oriented simplicity.",
+          "path": [
+            "design-systems",
+            "cal-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "canva-design-mode",
+          "title": "Canva Design System Expert",
+          "description": "Expert in the Canva design system - Visual creation platform. Vivid purple-blue gradient, generous spacing, friendly geometry.",
+          "path": [
+            "design-systems",
+            "canva-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "design"
+          ]
+        },
+        {
+          "slug": "claude-design-mode",
+          "title": "Claude (Anthropic) Design System Expert",
+          "description": "Expert in the Claude (Anthropic) design system - Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.",
+          "path": [
+            "design-systems",
+            "claude-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "clay-design-mode",
+          "title": "Clay Design System Expert",
+          "description": "Expert in the Clay design system - Creative agency. Organic shapes, soft gradients, art-directed layout.",
+          "path": [
+            "design-systems",
+            "clay-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "design"
+          ]
+        },
+        {
+          "slug": "claymorphism-design-mode",
+          "title": "Claymorphism Design System Expert",
+          "description": "Expert in the Claymorphism design system - Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.",
+          "path": [
+            "design-systems",
+            "claymorphism-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "morphism"
+          ]
+        },
+        {
+          "slug": "clean-design-mode",
+          "title": "Clean Design System Expert",
+          "description": "Expert in the Clean design system - Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.",
+          "path": [
+            "design-systems",
+            "clean-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "clickhouse-design-mode",
+          "title": "ClickHouse Design System Expert",
+          "description": "Expert in the ClickHouse design system - Fast analytics database. Yellow-accented, technical documentation style.",
+          "path": [
+            "design-systems",
+            "clickhouse-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "cohere-design-mode",
+          "title": "Cohere Design System Expert",
+          "description": "Expert in the Cohere design system - Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic.",
+          "path": [
+            "design-systems",
+            "cohere-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "coinbase-design-mode",
+          "title": "Coinbase Design System Expert",
+          "description": "Expert in the Coinbase design system - Crypto exchange. Clean blue identity, trust-focused, institutional feel.",
+          "path": [
+            "design-systems",
+            "coinbase-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "fintech"
+          ]
+        },
+        {
+          "slug": "colorful-design-mode",
+          "title": "Colorful Design System Expert",
+          "description": "Expert in the Colorful design system - Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.",
+          "path": [
+            "design-systems",
+            "colorful-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "composio-design-mode",
+          "title": "Composio Design System Expert",
+          "description": "Expert in the Composio design system - Tool integration platform. Modern dark with colorful integration icons.",
+          "path": [
+            "design-systems",
+            "composio-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "contemporary-design-mode",
+          "title": "Contemporary Design System Expert",
+          "description": "Expert in the Contemporary design system - Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.",
+          "path": [
+            "design-systems",
+            "contemporary-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "corporate-design-mode",
+          "title": "Corporate Design System Expert",
+          "description": "Expert in the Corporate design system - Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.",
+          "path": [
+            "design-systems",
+            "corporate-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "cosmic-design-mode",
+          "title": "Cosmic Design System Expert",
+          "description": "Expert in the Cosmic design system - Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.",
+          "path": [
+            "design-systems",
+            "cosmic-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "creative-design-mode",
+          "title": "Creative Design System Expert",
+          "description": "Expert in the Creative design system - Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.",
+          "path": [
+            "design-systems",
+            "creative-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "cursor-design-mode",
+          "title": "Cursor Design System Expert",
+          "description": "Expert in the Cursor design system - AI-first code editor. Sleek dark interface, gradient accents.",
+          "path": [
+            "design-systems",
+            "cursor-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "dashboard-design-mode",
+          "title": "Dashboard Design System Expert",
+          "description": "Expert in the Dashboard design system - Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.",
+          "path": [
+            "design-systems",
+            "dashboard-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "default-design-mode",
+          "title": "Neutral Modern Design System Expert",
+          "description": "Expert in the Neutral Modern design system - A clean, product-oriented default. Use when the brief doesn't call for a",
+          "path": [
+            "design-systems",
+            "default-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "starter"
+          ]
+        },
+        {
+          "slug": "discord-design-mode",
+          "title": "Discord Design System Expert",
+          "description": "Expert in the Discord design system - Voice / chat platform. Deep blurple, dark-first surfaces, playful accent moments.",
+          "path": [
+            "design-systems",
+            "discord-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "dithered-design-mode",
+          "title": "Dithered Design System Expert",
+          "description": "Expert in the Dithered design system - Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.",
+          "path": [
+            "design-systems",
+            "dithered-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "retro"
+          ]
+        },
+        {
+          "slug": "doodle-design-mode",
+          "title": "Doodle Design System Expert",
+          "description": "Expert in the Doodle design system - Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.",
+          "path": [
+            "design-systems",
+            "doodle-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "dramatic-design-mode",
+          "title": "Dramatic Design System Expert",
+          "description": "Expert in the Dramatic design system - High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.",
+          "path": [
+            "design-systems",
+            "dramatic-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "duolingo-design-mode",
+          "title": "Duolingo Design System Expert",
+          "description": "Expert in the Duolingo design system - Language-learning platform. Bright owl green, chunky shadows, gamified joy.",
+          "path": [
+            "design-systems",
+            "duolingo-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "editorial-design-mode",
+          "title": "Editorial Design System Expert",
+          "description": "Expert in the Editorial design system - Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.",
+          "path": [
+            "design-systems",
+            "editorial-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "elegant-design-mode",
+          "title": "Elegant Design System Expert",
+          "description": "Expert in the Elegant design system - Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.",
+          "path": [
+            "design-systems",
+            "elegant-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "elevenlabs-design-mode",
+          "title": "ElevenLabs Design System Expert",
+          "description": "Expert in the ElevenLabs design system - AI voice platform. Dark cinematic UI, audio-waveform aesthetics.",
+          "path": [
+            "design-systems",
+            "elevenlabs-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "energetic-design-mode",
+          "title": "Energetic Design System Expert",
+          "description": "Expert in the Energetic design system - Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.",
+          "path": [
+            "design-systems",
+            "energetic-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "enterprise-design-mode",
+          "title": "Enterprise Design System Expert",
+          "description": "Expert in the Enterprise design system - Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.",
+          "path": [
+            "design-systems",
+            "enterprise-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "expo-design-mode",
+          "title": "Expo Design System Expert",
+          "description": "Expert in the Expo design system - React Native platform. Dark theme, tight letter-spacing, code-centric.",
+          "path": [
+            "design-systems",
+            "expo-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "expressive-design-mode",
+          "title": "Expressive Design System Expert",
+          "description": "Expert in the Expressive design system - Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.",
+          "path": [
+            "design-systems",
+            "expressive-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "fantasy-design-mode",
+          "title": "Fantasy Design System Expert",
+          "description": "Expert in the Fantasy design system - Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.",
+          "path": [
+            "design-systems",
+            "fantasy-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "ferrari-design-mode",
+          "title": "Ferrari Design System Expert",
+          "description": "Expert in the Ferrari design system - Luxury automotive. Chiaroscuro editorial, Ferrari Red accents, cinematic black.",
+          "path": [
+            "design-systems",
+            "ferrari-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "automotive"
+          ]
+        },
+        {
+          "slug": "figma-design-mode",
+          "title": "Figma Design System Expert",
+          "description": "Expert in the Figma design system - Collaborative design tool. Vibrant multi-color, playful yet professional.",
+          "path": [
+            "design-systems",
+            "figma-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "design"
+          ]
+        },
+        {
+          "slug": "flat-design-mode",
+          "title": "Flat Design System Expert",
+          "description": "Expert in the Flat design system - Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.",
+          "path": [
+            "design-systems",
+            "flat-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "framer-design-mode",
+          "title": "Framer Design System Expert",
+          "description": "Expert in the Framer design system - Website builder. Bold black and blue, motion-first, design-forward.",
+          "path": [
+            "design-systems",
+            "framer-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "design"
+          ]
+        },
+        {
+          "slug": "friendly-design-mode",
+          "title": "Friendly Design System Expert",
+          "description": "Expert in the Friendly design system - Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.",
+          "path": [
+            "design-systems",
+            "friendly-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "futuristic-design-mode",
+          "title": "Futuristic Design System Expert",
+          "description": "Expert in the Futuristic design system - Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.",
+          "path": [
+            "design-systems",
+            "futuristic-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "themed"
+          ]
+        },
+        {
+          "slug": "github-design-mode",
+          "title": "GitHub Design System Expert",
+          "description": "Expert in the GitHub design system - Code-forward platform. Functional density, blue-on-white precision, Primer foundations.",
+          "path": [
+            "design-systems",
+            "github-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "glassmorphism-design-mode",
+          "title": "Glassmorphism Design System Expert",
+          "description": "Expert in the Glassmorphism design system - Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.",
+          "path": [
+            "design-systems",
+            "glassmorphism-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "morphism"
+          ]
+        },
+        {
+          "slug": "gradient-design-mode",
+          "title": "Gradient Design System Expert",
+          "description": "Expert in the Gradient design system - Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.",
+          "path": [
+            "design-systems",
+            "gradient-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "morphism"
+          ]
+        },
+        {
+          "slug": "hashicorp-design-mode",
+          "title": "HashiCorp Design System Expert",
+          "description": "Expert in the HashiCorp design system - Infrastructure automation. Enterprise-clean, black and white.",
+          "path": [
+            "design-systems",
+            "hashicorp-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "huggingface-design-mode",
+          "title": "Hugging Face Design System Expert",
+          "description": "Expert in the Hugging Face design system - ML community hub. Sunny yellow accent, monospace identity, cheerful and dense.",
+          "path": [
+            "design-systems",
+            "huggingface-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "ibm-design-mode",
+          "title": "IBM Design System Expert",
+          "description": "Expert in the IBM design system - Enterprise technology. Carbon design system, structured blue palette.",
+          "path": [
+            "design-systems",
+            "ibm-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "intercom-design-mode",
+          "title": "Intercom Design System Expert",
+          "description": "Expert in the Intercom design system - Customer messaging. Friendly blue palette, conversational UI patterns.",
+          "path": [
+            "design-systems",
+            "intercom-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "kami-design-mode",
+          "title": "kami (\u7d19 / \u7eb8) Design System Expert",
+          "description": "Expert in the kami (\u7d19 / \u7eb8) design system - Editorial paper system: warm parchment canvas, ink-blue accent, serif-led hierarchy.",
+          "path": [
+            "design-systems",
+            "kami-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "editorial"
+          ]
+        },
+        {
+          "slug": "kraken-design-mode",
+          "title": "Kraken Design System Expert",
+          "description": "Expert in the Kraken design system - Crypto trading. Purple-accented dark UI, data-dense dashboards.",
+          "path": [
+            "design-systems",
+            "kraken-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "fintech"
+          ]
+        },
+        {
+          "slug": "lamborghini-design-mode",
+          "title": "Lamborghini Design System Expert",
+          "description": "Expert in the Lamborghini design system - Supercar brand. True black surfaces, gold accents, dramatic uppercase typography.",
+          "path": [
+            "design-systems",
+            "lamborghini-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "automotive"
+          ]
+        },
+        {
+          "slug": "levels-design-mode",
+          "title": "Levels Design System Expert",
+          "description": "Expert in the Levels design system - Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.",
+          "path": [
+            "design-systems",
+            "levels-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "layout"
+          ]
+        },
+        {
+          "slug": "linear-app-design-mode",
+          "title": "Linear Design System Expert",
+          "description": "Expert in the Linear design system - Project management. Ultra-minimal, precise, purple accent.",
+          "path": [
+            "design-systems",
+            "linear-app-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "lingo-design-mode",
+          "title": "Lingo Design System Expert",
+          "description": "Expert in the Lingo design system - Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.",
+          "path": [
+            "design-systems",
+            "lingo-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "lovable-design-mode",
+          "title": "Lovable Design System Expert",
+          "description": "Expert in the Lovable design system - AI full-stack builder. Playful gradients, friendly dev aesthetic.",
+          "path": [
+            "design-systems",
+            "lovable-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "luxury-design-mode",
+          "title": "Luxury Design System Expert",
+          "description": "Expert in the Luxury design system - High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for luxury brand experiences.",
+          "path": [
+            "design-systems",
+            "luxury-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "mastercard-design-mode",
+          "title": "Mastercard Design System Expert",
+          "description": "Expert in the Mastercard design system - Global payments network. Warm cream canvas, orbital pill shapes, editorial warmth.",
+          "path": [
+            "design-systems",
+            "mastercard-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "fintech"
+          ]
+        },
+        {
+          "slug": "material-design-mode",
+          "title": "Material Design System Expert",
+          "description": "Expert in the Material design system - Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.",
+          "path": [
+            "design-systems",
+            "material-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "meta-design-mode",
+          "title": "Meta (Store) Design System Expert",
+          "description": "Expert in the Meta (Store) design system - Tech retail store. Photography-first, binary light/dark surfaces, Meta Blue CTAs.",
+          "path": [
+            "design-systems",
+            "meta-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "e-commerce"
+          ]
+        },
+        {
+          "slug": "minimal-design-mode",
+          "title": "Minimal Design System Expert",
+          "description": "Expert in the Minimal design system - Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.",
+          "path": [
+            "design-systems",
+            "minimal-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "minimax-design-mode",
+          "title": "MiniMax Design System Expert",
+          "description": "Expert in the MiniMax design system - AI model provider. Bold dark interface with neon accents.",
+          "path": [
+            "design-systems",
+            "minimax-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "mintlify-design-mode",
+          "title": "Mintlify Design System Expert",
+          "description": "Expert in the Mintlify design system - Documentation platform. Clean, green-accented, reading-optimized.",
+          "path": [
+            "design-systems",
+            "mintlify-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "miro-design-mode",
+          "title": "Miro Design System Expert",
+          "description": "Expert in the Miro design system - Visual collaboration. Bright yellow accent, infinite canvas aesthetic.",
+          "path": [
+            "design-systems",
+            "miro-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "design"
+          ]
+        },
+        {
+          "slug": "mistral-ai-design-mode",
+          "title": "Mistral AI Design System Expert",
+          "description": "Expert in the Mistral AI design system - Open-weight LLM provider. French-engineered minimalism, purple-toned.",
+          "path": [
+            "design-systems",
+            "mistral-ai-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "modern-design-mode",
+          "title": "Modern Design System Expert",
+          "description": "Expert in the Modern design system - Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.",
+          "path": [
+            "design-systems",
+            "modern-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "mongodb-design-mode",
+          "title": "MongoDB Design System Expert",
+          "description": "Expert in the MongoDB design system - Document database. Green leaf branding, developer documentation focus.",
+          "path": [
+            "design-systems",
+            "mongodb-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "mono-design-mode",
+          "title": "Mono Design System Expert",
+          "description": "Expert in the Mono design system - Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.",
+          "path": [
+            "design-systems",
+            "mono-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "neobrutalism-design-mode",
+          "title": "Neobrutalism Design System Expert",
+          "description": "Expert in the Neobrutalism design system - Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.",
+          "path": [
+            "design-systems",
+            "neobrutalism-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "neon-design-mode",
+          "title": "Neon Design System Expert",
+          "description": "Expert in the Neon design system - Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.",
+          "path": [
+            "design-systems",
+            "neon-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "morphism"
+          ]
+        },
+        {
+          "slug": "neumorphism-design-mode",
+          "title": "Neumorphism Design System Expert",
+          "description": "Expert in the Neumorphism design system - Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.",
+          "path": [
+            "design-systems",
+            "neumorphism-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "morphism"
+          ]
+        },
+        {
+          "slug": "nike-design-mode",
+          "title": "Nike Design System Expert",
+          "description": "Expert in the Nike design system - Athletic retail. Monochrome UI, massive uppercase type, full-bleed photography.",
+          "path": [
+            "design-systems",
+            "nike-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "e-commerce"
+          ]
+        },
+        {
+          "slug": "notion-design-mode",
+          "title": "Notion Design System Expert",
+          "description": "Expert in the Notion design system - All-in-one workspace. Warm minimalism, serif headings, soft surfaces.",
+          "path": [
+            "design-systems",
+            "notion-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "nvidia-design-mode",
+          "title": "NVIDIA Design System Expert",
+          "description": "Expert in the NVIDIA design system - GPU computing. Green-black energy, technical power aesthetic.",
+          "path": [
+            "design-systems",
+            "nvidia-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "ollama-design-mode",
+          "title": "Ollama Design System Expert",
+          "description": "Expert in the Ollama design system - Run LLMs locally. Terminal-first, monochrome simplicity.",
+          "path": [
+            "design-systems",
+            "ollama-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "openai-design-mode",
+          "title": "OpenAI Design System Expert",
+          "description": "Expert in the OpenAI design system - Calm, near-monochrome system anchored in deep teal-black with generous white space and editorial typography.",
+          "path": [
+            "design-systems",
+            "openai-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "opencode-ai-design-mode",
+          "title": "OpenCode Design System Expert",
+          "description": "Expert in the OpenCode design system - AI coding platform. Developer-centric dark theme.",
+          "path": [
+            "design-systems",
+            "opencode-ai-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "pacman-design-mode",
+          "title": "Pacman Design System Expert",
+          "description": "Expert in the Pacman design system - Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.",
+          "path": [
+            "design-systems",
+            "pacman-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "themed"
+          ]
+        },
+        {
+          "slug": "paper-design-mode",
+          "title": "Paper Design System Expert",
+          "description": "Expert in the Paper design system - Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.",
+          "path": [
+            "design-systems",
+            "paper-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "retro"
+          ]
+        },
+        {
+          "slug": "perspective-design-mode",
+          "title": "Perspective Design System Expert",
+          "description": "Expert in the Perspective design system - Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.",
+          "path": [
+            "design-systems",
+            "perspective-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "layout"
+          ]
+        },
+        {
+          "slug": "pinterest-design-mode",
+          "title": "Pinterest Design System Expert",
+          "description": "Expert in the Pinterest design system - Visual discovery. Red accent, masonry grid, image-first.",
+          "path": [
+            "design-systems",
+            "pinterest-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "playstation-design-mode",
+          "title": "PlayStation Design System Expert",
+          "description": "Expert in the PlayStation design system - Gaming console retail. Three-surface channel layout, quiet-authority display type, cyan hover-scale.",
+          "path": [
+            "design-systems",
+            "playstation-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "posthog-design-mode",
+          "title": "PostHog Design System Expert",
+          "description": "Expert in the PostHog design system - Product analytics. Playful hedgehog branding, developer-friendly dark UI.",
+          "path": [
+            "design-systems",
+            "posthog-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "premium-design-mode",
+          "title": "Premium Design System Expert",
+          "description": "Expert in the Premium design system - Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.",
+          "path": [
+            "design-systems",
+            "premium-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "professional-design-mode",
+          "title": "Professional Design System Expert",
+          "description": "Expert in the Professional design system - Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.",
+          "path": [
+            "design-systems",
+            "professional-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "professional"
+          ]
+        },
+        {
+          "slug": "publication-design-mode",
+          "title": "Publication Design System Expert",
+          "description": "Expert in the Publication design system - Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.",
+          "path": [
+            "design-systems",
+            "publication-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "raycast-design-mode",
+          "title": "Raycast Design System Expert",
+          "description": "Expert in the Raycast design system - Productivity launcher. Sleek dark chrome, vibrant gradient accents.",
+          "path": [
+            "design-systems",
+            "raycast-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "refined-design-mode",
+          "title": "Refined Design System Expert",
+          "description": "Expert in the Refined design system - Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.",
+          "path": [
+            "design-systems",
+            "refined-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "renault-design-mode",
+          "title": "Renault Design System Expert",
+          "description": "Expert in the Renault design system - French automotive. Vibrant aurora gradients, NouvelR typography, bold energy.",
+          "path": [
+            "design-systems",
+            "renault-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "automotive"
+          ]
+        },
+        {
+          "slug": "replicate-design-mode",
+          "title": "Replicate Design System Expert",
+          "description": "Expert in the Replicate design system - Run ML models via API. Clean white canvas, code-forward.",
+          "path": [
+            "design-systems",
+            "replicate-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "resend-design-mode",
+          "title": "Resend Design System Expert",
+          "description": "Expert in the Resend design system - Email API. Minimal dark theme, monospace accents.",
+          "path": [
+            "design-systems",
+            "resend-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        },
+        {
+          "slug": "retro-design-mode",
+          "title": "Retro Design System Expert",
+          "description": "Expert in the Retro design system - Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.",
+          "path": [
+            "design-systems",
+            "retro-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "retro"
+          ]
+        },
+        {
+          "slug": "revolut-design-mode",
+          "title": "Revolut Design System Expert",
+          "description": "Expert in the Revolut design system - Digital banking. Sleek dark interface, gradient cards, fintech precision.",
+          "path": [
+            "design-systems",
+            "revolut-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "fintech"
+          ]
+        },
+        {
+          "slug": "runwayml-design-mode",
+          "title": "Runway Design System Expert",
+          "description": "Expert in the Runway design system - AI video generation. Cinematic dark UI, media-rich layout.",
+          "path": [
+            "design-systems",
+            "runwayml-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "sanity-design-mode",
+          "title": "Sanity Design System Expert",
+          "description": "Expert in the Sanity design system - Headless CMS. Red accent, content-first editorial layout.",
+          "path": [
+            "design-systems",
+            "sanity-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "sentry-design-mode",
+          "title": "Sentry Design System Expert",
+          "description": "Expert in the Sentry design system - Error monitoring. Dark dashboard, data-dense, pink-purple accent.",
+          "path": [
+            "design-systems",
+            "sentry-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "shadcn-design-mode",
+          "title": "Shadcn Design System Expert",
+          "description": "Expert in the Shadcn design system - Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.",
+          "path": [
+            "design-systems",
+            "shadcn-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "shopify-design-mode",
+          "title": "Shopify Design System Expert",
+          "description": "Expert in the Shopify design system - E-commerce platform. Dark-first cinematic, neon green accent, ultra-light type.",
+          "path": [
+            "design-systems",
+            "shopify-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "e-commerce"
+          ]
+        },
+        {
+          "slug": "simple-design-mode",
+          "title": "Simple Design System Expert",
+          "description": "Expert in the Simple design system - Straightforward, no-frills design with clean typography, neutral colors, and intuitive layouts that stay out of the way.",
+          "path": [
+            "design-systems",
+            "simple-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "skeumorphism-design-mode",
+          "title": "Skeumorphism Design System Expert",
+          "description": "Expert in the Skeumorphism design system - Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.",
+          "path": [
+            "design-systems",
+            "skeumorphism-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "morphism"
+          ]
+        },
+        {
+          "slug": "sleek-design-mode",
+          "title": "Sleek Design System Expert",
+          "description": "Expert in the Sleek design system - Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.",
+          "path": [
+            "design-systems",
+            "sleek-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "modern"
+          ]
+        },
+        {
+          "slug": "spacex-design-mode",
+          "title": "SpaceX Design System Expert",
+          "description": "Expert in the SpaceX design system - Space technology. Stark black and white, full-bleed imagery, futuristic.",
+          "path": [
+            "design-systems",
+            "spacex-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "spacious-design-mode",
+          "title": "Spacious Design System Expert",
+          "description": "Expert in the Spacious design system - Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.",
+          "path": [
+            "design-systems",
+            "spacious-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "layout"
+          ]
+        },
+        {
+          "slug": "spotify-design-mode",
+          "title": "Spotify Design System Expert",
+          "description": "Expert in the Spotify design system - Music streaming. Vibrant green on dark, bold type, album-art-driven.",
+          "path": [
+            "design-systems",
+            "spotify-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "starbucks-design-mode",
+          "title": "Starbucks Design System Expert",
+          "description": "Expert in the Starbucks design system - Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons.",
+          "path": [
+            "design-systems",
+            "starbucks-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "e-commerce"
+          ]
+        },
+        {
+          "slug": "storytelling-design-mode",
+          "title": "Storytelling Design System Expert",
+          "description": "Expert in the Storytelling design system - Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.",
+          "path": [
+            "design-systems",
+            "storytelling-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "creative"
+          ]
+        },
+        {
+          "slug": "stripe-design-mode",
+          "title": "Stripe Design System Expert",
+          "description": "Expert in the Stripe design system - Payment infrastructure. Signature purple gradients, weight-300 elegance.",
+          "path": [
+            "design-systems",
+            "stripe-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "fintech"
+          ]
+        },
+        {
+          "slug": "supabase-design-mode",
+          "title": "Supabase Design System Expert",
+          "description": "Expert in the Supabase design system - Open-source Firebase alternative. Dark emerald theme, code-first.",
+          "path": [
+            "design-systems",
+            "supabase-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "backend"
+          ]
+        },
+        {
+          "slug": "superhuman-design-mode",
+          "title": "Superhuman Design System Expert",
+          "description": "Expert in the Superhuman design system - Fast email client. Premium dark UI, keyboard-first, purple glow.",
+          "path": [
+            "design-systems",
+            "superhuman-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "tesla-design-mode",
+          "title": "Tesla Design System Expert",
+          "description": "Expert in the Tesla design system - Electric automotive. Radical subtraction, full-viewport photography, near-zero UI.",
+          "path": [
+            "design-systems",
+            "tesla-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "automotive"
+          ]
+        },
+        {
+          "slug": "tetris-design-mode",
+          "title": "Tetris Design System Expert",
+          "description": "Expert in the Tetris design system - Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.",
+          "path": [
+            "design-systems",
+            "tetris-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "themed"
+          ]
+        },
+        {
+          "slug": "theverge-design-mode",
+          "title": "The Verge Design System Expert",
+          "description": "Expert in the The Verge design system - Tech editorial media. Acid-mint and ultraviolet accents, Manuka display, rave-flyer story tiles.",
+          "path": [
+            "design-systems",
+            "theverge-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "together-ai-design-mode",
+          "title": "Together AI Design System Expert",
+          "description": "Expert in the Together AI design system - Open-source AI infrastructure. Technical, blueprint-style design.",
+          "path": [
+            "design-systems",
+            "together-ai-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "uber-design-mode",
+          "title": "Uber Design System Expert",
+          "description": "Expert in the Uber design system - Mobility platform. Bold black and white, tight type, urban energy.",
+          "path": [
+            "design-systems",
+            "uber-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "vercel-design-mode",
+          "title": "Vercel Design System Expert",
+          "description": "Expert in the Vercel design system - Frontend deployment. Black and white precision, Geist font.",
+          "path": [
+            "design-systems",
+            "vercel-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "vibrant-design-mode",
+          "title": "Vibrant Design System Expert",
+          "description": "Expert in the Vibrant design system - Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.",
+          "path": [
+            "design-systems",
+            "vibrant-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "bold"
+          ]
+        },
+        {
+          "slug": "vintage-design-mode",
+          "title": "Vintage Design System Expert",
+          "description": "Expert in the Vintage design system - 1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.",
+          "path": [
+            "design-systems",
+            "vintage-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "retro"
+          ]
+        },
+        {
+          "slug": "vodafone-design-mode",
+          "title": "Vodafone Design System Expert",
+          "description": "Expert in the Vodafone design system - Global telecom brand. Monumental uppercase display, Vodafone Red chapter bands.",
+          "path": [
+            "design-systems",
+            "vodafone-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "voltagent-design-mode",
+          "title": "VoltAgent Design System Expert",
+          "description": "Expert in the VoltAgent design system - AI agent framework. Void-black canvas, emerald accent, terminal-native.",
+          "path": [
+            "design-systems",
+            "voltagent-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "warm-editorial-design-mode",
+          "title": "Warm Editorial Design System Expert",
+          "description": "Expert in the Warm Editorial design system - A serif-led magazine aesthetic. Terracotta accent on warm off-white paper \u2014",
+          "path": [
+            "design-systems",
+            "warm-editorial-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "starter"
+          ]
+        },
+        {
+          "slug": "warp-design-mode",
+          "title": "Warp Design System Expert",
+          "description": "Expert in the Warp design system - Modern terminal. Dark IDE-like interface, block-based command UI.",
+          "path": [
+            "design-systems",
+            "warp-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "developer-tools"
+          ]
+        },
+        {
+          "slug": "webflow-design-mode",
+          "title": "Webflow Design System Expert",
+          "description": "Expert in the Webflow design system - Visual web builder. Blue-accented, polished marketing site aesthetic.",
+          "path": [
+            "design-systems",
+            "webflow-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "design"
+          ]
+        },
+        {
+          "slug": "wired-design-mode",
+          "title": "WIRED Design System Expert",
+          "description": "Expert in the WIRED design system - Tech magazine. Paper-white broadsheet density, custom serif display, mono kickers, ink-blue links.",
+          "path": [
+            "design-systems",
+            "wired-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "wise-design-mode",
+          "title": "Wise Design System Expert",
+          "description": "Expert in the Wise design system - Money transfer. Bright green accent, friendly and clear.",
+          "path": [
+            "design-systems",
+            "wise-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "fintech"
+          ]
+        },
+        {
+          "slug": "x-ai-design-mode",
+          "title": "xAI Design System Expert",
+          "description": "Expert in the xAI design system - Elon Musk's AI lab. Stark monochrome, futuristic minimalism.",
+          "path": [
+            "design-systems",
+            "x-ai-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "ai"
+          ]
+        },
+        {
+          "slug": "xiaohongshu-design-mode",
+          "title": "Xiaohongshu Design System Expert",
+          "description": "Expert in the Xiaohongshu design system - Lifestyle UGC social platform. Singular brand red, generous radius, content-first.",
+          "path": [
+            "design-systems",
+            "xiaohongshu-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "media"
+          ]
+        },
+        {
+          "slug": "zapier-design-mode",
+          "title": "Zapier Design System Expert",
+          "description": "Expert in the Zapier design system - Automation platform. Warm orange, friendly illustration-driven.",
+          "path": [
+            "design-systems",
+            "zapier-design-mode"
+          ],
+          "tags": [
+            "design-system",
+            "ui",
+            "productivity"
+          ]
+        }
+      ]
+    },
+    {
       "name": "design-ux",
       "title": "Design & UX",
       "modes": [
@@ -1118,6 +3260,39 @@
           "path": [
             "documentation",
             "runbook-writer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ebpf",
+      "title": "Ebpf",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "ebpf",
+            "README"
+          ]
+        },
+        {
+          "slug": "SKILL",
+          "title": "Skill",
+          "description": "",
+          "path": [
+            "ebpf",
+            "SKILL"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "description": "",
+          "path": [
+            "ebpf",
+            "references"
           ]
         }
       ]
@@ -2630,24 +4805,11 @@
         },
         {
           "slug": "alert-event-pipeline-expert-mode",
-          "title": "Alert & Event Pipeline Expert",
-          "description": "Expert in alert pipelines — single source of truth AlertService, dedup, rate limiting, fan-out (notifications + SignalR + webhook), severity taxonomy, correlation/grouping, alert storms, and audit trails",
+          "title": "Alert Event Pipeline Expert",
+          "description": "",
           "path": [
             "security",
             "alert-event-pipeline-expert-mode"
-          ],
-          "tags": [
-            "alerting",
-            "events",
-            "signalr",
-            "notifications",
-            "deduplication",
-            "rate-limiting",
-            "alert-storms",
-            "observability",
-            "event-driven",
-            "fan-out",
-            "correlation"
           ]
         },
         {
@@ -2671,69 +4833,29 @@
         },
         {
           "slug": "artifact-supply-chain-integrity-expert-mode",
-          "title": "Artifact Supply-Chain Integrity Expert",
-          "description": "Expert in artifact integrity — SHA256/HMAC verification, Sigstore/cosign signatures, SLSA provenance, SBOM generation, in-toto attestations, and tamper-proof agent/binary distribution",
+          "title": "Artifact Supply Chain Integrity Expert",
+          "description": "",
           "path": [
             "security",
             "artifact-supply-chain-integrity-expert-mode"
-          ],
-          "tags": [
-            "supply-chain",
-            "sha256",
-            "hmac",
-            "sigstore",
-            "cosign",
-            "slsa",
-            "sbom",
-            "in-toto",
-            "artifact-verification",
-            "code-signing",
-            "tamper-proof",
-            "integrity"
           ]
         },
         {
           "slug": "cloud-secret-provider-expert-mode",
           "title": "Cloud Secret Provider Expert",
-          "description": "Expert in ISecretProvider abstractions, chained providers (env var → AWS Secrets Manager → Vault → GCP/Azure KV), caching with TTL + invalidation, graceful failure modes, secret rotation, and zero-leak logging",
+          "description": "",
           "path": [
             "security",
             "cloud-secret-provider-expert-mode"
-          ],
-          "tags": [
-            "secrets",
-            "aws-secrets-manager",
-            "vault",
-            "gcp-secret-manager",
-            "azure-key-vault",
-            "isecretprovider",
-            "chained-provider",
-            "caching",
-            "rotation",
-            "zero-leak",
-            "dotnet"
           ]
         },
         {
           "slug": "conditional-access-authorization-expert-mode",
-          "title": "Conditional Access & Authorization Expert",
-          "description": "Expert in conditional access policies, policy-based authorization, IP/device/role/time-based gates, risk-based access, and deny-by-default middleware across ASP.NET Core, Microsoft Entra, Okta, and OPA",
+          "title": "Conditional Access Authorization Expert",
+          "description": "",
           "path": [
             "security",
             "conditional-access-authorization-expert-mode"
-          ],
-          "tags": [
-            "authorization",
-            "conditional-access",
-            "aspnet-core",
-            "entra",
-            "okta",
-            "opa",
-            "rbac",
-            "abac",
-            "deny-by-default",
-            "zero-trust",
-            "policy-engine"
           ]
         },
         {
@@ -2748,23 +4870,10 @@
         {
           "slug": "database-credential-hygiene-expert-mode",
           "title": "Database Credential Hygiene Expert",
-          "description": "Expert in separating DB config (host/port/db/user) from DB secret (password), runtime connection-string assembly via ISecretProvider, dynamic credentials, IAM/RDS auth, SCRAM/SSL, connection pooling under rotation, and zero password-in-catalog guarantees",
+          "description": "",
           "path": [
             "security",
             "database-credential-hygiene-expert-mode"
-          ],
-          "tags": [
-            "database",
-            "postgresql",
-            "npgsql",
-            "connection-string",
-            "password-rotation",
-            "iam-auth",
-            "rds-auth",
-            "scram",
-            "ssl-mode",
-            "secret-provider",
-            "zero-trust-db"
           ]
         },
         {
@@ -2889,22 +4998,10 @@
         {
           "slug": "tenant-isolation-architect-mode",
           "title": "Tenant Isolation Architect",
-          "description": "Expert in multi-tenant data isolation — database-per-tenant, schema-per-tenant, shared-with-RLS; immutable tenant context, per-request DbContextFactory, cross-tenant leak prevention, and tenant-scoped caching, queues, and search indexes",
+          "description": "",
           "path": [
             "security",
             "tenant-isolation-architect-mode"
-          ],
-          "tags": [
-            "multitenancy",
-            "tenant-isolation",
-            "ef-core",
-            "dbcontext",
-            "row-level-security",
-            "rls",
-            "finbuckle",
-            "cross-tenant-leak",
-            "data-isolation",
-            "postgresql"
           ]
         }
       ]

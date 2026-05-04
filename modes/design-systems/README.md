@@ -1,0 +1,152 @@
+# Design Systems Modes
+
+Modes for popular brand and aesthetic design systems, generated from the open-design `design-systems` corpus.
+Each mode equips Claude with the full design specification for the target system so it can build UIs
+that faithfully evoke that brand's visual vocabulary, color palette, typography, and component patterns.
+
+Total modes: **138**
+
+## Modes
+
+- **[Agentic](./agentic-design-mode.md)** - Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.
+- **[Airbnb](./airbnb-design-mode.md)** - Travel marketplace. Warm coral accent, photography-driven, rounded UI.
+- **[Airtable](./airtable-design-mode.md)** - Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic.
+- **[Ant](./ant-design-mode.md)** - Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.
+- **[Apple](./apple-design-mode.md)** - Consumer electronics. Premium white space, SF Pro, cinematic imagery.
+- **[Application](./application-design-mode.md)** - App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.
+- **[Arc Browser](./arc-design-mode.md)** - "The browser that browses for you." Translucent surfaces, gradient warmth, sidebar-first layout.
+- **[Artistic](./artistic-design-mode.md)** - High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.
+- **[Atelier Zero](./atelier-zero-design-mode.md)** - A magazine-grade, collage-driven visual system: warm paper canvas, surreal
+- **[Bento](./bento-design-mode.md)** - Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces.
+- **[Binance.US](./binance-design-mode.md)** - Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency.
+- **[BMW](./bmw-design-mode.md)** - Luxury automotive. Dark premium surfaces, precise German engineering aesthetic.
+- **[Bold](./bold-design-mode.md)** - Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.
+- **[Brutalism](./brutalism-design-mode.md)** - Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.
+- **[Bugatti](./bugatti-design-mode.md)** - Hypercar brand. Cinema-black canvas, monochrome austerity, monumental display type.
+- **[Cafe](./cafe-design-mode.md)** - Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.
+- **[Cal.com](./cal-design-mode.md)** - Open-source scheduling. Clean neutral UI, developer-oriented simplicity.
+- **[Canva](./canva-design-mode.md)** - Visual creation platform. Vivid purple-blue gradient, generous spacing, friendly geometry.
+- **[Claude (Anthropic)](./claude-design-mode.md)** - Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.
+- **[Clay](./clay-design-mode.md)** - Creative agency. Organic shapes, soft gradients, art-directed layout.
+- **[Claymorphism](./claymorphism-design-mode.md)** - Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.
+- **[Clean](./clean-design-mode.md)** - Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.
+- **[ClickHouse](./clickhouse-design-mode.md)** - Fast analytics database. Yellow-accented, technical documentation style.
+- **[Cohere](./cohere-design-mode.md)** - Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic.
+- **[Coinbase](./coinbase-design-mode.md)** - Crypto exchange. Clean blue identity, trust-focused, institutional feel.
+- **[Colorful](./colorful-design-mode.md)** - Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.
+- **[Composio](./composio-design-mode.md)** - Tool integration platform. Modern dark with colorful integration icons.
+- **[Contemporary](./contemporary-design-mode.md)** - Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.
+- **[Corporate](./corporate-design-mode.md)** - Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.
+- **[Cosmic](./cosmic-design-mode.md)** - Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.
+- **[Creative](./creative-design-mode.md)** - Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.
+- **[Cursor](./cursor-design-mode.md)** - AI-first code editor. Sleek dark interface, gradient accents.
+- **[Dashboard](./dashboard-design-mode.md)** - Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.
+- **[Neutral Modern](./default-design-mode.md)** - A clean, product-oriented default. Use when the brief doesn't call for a
+- **[Discord](./discord-design-mode.md)** - Voice / chat platform. Deep blurple, dark-first surfaces, playful accent moments.
+- **[Dithered](./dithered-design-mode.md)** - Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.
+- **[Doodle](./doodle-design-mode.md)** - Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.
+- **[Dramatic](./dramatic-design-mode.md)** - High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.
+- **[Duolingo](./duolingo-design-mode.md)** - Language-learning platform. Bright owl green, chunky shadows, gamified joy.
+- **[Editorial](./editorial-design-mode.md)** - Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.
+- **[Elegant](./elegant-design-mode.md)** - Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.
+- **[ElevenLabs](./elevenlabs-design-mode.md)** - AI voice platform. Dark cinematic UI, audio-waveform aesthetics.
+- **[Energetic](./energetic-design-mode.md)** - Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.
+- **[Enterprise](./enterprise-design-mode.md)** - Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.
+- **[Expo](./expo-design-mode.md)** - React Native platform. Dark theme, tight letter-spacing, code-centric.
+- **[Expressive](./expressive-design-mode.md)** - Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.
+- **[Fantasy](./fantasy-design-mode.md)** - Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.
+- **[Ferrari](./ferrari-design-mode.md)** - Luxury automotive. Chiaroscuro editorial, Ferrari Red accents, cinematic black.
+- **[Figma](./figma-design-mode.md)** - Collaborative design tool. Vibrant multi-color, playful yet professional.
+- **[Flat](./flat-design-mode.md)** - Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.
+- **[Framer](./framer-design-mode.md)** - Website builder. Bold black and blue, motion-first, design-forward.
+- **[Friendly](./friendly-design-mode.md)** - Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.
+- **[Futuristic](./futuristic-design-mode.md)** - Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.
+- **[GitHub](./github-design-mode.md)** - Code-forward platform. Functional density, blue-on-white precision, Primer foundations.
+- **[Glassmorphism](./glassmorphism-design-mode.md)** - Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.
+- **[Gradient](./gradient-design-mode.md)** - Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.
+- **[HashiCorp](./hashicorp-design-mode.md)** - Infrastructure automation. Enterprise-clean, black and white.
+- **[Hugging Face](./huggingface-design-mode.md)** - ML community hub. Sunny yellow accent, monospace identity, cheerful and dense.
+- **[IBM](./ibm-design-mode.md)** - Enterprise technology. Carbon design system, structured blue palette.
+- **[Intercom](./intercom-design-mode.md)** - Customer messaging. Friendly blue palette, conversational UI patterns.
+- **[kami (紙 / 纸)](./kami-design-mode.md)** - Editorial paper system: warm parchment canvas, ink-blue accent, serif-led hierarchy.
+- **[Kraken](./kraken-design-mode.md)** - Crypto trading. Purple-accented dark UI, data-dense dashboards.
+- **[Lamborghini](./lamborghini-design-mode.md)** - Supercar brand. True black surfaces, gold accents, dramatic uppercase typography.
+- **[Levels](./levels-design-mode.md)** - Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.
+- **[Linear](./linear-app-design-mode.md)** - Project management. Ultra-minimal, precise, purple accent.
+- **[Lingo](./lingo-design-mode.md)** - Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.
+- **[Lovable](./lovable-design-mode.md)** - AI full-stack builder. Playful gradients, friendly dev aesthetic.
+- **[Luxury](./luxury-design-mode.md)** - High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for luxury brand experiences.
+- **[Mastercard](./mastercard-design-mode.md)** - Global payments network. Warm cream canvas, orbital pill shapes, editorial warmth.
+- **[Material](./material-design-mode.md)** - Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.
+- **[Meta (Store)](./meta-design-mode.md)** - Tech retail store. Photography-first, binary light/dark surfaces, Meta Blue CTAs.
+- **[Minimal](./minimal-design-mode.md)** - Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.
+- **[MiniMax](./minimax-design-mode.md)** - AI model provider. Bold dark interface with neon accents.
+- **[Mintlify](./mintlify-design-mode.md)** - Documentation platform. Clean, green-accented, reading-optimized.
+- **[Miro](./miro-design-mode.md)** - Visual collaboration. Bright yellow accent, infinite canvas aesthetic.
+- **[Mistral AI](./mistral-ai-design-mode.md)** - Open-weight LLM provider. French-engineered minimalism, purple-toned.
+- **[Modern](./modern-design-mode.md)** - Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.
+- **[MongoDB](./mongodb-design-mode.md)** - Document database. Green leaf branding, developer documentation focus.
+- **[Mono](./mono-design-mode.md)** - Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.
+- **[Neobrutalism](./neobrutalism-design-mode.md)** - Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.
+- **[Neon](./neon-design-mode.md)** - Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.
+- **[Neumorphism](./neumorphism-design-mode.md)** - Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.
+- **[Nike](./nike-design-mode.md)** - Athletic retail. Monochrome UI, massive uppercase type, full-bleed photography.
+- **[Notion](./notion-design-mode.md)** - All-in-one workspace. Warm minimalism, serif headings, soft surfaces.
+- **[NVIDIA](./nvidia-design-mode.md)** - GPU computing. Green-black energy, technical power aesthetic.
+- **[Ollama](./ollama-design-mode.md)** - Run LLMs locally. Terminal-first, monochrome simplicity.
+- **[OpenAI](./openai-design-mode.md)** - Calm, near-monochrome system anchored in deep teal-black with generous white space and editorial typography.
+- **[OpenCode](./opencode-ai-design-mode.md)** - AI coding platform. Developer-centric dark theme.
+- **[Pacman](./pacman-design-mode.md)** - Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.
+- **[Paper](./paper-design-mode.md)** - Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.
+- **[Perspective](./perspective-design-mode.md)** - Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.
+- **[Pinterest](./pinterest-design-mode.md)** - Visual discovery. Red accent, masonry grid, image-first.
+- **[PlayStation](./playstation-design-mode.md)** - Gaming console retail. Three-surface channel layout, quiet-authority display type, cyan hover-scale.
+- **[PostHog](./posthog-design-mode.md)** - Product analytics. Playful hedgehog branding, developer-friendly dark UI.
+- **[Premium](./premium-design-mode.md)** - Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.
+- **[Professional](./professional-design-mode.md)** - Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.
+- **[Publication](./publication-design-mode.md)** - Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.
+- **[Raycast](./raycast-design-mode.md)** - Productivity launcher. Sleek dark chrome, vibrant gradient accents.
+- **[Refined](./refined-design-mode.md)** - Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.
+- **[Renault](./renault-design-mode.md)** - French automotive. Vibrant aurora gradients, NouvelR typography, bold energy.
+- **[Replicate](./replicate-design-mode.md)** - Run ML models via API. Clean white canvas, code-forward.
+- **[Resend](./resend-design-mode.md)** - Email API. Minimal dark theme, monospace accents.
+- **[Retro](./retro-design-mode.md)** - Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.
+- **[Revolut](./revolut-design-mode.md)** - Digital banking. Sleek dark interface, gradient cards, fintech precision.
+- **[Runway](./runwayml-design-mode.md)** - AI video generation. Cinematic dark UI, media-rich layout.
+- **[Sanity](./sanity-design-mode.md)** - Headless CMS. Red accent, content-first editorial layout.
+- **[Sentry](./sentry-design-mode.md)** - Error monitoring. Dark dashboard, data-dense, pink-purple accent.
+- **[Shadcn](./shadcn-design-mode.md)** - Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.
+- **[Shopify](./shopify-design-mode.md)** - E-commerce platform. Dark-first cinematic, neon green accent, ultra-light type.
+- **[Simple](./simple-design-mode.md)** - Straightforward, no-frills design with clean typography, neutral colors, and intuitive layouts that stay out of the way.
+- **[Skeumorphism](./skeumorphism-design-mode.md)** - Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.
+- **[Sleek](./sleek-design-mode.md)** - Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.
+- **[SpaceX](./spacex-design-mode.md)** - Space technology. Stark black and white, full-bleed imagery, futuristic.
+- **[Spacious](./spacious-design-mode.md)** - Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.
+- **[Spotify](./spotify-design-mode.md)** - Music streaming. Vibrant green on dark, bold type, album-art-driven.
+- **[Starbucks](./starbucks-design-mode.md)** - Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons.
+- **[Storytelling](./storytelling-design-mode.md)** - Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.
+- **[Stripe](./stripe-design-mode.md)** - Payment infrastructure. Signature purple gradients, weight-300 elegance.
+- **[Supabase](./supabase-design-mode.md)** - Open-source Firebase alternative. Dark emerald theme, code-first.
+- **[Superhuman](./superhuman-design-mode.md)** - Fast email client. Premium dark UI, keyboard-first, purple glow.
+- **[Tesla](./tesla-design-mode.md)** - Electric automotive. Radical subtraction, full-viewport photography, near-zero UI.
+- **[Tetris](./tetris-design-mode.md)** - Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.
+- **[The Verge](./theverge-design-mode.md)** - Tech editorial media. Acid-mint and ultraviolet accents, Manuka display, rave-flyer story tiles.
+- **[Together AI](./together-ai-design-mode.md)** - Open-source AI infrastructure. Technical, blueprint-style design.
+- **[Uber](./uber-design-mode.md)** - Mobility platform. Bold black and white, tight type, urban energy.
+- **[Vercel](./vercel-design-mode.md)** - Frontend deployment. Black and white precision, Geist font.
+- **[Vibrant](./vibrant-design-mode.md)** - Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.
+- **[Vintage](./vintage-design-mode.md)** - 1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.
+- **[Vodafone](./vodafone-design-mode.md)** - Global telecom brand. Monumental uppercase display, Vodafone Red chapter bands.
+- **[VoltAgent](./voltagent-design-mode.md)** - AI agent framework. Void-black canvas, emerald accent, terminal-native.
+- **[Warm Editorial](./warm-editorial-design-mode.md)** - A serif-led magazine aesthetic. Terracotta accent on warm off-white paper —
+- **[Warp](./warp-design-mode.md)** - Modern terminal. Dark IDE-like interface, block-based command UI.
+- **[Webflow](./webflow-design-mode.md)** - Visual web builder. Blue-accented, polished marketing site aesthetic.
+- **[WIRED](./wired-design-mode.md)** - Tech magazine. Paper-white broadsheet density, custom serif display, mono kickers, ink-blue links.
+- **[Wise](./wise-design-mode.md)** - Money transfer. Bright green accent, friendly and clear.
+- **[xAI](./x-ai-design-mode.md)** - Elon Musk's AI lab. Stark monochrome, futuristic minimalism.
+- **[Xiaohongshu](./xiaohongshu-design-mode.md)** - Lifestyle UGC social platform. Singular brand red, generous radius, content-first.
+- **[Zapier](./zapier-design-mode.md)** - Automation platform. Warm orange, friendly illustration-driven.
+
+## Source
+
+Generated from `/home/anubhavg/Desktop/open-design/design-systems/*/DESIGN.md` via `/tmp/convert_designs.py`.
