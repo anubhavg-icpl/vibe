@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:28:37.252763Z",
-  "totalModes": 712,
+  "generatedAt": "2026-05-04T11:30:29.845368Z",
+  "totalModes": 725,
   "categories": [
     {
       "name": "ai-engineering",
@@ -6203,6 +6203,23 @@
           ]
         },
         {
+          "slug": "fine-tune-eval-expert-mode",
+          "title": "Fine-Tune Evaluation Expert",
+          "description": "Evaluate fine-tuned LLMs \u2014 domain benchmarks, regression checks, catastrophic forgetting detection",
+          "path": [
+            "llm-training",
+            "fine-tune-eval-expert-mode"
+          ],
+          "tags": [
+            "evaluation",
+            "benchmarks",
+            "mmlu",
+            "ifeval",
+            "lm-evaluation-harness",
+            "fine-tuning"
+          ]
+        },
+        {
           "slug": "grpo-expert-mode",
           "title": "GRPO Expert",
           "description": "Group Relative Policy Optimization \u2014 DeepSeek-R1 style reasoning RL with verifiable rewards",
@@ -6376,6 +6393,23 @@
             "simpo",
             "preference-optimization",
             "alignment"
+          ]
+        },
+        {
+          "slug": "synthetic-data-expert-mode",
+          "title": "Synthetic Data Expert",
+          "description": "Generate fine-tuning datasets \u2014 distilabel, Magpie, Self-Instruct, Evol-Instruct, augmentoolkit",
+          "path": [
+            "llm-training",
+            "synthetic-data-expert-mode"
+          ],
+          "tags": [
+            "synthetic-data",
+            "distilabel",
+            "magpie",
+            "self-instruct",
+            "evol-instruct",
+            "fine-tuning"
           ]
         },
         {
@@ -6562,6 +6596,46 @@
           ]
         },
         {
+          "slug": "local-agent-runtime-expert-mode",
+          "title": "Local Agent Runtime Expert",
+          "description": "Wire local-only agentic stacks \u2014 Continue.dev, Cline, Aider, Open Interpreter, Goose \u2014 to Ollama, LM Studio, llama-server, and Jan",
+          "path": [
+            "local-llm",
+            "local-agent-runtime-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "agents",
+            "continue-dev",
+            "cline",
+            "aider",
+            "open-interpreter",
+            "goose",
+            "ollama",
+            "airgap"
+          ]
+        },
+        {
+          "slug": "local-rag-stack-expert-mode",
+          "title": "Local RAG Stack Expert",
+          "description": "Build end-to-end local RAG with Chroma/LanceDB/Qdrant + nomic-embed/bge-m3/FastEmbed + llama-cpp-server or Ollama, all in Docker Compose",
+          "path": [
+            "local-llm",
+            "local-rag-stack-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "rag",
+            "chroma",
+            "lancedb",
+            "qdrant",
+            "fastembed",
+            "nomic-embed",
+            "bge-m3",
+            "docker-compose"
+          ]
+        },
+        {
           "slug": "localai-expert-mode",
           "title": "LocalAI Expert",
           "description": "Self-host LocalAI (mudler) as an OpenAI/Anthropic/ElevenLabs drop-in for LLMs, vision, audio, image and embeddings on any hardware",
@@ -6708,6 +6782,25 @@
             "prefix-caching",
             "awq",
             "gptq"
+          ]
+        },
+        {
+          "slug": "whisper-cpp-expert-mode",
+          "title": "whisper.cpp Expert",
+          "description": "Run whisper.cpp for local speech-to-text \u2014 model selection, CLI, HTTP server, real-time streaming, language detection",
+          "path": [
+            "local-llm",
+            "whisper-cpp-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "whisper-cpp",
+            "speech-to-text",
+            "stt",
+            "ggml",
+            "real-time",
+            "vad",
+            "streaming"
           ]
         }
       ]
@@ -7135,6 +7228,23 @@
           ]
         },
         {
+          "slug": "comfyui-api-expert-mode",
+          "title": "ComfyUI API & Production Backend Expert",
+          "description": "ComfyUI as backend - API mode, websocket polling, queue management for production",
+          "path": [
+            "multimodal-ai",
+            "comfyui-api-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "image-gen",
+            "comfyui",
+            "api",
+            "backend",
+            "production"
+          ]
+        },
+        {
           "slug": "comfyui-expert-mode",
           "title": "ComfyUI Expert",
           "description": "ComfyUI graph design, custom nodes, workflow JSON, queue, API integration",
@@ -7197,6 +7307,23 @@
             "tts",
             "voice-cloning",
             "elevenlabs"
+          ]
+        },
+        {
+          "slug": "fal-ai-expert-mode",
+          "title": "fal.ai Serverless Inference Expert",
+          "description": "fal.ai serverless inference for image/video models - queue + webhook patterns",
+          "path": [
+            "multimodal-ai",
+            "fal-ai-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "serverless",
+            "fal",
+            "inference",
+            "image-gen",
+            "video-gen"
           ]
         },
         {
@@ -7319,6 +7446,24 @@
             "udio",
             "musicgen",
             "stable-audio"
+          ]
+        },
+        {
+          "slug": "video-vlm-expert-mode",
+          "title": "Video VLM Expert",
+          "description": "Video understanding with VLMs - Qwen2.5-VL video, Apollo, LLaVA-OneVision, frame sampling",
+          "path": [
+            "multimodal-ai",
+            "video-vlm-expert-mode"
+          ],
+          "tags": [
+            "multimodal",
+            "video",
+            "vlm",
+            "qwen-vl",
+            "llava",
+            "apollo",
+            "video-understanding"
           ]
         },
         {
@@ -7924,6 +8069,22 @@
           ]
         },
         {
+          "slug": "chunk-strategy-expert-mode",
+          "title": "Chunking Strategy Expert",
+          "description": "Fixed, recursive, semantic, proposition-based, document-aware chunking deep-dive",
+          "path": [
+            "rag-advanced",
+            "chunk-strategy-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "chunking",
+            "semantic-chunking",
+            "propositions",
+            "recursive-splitter"
+          ]
+        },
+        {
           "slug": "colbert-expert-mode",
           "title": "ColBERT Expert",
           "description": "ColBERT v2 / late interaction retrieval, MaxSim, RAGatouille, indexing tradeoffs",
@@ -8089,6 +8250,23 @@
           ]
         },
         {
+          "slug": "rag-eval-expert-mode",
+          "title": "RAG Evaluation Expert",
+          "description": "RAGAS metrics, needle-in-haystack, RULER, golden sets, faithfulness and context precision/recall",
+          "path": [
+            "rag-advanced",
+            "rag-eval-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "evaluation",
+            "ragas",
+            "faithfulness",
+            "needle-in-haystack",
+            "ruler"
+          ]
+        },
+        {
           "slug": "raptor-expert-mode",
           "title": "RAPTOR Expert",
           "description": "RAPTOR \u2014 recursive abstractive summarization tree for long-document RAG",
@@ -8136,6 +8314,23 @@
             "reflection-tokens",
             "adaptive-retrieval",
             "asai"
+          ]
+        },
+        {
+          "slug": "structured-rag-expert-mode",
+          "title": "Structured RAG Expert",
+          "description": "RAG over structured data \u2014 text-to-SQL with retrieval, semantic layer, table-augmented generation",
+          "path": [
+            "rag-advanced",
+            "structured-rag-expert-mode"
+          ],
+          "tags": [
+            "rag",
+            "structured-data",
+            "text-to-sql",
+            "vanna",
+            "semantic-layer",
+            "llamaindex"
           ]
         }
       ]
@@ -9073,6 +9268,33 @@
       "name": "vector-stores",
       "title": "Vector Stores",
       "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "vector-stores",
+            "README"
+          ]
+        },
+        {
+          "slug": "binary-quantization-expert-mode",
+          "title": "Binary & Scalar Quantization Expert",
+          "description": "Deep expertise in embedding quantization \u2014 binary (1-bit), scalar (int8), product (PQ); rescore-after-quant pipeline, Hamming distance, when it's free vs lossy",
+          "path": [
+            "vector-stores",
+            "binary-quantization-expert-mode"
+          ],
+          "tags": [
+            "embeddings",
+            "quantization",
+            "binary-quantization",
+            "scalar-quantization",
+            "pq",
+            "hamming",
+            "rescore"
+          ]
+        },
         {
           "slug": "chroma-expert-mode",
           "title": "Chroma Expert",
