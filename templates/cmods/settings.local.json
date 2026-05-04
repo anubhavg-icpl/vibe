@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "Bash(wc:*)",
+      "Bash(tree:*)",
+      "Bash(curl:*)",
+      "Bash(rg:*)",
+      "Bash(fd:*)",
+      "Bash(fzf:*)",
+      "Bash(z:*)",
+      "Bash(zoxide:*)",
+      "Bash(br:*)",
+      "Bash(broot:*)",
+      "Bash(ast-grep:*)",
+      "Bash(sg:*)",
+      "Bash(bat:*)",
+      "Bash(eza:*)",
+      "Bash(delta:*)",
+      "Bash(difft:*)",
+      "Bash(jq:*)",
+      "Bash(yq:*)",
+      "Bash(sd:*)",
+      "Bash(lazygit:*)",
+      "Bash(gh:*)",
+      "Bash(tokei:*)",
+      "Bash(uv:*)",
+      "Bash(just:*)",
+      "Bash(http:*)",
+      "Bash(procs:*)",
+      "Bash(hyperfine:*)",
+      "Bash(npm:*)",
+      "Bash(node:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(powershell.exe:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "hooks": {},
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true"
+  }
+}
