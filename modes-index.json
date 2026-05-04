@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:28:02.971282Z",
-  "totalModes": 710,
+  "generatedAt": "2026-05-04T11:28:37.252763Z",
+  "totalModes": 712,
   "categories": [
     {
       "name": "ai-engineering",
@@ -5812,6 +5812,15 @@
       "title": "Llm Eval Ops",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "llm-eval-ops",
+            "README"
+          ]
+        },
+        {
           "slug": "arize-phoenix-expert-mode",
           "title": "Arize Phoenix Expert",
           "description": "Open-source LLM tracing and evaluation built on OpenInference and OpenTelemetry",
@@ -9097,6 +9106,23 @@
             "jina-code",
             "coderankembed",
             "semantic-code-retrieval"
+          ]
+        },
+        {
+          "slug": "embedding-fine-tune-expert-mode",
+          "title": "Embedding Fine-Tune Expert",
+          "description": "Deep expertise in fine-tuning embedding models with sentence-transformers v3+ \u2014 SentenceTransformerTrainer, MultipleNegativesRankingLoss, Matryoshka, hard negatives mining",
+          "path": [
+            "vector-stores",
+            "embedding-fine-tune-expert-mode"
+          ],
+          "tags": [
+            "embeddings",
+            "fine-tuning",
+            "sentence-transformers",
+            "matryoshka",
+            "hard-negatives",
+            "mnrl"
           ]
         },
         {
