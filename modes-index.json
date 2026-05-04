@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:49:55.325408Z",
-  "totalModes": 759,
+  "generatedAt": "2026-05-04T11:53:43.571170Z",
+  "totalModes": 768,
   "categories": [
     {
       "name": "ai-engineering",
@@ -662,6 +662,52 @@
       "title": "Android Cli",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "android-cli",
+            "README"
+          ]
+        },
+        {
+          "slug": "android-agent-workflow-expert-mode",
+          "title": "Android Agent Workflow Expert",
+          "description": "End-to-end agent recipes \u2014 init \u2192 create \u2192 sdk install \u2192 emulator \u2192 run \u2192 layout \u2192 screen \u2192 docs. Composes every Android CLI command cluster.",
+          "path": [
+            "android-cli",
+            "android-agent-workflow-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "agent",
+            "workflow",
+            "end-to-end",
+            "recipes",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-cli-ci-automation-expert-mode",
+          "title": "Android CLI CI Automation Expert",
+          "description": "Expert in using Android CLI in CI \u2014 `.androidrc`, scripted scaffold/build/emulator/test, GitHub Actions, GitLab CI, Bitrise patterns",
+          "path": [
+            "android-cli",
+            "android-cli-ci-automation-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "ci",
+            "github-actions",
+            "gitlab-ci",
+            "bitrise",
+            "automation",
+            "2026"
+          ]
+        },
+        {
           "slug": "android-cli-expert-mode",
           "title": "Android CLI Expert",
           "description": "Master overview of Google's agent-first Android CLI (v0.7, April 2026) \u2014 install, config, global flags, and command map",
@@ -694,6 +740,26 @@
             "skills",
             "agent",
             "bootstrap",
+            "2026"
+          ]
+        },
+        {
+          "slug": "android-cli-skills-mgmt-expert-mode",
+          "title": "Android CLI Skills Management Expert",
+          "description": "Expert in `android skills add/list/find/remove` \u2014 cross-agent skill installation across Gemini, Antigravity, Claude Code, Codex",
+          "path": [
+            "android-cli",
+            "android-cli-skills-mgmt-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "skills",
+            "gemini",
+            "antigravity",
+            "claude",
+            "codex",
+            "agent",
             "2026"
           ]
         },
@@ -808,6 +874,25 @@
           ]
         },
         {
+          "slug": "android-screen-tools-expert-mode",
+          "title": "Android Screen Tools Expert",
+          "description": "Expert in `android screen capture` and `android screen resolve` \u2014 annotated screenshots and label-to-coordinate translation for agent UI driving",
+          "path": [
+            "android-cli",
+            "android-screen-tools-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-cli",
+            "screen",
+            "screenshot",
+            "annotate",
+            "ui-automation",
+            "agent",
+            "2026"
+          ]
+        },
+        {
           "slug": "android-sdk-mgmt-expert-mode",
           "title": "Android SDK Management Expert",
           "description": "Expert in `android sdk install/list/remove/update` \u2014 channels, version pinning, reproducible team & CI SDK setups",
@@ -846,6 +931,57 @@
             "gemini",
             "antigravity",
             "mcp"
+          ]
+        },
+        {
+          "slug": "android-automotive-expert-mode",
+          "title": "Android Automotive Expert",
+          "description": "Android for Cars App Library templates, Android Auto vs AAOS, distraction-optimized UX, and navigation/POI/IoT app development",
+          "path": [
+            "android-platform",
+            "android-automotive-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-auto",
+            "android-automotive",
+            "car-app-library",
+            "in-vehicle",
+            "templates"
+          ]
+        },
+        {
+          "slug": "android-large-screens-expert-mode",
+          "title": "Android Large Screens Expert",
+          "description": "Foldables, tablets, and desktop displays \u2014 window size classes, fold awareness, drag and drop, multi-window, and adaptive Compose layouts",
+          "path": [
+            "android-platform",
+            "android-large-screens-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "large-screens",
+            "foldables",
+            "tablets",
+            "window-size-classes",
+            "adaptive-layouts"
+          ]
+        },
+        {
+          "slug": "android-tv-expert-mode",
+          "title": "Android TV Expert",
+          "description": "Compose for TV, tv-material library, focus management, channels, recommendations, and remote-first UX",
+          "path": [
+            "android-platform",
+            "android-tv-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "android-tv",
+            "compose-for-tv",
+            "tv-material",
+            "focus-management",
+            "leanback"
           ]
         },
         {
@@ -895,6 +1031,23 @@
             "ui",
             "kotlin",
             "declarative-ui"
+          ]
+        },
+        {
+          "slug": "wear-os-expert-mode",
+          "title": "Wear OS Expert",
+          "description": "Wear OS 5/6 with Compose for Wear, tiles, complications, declarative Watch Face Format, and Health Services",
+          "path": [
+            "android-platform",
+            "wear-os-expert-mode"
+          ],
+          "tags": [
+            "android",
+            "wear-os",
+            "compose-for-wear",
+            "watch-face-format",
+            "tiles",
+            "complications"
           ]
         }
       ]
