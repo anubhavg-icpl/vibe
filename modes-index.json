@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:16:45.304915Z",
-  "totalModes": 606,
+  "generatedAt": "2026-05-04T11:17:20.311746Z",
+  "totalModes": 607,
   "categories": [
     {
       "name": "ai-engineering",
@@ -5803,6 +5803,29 @@
           "path": [
             "learning",
             "pair-programming-mentor-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "local-llm",
+      "title": "Local Llm",
+      "modes": [
+        {
+          "slug": "llama-cpp-expert-mode",
+          "title": "llama.cpp Expert",
+          "description": "Build, run, and tune llama.cpp for local LLM inference across CUDA, ROCm, Metal, Vulkan, and SYCL",
+          "path": [
+            "local-llm",
+            "llama-cpp-expert-mode"
+          ],
+          "tags": [
+            "local-llm",
+            "llama-cpp",
+            "ggml",
+            "gguf",
+            "quantization",
+            "inference"
           ]
         }
       ]
