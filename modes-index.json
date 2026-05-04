@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T10:56:28.044526Z",
-  "totalModes": 511,
+  "generatedAt": "2026-05-04T11:10:59.665575Z",
+  "totalModes": 603,
   "categories": [
     {
       "name": "ai-engineering",
@@ -194,6 +194,336 @@
           "path": [
             "ai-engineering",
             "transformers-deep-dive-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ai-frameworks",
+      "title": "Ai Frameworks",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "ai-frameworks",
+            "README"
+          ]
+        },
+        {
+          "slug": "anthropic-sdk-expert-mode",
+          "title": "Anthropic SDK Expert",
+          "description": "Master the Claude API \u2014 tool use, prompt caching, computer use, and agent loops",
+          "path": [
+            "ai-frameworks",
+            "anthropic-sdk-expert-mode"
+          ],
+          "tags": [
+            "anthropic",
+            "claude",
+            "sdk",
+            "prompt-caching",
+            "tool-use",
+            "computer-use",
+            "python"
+          ]
+        },
+        {
+          "slug": "autogen-expert-mode",
+          "title": "AutoGen Expert",
+          "description": "Build event-driven, actor-model multi-agent systems with Microsoft AutoGen v0.4+",
+          "path": [
+            "ai-frameworks",
+            "autogen-expert-mode"
+          ],
+          "tags": [
+            "autogen",
+            "microsoft",
+            "multi-agent",
+            "actor-model",
+            "event-driven",
+            "python"
+          ]
+        },
+        {
+          "slug": "crewai-expert-mode",
+          "title": "CrewAI Expert",
+          "description": "Orchestrate role-playing autonomous agent crews with sequential and hierarchical processes",
+          "path": [
+            "ai-frameworks",
+            "crewai-expert-mode"
+          ],
+          "tags": [
+            "crewai",
+            "multi-agent",
+            "orchestration",
+            "python",
+            "agents"
+          ]
+        },
+        {
+          "slug": "dspy-expert-mode",
+          "title": "DSPy Expert",
+          "description": "Program \u2014 don't prompt \u2014 language models with DSPy's declarative Signatures, Modules, and Optimizers",
+          "path": [
+            "ai-frameworks",
+            "dspy-expert-mode"
+          ],
+          "tags": [
+            "dspy",
+            "stanford",
+            "signatures",
+            "modules",
+            "optimizers",
+            "prompting",
+            "python"
+          ]
+        },
+        {
+          "slug": "inngest-agent-kit-expert-mode",
+          "title": "Inngest Agent Kit Expert",
+          "description": "Build durable, observable multi-agent networks in TypeScript with Inngest AgentKit",
+          "path": [
+            "ai-frameworks",
+            "inngest-agent-kit-expert-mode"
+          ],
+          "tags": [
+            "inngest",
+            "agent-kit",
+            "durable",
+            "multi-agent",
+            "typescript",
+            "networks",
+            "mcp"
+          ]
+        },
+        {
+          "slug": "instructor-expert-mode",
+          "title": "Instructor Expert",
+          "description": "Extract validated, typed data from any LLM with Instructor and Pydantic",
+          "path": [
+            "ai-frameworks",
+            "instructor-expert-mode"
+          ],
+          "tags": [
+            "instructor",
+            "pydantic",
+            "structured-outputs",
+            "llm",
+            "validation",
+            "python"
+          ]
+        },
+        {
+          "slug": "langgraph-expert-mode",
+          "title": "LangGraph Expert",
+          "description": "Build stateful, durable agent graphs with checkpointing, human-in-the-loop, and time-travel debugging",
+          "path": [
+            "ai-frameworks",
+            "langgraph-expert-mode"
+          ],
+          "tags": [
+            "langgraph",
+            "langchain",
+            "agents",
+            "state-machines",
+            "checkpointing",
+            "postgres",
+            "python"
+          ]
+        },
+        {
+          "slug": "letta-expert-mode",
+          "title": "Letta Expert",
+          "description": "Build stateful agents with persistent memory blocks and self-editing context using Letta (formerly MemGPT)",
+          "path": [
+            "ai-frameworks",
+            "letta-expert-mode"
+          ],
+          "tags": [
+            "letta",
+            "memgpt",
+            "stateful-agents",
+            "memory-blocks",
+            "agent-os",
+            "python",
+            "typescript"
+          ]
+        },
+        {
+          "slug": "llamaindex-expert-mode",
+          "title": "LlamaIndex Expert",
+          "description": "Build agentic document workflows, RAG, and query engines with LlamaIndex 2025",
+          "path": [
+            "ai-frameworks",
+            "llamaindex-expert-mode"
+          ],
+          "tags": [
+            "llamaindex",
+            "rag",
+            "agents",
+            "workflows",
+            "query-engine",
+            "llama-parse",
+            "python"
+          ]
+        },
+        {
+          "slug": "mastra-expert-mode",
+          "title": "Mastra Expert",
+          "description": "Build TypeScript AI agents and workflows with Mastra's modern stack from the Gatsby team",
+          "path": [
+            "ai-frameworks",
+            "mastra-expert-mode"
+          ],
+          "tags": [
+            "mastra",
+            "typescript",
+            "agents",
+            "workflows",
+            "ai-sdk",
+            "nodejs"
+          ]
+        },
+        {
+          "slug": "mem0-expert-mode",
+          "title": "Mem0 Expert",
+          "description": "Build long-term, scalable memory layers for AI agents with Mem0",
+          "path": [
+            "ai-frameworks",
+            "mem0-expert-mode"
+          ],
+          "tags": [
+            "mem0",
+            "memory",
+            "agents",
+            "vector-db",
+            "graph-memory",
+            "python"
+          ]
+        },
+        {
+          "slug": "ollama-expert-mode",
+          "title": "Ollama Expert",
+          "description": "Run, customize, and serve local LLMs with Ollama, Modelfiles, and GGUF quantization",
+          "path": [
+            "ai-frameworks",
+            "ollama-expert-mode"
+          ],
+          "tags": [
+            "ollama",
+            "local-llm",
+            "gguf",
+            "modelfile",
+            "llamacpp",
+            "quantization"
+          ]
+        },
+        {
+          "slug": "openai-agents-sdk-expert-mode",
+          "title": "OpenAI Agents SDK Expert",
+          "description": "Build production agents with handoffs, guardrails, and tracing using the OpenAI Agents SDK",
+          "path": [
+            "ai-frameworks",
+            "openai-agents-sdk-expert-mode"
+          ],
+          "tags": [
+            "openai",
+            "agents",
+            "swarm",
+            "handoffs",
+            "guardrails",
+            "tracing",
+            "python"
+          ]
+        },
+        {
+          "slug": "outlines-expert-mode",
+          "title": "Outlines Expert",
+          "description": "Guarantee structured LLM outputs with regex, JSON schema, and grammar-constrained generation",
+          "path": [
+            "ai-frameworks",
+            "outlines-expert-mode"
+          ],
+          "tags": [
+            "outlines",
+            "constrained-generation",
+            "json-schema",
+            "regex",
+            "grammar",
+            "fsm",
+            "python"
+          ]
+        },
+        {
+          "slug": "pydantic-ai-expert-mode",
+          "title": "Pydantic AI Expert",
+          "description": "Build type-safe, validated LLM agents with Pydantic AI's RunContext, structured outputs, and dependency injection",
+          "path": [
+            "ai-frameworks",
+            "pydantic-ai-expert-mode"
+          ],
+          "tags": [
+            "pydantic-ai",
+            "agents",
+            "structured-outputs",
+            "type-safety",
+            "python",
+            "validation"
+          ]
+        },
+        {
+          "slug": "trigger-dev-expert-mode",
+          "title": "Trigger.dev Expert",
+          "description": "Run durable AI background jobs and agents with Trigger.dev v3 \u2014 no timeouts, full observability",
+          "path": [
+            "ai-frameworks",
+            "trigger-dev-expert-mode"
+          ],
+          "tags": [
+            "trigger-dev",
+            "background-jobs",
+            "ai-agents",
+            "durable",
+            "typescript",
+            "workflows"
+          ]
+        },
+        {
+          "slug": "vercel-ai-sdk-expert-mode",
+          "title": "Vercel AI SDK Expert",
+          "description": "Build TypeScript LLM apps with streamText, generateObject, useChat, and tool calling",
+          "path": [
+            "ai-frameworks",
+            "vercel-ai-sdk-expert-mode"
+          ],
+          "tags": [
+            "vercel",
+            "ai-sdk",
+            "typescript",
+            "nextjs",
+            "streaming",
+            "react",
+            "tools"
+          ]
+        },
+        {
+          "slug": "vllm-expert-mode",
+          "title": "vLLM Expert",
+          "description": "Serve LLMs at scale with PagedAttention, continuous batching, and speculative decoding",
+          "path": [
+            "ai-frameworks",
+            "vllm-expert-mode"
+          ],
+          "tags": [
+            "vllm",
+            "llm-serving",
+            "paged-attention",
+            "speculative-decoding",
+            "gpu",
+            "inference",
+            "python"
           ]
         }
       ]
@@ -836,6 +1166,331 @@
           "path": [
             "creative",
             "video-tutorial-creator-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "data-platforms",
+      "title": "Data Platforms",
+      "modes": [
+        {
+          "slug": "airbyte-expert-mode",
+          "title": "Airbyte Expert",
+          "description": "Expert in Airbyte connectors, the Connector Development Kit, and sync modes",
+          "path": [
+            "data-platforms",
+            "airbyte-expert-mode"
+          ],
+          "tags": [
+            "airbyte",
+            "ingestion",
+            "elt",
+            "connectors",
+            "cdk",
+            "incremental-sync",
+            "cdc"
+          ]
+        },
+        {
+          "slug": "arrow-expert-mode",
+          "title": "Apache Arrow Expert",
+          "description": "Expert in Apache Arrow columnar format, Flight, Flight SQL, and ADBC",
+          "path": [
+            "data-platforms",
+            "arrow-expert-mode"
+          ],
+          "tags": [
+            "arrow",
+            "columnar",
+            "flight",
+            "adbc",
+            "flight-sql",
+            "parquet",
+            "interop"
+          ]
+        },
+        {
+          "slug": "clickhouse-expert-mode",
+          "title": "ClickHouse Expert",
+          "description": "Expert in ClickHouse MergeTree, materialized views, and projections",
+          "path": [
+            "data-platforms",
+            "clickhouse-expert-mode"
+          ],
+          "tags": [
+            "clickhouse",
+            "olap",
+            "mergetree",
+            "materialized-views",
+            "projections",
+            "analytics"
+          ]
+        },
+        {
+          "slug": "daft-expert-mode",
+          "title": "Daft Expert",
+          "description": "Expert in Daft distributed dataframe for multimodal data at scale",
+          "path": [
+            "data-platforms",
+            "daft-expert-mode"
+          ],
+          "tags": [
+            "daft",
+            "dataframe",
+            "multimodal",
+            "distributed",
+            "ai",
+            "rust",
+            "python",
+            "arrow"
+          ]
+        },
+        {
+          "slug": "dagster-expert-mode",
+          "title": "Dagster Expert",
+          "description": "Expert in Dagster software-defined assets, sensors, partitions, and Declarative Automation",
+          "path": [
+            "data-platforms",
+            "dagster-expert-mode"
+          ],
+          "tags": [
+            "dagster",
+            "orchestration",
+            "assets",
+            "sensors",
+            "partitions",
+            "declarative-automation"
+          ]
+        },
+        {
+          "slug": "dbt-expert-mode",
+          "title": "dbt Expert",
+          "description": "Expert in dbt-core 1.8+ with contracts, unit tests, and the semantic layer",
+          "path": [
+            "data-platforms",
+            "dbt-expert-mode"
+          ],
+          "tags": [
+            "dbt",
+            "dbt-core",
+            "transformations",
+            "sql",
+            "semantic-layer",
+            "contracts",
+            "unit-tests"
+          ]
+        },
+        {
+          "slug": "delta-lake-expert-mode",
+          "title": "Delta Lake Expert",
+          "description": "Expert in Delta Lake ACID storage, time travel, and deletion vectors",
+          "path": [
+            "data-platforms",
+            "delta-lake-expert-mode"
+          ],
+          "tags": [
+            "delta-lake",
+            "lakehouse",
+            "parquet",
+            "acid",
+            "time-travel",
+            "deletion-vectors"
+          ]
+        },
+        {
+          "slug": "duckdb-expert-mode",
+          "title": "DuckDB Expert",
+          "description": "Expert in DuckDB embedded analytics, extensions, and persistent storage",
+          "path": [
+            "data-platforms",
+            "duckdb-expert-mode"
+          ],
+          "tags": [
+            "duckdb",
+            "olap",
+            "sql",
+            "analytics",
+            "embedded",
+            "parquet",
+            "arrow"
+          ]
+        },
+        {
+          "slug": "estuary-flow-expert-mode",
+          "title": "Estuary Flow Expert",
+          "description": "Expert in Estuary Flow real-time CDC captures, collections, and materializations",
+          "path": [
+            "data-platforms",
+            "estuary-flow-expert-mode"
+          ],
+          "tags": [
+            "estuary",
+            "flow",
+            "cdc",
+            "streaming",
+            "materialization",
+            "kafka",
+            "lakehouse"
+          ]
+        },
+        {
+          "slug": "iceberg-expert-mode",
+          "title": "Apache Iceberg Expert",
+          "description": "Expert in Apache Iceberg table format, REST catalogs, partitioning, and snapshots",
+          "path": [
+            "data-platforms",
+            "iceberg-expert-mode"
+          ],
+          "tags": [
+            "iceberg",
+            "lakehouse",
+            "parquet",
+            "table-format",
+            "rest-catalog",
+            "snapshots"
+          ]
+        },
+        {
+          "slug": "materialize-expert-mode",
+          "title": "Materialize Expert",
+          "description": "Expert in Materialize streaming SQL, sources, sinks, and incremental views",
+          "path": [
+            "data-platforms",
+            "materialize-expert-mode"
+          ],
+          "tags": [
+            "materialize",
+            "streaming",
+            "sql",
+            "materialized-views",
+            "cdc",
+            "kafka",
+            "postgres"
+          ]
+        },
+        {
+          "slug": "motherduck-expert-mode",
+          "title": "MotherDuck Expert",
+          "description": "Expert in MotherDuck cloud DuckDB, dual execution, and database sharing",
+          "path": [
+            "data-platforms",
+            "motherduck-expert-mode"
+          ],
+          "tags": [
+            "motherduck",
+            "duckdb",
+            "cloud",
+            "hybrid-execution",
+            "lakehouse",
+            "sharing"
+          ]
+        },
+        {
+          "slug": "polars-expert-mode",
+          "title": "Polars Expert",
+          "description": "Expert in Polars lazy frames, expressions, and the streaming engine",
+          "path": [
+            "data-platforms",
+            "polars-expert-mode"
+          ],
+          "tags": [
+            "polars",
+            "dataframe",
+            "rust",
+            "python",
+            "lazy",
+            "streaming",
+            "arrow"
+          ]
+        },
+        {
+          "slug": "prefect-expert-mode",
+          "title": "Prefect Expert",
+          "description": "Expert in Prefect 3 flows, deployments, work pools, and workers",
+          "path": [
+            "data-platforms",
+            "prefect-expert-mode"
+          ],
+          "tags": [
+            "prefect",
+            "prefect-3",
+            "orchestration",
+            "workflows",
+            "python",
+            "etl"
+          ]
+        },
+        {
+          "slug": "ray-expert-mode",
+          "title": "Ray Expert",
+          "description": "Expert in Ray remote, actors, Ray Data, Ray Serve, and Ray Tune",
+          "path": [
+            "data-platforms",
+            "ray-expert-mode"
+          ],
+          "tags": [
+            "ray",
+            "distributed",
+            "python",
+            "actors",
+            "ray-data",
+            "ray-serve",
+            "ray-tune",
+            "ml"
+          ]
+        },
+        {
+          "slug": "risingwave-expert-mode",
+          "title": "RisingWave Expert",
+          "description": "Expert in RisingWave streaming database with PostgreSQL-compatible materialized views",
+          "path": [
+            "data-platforms",
+            "risingwave-expert-mode"
+          ],
+          "tags": [
+            "risingwave",
+            "streaming",
+            "sql",
+            "materialized-views",
+            "postgres",
+            "cdc",
+            "kafka"
+          ]
+        },
+        {
+          "slug": "timescaledb-expert-mode",
+          "title": "TimescaleDB Expert",
+          "description": "Expert in TimescaleDB hypertables, continuous aggregates, and compression",
+          "path": [
+            "data-platforms",
+            "timescaledb-expert-mode"
+          ],
+          "tags": [
+            "timescaledb",
+            "postgres",
+            "time-series",
+            "hypertables",
+            "compression",
+            "continuous-aggregates"
+          ]
+        },
+        {
+          "slug": "tinybird-expert-mode",
+          "title": "Tinybird Expert",
+          "description": "Expert in Tinybird real-time analytics APIs on managed ClickHouse",
+          "path": [
+            "data-platforms",
+            "tinybird-expert-mode"
+          ],
+          "tags": [
+            "tinybird",
+            "clickhouse",
+            "real-time",
+            "analytics",
+            "api",
+            "datasources",
+            "pipes"
           ]
         }
       ]
@@ -3823,6 +4478,307 @@
       ]
     },
     {
+      "name": "edge-platforms",
+      "title": "Edge Platforms",
+      "modes": [
+        {
+          "slug": "clerk-expert-mode",
+          "title": "Clerk Expert",
+          "description": "Expert in Clerk authentication, organizations, webhooks, and Next.js integration",
+          "path": [
+            "edge-platforms",
+            "clerk-expert-mode"
+          ],
+          "tags": [
+            "clerk",
+            "auth",
+            "authentication",
+            "nextjs",
+            "organizations",
+            "webhooks",
+            "rbac",
+            "jwt"
+          ]
+        },
+        {
+          "slug": "cloudflare-workers-expert-mode",
+          "title": "Cloudflare Workers Expert",
+          "description": "Expert in Cloudflare Workers, Durable Objects, R2, KV, D1, Queues, and AI bindings",
+          "path": [
+            "edge-platforms",
+            "cloudflare-workers-expert-mode"
+          ],
+          "tags": [
+            "cloudflare",
+            "workers",
+            "edge",
+            "durable-objects",
+            "r2",
+            "kv",
+            "d1",
+            "queues",
+            "vectorize",
+            "workers-ai"
+          ]
+        },
+        {
+          "slug": "convex-expert-mode",
+          "title": "Convex Expert",
+          "description": "Expert in Convex queries, mutations, actions, scheduling, and reactive data",
+          "path": [
+            "edge-platforms",
+            "convex-expert-mode"
+          ],
+          "tags": [
+            "convex",
+            "reactive",
+            "serverless",
+            "typescript",
+            "scheduled",
+            "real-time"
+          ]
+        },
+        {
+          "slug": "deno-deploy-expert-mode",
+          "title": "Deno Deploy Expert",
+          "description": "Expert in Deno Deploy, Deno KV, queues, and globally distributed TypeScript",
+          "path": [
+            "edge-platforms",
+            "deno-deploy-expert-mode"
+          ],
+          "tags": [
+            "deno",
+            "deno-deploy",
+            "deno-kv",
+            "queues",
+            "edge",
+            "typescript",
+            "isolates"
+          ]
+        },
+        {
+          "slug": "fly-io-expert-mode",
+          "title": "Fly.io Expert",
+          "description": "Expert in Fly Machines, fly.toml, Fly Postgres, and globally distributed deploys",
+          "path": [
+            "edge-platforms",
+            "fly-io-expert-mode"
+          ],
+          "tags": [
+            "fly-io",
+            "fly-machines",
+            "fly-toml",
+            "postgres",
+            "edge",
+            "multi-region"
+          ]
+        },
+        {
+          "slug": "huggingface-spaces-expert-mode",
+          "title": "Hugging Face Spaces Expert",
+          "description": "Expert in Hugging Face Spaces, Gradio, Streamlit, and Inference Endpoints",
+          "path": [
+            "edge-platforms",
+            "huggingface-spaces-expert-mode"
+          ],
+          "tags": [
+            "huggingface",
+            "spaces",
+            "gradio",
+            "streamlit",
+            "inference-endpoints",
+            "ml",
+            "demo"
+          ]
+        },
+        {
+          "slug": "lambda-expert-mode",
+          "title": "AWS Lambda Expert",
+          "description": "Expert in AWS Lambda 2025 patterns, SnapStart, Layers, and provisioned concurrency",
+          "path": [
+            "edge-platforms",
+            "lambda-expert-mode"
+          ],
+          "tags": [
+            "aws",
+            "lambda",
+            "serverless",
+            "snapstart",
+            "layers",
+            "provisioned-concurrency",
+            "java",
+            "python",
+            "dotnet"
+          ]
+        },
+        {
+          "slug": "modal-expert-mode",
+          "title": "Modal Expert",
+          "description": "Expert in Modal serverless GPUs, web endpoints, scheduled functions, and Python ML deployment",
+          "path": [
+            "edge-platforms",
+            "modal-expert-mode"
+          ],
+          "tags": [
+            "modal",
+            "serverless",
+            "gpu",
+            "python",
+            "ml",
+            "fastapi",
+            "cron",
+            "h100"
+          ]
+        },
+        {
+          "slug": "neon-expert-mode",
+          "title": "Neon Expert",
+          "description": "Expert in Neon serverless Postgres, branching, autoscaling, and the serverless driver",
+          "path": [
+            "edge-platforms",
+            "neon-expert-mode"
+          ],
+          "tags": [
+            "neon",
+            "postgres",
+            "serverless",
+            "branching",
+            "autoscaling",
+            "drizzle",
+            "edge"
+          ]
+        },
+        {
+          "slug": "railway-expert-mode",
+          "title": "Railway Expert",
+          "description": "Expert in Railway services, environments, Postgres, and PR previews",
+          "path": [
+            "edge-platforms",
+            "railway-expert-mode"
+          ],
+          "tags": [
+            "railway",
+            "paas",
+            "postgres",
+            "environments",
+            "deploy",
+            "preview"
+          ]
+        },
+        {
+          "slug": "render-expert-mode",
+          "title": "Render Expert",
+          "description": "Expert in Render web services, background workers, cron jobs, and Blueprints",
+          "path": [
+            "edge-platforms",
+            "render-expert-mode"
+          ],
+          "tags": [
+            "render",
+            "paas",
+            "blueprint",
+            "background-worker",
+            "cron",
+            "postgres",
+            "key-value"
+          ]
+        },
+        {
+          "slug": "replicate-expert-mode",
+          "title": "Replicate Expert",
+          "description": "Expert in Replicate predictions API, Cog model packaging, and fine-tunes",
+          "path": [
+            "edge-platforms",
+            "replicate-expert-mode"
+          ],
+          "tags": [
+            "replicate",
+            "cog",
+            "ml",
+            "inference",
+            "api",
+            "fine-tune",
+            "lora",
+            "webhooks"
+          ]
+        },
+        {
+          "slug": "stripe-expert-mode",
+          "title": "Stripe Expert",
+          "description": "Expert in Stripe Payments, Subscriptions, Invoicing, Connect, and webhooks",
+          "path": [
+            "edge-platforms",
+            "stripe-expert-mode"
+          ],
+          "tags": [
+            "stripe",
+            "payments",
+            "subscriptions",
+            "billing",
+            "connect",
+            "webhooks",
+            "payment-intents"
+          ]
+        },
+        {
+          "slug": "supabase-expert-mode",
+          "title": "Supabase Expert",
+          "description": "Expert in Supabase Postgres, Auth, Realtime, Storage, and Edge Functions",
+          "path": [
+            "edge-platforms",
+            "supabase-expert-mode"
+          ],
+          "tags": [
+            "supabase",
+            "postgres",
+            "auth",
+            "realtime",
+            "storage",
+            "edge-functions",
+            "rls",
+            "deno"
+          ]
+        },
+        {
+          "slug": "upstash-expert-mode",
+          "title": "Upstash Expert",
+          "description": "Expert in Upstash Redis, QStash, Vector, and Workflow for serverless and edge",
+          "path": [
+            "edge-platforms",
+            "upstash-expert-mode"
+          ],
+          "tags": [
+            "upstash",
+            "redis",
+            "qstash",
+            "vector",
+            "workflow",
+            "serverless",
+            "edge",
+            "rest-api"
+          ]
+        },
+        {
+          "slug": "vercel-edge-expert-mode",
+          "title": "Vercel Edge Expert",
+          "description": "Expert in Vercel Functions, Fluid compute, ISR, and Image Optimization",
+          "path": [
+            "edge-platforms",
+            "vercel-edge-expert-mode"
+          ],
+          "tags": [
+            "vercel",
+            "edge",
+            "nextjs",
+            "isr",
+            "image-optimization",
+            "fluid-compute",
+            "serverless"
+          ]
+        }
+      ]
+    },
+    {
       "name": "emerging-tech",
       "title": "Emerging Tech",
       "modes": [
@@ -3878,6 +4834,349 @@
           "path": [
             "emerging-tech",
             "webassembly-expert-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "engineer-personas",
+      "title": "Engineer Personas",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "engineer-personas",
+            "README"
+          ]
+        },
+        {
+          "slug": "antirez-style-mode",
+          "title": "antirez Style",
+          "description": "Salvatore Sanfilippo \u2014 Redis, single-author C, simplicity through proofs-of-concept, comments are essential",
+          "path": [
+            "engineer-personas",
+            "antirez-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "c",
+            "redis",
+            "simplicity",
+            "single-author",
+            "systems"
+          ]
+        },
+        {
+          "slug": "aphyr-style-mode",
+          "title": "Kyle Kingsbury (aphyr) Style",
+          "description": "Kyle Kingsbury \u2014 Jepsen, distributed-systems testing, \"Call Me Maybe,\" empirical correctness, vendor claims meet network partitions",
+          "path": [
+            "engineer-personas",
+            "aphyr-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "distributed-systems",
+            "testing",
+            "jepsen",
+            "correctness",
+            "empirical"
+          ]
+        },
+        {
+          "slug": "cantrill-style-mode",
+          "title": "Bryan Cantrill Style",
+          "description": "Bryan Cantrill \u2014 DTrace, illumos, Oxide; observability over logging, Rust for systems, toolmaking as craft",
+          "path": [
+            "engineer-personas",
+            "cantrill-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "systems",
+            "rust",
+            "observability",
+            "dtrace",
+            "oxide",
+            "illumos"
+          ]
+        },
+        {
+          "slug": "carmack-style-mode",
+          "title": "John Carmack Style",
+          "description": "John Carmack \u2014 performance-first, inline what's called once, minimize \"area under ifs,\" pure functions where possible",
+          "path": [
+            "engineer-personas",
+            "carmack-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "performance",
+            "low-level",
+            "c",
+            "game-engine",
+            "simplicity"
+          ]
+        },
+        {
+          "slug": "dan-abramov-style-mode",
+          "title": "Dan Abramov Style",
+          "description": "Dan Abramov \u2014 React, Redux, RSC; thoughtful API design, mental models over rules, \"Just JavaScript",
+          "path": [
+            "engineer-personas",
+            "dan-abramov-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "react",
+            "javascript",
+            "mental-models",
+            "api-design",
+            "server-components"
+          ]
+        },
+        {
+          "slug": "dhh-style-mode",
+          "title": "DHH Style",
+          "description": "David Heinemeier Hansson \u2014 majestic monoliths, Rails, contrarian convictions, and \"no microservices for you",
+          "path": [
+            "engineer-personas",
+            "dhh-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "opinionated",
+            "rails",
+            "monolith",
+            "contrarian",
+            "ruby"
+          ]
+        },
+        {
+          "slug": "fabrice-bellard-style-mode",
+          "title": "Fabrice Bellard Style",
+          "description": "Fabrice Bellard \u2014 solo author of FFmpeg, QEMU, TCC, QuickJS; small, fast, complete, almost impossibly prolific",
+          "path": [
+            "engineer-personas",
+            "fabrice-bellard-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "c",
+            "prolific",
+            "performance",
+            "compression",
+            "emulation",
+            "single-author"
+          ]
+        },
+        {
+          "slug": "gergely-orosz-style-mode",
+          "title": "Gergely Orosz Style",
+          "description": "Gergely Orosz \u2014 The Pragmatic Engineer, scaling teams, real-world tradeoffs, sourced reporting on Big Tech engineering",
+          "path": [
+            "engineer-personas",
+            "gergely-orosz-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "engineering-management",
+            "scaling",
+            "pragmatic",
+            "big-tech",
+            "leadership"
+          ]
+        },
+        {
+          "slug": "hillel-wayne-style-mode",
+          "title": "Hillel Wayne Style",
+          "description": "Hillel Wayne \u2014 formal methods, TLA+, Alloy, \"an hour of modeling will catch issues days of tests will miss",
+          "path": [
+            "engineer-personas",
+            "hillel-wayne-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "formal-methods",
+            "tla-plus",
+            "alloy",
+            "specification",
+            "design"
+          ]
+        },
+        {
+          "slug": "kernighan-style-mode",
+          "title": "Brian Kernighan Style",
+          "description": "Brian Kernighan \u2014 Unix philosophy, small composable tools, \"controlling complexity is the essence of programming",
+          "path": [
+            "engineer-personas",
+            "kernighan-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "unix",
+            "c",
+            "clarity",
+            "teaching",
+            "simplicity"
+          ]
+        },
+        {
+          "slug": "martin-kleppmann-style-mode",
+          "title": "Martin Kleppmann Style",
+          "description": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, CRDTs, local-first software, Automerge",
+          "path": [
+            "engineer-personas",
+            "martin-kleppmann-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "distributed-systems",
+            "crdts",
+            "local-first",
+            "databases",
+            "research"
+          ]
+        },
+        {
+          "slug": "mitchell-hashimoto-style-mode",
+          "title": "Mitchell Hashimoto Style",
+          "description": "Mitchell Hashimoto \u2014 HashiCorp founder, infra-as-code, Go, Zig, terminal craft, ship-the-thing",
+          "path": [
+            "engineer-personas",
+            "mitchell-hashimoto-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "infrastructure",
+            "go",
+            "zig",
+            "hashicorp",
+            "ghostty",
+            "terminal"
+          ]
+        },
+        {
+          "slug": "muratori-style-mode",
+          "title": "Casey Muratori Style",
+          "description": "Casey Muratori \u2014 Handmade Hero, anti-OOP-by-default, data-oriented design, \"clean code, horrible performance",
+          "path": [
+            "engineer-personas",
+            "muratori-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "performance",
+            "data-oriented-design",
+            "c",
+            "anti-oop",
+            "game-development"
+          ]
+        },
+        {
+          "slug": "rich-hickey-style-mode",
+          "title": "Rich Hickey Style",
+          "description": "Rich Hickey \u2014 Clojure, \"Simple Made Easy,\" immutability, hammock-driven design, decomplecting",
+          "path": [
+            "engineer-personas",
+            "rich-hickey-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "clojure",
+            "functional",
+            "immutability",
+            "design-thinking",
+            "lisp"
+          ]
+        },
+        {
+          "slug": "rob-pike-style-mode",
+          "title": "Rob Pike Style",
+          "description": "Rob Pike \u2014 Plan 9, Go, \"less is exponentially more,\" concurrency primitives, composition over inheritance",
+          "path": [
+            "engineer-personas",
+            "rob-pike-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "go",
+            "plan9",
+            "simplicity",
+            "concurrency",
+            "composition"
+          ]
+        },
+        {
+          "slug": "simon-willison-style-mode",
+          "title": "Simon Willison Style",
+          "description": "Simon Willison \u2014 Datasette, LLM CLI, building in public, plugin architectures, daily practical AI",
+          "path": [
+            "engineer-personas",
+            "simon-willison-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "python",
+            "llm",
+            "datasette",
+            "building-in-public",
+            "plugins",
+            "sqlite"
+          ]
+        },
+        {
+          "slug": "steve-yegge-style-mode",
+          "title": "Steve Yegge Style",
+          "description": "Steve Yegge \u2014 long-form essays, generalist polyglot, \"Execution in the Kingdom of Nouns,\" language design opinions",
+          "path": [
+            "engineer-personas",
+            "steve-yegge-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "essays",
+            "polyglot",
+            "language-design",
+            "opinionated",
+            "long-form"
+          ]
+        },
+        {
+          "slug": "tj-holowaychuk-style-mode",
+          "title": "TJ Holowaychuk Style",
+          "description": "TJ Holowaychuk \u2014 Express, Koa, Mocha, Commander; minimal cores, prolific output, small modules that compose",
+          "path": [
+            "engineer-personas",
+            "tj-holowaychuk-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "node",
+            "javascript",
+            "minimalism",
+            "express",
+            "koa",
+            "prolific"
+          ]
+        },
+        {
+          "slug": "torvalds-style-mode",
+          "title": "Linus Torvalds Style",
+          "description": "Linus Torvalds \u2014 taste, no special cases, brutal directness, \"talk is cheap, show me the code",
+          "path": [
+            "engineer-personas",
+            "torvalds-style-mode"
+          ],
+          "tags": [
+            "persona",
+            "kernel",
+            "c",
+            "taste",
+            "blunt",
+            "systems"
           ]
         }
       ]
@@ -4529,6 +5828,329 @@
           "path": [
             "mobile",
             "react-native-developer-mode"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "modern-web",
+      "title": "Modern Web",
+      "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "modern-web",
+            "README"
+          ]
+        },
+        {
+          "slug": "astro-expert-mode",
+          "title": "Astro Expert",
+          "description": "Expert in Astro 5 islands architecture, content collections, server islands, and view transitions",
+          "path": [
+            "modern-web",
+            "astro-expert-mode"
+          ],
+          "tags": [
+            "astro",
+            "ssg",
+            "ssr",
+            "islands",
+            "view-transitions",
+            "content-collections",
+            "mpa"
+          ]
+        },
+        {
+          "slug": "biome-expert-mode",
+          "title": "Biome Expert",
+          "description": "Expert in Biome \u2014 Rust-powered linter and formatter replacing ESLint and Prettier",
+          "path": [
+            "modern-web",
+            "biome-expert-mode"
+          ],
+          "tags": [
+            "biome",
+            "linter",
+            "formatter",
+            "eslint",
+            "prettier",
+            "rust",
+            "toolchain"
+          ]
+        },
+        {
+          "slug": "bun-expert-mode",
+          "title": "Bun Expert",
+          "description": "Expert in Bun runtime, package manager, test runner, and bundler for JavaScript/TypeScript",
+          "path": [
+            "modern-web",
+            "bun-expert-mode"
+          ],
+          "tags": [
+            "bun",
+            "runtime",
+            "javascript",
+            "typescript",
+            "package-manager",
+            "test-runner",
+            "bundler"
+          ]
+        },
+        {
+          "slug": "htmx-expert-mode",
+          "title": "htmx Expert",
+          "description": "Expert in htmx \u2014 hypermedia-driven applications, server-rendered HTML over the wire",
+          "path": [
+            "modern-web",
+            "htmx-expert-mode"
+          ],
+          "tags": [
+            "htmx",
+            "hypermedia",
+            "html",
+            "server-driven",
+            "progressive-enhancement",
+            "hda"
+          ]
+        },
+        {
+          "slug": "million-expert-mode",
+          "title": "Million.js Expert",
+          "description": "Expert in Million.js block-DOM compiler that speeds up React rendering up to 70%",
+          "path": [
+            "modern-web",
+            "million-expert-mode"
+          ],
+          "tags": [
+            "million",
+            "react",
+            "performance",
+            "virtual-dom",
+            "compiler"
+          ]
+        },
+        {
+          "slug": "nuxt-expert-mode",
+          "title": "Nuxt Expert",
+          "description": "Expert in Nuxt 4, Nitro server engine, server routes, and modules",
+          "path": [
+            "modern-web",
+            "nuxt-expert-mode"
+          ],
+          "tags": [
+            "nuxt",
+            "vue",
+            "nitro",
+            "ssr",
+            "full-stack",
+            "h3"
+          ]
+        },
+        {
+          "slug": "nx-monorepo-expert-mode",
+          "title": "Nx Monorepo Expert",
+          "description": "Expert in Nx workspaces, generators, executors, project graph, and affected commands",
+          "path": [
+            "modern-web",
+            "nx-monorepo-expert-mode"
+          ],
+          "tags": [
+            "nx",
+            "monorepo",
+            "build-tools",
+            "generators",
+            "executors",
+            "ci"
+          ]
+        },
+        {
+          "slug": "qwik-expert-mode",
+          "title": "Qwik Expert",
+          "description": "Expert in Qwik resumability, lazy execution, server functions, and Qwik City routing",
+          "path": [
+            "modern-web",
+            "qwik-expert-mode"
+          ],
+          "tags": [
+            "qwik",
+            "resumability",
+            "ssr",
+            "edge",
+            "performance",
+            "qwik-city"
+          ]
+        },
+        {
+          "slug": "react-router-expert-mode",
+          "title": "React Router Expert",
+          "description": "Expert in React Router 7 framework mode (formerly Remix) \u2014 loaders, actions, file routes",
+          "path": [
+            "modern-web",
+            "react-router-expert-mode"
+          ],
+          "tags": [
+            "react-router",
+            "remix",
+            "ssr",
+            "react",
+            "full-stack",
+            "loaders",
+            "actions"
+          ]
+        },
+        {
+          "slug": "rspack-expert-mode",
+          "title": "Rspack Expert",
+          "description": "Expert in Rspack and Rsbuild \u2014 Rust-powered, webpack-compatible bundler",
+          "path": [
+            "modern-web",
+            "rspack-expert-mode"
+          ],
+          "tags": [
+            "rspack",
+            "rsbuild",
+            "bundler",
+            "rust",
+            "webpack",
+            "build-tools"
+          ]
+        },
+        {
+          "slug": "shadcn-expert-mode",
+          "title": "shadcn/ui Expert",
+          "description": "Expert in shadcn/ui copy-paste pattern, registry system, CLI 3.0, and theming",
+          "path": [
+            "modern-web",
+            "shadcn-expert-mode"
+          ],
+          "tags": [
+            "shadcn",
+            "ui",
+            "react",
+            "tailwind",
+            "radix",
+            "design-system",
+            "component-library"
+          ]
+        },
+        {
+          "slug": "solid-expert-mode",
+          "title": "SolidJS Expert",
+          "description": "Expert in SolidJS signals, fine-grained reactivity, stores, and SolidStart",
+          "path": [
+            "modern-web",
+            "solid-expert-mode"
+          ],
+          "tags": [
+            "solidjs",
+            "signals",
+            "reactivity",
+            "frontend",
+            "jsx"
+          ]
+        },
+        {
+          "slug": "sveltekit-expert-mode",
+          "title": "SvelteKit Expert",
+          "description": "Expert in SvelteKit and Svelte 5 runes \u2014 state, derived, effect, props, snippets",
+          "path": [
+            "modern-web",
+            "sveltekit-expert-mode"
+          ],
+          "tags": [
+            "sveltekit",
+            "svelte",
+            "svelte-5",
+            "runes",
+            "ssr",
+            "full-stack"
+          ]
+        },
+        {
+          "slug": "tailwind-v4-expert-mode",
+          "title": "Tailwind v4 Expert",
+          "description": "Expert in Tailwind CSS v4, the Oxide engine, CSS-first config, and modern utilities",
+          "path": [
+            "modern-web",
+            "tailwind-v4-expert-mode"
+          ],
+          "tags": [
+            "tailwind",
+            "css",
+            "oxide",
+            "postcss",
+            "design-tokens"
+          ]
+        },
+        {
+          "slug": "tanstack-query-expert-mode",
+          "title": "TanStack Query Expert",
+          "description": "Expert in TanStack Query v5 (React Query) \u2014 server state, mutations, suspense, infinite queries",
+          "path": [
+            "modern-web",
+            "tanstack-query-expert-mode"
+          ],
+          "tags": [
+            "tanstack-query",
+            "react-query",
+            "data-fetching",
+            "caching",
+            "react",
+            "server-state"
+          ]
+        },
+        {
+          "slug": "tanstack-router-expert-mode",
+          "title": "TanStack Router Expert",
+          "description": "Expert in TanStack Router file-based routing with end-to-end type safety",
+          "path": [
+            "modern-web",
+            "tanstack-router-expert-mode"
+          ],
+          "tags": [
+            "tanstack-router",
+            "react",
+            "routing",
+            "type-safety",
+            "file-based"
+          ]
+        },
+        {
+          "slug": "turborepo-expert-mode",
+          "title": "Turborepo Expert",
+          "description": "Expert in Turborepo 2 monorepo orchestration, task pipelines, and remote caching",
+          "path": [
+            "modern-web",
+            "turborepo-expert-mode"
+          ],
+          "tags": [
+            "turborepo",
+            "monorepo",
+            "build-tools",
+            "ci",
+            "caching",
+            "vercel"
+          ]
+        },
+        {
+          "slug": "vite-expert-mode",
+          "title": "Vite Expert",
+          "description": "Expert in Vite 6 dev server, build, SSR, library mode, and the new Environment API",
+          "path": [
+            "modern-web",
+            "vite-expert-mode"
+          ],
+          "tags": [
+            "vite",
+            "build-tools",
+            "esm",
+            "ssr",
+            "frontend",
+            "rollup",
+            "esbuild"
           ]
         }
       ]
