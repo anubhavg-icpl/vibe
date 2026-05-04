@@ -1,7 +1,7 @@
 {
   "$schema": "./modes-index.schema.json",
-  "generatedAt": "2026-05-04T11:10:59.665575Z",
-  "totalModes": 603,
+  "generatedAt": "2026-05-04T11:11:47.736169Z",
+  "totalModes": 606,
   "categories": [
     {
       "name": "ai-engineering",
@@ -1175,6 +1175,15 @@
       "title": "Data Platforms",
       "modes": [
         {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "data-platforms",
+            "README"
+          ]
+        },
+        {
           "slug": "airbyte-expert-mode",
           "title": "Airbyte Expert",
           "description": "Expert in Airbyte connectors, the Connector Development Kit, and sync modes",
@@ -1349,6 +1358,23 @@
             "table-format",
             "rest-catalog",
             "snapshots"
+          ]
+        },
+        {
+          "slug": "kafka-expert-mode",
+          "title": "Apache Kafka Expert",
+          "description": "Expert in Kafka 3.x/4.0 with KRaft, exactly-once semantics, and consumer groups",
+          "path": [
+            "data-platforms",
+            "kafka-expert-mode"
+          ],
+          "tags": [
+            "kafka",
+            "streaming",
+            "kraft",
+            "exactly-once",
+            "consumer-groups",
+            "event-driven"
           ]
         },
         {
@@ -4481,6 +4507,15 @@
       "name": "edge-platforms",
       "title": "Edge Platforms",
       "modes": [
+        {
+          "slug": "README",
+          "title": "Readme",
+          "description": "",
+          "path": [
+            "edge-platforms",
+            "README"
+          ]
+        },
         {
           "slug": "clerk-expert-mode",
           "title": "Clerk Expert",
