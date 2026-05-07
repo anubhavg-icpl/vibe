@@ -1,0 +1,26 @@
+{
+  "name": "vibe",
+  "owner": {
+    "name": "Anubhav Gain",
+    "email": "anubhavg@infopercept.com",
+    "url": "https://github.com/anubhavg-icpl"
+  },
+  "metadata": {
+    "description": "Vibe Cursor plugins",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "vibe",
+      "source": "./",
+      "description": "Full Vibe library for Cursor.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Anubhav Gain",
+        "email": "anubhavg@infopercept.com"
+      },
+      "homepage": "https://github.com/anubhavg-icpl/vibe",
+      "license": "CC-BY-NC-SA-4.0"
+    }
+  ]
+}

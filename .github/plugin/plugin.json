@@ -1,0 +1,15 @@
+{
+  "name": "vibe",
+  "description": "754 modes + 675 skills + 216 agents + 127 commands — unified AI coding workflow library for GitHub Copilot CLI.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Anubhav Gain",
+    "email": "anubhavg@infopercept.com",
+    "url": "https://github.com/anubhavg-icpl"
+  },
+  "homepage": "https://github.com/anubhavg-icpl/vibe",
+  "repository": "https://github.com/anubhavg-icpl/vibe",
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": ["skills", "agents", "ai", "workflows", "copilot"],
+  "skills": ["skills/"]
+}

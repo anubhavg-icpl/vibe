@@ -1,0 +1,28 @@
+{
+  "name": "vibe",
+  "description": "Vibe — AI coding-agent skills, agents, commands, and modes library.",
+  "owner": {
+    "name": "Anubhav Gain",
+    "email": "anubhavg@infopercept.com",
+    "url": "https://github.com/anubhavg-icpl"
+  },
+  "metadata": {
+    "description": "Vibe plugin marketplace",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "vibe",
+      "description": "Full Vibe library — skills, agents, commands, hooks.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "Anubhav Gain",
+        "email": "anubhavg@infopercept.com"
+      },
+      "homepage": "https://github.com/anubhavg-icpl/vibe",
+      "license": "CC-BY-NC-SA-4.0",
+      "keywords": ["skills", "agents", "modes", "workflows"]
+    }
+  ]
+}

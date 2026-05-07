@@ -1,0 +1,7 @@
+{
+  "name": "vibe",
+  "version": "1.0.0",
+  "description": "754 modes + 675 skills + 216 agents — unified AI coding workflow library for Gemini CLI.",
+  "contextFileName": "GEMINI.md",
+  "excludeTools": []
+}

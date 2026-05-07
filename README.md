@@ -27,7 +27,7 @@
   <img src="https://img.shields.io/badge/Commands-127-0ea5e9?style=flat-square" alt="Commands">
   <img src="https://img.shields.io/badge/Rules-111-06b6d4?style=flat-square" alt="Rules">
   <img src="https://img.shields.io/badge/Prompts-106-14b8a6?style=flat-square" alt="Prompts">
-  <img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-22c55e?style=flat-square" alt="License">
 </p>
 
 ---
@@ -137,6 +137,41 @@ project-structure .............. 21 modes
 specialized ....................  7 modes
 + 10 more ......................  (analysis, learning, output-formats, coding-standards, ...)
 ```
+
+## Install as a Plugin (any CLI, one command)
+
+Vibe ships **manifests for every major coding-agent CLI** at the repo root, so you can install the entire library with a single command — no clone, no copy-paste. The same `skills/`, `agents/`, `commands/`, `hooks/` directories are exposed via each harness's native plugin system.
+
+| CLI                | Install command                                                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Claude Code**    | `/plugin marketplace add anubhavg-icpl/vibe` then `/plugin install vibe@vibe`                                                                    |
+| **Codex CLI/App**  | `/plugins` → search `vibe` → Install                                                                                                             |
+| **Cursor**         | `/add-plugin vibe` (or search "vibe" in the plugin marketplace)                                                                                  |
+| **OpenCode**       | Add `"plugin": ["github:anubhavg-icpl/vibe"]` to `~/.config/opencode/opencode.json`                                                              |
+| **Gemini CLI**     | `gemini extensions install https://github.com/anubhavg-icpl/vibe`                                                                                |
+| **Copilot CLI**    | `copilot plugin marketplace add anubhavg-icpl/vibe` then `copilot plugin install vibe@vibe`                                                      |
+| **Factory Droid**  | `droid plugin marketplace add https://github.com/anubhavg-icpl/vibe` then `droid plugin install vibe@vibe`                                       |
+
+Once installed, all 675 skills are discoverable via the harness's native skill tool. Skills auto-load on relevance — no further config needed.
+
+### Manifest layout in this repo
+
+```
+vibe/
+├── .claude-plugin/         plugin.json + marketplace.json   (Claude Code)
+├── .codex-plugin/          plugin.json                      (Codex CLI / App)
+├── .cursor-plugin/         plugin.json + marketplace.json   (Cursor)
+├── .factory-plugin/        plugin.json                      (Factory Droid)
+├── .github/plugin/         plugin.json + marketplace.json   (GitHub Copilot CLI)
+├── .opencode/              plugin.js                        (OpenCode — JS plugin)
+├── gemini-extension.json   (Gemini CLI extension manifest)
+├── GEMINI.md               (Gemini context file)
+└── skills/                 (shared — every CLI reads this directory)
+```
+
+> **Modes (754):** chat-mode prompts under `modes/` are not auto-loaded by any CLI marketplace — install them with the [VIBE CLI](#vibe-cli--install-modes-as-skills) below.
+
+---
 
 ## Getting Started
 
@@ -369,7 +404,7 @@ A: Because "A Comprehensive Collection of 754 Specialized AI Chat Modes Plus 675
 A: 754 modes don't write themselves. (Well, some did — but they web-searched first and cited their sources, which is more than most humans bother to do.)
 
 **Q: Can I use these commercially?**
-A: MIT License. Go wild. Just don't blame us when `mythos-uac-bypass-creative-mode` refuses to operate on systems you didn't write authorization for. (That's the point. Read the Authorization Gate.)
+A: License is CC BY-NC-SA 4.0 — non-commercial use is free with attribution. For commercial use, reach out for licensing. Either way, don't blame us when `mythos-uac-bypass-creative-mode` refuses to operate on systems you didn't write authorization for. (That's the point. Read the Authorization Gate.)
 
 **Q: Why are there personality modes?**
 A: Because sometimes you need Gordon Ramsay to tell you your code is _raw_. Or DHH to tell you that you don't need Kubernetes. Both are therapeutic.
@@ -382,9 +417,9 @@ A: `git pull` and check the `modes-index.json` diff. Or watch the repo.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+[CC BY-NC-SA 4.0](LICENSE) — Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
 
-Do whatever you want. We're not your parents.
+You're free to share and adapt the material for **non-commercial use**, with attribution, under the same license. For commercial licensing, get in touch.
 
 ---
 
