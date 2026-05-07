@@ -1,12 +1,16 @@
 {
   "name": "vibe-modes",
-  "version": "1.0.0",
-  "description": "AI coding assistant modes collection - comprehensive prompts for development workflows",
-  "author": "Anubhav Gain",
+  "version": "2.0.0",
+  "description": "Single-command installer for the Vibe AI-agent asset library — skills, agents, commands, and modes across 7 coding-agent CLIs.",
+  "author": "Anubhav Gain <anubhavg@infopercept.com>",
   "license": "CC-BY-NC-SA-4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anubhavg-icpl/vibe"
+  },
+  "homepage": "https://github.com/anubhavg-icpl/vibe",
+  "bugs": {
+    "url": "https://github.com/anubhavg-icpl/vibe/issues"
   },
   "keywords": [
     "ai",
@@ -14,11 +18,15 @@
     "prompts",
     "development",
     "modes",
-    "cursor",
-    "claude",
-    "copilot",
     "skills",
+    "agents",
+    "claude-code",
+    "cursor",
+    "codex",
     "opencode",
+    "gemini-cli",
+    "copilot-cli",
+    "factory-droid",
     "agent-skills"
   ],
   "scripts": {
@@ -30,8 +38,9 @@
     "fix": "pnpm run lint:fix && pnpm run format",
     "generate:index": "python scripts/generate-modes-index.py",
     "fix:diagrams": "python scripts/fix-diagrams.py",
-    "build": "tsup src/index.ts --format esm --dts --clean",
+    "build": "tsup src/index.ts --format esm --dts --clean --target node18",
     "dev": "tsx src/index.ts",
+    "prepare": "node -e \"const fs=require('fs');if(!fs.existsSync('dist/index.js')&&fs.existsSync('src/index.ts')){try{require('child_process').execSync('npm run build',{stdio:'inherit'})}catch(e){console.warn('vibe: build skipped (dev tools missing)')}}\"",
     "prepublishOnly": "pnpm run build"
   },
   "type": "module",
@@ -40,8 +49,14 @@
   },
   "files": [
     "dist",
+    "skills",
+    "agents",
+    "commands",
     "modes",
-    "README.md"
+    "rules",
+    "prompts",
+    "README.md",
+    "LICENSE"
   ],
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -63,8 +78,7 @@
     "yaml": "^2.6.0"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
+    "node": ">=18.0.0"
   },
   "packageManager": "pnpm@9.1.0"
 }

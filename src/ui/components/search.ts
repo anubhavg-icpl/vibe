@@ -2,8 +2,18 @@ import Fuse from "fuse.js";
 import type { Mode } from "../../types.js";
 import { colors, symbols, highlight } from "../theme.js";
 
-export interface SearchResult {
-  item: Mode;
+/**
+ * Minimum shape ModeSearch needs. Both Mode and Asset satisfy this.
+ */
+export interface Searchable {
+  name: string;
+  description: string;
+  category: string;
+  metadata?: Record<string, unknown>;
+}
+
+export interface SearchResult<T extends Searchable = Mode> {
+  item: T;
   score: number;
   matches?: Array<{
     key: string;
@@ -12,11 +22,11 @@ export interface SearchResult {
   }>;
 }
 
-export class ModeSearch {
-  private fuse: Fuse<Mode>;
-  private modes: Mode[];
+export class ModeSearch<T extends Searchable = Mode> {
+  private fuse: Fuse<T>;
+  private modes: T[];
 
-  constructor(modes: Mode[]) {
+  constructor(modes: T[]) {
     this.modes = modes;
     this.fuse = new Fuse(modes, {
       keys: [
@@ -33,7 +43,7 @@ export class ModeSearch {
     });
   }
 
-  search(query: string): SearchResult[] {
+  search(query: string): SearchResult<T>[] {
     if (!query || query.trim().length === 0) {
       return this.modes.map((item) => ({
         item,
@@ -45,11 +55,11 @@ export class ModeSearch {
     return results.map((r) => ({
       item: r.item,
       score: r.score ?? 1,
-      matches: r.matches as SearchResult["matches"],
+      matches: r.matches as SearchResult<T>["matches"],
     }));
   }
 
-  searchByCategory(query: string, category: string): SearchResult[] {
+  searchByCategory(query: string, category: string): SearchResult<T>[] {
     const results = this.search(query);
     return results.filter((r) => r.item.category === category);
   }

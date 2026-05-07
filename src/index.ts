@@ -1,443 +1,702 @@
 #!/usr/bin/env node
+/**
+ * vibe — single-command installer for AI coding-agent assets.
+ *
+ * Designed to be runnable via:
+ *   npx github:anubhavg-icpl/vibe                  # interactive
+ *   npx github:anubhavg-icpl/vibe add <names...>   # non-interactive
+ *   npx github:anubhavg-icpl/vibe doctor           # detect targets
+ *
+ * When run that way, the bundled modes/skills/agents/commands/ live next to
+ * the dist/ output (one level up). We resolve the default source path
+ * accordingly so the user does not need to clone the repo separately.
+ */
 
 import { program } from "commander";
 import * as p from "@clack/prompts";
 import chalk from "chalk";
-import { discoverModes, discoverModesByCategory, getModeDisplayName } from "./modes.js";
+import { existsSync } from "fs";
+import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
+
+import { discoverAssets, summariseCounts } from "./discovery.js";
 import {
-  installModeForAgent,
-  isModeInstalled,
-  getInstallPath,
-  installModesParallel,
-  createInstallTasks,
+  installParallel,
+  buildTasks,
+  isAssetInstalled,
+  getInstallTarget,
 } from "./installer.js";
-import { detectInstalledAgents, agents } from "./agents.js";
-import { loadConfig, initConfig, getConfigParallelism, mergeConfigWithOptions, type MergedOptions } from "./config.js";
-import { getCompletionScript, getInstallInstructions, detectShell, type ShellType } from "./completions.js";
-import { formatModesAsJson, formatInstallResultsAsJson, formatModePreviewAsJson, formatError } from "./output.js";
+import {
+  agents,
+  detectInstalledAgents,
+  ALL_AGENT_TYPES,
+  getKindDir,
+} from "./agents.js";
+import {
+  loadConfig,
+  initConfig,
+  getConfigParallelism,
+  mergeConfigWithOptions,
+} from "./config.js";
+import {
+  getCompletionScript,
+  getInstallInstructions,
+  detectShell,
+  type ShellType,
+} from "./completions.js";
+import {
+  formatAssetsAsJson,
+  formatInstallResultsAsJson,
+  formatAssetPreviewAsJson,
+  formatError,
+} from "./output.js";
 import {
   renderHeader,
   colors,
   symbols,
   ModeSearch,
-  renderModePreview,
   renderInstallResultCard,
-  buildCategoryTree,
-  renderCategoryBadges,
   renderProgressBar,
 } from "./ui/index.js";
-import type { Mode, AgentType } from "./types.js";
+import type { Asset, AssetKind, AgentType } from "./types.js";
 
-const version = "1.0.0";
+const VERSION = "2.0.0";
 
-type Options = MergedOptions;
+/**
+ * Default source resolution — prefer the repo bundled with the CLI when
+ * present (so `npx github:user/vibe` Just Works), then $PWD/modes (legacy),
+ * finally cwd.
+ */
+function defaultSource(): string {
+  const here = dirname(fileURLToPath(import.meta.url));
+  const repoRoot = resolve(here, "..");
+  if (
+    existsSync(resolve(repoRoot, "skills")) ||
+    existsSync(resolve(repoRoot, "modes"))
+  ) {
+    return repoRoot;
+  }
+  return process.cwd();
+}
+
+interface CliOptions {
+  global?: boolean;
+  agent?: string[];
+  asset?: string[];
+  kind?: string[];
+  category?: string;
+  list?: boolean;
+  yes?: boolean;
+  json?: boolean;
+  preview?: string;
+  source?: string;
+}
 
 program
   .name("vibe")
-  .description("Install VIBE modes onto coding agents (OpenCode, Claude Code, Codex, Cursor)")
-  .version(version)
-  .argument("[source]", "Path to VIBE modes directory (default: ./modes)")
-  .option("-g, --global", "Install modes globally (user-level) instead of project-level")
-  .option("-a, --agent <agents...>", "Specify agents to install to (opencode, claude-code, codex, cursor)")
-  .option("-s, --mode <modes...>", "Specify mode names to install (skip selection prompt)")
-  .option("-c, --category <category>", "Filter modes by category")
-  .option("-l, --list", "List available modes without installing")
-  .option("-y, --yes", "Skip confirmation prompts")
-  .option("--json", "Output in JSON format for scripting/CI")
-  .option("--preview <mode>", "Preview a mode before installing")
-  .action(async (source: string = "./modes", options: Options) => {
-    await main(source, options);
+  .description(
+    "Install Vibe AI-agent assets (skills/agents/commands/modes) onto coding-agent CLIs.",
+  )
+  .version(VERSION)
+  .argument("[source]", "Path to Vibe repo root (default: bundled or ./)", "")
+  .option(
+    "-g, --global",
+    "Install globally (user-level) instead of per-project",
+  )
+  .option(
+    "-a, --agent <agents...>",
+    "Target CLIs: opencode | claude-code | codex | cursor | gemini-cli | copilot-cli | factory-droid",
+  )
+  .option(
+    "-s, --asset <names...>",
+    "Specific asset names to install (skips picker)",
+  )
+  .option(
+    "-k, --kind <kinds...>",
+    "Filter by kind: skill | agent | command | mode",
+  )
+  .option("-c, --category <category>", "Filter by category")
+  .option("-l, --list", "List available assets without installing")
+  .option("-y, --yes", "Skip confirmation prompts (auto-accept)")
+  .option("--json", "JSON output for scripting/CI")
+  .option("--preview <name>", "Preview a single asset and exit")
+  .action(async (source: string, options: CliOptions) => {
+    await main(source || defaultSource(), options);
   });
 
-// Completions subcommand
+program
+  .command("add <names...>")
+  .description("Install one or more named assets")
+  .option("-g, --global", "Install globally")
+  .option("-a, --agent <agents...>", "Target CLIs")
+  .option("-y, --yes", "Auto-confirm")
+  .option("--json", "JSON output")
+  .action(async (names: string[], opts: CliOptions) => {
+    await main(defaultSource(), { ...opts, asset: names, yes: true });
+  });
+
+program
+  .command("list")
+  .description("List bundled assets")
+  .option("-k, --kind <kinds...>", "Filter by kind")
+  .option("-c, --category <category>", "Filter by category")
+  .option("--json", "JSON output")
+  .action(async (opts: CliOptions) => {
+    await main(defaultSource(), { ...opts, list: true });
+  });
+
+program
+  .command("info <name>")
+  .description("Show a rich preview of one asset")
+  .option("--json", "JSON output")
+  .action(async (name: string, opts: { json?: boolean }) => {
+    opts.json = opts.json ?? program.opts().json;
+    const root = defaultSource();
+    const items = await discoverAssets(root);
+    const search = new ModeSearch<Asset>(items);
+    const direct = items.find(
+      (a) => a.name.toLowerCase() === name.toLowerCase(),
+    );
+    let asset: Asset | undefined = direct;
+    if (!asset) {
+      const results = search.search(name);
+      asset = results[0]?.item as Asset | undefined;
+    }
+    if (!asset) {
+      const msg = `Asset not found: ${name}`;
+      if (opts.json) console.log(formatError(msg, VERSION));
+      else console.error(colors.error(msg));
+      process.exit(1);
+    }
+    if (opts.json) {
+      console.log(formatAssetPreviewAsJson(asset, VERSION));
+      return;
+    }
+    printAssetPreview(asset);
+  });
+
+program
+  .command("doctor")
+  .description("Detect target CLIs and verify the local environment")
+  .option("--json", "JSON output")
+  .action(async (opts: { json?: boolean }) => {
+    opts.json = opts.json ?? program.opts().json;
+    await runDoctor(opts);
+  });
+
+program
+  .command("search <query>")
+  .description("Fuzzy-search the asset library")
+  .option("-k, --kind <kinds...>", "Filter by kind")
+  .option("-n, --limit <n>", "Max results (default 20)", "20")
+  .option("--json", "JSON output")
+  .action(
+    async (
+      query: string,
+      opts: { kind?: string[]; limit?: string; json?: boolean },
+    ) => {
+      opts.json = opts.json ?? program.opts().json;
+      const root = defaultSource();
+      const items = await discoverAssets(root, {
+        kinds: parseKinds(opts.kind),
+      });
+      const search = new ModeSearch<Asset>(items);
+      const limit = Math.max(1, Math.min(200, Number(opts.limit) || 20));
+      const results = search.search(query).slice(0, limit) as Array<{
+        item: Asset;
+      }>;
+      if (opts.json) {
+        console.log(formatAssetsAsJson(results.map((r) => r.item), VERSION));
+        return;
+      }
+      console.log();
+      console.log(colors.primaryBold(`Search: ${chalk.italic(query)}`));
+      console.log();
+      for (const r of results) {
+        const a = r.item;
+        console.log(
+          `${colors.muted(`[${a.kind}]`)} ${colors.secondaryBold(a.name)} ${colors.dim("·")} ${colors.muted(a.category)}`,
+        );
+        console.log(
+          `  ${colors.dim(a.description.length > 100 ? a.description.slice(0, 100) + "..." : a.description)}`,
+        );
+      }
+      if (results.length === 0) console.log(colors.muted("No matches."));
+      console.log();
+    },
+  );
+
+program
+  .command("targets")
+  .description("List the 7 supported target CLIs and their detection status")
+  .option("--json", "JSON output")
+  .action(async (opts: { json?: boolean }) => {
+    opts.json = opts.json ?? program.opts().json;
+    const detected = await detectInstalledAgents();
+    const detectedSet = new Set(detected);
+    const rows = ALL_AGENT_TYPES.map((t) => ({
+      type: t,
+      displayName: agents[t].displayName,
+      detected: detectedSet.has(t),
+      projectPath: getKindDir(t, "skill", { global: false }),
+      globalPath: getKindDir(t, "skill", { global: true }),
+    }));
+    if (opts.json) {
+      console.log(JSON.stringify({ version: VERSION, targets: rows }, null, 2));
+      return;
+    }
+    console.log();
+    console.log(colors.primaryBold("Supported targets"));
+    console.log();
+    for (const r of rows) {
+      const mark = r.detected ? colors.success(symbols.check) : colors.dim(symbols.dot);
+      console.log(
+        `  ${mark} ${colors.secondaryBold(r.displayName.padEnd(22))} ${colors.muted(r.globalPath ?? "")}`,
+      );
+    }
+    console.log();
+  });
+
 program
   .command("completions [shell]")
   .description("Generate shell completion scripts")
   .action((shell?: string) => {
-    const targetShell = (shell as ShellType) || detectShell();
-
-    if (!targetShell) {
-      console.error(colors.error("Could not detect shell. Please specify: bash, zsh, or fish"));
+    const target = (shell as ShellType) || detectShell();
+    if (!target) {
+      console.error(
+        colors.error("Could not detect shell. Specify: bash, zsh, or fish"),
+      );
       process.exit(1);
     }
-
-    if (!["bash", "zsh", "fish"].includes(targetShell)) {
-      console.error(colors.error(`Unsupported shell: ${targetShell}. Supported: bash, zsh, fish`));
+    if (!["bash", "zsh", "fish"].includes(target)) {
+      console.error(
+        colors.error(`Unsupported shell: ${target}. Supported: bash zsh fish`),
+      );
       process.exit(1);
     }
-
-    console.log(getCompletionScript(targetShell as ShellType));
+    console.log(getCompletionScript(target));
     console.error("");
     console.error(colors.dim("# Installation instructions:"));
-    console.error(colors.dim(getInstallInstructions(targetShell as ShellType)));
+    console.error(colors.dim(getInstallInstructions(target)));
   });
 
-// Init config subcommand
 program
   .command("init")
-  .description("Create a .vibeconfig.yaml file in the current directory")
+  .description("Create a .vibeconfig.yaml")
   .action(async () => {
     try {
       const path = await initConfig();
-      console.log(colors.success(`${symbols.check} Created config file: ${path}`));
+      console.log(colors.success(`${symbols.check} Created config: ${path}`));
     } catch (error) {
-      console.error(colors.error(error instanceof Error ? error.message : "Failed to create config"));
+      console.error(
+        colors.error(error instanceof Error ? error.message : "Failed"),
+      );
       process.exit(1);
     }
   });
 
 program.parse();
 
-async function main(source: string, options: Options) {
-  // Load config and merge with CLI options
-  const config = await loadConfig();
-  const mergedOptions = mergeConfigWithOptions(config, options);
+/* ───────────────────────── Main interactive flow ───────────────────────── */
 
-  // Handle JSON output mode differently
-  const jsonOutput = mergedOptions.json;
-
-  if (!jsonOutput) {
-    console.log(renderHeader(version));
-  }
-
-  try {
-    const spinner = jsonOutput ? null : p.spinner();
-
-    spinner?.start("Discovering modes...");
-    const modes = mergedOptions.category
-      ? await discoverModesByCategory(source, mergedOptions.category)
-      : await discoverModes(source);
-
-    if (modes.length === 0) {
-      spinner?.stop(chalk.red("No modes found"));
-      if (jsonOutput) {
-        console.log(formatError("No valid modes found in the specified path", version));
-      } else {
-        p.outro(chalk.red("No valid modes found in the specified path."));
-      }
-      process.exit(1);
-    }
-
-    spinner?.stop(`Found ${colors.success(String(modes.length))} mode${modes.length > 1 ? "s" : ""}`);
-
-    // Preview mode
-    if (mergedOptions.preview) {
-      const modeToPreview = modes.find(
-        (m) =>
-          m.name.toLowerCase() === mergedOptions.preview!.toLowerCase() ||
-          getModeDisplayName(m).toLowerCase() === mergedOptions.preview!.toLowerCase(),
-      );
-
-      if (!modeToPreview) {
-        if (jsonOutput) {
-          console.log(formatError(`Mode not found: ${mergedOptions.preview}`, version));
-        } else {
-          p.log.error(`Mode not found: ${mergedOptions.preview}`);
-        }
-        process.exit(1);
-      }
-
-      if (jsonOutput) {
-        console.log(formatModePreviewAsJson(modeToPreview, agents, version));
-      } else {
-        console.log(renderModePreview(modeToPreview));
-      }
-      process.exit(0);
-    }
-
-    // List modes
-    if (mergedOptions.list) {
-      if (jsonOutput) {
-        console.log(formatModesAsJson(modes, version));
-      } else {
-        console.log();
-        p.log.step(colors.primaryBold("Available Modes"));
-
-        // Show category summary
-        const search = new ModeSearch(modes);
-        const categories = search.getCategories();
-        console.log();
-        console.log("  " + renderCategoryBadges(categories));
-        console.log();
-
-        listModesByCategory(modes);
-        console.log();
-        p.outro("Use --mode <name> or --category <category> to install specific modes");
-      }
-      process.exit(0);
-    }
-
-    let selectedModes: Mode[];
-
-    if (mergedOptions.mode && mergedOptions.mode.length > 0) {
-      // Use fuzzy search for mode matching
-      const search = new ModeSearch(modes);
-      const matchedModes: Mode[] = [];
-
-      for (const modeName of mergedOptions.mode) {
-        const results = search.search(modeName);
-        const exactMatch = results.find(
-          (r) =>
-            r.item.name.toLowerCase() === modeName.toLowerCase() ||
-            getModeDisplayName(r.item).toLowerCase() === modeName.toLowerCase(),
-        );
-
-        if (exactMatch) {
-          matchedModes.push(exactMatch.item);
-        } else if (results.length > 0 && results[0].score! < 0.3) {
-          // Good fuzzy match
-          matchedModes.push(results[0].item);
-        }
-      }
-
-      selectedModes = matchedModes;
-
-      if (selectedModes.length === 0) {
-        if (jsonOutput) {
-          console.log(formatError(`No matching modes found for: ${mergedOptions.mode.join(", ")}`, version));
-        } else {
-          p.log.error(`No matching modes found for: ${mergedOptions.mode.join(", ")}`);
-          p.log.info("Available modes:");
-          for (const m of modes.slice(0, 10)) {
-            p.log.message(`  - ${getModeDisplayName(m)}`);
-          }
-          if (modes.length > 10) {
-            p.log.message(colors.dim(`  ... and ${modes.length - 10} more`));
-          }
-        }
-        process.exit(1);
-      }
-
-      if (!jsonOutput) {
-        p.log.info(
-          `Selected ${selectedModes.length} mode${selectedModes.length !== 1 ? "s" : ""}: ${selectedModes.map((m) => colors.secondary(getModeDisplayName(m))).join(", ")}`,
-        );
-      }
-    } else if (mergedOptions.yes) {
-      selectedModes = modes;
-      if (!jsonOutput) {
-        p.log.info(`Installing all ${modes.length} modes`);
-      }
-    } else {
-      const modeChoices = modes.map((m) => ({
-        value: m,
-        label: getModeDisplayName(m),
-        hint: m.description.length > 60 ? m.description.slice(0, 57) + "..." : m.description,
-      }));
-
-      const selected = await p.multiselect({
-        message: "Select modes to install",
-        options: modeChoices,
-        required: true,
-      });
-
-      if (p.isCancel(selected)) {
-        p.cancel("Installation cancelled");
-        process.exit(0);
-      }
-
-      selectedModes = selected as Mode[];
-    }
-
-    let targetAgents: AgentType[];
-
-    if (mergedOptions.agent && mergedOptions.agent.length > 0) {
-      const validAgents = ["opencode", "claude-code", "codex", "cursor"];
-      const invalidAgents = mergedOptions.agent.filter((a) => !validAgents.includes(a));
-
-      if (invalidAgents.length > 0) {
-        if (jsonOutput) {
-          console.log(formatError(`Invalid agents: ${invalidAgents.join(", ")}`, version));
-        } else {
-          p.log.error(`Invalid agents: ${invalidAgents.join(", ")}`);
-          p.log.info(`Valid agents: ${validAgents.join(", ")}`);
-        }
-        process.exit(1);
-      }
-
-      targetAgents = mergedOptions.agent as AgentType[];
-    } else {
-      spinner?.start("Detecting installed agents...");
-      const installedAgents = await detectInstalledAgents();
-      spinner?.stop(`Detected ${installedAgents.length} agent${installedAgents.length !== 1 ? "s" : ""}`);
-
-      if (installedAgents.length === 0) {
-        if (mergedOptions.yes) {
-          targetAgents = ["opencode", "claude-code", "codex", "cursor"];
-          if (!jsonOutput) {
-            p.log.info("Installing to all agents (none detected)");
-          }
-        } else {
-          p.log.warn("No coding agents detected. You can still install modes.");
-
-          const allAgentChoices = Object.entries(agents).map(([key, agentConfig]) => ({
-            value: key as AgentType,
-            label: agentConfig.displayName,
-          }));
-
-          const selected = await p.multiselect({
-            message: "Select agents to install modes to",
-            options: allAgentChoices,
-            required: true,
-          });
-
-          if (p.isCancel(selected)) {
-            p.cancel("Installation cancelled");
-            process.exit(0);
-          }
-
-          targetAgents = selected as AgentType[];
-        }
-      } else if (installedAgents.length === 1 || mergedOptions.yes) {
-        targetAgents = installedAgents;
-        if (!jsonOutput) {
-          if (installedAgents.length === 1) {
-            const firstAgent = installedAgents[0];
-            p.log.info(`Installing to: ${colors.secondary(agents[firstAgent].displayName)}`);
-          } else {
-            p.log.info(`Installing to: ${installedAgents.map((a) => colors.secondary(agents[a].displayName)).join(", ")}`);
-          }
-        }
-      } else {
-        const agentChoices = installedAgents.map((a) => ({
-          value: a,
-          label: agents[a].displayName,
-          hint: `${mergedOptions.global ? agents[a].globalSkillsDir : agents[a].skillsDir}`,
-        }));
-
-        const selected = await p.multiselect({
-          message: "Select agents to install modes to",
-          options: agentChoices,
-          required: true,
-          initialValues: installedAgents,
-        });
-
-        if (p.isCancel(selected)) {
-          p.cancel("Installation cancelled");
-          process.exit(0);
-        }
-
-        targetAgents = selected as AgentType[];
-      }
-    }
-
-    let installGlobally = mergedOptions.global ?? false;
-
-    if (mergedOptions.global === undefined && !mergedOptions.yes && !jsonOutput) {
-      const scope = await p.select({
-        message: "Installation scope",
-        options: [
-          { value: false, label: "Project", hint: "Install in current directory (committed with your project)" },
-          { value: true, label: "Global", hint: "Install in home directory (available across all projects)" },
-        ],
-      });
-
-      if (p.isCancel(scope)) {
-        p.cancel("Installation cancelled");
-        process.exit(0);
-      }
-
-      installGlobally = scope as boolean;
-    }
-
-    if (!jsonOutput) {
-      console.log();
-      p.log.step(colors.primaryBold("Installation Summary"));
-
-      for (const mode of selectedModes) {
-        p.log.message(`  ${colors.secondary(getModeDisplayName(mode))}`);
-        for (const agent of targetAgents) {
-          const path = getInstallPath(mode.name, agent, { global: installGlobally });
-          const installed = await isModeInstalled(mode.name, agent, { global: installGlobally });
-          const status = installed ? colors.warning(" (will overwrite)") : "";
-          p.log.message(`    ${colors.dim(symbols.arrow)} ${agents[agent].displayName}: ${colors.dim(path)}${status}`);
-        }
-      }
-      console.log();
-    }
-
-    if (!mergedOptions.yes && !jsonOutput) {
-      const confirmed = await p.confirm({ message: "Proceed with installation?" });
-
-      if (p.isCancel(confirmed) || !confirmed) {
-        p.cancel("Installation cancelled");
-        process.exit(0);
-      }
-    }
-
-    // Use parallel installation
-    const tasks = createInstallTasks(selectedModes, targetAgents);
-    const parallelism = getConfigParallelism(config);
-
-    if (!jsonOutput) {
-      spinner?.start("Installing modes...");
-    }
-
-    const startTime = Date.now();
-    let lastProgress = 0;
-
-    const results = await installModesParallel(
-      tasks,
-      { global: installGlobally, concurrency: parallelism },
-      jsonOutput
-        ? undefined
-        : (progress) => {
-            if (progress.completed > lastProgress) {
-              lastProgress = progress.completed;
-              const bar = renderProgressBar({
-                total: progress.total,
-                current: progress.completed,
-                width: 25,
-              });
-              spinner?.message(`${bar} ${progress.current ? colors.dim(`Installing ${progress.current.mode.name}...`) : ""}`);
-            }
-          },
-    );
-
-    const duration = Date.now() - startTime;
-
-    if (!jsonOutput) {
-      spinner?.stop("Installation complete");
-    }
-
-    const successful = results.filter((r) => r.success);
-    const failed = results.filter((r) => !r.success);
-
-    if (jsonOutput) {
-      console.log(formatInstallResultsAsJson(results, version));
-    } else {
-      console.log();
-      console.log(renderInstallResultCard(results));
-      console.log();
-      console.log(colors.dim(`Completed in ${(duration / 1000).toFixed(1)}s`));
-      console.log();
-      p.outro(failed.length === 0 ? colors.success("Done!") : colors.warning("Completed with errors"));
-    }
-
-    process.exit(failed.length > 0 ? 1 : 0);
-  } catch (error) {
-    if (jsonOutput) {
-      console.log(formatError(error instanceof Error ? error : "Unknown error occurred", version));
-    } else {
-      p.log.error(error instanceof Error ? error.message : "Unknown error occurred");
-      p.outro(chalk.red("Installation failed"));
-    }
-    process.exit(1);
-  }
+function parseKinds(input?: string[]): AssetKind[] | undefined {
+  if (!input || input.length === 0) return undefined;
+  const valid: AssetKind[] = ["skill", "agent", "command", "mode"];
+  return input.filter((k): k is AssetKind =>
+    valid.includes(k as AssetKind),
+  ) as AssetKind[];
 }
 
-function listModesByCategory(modes: Mode[]): void {
-  const categories = buildCategoryTree(modes);
+async function main(source: string, options: CliOptions): Promise<void> {
+  const config = await loadConfig();
+  const merged = mergeConfigWithOptions(config, options as never);
+  const json = options.json ?? false;
 
-  for (const category of categories) {
-    p.log.message(colors.primaryBold(`${category.name} (${category.count})`));
-    for (const mode of category.modes.slice(0, 5)) {
-      p.log.message(`  ${colors.secondary(getModeDisplayName(mode))}`);
-      p.log.message(`    ${colors.dim(mode.description)}`);
+  if (!json) console.log(renderHeader(VERSION));
+
+  const spinner = json ? null : p.spinner();
+  spinner?.start("Discovering assets…");
+  let assets = await discoverAssets(source, { kinds: parseKinds(options.kind) });
+  if (options.category) {
+    assets = assets.filter((a) => a.category === options.category);
+  }
+  if (assets.length === 0) {
+    spinner?.stop(chalk.red("No assets found"));
+    if (json)
+      console.log(formatError("No assets found at the given source", VERSION));
+    else
+      p.outro(
+        chalk.red(
+          "No assets found. Pass a path to a vibe checkout, or run from a clone.",
+        ),
+      );
+    process.exit(1);
+  }
+  const counts = summariseCounts(assets);
+  spinner?.stop(
+    `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"}` +
+      ` ${colors.muted(`(${counts.skill} skills · ${counts.agent} agents · ${counts.command} commands · ${counts.mode} modes)`)}`,
+  );
+
+  // Preview-only mode
+  if (options.preview) {
+    const target = assets.find(
+      (a) => a.name.toLowerCase() === options.preview!.toLowerCase(),
+    );
+    if (!target) {
+      const msg = `Asset not found: ${options.preview}`;
+      if (json) console.log(formatError(msg, VERSION));
+      else p.log.error(msg);
+      process.exit(1);
     }
-    if (category.modes.length > 5) {
-      p.log.message(colors.dim(`  ... and ${category.modes.length - 5} more`));
+    if (json) console.log(formatAssetPreviewAsJson(target, VERSION));
+    else printAssetPreview(target);
+    process.exit(0);
+  }
+
+  // List mode
+  if (options.list) {
+    if (json) {
+      console.log(formatAssetsAsJson(assets, VERSION));
+    } else {
+      printGroupedList(assets);
+    }
+    process.exit(0);
+  }
+
+  // Selection
+  let selected: Asset[];
+  if (options.asset && options.asset.length > 0) {
+    const search = new ModeSearch<Asset>(assets);
+    const matched: Asset[] = [];
+    for (const name of options.asset) {
+      const exact = assets.find(
+        (a) => a.name.toLowerCase() === name.toLowerCase(),
+      );
+      if (exact) {
+        matched.push(exact);
+        continue;
+      }
+      const results = search.search(name);
+      if (results.length > 0 && (results[0].score ?? 1) < 0.3) {
+        matched.push(results[0].item);
+      }
+    }
+    if (matched.length === 0) {
+      const msg = `No matching assets for: ${options.asset.join(", ")}`;
+      if (json) console.log(formatError(msg, VERSION));
+      else p.log.error(msg);
+      process.exit(1);
+    }
+    selected = matched;
+    if (!json) {
+      p.log.info(
+        `Selected ${matched.length}: ${matched.map((a) => colors.secondary(a.name)).join(", ")}`,
+      );
+    }
+  } else if (options.yes) {
+    selected = assets;
+    if (!json) p.log.info(`Installing all ${assets.length} items`);
+  } else {
+    const choices = assets.map((a) => ({
+      value: a,
+      label: `[${a.kind}] ${a.name}`,
+      hint:
+        a.description.length > 60
+          ? a.description.slice(0, 57) + "…"
+          : a.description,
+    }));
+    const picked = await p.multiselect({
+      message: "Pick what to install",
+      options: choices,
+      required: true,
+    });
+    if (p.isCancel(picked)) {
+      p.cancel("Cancelled");
+      process.exit(0);
+    }
+    selected = picked as Asset[];
+  }
+
+  // Target selection
+  let targets: AgentType[];
+  if (merged.agent && merged.agent.length > 0) {
+    const valid = ALL_AGENT_TYPES;
+    const invalid = merged.agent.filter(
+      (a: string) => !valid.includes(a as AgentType),
+    );
+    if (invalid.length > 0) {
+      const msg = `Invalid agents: ${invalid.join(", ")}. Valid: ${valid.join(", ")}`;
+      if (json) console.log(formatError(msg, VERSION));
+      else p.log.error(msg);
+      process.exit(1);
+    }
+    targets = merged.agent as AgentType[];
+  } else {
+    spinner?.start("Detecting installed agents…");
+    const detected = await detectInstalledAgents();
+    spinner?.stop(
+      `Detected ${detected.length} agent${detected.length === 1 ? "" : "s"}`,
+    );
+    if (detected.length === 0 && options.yes) {
+      targets = ALL_AGENT_TYPES;
+    } else if (detected.length === 0) {
+      const allChoices = ALL_AGENT_TYPES.map((t) => ({
+        value: t,
+        label: agents[t].displayName,
+      }));
+      const picked = await p.multiselect({
+        message: "No agents detected — pick targets",
+        options: allChoices,
+        required: true,
+      });
+      if (p.isCancel(picked)) {
+        p.cancel("Cancelled");
+        process.exit(0);
+      }
+      targets = picked as AgentType[];
+    } else if (options.yes || detected.length === 1) {
+      targets = detected;
+      if (!json) {
+        p.log.info(
+          `Targets: ${targets.map((t) => colors.secondary(agents[t].displayName)).join(", ")}`,
+        );
+      }
+    } else {
+      const choices = detected.map((t) => ({
+        value: t,
+        label: agents[t].displayName,
+      }));
+      const picked = await p.multiselect({
+        message: "Pick target CLIs",
+        options: choices,
+        required: true,
+        initialValues: detected,
+      });
+      if (p.isCancel(picked)) {
+        p.cancel("Cancelled");
+        process.exit(0);
+      }
+      targets = picked as AgentType[];
+    }
+  }
+
+  // Scope
+  let installGlobally: boolean = merged.global ?? false;
+  if (merged.global === undefined && !options.yes && !json) {
+    const scope = await p.select({
+      message: "Install scope",
+      options: [
+        { value: false, label: "Project", hint: "current dir, committed with project" },
+        { value: true, label: "Global", hint: "user-level, all projects" },
+      ],
+    });
+    if (p.isCancel(scope)) {
+      p.cancel("Cancelled");
+      process.exit(0);
+    }
+    installGlobally = scope as boolean;
+  }
+
+  // Plan summary
+  if (!json) {
+    console.log();
+    p.log.step(colors.primaryBold("Installation plan"));
+    for (const a of selected) {
+      p.log.message(`  ${colors.muted(`[${a.kind}]`)} ${colors.secondary(a.name)}`);
+      for (const t of targets) {
+        const target = getInstallTarget(a, t, { global: installGlobally });
+        if (target === null) {
+          p.log.message(
+            `    ${colors.dim(symbols.arrow)} ${agents[t].displayName} ${colors.dim("(unsupported — will skip)")}`,
+          );
+        } else {
+          const exists = await isAssetInstalled(a, t, {
+            global: installGlobally,
+          });
+          const tag = exists ? colors.warning(" (overwrite)") : "";
+          p.log.message(
+            `    ${colors.dim(symbols.arrow)} ${agents[t].displayName}: ${colors.dim(target)}${tag}`,
+          );
+        }
+      }
     }
     console.log();
   }
+
+  if (!options.yes && !json) {
+    const ok = await p.confirm({ message: "Proceed?" });
+    if (p.isCancel(ok) || !ok) {
+      p.cancel("Cancelled");
+      process.exit(0);
+    }
+  }
+
+  const tasks = buildTasks(selected, targets);
+  const concurrency = getConfigParallelism(config);
+
+  if (!json) spinner?.start("Installing…");
+  let lastDone = 0;
+  const start = Date.now();
+  const results = await installParallel(
+    tasks,
+    { global: installGlobally, concurrency },
+    json
+      ? undefined
+      : (progress) => {
+          if (progress.completed > lastDone) {
+            lastDone = progress.completed;
+            const bar = renderProgressBar({
+              total: progress.total,
+              current: progress.completed,
+              width: 25,
+            });
+            spinner?.message(
+              `${bar} ${progress.current ? colors.dim(`${progress.current.asset.kind}/${progress.current.asset.name}`) : ""}`,
+            );
+          }
+        },
+  );
+  const ms = Date.now() - start;
+  if (!json) spinner?.stop("Installation complete");
+
+  const failed = results.filter((r) => !r.success);
+  if (json) {
+    console.log(formatInstallResultsAsJson(results, VERSION));
+  } else {
+    console.log();
+    console.log(renderInstallResultCard(results));
+    console.log();
+    console.log(colors.dim(`Completed in ${(ms / 1000).toFixed(1)}s`));
+    console.log();
+    p.outro(
+      failed.length === 0 ? colors.success("Done!") : colors.warning("Completed with errors"),
+    );
+  }
+  process.exit(failed.length > 0 ? 1 : 0);
+}
+
+/* ───────────────────────── Helpers ─────────────────────────────────────── */
+
+function printGroupedList(assets: Asset[]): void {
+  console.log();
+  p.log.step(colors.primaryBold(`Available (${assets.length})`));
+  const byKind = new Map<AssetKind, Asset[]>();
+  for (const a of assets) {
+    const list = byKind.get(a.kind) ?? [];
+    list.push(a);
+    byKind.set(a.kind, list);
+  }
+  for (const [kind, items] of byKind) {
+    console.log();
+    console.log(colors.secondaryBold(`${kind} (${items.length})`));
+    for (const a of items.slice(0, 8)) {
+      console.log(
+        `  ${colors.success(symbols.bullet)} ${colors.textBold(a.name)} ${colors.muted(`· ${a.category}`)}`,
+      );
+      console.log(
+        `    ${colors.dim(a.description.length > 80 ? a.description.slice(0, 80) + "…" : a.description)}`,
+      );
+    }
+    if (items.length > 8)
+      console.log(colors.dim(`  …and ${items.length - 8} more`));
+  }
+  console.log();
+  p.outro(
+    `Use ${colors.secondary("vibe add <name>")} to install or ${colors.secondary("vibe info <name>")} to preview.`,
+  );
+}
+
+function printAssetPreview(asset: Asset): void {
+  console.log();
+  console.log(
+    `${colors.muted(`[${asset.kind}]`)} ${colors.primaryBold(asset.name)}`,
+  );
+  console.log(colors.muted(`category: ${asset.category}`));
+  console.log();
+  console.log(asset.description);
+  console.log();
+  console.log(colors.muted("Targets:"));
+  for (const t of ALL_AGENT_TYPES) {
+    const dest = getInstallTarget(asset, t, { global: true });
+    const tag =
+      dest === null
+        ? colors.dim("(not supported)")
+        : colors.dim(dest);
+    console.log(`  ${colors.secondary(agents[t].displayName.padEnd(22))} ${tag}`);
+  }
+  console.log();
+  console.log(colors.muted(`source: ${asset.path}`));
+  console.log();
+}
+
+async function runDoctor(opts: { json?: boolean }): Promise<void> {
+  const root = defaultSource();
+  const detected = await detectInstalledAgents();
+  const detectedSet = new Set(detected);
+  const assetCount = (await discoverAssets(root)).length;
+  const targets = ALL_AGENT_TYPES.map((t) => ({
+    type: t,
+    displayName: agents[t].displayName,
+    detected: detectedSet.has(t),
+    skillsDir: getKindDir(t, "skill", { global: true }),
+  }));
+
+  const node = process.versions.node;
+  const ok = {
+    nodeOk: parseInt(node.split(".")[0], 10) >= 18,
+    sourceOk: assetCount > 0,
+    anyTarget: detected.length > 0,
+  };
+
+  if (opts.json) {
+    console.log(
+      JSON.stringify(
+        {
+          version: VERSION,
+          node,
+          source: root,
+          assetCount,
+          targets,
+          ok,
+        },
+        null,
+        2,
+      ),
+    );
+    return;
+  }
+
+  console.log();
+  console.log(colors.primaryBold("vibe doctor"));
+  console.log();
+  console.log(`  ${colors.muted("vibe version".padEnd(18))} ${VERSION}`);
+  console.log(
+    `  ${colors.muted("node".padEnd(18))} ${ok.nodeOk ? colors.success(node) : colors.error(node + "  (need ≥18)")}`,
+  );
+  console.log(
+    `  ${colors.muted("source".padEnd(18))} ${ok.sourceOk ? colors.success(root) : colors.error(root + "  (no assets!)")}`,
+  );
+  console.log(
+    `  ${colors.muted("assets".padEnd(18))} ${colors.success(String(assetCount))}`,
+  );
+  console.log();
+  console.log(colors.primaryBold("Targets"));
+  for (const t of targets) {
+    const mark = t.detected
+      ? colors.success(symbols.check)
+      : colors.dim(symbols.dot);
+    console.log(
+      `  ${mark} ${colors.secondary(t.displayName.padEnd(22))} ${colors.muted(t.skillsDir ?? "")}`,
+    );
+  }
+  console.log();
+  if (!ok.anyTarget) {
+    console.log(
+      colors.warning(
+        `${symbols.warning} No agent CLIs detected. Vibe will still install if you use ${colors.secondary("--agent <name>")}.`,
+      ),
+    );
+  }
+  console.log();
 }

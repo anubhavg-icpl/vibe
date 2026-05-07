@@ -99,32 +99,68 @@ export function renderModeComparison(modes: Mode[]): string {
   });
 }
 
-export function renderInstallResultCard(
-  results: Array<{ mode: string; agent: string; success: boolean; path: string; error?: string }>,
-): string {
-  const successful = results.filter((r) => r.success);
+interface ResultLike {
+  asset?: string;
+  mode?: string;
+  kind?: string;
+  agent: string;
+  success: boolean;
+  skipped?: boolean;
+  reason?: string;
+  path: string;
+  error?: string;
+}
+
+export function renderInstallResultCard(results: ResultLike[]): string {
+  const labelOf = (r: ResultLike): string => r.asset ?? r.mode ?? "(unknown)";
+  const successful = results.filter((r) => r.success && !r.skipped);
+  const skipped = results.filter((r) => !!r.skipped);
   const failed = results.filter((r) => !r.success);
 
   const lines: string[] = [];
 
   if (successful.length > 0) {
-    lines.push(colors.successBold(`${symbols.check} Successfully installed ${successful.length} mode(s):`));
+    lines.push(
+      colors.successBold(
+        `${symbols.check} Installed ${successful.length} item${successful.length === 1 ? "" : "s"}:`,
+      ),
+    );
     for (const r of successful.slice(0, 10)) {
-      lines.push(`  ${colors.success(symbols.bullet)} ${r.mode} ${colors.dim("→")} ${r.agent}`);
+      const tag = r.kind ? colors.muted(`[${r.kind}]`) + " " : "";
+      lines.push(
+        `  ${colors.success(symbols.bullet)} ${tag}${labelOf(r)} ${colors.dim("→")} ${r.agent}`,
+      );
     }
     if (successful.length > 10) {
       lines.push(colors.dim(`  ... and ${successful.length - 10} more`));
     }
   }
 
-  if (failed.length > 0) {
+  if (skipped.length > 0) {
     if (successful.length > 0) lines.push("");
-    lines.push(colors.errorBold(`${symbols.cross} Failed to install ${failed.length} mode(s):`));
+    lines.push(
+      colors.warningBold(`${symbols.warning} Skipped ${skipped.length}:`),
+    );
+    for (const r of skipped.slice(0, 5)) {
+      lines.push(
+        `  ${colors.warning(symbols.bullet)} ${labelOf(r)} ${colors.dim("→")} ${r.agent} ${r.reason ? colors.dim(`(${r.reason})`) : ""}`,
+      );
+    }
+    if (skipped.length > 5) {
+      lines.push(colors.dim(`  ... and ${skipped.length - 5} more`));
+    }
+  }
+
+  if (failed.length > 0) {
+    if (successful.length > 0 || skipped.length > 0) lines.push("");
+    lines.push(
+      colors.errorBold(`${symbols.cross} Failed ${failed.length}:`),
+    );
     for (const r of failed) {
-      lines.push(`  ${colors.error(symbols.bullet)} ${r.mode} ${colors.dim("→")} ${r.agent}`);
-      if (r.error) {
-        lines.push(`    ${colors.dim(r.error)}`);
-      }
+      lines.push(
+        `  ${colors.error(symbols.bullet)} ${labelOf(r)} ${colors.dim("→")} ${r.agent}`,
+      );
+      if (r.error) lines.push(`    ${colors.dim(r.error)}`);
     }
   }
 

@@ -206,41 +206,74 @@ Copy mode content into your AI assistant. Done.
 
 ---
 
-## VIBE CLI — Install Modes as Skills
+## VIBE CLI — One Command, Zero Install
 
-Use the `vibe` CLI to auto-install modes as skills for your AI coding agent.
-
-```bash
-npm install -g vibe-modes
-# or
-pnpm add -g vibe-modes
-```
+Vibe ships a `vibe` CLI that installs the **entire library** (skills, agents, commands, modes) into any of **7 coding-agent CLIs** in one shot. No `npm install -g`, no clone — just `npx`.
 
 ```bash
-vibe modes --list                                       # list everything
-vibe modes                                              # interactive picker
-vibe modes --mode "tony-stark-mode"                     # install one
-vibe modes --category "rag-advanced"                    # install a category
-vibe modes --agent claude-code                          # specify target agent
-vibe modes --global                                     # user-level install
-vibe modes --mode "carmack-style-mode" --agent opencode -y   # CI-friendly
+# Interactive — splash, fuzzy picker, target detection, multi-select
+npx -y github:anubhavg-icpl/vibe
+
+# Non-interactive — install named items into all detected agents
+npx -y github:anubhavg-icpl/vibe add brainstorming systematic-debugging
+
+# Detect what's installed and where
+npx -y github:anubhavg-icpl/vibe doctor
+
+# Browse / list / preview without installing
+npx -y github:anubhavg-icpl/vibe list --kind skill
+npx -y github:anubhavg-icpl/vibe info systematic-debugging
+npx -y github:anubhavg-icpl/vibe search "rag"
+npx -y github:anubhavg-icpl/vibe targets
 ```
 
-### Supported Agents
+Pin to a specific revision: `npx -y github:anubhavg-icpl/vibe#master`. Or alias the long form: `alias vibe='npx -y github:anubhavg-icpl/vibe'`.
 
-| Agent       | Project Path       | Global Path                 |
-| ----------- | ------------------ | --------------------------- |
-| OpenCode    | `.opencode/skill/` | `~/.config/opencode/skill/` |
-| Claude Code | `.claude/skills/`  | `~/.claude/skills/`         |
-| Codex       | `.codex/skills/`   | `~/.codex/skills/`          |
-| Cursor      | `.cursor/skills/`  | `~/.cursor/skills/`         |
+### Subcommands
 
-### How It Works
+| Command                          | What it does                                                              |
+| -------------------------------- | ------------------------------------------------------------------------- |
+| `vibe`                           | Interactive: splash → fuzzy picker → multi-select → target picker → install |
+| `vibe add <names...>`            | Install one or more named assets (fuzzy match)                             |
+| `vibe list [--kind ...]`         | List bundled assets, optionally filtered by kind                          |
+| `vibe info <name>`               | Rich preview of one asset + per-target install paths                      |
+| `vibe search <query>`            | Fuzzy search the library                                                  |
+| `vibe targets`                   | Show the 7 target CLIs and which ones are detected on this machine        |
+| `vibe doctor`                    | Diagnose env: node version, asset count, target detection                 |
+| `vibe init`                      | Create `.vibeconfig.yaml` in cwd                                          |
+| `vibe completions [shell]`       | Generate bash/zsh/fish completion script                                   |
 
-1. Discovers all VIBE modes under `modes/`
-2. Converts each to skill format (`SKILL.md` with YAML frontmatter)
-3. Drops them into the chosen agent's skills directory
-4. The agent loads them automatically on next session
+### Supported Targets (7 CLIs)
+
+| Target              | Skills                  | Agents                  | Commands                  | Detection probe         |
+| ------------------- | ----------------------- | ----------------------- | ------------------------- | ----------------------- |
+| **Claude Code**     | `~/.claude/skills/`     | `~/.claude/agents/`     | `~/.claude/commands/`     | `~/.claude` exists      |
+| **OpenAI Codex**    | `~/.codex/skills/`      | `~/.codex/agents/`      | `~/.codex/commands/`      | `~/.codex` exists       |
+| **Cursor**          | `~/.cursor/skills/`     | `~/.cursor/agents/`     | `~/.cursor/commands/`     | `~/.cursor` exists      |
+| **OpenCode**        | `~/.config/opencode/skill/` | `~/.config/opencode/agent/` | `~/.config/opencode/command/` | `~/.config/opencode` exists |
+| **Gemini CLI**      | `~/.gemini/skills/`     | `~/.gemini/agents/`     | `~/.gemini/commands/`     | `~/.gemini` exists      |
+| **GitHub Copilot CLI** | `~/.copilot/skills/` | `~/.copilot/agents/`*   | `~/.copilot/commands/`    | `~/.copilot` exists     |
+| **Factory Droid**   | `~/.factory/skills/`    | `~/.factory/droids/`†   | `~/.factory/commands/`    | `~/.factory` exists     |
+
+*Copilot agents land with `.agent.md` extension. †Droid renames `agents/` to `droids/`.
+
+### Common flags
+
+```bash
+--global / -g            # install user-level (default: project/cwd-level)
+--agent <names...>       # restrict to specific targets
+--kind <skill|agent|command|mode>  # filter by asset kind
+--category <name>        # filter by category
+--yes / -y               # skip confirmation prompts (CI-friendly)
+--json                   # JSON output for scripting
+```
+
+### How it works
+
+1. `npx github:anubhavg-icpl/vibe` clones this repo to a temp cache and runs the bundled `dist/index.js`.
+2. The CLI discovers all 1,800+ assets across `skills/`, `agents/`, `commands/`, `modes/` in the cloned repo.
+3. Skills are copied as-is (already in `SKILL.md` format). Modes are converted to `SKILL.md` skills with frontmatter. Agents and commands are dropped as `.md` files (with `.agent.md` extension for Copilot).
+4. Detection auto-selects targets that exist on your machine. Use `--agent` to override.
 
 ---
 

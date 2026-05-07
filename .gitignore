@@ -35,7 +35,8 @@ pnpm-debug.log*
 .npmrc.local
 
 # Build outputs
-dist/
+# NOTE: dist/ IS committed so `npx github:anubhavg-icpl/vibe` runs without a build step.
+# If you regenerate it, run `pnpm build` and commit dist/index.js.
 build/
 out/
 *.min.js
