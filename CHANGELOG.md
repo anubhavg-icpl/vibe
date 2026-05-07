@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Multi-CLI plugin manifests** - One-command install across Claude Code, Codex CLI/App, Cursor, OpenCode, Gemini CLI, GitHub Copilot CLI, and Factory Droid via native marketplace systems (`.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/`, `.factory-plugin/`, `.github/plugin/`, `.opencode/plugin.js`, `gemini-extension.json`)
+- **14 superpowers skills** imported from obra/superpowers (brainstorming, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills)
+- **GEMINI.md** context file for Gemini CLI extension users
 - **VIBE CLI** - TypeScript command-line tool for installing VIBE modes as skills to AI agents
 - **Agent support** - Install modes to OpenCode, Claude Code, Codex, and Cursor
 - **Mode discovery** - Automatic discovery and parsing of 283+ modes across 33 categories
@@ -20,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **CLI development guide** - Documentation for contributing to VIBE CLI
 - **TypeScript tooling** - Added tsup, tsx, and typescript for CLI development
 - `.gitignore` file for repository hygiene
-- `LICENSE` file (MIT License)
+- `LICENSE` file (originally MIT, see Changed below)
 - `CONTRIBUTING.md` with comprehensive contribution guidelines
 - `CHANGELOG.md` for tracking version history
 - GitHub Actions workflow for validation
@@ -28,6 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **License migrated from MIT to CC BY-NC-SA 4.0** - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. Non-commercial use remains free with attribution; commercial licensing available on request.
+- README badges, install table, and FAQ updated to reflect CC BY-NC-SA 4.0 and per-CLI plugin install instructions.
 - Updated main `README.md` with VIBE CLI documentation and usage examples
 - Updated mode counts: 283 modes, 33 categories
 - Enhanced CONTRIBUTING.md with CLI development section
