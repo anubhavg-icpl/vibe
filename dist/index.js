@@ -1114,33 +1114,6 @@ function renderProgressBar(options) {
 
 // src/ui/components/startup.ts
 import chalk2 from "chalk";
-var PETS = [
-  // Cat - 3 frames
-  [
-    [" /\\_/\\ ", "( o.o )", " > ^ < ", " |   | ", "(___)  "],
-    [" /\\_/\\ ", "( -.- )", " > ^ < ", " |   | ", "(___)  "],
-    [" /\\_/\\ ", "( o.o )", " > ^ < ", " | | | ", "(___)  "]
-  ],
-  // Dog - 2 frames
-  [
-    ["  / \\  ", " (o  o)", "  \\__/ ", " / || \\", "/      \\"],
-    ["  / \\  ", " (o  o)", "  \\__/ ", " /    \\", "/ \\__/ \\"]
-  ],
-  // Fish - 3 frames
-  [
-    ["    ><>  ", "        ", "        "],
-    ["   ><>   ", " ~      ", "        "],
-    ["  ><>    ", "  ~  ~  ", "        "]
-  ]
-];
-var PET_COLORS = ["#C8762A", "#8855CC", "#4BAF78"];
-function renderPet(petIdx, frame) {
-  const pet = PETS[petIdx % PETS.length];
-  const frames = pet.length;
-  const f = frame % frames;
-  const color = chalk2.hex(PET_COLORS[petIdx % PET_COLORS.length]);
-  return pet[f].map((row) => color(row));
-}
 var DONUT_CHARS = ".,-~:;=!*#$@";
 function computeDonut(height, width, a, b) {
   const buf = new Array(width * height).fill(" ");
@@ -1308,12 +1281,7 @@ function buildFrame(version, tick, status, ready, quote) {
   const remaining = rows - topPad - contentH;
   for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
   const creditX = Math.max(1, cols - CREDIT.length - 1);
-  const petLines = renderPet(0, tick);
-  let petAnsi = "";
-  for (let pi = 0; pi < petLines.length; pi++) {
-    petAnsi += `\x1B[${pi + 1};2H` + petLines[pi];
-  }
-  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT) + petAnsi;
+  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
 }
 function waitForKey() {
   return new Promise((resolve2) => {

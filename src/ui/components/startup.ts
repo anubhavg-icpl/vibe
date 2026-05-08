@@ -266,17 +266,8 @@ function buildFrame(version: string, tick: number, status: string, ready: boolea
 
   const creditX = Math.max(1, cols - CREDIT.length - 1);
 
-  // ── Top-left animated cat ─────────────────────────────────────────────────
-
-  const petLines = renderPet(0, tick);
-  let petAnsi = "";
-  for (let pi = 0; pi < petLines.length; pi++) {
-    petAnsi += `\x1B[${pi + 1};2H` + petLines[pi];
-  }
-
   return out.join("\n")
-    + `\x1B[${rows};${creditX}H` + chalk.hex(DIM)(CREDIT)
-    + petAnsi;
+    + `\x1B[${rows};${creditX}H` + chalk.hex(DIM)(CREDIT);
 }
 
 // ── Keypress ──────────────────────────────────────────────────────────────────
