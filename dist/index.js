@@ -1224,7 +1224,7 @@ function cRow(content, innerW) {
 function hRule(l, r, innerW, m = "\u2550") {
   return chalk2.hex(PRIMARY)(l + m.repeat(innerW + 2) + r);
 }
-function buildCompactBar(version, tick, status, ready) {
+function buildCompactBar(version, tick, status, ready, quote) {
   const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
   const title = chalk2.hex(PRIMARY).bold("V I B E") + chalk2.hex(MUTED)("  \xB7  ") + chalk2.hex(MUTED)(TAGLINE) + "  " + chalk2.hex(MUTED)(`v${version}`);
   const lines = [];
@@ -1234,7 +1234,7 @@ function buildCompactBar(version, tick, status, ready) {
     lines.push(cRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready") + "  " + chalk2.hex(DIM2)("\xB7") + "  " + chalk2.hex(DIM2)(HINT), C_INNER));
   } else {
     lines.push(cRow(title, C_INNER));
-    lines.push(cRow(spin + "  " + chalk2.hex(MUTED)(status), C_INNER));
+    lines.push(cRow(spin + "  " + chalk2.hex(DIM2)(quote), C_INNER));
   }
   lines.push(hRule("\u255A", "\u255D", C_INNER));
   return lines;
@@ -1281,7 +1281,7 @@ function buildFrame(version, tick, status, ready, quote) {
   const donutH = Math.min(22, Math.max(MIN_DONUT_H, maxDonutH));
   const donutW = Math.round(donutH * 3.6);
   const showDonut = maxDonutH >= MIN_DONUT_H && donutW <= cols;
-  const infoLines = showDonut ? buildCompactBar(version, tick, status, ready) : buildFullBox(version, tick, status, ready);
+  const infoLines = showDonut ? buildCompactBar(version, tick, status, ready, quote) : buildFullBox(version, tick, status, ready);
   const infoH = infoLines.length;
   const infoW = showDonut ? C_BOX_W : INNER_W + 4;
   const contentH = showDonut ? donutH + GAP + infoH : infoH;
@@ -1308,17 +1308,12 @@ function buildFrame(version, tick, status, ready, quote) {
   const remaining = rows - topPad - contentH;
   for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
   const creditX = Math.max(1, cols - CREDIT.length - 1);
-  const petIdx = 0;
-  const petLines = renderPet(petIdx, tick);
-  const petH = petLines.length;
+  const petLines = renderPet(0, tick);
   let petAnsi = "";
-  for (let pi = 0; pi < petH; pi++) {
-    const row = rows - petH + pi;
-    if (row >= 1) petAnsi += `\x1B[${row};2H` + petLines[pi];
+  for (let pi = 0; pi < petLines.length; pi++) {
+    petAnsi += `\x1B[${pi + 1};2H` + petLines[pi];
   }
-  const quoteRow = rows - petH - 1;
-  const quoteAnsi = quoteRow >= 1 ? `\x1B[${quoteRow};2H` + chalk2.hex(DIM2)(quote) : "";
-  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT) + petAnsi + quoteAnsi;
+  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT) + petAnsi;
 }
 function waitForKey() {
   return new Promise((resolve2) => {
@@ -1349,21 +1344,22 @@ function startAnimation(version) {
   process.stdout.write("\x1B[2J\x1B[H\x1B[?25l");
   const quote = randomSarcasticQuote();
   let tick = 0;
-  let stopped = false;
+  let halted = false;
   let ready = false;
   function statusMsg() {
     return tick < 12 ? "Initializing\u2026" : "Loading assets\u2026";
   }
-  function render(s) {
-    process.stdout.write("\x1B[H" + buildFrame(version, tick, s, ready, quote));
+  function render() {
+    process.stdout.write("\x1B[H" + buildFrame(version, tick, statusMsg(), ready, quote));
   }
-  render(statusMsg());
+  render();
   const interval = setInterval(() => {
-    if (stopped) return;
+    if (halted) return;
     tick++;
-    render(statusMsg());
+    render();
   }, FRAME_MS);
   function cleanup() {
+    halted = true;
     clearInterval(interval);
     process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
   }
@@ -1374,12 +1370,8 @@ function startAnimation(version) {
   process.once("SIGINT", handleSignal);
   process.once("SIGTERM", handleSignal);
   return {
-    async stop(finalStatus) {
-      stopped = true;
-      clearInterval(interval);
+    async stop() {
       ready = true;
-      tick++;
-      render(finalStatus ?? "Ready");
       await waitForKey();
       cleanup();
       process.removeListener("SIGINT", handleSignal);

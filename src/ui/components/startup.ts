@@ -138,7 +138,7 @@ function hRule(l: string, r: string, innerW: number, m = "═"): string {
 
 // ── Compact 4-row info bar (shown beneath the donut) ─────────────────────────
 
-function buildCompactBar(version: string, tick: number, status: string, ready: boolean): string[] {
+function buildCompactBar(version: string, tick: number, status: string, ready: boolean, quote: string): string[] {
   const spin = chalk.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
   const title = chalk.hex(PRIMARY).bold("V I B E") +
     chalk.hex(MUTED)("  ·  ") +
@@ -154,7 +154,7 @@ function buildCompactBar(version: string, tick: number, status: string, ready: b
       "  " + chalk.hex(DIM2)("·") + "  " + chalk.hex(DIM2)(HINT), C_INNER));
   } else {
     lines.push(cRow(title, C_INNER));
-    lines.push(cRow(spin + "  " + chalk.hex(MUTED)(status), C_INNER));
+    lines.push(cRow(spin + "  " + chalk.hex(DIM2)(quote), C_INNER));
   }
 
   lines.push(hRule("╚", "╝", C_INNER));
@@ -222,8 +222,8 @@ function buildFrame(version: string, tick: number, status: string, ready: boolea
   const showDonut = maxDonutH >= MIN_DONUT_H && donutW <= cols;
 
   const infoLines   = showDonut
-    ? buildCompactBar(version, tick, status, ready)   // 4 rows
-    : buildFullBox(version, tick, status, ready);     // 16+ rows
+    ? buildCompactBar(version, tick, status, ready, quote)   // 4 rows
+    : buildFullBox(version, tick, status, ready);            // 16+ rows
 
   const infoH     = infoLines.length;
   const infoW     = showDonut ? C_BOX_W : INNER_W + 4;
@@ -266,28 +266,17 @@ function buildFrame(version: string, tick: number, status: string, ready: boolea
 
   const creditX = Math.max(1, cols - CREDIT.length - 1);
 
-  // ── Bottom-left pet ───────────────────────────────────────────────────────
+  // ── Top-left animated cat ─────────────────────────────────────────────────
 
-  const petIdx   = 0;  // cat — could randomise per-session
-  const petLines = renderPet(petIdx, tick);
-  const petH     = petLines.length;
-  let petAnsi    = "";
-  for (let pi = 0; pi < petH; pi++) {
-    const row = rows - petH + pi;
-    if (row >= 1) petAnsi += `\x1B[${row};2H` + petLines[pi];
+  const petLines = renderPet(0, tick);
+  let petAnsi = "";
+  for (let pi = 0; pi < petLines.length; pi++) {
+    petAnsi += `\x1B[${pi + 1};2H` + petLines[pi];
   }
-
-  // ── Sarcastic quote (bottom centre, above credit) ─────────────────────────
-
-  const quoteRow = rows - petH - 1;
-  const quoteAnsi = quoteRow >= 1
-    ? `\x1B[${quoteRow};2H` + chalk.hex(DIM2)(quote)
-    : "";
 
   return out.join("\n")
     + `\x1B[${rows};${creditX}H` + chalk.hex(DIM)(CREDIT)
-    + petAnsi
-    + quoteAnsi;
+    + petAnsi;
 }
 
 // ── Keypress ──────────────────────────────────────────────────────────────────
@@ -315,7 +304,7 @@ function waitForKey(): Promise<void> {
 // ── Public API ────────────────────────────────────────────────────────────────
 
 export interface AnimController {
-  stop(finalStatus?: string): Promise<void>;
+  stop(): Promise<void>;
 }
 
 export function startAnimation(version: string): AnimController {
@@ -327,26 +316,27 @@ export function startAnimation(version: string): AnimController {
 
   const quote = randomSarcasticQuote();
   let tick    = 0;
-  let stopped = false;
+  let halted  = false;
   let ready   = false;
 
   function statusMsg(): string {
     return tick < 12 ? "Initializing…" : "Loading assets…";
   }
 
-  function render(s: string): void {
-    process.stdout.write("\x1B[H" + buildFrame(version, tick, s, ready, quote));
+  function render(): void {
+    process.stdout.write("\x1B[H" + buildFrame(version, tick, statusMsg(), ready, quote));
   }
 
-  render(statusMsg());
+  render();
 
   const interval = setInterval(() => {
-    if (stopped) return;
+    if (halted) return;
     tick++;
-    render(statusMsg());
+    render();
   }, FRAME_MS);
 
   function cleanup(): void {
+    halted = true;
     clearInterval(interval);
     process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
   }
@@ -357,12 +347,9 @@ export function startAnimation(version: string): AnimController {
   process.once("SIGTERM", handleSignal);
 
   return {
-    async stop(finalStatus?: string): Promise<void> {
-      stopped = true;
-      clearInterval(interval);
+    async stop(): Promise<void> {
+      // Flip to ready state — interval keeps spinning the donut until key press
       ready = true;
-      tick++;
-      render(finalStatus ?? "Ready");
       await waitForKey();
       cleanup();
       process.removeListener("SIGINT",  handleSignal);
