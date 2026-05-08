@@ -1117,8 +1117,8 @@ function computeDonut(height, width, a, b) {
       if (y >= 0 && y < height && x >= 0 && x < width && d > zbuf[o]) {
         zbuf[o] = d;
         const ci = Math.max(0, Math.min(n, DONUT_CHARS.length - 1));
-        const ri = Math.floor(ci * (RAMP.length - 1) / (DONUT_CHARS.length - 1));
-        buf[o] = chalk2.hex(RAMP[ri])(DONUT_CHARS[ci]);
+        const ri = Math.round(ci * (RAMP.length - 1) / 7);
+        buf[o] = chalk2.hex(RAMP[Math.min(ri, RAMP.length - 1)])(DONUT_CHARS[ci]);
       }
     }
   }
@@ -1160,6 +1160,9 @@ var FRAME_MS = 50;
 var ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
 var visLen = (s) => s.replace(ANSI_RE, "").length;
 var LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
+var INNER_W = LOGO_W + 4;
+var C_INNER = 46;
+var C_BOX_W = C_INNER + 4;
 function colorLogoLine(line, sweepX) {
   return line.split("").map((ch, i) => {
     if (ch === " ") return ch;
@@ -1168,25 +1171,37 @@ function colorLogoLine(line, sweepX) {
     return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
   }).join("");
 }
-var INNER_W = LOGO_W + 4;
-function boxRow(content) {
+function cRow(content, innerW) {
   const vw = visLen(content);
-  const lp = Math.max(0, Math.floor((INNER_W - vw) / 2));
-  const rp = Math.max(0, INNER_W - vw - lp);
+  const lp = Math.max(0, Math.floor((innerW - vw) / 2));
+  const rp = Math.max(0, innerW - vw - lp);
   return chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(lp) + content + " ".repeat(rp) + " " + chalk2.hex(PRIMARY)("\u2551");
 }
-function hRule(l, r, m = "\u2550") {
-  return chalk2.hex(PRIMARY)(l + m.repeat(INNER_W + 2) + r);
+function hRule(l, r, innerW, m = "\u2550") {
+  return chalk2.hex(PRIMARY)(l + m.repeat(innerW + 2) + r);
 }
-function buildFrame(version, tick, status, ready) {
-  const cols = process.stdout.columns || 80;
-  const rows = process.stdout.rows || 24;
+function buildCompactBar(version, tick, status, ready) {
   const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
-  const logoSweepX = tick % (LOGO_W * 2);
-  const sweepX = logoSweepX <= LOGO_W ? logoSweepX : LOGO_W * 2 - logoSweepX;
+  const title = chalk2.hex(PRIMARY).bold("V I B E") + chalk2.hex(MUTED)("  \xB7  ") + chalk2.hex(MUTED)(TAGLINE) + "  " + chalk2.hex(MUTED)(`v${version}`);
+  const lines = [];
+  lines.push(hRule("\u2554", "\u2557", C_INNER));
+  if (ready) {
+    lines.push(cRow(title, C_INNER));
+    lines.push(cRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready") + "  " + chalk2.hex(DIM2)("\xB7") + "  " + chalk2.hex(DIM2)(HINT), C_INNER));
+  } else {
+    lines.push(cRow(title, C_INNER));
+    lines.push(cRow(spin + "  " + chalk2.hex(MUTED)(status), C_INNER));
+  }
+  lines.push(hRule("\u255A", "\u255D", C_INNER));
+  return lines;
+}
+function buildFullBox(version, tick, status, ready) {
+  const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const phase = tick % (LOGO_W * 2);
+  const sweepX = phase <= LOGO_W ? phase : LOGO_W * 2 - phase;
   const box2 = [];
-  box2.push(hRule("\u2554", "\u2557"));
-  box2.push(boxRow(""));
+  box2.push(hRule("\u2554", "\u2557", INNER_W));
+  box2.push(cRow("", INNER_W));
   for (const raw of LOGO) {
     const colored = colorLogoLine(raw, sweepX);
     const lp = Math.floor((INNER_W - raw.length) / 2);
@@ -1195,28 +1210,37 @@ function buildFrame(version, tick, status, ready) {
       chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) + " " + chalk2.hex(PRIMARY)("\u2551")
     );
   }
-  box2.push(boxRow(""));
-  box2.push(hRule("\u2560", "\u2563"));
-  box2.push(boxRow(""));
-  box2.push(boxRow(chalk2.hex(PRIMARY).bold(TAGLINE)));
-  box2.push(boxRow(chalk2.hex(MUTED)(`v${version}`)));
-  box2.push(boxRow(""));
+  box2.push(cRow("", INNER_W));
+  box2.push(hRule("\u2560", "\u2563", INNER_W));
+  box2.push(cRow("", INNER_W));
+  box2.push(cRow(chalk2.hex(PRIMARY).bold(TAGLINE), INNER_W));
+  box2.push(cRow(chalk2.hex(MUTED)(`v${version}`), INNER_W));
+  box2.push(cRow("", INNER_W));
   if (ready) {
-    box2.push(boxRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready")));
-    box2.push(boxRow(""));
-    box2.push(boxRow(chalk2.hex(DIM2)(HINT)));
+    box2.push(cRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready"), INNER_W));
+    box2.push(cRow("", INNER_W));
+    box2.push(cRow(chalk2.hex(DIM2)(HINT), INNER_W));
   } else {
-    box2.push(boxRow(spin + "  " + chalk2.hex(MUTED)(status)));
+    box2.push(cRow(spin + "  " + chalk2.hex(MUTED)(status), INNER_W));
   }
-  box2.push(boxRow(""));
-  box2.push(hRule("\u255A", "\u255D"));
-  const boxH = box2.length;
-  const boxW = INNER_W + 4;
-  const gap = 1;
-  const donutH = Math.max(10, rows - boxH - gap - 2);
+  box2.push(cRow("", INNER_W));
+  box2.push(hRule("\u255A", "\u255D", INNER_W));
+  return box2;
+}
+var MIN_DONUT_H = 8;
+var GAP = 1;
+var COMPACT_H = 4;
+function buildFrame(version, tick, status, ready) {
+  const cols = process.stdout.columns || 80;
+  const rows = process.stdout.rows || 24;
+  const maxDonutH = rows - COMPACT_H - GAP - 2;
+  const donutH = Math.min(22, Math.max(MIN_DONUT_H, maxDonutH));
   const donutW = Math.round(donutH * 3.6);
-  const showDonut = rows >= boxH + gap + 10 + 2 && donutW <= cols;
-  const contentH = showDonut ? donutH + gap + boxH : boxH;
+  const showDonut = maxDonutH >= MIN_DONUT_H && donutW <= cols;
+  const infoLines = showDonut ? buildCompactBar(version, tick, status, ready) : buildFullBox(version, tick, status, ready);
+  const infoH = infoLines.length;
+  const infoW = showDonut ? C_BOX_W : INNER_W + 4;
+  const contentH = showDonut ? donutH + GAP + infoH : infoH;
   const topPad = Math.max(0, Math.floor((rows - contentH) / 2));
   const blank = " ".repeat(cols);
   const out = [];
@@ -1225,20 +1249,18 @@ function buildFrame(version, tick, status, ready) {
     const a = 1 + tick * 0.05;
     const b = tick * 0.07;
     const donutRows = computeDonut(donutH, donutW, a, b);
-    const donutLP = Math.max(0, Math.floor((cols - donutW) / 2));
-    const donutRP = Math.max(0, cols - donutLP - donutW);
-    const dMarginL = " ".repeat(donutLP);
-    const dMarginR = " ".repeat(donutRP);
+    const dLP = Math.max(0, Math.floor((cols - donutW) / 2));
+    const dRP = Math.max(0, cols - dLP - donutW);
     for (const row of donutRows) {
-      out.push(dMarginL + row + dMarginR);
+      out.push(" ".repeat(dLP) + row + " ".repeat(dRP));
     }
-    for (let i = 0; i < gap; i++) out.push(blank);
+    for (let i = 0; i < GAP; i++) out.push(blank);
   }
-  const boxLP = Math.max(0, Math.floor((cols - boxW) / 2));
-  const boxRP = Math.max(0, cols - boxLP - boxW);
-  const boxMarginL = " ".repeat(boxLP);
-  const boxMarginR = " ".repeat(boxRP);
-  for (const l of box2) out.push(boxMarginL + l + boxMarginR);
+  const iLP = Math.max(0, Math.floor((cols - infoW) / 2));
+  const iRP = Math.max(0, cols - iLP - infoW);
+  for (const l of infoLines) {
+    out.push(" ".repeat(iLP) + l + " ".repeat(iRP));
+  }
   const remaining = rows - topPad - contentH;
   for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
   const creditX = Math.max(1, cols - CREDIT.length - 1);

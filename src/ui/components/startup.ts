@@ -27,13 +27,12 @@ function computeDonut(height: number, width: number, a: number, b: number): stri
       if (y >= 0 && y < height && x >= 0 && x < width && d > zbuf[o]) {
         zbuf[o] = d;
         const ci = Math.max(0, Math.min(n, DONUT_CHARS.length - 1));
-        const ri = Math.floor(ci * (RAMP.length - 1) / (DONUT_CHARS.length - 1));
-        buf[o] = chalk.hex(RAMP[ri])(DONUT_CHARS[ci]);
+        const ri = Math.round(ci * (RAMP.length - 1) / 7);  // n in [0,7]
+        buf[o]   = chalk.hex(RAMP[Math.min(ri, RAMP.length - 1)])(DONUT_CHARS[ci]);
       }
     }
   }
 
-  // Split flat buffer into rows of `width` chars
   const rows: string[] = [];
   for (let y = 0; y < height; y++) {
     rows.push(buf.slice(y * width, (y + 1) * width).join(""));
@@ -52,9 +51,9 @@ const LOGO = [
   "    ╚═══╝    ╚═╝  ╚═════╝   ╚══════╝",
 ];
 
-const TAGLINE = "AI  Agent  Asset  Manager";
-const CREDIT  = "Made by Anubhav Gain  ·  anubhavg@infopercept.com";
-const HINT    = "Press any key to continue…";
+const TAGLINE  = "AI  Agent  Asset  Manager";
+const CREDIT   = "Made by Anubhav Gain  ·  anubhavg@infopercept.com";
+const HINT     = "Press any key to continue…";
 
 const RAMP = [
   "#1A0900","#3A1808","#5C2810","#8B4018",
@@ -76,7 +75,11 @@ const FRAME_MS = 50;
 const ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
 const visLen  = (s: string): number => s.replace(ANSI_RE, "").length;
 
-const LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
+const LOGO_W  = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
+const INNER_W = LOGO_W + 4;   // 40 — used by full box
+
+const C_INNER = 46;           // compact bar inner width
+const C_BOX_W = C_INNER + 4;
 
 function colorLogoLine(line: string, sweepX: number): string {
   return line.split("").map((ch, i) => {
@@ -87,36 +90,55 @@ function colorLogoLine(line: string, sweepX: number): string {
   }).join("");
 }
 
-// ── Box helpers (double-line borders) ────────────────────────────────────────
+// ── Box row helpers ───────────────────────────────────────────────────────────
 
-const INNER_W = LOGO_W + 4;  // 40
-
-function boxRow(content: string): string {
+function cRow(content: string, innerW: number): string {
   const vw = visLen(content);
-  const lp = Math.max(0, Math.floor((INNER_W - vw) / 2));
-  const rp = Math.max(0, INNER_W - vw - lp);
+  const lp = Math.max(0, Math.floor((innerW - vw) / 2));
+  const rp = Math.max(0, innerW - vw - lp);
   return chalk.hex(PRIMARY)("║") + " " + " ".repeat(lp) + content + " ".repeat(rp) + " " + chalk.hex(PRIMARY)("║");
 }
 
-function hRule(l: string, r: string, m = "═"): string {
-  return chalk.hex(PRIMARY)(l + m.repeat(INNER_W + 2) + r);
+function hRule(l: string, r: string, innerW: number, m = "═"): string {
+  return chalk.hex(PRIMARY)(l + m.repeat(innerW + 2) + r);
 }
 
-// ── Full-screen frame ─────────────────────────────────────────────────────────
+// ── Compact 4-row info bar (shown beneath the donut) ─────────────────────────
 
-function buildFrame(version: string, tick: number, status: string, ready: boolean): string {
-  const cols = process.stdout.columns || 80;
-  const rows = process.stdout.rows    || 24;
+function buildCompactBar(version: string, tick: number, status: string, ready: boolean): string[] {
+  const spin = chalk.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const title = chalk.hex(PRIMARY).bold("V I B E") +
+    chalk.hex(MUTED)("  ·  ") +
+    chalk.hex(MUTED)(TAGLINE) +
+    "  " + chalk.hex(MUTED)(`v${version}`);
 
-  const spin   = chalk.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
-  const logoSweepX = (tick % (LOGO_W * 2));
-  const sweepX = logoSweepX <= LOGO_W ? logoSweepX : LOGO_W * 2 - logoSweepX;
+  const lines: string[] = [];
+  lines.push(hRule("╔", "╗", C_INNER));
 
-  // ── VIBE box lines ────────────────────────────────────────────────────────
+  if (ready) {
+    lines.push(cRow(title, C_INNER));
+    lines.push(cRow(chalk.hex(SUCCESS)("✓") + "  " + chalk.hex(MUTED)("Ready") +
+      "  " + chalk.hex(DIM2)("·") + "  " + chalk.hex(DIM2)(HINT), C_INNER));
+  } else {
+    lines.push(cRow(title, C_INNER));
+    lines.push(cRow(spin + "  " + chalk.hex(MUTED)(status), C_INNER));
+  }
+
+  lines.push(hRule("╚", "╝", C_INNER));
+  return lines;  // always 4 rows
+}
+
+// ── Full VIBE box with logo (shown when terminal is too short for donut) ──────
+
+function buildFullBox(version: string, tick: number, status: string, ready: boolean): string[] {
+  const spin = chalk.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const phase = tick % (LOGO_W * 2);
+  const sweepX = phase <= LOGO_W ? phase : LOGO_W * 2 - phase;
 
   const box: string[] = [];
-  box.push(hRule("╔", "╗"));
-  box.push(boxRow(""));
+  box.push(hRule("╔", "╗", INNER_W));
+  box.push(cRow("", INNER_W));
+
   for (const raw of LOGO) {
     const colored = colorLogoLine(raw, sweepX);
     const lp = Math.floor((INNER_W - raw.length) / 2);
@@ -127,63 +149,80 @@ function buildFrame(version: string, tick: number, status: string, ready: boolea
       " " + chalk.hex(PRIMARY)("║")
     );
   }
-  box.push(boxRow(""));
-  box.push(hRule("╠", "╣"));
-  box.push(boxRow(""));
-  box.push(boxRow(chalk.hex(PRIMARY).bold(TAGLINE)));
-  box.push(boxRow(chalk.hex(MUTED)(`v${version}`)));
-  box.push(boxRow(""));
+
+  box.push(cRow("", INNER_W));
+  box.push(hRule("╠", "╣", INNER_W));
+  box.push(cRow("", INNER_W));
+  box.push(cRow(chalk.hex(PRIMARY).bold(TAGLINE), INNER_W));
+  box.push(cRow(chalk.hex(MUTED)(`v${version}`), INNER_W));
+  box.push(cRow("", INNER_W));
+
   if (ready) {
-    box.push(boxRow(chalk.hex(SUCCESS)("✓") + "  " + chalk.hex(MUTED)("Ready")));
-    box.push(boxRow(""));
-    box.push(boxRow(chalk.hex(DIM2)(HINT)));
+    box.push(cRow(chalk.hex(SUCCESS)("✓") + "  " + chalk.hex(MUTED)("Ready"), INNER_W));
+    box.push(cRow("", INNER_W));
+    box.push(cRow(chalk.hex(DIM2)(HINT), INNER_W));
   } else {
-    box.push(boxRow(spin + "  " + chalk.hex(MUTED)(status)));
+    box.push(cRow(spin + "  " + chalk.hex(MUTED)(status), INNER_W));
   }
-  box.push(boxRow(""));
-  box.push(hRule("╚", "╝"));
 
-  const boxH = box.length;
-  const boxW = INNER_W + 4;
+  box.push(cRow("", INNER_W));
+  box.push(hRule("╚", "╝", INNER_W));
+  return box;
+}
 
-  // ── Donut dimensions (only render if there's room) ────────────────────────
+// ── Full-screen frame ─────────────────────────────────────────────────────────
 
-  const gap       = 1;
-  const donutH    = Math.max(10, rows - boxH - gap - 2);
-  const donutW    = Math.round(donutH * 3.6);   // match original 80/22 aspect
-  const showDonut = rows >= boxH + gap + 10 + 2 && donutW <= cols;
+const MIN_DONUT_H = 8;
+const GAP         = 1;
+const COMPACT_H   = 4;  // compact bar is always 4 rows
 
-  const contentH = showDonut ? donutH + gap + boxH : boxH;
-  const topPad   = Math.max(0, Math.floor((rows - contentH) / 2));
+function buildFrame(version: string, tick: number, status: string, ready: boolean): string {
+  const cols = process.stdout.columns || 80;
+  const rows = process.stdout.rows    || 24;
 
-  // ── Build output lines ────────────────────────────────────────────────────
+  // Donut: fill all available space above the compact bar
+  const maxDonutH = rows - COMPACT_H - GAP - 2;  // leave 2 rows for padding
+  const donutH    = Math.min(22, Math.max(MIN_DONUT_H, maxDonutH));
+  const donutW    = Math.round(donutH * 3.6);
 
-  const blank  = " ".repeat(cols);
+  // Show donut when there's at least MIN_DONUT_H rows for it AND it fits horizontally
+  const showDonut = maxDonutH >= MIN_DONUT_H && donutW <= cols;
+
+  const infoLines   = showDonut
+    ? buildCompactBar(version, tick, status, ready)   // 4 rows
+    : buildFullBox(version, tick, status, ready);     // 16+ rows
+
+  const infoH     = infoLines.length;
+  const infoW     = showDonut ? C_BOX_W : INNER_W + 4;
+  const contentH  = showDonut ? donutH + GAP + infoH : infoH;
+  const topPad    = Math.max(0, Math.floor((rows - contentH) / 2));
+
+  const blank     = " ".repeat(cols);
   const out: string[] = [];
 
   for (let i = 0; i < topPad; i++) out.push(blank);
+
+  // ── Donut (top) ───────────────────────────────────────────────────────────
 
   if (showDonut) {
     const a = 1 + tick * 0.05;
     const b = tick * 0.07;
     const donutRows = computeDonut(donutH, donutW, a, b);
-    const donutLP = Math.max(0, Math.floor((cols - donutW) / 2));
-    const donutRP = Math.max(0, cols - donutLP - donutW);
-    const dMarginL = " ".repeat(donutLP);
-    const dMarginR = " ".repeat(donutRP);
+    const dLP = Math.max(0, Math.floor((cols - donutW) / 2));
+    const dRP = Math.max(0, cols - dLP - donutW);
     for (const row of donutRows) {
-      out.push(dMarginL + row + dMarginR);
+      out.push(" ".repeat(dLP) + row + " ".repeat(dRP));
     }
-    for (let i = 0; i < gap; i++) out.push(blank);
+    for (let i = 0; i < GAP; i++) out.push(blank);
   }
 
-  // ── Box centered ─────────────────────────────────────────────────────────
+  // ── Info box (below donut) ────────────────────────────────────────────────
 
-  const boxLP     = Math.max(0, Math.floor((cols - boxW) / 2));
-  const boxRP     = Math.max(0, cols - boxLP - boxW);
-  const boxMarginL = " ".repeat(boxLP);
-  const boxMarginR = " ".repeat(boxRP);
-  for (const l of box) out.push(boxMarginL + l + boxMarginR);
+  const iLP = Math.max(0, Math.floor((cols - infoW) / 2));
+  const iRP = Math.max(0, cols - iLP - infoW);
+  for (const l of infoLines) {
+    out.push(" ".repeat(iLP) + l + " ".repeat(iRP));
+  }
 
   // ── Bottom padding ────────────────────────────────────────────────────────
 
