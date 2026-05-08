@@ -39,3 +39,5 @@ export {
   ProgressTracker,
   type ProgressOptions,
 } from "./components/progress.js";
+
+export { startAnimation, type AnimController } from "./components/startup.js";

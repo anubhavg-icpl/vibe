@@ -3,7 +3,7 @@
 // src/index.ts
 import { program } from "commander";
 import * as p from "@clack/prompts";
-import chalk2 from "chalk";
+import chalk3 from "chalk";
 import { existsSync as existsSync2 } from "fs";
 import { dirname as dirname2, resolve } from "path";
 import { fileURLToPath } from "url";
@@ -899,9 +899,9 @@ var colors = {
   // near-white warm
   textBold: chalk.hex("#F0EDE8").bold,
   // ── Amber shimmer gradient ────────────────────────────────────────────────
-  gradient: (text) => {
+  gradient: (text2) => {
     const gc = ["#C8762A", "#D4882E", "#E09A32", "#E8AA48", "#D4882E", "#C8762A"];
-    return text.split("").map((ch, i) => chalk.hex(gc[i % gc.length])(ch)).join("");
+    return text2.split("").map((ch, i) => chalk.hex(gc[i % gc.length])(ch)).join("");
   }
 };
 var kindColors = {
@@ -1095,6 +1095,142 @@ function renderProgressBar(options) {
   return parts.join("  ");
 }
 
+// src/ui/components/startup.ts
+import chalk2 from "chalk";
+var LOGO = [
+  " \u2588\u2588\u2557   \u2588\u2588\u2557\u2588\u2588\u2557\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
+  " \u2588\u2588\u2551   \u2588\u2588\u2551\u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255D",
+  " \u2588\u2588\u2551   \u2588\u2588\u2551\u2588\u2588\u2551\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D\u2588\u2588\u2588\u2588\u2588\u2557  ",
+  " \u255A\u2588\u2588\u2557 \u2588\u2588\u2554\u255D\u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u255D  ",
+  "  \u255A\u2588\u2588\u2588\u2588\u2554\u255D \u2588\u2588\u2551\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
+  "   \u255A\u2550\u2550\u2550\u255D  \u255A\u2550\u255D\u255A\u2550\u2550\u2550\u2550\u2550\u255D \u255A\u2550\u2550\u2550\u2550\u2550\u2550\u255D"
+];
+var RAMP = [
+  "#1A0900",
+  "#3A1808",
+  "#5C2810",
+  "#8B4018",
+  "#B56028",
+  "#C8762A",
+  "#D4882E",
+  "#E09A32",
+  "#F0B048"
+];
+var PRIMARY = "#C8762A";
+var MUTED = "#8A8270";
+var SPINNER = ["\u280B", "\u2819", "\u2839", "\u2838", "\u283C", "\u2834", "\u2826", "\u2827", "\u2807", "\u280F"];
+var LOGO_W = LOGO[0].length;
+var BOX_W = 42;
+var FRAME_MS = 60;
+var MIN_MS = 1500;
+var READY_MS = 300;
+var ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
+var visLen = (s) => s.replace(ANSI_RE, "").length;
+function pad(content, total) {
+  const spaces = total - visLen(content);
+  return content + " ".repeat(Math.max(0, spaces));
+}
+function border(char) {
+  return chalk2.hex(PRIMARY)(char);
+}
+function row(content) {
+  return border("\u2502") + " " + pad(content, BOX_W) + " " + border("\u2502");
+}
+function hRule(left, right, mid = "\u2500") {
+  return border(left + mid.repeat(BOX_W + 2) + right);
+}
+function colorLogoLine(line, sweepX) {
+  return line.split("").map((ch, i) => {
+    if (ch === " ") return ch;
+    const dist = Math.abs(i - sweepX);
+    const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (LOGO_W * 0.6))));
+    return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
+  }).join("");
+}
+function buildFrame(version, tick, elapsed, status) {
+  const period = LOGO_W * 2;
+  const phase = tick % period;
+  const sweepX = phase <= LOGO_W ? phase : period - phase;
+  const spinnerCh = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const statusText = chalk2.hex(MUTED)(status);
+  const lines = [];
+  lines.push(hRule("\u256D", "\u256E"));
+  lines.push(row(""));
+  for (const logoLine of LOGO) {
+    const colored = colorLogoLine(logoLine, sweepX);
+    const padded = colored + " ".repeat(Math.max(0, BOX_W - LOGO_W));
+    lines.push(border("\u2502") + " " + padded + " " + border("\u2502"));
+  }
+  lines.push(row(""));
+  lines.push(hRule("\u251C", "\u2524"));
+  lines.push(row(""));
+  lines.push(row(chalk2.hex(PRIMARY).bold("AI Agent Asset Manager")));
+  lines.push(row(chalk2.hex(MUTED)(`v${version}`)));
+  lines.push(row(""));
+  lines.push(row(`${spinnerCh}  ${statusText}`));
+  void elapsed;
+  lines.push(hRule("\u2570", "\u256F"));
+  return lines.join("\n") + "\n";
+}
+function startAnimation(version) {
+  if (!process.stdout.isTTY) {
+    return { stop: async () => void 0 };
+  }
+  const testFrame = buildFrame(version, 0, 0, "Initializing");
+  const frameHeight = testFrame.split("\n").length - 1;
+  process.stdout.write("\n".repeat(frameHeight));
+  process.stdout.write("\x1B[?25l");
+  const startTime = Date.now();
+  let tick = 0;
+  let stopped = false;
+  let stopResolve = null;
+  const stopPromise = new Promise((r) => {
+    stopResolve = r;
+  });
+  function getStatus() {
+    return Date.now() - startTime < 700 ? "Initializing" : "Loading assets";
+  }
+  function render(status) {
+    const elapsed = Date.now() - startTime;
+    const frame = buildFrame(version, tick, elapsed, status);
+    process.stdout.write(`\x1B[${frameHeight}A` + frame);
+  }
+  const interval = setInterval(() => {
+    if (stopped) return;
+    tick++;
+    render(getStatus());
+  }, FRAME_MS);
+  function cleanup() {
+    clearInterval(interval);
+    process.stdout.write(`\x1B[${frameHeight}A\x1B[J\x1B[?25h`);
+  }
+  function handleSignal() {
+    cleanup();
+    process.exit(0);
+  }
+  process.once("SIGINT", handleSignal);
+  process.once("SIGTERM", handleSignal);
+  return {
+    async stop(finalStatus) {
+      const elapsed = Date.now() - startTime;
+      const remaining = MIN_MS - elapsed;
+      if (remaining > 0) {
+        await new Promise((r) => setTimeout(r, remaining));
+      }
+      stopped = true;
+      clearInterval(interval);
+      tick++;
+      render(finalStatus ?? "Ready  \u2713");
+      await new Promise((r) => setTimeout(r, READY_MS));
+      cleanup();
+      process.removeListener("SIGINT", handleSignal);
+      process.removeListener("SIGTERM", handleSignal);
+      stopResolve?.();
+      return stopPromise;
+    }
+  };
+}
+
 // src/index.ts
 var VERSION = "2.0.0";
 function defaultSource() {
@@ -1172,7 +1308,7 @@ program.command("search <query>").description("Fuzzy-search the asset library").
       return;
     }
     console.log();
-    console.log(colors.primaryBold(`Search: ${chalk2.italic(query)}`));
+    console.log(colors.primaryBold(`Search: ${chalk3.italic(query)}`));
     console.log();
     for (const r of results) {
       const a = r.item;
@@ -1255,29 +1391,58 @@ async function main(source, options) {
   const config = await loadConfig();
   const merged = mergeConfigWithOptions(config, options);
   const json = options.json ?? false;
-  if (!json) console.log(renderHeader(VERSION));
-  const spinner2 = json ? null : p.spinner();
+  const isInteractive = !json && !options.list && !options.preview && !options.asset?.length && !options.yes;
+  const animCtrl = isInteractive ? startAnimation(VERSION) : null;
+  if (!json && !isInteractive) console.log(renderHeader(VERSION));
+  const spinner2 = !json && !isInteractive ? p.spinner() : json ? null : null;
   spinner2?.start("Discovering assets\u2026");
   let assets = await discoverAssets(source, { kinds: parseKinds(options.kind) });
+  if (animCtrl) {
+    await animCtrl.stop();
+    console.log(renderHeader(VERSION));
+  }
   if (options.category) {
     assets = assets.filter((a) => a.category === options.category);
   }
   if (assets.length === 0) {
-    spinner2?.stop(chalk2.red("No assets found"));
+    spinner2?.stop(chalk3.red("No assets found"));
     if (json)
       console.log(formatError("No assets found at the given source", VERSION));
     else
-      p.outro(
-        chalk2.red(
-          "No assets found. Pass a path to a vibe checkout, or run from a clone."
-        )
-      );
+      p.outro(chalk3.red("No assets found. Pass a path to a vibe checkout, or run from a clone."));
     process.exit(1);
   }
   const counts = summariseCounts(assets);
-  spinner2?.stop(
-    `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"} ${colors.muted(`(${counts.skill} skills \xB7 ${counts.agent} agents \xB7 ${counts.command} commands \xB7 ${counts.mode} modes)`)}`
-  );
+  const countMsg = `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"} ${colors.muted(`(${counts.skill} skills \xB7 ${counts.agent} agents \xB7 ${counts.command} commands \xB7 ${counts.mode} modes)`)}`;
+  if (animCtrl) {
+    p.log.step(countMsg);
+  } else {
+    spinner2?.stop(countMsg);
+  }
+  if (isInteractive) {
+    const searchInput = await p.text({
+      message: `${colors.primary("/")} Search assets`,
+      placeholder: "name, keyword, or category  (Enter = show all)"
+    });
+    if (p.isCancel(searchInput)) {
+      p.cancel("Cancelled");
+      process.exit(0);
+    }
+    const q = String(searchInput ?? "").trim().toLowerCase();
+    if (q) {
+      const before = assets.length;
+      assets = assets.filter(
+        (a) => a.name.toLowerCase().includes(q) || a.description.toLowerCase().includes(q) || a.category.toLowerCase().includes(q)
+      );
+      if (assets.length === 0) {
+        p.log.warn(colors.warning(`No assets matched "${q}" (${before} total)`));
+        process.exit(0);
+      }
+      p.log.info(
+        `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched ${colors.muted(`"${q}"`)}`
+      );
+    }
+  }
   if (options.preview) {
     const target = assets.find(
       (a) => a.name.toLowerCase() === options.preview.toLowerCase()
@@ -1339,7 +1504,7 @@ async function main(source, options) {
       hint: a.description.length > 60 ? a.description.slice(0, 57) + "\u2026" : a.description
     }));
     const picked = await p.multiselect({
-      message: "Pick what to install",
+      message: `Pick what to install  ${colors.dim("\xB7 type to filter")}`,
       options: choices,
       required: true
     });

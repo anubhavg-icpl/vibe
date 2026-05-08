@@ -57,6 +57,8 @@ import {
   ModeSearch,
   renderInstallResultCard,
   renderProgressBar,
+  startAnimation,
+  type AnimController,
 } from "./ui/index.js";
 import type { Asset, AssetKind, AgentType } from "./types.js";
 
@@ -312,11 +314,24 @@ async function main(source: string, options: CliOptions): Promise<void> {
   const merged = mergeConfigWithOptions(config, options as never);
   const json = options.json ?? false;
 
-  if (!json) console.log(renderHeader(VERSION));
+  // Interactive mode: animated startup runs concurrently with discovery.
+  // All other modes (json, list, preview, --yes, --asset): use spinner.
+  const isInteractive = !json && !options.list && !options.preview && !options.asset?.length && !options.yes;
+  const animCtrl: AnimController | null = isInteractive ? startAnimation(VERSION) : null;
 
-  const spinner = json ? null : p.spinner();
+  if (!json && !isInteractive) console.log(renderHeader(VERSION));
+
+  const spinner = (!json && !isInteractive) ? p.spinner() : (json ? null : null);
   spinner?.start("Discovering assets…");
+
   let assets = await discoverAssets(source, { kinds: parseKinds(options.kind) });
+
+  // Stop animation (waits for minimum time + "Ready" flash then clears)
+  if (animCtrl) {
+    await animCtrl.stop();
+    console.log(renderHeader(VERSION));
+  }
+
   if (options.category) {
     assets = assets.filter((a) => a.category === options.category);
   }
@@ -325,18 +340,48 @@ async function main(source: string, options: CliOptions): Promise<void> {
     if (json)
       console.log(formatError("No assets found at the given source", VERSION));
     else
-      p.outro(
-        chalk.red(
-          "No assets found. Pass a path to a vibe checkout, or run from a clone.",
-        ),
-      );
+      p.outro(chalk.red("No assets found. Pass a path to a vibe checkout, or run from a clone."));
     process.exit(1);
   }
   const counts = summariseCounts(assets);
-  spinner?.stop(
+  const countMsg =
     `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"}` +
-      ` ${colors.muted(`(${counts.skill} skills · ${counts.agent} agents · ${counts.command} commands · ${counts.mode} modes)`)}`,
-  );
+    ` ${colors.muted(`(${counts.skill} skills · ${counts.agent} agents · ${counts.command} commands · ${counts.mode} modes)`)}`;
+  if (animCtrl) {
+    p.log.step(countMsg);
+  } else {
+    spinner?.stop(countMsg);
+  }
+
+  // ── Search step (interactive mode only) ──────────────────────────────────
+  if (isInteractive) {
+    const searchInput = await p.text({
+      message: `${colors.primary("/")} Search assets`,
+      placeholder: "name, keyword, or category  (Enter = show all)",
+    });
+    if (p.isCancel(searchInput)) {
+      p.cancel("Cancelled");
+      process.exit(0);
+    }
+    const q = String(searchInput ?? "").trim().toLowerCase();
+    if (q) {
+      const before = assets.length;
+      assets = assets.filter(
+        (a) =>
+          a.name.toLowerCase().includes(q) ||
+          a.description.toLowerCase().includes(q) ||
+          a.category.toLowerCase().includes(q)
+      );
+      if (assets.length === 0) {
+        p.log.warn(colors.warning(`No assets matched "${q}" (${before} total)`));
+        process.exit(0);
+      }
+      p.log.info(
+        `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched` +
+        ` ${colors.muted(`"${q}"`)}`
+      );
+    }
+  }
 
   // Preview-only mode
   if (options.preview) {
@@ -407,7 +452,7 @@ async function main(source: string, options: CliOptions): Promise<void> {
           : a.description,
     }));
     const picked = await p.multiselect({
-      message: "Pick what to install",
+      message: `Pick what to install  ${colors.dim("· type to filter")}`,
       options: choices,
       required: true,
     });
