@@ -1,5 +1,5 @@
 import type { Mode } from "../../types.js";
-import { colors, symbols, box } from "../theme.js";
+import { colors, symbols, box, kindColors } from "../theme.js";
 
 export interface CategoryTree {
   name: string;
@@ -8,43 +8,31 @@ export interface CategoryTree {
 }
 
 export function buildCategoryTree(modes: Mode[]): CategoryTree[] {
-  const categories = new Map<string, Mode[]>();
-
+  const map = new Map<string, Mode[]>();
   for (const mode of modes) {
-    const category = mode.category || "general";
-    if (!categories.has(category)) {
-      categories.set(category, []);
-    }
-    categories.get(category)!.push(mode);
+    const cat = mode.category || "general";
+    const list = map.get(cat) ?? [];
+    list.push(mode);
+    map.set(cat, list);
   }
-
-  return Array.from(categories.entries())
-    .map(([name, categoryModes]) => ({
-      name,
-      count: categoryModes.length,
-      modes: categoryModes.sort((a, b) => a.name.localeCompare(b.name)),
-    }))
+  return Array.from(map.entries())
+    .map(([name, ms]) => ({ name, count: ms.length, modes: ms.sort((a, b) => a.name.localeCompare(b.name)) }))
     .sort((a, b) => b.count - a.count);
 }
 
 export function renderCategoryTree(categories: CategoryTree[], expandedCategory?: string): string {
   const lines: string[] = [];
-
-  for (const category of categories) {
-    const isExpanded = expandedCategory === category.name;
-    const icon = isExpanded ? symbols.arrowDown : symbols.arrowRight;
-    const countBadge = colors.muted(`(${category.count})`);
-
-    lines.push(`${colors.primary(icon)} ${colors.textBold(category.name)} ${countBadge}`);
-
+  for (const cat of categories) {
+    const isExpanded = expandedCategory === cat.name;
+    const icon  = isExpanded ? symbols.arrowDown : symbols.arrowRight;
+    const count = colors.muted(`(${cat.count})`);
+    lines.push(`${colors.primary(icon)} ${colors.textBold(cat.name)} ${count}`);
     if (isExpanded) {
-      for (const mode of category.modes) {
-        const modeIcon = symbols.bullet;
-        lines.push(`  ${colors.dim(modeIcon)} ${colors.secondary(mode.name)}`);
+      for (const mode of cat.modes) {
+        lines.push(`  ${colors.dim(symbols.bullet)} ${colors.secondary(mode.name)}`);
       }
     }
   }
-
   return lines.join("\n");
 }
 
@@ -55,101 +43,108 @@ export function renderModeList(
   maxVisible = 10,
 ): string {
   const lines: string[] = [];
-
   const startIndex = Math.max(0, currentIndex - Math.floor(maxVisible / 2));
-  const visibleModes = modes.slice(startIndex, startIndex + maxVisible);
+  const visible = modes.slice(startIndex, startIndex + maxVisible);
 
-  if (startIndex > 0) {
-    lines.push(colors.dim(`  ↑ ${startIndex} more`));
-  }
+  if (startIndex > 0) lines.push(colors.dim(`  ↑ ${startIndex} more`));
 
-  for (let i = 0; i < visibleModes.length; i++) {
-    const mode = visibleModes[i];
-    const actualIndex = startIndex + i;
-    const isCurrent = actualIndex === currentIndex;
-    const isSelected = selectedModes.has(mode.name);
+  for (let i = 0; i < visible.length; i++) {
+    const mode   = visible[i];
+    const idx    = startIndex + i;
+    const isCur  = idx === currentIndex;
+    const isSel  = selectedModes.has(mode.name);
 
-    const checkbox = isSelected ? colors.success(symbols.boxChecked) : colors.dim(symbols.boxEmpty);
-    const pointer = isCurrent ? colors.primary(symbols.pointer) : " ";
-    const name = isCurrent ? colors.textBold(mode.name) : mode.name;
-    const category = colors.muted(`[${mode.category}]`);
+    const checkbox = isSel ? colors.success(symbols.boxChecked) : colors.dim(symbols.boxEmpty);
+    const pointer  = isCur ? colors.primary(symbols.pointer) : " ";
+    const name     = isCur ? colors.textBold(mode.name) : mode.name;
+    const cat      = colors.muted(`[${mode.category}]`);
 
-    lines.push(`${pointer} ${checkbox} ${name} ${category}`);
+    lines.push(`${pointer} ${checkbox} ${name} ${cat}`);
   }
 
   const remaining = modes.length - startIndex - maxVisible;
-  if (remaining > 0) {
-    lines.push(colors.dim(`  ↓ ${remaining} more`));
-  }
+  if (remaining > 0) lines.push(colors.dim(`  ↓ ${remaining} more`));
 
   return lines.join("\n");
 }
 
 export function renderSimpleModeList(modes: Mode[]): string {
-  const lines: string[] = [];
-
-  for (const mode of modes) {
-    const bullet = colors.primary(symbols.bullet);
-    const name = colors.secondary(mode.name);
-    const desc =
-      mode.description.length > 50 ? colors.dim(mode.description.slice(0, 47) + "...") : colors.dim(mode.description);
-
-    lines.push(`${bullet} ${name}`);
-    lines.push(`    ${desc}`);
-  }
-
-  return lines.join("\n");
+  return modes
+    .map((m) => {
+      const desc = m.description.length > 50
+        ? colors.dim(m.description.slice(0, 47) + "…")
+        : colors.dim(m.description);
+      return `${colors.primary(symbols.bullet)} ${colors.secondary(m.name)}\n    ${desc}`;
+    })
+    .join("\n");
 }
 
 export function renderCategoryBadges(categories: Map<string, number>): string {
-  const badges: string[] = [];
+  return Array.from(categories.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([name, count]) => `${colors.muted(name)}${colors.dim(`:${count}`)}`)
+    .join(colors.dim(" │ "))
+    + (categories.size > 8 ? colors.dim(` +${categories.size - 8} more`) : "");
+}
 
-  const sortedCategories = Array.from(categories.entries()).sort((a, b) => b[1] - a[1]);
+/**
+ * Renders an asset row in the interactive list.
+ * Includes a kind-coloured badge — [skill] [agent] [command] [mode].
+ */
+export function renderAssetRow(
+  name: string,
+  kind: string,
+  category: string,
+  description: string,
+  isActive: boolean,
+  isChecked: boolean,
+): string {
+  const pointer  = isActive ? colors.primary(symbols.pointer) : " ";
+  const checkbox = isChecked ? colors.success(symbols.boxChecked) : colors.dim(symbols.boxEmpty);
+  const badge    = kindColors[kind as keyof typeof kindColors]
+    ? kindColors[kind as keyof typeof kindColors](`[${kind}]`)
+    : colors.muted(`[${kind}]`);
+  const label    = isActive ? colors.textBold(name) : name;
+  const cat      = colors.muted(`·${category}`);
+  const desc     = description.length > 45 ? description.slice(0, 42) + "…" : description;
 
-  for (const [name, count] of sortedCategories.slice(0, 8)) {
-    badges.push(`${colors.muted(name)}${colors.dim(`:${count}`)}`);
-  }
-
-  if (sortedCategories.length > 8) {
-    badges.push(colors.dim(`+${sortedCategories.length - 8} more`));
-  }
-
-  return badges.join(colors.dim(" │ "));
+  return (
+    `${pointer} ${checkbox} ${badge} ${label} ${cat}\n` +
+    `      ${colors.dim(desc)}`
+  );
 }
 
 export function renderInstallSummary(
   modes: Mode[],
-  agents: Array<{ name: string; displayName: string }>,
+  agentList: Array<{ name: string; displayName: string }>,
   global: boolean,
 ): string {
   const lines: string[] = [];
+  const divider = colors.dim(box.horizontal.repeat(44));
 
-  lines.push(colors.textBold("Installation Summary"));
-  lines.push(colors.dim("─".repeat(40)));
+  lines.push(colors.primaryBold("Installation Summary"));
+  lines.push(divider);
   lines.push("");
-
-  lines.push(`${colors.primary(symbols.package)} ${colors.textBold("Modes:")} ${modes.length}`);
-  for (const mode of modes.slice(0, 5)) {
-    lines.push(`  ${colors.dim(symbols.bullet)} ${mode.name}`);
+  lines.push(`${colors.primary(symbols.package)} ${colors.textBold("Assets:")} ${modes.length}`);
+  for (const m of modes.slice(0, 5)) {
+    lines.push(`  ${colors.dim(symbols.bullet)} ${m.name}`);
   }
-  if (modes.length > 5) {
-    lines.push(colors.dim(`  ... and ${modes.length - 5} more`));
-  }
+  if (modes.length > 5) lines.push(colors.dim(`  … and ${modes.length - 5} more`));
 
   lines.push("");
-  lines.push(`${colors.secondary(symbols.folder)} ${colors.textBold("Agents:")} ${agents.length}`);
-  for (const agent of agents) {
-    lines.push(`  ${colors.dim(symbols.bullet)} ${agent.displayName}`);
+  lines.push(`${colors.secondary(symbols.folder)} ${colors.textBold("Targets:")} ${agentList.length}`);
+  for (const a of agentList) {
+    lines.push(`  ${colors.dim(symbols.bullet)} ${a.displayName}`);
   }
 
   lines.push("");
   lines.push(`${colors.muted(symbols.info)} ${colors.textBold("Scope:")} ${global ? "Global" : "Project"}`);
-
-  const totalOps = modes.length * agents.length;
+  const total = modes.length * agentList.length;
   lines.push("");
-  lines.push(colors.dim(`Total: ${totalOps} installation${totalOps !== 1 ? "s" : ""}`));
+  lines.push(colors.dim(`${total} operation${total !== 1 ? "s" : ""} total`));
 
-  return box.topLeft + box.horizontal.repeat(42) + box.topRight + "\n" + lines.join("\n");
+  return lines.join("\n");
 }
 
 export default {
@@ -158,5 +153,6 @@ export default {
   renderModeList,
   renderSimpleModeList,
   renderCategoryBadges,
+  renderAssetRow,
   renderInstallSummary,
 };

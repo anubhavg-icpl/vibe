@@ -1,5 +1,5 @@
 // Theme exports
-export { theme, colors, symbols, box, createBox, highlight } from "./theme.js";
+export { theme, colors, symbols, box, kindColors, kindBadge, createBox, highlight } from "./theme.js";
 
 // Component exports
 export { renderHeader, renderCompactHeader, renderSuccessBanner, renderErrorBanner, renderSectionHeader } from "./components/header.js";
@@ -18,6 +18,7 @@ export {
   renderModeList,
   renderSimpleModeList,
   renderCategoryBadges,
+  renderAssetRow,
   renderInstallSummary,
   type CategoryTree,
 } from "./components/list.js";

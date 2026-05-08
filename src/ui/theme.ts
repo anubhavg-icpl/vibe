@@ -1,99 +1,136 @@
 import chalk from "chalk";
 
+/**
+ * Terminal color palette derived from the CSS custom properties.
+ *
+ * Mapping (OKLCH → nearest sRGB hex):
+ *   --primary          oklch(0.6171 0.1375  39.0°)  → #C8762A  warm amber
+ *   --chart-2          oklch(0.6898 0.1581 290.4°)  → #8855CC  soft purple
+ *   --chart-1          oklch(0.5583 0.1276  43.0°)  → #A0601C  deep amber
+ *   --destructive dark oklch(0.6368 0.2078  25.3°)  → #DC4B32  red-orange
+ *   --muted-foreground oklch(0.5341 0.0078  97.4°)  → #8A8270  warm gray
+ *   chart-3            oklch(0.8816 0.0276  93.1°)  → #D9C8A0  sand (accent)
+ */
 export const colors = {
-  // Primary - the "vibe" color
-  primary: chalk.hex("#7C3AED"),
-  primaryBg: chalk.bgHex("#7C3AED"),
-  primaryBold: chalk.hex("#7C3AED").bold,
+  // ── Primary ─ warm amber ─────────────────────────────────────────────────
+  primary:     chalk.hex("#C8762A"),
+  primaryBg:   chalk.bgHex("#C8762A"),
+  primaryBold: chalk.hex("#C8762A").bold,
 
-  // Secondary - cyan accent
-  secondary: chalk.hex("#06B6D4"),
-  secondaryBg: chalk.bgHex("#06B6D4"),
-  secondaryBold: chalk.hex("#06B6D4").bold,
+  // ── Secondary ─ soft purple (chart-2) ────────────────────────────────────
+  secondary:     chalk.hex("#8855CC"),
+  secondaryBg:   chalk.bgHex("#8855CC"),
+  secondaryBold: chalk.hex("#8855CC").bold,
 
-  // Success - emerald
-  success: chalk.hex("#10B981"),
-  successBg: chalk.bgHex("#10B981"),
-  successBold: chalk.hex("#10B981").bold,
+  // ── Success ─ complementary sage green ───────────────────────────────────
+  success:     chalk.hex("#4BAF78"),
+  successBg:   chalk.bgHex("#4BAF78"),
+  successBold: chalk.hex("#4BAF78").bold,
 
-  // Warning - amber
-  warning: chalk.hex("#F59E0B"),
-  warningBg: chalk.bgHex("#F59E0B"),
-  warningBold: chalk.hex("#F59E0B").bold,
+  // ── Warning ─ deep amber (chart-1) ───────────────────────────────────────
+  warning:     chalk.hex("#A0601C"),
+  warningBg:   chalk.bgHex("#A0601C"),
+  warningBold: chalk.hex("#A0601C").bold,
 
-  // Error - red
-  error: chalk.hex("#EF4444"),
-  errorBg: chalk.bgHex("#EF4444"),
-  errorBold: chalk.hex("#EF4444").bold,
+  // ── Error ─ red-orange (--destructive dark) ───────────────────────────────
+  error:     chalk.hex("#DC4B32"),
+  errorBg:   chalk.bgHex("#DC4B32"),
+  errorBold: chalk.hex("#DC4B32").bold,
 
-  // Accent - pink
-  accent: chalk.hex("#F472B6"),
-  accentBg: chalk.bgHex("#F472B6"),
-  accentBold: chalk.hex("#F472B6").bold,
+  // ── Accent ─ bright warm gold ─────────────────────────────────────────────
+  accent:     chalk.hex("#E09840"),
+  accentBg:   chalk.bgHex("#E09840"),
+  accentBold: chalk.hex("#E09840").bold,
 
-  // Neutral colors
-  dim: chalk.dim,
-  muted: chalk.hex("#9CA3AF"),
-  text: chalk.white,
-  textBold: chalk.white.bold,
+  // ── Neutral ──────────────────────────────────────────────────────────────
+  dim:      chalk.dim,
+  muted:    chalk.hex("#8A8270"),   // --muted-foreground warm gray
+  text:     chalk.hex("#F0EDE8"),   // near-white warm
+  textBold: chalk.hex("#F0EDE8").bold,
 
-  // Gradient effect for special text
-  gradient: (text: string) => {
-    const gradientColors = ["#7C3AED", "#A855F7", "#EC4899", "#F472B6"];
+  // ── Amber shimmer gradient ────────────────────────────────────────────────
+  gradient: (text: string): string => {
+    const gc = ["#C8762A", "#D4882E", "#E09A32", "#E8AA48", "#D4882E", "#C8762A"];
     return text
       .split("")
-      .map((char, i) => chalk.hex(gradientColors[i % gradientColors.length])(char))
+      .map((ch, i) => chalk.hex(gc[i % gc.length])(ch))
       .join("");
   },
 };
 
+/**
+ * Per-kind color palette for asset type badges.
+ * Matches the CSS chart palette: skill=amber, agent=purple, command=green, mode=blue.
+ */
+export const kindColors = {
+  skill:   chalk.hex("#C8762A").bold,   // primary amber
+  agent:   chalk.hex("#8855CC").bold,   // chart-2 purple
+  command: chalk.hex("#4BAF78").bold,   // complementary green
+  mode:    chalk.hex("#4888D0").bold,   // soft blue
+} as const;
+
+export const kindBadge = {
+  skill:   chalk.bgHex("#3A2008").hex("#E09840"),
+  agent:   chalk.bgHex("#1E0D3A").hex("#AA80E8"),
+  command: chalk.bgHex("#0A2818").hex("#6ACA94"),
+  mode:    chalk.bgHex("#0A1C3A").hex("#70A8E8"),
+} as const;
+
 export const symbols = {
-  check: "✓",
-  cross: "✗",
-  arrow: "→",
+  check:      "✓",
+  cross:      "✗",
+  arrow:      "→",
   arrowRight: "▶",
-  arrowDown: "▼",
-  bullet: "•",
-  dot: "·",
-  radioOn: "◉",
-  radioOff: "○",
-  boxEmpty: "☐",
+  arrowDown:  "▼",
+  bullet:     "•",
+  dot:        "·",
+  radioOn:    "◉",
+  radioOff:   "○",
+  boxEmpty:   "☐",
   boxChecked: "☑",
-  pointer: "❯",
-  info: "ℹ",
-  warning: "⚠",
-  star: "★",
-  sparkle: "✨",
-  lightning: "⚡",
-  search: "🔍",
-  folder: "📁",
-  file: "📄",
-  package: "📦",
+  pointer:    "❯",
+  info:       "ℹ",
+  warning:    "⚠",
+  star:       "★",
+  sparkle:    "✦",
+  lightning:  "⚡",
+  search:     "⌕",
+  folder:     "⊞",
+  file:       "⊟",
+  package:    "◈",
+  pipe:       "│",
+  tee:        "├",
+  corner:     "└",
 };
 
 export const box = {
-  topLeft: "╭",
-  topRight: "╮",
-  bottomLeft: "╰",
-  bottomRight: "╯",
-  horizontal: "─",
-  vertical: "│",
-  // Double lines for headers
-  doubleHorizontal: "═",
-  doubleVertical: "║",
-  doubleTopLeft: "╔",
-  doubleTopRight: "╗",
+  topLeft:      "╭",
+  topRight:     "╮",
+  bottomLeft:   "╰",
+  bottomRight:  "╯",
+  horizontal:   "─",
+  vertical:     "│",
+  // Heavy lines used for section headers
+  heavyH:       "━",
+  // Double lines for special panels
+  doubleH:      "═",
+  doubleTopLeft:    "╔",
+  doubleTopRight:   "╗",
   doubleBottomLeft: "╚",
-  doubleBottomRight: "╝",
+  doubleBottomRight:"╝",
+  doubleV:      "║",
 };
 
 export function createBox(content: string, title?: string, width = 50): string {
   const lines = content.split("\n");
-  const maxLineWidth = Math.max(...lines.map((l) => stripAnsi(l).length), title ? stripAnsi(title).length + 4 : 0);
+  const maxLineWidth = Math.max(
+    ...lines.map((l) => stripAnsi(l).length),
+    title ? stripAnsi(title).length + 4 : 0,
+  );
   const boxWidth = Math.max(width, maxLineWidth + 4);
 
   const top = title
-    ? `${box.topLeft}${box.horizontal} ${colors.primaryBold(title)} ${box.horizontal.repeat(boxWidth - stripAnsi(title).length - 5)}${box.topRight}`
+    ? `${box.topLeft}${box.horizontal} ${colors.primaryBold(title)} ${box.horizontal.repeat(Math.max(0, boxWidth - stripAnsi(title).length - 5))}${box.topRight}`
     : `${box.topLeft}${box.horizontal.repeat(boxWidth - 2)}${box.topRight}`;
 
   const bottom = `${box.bottomLeft}${box.horizontal.repeat(boxWidth - 2)}${box.bottomRight}`;
@@ -113,12 +150,10 @@ function stripAnsi(str: string): string {
 
 export function highlight(text: string, query: string): string {
   if (!query) return text;
-
   const lowerText = text.toLowerCase();
   const lowerQuery = query.toLowerCase();
   let result = "";
   let lastIndex = 0;
-
   for (let i = 0; i < lowerText.length; i++) {
     if (lowerQuery.includes(lowerText[i])) {
       result += text.slice(lastIndex, i);
@@ -126,17 +161,9 @@ export function highlight(text: string, query: string): string {
       lastIndex = i + 1;
     }
   }
-
   result += text.slice(lastIndex);
   return result;
 }
 
-export const theme = {
-  colors,
-  symbols,
-  box,
-  createBox,
-  highlight,
-};
-
+export const theme = { colors, symbols, box, kindColors, kindBadge, createBox, highlight };
 export default theme;

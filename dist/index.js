@@ -867,40 +867,58 @@ function formatError(error, version) {
 // src/ui/theme.ts
 import chalk from "chalk";
 var colors = {
-  // Primary - the "vibe" color
-  primary: chalk.hex("#7C3AED"),
-  primaryBg: chalk.bgHex("#7C3AED"),
-  primaryBold: chalk.hex("#7C3AED").bold,
-  // Secondary - cyan accent
-  secondary: chalk.hex("#06B6D4"),
-  secondaryBg: chalk.bgHex("#06B6D4"),
-  secondaryBold: chalk.hex("#06B6D4").bold,
-  // Success - emerald
-  success: chalk.hex("#10B981"),
-  successBg: chalk.bgHex("#10B981"),
-  successBold: chalk.hex("#10B981").bold,
-  // Warning - amber
-  warning: chalk.hex("#F59E0B"),
-  warningBg: chalk.bgHex("#F59E0B"),
-  warningBold: chalk.hex("#F59E0B").bold,
-  // Error - red
-  error: chalk.hex("#EF4444"),
-  errorBg: chalk.bgHex("#EF4444"),
-  errorBold: chalk.hex("#EF4444").bold,
-  // Accent - pink
-  accent: chalk.hex("#F472B6"),
-  accentBg: chalk.bgHex("#F472B6"),
-  accentBold: chalk.hex("#F472B6").bold,
-  // Neutral colors
+  // ── Primary ─ warm amber ─────────────────────────────────────────────────
+  primary: chalk.hex("#C8762A"),
+  primaryBg: chalk.bgHex("#C8762A"),
+  primaryBold: chalk.hex("#C8762A").bold,
+  // ── Secondary ─ soft purple (chart-2) ────────────────────────────────────
+  secondary: chalk.hex("#8855CC"),
+  secondaryBg: chalk.bgHex("#8855CC"),
+  secondaryBold: chalk.hex("#8855CC").bold,
+  // ── Success ─ complementary sage green ───────────────────────────────────
+  success: chalk.hex("#4BAF78"),
+  successBg: chalk.bgHex("#4BAF78"),
+  successBold: chalk.hex("#4BAF78").bold,
+  // ── Warning ─ deep amber (chart-1) ───────────────────────────────────────
+  warning: chalk.hex("#A0601C"),
+  warningBg: chalk.bgHex("#A0601C"),
+  warningBold: chalk.hex("#A0601C").bold,
+  // ── Error ─ red-orange (--destructive dark) ───────────────────────────────
+  error: chalk.hex("#DC4B32"),
+  errorBg: chalk.bgHex("#DC4B32"),
+  errorBold: chalk.hex("#DC4B32").bold,
+  // ── Accent ─ bright warm gold ─────────────────────────────────────────────
+  accent: chalk.hex("#E09840"),
+  accentBg: chalk.bgHex("#E09840"),
+  accentBold: chalk.hex("#E09840").bold,
+  // ── Neutral ──────────────────────────────────────────────────────────────
   dim: chalk.dim,
-  muted: chalk.hex("#9CA3AF"),
-  text: chalk.white,
-  textBold: chalk.white.bold,
-  // Gradient effect for special text
+  muted: chalk.hex("#8A8270"),
+  // --muted-foreground warm gray
+  text: chalk.hex("#F0EDE8"),
+  // near-white warm
+  textBold: chalk.hex("#F0EDE8").bold,
+  // ── Amber shimmer gradient ────────────────────────────────────────────────
   gradient: (text) => {
-    const gradientColors = ["#7C3AED", "#A855F7", "#EC4899", "#F472B6"];
-    return text.split("").map((char, i) => chalk.hex(gradientColors[i % gradientColors.length])(char)).join("");
+    const gc = ["#C8762A", "#D4882E", "#E09A32", "#E8AA48", "#D4882E", "#C8762A"];
+    return text.split("").map((ch, i) => chalk.hex(gc[i % gc.length])(ch)).join("");
   }
+};
+var kindColors = {
+  skill: chalk.hex("#C8762A").bold,
+  // primary amber
+  agent: chalk.hex("#8855CC").bold,
+  // chart-2 purple
+  command: chalk.hex("#4BAF78").bold,
+  // complementary green
+  mode: chalk.hex("#4888D0").bold
+  // soft blue
+};
+var kindBadge = {
+  skill: chalk.bgHex("#3A2008").hex("#E09840"),
+  agent: chalk.bgHex("#1E0D3A").hex("#AA80E8"),
+  command: chalk.bgHex("#0A2818").hex("#6ACA94"),
+  mode: chalk.bgHex("#0A1C3A").hex("#70A8E8")
 };
 var symbols = {
   check: "\u2713",
@@ -918,28 +936,50 @@ var symbols = {
   info: "\u2139",
   warning: "\u26A0",
   star: "\u2605",
-  sparkle: "\u2728",
+  sparkle: "\u2726",
   lightning: "\u26A1",
-  search: "\u{1F50D}",
-  folder: "\u{1F4C1}",
-  file: "\u{1F4C4}",
-  package: "\u{1F4E6}"
+  search: "\u2315",
+  folder: "\u229E",
+  file: "\u229F",
+  package: "\u25C8",
+  pipe: "\u2502",
+  tee: "\u251C",
+  corner: "\u2514"
+};
+var box = {
+  topLeft: "\u256D",
+  topRight: "\u256E",
+  bottomLeft: "\u2570",
+  bottomRight: "\u256F",
+  horizontal: "\u2500",
+  vertical: "\u2502",
+  // Heavy lines used for section headers
+  heavyH: "\u2501",
+  // Double lines for special panels
+  doubleH: "\u2550",
+  doubleTopLeft: "\u2554",
+  doubleTopRight: "\u2557",
+  doubleBottomLeft: "\u255A",
+  doubleBottomRight: "\u255D",
+  doubleV: "\u2551"
 };
 
 // src/ui/components/header.ts
 var BANNER = `
   \u2566  \u2566\u2566\u2554\u2557 \u2554\u2550\u2557
   \u255A\u2557\u2554\u255D\u2551\u2560\u2569\u2557\u2551\u2563
-   \u255A\u255D \u2569\u255A\u2550\u255D\u255A\u2550\u255D
-`;
+   \u255A\u255D \u2569\u255A\u2550\u255D\u255A\u2550\u255D`;
+var WIDTH = 52;
 function renderHeader(version, subtitle) {
-  const coloredBanner = colors.gradient(BANNER);
-  const versionTag = colors.muted(`v${version}`);
-  const subLine = subtitle || "AI Mode Installer for Coding Agents";
+  const logo = colors.gradient(BANNER);
+  const ver = colors.muted(`v${version}`);
+  const sub = subtitle ?? "AI Agent Asset Manager";
+  const divider = colors.primary(box.heavyH.repeat(WIDTH));
   return `
-${coloredBanner}  ${versionTag}
+${logo}  ${ver}
 
-  ${colors.dim(subLine)}
+  ${colors.dim(sub)}
+${divider}
 `;
 }
 
@@ -1002,50 +1042,38 @@ function renderInstallResultCard(results) {
   const lines = [];
   if (successful.length > 0) {
     lines.push(
-      colors.successBold(
-        `${symbols.check} Installed ${successful.length} item${successful.length === 1 ? "" : "s"}:`
-      )
+      colors.successBold(`${symbols.check} Installed ${successful.length} item${successful.length === 1 ? "" : "s"}:`)
     );
     for (const r of successful.slice(0, 10)) {
-      const tag = r.kind ? colors.muted(`[${r.kind}]`) + " " : "";
+      const kindTag = r.kind ? kindColors[r.kind]?.(`[${r.kind}] `) ?? colors.muted(`[${r.kind}] `) : "";
       lines.push(
-        `  ${colors.success(symbols.bullet)} ${tag}${labelOf(r)} ${colors.dim("\u2192")} ${r.agent}`
+        `  ${colors.success(symbols.bullet)} ${kindTag}${labelOf(r)} ${colors.dim("\u2192")} ${r.agent}`
       );
     }
-    if (successful.length > 10) {
-      lines.push(colors.dim(`  ... and ${successful.length - 10} more`));
-    }
+    if (successful.length > 10) lines.push(colors.dim(`  \u2026 and ${successful.length - 10} more`));
   }
   if (skipped.length > 0) {
     if (successful.length > 0) lines.push("");
-    lines.push(
-      colors.warningBold(`${symbols.warning} Skipped ${skipped.length}:`)
-    );
+    lines.push(colors.warningBold(`${symbols.warning} Skipped ${skipped.length}:`));
     for (const r of skipped.slice(0, 5)) {
       lines.push(
-        `  ${colors.warning(symbols.bullet)} ${labelOf(r)} ${colors.dim("\u2192")} ${r.agent} ${r.reason ? colors.dim(`(${r.reason})`) : ""}`
+        `  ${colors.warning(symbols.bullet)} ${labelOf(r)} ${colors.dim("\u2192")} ${r.agent}` + (r.reason ? ` ${colors.dim(`(${r.reason})`)}` : "")
       );
     }
-    if (skipped.length > 5) {
-      lines.push(colors.dim(`  ... and ${skipped.length - 5} more`));
-    }
+    if (skipped.length > 5) lines.push(colors.dim(`  \u2026 and ${skipped.length - 5} more`));
   }
   if (failed.length > 0) {
     if (successful.length > 0 || skipped.length > 0) lines.push("");
-    lines.push(
-      colors.errorBold(`${symbols.cross} Failed ${failed.length}:`)
-    );
+    lines.push(colors.errorBold(`${symbols.cross} Failed ${failed.length}:`));
     for (const r of failed) {
-      lines.push(
-        `  ${colors.error(symbols.bullet)} ${labelOf(r)} ${colors.dim("\u2192")} ${r.agent}`
-      );
+      lines.push(`  ${colors.error(symbols.bullet)} ${labelOf(r)} ${colors.dim("\u2192")} ${r.agent}`);
       if (r.error) lines.push(`    ${colors.dim(r.error)}`);
     }
   }
   return boxen(lines.join("\n"), {
     padding: 1,
     borderStyle: "round",
-    borderColor: failed.length > 0 ? "#EF4444" : "#10B981",
+    borderColor: failed.length > 0 ? "#DC4B32" : "#4BAF78",
     title: "Installation Results",
     titleAlignment: "center"
   });
@@ -1055,22 +1083,16 @@ function renderInstallResultCard(results) {
 function renderProgressBar(options) {
   const { total, current, width = 30, showPercentage = true, showCount = true, label } = options;
   const percentage = total > 0 ? Math.round(current / total * 100) : 0;
-  const filled = Math.round(current / total * width);
+  const filled = total > 0 ? Math.round(current / total * width) : 0;
   const empty = width - filled;
-  const filledBar = colors.primary("\u2588".repeat(filled));
-  const emptyBar = colors.dim("\u2591".repeat(empty));
-  const bar = `[${filledBar}${emptyBar}]`;
+  const filledBar = colors.primary("\u25B0".repeat(filled));
+  const emptyBar = colors.dim("\u25B1".repeat(empty));
+  const bar = `${filledBar}${emptyBar}`;
   const parts = [bar];
-  if (showPercentage) {
-    parts.push(colors.secondary(`${percentage}%`));
-  }
-  if (showCount) {
-    parts.push(colors.muted(`(${current}/${total})`));
-  }
-  if (label) {
-    parts.push(colors.dim(label));
-  }
-  return parts.join(" ");
+  if (showPercentage) parts.push(colors.accent(`${percentage}%`));
+  if (showCount) parts.push(colors.muted(`(${current}/${total})`));
+  if (label) parts.push(colors.dim(label));
+  return parts.join("  ");
 }
 
 // src/index.ts
