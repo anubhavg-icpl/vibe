@@ -174,8 +174,8 @@
     ]
   },
   "attribution": {
-    "commit": "Co-Authored-By: RuFlo <ruv@ruv.net>",
-    "pr": "🤖 Generated with [RuFlo](https://github.com/ruvnet/ruflo)"
+    "commit": "Co-Authored-By: mranv <imanubhavgain@gmail.com>",
+    "pr": "Co-Authored-By: mranv <imanubhavgain@gmail.com>"
   },
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
