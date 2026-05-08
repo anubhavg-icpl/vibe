@@ -1098,13 +1098,16 @@ function renderProgressBar(options) {
 // src/ui/components/startup.ts
 import chalk2 from "chalk";
 var LOGO = [
-  " \u2588\u2588\u2557   \u2588\u2588\u2557\u2588\u2588\u2557\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
-  " \u2588\u2588\u2551   \u2588\u2588\u2551\u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255D",
-  " \u2588\u2588\u2551   \u2588\u2588\u2551\u2588\u2588\u2551\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D\u2588\u2588\u2588\u2588\u2588\u2557  ",
-  " \u255A\u2588\u2588\u2557 \u2588\u2588\u2554\u255D\u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u255D  ",
-  "  \u255A\u2588\u2588\u2588\u2588\u2554\u255D \u2588\u2588\u2551\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
-  "   \u255A\u2550\u2550\u2550\u255D  \u255A\u2550\u255D\u255A\u2550\u2550\u2550\u2550\u2550\u255D \u255A\u2550\u2550\u2550\u2550\u2550\u2550\u255D"
+  "  \u2588\u2588\u2557   \u2588\u2588\u2557  \u2588\u2588\u2557  \u2588\u2588\u2588\u2588\u2588\u2588\u2557   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
+  "  \u2588\u2588\u2551   \u2588\u2588\u2551  \u2588\u2588\u2551  \u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557  \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255D",
+  "  \u2588\u2588\u2551   \u2588\u2588\u2551  \u2588\u2588\u2551  \u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D  \u2588\u2588\u2588\u2588\u2588\u2557  ",
+  "  \u255A\u2588\u2588\u2557 \u2588\u2588\u2554\u255D  \u2588\u2588\u2551  \u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557  \u2588\u2588\u2554\u2550\u2550\u255D  ",
+  "   \u255A\u2588\u2588\u2588\u2588\u2554\u255D   \u2588\u2588\u2551  \u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
+  "    \u255A\u2550\u2550\u2550\u255D    \u255A\u2550\u255D  \u255A\u2550\u2550\u2550\u2550\u2550\u255D   \u255A\u2550\u2550\u2550\u2550\u2550\u2550\u255D"
 ];
+var TAGLINE = "AI  Agent  Asset  Manager";
+var CREDIT = "Made by Anubhav Gain  \xB7  anubhavg@infopercept.com";
+var HINT = "Press any key to continue\u2026";
 var RAMP = [
   "#1A0900",
   "#3A1808",
@@ -1118,91 +1121,125 @@ var RAMP = [
 ];
 var PRIMARY = "#C8762A";
 var MUTED = "#8A8270";
+var DIM = "#3A3028";
+var SUCCESS = "#4BAF78";
 var SPINNER = ["\u280B", "\u2819", "\u2839", "\u2838", "\u283C", "\u2834", "\u2826", "\u2827", "\u2807", "\u280F"];
-var LOGO_W = LOGO[0].length;
-var BOX_W = 42;
-var FRAME_MS = 60;
-var MIN_MS = 1500;
-var READY_MS = 300;
+var FRAME_MS = 50;
 var ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
 var visLen = (s) => s.replace(ANSI_RE, "").length;
-function pad(content, total) {
-  const spaces = total - visLen(content);
-  return content + " ".repeat(Math.max(0, spaces));
-}
-function border(char) {
-  return chalk2.hex(PRIMARY)(char);
-}
-function row(content) {
-  return border("\u2502") + " " + pad(content, BOX_W) + " " + border("\u2502");
-}
-function hRule(left, right, mid = "\u2500") {
-  return border(left + mid.repeat(BOX_W + 2) + right);
-}
-function colorLogoLine(line, sweepX) {
+var LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
+var INNER_W = LOGO_W + 6;
+function colorLine(line, sweepX) {
   return line.split("").map((ch, i) => {
     if (ch === " ") return ch;
     const dist = Math.abs(i - sweepX);
-    const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (LOGO_W * 0.6))));
+    const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (LOGO_W * 0.5))));
     return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
   }).join("");
 }
-function buildFrame(version, tick, elapsed, status) {
+function boxRow(content) {
+  const vw = visLen(content);
+  const lp = Math.max(0, Math.floor((INNER_W - vw) / 2));
+  const rp = Math.max(0, INNER_W - vw - lp);
+  return chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(lp) + content + " ".repeat(rp) + " " + chalk2.hex(PRIMARY)("\u2551");
+}
+function hRule(l, r, m = "\u2550") {
+  return chalk2.hex(PRIMARY)(l + m.repeat(INNER_W + 2) + r);
+}
+function buildFrame(version, tick, status, ready) {
+  const cols = process.stdout.columns || 80;
+  const rows = process.stdout.rows || 24;
   const period = LOGO_W * 2;
   const phase = tick % period;
   const sweepX = phase <= LOGO_W ? phase : period - phase;
-  const spinnerCh = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
-  const statusText = chalk2.hex(MUTED)(status);
-  const lines = [];
-  lines.push(hRule("\u256D", "\u256E"));
-  lines.push(row(""));
-  for (const logoLine of LOGO) {
-    const colored = colorLogoLine(logoLine, sweepX);
-    const padded = colored + " ".repeat(Math.max(0, BOX_W - LOGO_W));
-    lines.push(border("\u2502") + " " + padded + " " + border("\u2502"));
+  const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const box2 = [];
+  box2.push(hRule("\u2554", "\u2557"));
+  box2.push(boxRow(""));
+  for (const raw of LOGO) {
+    const colored = colorLine(raw, sweepX);
+    const lp = Math.floor((INNER_W - raw.length) / 2);
+    const rp = INNER_W - raw.length - lp;
+    box2.push(
+      chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) + " " + chalk2.hex(PRIMARY)("\u2551")
+    );
   }
-  lines.push(row(""));
-  lines.push(hRule("\u251C", "\u2524"));
-  lines.push(row(""));
-  lines.push(row(chalk2.hex(PRIMARY).bold("AI Agent Asset Manager")));
-  lines.push(row(chalk2.hex(MUTED)(`v${version}`)));
-  lines.push(row(""));
-  lines.push(row(`${spinnerCh}  ${statusText}`));
-  void elapsed;
-  lines.push(hRule("\u2570", "\u256F"));
-  return lines.join("\n") + "\n";
+  box2.push(boxRow(""));
+  box2.push(hRule("\u2560", "\u2563"));
+  box2.push(boxRow(""));
+  box2.push(boxRow(chalk2.hex(PRIMARY).bold(TAGLINE)));
+  box2.push(boxRow(chalk2.hex(MUTED)(`v${version}`)));
+  box2.push(boxRow(""));
+  if (ready) {
+    box2.push(boxRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready")));
+    box2.push(boxRow(""));
+    box2.push(boxRow(chalk2.hex(MUTED)(HINT)));
+  } else {
+    box2.push(boxRow(spin + "  " + chalk2.hex(MUTED)(status)));
+  }
+  box2.push(boxRow(""));
+  box2.push(hRule("\u255A", "\u255D"));
+  const boxH = box2.length;
+  const boxW = INNER_W + 4;
+  const leftPad = Math.max(0, Math.floor((cols - boxW) / 2));
+  const topPad = Math.max(0, Math.floor((rows - boxH) / 2));
+  const margin = " ".repeat(leftPad);
+  const blank = " ".repeat(cols);
+  const out = [];
+  for (let i = 0; i < topPad; i++) out.push(blank);
+  for (const l of box2) out.push(margin + l);
+  const remaining = rows - topPad - boxH;
+  for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
+  const creditVW = CREDIT.length;
+  const creditX = Math.max(1, cols - creditVW - 1);
+  const creditEsc = `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
+  return out.join("\n") + creditEsc;
+}
+function waitForKey() {
+  return new Promise((resolve2) => {
+    if (!process.stdin.isTTY) {
+      resolve2();
+      return;
+    }
+    process.stdin.setRawMode(true);
+    process.stdin.resume();
+    const onData = (chunk) => {
+      const key = Buffer.isBuffer(chunk) ? chunk.toString() : chunk;
+      process.stdin.removeListener("data", onData);
+      process.stdin.setRawMode(false);
+      process.stdin.pause();
+      if (key === "") {
+        process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
+        process.exit(0);
+      }
+      resolve2();
+    };
+    process.stdin.on("data", onData);
+  });
 }
 function startAnimation(version) {
   if (!process.stdout.isTTY) {
     return { stop: async () => void 0 };
   }
-  const testFrame = buildFrame(version, 0, 0, "Initializing");
-  const frameHeight = testFrame.split("\n").length - 1;
-  process.stdout.write("\n".repeat(frameHeight));
-  process.stdout.write("\x1B[?25l");
-  const startTime = Date.now();
+  process.stdout.write("\x1B[2J\x1B[H\x1B[?25l");
   let tick = 0;
   let stopped = false;
-  let stopResolve = null;
-  const stopPromise = new Promise((r) => {
-    stopResolve = r;
-  });
-  function getStatus() {
-    return Date.now() - startTime < 700 ? "Initializing" : "Loading assets";
+  let ready = false;
+  function statusMsg() {
+    return tick < 12 ? "Initializing\u2026" : "Loading assets\u2026";
   }
-  function render(status) {
-    const elapsed = Date.now() - startTime;
-    const frame = buildFrame(version, tick, elapsed, status);
-    process.stdout.write(`\x1B[${frameHeight}A` + frame);
+  function render(s) {
+    process.stdout.write("\x1B[H" + buildFrame(version, tick, s, ready));
   }
+  render(statusMsg());
   const interval = setInterval(() => {
     if (stopped) return;
     tick++;
-    render(getStatus());
+    render(statusMsg());
   }, FRAME_MS);
   function cleanup() {
     clearInterval(interval);
-    process.stdout.write(`\x1B[${frameHeight}A\x1B[J\x1B[?25h`);
+    process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
   }
   function handleSignal() {
     cleanup();
@@ -1212,21 +1249,15 @@ function startAnimation(version) {
   process.once("SIGTERM", handleSignal);
   return {
     async stop(finalStatus) {
-      const elapsed = Date.now() - startTime;
-      const remaining = MIN_MS - elapsed;
-      if (remaining > 0) {
-        await new Promise((r) => setTimeout(r, remaining));
-      }
       stopped = true;
       clearInterval(interval);
+      ready = true;
       tick++;
-      render(finalStatus ?? "Ready  \u2713");
-      await new Promise((r) => setTimeout(r, READY_MS));
+      render(finalStatus ?? "Ready");
+      await waitForKey();
       cleanup();
       process.removeListener("SIGINT", handleSignal);
       process.removeListener("SIGTERM", handleSignal);
-      stopResolve?.();
-      return stopPromise;
     }
   };
 }
