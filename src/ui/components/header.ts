@@ -1,4 +1,4 @@
-import { colors, symbols, box } from "../theme.js";
+import { colors, symbols, box, randomSarcasticQuote } from "../theme.js";
 
 // ASCII art for "vibe" — rendered with the amber gradient
 const BANNER = `
@@ -13,8 +13,9 @@ export function renderHeader(version: string, subtitle?: string): string {
   const ver      = colors.muted(`v${version}`);
   const sub      = subtitle ?? "AI Agent Asset Manager";
   const divider  = colors.primary(box.heavyH.repeat(WIDTH));
+  const quote    = colors.dim("  " + randomSarcasticQuote());
 
-  return `\n${logo}  ${ver}\n\n  ${colors.dim(sub)}\n${divider}\n`;
+  return `\n${logo}  ${ver}\n\n  ${colors.dim(sub)}\n${divider}\n${quote}\n`;
 }
 
 export function renderCompactHeader(version: string): string {

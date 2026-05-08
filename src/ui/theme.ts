@@ -165,5 +165,22 @@ export function highlight(text: string, query: string): string {
   return result;
 }
 
+export const SARCASTIC_QUOTES: string[] = [
+  "\"Code detective in a clown suit\" — his own GitHub bio",
+  "559 repos, 368 stars. Averaging 0.66 stars/repo since 2018.",
+  "Self-rated 95% in security skills. The other 5% is humility.",
+  "CEO and Security Engineer simultaneously. Also probably his own intern.",
+  "Published his phone number publicly. As a security professional. Bold move.",
+  "Lives in Raipur, Ahmedabad, AND Vadodara simultaneously. Quantum citizenship.",
+  "YOLO: the defining philosophy of both his commits and his threat model.",
+  "Has more GitHub repos than most people have GitHub followers.",
+  "Security researcher who apparently doesn't believe in private contact info.",
+  "Infopercept CEO by day, pushing to master without PRs by night.",
+];
+
+export function randomSarcasticQuote(): string {
+  return SARCASTIC_QUOTES[Math.floor(Math.random() * SARCASTIC_QUOTES.length)];
+}
+
 export const theme = { colors, symbols, box, kindColors, kindBadge, createBox, highlight };
 export default theme;

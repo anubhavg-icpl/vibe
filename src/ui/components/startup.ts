@@ -1,4 +1,37 @@
 import chalk from "chalk";
+import { randomSarcasticQuote } from "../theme.js";
+
+// ── ASCII pets ────────────────────────────────────────────────────────────────
+
+const PETS: string[][][] = [
+  // Cat - 3 frames
+  [
+    [" /\\_/\\ ", "( o.o )", " > ^ < ", " |   | ", "(___)  "],
+    [" /\\_/\\ ", "( -.- )", " > ^ < ", " |   | ", "(___)  "],
+    [" /\\_/\\ ", "( o.o )", " > ^ < ", " | | | ", "(___)  "],
+  ],
+  // Dog - 2 frames
+  [
+    ["  / \\  ", " (o  o)", "  \\__/ ", " / || \\", "/      \\"],
+    ["  / \\  ", " (o  o)", "  \\__/ ", " /    \\", "/ \\__/ \\"],
+  ],
+  // Fish - 3 frames
+  [
+    ["    ><>  ", "        ", "        "],
+    ["   ><>   ", " ~      ", "        "],
+    ["  ><>    ", "  ~  ~  ", "        "],
+  ],
+];
+
+const PET_COLORS = ["#C8762A", "#8855CC", "#4BAF78"];
+
+function renderPet(petIdx: number, frame: number): string[] {
+  const pet = PETS[petIdx % PETS.length];
+  const frames = pet.length;
+  const f = frame % frames;
+  const color = chalk.hex(PET_COLORS[petIdx % PET_COLORS.length]);
+  return pet[f].map((row) => color(row));
+}
 
 // ── Donut math (ported from github.com/Debajyati/asciiDonut) ─────────────────
 
@@ -176,7 +209,7 @@ const MIN_DONUT_H = 8;
 const GAP         = 1;
 const COMPACT_H   = 4;  // compact bar is always 4 rows
 
-function buildFrame(version: string, tick: number, status: string, ready: boolean): string {
+function buildFrame(version: string, tick: number, status: string, ready: boolean, quote: string): string {
   const cols = process.stdout.columns || 80;
   const rows = process.stdout.rows    || 24;
 
@@ -232,7 +265,29 @@ function buildFrame(version: string, tick: number, status: string, ready: boolea
   // ── Bottom-right credit ───────────────────────────────────────────────────
 
   const creditX = Math.max(1, cols - CREDIT.length - 1);
-  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk.hex(DIM)(CREDIT);
+
+  // ── Bottom-left pet ───────────────────────────────────────────────────────
+
+  const petIdx   = 0;  // cat — could randomise per-session
+  const petLines = renderPet(petIdx, tick);
+  const petH     = petLines.length;
+  let petAnsi    = "";
+  for (let pi = 0; pi < petH; pi++) {
+    const row = rows - petH + pi;
+    if (row >= 1) petAnsi += `\x1B[${row};2H` + petLines[pi];
+  }
+
+  // ── Sarcastic quote (bottom centre, above credit) ─────────────────────────
+
+  const quoteRow = rows - petH - 1;
+  const quoteAnsi = quoteRow >= 1
+    ? `\x1B[${quoteRow};2H` + chalk.hex(DIM2)(quote)
+    : "";
+
+  return out.join("\n")
+    + `\x1B[${rows};${creditX}H` + chalk.hex(DIM)(CREDIT)
+    + petAnsi
+    + quoteAnsi;
 }
 
 // ── Keypress ──────────────────────────────────────────────────────────────────
@@ -270,6 +325,7 @@ export function startAnimation(version: string): AnimController {
 
   process.stdout.write("\x1B[2J\x1B[H\x1B[?25l");
 
+  const quote = randomSarcasticQuote();
   let tick    = 0;
   let stopped = false;
   let ready   = false;
@@ -279,7 +335,7 @@ export function startAnimation(version: string): AnimController {
   }
 
   function render(s: string): void {
-    process.stdout.write("\x1B[H" + buildFrame(version, tick, s, ready));
+    process.stdout.write("\x1B[H" + buildFrame(version, tick, s, ready, quote));
   }
 
   render(statusMsg());

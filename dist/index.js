@@ -963,6 +963,21 @@ var box = {
   doubleBottomRight: "\u255D",
   doubleV: "\u2551"
 };
+var SARCASTIC_QUOTES = [
+  '"Code detective in a clown suit" \u2014 his own GitHub bio',
+  "559 repos, 368 stars. Averaging 0.66 stars/repo since 2018.",
+  "Self-rated 95% in security skills. The other 5% is humility.",
+  "CEO and Security Engineer simultaneously. Also probably his own intern.",
+  "Published his phone number publicly. As a security professional. Bold move.",
+  "Lives in Raipur, Ahmedabad, AND Vadodara simultaneously. Quantum citizenship.",
+  "YOLO: the defining philosophy of both his commits and his threat model.",
+  "Has more GitHub repos than most people have GitHub followers.",
+  "Security researcher who apparently doesn't believe in private contact info.",
+  "Infopercept CEO by day, pushing to master without PRs by night."
+];
+function randomSarcasticQuote() {
+  return SARCASTIC_QUOTES[Math.floor(Math.random() * SARCASTIC_QUOTES.length)];
+}
 
 // src/ui/components/header.ts
 var BANNER = `
@@ -975,11 +990,13 @@ function renderHeader(version, subtitle) {
   const ver = colors.muted(`v${version}`);
   const sub = subtitle ?? "AI Agent Asset Manager";
   const divider = colors.primary(box.heavyH.repeat(WIDTH));
+  const quote = colors.dim("  " + randomSarcasticQuote());
   return `
 ${logo}  ${ver}
 
   ${colors.dim(sub)}
 ${divider}
+${quote}
 `;
 }
 
@@ -1097,6 +1114,33 @@ function renderProgressBar(options) {
 
 // src/ui/components/startup.ts
 import chalk2 from "chalk";
+var PETS = [
+  // Cat - 3 frames
+  [
+    [" /\\_/\\ ", "( o.o )", " > ^ < ", " |   | ", "(___)  "],
+    [" /\\_/\\ ", "( -.- )", " > ^ < ", " |   | ", "(___)  "],
+    [" /\\_/\\ ", "( o.o )", " > ^ < ", " | | | ", "(___)  "]
+  ],
+  // Dog - 2 frames
+  [
+    ["  / \\  ", " (o  o)", "  \\__/ ", " / || \\", "/      \\"],
+    ["  / \\  ", " (o  o)", "  \\__/ ", " /    \\", "/ \\__/ \\"]
+  ],
+  // Fish - 3 frames
+  [
+    ["    ><>  ", "        ", "        "],
+    ["   ><>   ", " ~      ", "        "],
+    ["  ><>    ", "  ~  ~  ", "        "]
+  ]
+];
+var PET_COLORS = ["#C8762A", "#8855CC", "#4BAF78"];
+function renderPet(petIdx, frame) {
+  const pet = PETS[petIdx % PETS.length];
+  const frames = pet.length;
+  const f = frame % frames;
+  const color = chalk2.hex(PET_COLORS[petIdx % PET_COLORS.length]);
+  return pet[f].map((row) => color(row));
+}
 var DONUT_CHARS = ".,-~:;=!*#$@";
 function computeDonut(height, width, a, b) {
   const buf = new Array(width * height).fill(" ");
@@ -1230,7 +1274,7 @@ function buildFullBox(version, tick, status, ready) {
 var MIN_DONUT_H = 8;
 var GAP = 1;
 var COMPACT_H = 4;
-function buildFrame(version, tick, status, ready) {
+function buildFrame(version, tick, status, ready, quote) {
   const cols = process.stdout.columns || 80;
   const rows = process.stdout.rows || 24;
   const maxDonutH = rows - COMPACT_H - GAP - 2;
@@ -1264,7 +1308,17 @@ function buildFrame(version, tick, status, ready) {
   const remaining = rows - topPad - contentH;
   for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
   const creditX = Math.max(1, cols - CREDIT.length - 1);
-  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
+  const petIdx = 0;
+  const petLines = renderPet(petIdx, tick);
+  const petH = petLines.length;
+  let petAnsi = "";
+  for (let pi = 0; pi < petH; pi++) {
+    const row = rows - petH + pi;
+    if (row >= 1) petAnsi += `\x1B[${row};2H` + petLines[pi];
+  }
+  const quoteRow = rows - petH - 1;
+  const quoteAnsi = quoteRow >= 1 ? `\x1B[${quoteRow};2H` + chalk2.hex(DIM2)(quote) : "";
+  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT) + petAnsi + quoteAnsi;
 }
 function waitForKey() {
   return new Promise((resolve2) => {
@@ -1293,6 +1347,7 @@ function startAnimation(version) {
     return { stop: async () => void 0 };
   }
   process.stdout.write("\x1B[2J\x1B[H\x1B[?25l");
+  const quote = randomSarcasticQuote();
   let tick = 0;
   let stopped = false;
   let ready = false;
@@ -1300,7 +1355,7 @@ function startAnimation(version) {
     return tick < 12 ? "Initializing\u2026" : "Loading assets\u2026";
   }
   function render(s) {
-    process.stdout.write("\x1B[H" + buildFrame(version, tick, s, ready));
+    process.stdout.write("\x1B[H" + buildFrame(version, tick, s, ready, quote));
   }
   render(statusMsg());
   const interval = setInterval(() => {
