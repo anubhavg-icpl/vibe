@@ -1,33 +1,47 @@
 import chalk from "chalk";
 
-// ── ASCII art (evangelion.txt — agent hierarchy cascade) ─────────────────────
-// Source: github.com/devtooligan/awesome-ascii-art
+// ── Donut math (ported from github.com/Debajyati/asciiDonut) ─────────────────
 
-const ART = [
-  "              ||",
-  "              9|",
-  "         \\\\   ||   //",
-  "          \\\\  ||  //",
-  "            \\ || /        ||",
-  "             \\/\\/         10",
-  "             ^^^^    \\\\   ||   //",
-  "              00      \\\\  ||  //",
-  "             \\__/       \\ || /",
-  "                         \\/\\/",
-  "     ||                  (XXX)",
-  "     8|                   \\|/",
-  "\\\\   ||   //",
-  " \\\\  ||  //     ||",
-  "   \\ || /       7|",
-  "    \\/\\/   \\\\   ||   //",
-  "    (**)    \\\\  ||  //",
-  "      |       \\ || /",
-  "               \\/\\/",
-  "               ()()",
-  "                \\|",
-];
+const DONUT_CHARS = ".,-~:;=!*#$@";
 
-// ── VIBE block logo (ANSI Shadow) ────────────────────────────────────────────
+function computeDonut(height: number, width: number, a: number, b: number): string[] {
+  const buf: string[] = new Array(width * height).fill(" ");
+  const zbuf: number[] = new Array(width * height).fill(0);
+
+  const cosA = Math.cos(a), sinA = Math.sin(a);
+  const cosB = Math.cos(b), sinB = Math.sin(b);
+
+  for (let j = 0; j < 6.28; j += 0.07) {
+    const cosT = Math.cos(j), sinT = Math.sin(j);
+    for (let i = 0; i < 6.28; i += 0.02) {
+      const sinP = Math.sin(i), cosP = Math.cos(i);
+      const h = cosT + 2;
+      const d = 1 / (sinP * h * sinA + sinT * cosA + 5);
+      const t = sinP * h * cosA - sinT * sinA;
+      const x = ((width / 2) + (width / 2.5) * d * (cosP * h * cosB - t * sinB)) | 0;
+      const y = ((height / 2) + (height / 3)  * d * (cosP * h * sinB + t * cosB)) | 0;
+      const o = x + width * y;
+      const n = (8 * ((sinT * sinA - sinP * cosT * cosA) * cosB
+        - sinP * cosT * sinA - sinT * cosA - cosP * cosT * sinB)) | 0;
+
+      if (y >= 0 && y < height && x >= 0 && x < width && d > zbuf[o]) {
+        zbuf[o] = d;
+        const ci = Math.max(0, Math.min(n, DONUT_CHARS.length - 1));
+        const ri = Math.floor(ci * (RAMP.length - 1) / (DONUT_CHARS.length - 1));
+        buf[o] = chalk.hex(RAMP[ri])(DONUT_CHARS[ci]);
+      }
+    }
+  }
+
+  // Split flat buffer into rows of `width` chars
+  const rows: string[] = [];
+  for (let y = 0; y < height; y++) {
+    rows.push(buf.slice(y * width, (y + 1) * width).join(""));
+  }
+  return rows;
+}
+
+// ── Constants ─────────────────────────────────────────────────────────────────
 
 const LOGO = [
   "  ██╗   ██╗  ██╗  ██████╗   ███████╗",
@@ -62,38 +76,20 @@ const FRAME_MS = 50;
 const ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
 const visLen  = (s: string): number => s.replace(ANSI_RE, "").length;
 
-const ART_W  = ART.reduce((m, l) => Math.max(m, l.length), 0);   // 33
-const LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);  // 36
+const LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
 
-// ── Color sweep helper ───────────────────────────────────────────────────────
-
-function sweepColor(ch: string, col: number, sweepX: number, width: number): string {
-  if (ch === " ") return ch;
-  const dist = Math.abs(col - sweepX);
-  const idx  = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (width * 0.5))));
-  return chalk.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
-}
-
-function colorLine(line: string, sweepX: number, width: number): string {
-  return line.split("").map((ch, i) => sweepColor(ch, i, sweepX, width)).join("");
-}
-
-// ── Art renderer ─────────────────────────────────────────────────────────────
-
-// "Node" characters pulse to full brightness regardless of sweep
-const NODE_RE = /[()\[\]0-9^]/;
-
-function colorArtLine(line: string, sweepX: number): string {
+function colorLogoLine(line: string, sweepX: number): string {
   return line.split("").map((ch, i) => {
     if (ch === " ") return ch;
-    if (NODE_RE.test(ch)) return chalk.hex(RAMP[RAMP.length - 1])(ch);
-    return sweepColor(ch, i, sweepX, ART_W);
+    const dist = Math.abs(i - sweepX);
+    const idx  = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (LOGO_W * 0.5))));
+    return chalk.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
   }).join("");
 }
 
-// ── Box helpers ───────────────────────────────────────────────────────────────
+// ── Box helpers (double-line borders) ────────────────────────────────────────
 
-const INNER_W = Math.max(LOGO_W, 36) + 4;  // 40
+const INNER_W = LOGO_W + 4;  // 40
 
 function boxRow(content: string): string {
   const vw = visLen(content);
@@ -106,90 +102,88 @@ function hRule(l: string, r: string, m = "═"): string {
   return chalk.hex(PRIMARY)(l + m.repeat(INNER_W + 2) + r);
 }
 
-// ── Frame builder ─────────────────────────────────────────────────────────────
+// ── Full-screen frame ─────────────────────────────────────────────────────────
 
 function buildFrame(version: string, tick: number, status: string, ready: boolean): string {
   const cols = process.stdout.columns || 80;
   const rows = process.stdout.rows    || 24;
 
-  const period = Math.max(ART_W, LOGO_W) * 2;
-  const phase  = tick % period;
-  const sweepX = phase <= period / 2 ? phase : period - phase;
   const spin   = chalk.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const logoSweepX = (tick % (LOGO_W * 2));
+  const sweepX = logoSweepX <= LOGO_W ? logoSweepX : LOGO_W * 2 - logoSweepX;
 
-  const out: string[] = [];
-  const blank = " ".repeat(cols);
+  // ── VIBE box lines ────────────────────────────────────────────────────────
 
-  // ── Decide layout based on terminal height ────────────────────────────────
+  const box: string[] = [];
+  box.push(hRule("╔", "╗"));
+  box.push(boxRow(""));
+  for (const raw of LOGO) {
+    const colored = colorLogoLine(raw, sweepX);
+    const lp = Math.floor((INNER_W - raw.length) / 2);
+    const rp = INNER_W - raw.length - lp;
+    box.push(
+      chalk.hex(PRIMARY)("║") + " " +
+      " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) +
+      " " + chalk.hex(PRIMARY)("║")
+    );
+  }
+  box.push(boxRow(""));
+  box.push(hRule("╠", "╣"));
+  box.push(boxRow(""));
+  box.push(boxRow(chalk.hex(PRIMARY).bold(TAGLINE)));
+  box.push(boxRow(chalk.hex(MUTED)(`v${version}`)));
+  box.push(boxRow(""));
+  if (ready) {
+    box.push(boxRow(chalk.hex(SUCCESS)("✓") + "  " + chalk.hex(MUTED)("Ready")));
+    box.push(boxRow(""));
+    box.push(boxRow(chalk.hex(DIM2)(HINT)));
+  } else {
+    box.push(boxRow(spin + "  " + chalk.hex(MUTED)(status)));
+  }
+  box.push(boxRow(""));
+  box.push(hRule("╚", "╝"));
 
-  const boxH    = 3 + LOGO.length + 8;     // borders + padding + logo + info rows ≈ 17
-  const artH    = ART.length;              // 21
-  const gap     = 2;
-  const totalH  = artH + gap + boxH;
-  const showArt = rows >= totalH + 2;
+  const boxH = box.length;
+  const boxW = INNER_W + 4;
 
-  const contentH = showArt ? totalH : boxH;
+  // ── Donut dimensions (only render if there's room) ────────────────────────
+
+  const gap       = 1;
+  const donutH    = Math.max(10, rows - boxH - gap - 2);
+  const donutW    = Math.round(donutH * 3.6);   // match original 80/22 aspect
+  const showDonut = rows >= boxH + gap + 10 + 2 && donutW <= cols;
+
+  const contentH = showDonut ? donutH + gap + boxH : boxH;
   const topPad   = Math.max(0, Math.floor((rows - contentH) / 2));
 
-  // ── Top padding ───────────────────────────────────────────────────────────
+  // ── Build output lines ────────────────────────────────────────────────────
+
+  const blank  = " ".repeat(cols);
+  const out: string[] = [];
 
   for (let i = 0; i < topPad; i++) out.push(blank);
 
-  // ── ASCII art section ─────────────────────────────────────────────────────
-
-  if (showArt) {
-    const artLP = Math.max(0, Math.floor((cols - ART_W) / 2));
-    const artMargin = " ".repeat(artLP);
-    const artPad    = " ".repeat(cols - artLP - ART_W);
-
-    for (const raw of ART) {
-      const colored = colorArtLine(raw, sweepX);
-      const rp = " ".repeat(Math.max(0, ART_W - raw.length));
-      out.push(artMargin + colored + rp + artPad);
+  if (showDonut) {
+    const a = 1 + tick * 0.05;
+    const b = tick * 0.07;
+    const donutRows = computeDonut(donutH, donutW, a, b);
+    const donutLP = Math.max(0, Math.floor((cols - donutW) / 2));
+    const donutRP = Math.max(0, cols - donutLP - donutW);
+    const dMarginL = " ".repeat(donutLP);
+    const dMarginR = " ".repeat(donutRP);
+    for (const row of donutRows) {
+      out.push(dMarginL + row + dMarginR);
     }
     for (let i = 0; i < gap; i++) out.push(blank);
   }
 
-  // ── VIBE info box ─────────────────────────────────────────────────────────
+  // ── Box centered ─────────────────────────────────────────────────────────
 
-  const boxW    = INNER_W + 4;
-  const boxLP   = Math.max(0, Math.floor((cols - boxW) / 2));
-  const boxMargin = " ".repeat(boxLP);
-  const boxRPad   = " ".repeat(Math.max(0, cols - boxLP - boxW));
-
-  const addBox = (line: string) => out.push(boxMargin + line + boxRPad);
-
-  addBox(hRule("╔", "╗"));
-  addBox(boxRow(""));
-
-  for (const raw of LOGO) {
-    const colored = colorLine(raw, sweepX, LOGO_W);
-    const lp = Math.floor((INNER_W - raw.length) / 2);
-    const rp = INNER_W - raw.length - lp;
-    const logoLine =
-      chalk.hex(PRIMARY)("║") + " " +
-      " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) +
-      " " + chalk.hex(PRIMARY)("║");
-    addBox(logoLine);
-  }
-
-  addBox(boxRow(""));
-  addBox(hRule("╠", "╣"));
-  addBox(boxRow(""));
-  addBox(boxRow(chalk.hex(PRIMARY).bold(TAGLINE)));
-  addBox(boxRow(chalk.hex(MUTED)(`v${version}`)));
-  addBox(boxRow(""));
-
-  if (ready) {
-    addBox(boxRow(chalk.hex(SUCCESS)("✓") + "  " + chalk.hex(MUTED)("Ready")));
-    addBox(boxRow(""));
-    addBox(boxRow(chalk.hex(DIM2)(HINT)));
-  } else {
-    addBox(boxRow(spin + "  " + chalk.hex(MUTED)(status)));
-  }
-
-  addBox(boxRow(""));
-  addBox(hRule("╚", "╝"));
+  const boxLP     = Math.max(0, Math.floor((cols - boxW) / 2));
+  const boxRP     = Math.max(0, cols - boxLP - boxW);
+  const boxMarginL = " ".repeat(boxLP);
+  const boxMarginR = " ".repeat(boxRP);
+  for (const l of box) out.push(boxMarginL + l + boxMarginR);
 
   // ── Bottom padding ────────────────────────────────────────────────────────
 
@@ -199,12 +193,10 @@ function buildFrame(version: string, tick: number, status: string, ready: boolea
   // ── Bottom-right credit ───────────────────────────────────────────────────
 
   const creditX = Math.max(1, cols - CREDIT.length - 1);
-  const credit  = `\x1B[${rows};${creditX}H` + chalk.hex(DIM)(CREDIT);
-
-  return out.join("\n") + credit;
+  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk.hex(DIM)(CREDIT);
 }
 
-// ── Keypress ─────────────────────────────────────────────────────────────────
+// ── Keypress ──────────────────────────────────────────────────────────────────
 
 function waitForKey(): Promise<void> {
   return new Promise((resolve) => {
@@ -264,10 +256,7 @@ export function startAnimation(version: string): AnimController {
     process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
   }
 
-  function handleSignal(): void {
-    cleanup();
-    process.exit(0);
-  }
+  function handleSignal(): void { cleanup(); process.exit(0); }
 
   process.once("SIGINT",  handleSignal);
   process.once("SIGTERM", handleSignal);

@@ -359,27 +359,27 @@ async function main(source: string, options: CliOptions): Promise<void> {
       message: `${colors.primary("/")} Search assets`,
       placeholder: "name, keyword, or category  (Enter = show all)",
     });
-    if (p.isCancel(searchInput)) {
-      p.cancel("Cancelled");
-      process.exit(0);
-    }
-    const q = String(searchInput ?? "").trim().toLowerCase();
-    if (q) {
-      const before = assets.length;
-      assets = assets.filter(
-        (a) =>
-          a.name.toLowerCase().includes(q) ||
-          a.description.toLowerCase().includes(q) ||
-          a.category.toLowerCase().includes(q)
-      );
-      if (assets.length === 0) {
-        p.log.warn(colors.warning(`No assets matched "${q}" (${before} total)`));
-        process.exit(0);
+    // ESC cancels the search filter but does NOT exit — continues with all assets
+    if (!p.isCancel(searchInput)) {
+      const q = String(searchInput ?? "").trim().toLowerCase();
+      if (q) {
+        const before = assets.length;
+        const filtered = assets.filter(
+          (a) =>
+            a.name.toLowerCase().includes(q) ||
+            a.description.toLowerCase().includes(q) ||
+            a.category.toLowerCase().includes(q)
+        );
+        if (filtered.length === 0) {
+          p.log.warn(colors.warning(`No assets matched "${q}" — showing all ${before}`));
+        } else {
+          assets = filtered;
+          p.log.info(
+            `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched` +
+            ` ${colors.muted(`"${q}"`)}`
+          );
+        }
       }
-      p.log.info(
-        `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched` +
-        ` ${colors.muted(`"${q}"`)}`
-      );
     }
   }
 

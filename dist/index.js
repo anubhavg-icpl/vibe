@@ -1097,29 +1097,37 @@ function renderProgressBar(options) {
 
 // src/ui/components/startup.ts
 import chalk2 from "chalk";
-var ART = [
-  "              ||",
-  "              9|",
-  "         \\\\   ||   //",
-  "          \\\\  ||  //",
-  "            \\ || /        ||",
-  "             \\/\\/         10",
-  "             ^^^^    \\\\   ||   //",
-  "              00      \\\\  ||  //",
-  "             \\__/       \\ || /",
-  "                         \\/\\/",
-  "     ||                  (XXX)",
-  "     8|                   \\|/",
-  "\\\\   ||   //",
-  " \\\\  ||  //     ||",
-  "   \\ || /       7|",
-  "    \\/\\/   \\\\   ||   //",
-  "    (**)    \\\\  ||  //",
-  "      |       \\ || /",
-  "               \\/\\/",
-  "               ()()",
-  "                \\|"
-];
+var DONUT_CHARS = ".,-~:;=!*#$@";
+function computeDonut(height, width, a, b) {
+  const buf = new Array(width * height).fill(" ");
+  const zbuf = new Array(width * height).fill(0);
+  const cosA = Math.cos(a), sinA = Math.sin(a);
+  const cosB = Math.cos(b), sinB = Math.sin(b);
+  for (let j = 0; j < 6.28; j += 0.07) {
+    const cosT = Math.cos(j), sinT = Math.sin(j);
+    for (let i = 0; i < 6.28; i += 0.02) {
+      const sinP = Math.sin(i), cosP = Math.cos(i);
+      const h = cosT + 2;
+      const d = 1 / (sinP * h * sinA + sinT * cosA + 5);
+      const t = sinP * h * cosA - sinT * sinA;
+      const x = width / 2 + width / 2.5 * d * (cosP * h * cosB - t * sinB) | 0;
+      const y = height / 2 + height / 3 * d * (cosP * h * sinB + t * cosB) | 0;
+      const o = x + width * y;
+      const n = 8 * ((sinT * sinA - sinP * cosT * cosA) * cosB - sinP * cosT * sinA - sinT * cosA - cosP * cosT * sinB) | 0;
+      if (y >= 0 && y < height && x >= 0 && x < width && d > zbuf[o]) {
+        zbuf[o] = d;
+        const ci = Math.max(0, Math.min(n, DONUT_CHARS.length - 1));
+        const ri = Math.floor(ci * (RAMP.length - 1) / (DONUT_CHARS.length - 1));
+        buf[o] = chalk2.hex(RAMP[ri])(DONUT_CHARS[ci]);
+      }
+    }
+  }
+  const rows = [];
+  for (let y = 0; y < height; y++) {
+    rows.push(buf.slice(y * width, (y + 1) * width).join(""));
+  }
+  return rows;
+}
 var LOGO = [
   "  \u2588\u2588\u2557   \u2588\u2588\u2557  \u2588\u2588\u2557  \u2588\u2588\u2588\u2588\u2588\u2588\u2557   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
   "  \u2588\u2588\u2551   \u2588\u2588\u2551  \u2588\u2588\u2551  \u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557  \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255D",
@@ -1151,26 +1159,16 @@ var SPINNER = ["\u280B", "\u2819", "\u2839", "\u2838", "\u283C", "\u2834", "\u28
 var FRAME_MS = 50;
 var ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
 var visLen = (s) => s.replace(ANSI_RE, "").length;
-var ART_W = ART.reduce((m, l) => Math.max(m, l.length), 0);
 var LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
-function sweepColor(ch, col, sweepX, width) {
-  if (ch === " ") return ch;
-  const dist = Math.abs(col - sweepX);
-  const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (width * 0.5))));
-  return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
-}
-function colorLine(line, sweepX, width) {
-  return line.split("").map((ch, i) => sweepColor(ch, i, sweepX, width)).join("");
-}
-var NODE_RE = /[()\[\]0-9^]/;
-function colorArtLine(line, sweepX) {
+function colorLogoLine(line, sweepX) {
   return line.split("").map((ch, i) => {
     if (ch === " ") return ch;
-    if (NODE_RE.test(ch)) return chalk2.hex(RAMP[RAMP.length - 1])(ch);
-    return sweepColor(ch, i, sweepX, ART_W);
+    const dist = Math.abs(i - sweepX);
+    const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (LOGO_W * 0.5))));
+    return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
   }).join("");
 }
-var INNER_W = Math.max(LOGO_W, 36) + 4;
+var INNER_W = LOGO_W + 4;
 function boxRow(content) {
   const vw = visLen(content);
   const lp = Math.max(0, Math.floor((INNER_W - vw) / 2));
@@ -1183,65 +1181,68 @@ function hRule(l, r, m = "\u2550") {
 function buildFrame(version, tick, status, ready) {
   const cols = process.stdout.columns || 80;
   const rows = process.stdout.rows || 24;
-  const period = Math.max(ART_W, LOGO_W) * 2;
-  const phase = tick % period;
-  const sweepX = phase <= period / 2 ? phase : period - phase;
   const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
-  const out = [];
-  const blank = " ".repeat(cols);
-  const boxH = 3 + LOGO.length + 8;
-  const artH = ART.length;
-  const gap = 2;
-  const totalH = artH + gap + boxH;
-  const showArt = rows >= totalH + 2;
-  const contentH = showArt ? totalH : boxH;
+  const logoSweepX = tick % (LOGO_W * 2);
+  const sweepX = logoSweepX <= LOGO_W ? logoSweepX : LOGO_W * 2 - logoSweepX;
+  const box2 = [];
+  box2.push(hRule("\u2554", "\u2557"));
+  box2.push(boxRow(""));
+  for (const raw of LOGO) {
+    const colored = colorLogoLine(raw, sweepX);
+    const lp = Math.floor((INNER_W - raw.length) / 2);
+    const rp = INNER_W - raw.length - lp;
+    box2.push(
+      chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) + " " + chalk2.hex(PRIMARY)("\u2551")
+    );
+  }
+  box2.push(boxRow(""));
+  box2.push(hRule("\u2560", "\u2563"));
+  box2.push(boxRow(""));
+  box2.push(boxRow(chalk2.hex(PRIMARY).bold(TAGLINE)));
+  box2.push(boxRow(chalk2.hex(MUTED)(`v${version}`)));
+  box2.push(boxRow(""));
+  if (ready) {
+    box2.push(boxRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready")));
+    box2.push(boxRow(""));
+    box2.push(boxRow(chalk2.hex(DIM2)(HINT)));
+  } else {
+    box2.push(boxRow(spin + "  " + chalk2.hex(MUTED)(status)));
+  }
+  box2.push(boxRow(""));
+  box2.push(hRule("\u255A", "\u255D"));
+  const boxH = box2.length;
+  const boxW = INNER_W + 4;
+  const gap = 1;
+  const donutH = Math.max(10, rows - boxH - gap - 2);
+  const donutW = Math.round(donutH * 3.6);
+  const showDonut = rows >= boxH + gap + 10 + 2 && donutW <= cols;
+  const contentH = showDonut ? donutH + gap + boxH : boxH;
   const topPad = Math.max(0, Math.floor((rows - contentH) / 2));
+  const blank = " ".repeat(cols);
+  const out = [];
   for (let i = 0; i < topPad; i++) out.push(blank);
-  if (showArt) {
-    const artLP = Math.max(0, Math.floor((cols - ART_W) / 2));
-    const artMargin = " ".repeat(artLP);
-    const artPad = " ".repeat(cols - artLP - ART_W);
-    for (const raw of ART) {
-      const colored = colorArtLine(raw, sweepX);
-      const rp = " ".repeat(Math.max(0, ART_W - raw.length));
-      out.push(artMargin + colored + rp + artPad);
+  if (showDonut) {
+    const a = 1 + tick * 0.05;
+    const b = tick * 0.07;
+    const donutRows = computeDonut(donutH, donutW, a, b);
+    const donutLP = Math.max(0, Math.floor((cols - donutW) / 2));
+    const donutRP = Math.max(0, cols - donutLP - donutW);
+    const dMarginL = " ".repeat(donutLP);
+    const dMarginR = " ".repeat(donutRP);
+    for (const row of donutRows) {
+      out.push(dMarginL + row + dMarginR);
     }
     for (let i = 0; i < gap; i++) out.push(blank);
   }
-  const boxW = INNER_W + 4;
   const boxLP = Math.max(0, Math.floor((cols - boxW) / 2));
-  const boxMargin = " ".repeat(boxLP);
-  const boxRPad = " ".repeat(Math.max(0, cols - boxLP - boxW));
-  const addBox = (line) => out.push(boxMargin + line + boxRPad);
-  addBox(hRule("\u2554", "\u2557"));
-  addBox(boxRow(""));
-  for (const raw of LOGO) {
-    const colored = colorLine(raw, sweepX, LOGO_W);
-    const lp = Math.floor((INNER_W - raw.length) / 2);
-    const rp = INNER_W - raw.length - lp;
-    const logoLine = chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) + " " + chalk2.hex(PRIMARY)("\u2551");
-    addBox(logoLine);
-  }
-  addBox(boxRow(""));
-  addBox(hRule("\u2560", "\u2563"));
-  addBox(boxRow(""));
-  addBox(boxRow(chalk2.hex(PRIMARY).bold(TAGLINE)));
-  addBox(boxRow(chalk2.hex(MUTED)(`v${version}`)));
-  addBox(boxRow(""));
-  if (ready) {
-    addBox(boxRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready")));
-    addBox(boxRow(""));
-    addBox(boxRow(chalk2.hex(DIM2)(HINT)));
-  } else {
-    addBox(boxRow(spin + "  " + chalk2.hex(MUTED)(status)));
-  }
-  addBox(boxRow(""));
-  addBox(hRule("\u255A", "\u255D"));
+  const boxRP = Math.max(0, cols - boxLP - boxW);
+  const boxMarginL = " ".repeat(boxLP);
+  const boxMarginR = " ".repeat(boxRP);
+  for (const l of box2) out.push(boxMarginL + l + boxMarginR);
   const remaining = rows - topPad - contentH;
   for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
   const creditX = Math.max(1, cols - CREDIT.length - 1);
-  const credit = `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
-  return out.join("\n") + credit;
+  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
 }
 function waitForKey() {
   return new Promise((resolve2) => {
@@ -1503,23 +1504,22 @@ async function main(source, options) {
       message: `${colors.primary("/")} Search assets`,
       placeholder: "name, keyword, or category  (Enter = show all)"
     });
-    if (p.isCancel(searchInput)) {
-      p.cancel("Cancelled");
-      process.exit(0);
-    }
-    const q = String(searchInput ?? "").trim().toLowerCase();
-    if (q) {
-      const before = assets.length;
-      assets = assets.filter(
-        (a) => a.name.toLowerCase().includes(q) || a.description.toLowerCase().includes(q) || a.category.toLowerCase().includes(q)
-      );
-      if (assets.length === 0) {
-        p.log.warn(colors.warning(`No assets matched "${q}" (${before} total)`));
-        process.exit(0);
+    if (!p.isCancel(searchInput)) {
+      const q = String(searchInput ?? "").trim().toLowerCase();
+      if (q) {
+        const before = assets.length;
+        const filtered = assets.filter(
+          (a) => a.name.toLowerCase().includes(q) || a.description.toLowerCase().includes(q) || a.category.toLowerCase().includes(q)
+        );
+        if (filtered.length === 0) {
+          p.log.warn(colors.warning(`No assets matched "${q}" \u2014 showing all ${before}`));
+        } else {
+          assets = filtered;
+          p.log.info(
+            `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched ${colors.muted(`"${q}"`)}`
+          );
+        }
       }
-      p.log.info(
-        `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched ${colors.muted(`"${q}"`)}`
-      );
     }
   }
   if (options.preview) {
