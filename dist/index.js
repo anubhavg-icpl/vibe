@@ -1097,6 +1097,29 @@ function renderProgressBar(options) {
 
 // src/ui/components/startup.ts
 import chalk2 from "chalk";
+var ART = [
+  "              ||",
+  "              9|",
+  "         \\\\   ||   //",
+  "          \\\\  ||  //",
+  "            \\ || /        ||",
+  "             \\/\\/         10",
+  "             ^^^^    \\\\   ||   //",
+  "              00      \\\\  ||  //",
+  "             \\__/       \\ || /",
+  "                         \\/\\/",
+  "     ||                  (XXX)",
+  "     8|                   \\|/",
+  "\\\\   ||   //",
+  " \\\\  ||  //     ||",
+  "   \\ || /       7|",
+  "    \\/\\/   \\\\   ||   //",
+  "    (**)    \\\\  ||  //",
+  "      |       \\ || /",
+  "               \\/\\/",
+  "               ()()",
+  "                \\|"
+];
 var LOGO = [
   "  \u2588\u2588\u2557   \u2588\u2588\u2557  \u2588\u2588\u2557  \u2588\u2588\u2588\u2588\u2588\u2588\u2557   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557",
   "  \u2588\u2588\u2551   \u2588\u2588\u2551  \u2588\u2588\u2551  \u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557  \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255D",
@@ -1122,21 +1145,32 @@ var RAMP = [
 var PRIMARY = "#C8762A";
 var MUTED = "#8A8270";
 var DIM = "#3A3028";
+var DIM2 = "#6A5840";
 var SUCCESS = "#4BAF78";
 var SPINNER = ["\u280B", "\u2819", "\u2839", "\u2838", "\u283C", "\u2834", "\u2826", "\u2827", "\u2807", "\u280F"];
 var FRAME_MS = 50;
 var ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
 var visLen = (s) => s.replace(ANSI_RE, "").length;
+var ART_W = ART.reduce((m, l) => Math.max(m, l.length), 0);
 var LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
-var INNER_W = LOGO_W + 6;
-function colorLine(line, sweepX) {
+function sweepColor(ch, col, sweepX, width) {
+  if (ch === " ") return ch;
+  const dist = Math.abs(col - sweepX);
+  const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (width * 0.5))));
+  return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
+}
+function colorLine(line, sweepX, width) {
+  return line.split("").map((ch, i) => sweepColor(ch, i, sweepX, width)).join("");
+}
+var NODE_RE = /[()\[\]0-9^]/;
+function colorArtLine(line, sweepX) {
   return line.split("").map((ch, i) => {
     if (ch === " ") return ch;
-    const dist = Math.abs(i - sweepX);
-    const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (LOGO_W * 0.5))));
-    return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
+    if (NODE_RE.test(ch)) return chalk2.hex(RAMP[RAMP.length - 1])(ch);
+    return sweepColor(ch, i, sweepX, ART_W);
   }).join("");
 }
+var INNER_W = Math.max(LOGO_W, 36) + 4;
 function boxRow(content) {
   const vw = visLen(content);
   const lp = Math.max(0, Math.floor((INNER_W - vw) / 2));
@@ -1149,51 +1183,65 @@ function hRule(l, r, m = "\u2550") {
 function buildFrame(version, tick, status, ready) {
   const cols = process.stdout.columns || 80;
   const rows = process.stdout.rows || 24;
-  const period = LOGO_W * 2;
+  const period = Math.max(ART_W, LOGO_W) * 2;
   const phase = tick % period;
-  const sweepX = phase <= LOGO_W ? phase : period - phase;
+  const sweepX = phase <= period / 2 ? phase : period - phase;
   const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
-  const box2 = [];
-  box2.push(hRule("\u2554", "\u2557"));
-  box2.push(boxRow(""));
+  const out = [];
+  const blank = " ".repeat(cols);
+  const boxH = 3 + LOGO.length + 8;
+  const artH = ART.length;
+  const gap = 2;
+  const totalH = artH + gap + boxH;
+  const showArt = rows >= totalH + 2;
+  const contentH = showArt ? totalH : boxH;
+  const topPad = Math.max(0, Math.floor((rows - contentH) / 2));
+  for (let i = 0; i < topPad; i++) out.push(blank);
+  if (showArt) {
+    const artLP = Math.max(0, Math.floor((cols - ART_W) / 2));
+    const artMargin = " ".repeat(artLP);
+    const artPad = " ".repeat(cols - artLP - ART_W);
+    for (const raw of ART) {
+      const colored = colorArtLine(raw, sweepX);
+      const rp = " ".repeat(Math.max(0, ART_W - raw.length));
+      out.push(artMargin + colored + rp + artPad);
+    }
+    for (let i = 0; i < gap; i++) out.push(blank);
+  }
+  const boxW = INNER_W + 4;
+  const boxLP = Math.max(0, Math.floor((cols - boxW) / 2));
+  const boxMargin = " ".repeat(boxLP);
+  const boxRPad = " ".repeat(Math.max(0, cols - boxLP - boxW));
+  const addBox = (line) => out.push(boxMargin + line + boxRPad);
+  addBox(hRule("\u2554", "\u2557"));
+  addBox(boxRow(""));
   for (const raw of LOGO) {
-    const colored = colorLine(raw, sweepX);
+    const colored = colorLine(raw, sweepX, LOGO_W);
     const lp = Math.floor((INNER_W - raw.length) / 2);
     const rp = INNER_W - raw.length - lp;
-    box2.push(
-      chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) + " " + chalk2.hex(PRIMARY)("\u2551")
-    );
+    const logoLine = chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) + " " + chalk2.hex(PRIMARY)("\u2551");
+    addBox(logoLine);
   }
-  box2.push(boxRow(""));
-  box2.push(hRule("\u2560", "\u2563"));
-  box2.push(boxRow(""));
-  box2.push(boxRow(chalk2.hex(PRIMARY).bold(TAGLINE)));
-  box2.push(boxRow(chalk2.hex(MUTED)(`v${version}`)));
-  box2.push(boxRow(""));
+  addBox(boxRow(""));
+  addBox(hRule("\u2560", "\u2563"));
+  addBox(boxRow(""));
+  addBox(boxRow(chalk2.hex(PRIMARY).bold(TAGLINE)));
+  addBox(boxRow(chalk2.hex(MUTED)(`v${version}`)));
+  addBox(boxRow(""));
   if (ready) {
-    box2.push(boxRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready")));
-    box2.push(boxRow(""));
-    box2.push(boxRow(chalk2.hex(MUTED)(HINT)));
+    addBox(boxRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready")));
+    addBox(boxRow(""));
+    addBox(boxRow(chalk2.hex(DIM2)(HINT)));
   } else {
-    box2.push(boxRow(spin + "  " + chalk2.hex(MUTED)(status)));
+    addBox(boxRow(spin + "  " + chalk2.hex(MUTED)(status)));
   }
-  box2.push(boxRow(""));
-  box2.push(hRule("\u255A", "\u255D"));
-  const boxH = box2.length;
-  const boxW = INNER_W + 4;
-  const leftPad = Math.max(0, Math.floor((cols - boxW) / 2));
-  const topPad = Math.max(0, Math.floor((rows - boxH) / 2));
-  const margin = " ".repeat(leftPad);
-  const blank = " ".repeat(cols);
-  const out = [];
-  for (let i = 0; i < topPad; i++) out.push(blank);
-  for (const l of box2) out.push(margin + l);
-  const remaining = rows - topPad - boxH;
+  addBox(boxRow(""));
+  addBox(hRule("\u255A", "\u255D"));
+  const remaining = rows - topPad - contentH;
   for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
-  const creditVW = CREDIT.length;
-  const creditX = Math.max(1, cols - creditVW - 1);
-  const creditEsc = `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
-  return out.join("\n") + creditEsc;
+  const creditX = Math.max(1, cols - CREDIT.length - 1);
+  const credit = `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
+  return out.join("\n") + credit;
 }
 function waitForKey() {
   return new Promise((resolve2) => {
