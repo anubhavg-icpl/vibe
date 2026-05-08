@@ -52,6 +52,7 @@ import {
 } from "./output.js";
 import {
   renderHeader,
+  animateHeader,
   colors,
   symbols,
   ModeSearch,
@@ -329,7 +330,7 @@ async function main(source: string, options: CliOptions): Promise<void> {
   // Stop animation (waits for minimum time + "Ready" flash then clears)
   if (animCtrl) {
     await animCtrl.stop();
-    console.log(renderHeader(VERSION));
+    await animateHeader(VERSION);
   }
 
   if (options.category) {

@@ -2,7 +2,7 @@
 export { theme, colors, symbols, box, kindColors, kindBadge, createBox, highlight, SARCASTIC_QUOTES, randomSarcasticQuote } from "./theme.js";
 
 // Component exports
-export { renderHeader, renderCompactHeader, renderSuccessBanner, renderErrorBanner, renderSectionHeader } from "./components/header.js";
+export { renderHeader, renderCompactHeader, renderSuccessBanner, renderErrorBanner, renderSectionHeader, animateHeader } from "./components/header.js";
 
 export {
   ModeSearch,

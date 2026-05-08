@@ -985,14 +985,12 @@ var BANNER = `
   \u255A\u2557\u2554\u255D\u2551\u2560\u2569\u2557\u2551\u2563
    \u255A\u255D \u2569\u255A\u2550\u255D\u255A\u2550\u255D`;
 var WIDTH = 52;
-var CAT_LINES = [
-  " /\\_/\\ ",
-  "( o.o )",
-  " > ^ < ",
-  " |   | ",
-  "(___)  "
-];
 var CAT_W = 8;
+var TEXT_W = WIDTH - CAT_W - 2;
+var CAT_TYPING_A = [" /\\_/\\ ", "( -.- )", " > ^ < ", "  |_|  ", "(___)  "];
+var CAT_TYPING_B = [" /\\_/\\ ", "( o.o )", " > ^ < ", " | | | ", "(___)  "];
+var CAT_DONE = [" /\\_/\\ ", "( ^.^ )", " > ^ < ", "  \\|/  ", "(___)  "];
+var CAT_ROWS = 5;
 function wrapWords(text2, maxW) {
   const words = text2.split(" ");
   const lines = [];
@@ -1006,24 +1004,63 @@ function wrapWords(text2, maxW) {
   if (cur) lines.push(cur);
   return lines;
 }
-function renderCatQuote(quote) {
-  const textW = WIDTH - CAT_W - 2;
-  const wrapped = wrapWords(quote, textW);
-  const rows = Math.max(CAT_LINES.length, wrapped.length);
-  const out = [];
+function printCatBlock(catFrame, textLines) {
+  const rows = Math.max(CAT_ROWS, textLines.length);
   for (let i = 0; i < rows; i++) {
-    const catPart = colors.primary(CAT_LINES[i] ?? " ".repeat(CAT_W));
-    const textPart = colors.dim(wrapped[i] ?? "");
-    out.push("  " + catPart + " " + textPart);
+    const c = colors.primary(catFrame[i] ?? " ".repeat(CAT_W));
+    const t = colors.dim(textLines[i] ?? "");
+    process.stdout.write("  " + c + " " + t + "\x1B[K\n");
   }
-  return out.join("\n");
+}
+async function animateHeader(version, subtitle) {
+  const logo = colors.gradient(BANNER);
+  const ver = colors.muted(`v${version}`);
+  const sub = subtitle ?? "AI Agent Asset Manager";
+  const divider = colors.primary(box.heavyH.repeat(WIDTH));
+  const quote = randomSarcasticQuote();
+  process.stdout.write(`
+${logo}  ${ver}
+
+  ${colors.dim(sub)}
+${divider}
+`);
+  if (!process.stdout.isTTY) {
+    printCatBlock(CAT_DONE, wrapWords(quote, TEXT_W));
+    process.stdout.write("\n");
+    return;
+  }
+  const totalRows = Math.max(CAT_ROWS, wrapWords(quote, TEXT_W).length);
+  for (let i = 0; i < totalRows; i++) process.stdout.write("\n");
+  const CHARS_PER_FRAME = 2;
+  const FRAME_MS2 = 38;
+  let typed = "";
+  await new Promise((resolve2) => {
+    const interval = setInterval(() => {
+      const done = typed.length >= quote.length;
+      if (!done) typed = quote.slice(0, typed.length + CHARS_PER_FRAME);
+      const frame = done ? CAT_DONE : Math.floor(typed.length / 4) % 2 === 0 ? CAT_TYPING_A : CAT_TYPING_B;
+      const wrapped = wrapWords(typed + (done ? "" : "\u258C"), TEXT_W);
+      process.stdout.write(`\x1B[${totalRows}A`);
+      printCatBlock(frame, wrapped);
+      if (done) {
+        clearInterval(interval);
+        resolve2();
+      }
+    }, FRAME_MS2);
+  });
+  process.stdout.write("\n");
 }
 function renderHeader(version, subtitle) {
   const logo = colors.gradient(BANNER);
   const ver = colors.muted(`v${version}`);
   const sub = subtitle ?? "AI Agent Asset Manager";
   const divider = colors.primary(box.heavyH.repeat(WIDTH));
-  const block = renderCatQuote(randomSarcasticQuote());
+  const wrapped = wrapWords(randomSarcasticQuote(), TEXT_W);
+  const rows = Math.max(CAT_ROWS, wrapped.length);
+  const block = Array.from(
+    { length: rows },
+    (_, i) => "  " + colors.primary(CAT_DONE[i] ?? " ".repeat(CAT_W)) + " " + colors.dim(wrapped[i] ?? "")
+  ).join("\n");
   return `
 ${logo}  ${ver}
 
@@ -1549,7 +1586,7 @@ async function main(source, options) {
   let assets = await discoverAssets(source, { kinds: parseKinds(options.kind) });
   if (animCtrl) {
     await animCtrl.stop();
-    console.log(renderHeader(VERSION));
+    await animateHeader(VERSION);
   }
   if (options.category) {
     assets = assets.filter((a) => a.category === options.category);
