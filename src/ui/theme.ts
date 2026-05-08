@@ -166,16 +166,16 @@ export function highlight(text: string, query: string): string {
 }
 
 export const SARCASTIC_QUOTES: string[] = [
-  "\"Code detective in a clown suit\" — his own GitHub bio",
-  "559 repos, 368 stars. Averaging 0.66 stars/repo since 2018.",
-  "Self-rated 95% in security skills. The other 5% is humility.",
-  "CEO and Security Engineer simultaneously. Also probably his own intern.",
-  "Published his phone number publicly. As a security professional. Bold move.",
-  "Lives in Raipur, Ahmedabad, AND Vadodara simultaneously. Quantum citizenship.",
-  "YOLO: the defining philosophy of both his commits and his threat model.",
-  "Has more GitHub repos than most people have GitHub followers.",
-  "Security researcher who apparently doesn't believe in private contact info.",
-  "Infopercept CEO by day, pushing to master without PRs by night.",
+  "776 repos banaye, 39 followers mile — matlab 20 repos per follower! Fan base thoda badhao bhai.",
+  "GitHub bio mein khud likha 'Code detective in a clown suit' — self-roast game toh ekdum solid hai!",
+  "CEO bhi, Security Engineer bhi, DevSecOps bhi, Fish Farmer bhi — ek banda, chaar lives!",
+  "500+ blog articles likhe lekin top repo mein sirf 20 stars — readers padhte hain, star nahi dete?",
+  "B.Tech 2025 tak chal rahi hai aur saath mein company ka CEO bhi — padhai bhi, startup bhi, machli bhi!",
+  "YOLO badge mila GitHub se — bina review merge kiya, security researcher hoke yahi karta hai kya?",
+  "Ahmedabad mein rehta hai ya Vadodara mein? Dono profiles pe alag city — GPS ne bhi haath khade kar diye.",
+  "Company ka naam rakha TechAnv — yaani 'Tech' + 'Anv(hubhav)' — apna naam hi brand bana liya, respect!",
+  "222+ research citations hain lekin GitHub pe 39 followers — academics ne padha, developers ne ignore kiya.",
+  "Virtual internships JPMorgan aur PwC mein karke LinkedIn pe daal diya — simulation is the new experience!",
 ];
 
 export function randomSarcasticQuote(): string {

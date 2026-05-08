@@ -964,16 +964,16 @@ var box = {
   doubleV: "\u2551"
 };
 var SARCASTIC_QUOTES = [
-  '"Code detective in a clown suit" \u2014 his own GitHub bio',
-  "559 repos, 368 stars. Averaging 0.66 stars/repo since 2018.",
-  "Self-rated 95% in security skills. The other 5% is humility.",
-  "CEO and Security Engineer simultaneously. Also probably his own intern.",
-  "Published his phone number publicly. As a security professional. Bold move.",
-  "Lives in Raipur, Ahmedabad, AND Vadodara simultaneously. Quantum citizenship.",
-  "YOLO: the defining philosophy of both his commits and his threat model.",
-  "Has more GitHub repos than most people have GitHub followers.",
-  "Security researcher who apparently doesn't believe in private contact info.",
-  "Infopercept CEO by day, pushing to master without PRs by night."
+  "776 repos banaye, 39 followers mile \u2014 matlab 20 repos per follower! Fan base thoda badhao bhai.",
+  "GitHub bio mein khud likha 'Code detective in a clown suit' \u2014 self-roast game toh ekdum solid hai!",
+  "CEO bhi, Security Engineer bhi, DevSecOps bhi, Fish Farmer bhi \u2014 ek banda, chaar lives!",
+  "500+ blog articles likhe lekin top repo mein sirf 20 stars \u2014 readers padhte hain, star nahi dete?",
+  "B.Tech 2025 tak chal rahi hai aur saath mein company ka CEO bhi \u2014 padhai bhi, startup bhi, machli bhi!",
+  "YOLO badge mila GitHub se \u2014 bina review merge kiya, security researcher hoke yahi karta hai kya?",
+  "Ahmedabad mein rehta hai ya Vadodara mein? Dono profiles pe alag city \u2014 GPS ne bhi haath khade kar diye.",
+  "Company ka naam rakha TechAnv \u2014 yaani 'Tech' + 'Anv(hubhav)' \u2014 apna naam hi brand bana liya, respect!",
+  "222+ research citations hain lekin GitHub pe 39 followers \u2014 academics ne padha, developers ne ignore kiya.",
+  "Virtual internships JPMorgan aur PwC mein karke LinkedIn pe daal diya \u2014 simulation is the new experience!"
 ];
 function randomSarcasticQuote() {
   return SARCASTIC_QUOTES[Math.floor(Math.random() * SARCASTIC_QUOTES.length)];
@@ -985,18 +985,51 @@ var BANNER = `
   \u255A\u2557\u2554\u255D\u2551\u2560\u2569\u2557\u2551\u2563
    \u255A\u255D \u2569\u255A\u2550\u255D\u255A\u2550\u255D`;
 var WIDTH = 52;
+var CAT_LINES = [
+  " /\\_/\\ ",
+  "( o.o )",
+  " > ^ < ",
+  " |   | ",
+  "(___)  "
+];
+var CAT_W = 8;
+function wrapWords(text2, maxW) {
+  const words = text2.split(" ");
+  const lines = [];
+  let cur = "";
+  for (const w of words) {
+    if (cur && cur.length + 1 + w.length > maxW) {
+      lines.push(cur);
+      cur = w;
+    } else cur = cur ? cur + " " + w : w;
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+function renderCatQuote(quote) {
+  const textW = WIDTH - CAT_W - 2;
+  const wrapped = wrapWords(quote, textW);
+  const rows = Math.max(CAT_LINES.length, wrapped.length);
+  const out = [];
+  for (let i = 0; i < rows; i++) {
+    const catPart = colors.primary(CAT_LINES[i] ?? " ".repeat(CAT_W));
+    const textPart = colors.dim(wrapped[i] ?? "");
+    out.push("  " + catPart + " " + textPart);
+  }
+  return out.join("\n");
+}
 function renderHeader(version, subtitle) {
   const logo = colors.gradient(BANNER);
   const ver = colors.muted(`v${version}`);
   const sub = subtitle ?? "AI Agent Asset Manager";
   const divider = colors.primary(box.heavyH.repeat(WIDTH));
-  const quote = colors.dim("  " + randomSarcasticQuote());
+  const block = renderCatQuote(randomSarcasticQuote());
   return `
 ${logo}  ${ver}
 
   ${colors.dim(sub)}
 ${divider}
-${quote}
+${block}
 `;
 }
 
