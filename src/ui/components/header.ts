@@ -1,10 +1,13 @@
 import { colors, symbols, box, randomSarcasticQuote } from "../theme.js";
 
-// ASCII art for "vibe" — rendered with the amber gradient
+// ASCII art for "vibe" — clean block-letter style
 const BANNER = `
-  ╦  ╦╦╔╗ ╔═╗
-  ╚╗╔╝║╠╩╗║╣
-   ╚╝ ╩╚═╝╚═╝`;
+ ██╗   ██╗██╗██████╗
+ ██║   ██║██║██╔══██╗
+ ██║   ██║██║██║  ██║
+ ╚██╗ ██╔╝██║██║  ██║
+  ╚████╔╝ ██║██████╔╝
+   ╚═══╝  ╚═╝╚═════╝`;
 
 const WIDTH = 52;
 const CAT_W  = 8;
