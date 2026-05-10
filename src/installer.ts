@@ -1,4 +1,5 @@
-import { mkdir, cp, access, readFile, writeFile, readdir } from "fs/promises";
+import { mkdir, cp, access, readFile, writeFile, readdir, rm } from "fs/promises";
+import { existsSync } from "fs";
 import { join, basename } from "path";
 import matter from "gray-matter";
 import type { Asset, AssetKind, AgentType, Mode } from "./types.js";
@@ -42,6 +43,10 @@ export async function installAsset(
   try {
     if (asset.kind === "skill") {
       const dest = join(destBase, asset.name);
+      // Clean up stale/partial previous install before copying
+      if (existsSync(dest)) {
+        await rm(dest, { recursive: true, force: true });
+      }
       await mkdir(dest, { recursive: true });
       await cp(asset.path, dest, { recursive: true });
       return { success: true, path: dest };
@@ -53,12 +58,20 @@ export async function installAsset(
         ? ".agent.md"
         : ".md";
       const dest = join(destBase, `${asset.name}${ext}`);
+      // Clean up stale previous install
+      if (existsSync(dest)) {
+        await rm(dest, { force: true });
+      }
       await cp(asset.path, dest);
       return { success: true, path: dest };
     }
 
     if (asset.kind === "mode") {
       const dest = join(destBase, asset.name);
+      // Clean up stale/partial previous install before converting
+      if (existsSync(dest)) {
+        await rm(dest, { recursive: true, force: true });
+      }
       await mkdir(dest, { recursive: true });
       const modeFile =
         ((asset.metadata as Record<string, unknown> | undefined)?.modeFile as
@@ -267,6 +280,33 @@ export function buildTasks(
   for (const asset of assets)
     for (const agent of agentTypes) out.push({ asset, agent });
   return out;
+}
+
+/**
+ * Roll back successfully installed paths after a partial failure.
+ * Removes each path that was successfully installed so the user's environment
+ * is left clean — they can re-run the full install later.
+ */
+export async function rollbackInstalledPaths(
+  results: ParallelInstallResult[],
+): Promise<{ removed: string[]; failed: string[] }> {
+  const removed: string[] = [];
+  const failed: string[] = [];
+  const successPaths = results
+    .filter((r) => r.success && !r.skipped && r.path)
+    .map((r) => r.path);
+
+  for (const path of successPaths) {
+    try {
+      if (existsSync(path)) {
+        await rm(path, { recursive: true, force: true });
+        removed.push(path);
+      }
+    } catch {
+      failed.push(path);
+    }
+  }
+  return { removed, failed };
 }
 
 /* ───────────────────────── Legacy mode-only API (retained) ─────────────── */

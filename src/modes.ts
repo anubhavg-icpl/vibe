@@ -61,10 +61,8 @@ async function findModeFiles(dir: string, depth = 0, maxDepth = 4): Promise<stri
       if (entry.isFile() && entry.name.endsWith("-mode.md")) {
         modeFiles.push(join(dir, entry.name));
       } else if (entry.isDirectory() && !SKIP_DIRS.includes(entry.name)) {
-        const subFiles = await findModeFiles(join(dir, entry.name), depth + 1, maxDepth);
-        modeFiles.push(...subFiles);
-      } else if (entry.isDirectory() && !SKIP_DIRS.includes(entry.name)) {
         const subPath = join(dir, entry.name);
+        // Check for SKILL.md first; otherwise recurse
         try {
           const skMdPath = join(subPath, "SKILL.md");
           await stat(skMdPath);

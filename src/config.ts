@@ -69,7 +69,11 @@ export async function loadConfig(cwd?: string): Promise<VibeConfig> {
         ...parsed.defaults,
       },
     };
-  } catch {
+  } catch (error) {
+    const msg = error instanceof Error ? error.message : String(error);
+    console.warn(
+      `[vibe] Warning: Failed to parse config at ${configPath}: ${msg}. Using defaults.`,
+    );
     return { ...DEFAULT_CONFIG };
   }
 }
@@ -152,6 +156,10 @@ export function getFavorites(config: VibeConfig): string[] {
   return config.favorites ?? [];
 }
 
+export function getTheme(config: VibeConfig): "dark" | "light" | "auto" {
+  return config.theme ?? "dark";
+}
+
 export default {
   findConfigFile,
   loadConfig,
@@ -160,4 +168,5 @@ export default {
   mergeConfigWithOptions,
   getConfigParallelism,
   getFavorites,
+  getTheme,
 };

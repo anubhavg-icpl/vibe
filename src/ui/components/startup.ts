@@ -299,7 +299,8 @@ export interface AnimController {
 }
 
 export function startAnimation(version: string): AnimController {
-  if (!process.stdout.isTTY) {
+  // Non-TTY or non-interactive stdin: skip animation entirely
+  if (!process.stdout.isTTY || !process.stdin.isTTY) {
     return { stop: async () => undefined };
   }
 
@@ -309,12 +310,14 @@ export function startAnimation(version: string): AnimController {
   let tick    = 0;
   let halted  = false;
   let ready   = false;
+  let stopped = false;
 
   function statusMsg(): string {
     return tick < 12 ? "Initializing…" : "Loading assets…";
   }
 
   function render(): void {
+    if (halted) return;
     process.stdout.write("\x1B[H" + buildFrame(version, tick, statusMsg(), ready, quote));
   }
 
@@ -327,6 +330,7 @@ export function startAnimation(version: string): AnimController {
   }, FRAME_MS);
 
   function cleanup(): void {
+    if (halted) return;
     halted = true;
     clearInterval(interval);
     process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
@@ -339,9 +343,25 @@ export function startAnimation(version: string): AnimController {
 
   return {
     async stop(): Promise<void> {
+      if (stopped) return;
+      stopped = true;
+
+      // If animation was already cleaned up (signal handler), just return
+      if (halted) return;
+
       // Flip to ready state — interval keeps spinning the donut until key press
       ready = true;
-      await waitForKey();
+
+      // Safety timeout: if waitForKey never resolves (e.g. stdin closes), bail after 3s
+      const timeout = new Promise<void>((resolve) => {
+        setTimeout(() => {
+          cleanup();
+          resolve();
+        }, 3000);
+      });
+
+      await Promise.race([waitForKey(), timeout]);
+
       cleanup();
       process.removeListener("SIGINT",  handleSignal);
       process.removeListener("SIGTERM", handleSignal);

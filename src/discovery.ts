@@ -183,6 +183,7 @@ async function discoverModesAsset(root: string): Promise<Asset[]> {
 
 export interface DiscoveryOptions {
   kinds?: AssetKind[];
+  onKindFound?: (kind: AssetKind, count: number) => void;
 }
 
 export async function discoverAssets(
@@ -194,13 +195,21 @@ export async function discoverAssets(
       ? options.kinds
       : (["skill", "agent", "command", "mode"] as AssetKind[]),
   );
+  const kindOrder: AssetKind[] = ["skill", "agent", "command", "mode"];
   const tasks: Promise<Asset[]>[] = [];
-  if (wanted.has("skill")) tasks.push(discoverSkills(root));
-  if (wanted.has("agent")) tasks.push(discoverFlat(root, "agents", "agent"));
-  if (wanted.has("command"))
-    tasks.push(discoverFlat(root, "commands", "command"));
-  if (wanted.has("mode")) tasks.push(discoverModesAsset(root));
-  const buckets = await Promise.all(tasks);
+  const taskKinds: AssetKind[] = [];
+  if (wanted.has("skill")) { tasks.push(discoverSkills(root)); taskKinds.push("skill"); }
+  if (wanted.has("agent")) { tasks.push(discoverFlat(root, "agents", "agent")); taskKinds.push("agent"); }
+  if (wanted.has("command")) { tasks.push(discoverFlat(root, "commands", "command")); taskKinds.push("command"); }
+  if (wanted.has("mode")) { tasks.push(discoverModesAsset(root)); taskKinds.push("mode"); }
+
+  // Resolve sequentially so we can report per-kind counts to the spinner
+  const buckets: Asset[][] = [];
+  for (let i = 0; i < tasks.length; i++) {
+    const result = await tasks[i];
+    buckets.push(result);
+    options.onKindFound?.(taskKinds[i], result.length);
+  }
   return buckets.flat();
 }
 

@@ -4,9 +4,10 @@
 import { program } from "commander";
 import * as p from "@clack/prompts";
 import chalk3 from "chalk";
-import { existsSync as existsSync2 } from "fs";
-import { dirname as dirname2, resolve } from "path";
+import { existsSync as existsSync3, rmSync, statSync } from "fs";
+import { dirname as dirname2, resolve, join as join5 } from "path";
 import { fileURLToPath } from "url";
+import { stat as statAsync } from "fs/promises";
 
 // src/discovery.ts
 import { readdir, readFile, stat } from "fs/promises";
@@ -166,13 +167,31 @@ async function discoverAssets(root, options = {}) {
   const wanted = new Set(
     options.kinds && options.kinds.length > 0 ? options.kinds : ["skill", "agent", "command", "mode"]
   );
+  const kindOrder = ["skill", "agent", "command", "mode"];
   const tasks = [];
-  if (wanted.has("skill")) tasks.push(discoverSkills(root));
-  if (wanted.has("agent")) tasks.push(discoverFlat(root, "agents", "agent"));
-  if (wanted.has("command"))
+  const taskKinds = [];
+  if (wanted.has("skill")) {
+    tasks.push(discoverSkills(root));
+    taskKinds.push("skill");
+  }
+  if (wanted.has("agent")) {
+    tasks.push(discoverFlat(root, "agents", "agent"));
+    taskKinds.push("agent");
+  }
+  if (wanted.has("command")) {
     tasks.push(discoverFlat(root, "commands", "command"));
-  if (wanted.has("mode")) tasks.push(discoverModesAsset(root));
-  const buckets = await Promise.all(tasks);
+    taskKinds.push("command");
+  }
+  if (wanted.has("mode")) {
+    tasks.push(discoverModesAsset(root));
+    taskKinds.push("mode");
+  }
+  const buckets = [];
+  for (let i = 0; i < tasks.length; i++) {
+    const result = await tasks[i];
+    buckets.push(result);
+    options.onKindFound?.(taskKinds[i], result.length);
+  }
   return buckets.flat();
 }
 function summariseCounts(assets) {
@@ -187,7 +206,8 @@ function summariseCounts(assets) {
 }
 
 // src/installer.ts
-import { mkdir, cp, access, readFile as readFile2, writeFile, readdir as readdir2 } from "fs/promises";
+import { mkdir, cp, access, readFile as readFile2, writeFile, readdir as readdir2, rm } from "fs/promises";
+import { existsSync as existsSync2 } from "fs";
 import { join as join3 } from "path";
 import matter2 from "gray-matter";
 
@@ -360,6 +380,9 @@ async function installAsset(asset, agentType, options = {}) {
   try {
     if (asset.kind === "skill") {
       const dest = join3(destBase, asset.name);
+      if (existsSync2(dest)) {
+        await rm(dest, { recursive: true, force: true });
+      }
       await mkdir(dest, { recursive: true });
       await cp(asset.path, dest, { recursive: true });
       return { success: true, path: dest };
@@ -368,11 +391,17 @@ async function installAsset(asset, agentType, options = {}) {
       await mkdir(destBase, { recursive: true });
       const ext = agentType === "copilot-cli" && asset.kind === "agent" ? ".agent.md" : ".md";
       const dest = join3(destBase, `${asset.name}${ext}`);
+      if (existsSync2(dest)) {
+        await rm(dest, { force: true });
+      }
       await cp(asset.path, dest);
       return { success: true, path: dest };
     }
     if (asset.kind === "mode") {
       const dest = join3(destBase, asset.name);
+      if (existsSync2(dest)) {
+        await rm(dest, { recursive: true, force: true });
+      }
       await mkdir(dest, { recursive: true });
       const modeFile = asset.metadata?.modeFile || asset.path;
       await convertModeToSkill(modeFile, dest, asset);
@@ -518,6 +547,22 @@ function buildTasks(assets, agentTypes) {
     for (const agent of agentTypes) out.push({ asset, agent });
   return out;
 }
+async function rollbackInstalledPaths(results) {
+  const removed = [];
+  const failed = [];
+  const successPaths = results.filter((r) => r.success && !r.skipped && r.path).map((r) => r.path);
+  for (const path of successPaths) {
+    try {
+      if (existsSync2(path)) {
+        await rm(path, { recursive: true, force: true });
+        removed.push(path);
+      }
+    } catch {
+      failed.push(path);
+    }
+  }
+  return { removed, failed };
+}
 
 // src/config.ts
 import { readFile as readFile3, writeFile as writeFile2, access as access2 } from "fs/promises";
@@ -568,7 +613,11 @@ async function loadConfig(cwd) {
         ...parsed.defaults
       }
     };
-  } catch {
+  } catch (error) {
+    const msg = error instanceof Error ? error.message : String(error);
+    console.warn(
+      `[vibe] Warning: Failed to parse config at ${configPath}: ${msg}. Using defaults.`
+    );
     return { ...DEFAULT_CONFIG };
   }
 }
@@ -626,30 +675,38 @@ function getConfigParallelism(config) {
 var BASH_COMPLETION = `
 # vibe bash completion
 _vibe_completions() {
-    local cur prev opts modes agents
+    local cur prev opts agents kinds categories
     COMPREPLY=()
     cur="\${COMP_WORDS[COMP_CWORD]}"
     prev="\${COMP_WORDS[COMP_CWORD-1]}"
 
     # Main options
-    opts="-h --help -v --version -g --global -a --agent -s --mode -c --category -l --list -y --yes --json --preview"
+    opts="-h --help -v --version -g --global -a --agent -s --asset -k --kind -c --category -l --list -y --yes --json --preview --no-animation --dry-run"
 
-    # Agents
-    agents="opencode claude-code codex cursor"
+    # All 7 supported target CLIs
+    agents="opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
+
+    # Asset kinds
+    kinds="skill agent command mode"
+
+    # Common categories
+    categories="development languages testing documentation security devops ai-ml web mobile general"
 
     case "\${prev}" in
         -a|--agent)
             COMPREPLY=( $(compgen -W "\${agents}" -- \${cur}) )
             return 0
             ;;
+        -k|--kind)
+            COMPREPLY=( $(compgen -W "\${kinds}" -- \${cur}) )
+            return 0
+            ;;
         -c|--category)
-            # Categories could be dynamically loaded, but here are common ones
-            local categories="development languages testing documentation security devops ai-ml web mobile"
             COMPREPLY=( $(compgen -W "\${categories}" -- \${cur}) )
             return 0
             ;;
-        -s|--mode|--preview)
-            # Modes would ideally be loaded dynamically
+        -s|--asset|--preview)
+            # Asset names would ideally be loaded dynamically
             COMPREPLY=()
             return 0
             ;;
@@ -659,6 +716,13 @@ _vibe_completions() {
 
     if [[ \${cur} == -* ]]; then
         COMPREPLY=( $(compgen -W "\${opts}" -- \${cur}) )
+        return 0
+    fi
+
+    # Subcommands
+    local words="\${COMP_WORDS[@]}"
+    if [[ ! " \${words} " =~ " (add|list|info|doctor|search|targets|completions|init|uninstall|update) " ]]; then
+        COMPREPLY=( $(compgen -W "add list info doctor search targets completions init uninstall update" -- \${cur}) )
         return 0
     fi
 
@@ -682,18 +746,22 @@ _vibe() {
         '--version[Show version]'
         '-g[Install globally]'
         '--global[Install globally]'
-        '-a[Specify agents]:agent:(opencode claude-code codex cursor)'
-        '--agent[Specify agents]:agent:(opencode claude-code codex cursor)'
-        '-s[Specify modes]:mode:'
-        '--mode[Specify modes]:mode:'
-        '-c[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile)'
-        '--category[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile)'
-        '-l[List available modes]'
-        '--list[List available modes]'
+        '-a[Specify target CLIs]:agent:(opencode claude-code codex cursor gemini-cli copilot-cli factory-droid)'
+        '--agent[Specify target CLIs]:agent:(opencode claude-code codex cursor gemini-cli copilot-cli factory-droid)'
+        '-s[Specify asset names]:asset:'
+        '--asset[Specify asset names]:asset:'
+        '-k[Filter by kind]:kind:(skill agent command mode)'
+        '--kind[Filter by kind]:kind:(skill agent command mode)'
+        '-c[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
+        '--category[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
+        '-l[List available assets]'
+        '--list[List available assets]'
         '-y[Skip confirmations]'
         '--yes[Skip confirmations]'
         '--json[Output in JSON format]'
-        '--preview[Preview a mode]:mode:'
+        '--preview[Preview an asset]:asset:'
+        '--no-animation[Skip startup animation]'
+        '--dry-run[Show what would be installed without installing]'
     )
 
     _arguments -s \\
@@ -714,20 +782,28 @@ complete -c vibe -s h -l help -d "Show help"
 complete -c vibe -s v -l version -d "Show version"
 complete -c vibe -s g -l global -d "Install globally"
 complete -c vibe -s y -l yes -d "Skip confirmations"
-complete -c vibe -s l -l list -d "List available modes"
+complete -c vibe -s l -l list -d "List available assets"
 complete -c vibe -l json -d "Output in JSON format"
+complete -c vibe -l no-animation -d "Skip startup animation"
+complete -c vibe -l dry-run -d "Show what would be installed without installing"
 
-# Agent option
-complete -c vibe -s a -l agent -d "Specify agent" -xa "opencode claude-code codex cursor"
+# Agent option \u2014 all 7 supported target CLIs
+complete -c vibe -s a -l agent -d "Specify target CLI" -xa "opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
+
+# Asset kind option
+complete -c vibe -s k -l kind -d "Filter by asset kind" -xa "skill agent command mode"
 
 # Category option
-complete -c vibe -s c -l category -d "Filter by category" -xa "development languages testing documentation security devops ai-ml web mobile"
+complete -c vibe -s c -l category -d "Filter by category" -xa "development languages testing documentation security devops ai-ml web mobile general"
 
-# Mode option (no completions, dynamic)
-complete -c vibe -s s -l mode -d "Specify mode name"
+# Asset option (no completions, dynamic)
+complete -c vibe -s s -l asset -d "Specify asset name"
 
 # Preview option
-complete -c vibe -l preview -d "Preview a mode"
+complete -c vibe -l preview -d "Preview an asset"
+
+# Subcommands
+complete -c vibe -n "not __fish_seen_subcommand_from add list info doctor search targets completions init uninstall update" -a "add list info doctor search targets completions init uninstall update"
 
 # Directory argument
 complete -c vibe -a "(__fish_complete_directories)"
@@ -964,6 +1040,7 @@ var box = {
   doubleV: "\u2551"
 };
 var SARCASTIC_QUOTES = [
+  // Hinglish quotes
   "776 repos banaye, 39 followers mile \u2014 matlab 20 repos per follower! Fan base thoda badhao bhai.",
   "GitHub bio mein khud likha 'Code detective in a clown suit' \u2014 self-roast game toh ekdum solid hai!",
   "CEO bhi, Security Engineer bhi, DevSecOps bhi, Fish Farmer bhi \u2014 ek banda, chaar lives!",
@@ -973,7 +1050,18 @@ var SARCASTIC_QUOTES = [
   "Ahmedabad mein rehta hai ya Vadodara mein? Dono profiles pe alag city \u2014 GPS ne bhi haath khade kar diye.",
   "Company ka naam rakha TechAnv \u2014 yaani 'Tech' + 'Anv(hubhav)' \u2014 apna naam hi brand bana liya, respect!",
   "222+ research citations hain lekin GitHub pe 39 followers \u2014 academics ne padha, developers ne ignore kiya.",
-  "Virtual internships JPMorgan aur PwC mein karke LinkedIn pe daal diya \u2014 simulation is the new experience!"
+  "Virtual internships JPMorgan aur PwC mein karke LinkedIn pe daal diya \u2014 simulation is the new experience!",
+  // English quotes
+  "You have 776 repos and 39 followers \u2014 that's 20 repos per fan. Maybe write less, ship more?",
+  "Wrote 500+ blog posts but your top repo has 20 stars. The readers came\u2026 the stars didn't.",
+  "CEO, Security Engineer, DevSecOps, Fish Farmer \u2014 one person, four job titles. Overachiever much?",
+  "Your GitHub bio says 'Code detective in a clown suit' \u2014 the clown suit is doing the heavy lifting.",
+  "222+ research citations but 39 GitHub followers. Academics cite you, developers ghost you.",
+  "Virtual internships at JPMorgan and PwC on LinkedIn \u2014 playing career on easy mode.",
+  "Named the company after yourself: Tech + Anv. Narcissism level: founder.",
+  "YOLO badge on GitHub \u2014 because real security researchers don't need code review, right?",
+  "Two cities on two profiles \u2014 even your GPS is confused about where you live.",
+  "B.Tech student AND CEO simultaneously \u2014 either you're a genius or education is too easy."
 ];
 function randomSarcasticQuote() {
   return SARCASTIC_QUOTES[Math.floor(Math.random() * SARCASTIC_QUOTES.length)];
@@ -1376,7 +1464,7 @@ function waitForKey() {
   });
 }
 function startAnimation(version) {
-  if (!process.stdout.isTTY) {
+  if (!process.stdout.isTTY || !process.stdin.isTTY) {
     return { stop: async () => void 0 };
   }
   process.stdout.write("\x1B[2J\x1B[H\x1B[?25l");
@@ -1384,10 +1472,12 @@ function startAnimation(version) {
   let tick = 0;
   let halted = false;
   let ready = false;
+  let stopped = false;
   function statusMsg() {
     return tick < 12 ? "Initializing\u2026" : "Loading assets\u2026";
   }
   function render() {
+    if (halted) return;
     process.stdout.write("\x1B[H" + buildFrame(version, tick, statusMsg(), ready, quote));
   }
   render();
@@ -1397,6 +1487,7 @@ function startAnimation(version) {
     render();
   }, FRAME_MS);
   function cleanup() {
+    if (halted) return;
     halted = true;
     clearInterval(interval);
     process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
@@ -1409,8 +1500,17 @@ function startAnimation(version) {
   process.once("SIGTERM", handleSignal);
   return {
     async stop() {
+      if (stopped) return;
+      stopped = true;
+      if (halted) return;
       ready = true;
-      await waitForKey();
+      const timeout = new Promise((resolve2) => {
+        setTimeout(() => {
+          cleanup();
+          resolve2();
+        }, 3e3);
+      });
+      await Promise.race([waitForKey(), timeout]);
       cleanup();
       process.removeListener("SIGINT", handleSignal);
       process.removeListener("SIGTERM", handleSignal);
@@ -1423,13 +1523,30 @@ var VERSION = "2.0.0";
 function defaultSource() {
   const here = dirname2(fileURLToPath(import.meta.url));
   const repoRoot = resolve(here, "..");
-  if (existsSync2(resolve(repoRoot, "skills")) || existsSync2(resolve(repoRoot, "modes"))) {
+  if (existsSync3(resolve(repoRoot, "skills")) || existsSync3(resolve(repoRoot, "modes"))) {
     return repoRoot;
   }
   return process.cwd();
 }
+var EXAMPLES = `
+Examples:
+  vibe                           Interactive install with animation
+  vibe add tony-stark-mode       Install a specific asset
+  vibe add <a> <b> --yes --json Install multiple, non-interactive
+  vibe list                      Show all available assets
+  vibe list --installed          Show what's already installed
+  vibe list -k skill -c devops   List skills in the devops category
+  vibe info tony-stark-mode      Preview an asset before installing
+  vibe search "react"            Fuzzy-search the asset library
+  vibe uninstall tony-stark      Remove an installed asset
+  vibe update                    Re-install all (latest versions)
+  vibe update tony-stark         Re-install a specific asset
+  vibe add <name> --dry-run      Preview what would be installed
+  vibe doctor                    Check environment and detected CLIs
+  vibe targets                   Show supported target CLIs
+  vibe completions zsh           Generate shell completions`;
 program.name("vibe").description(
-  "Install Vibe AI-agent assets (skills/agents/commands/modes) onto coding-agent CLIs."
+  "Install Vibe AI-agent assets (skills/agents/commands/modes) onto coding-agent CLIs." + EXAMPLES
 ).version(VERSION).argument("[source]", "Path to Vibe repo root (default: bundled or ./)", "").option(
   "-g, --global",
   "Install globally (user-level) instead of per-project"
@@ -1442,14 +1559,18 @@ program.name("vibe").description(
 ).option(
   "-k, --kind <kinds...>",
   "Filter by kind: skill | agent | command | mode"
-).option("-c, --category <category>", "Filter by category").option("-l, --list", "List available assets without installing").option("-y, --yes", "Skip confirmation prompts (auto-accept)").option("--json", "JSON output for scripting/CI").option("--preview <name>", "Preview a single asset and exit").action(async (source, options) => {
+).option("-c, --category <category>", "Filter by category").option("-l, --list", "List available assets without installing").option("-y, --yes", "Skip confirmation prompts (auto-accept)").option("--json", "JSON output for scripting/CI").option("--preview <name>", "Preview a single asset and exit").option("--no-animation", "Skip startup animation (for slow terminals or scripts)").option("--dry-run", "Show what would be installed without actually installing").action(async (source, options) => {
   await main(source || defaultSource(), options);
 });
-program.command("add <names...>").description("Install one or more named assets").option("-g, --global", "Install globally").option("-a, --agent <agents...>", "Target CLIs").option("-y, --yes", "Auto-confirm").option("--json", "JSON output").action(async (names, opts) => {
+program.command("add <names...>").description("Install one or more named assets").option("-g, --global", "Install globally").option("-a, --agent <agents...>", "Target CLIs").option("-y, --yes", "Auto-confirm").option("--json", "JSON output").option("--dry-run", "Preview what would be installed without installing").action(async (names, opts) => {
   await main(defaultSource(), { ...opts, asset: names, yes: true });
 });
-program.command("list").description("List bundled assets").option("-k, --kind <kinds...>", "Filter by kind").option("-c, --category <category>", "Filter by category").option("--json", "JSON output").action(async (opts) => {
-  await main(defaultSource(), { ...opts, list: true });
+program.command("list").description("List bundled assets").option("-k, --kind <kinds...>", "Filter by kind").option("-c, --category <category>", "Filter by category").option("--installed", "Show only installed assets").option("--json", "JSON output").action(async (opts) => {
+  if (opts.installed) {
+    await runListInstalled(opts);
+  } else {
+    await main(defaultSource(), { ...opts, list: true });
+  }
 });
 program.command("info <name>").description("Show a rich preview of one asset").option("--json", "JSON output").action(async (name, opts) => {
   opts.json = opts.json ?? program.opts().json;
@@ -1465,9 +1586,25 @@ program.command("info <name>").description("Show a rich preview of one asset").o
     asset = results[0]?.item;
   }
   if (!asset) {
+    const suggestions = search.search(name).slice(0, 5);
     const msg = `Asset not found: ${name}`;
-    if (opts.json) console.log(formatError(msg, VERSION));
-    else console.error(colors.error(msg));
+    if (opts.json) {
+      console.log(formatError(msg, VERSION));
+    } else {
+      console.error(colors.error(msg));
+      if (suggestions.length > 0) {
+        console.error(colors.muted("\nDid you mean one of these?"));
+        for (const s of suggestions) {
+          console.error(
+            `  ${colors.secondary(s.item.name)} ${colors.dim(`(${s.item.kind} \xB7 ${s.item.category})`)}`
+          );
+        }
+      }
+      console.error(
+        colors.dim(`
+Use ${colors.secondary("vibe search <query>")} to search the full library.`)
+      );
+    }
     process.exit(1);
   }
   if (opts.json) {
@@ -1491,16 +1628,26 @@ program.command("search <query>").description("Fuzzy-search the asset library").
     const limit = Math.max(1, Math.min(200, Number(opts.limit) || 20));
     const results = search.search(query).slice(0, limit);
     if (opts.json) {
-      console.log(formatAssetsAsJson(results.map((r) => r.item), VERSION));
+      console.log(
+        formatAssetsAsJson(
+          results.map((r) => ({ ...r.item, _score: r.score })),
+          VERSION
+        )
+      );
       return;
     }
     console.log();
     console.log(colors.primaryBold(`Search: ${chalk3.italic(query)}`));
+    console.log(
+      colors.dim(`${results.length} result${results.length === 1 ? "" : "s"} (sorted by relevance)`)
+    );
     console.log();
     for (const r of results) {
       const a = r.item;
+      const relevance = Math.round((1 - r.score) * 100);
+      const relBar = colors.dim(`(${relevance}% match)`);
       console.log(
-        `${colors.muted(`[${a.kind}]`)} ${colors.secondaryBold(a.name)} ${colors.dim("\xB7")} ${colors.muted(a.category)}`
+        `${colors.muted(`[${a.kind}]`)} ${colors.secondaryBold(a.name)} ${colors.dim("\xB7")} ${colors.muted(a.category)} ${relBar}`
       );
       console.log(
         `  ${colors.dim(a.description.length > 100 ? a.description.slice(0, 100) + "..." : a.description)}`
@@ -1566,6 +1713,12 @@ program.command("init").description("Create a .vibeconfig.yaml").action(async ()
     process.exit(1);
   }
 });
+program.command("uninstall <names...>").description("Remove installed assets from target CLIs").option("-g, --global", "Remove from global scope").option("-a, --agent <agents...>", "Target CLIs (default: auto-detect)").option("--json", "JSON output").option("-y, --yes", "Skip confirmation").action(async (names, opts) => {
+  await runUninstall(names, opts);
+});
+program.command("update [names...]").description("Re-install assets to get the latest versions").option("-g, --global", "Install globally").option("-a, --agent <agents...>", "Target CLIs").option("-y, --yes", "Skip confirmation").option("--json", "JSON output").option("--dry-run", "Preview what would be updated").action(async (names, opts) => {
+  await runUpdate(names, opts);
+});
 program.parse();
 function parseKinds(input) {
   if (!input || input.length === 0) return void 0;
@@ -1578,12 +1731,18 @@ async function main(source, options) {
   const config = await loadConfig();
   const merged = mergeConfigWithOptions(config, options);
   const json = options.json ?? false;
-  const isInteractive = !json && !options.list && !options.preview && !options.asset?.length && !options.yes;
+  const dryRun = options.dryRun ?? false;
+  const isInteractive = !json && !options.list && !options.preview && !options.asset?.length && !options.yes && !options.noAnimation;
   const animCtrl = isInteractive ? startAnimation(VERSION) : null;
   if (!json && !isInteractive) console.log(renderHeader(VERSION));
-  const spinner2 = !json && !isInteractive ? p.spinner() : json ? null : null;
+  const spinner2 = !json && !isInteractive ? p.spinner() : null;
   spinner2?.start("Discovering assets\u2026");
-  let assets = await discoverAssets(source, { kinds: parseKinds(options.kind) });
+  let assets = await discoverAssets(source, {
+    kinds: parseKinds(options.kind),
+    onKindFound: !json ? (kind, count) => {
+      spinner2?.message(`Discovering assets\u2026 ${colors.dim(`${kind}: ${count}`)}`);
+    } : void 0
+  });
   if (animCtrl) {
     await animCtrl.stop();
     await animateHeader(VERSION);
@@ -1609,9 +1768,11 @@ async function main(source, options) {
   if (isInteractive) {
     const searchInput = await p.text({
       message: `${colors.primary("/")} Search assets`,
-      placeholder: "name, keyword, or category  (Enter = show all)"
+      placeholder: "name, keyword, or category  (Enter = show all, ESC = skip filter)"
     });
-    if (!p.isCancel(searchInput)) {
+    if (p.isCancel(searchInput)) {
+      p.log.info(colors.dim("Filter skipped \u2014 showing all assets"));
+    } else {
       const q = String(searchInput ?? "").trim().toLowerCase();
       if (q) {
         const before = assets.length;
@@ -1634,9 +1795,17 @@ async function main(source, options) {
       (a) => a.name.toLowerCase() === options.preview.toLowerCase()
     );
     if (!target) {
+      const search = new ModeSearch(assets);
+      const suggestions = search.search(options.preview).slice(0, 3);
       const msg = `Asset not found: ${options.preview}`;
-      if (json) console.log(formatError(msg, VERSION));
-      else p.log.error(msg);
+      if (json) {
+        console.log(formatError(msg, VERSION));
+      } else {
+        p.log.error(msg);
+        if (suggestions.length > 0) {
+          p.log.info(colors.muted("Did you mean: " + suggestions.map((s) => colors.secondary(s.item.name)).join(", ")));
+        }
+      }
       process.exit(1);
     }
     if (json) console.log(formatAssetPreviewAsJson(target, VERSION));
@@ -1655,6 +1824,7 @@ async function main(source, options) {
   if (options.asset && options.asset.length > 0) {
     const search = new ModeSearch(assets);
     const matched = [];
+    const unmatched = [];
     for (const name of options.asset) {
       const exact = assets.find(
         (a) => a.name.toLowerCase() === name.toLowerCase()
@@ -1666,7 +1836,14 @@ async function main(source, options) {
       const results2 = search.search(name);
       if (results2.length > 0 && (results2[0].score ?? 1) < 0.3) {
         matched.push(results2[0].item);
+      } else {
+        unmatched.push(name);
       }
+    }
+    if (unmatched.length > 0 && !json) {
+      p.log.warn(
+        colors.warning(`No match for: ${unmatched.join(", ")}`) + colors.dim(" (skipped)")
+      );
     }
     if (matched.length === 0) {
       const msg = `No matching assets for: ${options.asset.join(", ")}`;
@@ -1766,8 +1943,16 @@ async function main(source, options) {
     const scope = await p.select({
       message: "Install scope",
       options: [
-        { value: false, label: "Project", hint: "current dir, committed with project" },
-        { value: true, label: "Global", hint: "user-level, all projects" }
+        {
+          value: false,
+          label: "Project",
+          hint: "Installed into ./<cli-dir>/ \u2014 committed with your repo, team-shared"
+        },
+        {
+          value: true,
+          label: "Global",
+          hint: "Installed into ~/.<cli-dir>/ \u2014 available in all your projects"
+        }
       ]
     });
     if (p.isCancel(scope)) {
@@ -1778,9 +1963,16 @@ async function main(source, options) {
   }
   if (!json) {
     console.log();
-    p.log.step(colors.primaryBold("Installation plan"));
+    const label = dryRun ? colors.warningBold("Installation plan (dry run \u2014 nothing will be changed)") : colors.primaryBold("Installation plan");
+    p.log.step(label);
+    let totalBytes = 0;
     for (const a of selected) {
       p.log.message(`  ${colors.muted(`[${a.kind}]`)} ${colors.secondary(a.name)}`);
+      try {
+        const s = await statAsync(a.path);
+        totalBytes += s.size;
+      } catch {
+      }
       for (const t of targets) {
         const target = getInstallTarget(a, t, { global: installGlobally });
         if (target === null) {
@@ -1798,7 +1990,20 @@ async function main(source, options) {
         }
       }
     }
+    const totalTasks = selected.length * targets.length;
+    const sizeStr = totalBytes > 0 ? formatBytes(totalBytes * targets.length) : "";
+    console.log(
+      colors.dim(`  ${totalTasks} operation${totalTasks !== 1 ? "s" : ""}${sizeStr ? ` \xB7 ~${sizeStr} total` : ""}`)
+    );
     console.log();
+  }
+  if (dryRun) {
+    if (json) {
+      console.log(JSON.stringify({ version: VERSION, dryRun: true, message: "No changes were made" }, null, 2));
+    } else {
+      p.outro(colors.dim("Dry run complete \u2014 no files were changed."));
+    }
+    process.exit(0);
   }
   if (!options.yes && !json) {
     const ok = await p.confirm({ message: "Proceed?" });
@@ -1839,12 +2044,39 @@ async function main(source, options) {
     console.log(renderInstallResultCard(results));
     console.log();
     console.log(colors.dim(`Completed in ${(ms / 1e3).toFixed(1)}s`));
+    if (failed.length > 0) {
+      const successful = results.filter((r) => r.success && !r.skipped && r.path);
+      if (successful.length > 0 && !options.yes) {
+        console.log();
+        const rollback = await p.confirm({
+          message: `${successful.length} item(s) succeeded but ${failed.length} failed. Roll back the successful installs?`
+        });
+        if (rollback && !p.isCancel(rollback)) {
+          const rb = await rollbackInstalledPaths(results);
+          if (rb.removed.length > 0) {
+            p.log.info(colors.dim(`Rolled back ${rb.removed.length} item(s).`));
+          }
+          if (rb.failed.length > 0) {
+            p.log.warn(colors.warning(`Could not remove ${rb.failed.length} path(s).`));
+          }
+        }
+      } else if (successful.length > 0) {
+        console.log(
+          colors.dim(`Tip: Re-run with same command to retry, or use ${colors.secondary("vibe uninstall")} to clean up.`)
+        );
+      }
+    }
     console.log();
     p.outro(
       failed.length === 0 ? colors.success("Done!") : colors.warning("Completed with errors")
     );
   }
   process.exit(failed.length > 0 ? 1 : 0);
+}
+function formatBytes(bytes) {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 function printGroupedList(assets) {
   console.log();
@@ -1858,7 +2090,7 @@ function printGroupedList(assets) {
   for (const [kind, items] of byKind) {
     console.log();
     console.log(colors.secondaryBold(`${kind} (${items.length})`));
-    for (const a of items.slice(0, 8)) {
+    for (const a of items) {
       console.log(
         `  ${colors.success(symbols.bullet)} ${colors.textBold(a.name)} ${colors.muted(`\xB7 ${a.category}`)}`
       );
@@ -1866,8 +2098,6 @@ function printGroupedList(assets) {
         `    ${colors.dim(a.description.length > 80 ? a.description.slice(0, 80) + "\u2026" : a.description)}`
       );
     }
-    if (items.length > 8)
-      console.log(colors.dim(`  \u2026and ${items.length - 8} more`));
   }
   console.log();
   p.outro(
@@ -1898,12 +2128,28 @@ async function runDoctor(opts) {
   const detected = await detectInstalledAgents();
   const detectedSet = new Set(detected);
   const assetCount = (await discoverAssets(root)).length;
-  const targets = ALL_AGENT_TYPES.map((t) => ({
-    type: t,
-    displayName: agents[t].displayName,
-    detected: detectedSet.has(t),
-    skillsDir: getKindDir(t, "skill", { global: true })
-  }));
+  const targets = ALL_AGENT_TYPES.map((t) => {
+    const globalDir = getKindDir(t, "skill", { global: true });
+    const projectDir = getKindDir(t, "skill", { global: false });
+    let writable = false;
+    if (globalDir) {
+      try {
+        const parent = dirname2(globalDir);
+        statSync(parent);
+        writable = true;
+      } catch {
+        writable = false;
+      }
+    }
+    return {
+      type: t,
+      displayName: agents[t].displayName,
+      detected: detectedSet.has(t),
+      skillsDir: globalDir,
+      projectDir,
+      writable
+    };
+  });
   const node = process.versions.node;
   const ok = {
     nodeOk: parseInt(node.split(".")[0], 10) >= 18,
@@ -1944,8 +2190,9 @@ async function runDoctor(opts) {
   console.log(colors.primaryBold("Targets"));
   for (const t of targets) {
     const mark = t.detected ? colors.success(symbols.check) : colors.dim(symbols.dot);
+    const writeMark = t.detected ? t.writable ? colors.dim("writable") : colors.error("no write access") : "";
     console.log(
-      `  ${mark} ${colors.secondary(t.displayName.padEnd(22))} ${colors.muted(t.skillsDir ?? "")}`
+      `  ${mark} ${colors.secondary(t.displayName.padEnd(22))} ${colors.muted(t.skillsDir ?? "")} ${writeMark}`
     );
   }
   console.log();
@@ -1957,4 +2204,225 @@ async function runDoctor(opts) {
     );
   }
   console.log();
+}
+async function runListInstalled(opts) {
+  const json = opts.json ?? false;
+  const config = await loadConfig();
+  const merged = mergeConfigWithOptions(config, opts);
+  const global = merged.global ?? false;
+  let targetAgents;
+  if (merged.agent && merged.agent.length > 0) {
+    targetAgents = merged.agent;
+  } else {
+    targetAgents = await detectInstalledAgents();
+    if (targetAgents.length === 0) targetAgents = ALL_AGENT_TYPES;
+  }
+  const root = defaultSource();
+  const allAssets = await discoverAssets(root, { kinds: parseKinds(opts.kind) });
+  const assetMap = new Map(allAssets.map((a) => [a.name.toLowerCase(), a]));
+  const installed = [];
+  for (const agentType of targetAgents) {
+    for (const kind of ["skill", "agent", "command", "mode"]) {
+      if (opts.kind && !opts.kind.includes(kind)) continue;
+      const dir = getKindDir(agentType, kind, { global });
+      if (!dir) continue;
+      try {
+        const entries = await import("fs/promises").then(
+          (fs) => fs.readdir(dir, { withFileTypes: true })
+        );
+        for (const entry of entries) {
+          const name = entry.name.replace(/\.(md|agent\.md)$/, "");
+          if (name.toUpperCase() === "README") continue;
+          const fullPath = join5(dir, entry.name);
+          const bundled = assetMap.get(name.toLowerCase());
+          installed.push({
+            name,
+            kind,
+            agent: agents[agentType].displayName,
+            path: fullPath,
+            category: bundled?.category ?? "unknown"
+          });
+        }
+      } catch {
+      }
+    }
+  }
+  if (json) {
+    console.log(
+      JSON.stringify({ version: VERSION, installed, total: installed.length }, null, 2)
+    );
+    return;
+  }
+  console.log();
+  if (installed.length === 0) {
+    p.log.info(colors.muted("No installed assets found."));
+    console.log(
+      colors.dim(`Use ${colors.secondary("vibe list")} to see available assets to install.`)
+    );
+  } else {
+    p.log.step(colors.primaryBold(`Installed (${installed.length})`));
+    const byAgent = /* @__PURE__ */ new Map();
+    for (const item of installed) {
+      const list = byAgent.get(item.agent) ?? [];
+      list.push(item);
+      byAgent.set(item.agent, list);
+    }
+    for (const [agent, items] of byAgent) {
+      console.log();
+      console.log(colors.secondaryBold(`${agent} (${items.length})`));
+      for (const item of items) {
+        console.log(
+          `  ${colors.success(symbols.bullet)} ${colors.textBold(item.name)} ${colors.muted(`[${item.kind}]`)} ${colors.dim(`\xB7 ${item.category}`)}`
+        );
+        console.log(`    ${colors.dim(item.path)}`);
+      }
+    }
+  }
+  console.log();
+}
+async function runUninstall(names, opts) {
+  const json = opts.json ?? false;
+  const config = await loadConfig();
+  const merged = mergeConfigWithOptions(config, opts);
+  const global = merged.global ?? false;
+  let targetAgents;
+  if (merged.agent && merged.agent.length > 0) {
+    targetAgents = merged.agent;
+  } else {
+    targetAgents = await detectInstalledAgents();
+    if (targetAgents.length === 0) targetAgents = ALL_AGENT_TYPES;
+  }
+  const root = defaultSource();
+  const allAssets = await discoverAssets(root);
+  const removed = [];
+  const notFound = [];
+  for (const name of names) {
+    const asset = allAssets.find(
+      (a) => a.name.toLowerCase() === name.toLowerCase()
+    );
+    if (!asset) {
+      notFound.push(name);
+      continue;
+    }
+    for (const agentType of targetAgents) {
+      for (const kind of ["skill", "agent", "command", "mode"]) {
+        const targetPath = getInstallTarget(asset, agentType, { global });
+        if (!targetPath) continue;
+        try {
+          if (existsSync3(targetPath)) {
+            rmSync(targetPath, { recursive: true, force: true });
+            removed.push({
+              name: asset.name,
+              agent: agents[agentType].displayName,
+              path: targetPath,
+              success: true
+            });
+          }
+        } catch (error) {
+          removed.push({
+            name: asset.name,
+            agent: agents[agentType].displayName,
+            path: targetPath,
+            success: false,
+            error: error instanceof Error ? error.message : String(error)
+          });
+        }
+      }
+    }
+  }
+  if (json) {
+    console.log(
+      JSON.stringify(
+        { version: VERSION, removed, notFound, total: removed.length },
+        null,
+        2
+      )
+    );
+    return;
+  }
+  if (notFound.length > 0) {
+    p.log.warn(colors.warning(`Not found in library: ${notFound.join(", ")}`));
+  }
+  const successItems = removed.filter((r) => r.success);
+  const failedItems = removed.filter((r) => !r.success);
+  if (successItems.length === 0 && failedItems.length === 0) {
+    p.log.info(colors.muted("Nothing to uninstall \u2014 assets not found in target directories."));
+  } else {
+    console.log();
+    if (successItems.length > 0) {
+      p.log.step(colors.success(`${symbols.check} Removed ${successItems.length} item${successItems.length === 1 ? "" : "s"}:`));
+      for (const r of successItems) {
+        console.log(
+          `  ${colors.success(symbols.bullet)} ${r.name} ${colors.dim("\u2192")} ${r.agent}`
+        );
+      }
+    }
+    if (failedItems.length > 0) {
+      console.log();
+      p.log.step(colors.error(`${symbols.cross} Failed ${failedItems.length}:`));
+      for (const r of failedItems) {
+        console.log(
+          `  ${colors.error(symbols.bullet)} ${r.name} ${colors.dim("\u2192")} ${r.agent}: ${r.error}`
+        );
+      }
+    }
+  }
+  console.log();
+}
+async function runUpdate(names, opts) {
+  const json = opts.json ?? false;
+  const dryRun = opts.dryRun ?? false;
+  if (names.length > 0) {
+    await main(defaultSource(), { ...opts, asset: names, yes: true });
+  } else {
+    const config = await loadConfig();
+    const merged = mergeConfigWithOptions(config, opts);
+    const global = merged.global ?? false;
+    let targetAgents;
+    if (merged.agent && merged.agent.length > 0) {
+      targetAgents = merged.agent;
+    } else {
+      targetAgents = await detectInstalledAgents();
+      if (targetAgents.length === 0) targetAgents = ALL_AGENT_TYPES;
+    }
+    const root = defaultSource();
+    const allAssets = await discoverAssets(root);
+    const installedNames = /* @__PURE__ */ new Set();
+    for (const agentType of targetAgents) {
+      for (const kind of ["skill", "agent", "command", "mode"]) {
+        const dir = getKindDir(agentType, kind, { global });
+        if (!dir) continue;
+        try {
+          const entries = await import("fs/promises").then(
+            (fs) => fs.readdir(dir, { withFileTypes: true })
+          );
+          for (const entry of entries) {
+            const name = entry.name.replace(/\.(md|agent\.md)$/, "");
+            if (name.toUpperCase() === "README") continue;
+            installedNames.add(name);
+          }
+        } catch {
+        }
+      }
+    }
+    const matched = allAssets.filter(
+      (a) => installedNames.has(a.name.toLowerCase()) || installedNames.has(a.name)
+    );
+    if (matched.length === 0) {
+      if (json) {
+        console.log(formatError("No installed assets found to update", VERSION));
+      } else {
+        p.log.info(colors.muted("No installed assets found to update."));
+        console.log(
+          colors.dim(`Use ${colors.secondary("vibe add <name>")} to install assets first.`)
+        );
+      }
+      return;
+    }
+    if (!json) {
+      console.log(renderHeader(VERSION));
+      p.log.info(`Updating ${matched.length} installed asset${matched.length === 1 ? "" : "s"}\u2026`);
+    }
+    await main(defaultSource(), { ...opts, asset: matched.map((a) => a.name), yes: true, dryRun });
+  }
 }

@@ -1,30 +1,38 @@
 const BASH_COMPLETION = `
 # vibe bash completion
 _vibe_completions() {
-    local cur prev opts modes agents
+    local cur prev opts agents kinds categories
     COMPREPLY=()
     cur="\${COMP_WORDS[COMP_CWORD]}"
     prev="\${COMP_WORDS[COMP_CWORD-1]}"
 
     # Main options
-    opts="-h --help -v --version -g --global -a --agent -s --mode -c --category -l --list -y --yes --json --preview"
+    opts="-h --help -v --version -g --global -a --agent -s --asset -k --kind -c --category -l --list -y --yes --json --preview --no-animation --dry-run"
 
-    # Agents
-    agents="opencode claude-code codex cursor"
+    # All 7 supported target CLIs
+    agents="opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
+
+    # Asset kinds
+    kinds="skill agent command mode"
+
+    # Common categories
+    categories="development languages testing documentation security devops ai-ml web mobile general"
 
     case "\${prev}" in
         -a|--agent)
             COMPREPLY=( $(compgen -W "\${agents}" -- \${cur}) )
             return 0
             ;;
+        -k|--kind)
+            COMPREPLY=( $(compgen -W "\${kinds}" -- \${cur}) )
+            return 0
+            ;;
         -c|--category)
-            # Categories could be dynamically loaded, but here are common ones
-            local categories="development languages testing documentation security devops ai-ml web mobile"
             COMPREPLY=( $(compgen -W "\${categories}" -- \${cur}) )
             return 0
             ;;
-        -s|--mode|--preview)
-            # Modes would ideally be loaded dynamically
+        -s|--asset|--preview)
+            # Asset names would ideally be loaded dynamically
             COMPREPLY=()
             return 0
             ;;
@@ -34,6 +42,13 @@ _vibe_completions() {
 
     if [[ \${cur} == -* ]]; then
         COMPREPLY=( $(compgen -W "\${opts}" -- \${cur}) )
+        return 0
+    fi
+
+    # Subcommands
+    local words="\${COMP_WORDS[@]}"
+    if [[ ! " \${words} " =~ " (add|list|info|doctor|search|targets|completions|init|uninstall|update) " ]]; then
+        COMPREPLY=( $(compgen -W "add list info doctor search targets completions init uninstall update" -- \${cur}) )
         return 0
     fi
 
@@ -58,18 +73,22 @@ _vibe() {
         '--version[Show version]'
         '-g[Install globally]'
         '--global[Install globally]'
-        '-a[Specify agents]:agent:(opencode claude-code codex cursor)'
-        '--agent[Specify agents]:agent:(opencode claude-code codex cursor)'
-        '-s[Specify modes]:mode:'
-        '--mode[Specify modes]:mode:'
-        '-c[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile)'
-        '--category[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile)'
-        '-l[List available modes]'
-        '--list[List available modes]'
+        '-a[Specify target CLIs]:agent:(opencode claude-code codex cursor gemini-cli copilot-cli factory-droid)'
+        '--agent[Specify target CLIs]:agent:(opencode claude-code codex cursor gemini-cli copilot-cli factory-droid)'
+        '-s[Specify asset names]:asset:'
+        '--asset[Specify asset names]:asset:'
+        '-k[Filter by kind]:kind:(skill agent command mode)'
+        '--kind[Filter by kind]:kind:(skill agent command mode)'
+        '-c[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
+        '--category[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
+        '-l[List available assets]'
+        '--list[List available assets]'
         '-y[Skip confirmations]'
         '--yes[Skip confirmations]'
         '--json[Output in JSON format]'
-        '--preview[Preview a mode]:mode:'
+        '--preview[Preview an asset]:asset:'
+        '--no-animation[Skip startup animation]'
+        '--dry-run[Show what would be installed without installing]'
     )
 
     _arguments -s \\
@@ -91,20 +110,28 @@ complete -c vibe -s h -l help -d "Show help"
 complete -c vibe -s v -l version -d "Show version"
 complete -c vibe -s g -l global -d "Install globally"
 complete -c vibe -s y -l yes -d "Skip confirmations"
-complete -c vibe -s l -l list -d "List available modes"
+complete -c vibe -s l -l list -d "List available assets"
 complete -c vibe -l json -d "Output in JSON format"
+complete -c vibe -l no-animation -d "Skip startup animation"
+complete -c vibe -l dry-run -d "Show what would be installed without installing"
 
-# Agent option
-complete -c vibe -s a -l agent -d "Specify agent" -xa "opencode claude-code codex cursor"
+# Agent option — all 7 supported target CLIs
+complete -c vibe -s a -l agent -d "Specify target CLI" -xa "opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
+
+# Asset kind option
+complete -c vibe -s k -l kind -d "Filter by asset kind" -xa "skill agent command mode"
 
 # Category option
-complete -c vibe -s c -l category -d "Filter by category" -xa "development languages testing documentation security devops ai-ml web mobile"
+complete -c vibe -s c -l category -d "Filter by category" -xa "development languages testing documentation security devops ai-ml web mobile general"
 
-# Mode option (no completions, dynamic)
-complete -c vibe -s s -l mode -d "Specify mode name"
+# Asset option (no completions, dynamic)
+complete -c vibe -s s -l asset -d "Specify asset name"
 
 # Preview option
-complete -c vibe -l preview -d "Preview a mode"
+complete -c vibe -l preview -d "Preview an asset"
+
+# Subcommands
+complete -c vibe -n "not __fish_seen_subcommand_from add list info doctor search targets completions init uninstall update" -a "add list info doctor search targets completions init uninstall update"
 
 # Directory argument
 complete -c vibe -a "(__fish_complete_directories)"

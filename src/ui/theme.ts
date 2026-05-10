@@ -152,20 +152,23 @@ export function highlight(text: string, query: string): string {
   if (!query) return text;
   const lowerText = text.toLowerCase();
   const lowerQuery = query.toLowerCase();
-  let result = "";
-  let lastIndex = 0;
-  for (let i = 0; i < lowerText.length; i++) {
-    if (lowerQuery.includes(lowerText[i])) {
-      result += text.slice(lastIndex, i);
-      result += colors.accent(text[i]);
-      lastIndex = i + 1;
+  const result: string[] = [];
+  let i = 0;
+  while (i < text.length) {
+    const idx = lowerText.indexOf(lowerQuery, i);
+    if (idx === -1) {
+      result.push(text.slice(i));
+      break;
     }
+    if (idx > i) result.push(text.slice(i, idx));
+    result.push(colors.accent(text.slice(idx, idx + query.length)));
+    i = idx + query.length;
   }
-  result += text.slice(lastIndex);
-  return result;
+  return result.join("");
 }
 
 export const SARCASTIC_QUOTES: string[] = [
+  // Hinglish quotes
   "776 repos banaye, 39 followers mile — matlab 20 repos per follower! Fan base thoda badhao bhai.",
   "GitHub bio mein khud likha 'Code detective in a clown suit' — self-roast game toh ekdum solid hai!",
   "CEO bhi, Security Engineer bhi, DevSecOps bhi, Fish Farmer bhi — ek banda, chaar lives!",
@@ -176,6 +179,17 @@ export const SARCASTIC_QUOTES: string[] = [
   "Company ka naam rakha TechAnv — yaani 'Tech' + 'Anv(hubhav)' — apna naam hi brand bana liya, respect!",
   "222+ research citations hain lekin GitHub pe 39 followers — academics ne padha, developers ne ignore kiya.",
   "Virtual internships JPMorgan aur PwC mein karke LinkedIn pe daal diya — simulation is the new experience!",
+  // English quotes
+  "You have 776 repos and 39 followers — that's 20 repos per fan. Maybe write less, ship more?",
+  "Wrote 500+ blog posts but your top repo has 20 stars. The readers came… the stars didn't.",
+  "CEO, Security Engineer, DevSecOps, Fish Farmer — one person, four job titles. Overachiever much?",
+  "Your GitHub bio says 'Code detective in a clown suit' — the clown suit is doing the heavy lifting.",
+  "222+ research citations but 39 GitHub followers. Academics cite you, developers ghost you.",
+  "Virtual internships at JPMorgan and PwC on LinkedIn — playing career on easy mode.",
+  "Named the company after yourself: Tech + Anv. Narcissism level: founder.",
+  "YOLO badge on GitHub — because real security researchers don't need code review, right?",
+  "Two cities on two profiles — even your GPS is confused about where you live.",
+  "B.Tech student AND CEO simultaneously — either you're a genius or education is too easy.",
 ];
 
 export function randomSarcasticQuote(): string {
