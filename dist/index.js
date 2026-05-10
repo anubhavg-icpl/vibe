@@ -1776,13 +1776,12 @@ async function main(source, options) {
       const q = String(searchInput ?? "").trim().toLowerCase();
       if (q) {
         const before = assets.length;
-        const filtered = assets.filter(
-          (a) => a.name.toLowerCase().includes(q) || a.description.toLowerCase().includes(q) || a.category.toLowerCase().includes(q)
-        );
-        if (filtered.length === 0) {
+        const fuse = new ModeSearch(assets);
+        const fuseResults = fuse.search(q);
+        if (fuseResults.length === 0) {
           p.log.warn(colors.warning(`No assets matched "${q}" \u2014 showing all ${before}`));
         } else {
-          assets = filtered;
+          assets = fuseResults.map((r) => r.item);
           p.log.info(
             `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched ${colors.muted(`"${q}"`)}`
           );
@@ -1861,21 +1860,85 @@ async function main(source, options) {
     selected = assets;
     if (!json) p.log.info(`Installing all ${assets.length} items`);
   } else {
-    const choices = assets.map((a) => ({
-      value: a,
-      label: `[${a.kind}] ${a.name}`,
-      hint: a.description.length > 60 ? a.description.slice(0, 57) + "\u2026" : a.description
-    }));
-    const picked = await p.multiselect({
-      message: `Pick what to install  ${colors.dim("\xB7 type to filter")}`,
-      options: choices,
-      required: true
-    });
-    if (p.isCancel(picked)) {
-      p.cancel("Cancelled");
-      process.exit(0);
+    const MAX_SELECT = 50;
+    if (assets.length > MAX_SELECT) {
+      p.log.warn(
+        colors.warning(`Too many assets (${assets.length}) to display in a picker.`) + `
+  ${colors.dim("Narrow your search above, or use one of these:")}
+  ${colors.secondary(`vibe add <name>`)} \u2014 install specific assets by name
+  ${colors.secondary(`vibe add <name> --yes`)} \u2014 install without prompts
+  ${colors.secondary(`vibe list -k <kind>`)} \u2014 list by kind, then install`
+      );
+      const action = await p.select({
+        message: "How would you like to proceed?",
+        options: [
+          { value: "all", label: `Install all ${assets.length} assets`, hint: "skip picker, auto-select everything" },
+          { value: "search", label: "Search again", hint: "type a more specific query to narrow results" },
+          { value: "exit", label: "Cancel", hint: "exit and use CLI flags instead" }
+        ]
+      });
+      if (p.isCancel(action) || action === "exit") {
+        p.cancel("Cancelled");
+        process.exit(0);
+      }
+      if (action === "all") {
+        selected = assets;
+      } else {
+        const query = await p.text({
+          message: `${colors.primary("/")} Search assets`,
+          placeholder: "type a more specific keyword"
+        });
+        if (p.isCancel(query)) {
+          p.cancel("Cancelled");
+          process.exit(0);
+        }
+        const q = String(query ?? "").trim();
+        if (q) {
+          const fuse = new ModeSearch(assets);
+          const results2 = fuse.search(q).map((r) => r.item);
+          if (results2.length === 0) {
+            p.log.error(colors.error(`No assets matched "${q}"`));
+            process.exit(1);
+          }
+          assets = results2;
+        }
+        if (assets.length > MAX_SELECT) {
+          p.log.info(colors.dim(`Showing top ${MAX_SELECT} matches from ${assets.length} results.`));
+          assets = assets.slice(0, MAX_SELECT);
+        }
+        const choices = assets.map((a) => ({
+          value: a,
+          label: `[${a.kind}] ${a.name}`,
+          hint: a.description.length > 60 ? a.description.slice(0, 57) + "\u2026" : a.description
+        }));
+        const picked = await p.multiselect({
+          message: `Pick what to install  ${colors.dim("\xB7 type to filter")}`,
+          options: choices,
+          required: true
+        });
+        if (p.isCancel(picked)) {
+          p.cancel("Cancelled");
+          process.exit(0);
+        }
+        selected = picked;
+      }
+    } else {
+      const choices = assets.map((a) => ({
+        value: a,
+        label: `[${a.kind}] ${a.name}`,
+        hint: a.description.length > 60 ? a.description.slice(0, 57) + "\u2026" : a.description
+      }));
+      const picked = await p.multiselect({
+        message: `Pick what to install  ${colors.dim("\xB7 type to filter")}`,
+        options: choices,
+        required: true
+      });
+      if (p.isCancel(picked)) {
+        p.cancel("Cancelled");
+        process.exit(0);
+      }
+      selected = picked;
     }
-    selected = picked;
   }
   let targets;
   if (merged.agent && merged.agent.length > 0) {
