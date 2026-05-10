@@ -273,27 +273,18 @@ function buildFrame(version: string, tick: number, status: string, ready: boolea
 
 // ── Keypress ──────────────────────────────────────────────────────────────────
 
-function waitForKey(): Promise<void> {
-  return new Promise((resolve) => {
-    if (!process.stdin.isTTY) { resolve(); return; }
-    process.stdin.setRawMode(true);
-    process.stdin.resume();
-    // Drain any buffered data first
-    process.stdin.read();
-    const onData = (chunk: Buffer | string) => {
-      const key = Buffer.isBuffer(chunk) ? chunk.toString() : chunk;
-      process.stdin.removeListener("data", onData);
-      process.stdin.setRawMode(false);
-      process.stdin.pause();
-      // Drain remaining bytes in the buffer
-      while (process.stdin.read()) { /* drain */ }
-      if (key === "\x03") {
-        process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
-        process.exit(0);
-      }
+async function waitForKey(): Promise<void> {
+  if (!process.stdin.isTTY) return;
+
+  // Use readline (same subsystem as @clack/core) instead of raw mode.
+  // This avoids corrupting stdin state that clack's prompts depend on.
+  const readline = await import("node:readline");
+  return new Promise<void>((resolve) => {
+    const iface = readline.createInterface({ input: process.stdin });
+    iface.question("", () => {
+      iface.close();
       resolve();
-    };
-    process.stdin.on("data", onData);
+    });
   });
 }
 
@@ -355,9 +346,14 @@ export function startAnimation(version: string): AnimController {
       // If animation was already cleaned up (signal handler), just return
       if (halted) return;
 
-      // Stop animation immediately — no keypress wait.
-      // The animation is just eye candy while assets load; waiting for a
-      // keypress corrupts stdin state and breaks @clack/prompts.
+      // Flip to ready state and render the "Ready" screen
+      ready = true;
+      render();
+
+      // Wait for any keypress — uses readline (not raw mode) so it's
+      // compatible with @clack/prompts which uses the same subsystem
+      await waitForKey();
+
       cleanup();
       process.removeListener("SIGINT",  handleSignal);
       process.removeListener("SIGTERM", handleSignal);

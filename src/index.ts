@@ -64,11 +64,14 @@ import {
 } from "./output.js";
 import {
   renderHeader,
+  animateHeader,
   colors,
   symbols,
   ModeSearch,
   renderInstallResultCard,
   renderProgressBar,
+  startAnimation,
+  type AnimController,
 } from "./ui/index.js";
 import type { Asset, AssetKind, AgentType } from "./types.js";
 
@@ -409,11 +412,11 @@ async function main(source: string, options: CliOptions): Promise<void> {
   // All other modes (json, list, preview, --yes, --asset, --no-animation): use spinner.
   const isInteractive =
     !json && !options.list && !options.preview && !options.asset?.length && !options.yes && !options.noAnimation;
+  const animCtrl: AnimController | null = isInteractive ? startAnimation(VERSION) : null;
 
-  // Show static header for all non-JSON modes
-  if (!json) console.log(renderHeader(VERSION));
+  if (!json && !isInteractive) console.log(renderHeader(VERSION));
 
-  const spinner = !json ? p.spinner() : null;
+  const spinner = !json && !isInteractive ? p.spinner() : null;
   spinner?.start("Discovering assets…");
 
   let assets = await discoverAssets(source, {
@@ -422,6 +425,12 @@ async function main(source: string, options: CliOptions): Promise<void> {
       spinner?.message(`Discovering assets… ${colors.dim(`${kind}: ${count}`)}`);
     } : undefined,
   });
+
+  // Stop animation (shows "Ready", waits for keypress, clears screen)
+  if (animCtrl) {
+    await animCtrl.stop();
+    await animateHeader(VERSION);
+  }
 
   if (options.category) {
     assets = assets.filter((a) => a.category === options.category);
@@ -438,7 +447,11 @@ async function main(source: string, options: CliOptions): Promise<void> {
   const countMsg =
     `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"}` +
     ` ${colors.muted(`(${counts.skill} skills · ${counts.agent} agents · ${counts.command} commands · ${counts.mode} modes)`)}`;
-  spinner?.stop(countMsg);
+  if (animCtrl) {
+    p.log.step(countMsg);
+  } else {
+    spinner?.stop(countMsg);
+  }
 
   // ── Search step (interactive mode only) ──────────────────────────────────
   if (isInteractive) {

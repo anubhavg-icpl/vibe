@@ -1079,6 +1079,8 @@ var BANNER = `
 var WIDTH = 52;
 var CAT_W = 8;
 var TEXT_W = WIDTH - CAT_W - 2;
+var CAT_TYPING_A = [" /\\_/\\ ", "( -.- )", " > ^ < ", "  |_|  ", "(___)  "];
+var CAT_TYPING_B = [" /\\_/\\ ", "( o.o )", " > ^ < ", " | | | ", "(___)  "];
 var CAT_DONE = [" /\\_/\\ ", "( ^.^ )", " > ^ < ", "  \\|/  ", "(___)  "];
 var CAT_ROWS = 5;
 function wrapWords(text2, maxW) {
@@ -1093,6 +1095,58 @@ function wrapWords(text2, maxW) {
   }
   if (cur) lines.push(cur);
   return lines;
+}
+function printCatBlock(catFrame, textLines) {
+  const rows = Math.max(CAT_ROWS, textLines.length);
+  for (let i = 0; i < rows; i++) {
+    const c = colors.primary(catFrame[i] ?? " ".repeat(CAT_W));
+    const t = colors.dim(textLines[i] ?? "");
+    process.stdout.write("  " + c + " " + t + "\x1B[K\n");
+  }
+}
+async function animateHeader(version, subtitle) {
+  const logo = colors.gradient(BANNER);
+  const ver = colors.muted(`v${version}`);
+  const sub = subtitle ?? "AI Agent Asset Manager";
+  const divider = colors.primary(box.heavyH.repeat(WIDTH));
+  const quote = randomSarcasticQuote();
+  const wrapped = wrapWords(quote, TEXT_W);
+  const rows = Math.max(CAT_ROWS, wrapped.length);
+  process.stdout.write(`
+${logo}  ${ver}
+
+  ${colors.dim(sub)}
+${divider}
+`);
+  if (!process.stdout.isTTY) {
+    printCatBlock(CAT_DONE, wrapped);
+    process.stdout.write("\n");
+    return;
+  }
+  const CHARS_PER_FRAME = 2;
+  const FRAME_MS2 = 35;
+  let typed = "";
+  let linesUsed = 0;
+  const blankCat = Array(CAT_ROWS).fill(" ".repeat(CAT_W));
+  printCatBlock(blankCat, []);
+  linesUsed = CAT_ROWS;
+  await new Promise((resolve2) => {
+    const interval = setInterval(() => {
+      const done = typed.length >= quote.length;
+      if (!done) typed = quote.slice(0, typed.length + CHARS_PER_FRAME);
+      const frame = done ? CAT_DONE : Math.floor(typed.length / 4) % 2 === 0 ? CAT_TYPING_A : CAT_TYPING_B;
+      const typedWrapped = wrapWords(typed + (done ? "" : "\u258C"), TEXT_W);
+      const drawRows = Math.max(CAT_ROWS, typedWrapped.length);
+      process.stdout.write(`\x1B[${linesUsed}A\x1B[J`);
+      printCatBlock(frame, typedWrapped);
+      linesUsed = drawRows;
+      if (done) {
+        clearInterval(interval);
+        resolve2();
+      }
+    }, FRAME_MS2);
+  });
+  process.stdout.write("\n");
 }
 function renderHeader(version, subtitle) {
   const logo = colors.gradient(BANNER);
@@ -1228,6 +1282,37 @@ function renderProgressBar(options) {
 
 // src/ui/components/startup.ts
 import chalk2 from "chalk";
+var DONUT_CHARS = ".,-~:;=!*#$@";
+function computeDonut(height, width, a, b) {
+  const buf = new Array(width * height).fill(" ");
+  const zbuf = new Array(width * height).fill(0);
+  const cosA = Math.cos(a), sinA = Math.sin(a);
+  const cosB = Math.cos(b), sinB = Math.sin(b);
+  for (let j = 0; j < 6.28; j += 0.07) {
+    const cosT = Math.cos(j), sinT = Math.sin(j);
+    for (let i = 0; i < 6.28; i += 0.02) {
+      const sinP = Math.sin(i), cosP = Math.cos(i);
+      const h = cosT + 2;
+      const d = 1 / (sinP * h * sinA + sinT * cosA + 5);
+      const t = sinP * h * cosA - sinT * sinA;
+      const x = width / 2 + width / 2.5 * d * (cosP * h * cosB - t * sinB) | 0;
+      const y = height / 2 + height / 3 * d * (cosP * h * sinB + t * cosB) | 0;
+      const o = x + width * y;
+      const n = 8 * ((sinT * sinA - sinP * cosT * cosA) * cosB - sinP * cosT * sinA - sinT * cosA - cosP * cosT * sinB) | 0;
+      if (y >= 0 && y < height && x >= 0 && x < width && d > zbuf[o]) {
+        zbuf[o] = d;
+        const ci = Math.max(0, Math.min(n, DONUT_CHARS.length - 1));
+        const ri = Math.round(ci * (RAMP.length - 1) / 7);
+        buf[o] = chalk2.hex(RAMP[Math.min(ri, RAMP.length - 1)])(DONUT_CHARS[ci]);
+      }
+    }
+  }
+  const rows = [];
+  for (let y = 0; y < height; y++) {
+    rows.push(buf.slice(y * width, (y + 1) * width).join(""));
+  }
+  return rows;
+}
 var LOGO = [
   " \u2584\u2580\u2580\u2584 \u2584\u2580\u2580\u2584  \u2584\u2580\u2580\u2588\u2580\u2584    \u2584\u2580\u2580\u2588\u2584\u2584   \u2584\u2580\u2580\u2588\u2584\u2584\u2584\u2584     ",
   "\u2588   \u2588    \u2588 \u2588   \u2588  \u2588  \u2590 \u2584\u2580   \u2588 \u2590  \u2584\u2580   \u2590     ",
@@ -1237,10 +1322,196 @@ var LOGO = [
   "           \u2588       \u2588 \u2588    \u2590    \u2588    \u2590       ",
   "           \u2590       \u2590 \u2590         \u2590           "
 ];
+var TAGLINE = "AI  Agent  Asset  Manager";
+var CREDIT = "Made by Anubhav Gain  \xB7  anubhavg@infopercept.com";
+var HINT = "Press any key to continue\u2026";
+var RAMP = [
+  "#1A0900",
+  "#3A1808",
+  "#5C2810",
+  "#8B4018",
+  "#B56028",
+  "#C8762A",
+  "#D4882E",
+  "#E09A32",
+  "#F0B048"
+];
+var PRIMARY = "#C8762A";
+var MUTED = "#8A8270";
+var DIM = "#3A3028";
+var DIM2 = "#6A5840";
+var SUCCESS = "#4BAF78";
+var SPINNER = ["\u280B", "\u2819", "\u2839", "\u2838", "\u283C", "\u2834", "\u2826", "\u2827", "\u2807", "\u280F"];
+var FRAME_MS = 50;
+var ANSI_RE = /\x1B\[[0-?]*[ -/]*[@-~]/g;
+var visLen = (s) => s.replace(ANSI_RE, "").length;
 var LOGO_W = LOGO.reduce((m, l) => Math.max(m, l.length), 0);
 var INNER_W = LOGO_W + 4;
 var C_INNER = 46;
 var C_BOX_W = C_INNER + 4;
+function colorLogoLine(line, sweepX) {
+  return line.split("").map((ch, i) => {
+    if (ch === " ") return ch;
+    const dist = Math.abs(i - sweepX);
+    const idx = Math.max(0, RAMP.length - 1 - Math.floor(dist * (RAMP.length / (LOGO_W * 0.5))));
+    return chalk2.hex(RAMP[Math.min(idx, RAMP.length - 1)])(ch);
+  }).join("");
+}
+function cRow(content, innerW) {
+  const vw = visLen(content);
+  const lp = Math.max(0, Math.floor((innerW - vw) / 2));
+  const rp = Math.max(0, innerW - vw - lp);
+  return chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(lp) + content + " ".repeat(rp) + " " + chalk2.hex(PRIMARY)("\u2551");
+}
+function hRule(l, r, innerW, m = "\u2550") {
+  return chalk2.hex(PRIMARY)(l + m.repeat(innerW + 2) + r);
+}
+function buildCompactBar(version, tick, status, ready, quote) {
+  const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const title = chalk2.hex(PRIMARY).bold("V I B E") + chalk2.hex(MUTED)("  \xB7  ") + chalk2.hex(MUTED)(TAGLINE) + "  " + chalk2.hex(MUTED)(`v${version}`);
+  const lines = [];
+  lines.push(hRule("\u2554", "\u2557", C_INNER));
+  if (ready) {
+    lines.push(cRow(title, C_INNER));
+    lines.push(cRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready") + "  " + chalk2.hex(DIM2)("\xB7") + "  " + chalk2.hex(DIM2)(HINT), C_INNER));
+  } else {
+    lines.push(cRow(title, C_INNER));
+    lines.push(cRow(spin + "  " + chalk2.hex(DIM2)(quote), C_INNER));
+  }
+  lines.push(hRule("\u255A", "\u255D", C_INNER));
+  return lines;
+}
+function buildFullBox(version, tick, status, ready) {
+  const spin = chalk2.hex(PRIMARY)(SPINNER[tick % SPINNER.length]);
+  const phase = tick % (LOGO_W * 2);
+  const sweepX = phase <= LOGO_W ? phase : LOGO_W * 2 - phase;
+  const box2 = [];
+  box2.push(hRule("\u2554", "\u2557", INNER_W));
+  box2.push(cRow("", INNER_W));
+  for (const raw of LOGO) {
+    const colored = colorLogoLine(raw, sweepX);
+    const lp = Math.floor((INNER_W - raw.length) / 2);
+    const rp = INNER_W - raw.length - lp;
+    box2.push(
+      chalk2.hex(PRIMARY)("\u2551") + " " + " ".repeat(Math.max(0, lp)) + colored + " ".repeat(Math.max(0, rp)) + " " + chalk2.hex(PRIMARY)("\u2551")
+    );
+  }
+  box2.push(cRow("", INNER_W));
+  box2.push(hRule("\u2560", "\u2563", INNER_W));
+  box2.push(cRow("", INNER_W));
+  box2.push(cRow(chalk2.hex(PRIMARY).bold(TAGLINE), INNER_W));
+  box2.push(cRow(chalk2.hex(MUTED)(`v${version}`), INNER_W));
+  box2.push(cRow("", INNER_W));
+  if (ready) {
+    box2.push(cRow(chalk2.hex(SUCCESS)("\u2713") + "  " + chalk2.hex(MUTED)("Ready"), INNER_W));
+    box2.push(cRow("", INNER_W));
+    box2.push(cRow(chalk2.hex(DIM2)(HINT), INNER_W));
+  } else {
+    box2.push(cRow(spin + "  " + chalk2.hex(MUTED)(status), INNER_W));
+  }
+  box2.push(cRow("", INNER_W));
+  box2.push(hRule("\u255A", "\u255D", INNER_W));
+  return box2;
+}
+var MIN_DONUT_H = 8;
+var GAP = 1;
+var COMPACT_H = 4;
+function buildFrame(version, tick, status, ready, quote) {
+  const cols = process.stdout.columns || 80;
+  const rows = process.stdout.rows || 24;
+  const maxDonutH = rows - COMPACT_H - GAP - 2;
+  const donutH = Math.min(22, Math.max(MIN_DONUT_H, maxDonutH));
+  const donutW = Math.round(donutH * 3.6);
+  const showDonut = maxDonutH >= MIN_DONUT_H && donutW <= cols;
+  const infoLines = showDonut ? buildCompactBar(version, tick, status, ready, quote) : buildFullBox(version, tick, status, ready);
+  const infoH = infoLines.length;
+  const infoW = showDonut ? C_BOX_W : INNER_W + 4;
+  const contentH = showDonut ? donutH + GAP + infoH : infoH;
+  const topPad = Math.max(0, Math.floor((rows - contentH) / 2));
+  const blank = " ".repeat(cols);
+  const out = [];
+  for (let i = 0; i < topPad; i++) out.push(blank);
+  if (showDonut) {
+    const a = 1 + tick * 0.05;
+    const b = tick * 0.07;
+    const donutRows = computeDonut(donutH, donutW, a, b);
+    const dLP = Math.max(0, Math.floor((cols - donutW) / 2));
+    const dRP = Math.max(0, cols - dLP - donutW);
+    for (const row of donutRows) {
+      out.push(" ".repeat(dLP) + row + " ".repeat(dRP));
+    }
+    for (let i = 0; i < GAP; i++) out.push(blank);
+  }
+  const iLP = Math.max(0, Math.floor((cols - infoW) / 2));
+  const iRP = Math.max(0, cols - iLP - infoW);
+  for (const l of infoLines) {
+    out.push(" ".repeat(iLP) + l + " ".repeat(iRP));
+  }
+  const remaining = rows - topPad - contentH;
+  for (let i = 0; i < Math.max(0, remaining); i++) out.push(blank);
+  const creditX = Math.max(1, cols - CREDIT.length - 1);
+  return out.join("\n") + `\x1B[${rows};${creditX}H` + chalk2.hex(DIM)(CREDIT);
+}
+async function waitForKey() {
+  if (!process.stdin.isTTY) return;
+  const readline = await import("readline");
+  return new Promise((resolve2) => {
+    const iface = readline.createInterface({ input: process.stdin });
+    iface.question("", () => {
+      iface.close();
+      resolve2();
+    });
+  });
+}
+function startAnimation(version) {
+  if (!process.stdout.isTTY || !process.stdin.isTTY) {
+    return { stop: async () => void 0 };
+  }
+  process.stdout.write("\x1B[2J\x1B[H\x1B[?25l");
+  const quote = randomSarcasticQuote();
+  let tick = 0;
+  let halted = false;
+  let ready = false;
+  let stopped = false;
+  function statusMsg() {
+    return tick < 12 ? "Initializing\u2026" : "Loading assets\u2026";
+  }
+  function render() {
+    if (halted) return;
+    process.stdout.write("\x1B[H" + buildFrame(version, tick, statusMsg(), ready, quote));
+  }
+  render();
+  const interval = setInterval(() => {
+    if (halted) return;
+    tick++;
+    render();
+  }, FRAME_MS);
+  function cleanup() {
+    if (halted) return;
+    halted = true;
+    clearInterval(interval);
+    process.stdout.write("\x1B[2J\x1B[H\x1B[0m\x1B[?25h");
+  }
+  function handleSignal() {
+    cleanup();
+    process.exit(0);
+  }
+  process.once("SIGINT", handleSignal);
+  process.once("SIGTERM", handleSignal);
+  return {
+    async stop() {
+      if (stopped) return;
+      stopped = true;
+      if (halted) return;
+      ready = true;
+      render();
+      await waitForKey();
+      cleanup();
+      process.removeListener("SIGINT", handleSignal);
+      process.removeListener("SIGTERM", handleSignal);
+    }
+  };
+}
 
 // src/index.ts
 var VERSION = "2.0.0";
@@ -1457,8 +1728,9 @@ async function main(source, options) {
   const json = options.json ?? false;
   const dryRun = options.dryRun ?? false;
   const isInteractive = !json && !options.list && !options.preview && !options.asset?.length && !options.yes && !options.noAnimation;
-  if (!json) console.log(renderHeader(VERSION));
-  const spinner2 = !json ? p.spinner() : null;
+  const animCtrl = isInteractive ? startAnimation(VERSION) : null;
+  if (!json && !isInteractive) console.log(renderHeader(VERSION));
+  const spinner2 = !json && !isInteractive ? p.spinner() : null;
   spinner2?.start("Discovering assets\u2026");
   let assets = await discoverAssets(source, {
     kinds: parseKinds(options.kind),
@@ -1466,6 +1738,10 @@ async function main(source, options) {
       spinner2?.message(`Discovering assets\u2026 ${colors.dim(`${kind}: ${count}`)}`);
     } : void 0
   });
+  if (animCtrl) {
+    await animCtrl.stop();
+    await animateHeader(VERSION);
+  }
   if (options.category) {
     assets = assets.filter((a) => a.category === options.category);
   }
@@ -1479,7 +1755,11 @@ async function main(source, options) {
   }
   const counts = summariseCounts(assets);
   const countMsg = `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"} ${colors.muted(`(${counts.skill} skills \xB7 ${counts.agent} agents \xB7 ${counts.command} commands \xB7 ${counts.mode} modes)`)}`;
-  spinner2?.stop(countMsg);
+  if (animCtrl) {
+    p.log.step(countMsg);
+  } else {
+    spinner2?.stop(countMsg);
+  }
   if (isInteractive) {
     const searchInput = await p.text({
       message: `${colors.primary("/")} Search assets`,
