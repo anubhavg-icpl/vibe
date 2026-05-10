@@ -1760,26 +1760,52 @@ async function main(source, options) {
   } else {
     spinner2?.stop(countMsg);
   }
+  const allAssets = [...assets];
   if (isInteractive) {
-    const searchInput = await p.text({
-      message: `${colors.primary("/")} Search assets`,
-      placeholder: "name, keyword, or category  (Enter = show all, ESC = skip filter)"
-    });
-    if (p.isCancel(searchInput)) {
-      p.log.info(colors.dim("Filter skipped \u2014 showing all assets"));
-    } else {
-      const q = String(searchInput ?? "").trim().toLowerCase();
-      if (q) {
-        const before = assets.length;
-        const fuse = new ModeSearch(assets);
-        const fuseResults = fuse.search(q);
-        if (fuseResults.length === 0) {
-          p.log.warn(colors.warning(`No assets matched "${q}" \u2014 showing all ${before}`));
+    let searching = true;
+    while (searching) {
+      const searchInput = await p.text({
+        message: `${colors.primary("/")} Search assets`,
+        placeholder: "name, keyword, or category  (Enter = show all)"
+      });
+      if (p.isCancel(searchInput)) {
+        assets = allAssets;
+        p.log.info(colors.dim("Showing all assets"));
+        searching = false;
+      } else {
+        const q = String(searchInput ?? "").trim().toLowerCase();
+        if (!q) {
+          assets = allAssets;
+          searching = false;
         } else {
-          assets = fuseResults.map((r) => r.item);
-          p.log.info(
-            `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched ${colors.muted(`"${q}"`)}`
-          );
+          const fuse = new ModeSearch(allAssets);
+          const fuseResults = fuse.search(q);
+          if (fuseResults.length === 0) {
+            p.log.warn(colors.warning(`No assets matched "${q}" \u2014 try a different keyword`));
+          } else {
+            assets = fuseResults.map((r) => r.item);
+            p.log.info(
+              `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched ${colors.muted(`"${q}"`)}`
+            );
+            const action = await p.select({
+              message: "What next?",
+              options: [
+                { value: "select", label: "Select from these results", hint: `${assets.length} items` },
+                { value: "search", label: "Search again", hint: "refine or try a different query" },
+                { value: "all", label: "Show all assets", hint: `${allAssets.length} items` },
+                { value: "cancel", label: "Cancel", hint: "exit vibe" }
+              ]
+            });
+            if (p.isCancel(action) || action === "cancel") {
+              p.cancel("Cancelled");
+              process.exit(0);
+            } else if (action === "select") {
+              searching = false;
+            } else if (action === "all") {
+              assets = allAssets;
+              searching = false;
+            }
+          }
         }
       }
     }
