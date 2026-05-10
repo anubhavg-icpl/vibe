@@ -19,12 +19,12 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Modes-754-c084fc?style=flat-square" alt="Modes">
+  <img src="https://img.shields.io/badge/Modes-853-c084fc?style=flat-square" alt="Modes">
   <img src="https://img.shields.io/badge/Categories-52-a78bfa?style=flat-square" alt="Categories">
-  <img src="https://img.shields.io/badge/Skills-675-7c3aed?style=flat-square" alt="Skills">
-  <img src="https://img.shields.io/badge/Agents-216-6366f1?style=flat-square" alt="Agents">
-  <img src="https://img.shields.io/badge/Plugins-122-3b82f6?style=flat-square" alt="Plugins">
-  <img src="https://img.shields.io/badge/Commands-127-0ea5e9?style=flat-square" alt="Commands">
+  <img src="https://img.shields.io/badge/Skills-800-7c3aed?style=flat-square" alt="Skills">
+  <img src="https://img.shields.io/badge/Agents-200-6366f1?style=flat-square" alt="Agents">
+  <img src="https://img.shields.io/badge/Plugins-120-3b82f6?style=flat-square" alt="Plugins">
+  <img src="https://img.shields.io/badge/Commands-112-0ea5e9?style=flat-square" alt="Commands">
   <img src="https://img.shields.io/badge/Rules-111-06b6d4?style=flat-square" alt="Rules">
   <img src="https://img.shields.io/badge/Prompts-106-14b8a6?style=flat-square" alt="Prompts">
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-22c55e?style=flat-square" alt="License">
@@ -34,32 +34,32 @@
 
 ## What Is This?
 
-A **massive collection of AI chat modes, skills, subagents, slash commands, plugins, output-styles, prompts, and recipes** that turn your AI assistant from "generic helpful bot" into "actually knows what it's doing across 754 specific domains."
+A **massive collection of AI chat modes, skills, subagents, slash commands, plugins, output-styles, prompts, and recipes** that turn your AI assistant from "generic helpful bot" into "actually knows what it's doing across 853 specific domains."
 
 Was 200 modes when this started. Then we kept going. And going. And going.
 
 Did your AI just suggest using `var` in TypeScript? Recommend jQuery in 2026? Think "security best practices" means a `// TODO: add security` comment? Hallucinate APIs that don't exist? Think Polars is just "Pandas but newer"?
 
-**Yeah, we fixed that — 754 times over.**
+**Yeah, we fixed that — 853 times over.**
 
 ## Features
 
-| What You Get                          | Why You Need It                                                                   |
-| ------------------------------------- | --------------------------------------------------------------------------------- |
-| **754 expert modes**                  | Because one-size-fits-all is for socks, not AI                                    |
-| **52 categories**                     | Organized chaos is still organization                                             |
-| **675 skills**                        | Reusable Claude/Codex/Amp/Droid skill bundles                                     |
-| **216 subagents** in 10 sub-categories | Specialized workers for orchestration, QA, data, infra, language experts, etc.   |
-| **127 slash commands** in 8 sub-cats  | `/architecture`, `/devops`, `/security`, `/testing`, `/git`, `/refactoring`...    |
-| **122 plugins**                       | Ready-to-install plugin trees with their own agents + commands                    |
-| **111 rules**                         | Universal behavior policies that work across Claude / Copilot / Gemini / Aider    |
-| **106 prompt templates**              | Domain prompts from the AI Engineering from Scratch curriculum + more             |
-| **18 recipes**                        | End-to-end workflows (landing-page-in-20-min, repo-to-design-system, etc.)        |
-| **33 Mythos security modes**          | Defensive vuln-discovery / red-team / patching / disclosure inspired by Project Glasswing |
-| **174 design-system modes**           | Airbnb / Apple / Bento / Brutalist / Cinematic / Glass — pick an aesthetic       |
-| **Production-grounded content**       | Every web-researched mode cites real URLs. No invented APIs. No hallucinated CVEs |
-| **VIBE CLI**                          | Install modes as skills to OpenCode, Claude Code, Codex, Cursor                   |
-| **Engineer-persona modes**            | Code review by DHH, Carmack, Torvalds, antirez, Rich Hickey, Kleppmann (cited)    |
+| What You Get                           | Why You Need It                                                                           |
+| -------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **853 expert modes**                   | Because one-size-fits-all is for socks, not AI                                            |
+| **52 categories**                      | Organized chaos is still organization                                                     |
+| **800 skills**                         | Reusable Claude/Codex/Amp/Droid skill bundles                                             |
+| **200 subagents** in 10 sub-categories | Specialized workers for orchestration, QA, data, infra, language experts, etc.            |
+| **112 slash commands** in 8 sub-cats   | `/architecture`, `/devops`, `/security`, `/testing`, `/git`, `/refactoring`...            |
+| **120 plugins**                        | Ready-to-install plugin trees with their own agents + commands                            |
+| **111 rules**                          | Universal behavior policies that work across Claude / Copilot / Gemini / Aider            |
+| **106 prompt templates**               | Domain prompts from the AI Engineering from Scratch curriculum + more                     |
+| **18 recipes**                         | End-to-end workflows (landing-page-in-20-min, repo-to-design-system, etc.)                |
+| **33 Mythos security modes**           | Defensive vuln-discovery / red-team / patching / disclosure inspired by Project Glasswing |
+| **174 design-system modes**            | Airbnb / Apple / Bento / Brutalist / Cinematic / Glass — pick an aesthetic                |
+| **Production-grounded content**        | Every web-researched mode cites real URLs. No invented APIs. No hallucinated CVEs         |
+| **VIBE CLI**                           | Install modes as skills to OpenCode, Claude Code, Codex, Cursor                           |
+| **Engineer-persona modes**             | Code review by DHH, Carmack, Torvalds, antirez, Rich Hickey, Kleppmann (cited)            |
 
 ## Mode Categories
 
@@ -142,17 +142,17 @@ specialized ....................  7 modes
 
 Vibe ships **manifests for every major coding-agent CLI** at the repo root, so you can install the entire library with a single command — no clone, no copy-paste. The same `skills/`, `agents/`, `commands/`, `hooks/` directories are exposed via each harness's native plugin system.
 
-| CLI                | Install command                                                                                                                                  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Claude Code**    | `/plugin marketplace add anubhavg-icpl/vibe` then `/plugin install vibe@vibe`                                                                    |
-| **Codex CLI/App**  | `/plugins` → search `vibe` → Install                                                                                                             |
-| **Cursor**         | `/add-plugin vibe` (or search "vibe" in the plugin marketplace)                                                                                  |
-| **OpenCode**       | Add `"plugin": ["github:anubhavg-icpl/vibe"]` to `~/.config/opencode/opencode.json`                                                              |
-| **Gemini CLI**     | `gemini extensions install https://github.com/anubhavg-icpl/vibe`                                                                                |
-| **Copilot CLI**    | `copilot plugin marketplace add anubhavg-icpl/vibe` then `copilot plugin install vibe@vibe`                                                      |
-| **Factory Droid**  | `droid plugin marketplace add https://github.com/anubhavg-icpl/vibe` then `droid plugin install vibe@vibe`                                       |
+| CLI               | Install command                                                                                            |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Claude Code**   | `/plugin marketplace add anubhavg-icpl/vibe` then `/plugin install vibe@vibe`                              |
+| **Codex CLI/App** | `/plugins` → search `vibe` → Install                                                                       |
+| **Cursor**        | `/add-plugin vibe` (or search "vibe" in the plugin marketplace)                                            |
+| **OpenCode**      | Add `"plugin": ["github:anubhavg-icpl/vibe"]` to `~/.config/opencode/opencode.json`                        |
+| **Gemini CLI**    | `gemini extensions install https://github.com/anubhavg-icpl/vibe`                                          |
+| **Copilot CLI**   | `copilot plugin marketplace add anubhavg-icpl/vibe` then `copilot plugin install vibe@vibe`                |
+| **Factory Droid** | `droid plugin marketplace add https://github.com/anubhavg-icpl/vibe` then `droid plugin install vibe@vibe` |
 
-Once installed, all 675 skills are discoverable via the harness's native skill tool. Skills auto-load on relevance — no further config needed.
+Once installed, all 800 skills are discoverable via the harness's native skill tool. Skills auto-load on relevance — no further config needed.
 
 ### Manifest layout in this repo
 
@@ -169,7 +169,7 @@ vibe/
 └── skills/                 (shared — every CLI reads this directory)
 ```
 
-> **Modes (754):** chat-mode prompts under `modes/` are not auto-loaded by any CLI marketplace — install them with the [VIBE CLI](#vibe-cli--install-modes-as-skills) below.
+> **Modes (853):** chat-mode prompts under `modes/` are not auto-loaded by any CLI marketplace — install them with the [VIBE CLI](#vibe-cli--install-modes-as-skills) below.
 
 ---
 
@@ -185,20 +185,20 @@ git clone https://github.com/anubhavg-icpl/vibe.git
 
 Browse `/modes` and find something matching your situation. Examples:
 
-| You Want To...                                          | Use This Mode                                            |
-| ------------------------------------------------------- | -------------------------------------------------------- |
-| Write code that doesn't suck                            | `software-engineer-agent-mode`                           |
-| Think like DHH about a microservices proposal           | `modes/engineer-personas/dhh-style-mode`                 |
-| Have Carmack-grade simplicity in your review            | `modes/engineer-personas/carmack-style-mode`             |
-| Build a RAG with reranking + hybrid search              | `modes/rag-advanced/hybrid-search-expert-mode`           |
-| Fine-tune with QLoRA on a single GPU                    | `modes/llm-training/qlora-expert-mode`                   |
-| Deploy llama.cpp behind nginx with auth                 | `modes/local-llm/llama-cpp-server-expert-mode`           |
-| Write an Ollama Modelfile for your fine-tune            | `modes/model-authoring/ollama-modelfile-expert-mode`     |
-| Hunt vulnerabilities like Mythos Preview                | `modes/mythos/discovery/mythos-zero-day-hunter-mode`     |
-| Build UI with Airbnb's design language                  | `modes/design-systems/airbnb-design-mode`                |
-| Use Cloudflare Workers + D1 + Durable Objects properly  | `modes/edge-platforms/cloudflare-workers-expert-mode`    |
-| Spin up a project with Google's android CLI             | `modes/android-cli/android-create-template-expert-mode`  |
-| Make your AI sound like Iron Man                        | `modes/personalities/tony-stark-mode`                    |
+| You Want To...                                         | Use This Mode                                           |
+| ------------------------------------------------------ | ------------------------------------------------------- |
+| Write code that doesn't suck                           | `software-engineer-agent-mode`                          |
+| Think like DHH about a microservices proposal          | `modes/engineer-personas/dhh-style-mode`                |
+| Have Carmack-grade simplicity in your review           | `modes/engineer-personas/carmack-style-mode`            |
+| Build a RAG with reranking + hybrid search             | `modes/rag-advanced/hybrid-search-expert-mode`          |
+| Fine-tune with QLoRA on a single GPU                   | `modes/llm-training/qlora-expert-mode`                  |
+| Deploy llama.cpp behind nginx with auth                | `modes/local-llm/llama-cpp-server-expert-mode`          |
+| Write an Ollama Modelfile for your fine-tune           | `modes/model-authoring/ollama-modelfile-expert-mode`    |
+| Hunt vulnerabilities like Mythos Preview               | `modes/mythos/discovery/mythos-zero-day-hunter-mode`    |
+| Build UI with Airbnb's design language                 | `modes/design-systems/airbnb-design-mode`               |
+| Use Cloudflare Workers + D1 + Durable Objects properly | `modes/edge-platforms/cloudflare-workers-expert-mode`   |
+| Spin up a project with Google's android CLI            | `modes/android-cli/android-create-template-expert-mode` |
+| Make your AI sound like Iron Man                       | `modes/personalities/tony-stark-mode`                   |
 
 ### Step 3: Copy, Paste, Profit
 
@@ -231,31 +231,31 @@ Pin to a specific revision: `npx -y github:anubhavg-icpl/vibe#master`. Or alias 
 
 ### Subcommands
 
-| Command                          | What it does                                                              |
-| -------------------------------- | ------------------------------------------------------------------------- |
-| `vibe`                           | Interactive: splash → fuzzy picker → multi-select → target picker → install |
-| `vibe add <names...>`            | Install one or more named assets (fuzzy match)                             |
-| `vibe list [--kind ...]`         | List bundled assets, optionally filtered by kind                          |
-| `vibe info <name>`               | Rich preview of one asset + per-target install paths                      |
-| `vibe search <query>`            | Fuzzy search the library                                                  |
-| `vibe targets`                   | Show the 7 target CLIs and which ones are detected on this machine        |
-| `vibe doctor`                    | Diagnose env: node version, asset count, target detection                 |
-| `vibe init`                      | Create `.vibeconfig.yaml` in cwd                                          |
-| `vibe completions [shell]`       | Generate bash/zsh/fish completion script                                   |
+| Command                    | What it does                                                                |
+| -------------------------- | --------------------------------------------------------------------------- |
+| `vibe`                     | Interactive: splash → fuzzy picker → multi-select → target picker → install |
+| `vibe add <names...>`      | Install one or more named assets (fuzzy match)                              |
+| `vibe list [--kind ...]`   | List bundled assets, optionally filtered by kind                            |
+| `vibe info <name>`         | Rich preview of one asset + per-target install paths                        |
+| `vibe search <query>`      | Fuzzy search the library                                                    |
+| `vibe targets`             | Show the 7 target CLIs and which ones are detected on this machine          |
+| `vibe doctor`              | Diagnose env: node version, asset count, target detection                   |
+| `vibe init`                | Create `.vibeconfig.yaml` in cwd                                            |
+| `vibe completions [shell]` | Generate bash/zsh/fish completion script                                    |
 
 ### Supported Targets (7 CLIs)
 
-| Target              | Skills                  | Agents                  | Commands                  | Detection probe         |
-| ------------------- | ----------------------- | ----------------------- | ------------------------- | ----------------------- |
-| **Claude Code**     | `~/.claude/skills/`     | `~/.claude/agents/`     | `~/.claude/commands/`     | `~/.claude` exists      |
-| **OpenAI Codex**    | `~/.codex/skills/`      | `~/.codex/agents/`      | `~/.codex/commands/`      | `~/.codex` exists       |
-| **Cursor**          | `~/.cursor/skills/`     | `~/.cursor/agents/`     | `~/.cursor/commands/`     | `~/.cursor` exists      |
-| **OpenCode**        | `~/.config/opencode/skill/` | `~/.config/opencode/agent/` | `~/.config/opencode/command/` | `~/.config/opencode` exists |
-| **Gemini CLI**      | `~/.gemini/skills/`     | `~/.gemini/agents/`     | `~/.gemini/commands/`     | `~/.gemini` exists      |
-| **GitHub Copilot CLI** | `~/.copilot/skills/` | `~/.copilot/agents/`*   | `~/.copilot/commands/`    | `~/.copilot` exists     |
-| **Factory Droid**   | `~/.factory/skills/`    | `~/.factory/droids/`†   | `~/.factory/commands/`    | `~/.factory` exists     |
+| Target                 | Skills                      | Agents                      | Commands                      | Detection probe             |
+| ---------------------- | --------------------------- | --------------------------- | ----------------------------- | --------------------------- |
+| **Claude Code**        | `~/.claude/skills/`         | `~/.claude/agents/`         | `~/.claude/commands/`         | `~/.claude` exists          |
+| **OpenAI Codex**       | `~/.codex/skills/`          | `~/.codex/agents/`          | `~/.codex/commands/`          | `~/.codex` exists           |
+| **Cursor**             | `~/.cursor/skills/`         | `~/.cursor/agents/`         | `~/.cursor/commands/`         | `~/.cursor` exists          |
+| **OpenCode**           | `~/.config/opencode/skill/` | `~/.config/opencode/agent/` | `~/.config/opencode/command/` | `~/.config/opencode` exists |
+| **Gemini CLI**         | `~/.gemini/skills/`         | `~/.gemini/agents/`         | `~/.gemini/commands/`         | `~/.gemini` exists          |
+| **GitHub Copilot CLI** | `~/.copilot/skills/`        | `~/.copilot/agents/`\*      | `~/.copilot/commands/`        | `~/.copilot` exists         |
+| **Factory Droid**      | `~/.factory/skills/`        | `~/.factory/droids/`†       | `~/.factory/commands/`        | `~/.factory` exists         |
 
-*Copilot agents land with `.agent.md` extension. †Droid renames `agents/` to `droids/`.
+\*Copilot agents land with `.agent.md` extension. †Droid renames `agents/` to `droids/`.
 
 ### Common flags
 
@@ -271,7 +271,7 @@ Pin to a specific revision: `npx -y github:anubhavg-icpl/vibe#master`. Or alias 
 ### How it works
 
 1. `npx github:anubhavg-icpl/vibe` clones this repo to a temp cache and runs the bundled `dist/index.js`.
-2. The CLI discovers all 1,800+ assets across `skills/`, `agents/`, `commands/`, `modes/` in the cloned repo.
+2. The CLI discovers all 1,965 assets across `skills/`, `agents/`, `commands/`, `modes/` in the cloned repo.
 3. Skills are copied as-is (already in `SKILL.md` format). Modes are converted to `SKILL.md` skills with frontmatter. Agents and commands are dropped as `.md` files (with `.agent.md` extension for Copilot).
 4. Detection auto-selects targets that exist on your machine. Use `--agent` to override.
 
@@ -281,15 +281,15 @@ Pin to a specific revision: `npx -y github:anubhavg-icpl/vibe#master`. Or alias 
 
 Vibe ships with several upstream collections, each prefixed for clear provenance:
 
-| Source                                              | What                                                 | Prefix     |
-| --------------------------------------------------- | ---------------------------------------------------- | ---------- |
-| **rohitg00/ai-engineering-from-scratch**            | 361 domain skills + 99 prompts + 20 phase modes      | (none)     |
-| **rohitg00/awesome-claude-design**                  | 35 design-md modes + 6 prompts + 13 recipes          | `acd-`     |
-| **rohitg00/awesome-claude-code-toolkit**            | 136 agents + 42 commands + 37 skills + 120 plugins   | (none)     |
-| **affaan-m/everything-claude-code**                 | 182 skills + 48 agents + 89 rules + 1 plugin tree    | `ecc-`     |
-| **0xDarkMatter/claude-mods**                        | 74 skill dirs + 23 agents + 13 output-styles + tools | `cmods-`   |
-| **badlogic/pi-skills**                              | 8 cross-tool skills (brave-search, gccli, vscode...) | `pi-`      |
-| **open-design/design-systems**                      | 138 design-system modes (139 with README)            | (none)     |
+| Source                                   | What                                                 | Prefix   |
+| ---------------------------------------- | ---------------------------------------------------- | -------- |
+| **rohitg00/ai-engineering-from-scratch** | 361 domain skills + 99 prompts + 20 phase modes      | (none)   |
+| **rohitg00/awesome-claude-design**       | 35 design-md modes + 6 prompts + 13 recipes          | `acd-`   |
+| **rohitg00/awesome-claude-code-toolkit** | 136 agents + 42 commands + 37 skills + 120 plugins   | (none)   |
+| **affaan-m/everything-claude-code**      | 182 skills + 48 agents + 89 rules + 1 plugin tree    | `ecc-`   |
+| **0xDarkMatter/claude-mods**             | 74 skill dirs + 23 agents + 13 output-styles + tools | `cmods-` |
+| **badlogic/pi-skills**                   | 8 cross-tool skills (brave-search, gccli, vscode...) | `pi-`    |
+| **open-design/design-systems**           | 138 design-system modes (139 with README)            | (none)   |
 
 All originals untouched in their dirs of origin.
 
@@ -324,7 +324,7 @@ All originals untouched in their dirs of origin.
 ```text
 vibe/
 ├── .ai/rules/                 # Universal rules (works across agents)
-├── agents/                    # 216 subagents, 10 categories + cmods/ + ecc/
+├── agents/                    # 200 installable subagents, 10 categories + cmods/ + ecc/
 │   ├── business-product/      # PM-style agents
 │   ├── core-development/      # ui-designer, monorepo-architect, websocket-engineer
 │   ├── data-ai/               # data + ML agents
@@ -338,7 +338,7 @@ vibe/
 │   ├── cmods/                 # 23 from claude-mods
 │   ├── ecc/                   # 48 from everything-claude-code
 │   └── *.md                   # 9 originals (architect, code-reviewer, planner...)
-├── commands/                  # 127 slash commands across categories + ecc/ + cmods/
+├── commands/                  # 112 installable slash commands across categories + ecc/ + cmods/
 │   ├── architecture/, devops/, documentation/, git/, refactoring/,
 │   │   security/, testing/, workflow/
 │   ├── ecc/, cmods/
@@ -347,14 +347,14 @@ vibe/
 ├── examples/                  # CLAUDE.md examples + sessions + ecc/
 ├── hooks/                     # Hook configurations + ecc/ + cmods/
 ├── mcp-configs/               # MCP server registry + ecc-mcp-servers.json
-├── modes/                     # 754 chat modes — 52 categories (see breakdown above)
+├── modes/                     # 853 installable chat modes — 52 categories (see breakdown above)
 ├── output-styles/             # 13 output styles (cmods)
-├── plugins/                   # 122 plugins (each with agents/ + commands/)
+├── plugins/                   # 120 plugin trees (each with agents/ + commands/)
 ├── prompts/                   # 106 prompt templates (99 ai-eng + 6 acd + 1 readme)
 ├── recipes/                   # 18 end-to-end recipes + case-studies/
 ├── rules/                     # 111 rules (8 originals + 89 ecc + 9 toolkit + 5 cmods)
 ├── scripts/                   # generate-modes-index.py, fix-diagrams.py
-├── skills/                    # 675 skills (vibe + ai-engineering + pi + cmods + ecc + toolkit)
+├── skills/                    # 800 installable skills (vibe + ai-engineering + pi + cmods + ecc + toolkit)
 ├── src/                       # VIBE CLI (TypeScript)
 ├── templates/                 # claude-md/ + project-starters/ + cmods/
 ├── tools/                     # cmods/ (perplexity.py, install scripts)
@@ -381,29 +381,29 @@ rules/
 
 ## Stats
 
-| Metric                         | Value     |
-| ------------------------------ | --------- |
-| **Total Modes**                | **754**   |
-| **Categories**                 | **52**    |
-| Mythos security modes (4 sub)  | 33        |
-| Design-system modes            | 174       |
-| Engineer-persona modes         | 19        |
-| AI / RAG / training / eval     | 109       |
-| Modern-stack (web/edge/data)   | 53        |
-| Local LLM + model-authoring    | 36        |
-| Android (CLI + platform)       | 30        |
-| **Total Skills**               | **675**   |
-| **Total Subagents**            | **216**   |
-| **Total Commands**             | **127**   |
-| **Total Plugins**              | **122**   |
-| **Total Rules**                | **111**   |
-| **Total Prompts**              | **106**   |
-| **Total Recipes**              | **18**    |
-| **Output Styles**              | **13**    |
-| **Templates**                  | **13**    |
-| Languages covered              | 14+       |
-| Project templates              | 22+       |
-| **Bundled external sources**   | **7**     |
+| Metric                        | Value   |
+| ----------------------------- | ------- |
+| **Total Modes**               | **853** |
+| **Categories**                | **52**  |
+| Mythos security modes (4 sub) | 33      |
+| Design-system modes           | 174     |
+| Engineer-persona modes        | 19      |
+| AI / RAG / training / eval    | 109     |
+| Modern-stack (web/edge/data)  | 53      |
+| Local LLM + model-authoring   | 36      |
+| Android (CLI + platform)      | 30      |
+| **Total Skills**              | **800** |
+| **Total Subagents**           | **200** |
+| **Total Commands**            | **112** |
+| **Total Plugins**             | **120** |
+| **Total Rules**               | **111** |
+| **Total Prompts**             | **106** |
+| **Total Recipes**             | **18**  |
+| **Output Styles**             | **13**  |
+| **Templates**                 | **13**  |
+| Languages covered             | 14+     |
+| Project templates             | 22+     |
+| **Bundled external sources**  | **7**   |
 
 ---
 
@@ -431,10 +431,10 @@ We accept:
 ## FAQ
 
 **Q: Why is it called "Vibe"?**
-A: Because "A Comprehensive Collection of 754 Specialized AI Chat Modes Plus 675 Skills, 216 Subagents, 122 Plugins, and 111 Rules" wouldn't fit in the GitHub repo name field.
+A: Because "A Comprehensive Collection of 853 Specialized AI Chat Modes Plus 800 Skills, 200 Subagents, 120 Plugins, and 111 Rules" wouldn't fit in the GitHub repo name field.
 
 **Q: Does this actually work?**
-A: 754 modes don't write themselves. (Well, some did — but they web-searched first and cited their sources, which is more than most humans bother to do.)
+A: 853 modes don't write themselves. (Well, some did — but they web-searched first and cited their sources, which is more than most humans bother to do.)
 
 **Q: Can I use these commercially?**
 A: License is CC BY-NC-SA 4.0 — non-commercial use is free with attribution. For commercial use, reach out for licensing. Either way, don't blame us when `mythos-uac-bypass-creative-mode` refuses to operate on systems you didn't write authorization for. (That's the point. Read the Authorization Gate.)
@@ -457,7 +457,7 @@ You're free to share and adapt the material for **non-commercial use**, with att
 ---
 
 <p align="center">
-  <strong>Built by developers who got tired of explaining the same things to AI assistants 754 different ways.</strong>
+  <strong>Built by developers who got tired of explaining the same things to AI assistants 853 different ways.</strong>
 </p>
 
 <p align="center">
