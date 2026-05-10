@@ -277,11 +277,15 @@ function waitForKey(): Promise<void> {
     if (!process.stdin.isTTY) { resolve(); return; }
     process.stdin.setRawMode(true);
     process.stdin.resume();
+    // Drain any buffered data first
+    process.stdin.read();
     const onData = (chunk: Buffer | string) => {
       const key = Buffer.isBuffer(chunk) ? chunk.toString() : chunk;
       process.stdin.removeListener("data", onData);
       process.stdin.setRawMode(false);
       process.stdin.pause();
+      // Drain remaining bytes in the buffer
+      while (process.stdin.read()) { /* drain */ }
       if (key === "\x03") {
         process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
         process.exit(0);
@@ -333,7 +337,8 @@ export function startAnimation(version: string): AnimController {
     if (halted) return;
     halted = true;
     clearInterval(interval);
-    process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
+    // Full terminal reset: clear screen, show cursor, reset attributes
+    process.stdout.write("\x1B[2J\x1B[H\x1B[0m\x1B[?25h");
   }
 
   function handleSignal(): void { cleanup(); process.exit(0); }

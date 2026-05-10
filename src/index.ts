@@ -430,6 +430,18 @@ async function main(source: string, options: CliOptions): Promise<void> {
   if (animCtrl) {
     await animCtrl.stop();
     await animateHeader(VERSION);
+
+    // Reset terminal state for @clack/prompts — clear any leftover escape
+    // sequences, ensure cursor is visible, and drain stdin buffer
+    process.stdout.write("\x1B[0m\x1B[?25h");
+    // Drain any leftover stdin bytes from the animation keypress
+    if (process.stdin.isTTY) {
+      process.stdin.setRawMode(false);
+      process.stdin.pause();
+      // Small delay to let the terminal settle before clack takes over
+      await new Promise<void>((r) => setTimeout(r, 50));
+      process.stdin.resume();
+    }
   }
 
   if (options.category) {

@@ -1139,7 +1139,7 @@ ${divider}
       }
     }, FRAME_MS2);
   });
-  process.stdout.write("\n");
+  process.stdout.write("\x1B[0m\x1B[?25h\n");
 }
 function renderHeader(version, subtitle) {
   const logo = colors.gradient(BANNER);
@@ -1452,11 +1452,14 @@ function waitForKey() {
     }
     process.stdin.setRawMode(true);
     process.stdin.resume();
+    process.stdin.read();
     const onData = (chunk) => {
       const key = Buffer.isBuffer(chunk) ? chunk.toString() : chunk;
       process.stdin.removeListener("data", onData);
       process.stdin.setRawMode(false);
       process.stdin.pause();
+      while (process.stdin.read()) {
+      }
       if (key === "") {
         process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
         process.exit(0);
@@ -1493,7 +1496,7 @@ function startAnimation(version) {
     if (halted) return;
     halted = true;
     clearInterval(interval);
-    process.stdout.write("\x1B[2J\x1B[H\x1B[?25h");
+    process.stdout.write("\x1B[2J\x1B[H\x1B[0m\x1B[?25h");
   }
   function handleSignal() {
     cleanup();
@@ -1749,6 +1752,13 @@ async function main(source, options) {
   if (animCtrl) {
     await animCtrl.stop();
     await animateHeader(VERSION);
+    process.stdout.write("\x1B[0m\x1B[?25h");
+    if (process.stdin.isTTY) {
+      process.stdin.setRawMode(false);
+      process.stdin.pause();
+      await new Promise((r) => setTimeout(r, 50));
+      process.stdin.resume();
+    }
   }
   if (options.category) {
     assets = assets.filter((a) => a.category === options.category);

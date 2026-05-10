@@ -83,7 +83,8 @@ export async function animateHeader(version: string, subtitle?: string): Promise
     }, FRAME_MS);
   });
 
-  process.stdout.write("\n");
+  // Ensure terminal is in a clean state after animation
+  process.stdout.write("\x1B[0m\x1B[?25h\n");
 }
 
 // Static fallback (used by non-interactive / json paths)
