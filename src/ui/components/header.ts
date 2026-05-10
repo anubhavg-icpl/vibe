@@ -1,13 +1,14 @@
 import { colors, symbols, box, randomSarcasticQuote } from "../theme.js";
 
-// ASCII art for "VIBE" — clear block-letter style with proper spacing
+// ASCII art for "VIBE" — box-drawing style with proper spacing
 const BANNER = `
- ██╗   ██╗██╗███████╗██████╗ ███████╗
- ██║   ██║██║██╔════╝██╔══██╗██╔════╝
- ██║   ██║██║███████╗██████╔╝███████╗
- ╚██╗ ██╔╝██║╚════██║██╔══██╗╚════██║
-  ╚████╔╝ ██║███████║██████╔╝███████║
-   ╚═══╝  ╚═╝╚══════╝╚═════╝ ╚══════╝`;
+ ▄▀▀▄ ▄▀▀▄  ▄▀▀█▀▄    ▄▀▀█▄▄   ▄▀▀█▄▄▄▄     
+█   █    █ █   █  █  ▐ ▄▀   █ ▐  ▄▀   ▐     
+▐  █    █  ▐   █  ▐    █▄▄▄▀    █▄▄▄▄▄      
+   █   ▄▀      █       █   █    █    ▌      
+    ▀▄▀     ▄▀▀▀▀▀▄   ▄▀▄▄▄▀   ▄▀▄▄▄▄       
+           █       █ █    ▐    █    ▐       
+           ▐       ▐ ▐         ▐`;
 
 const WIDTH = 52;
 const CAT_W  = 8;
