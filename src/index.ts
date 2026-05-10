@@ -28,6 +28,7 @@ import { existsSync, rmSync, statSync } from "fs";
 import { dirname, resolve, join } from "path";
 import { fileURLToPath } from "url";
 import { stat as statAsync } from "fs/promises";
+import { emitKeypressEvents } from "readline";
 
 import { discoverAssets, summariseCounts } from "./discovery.js";
 import {
@@ -94,6 +95,143 @@ function defaultSource(): string {
   return process.cwd();
 }
 
+async function readAssetPickerCommand(
+  assetCount: number,
+  allowBrowse: boolean,
+): Promise<AssetPickerCommand> {
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    const action = await p.select({
+      message: "Choose an action",
+      options: [
+        ...(allowBrowse
+          ? [{ value: "browse" as const, label: `Browse ${assetCount} assets` }]
+          : []),
+        { value: "search" as const, label: "Search assets", hint: "same as pressing /" },
+        { value: "all" as const, label: `Install all ${assetCount} assets` },
+        { value: "cancel" as const, label: "Cancel" },
+      ],
+    });
+    return p.isCancel(action) ? "cancel" : action;
+  }
+
+  return new Promise((resolveCommand) => {
+    const stdin = process.stdin;
+    const wasRaw = stdin.isRaw;
+
+    emitKeypressEvents(stdin);
+    stdin.setRawMode(true);
+    stdin.resume();
+
+    const hint = allowBrowse
+      ? `Press ${colors.primary("/")} to search, ${colors.secondary("Enter")} to browse ${assetCount}, ${colors.secondary("a")} to install all, ${colors.secondary("q")} to cancel`
+      : `Press ${colors.primary("/")} to search, ${colors.secondary("a")} to install all, ${colors.secondary("q")} to cancel`;
+
+    process.stdout.write(`${colors.muted("│")}\n${colors.muted("◇")}  ${hint}\n${colors.muted("│")}  `);
+
+    const done = (command: AssetPickerCommand) => {
+      stdin.off("keypress", onKeypress);
+      stdin.setRawMode(wasRaw);
+      process.stdout.write("\n");
+      resolveCommand(command);
+    };
+
+    const onKeypress = (input: string, key: { name?: string; ctrl?: boolean }) => {
+      if (key.ctrl && key.name === "c") done("cancel");
+      else if (key.name === "escape" || input === "q") done("cancel");
+      else if (input === "/") done("search");
+      else if (input === "a") done("all");
+      else if (allowBrowse && key.name === "return") done("browse");
+    };
+
+    stdin.on("keypress", onKeypress);
+  });
+}
+
+function makeAssetChoices(assets: Asset[]): p.Option<Asset>[] {
+  return assets.map((a) => ({
+    value: a,
+    label: `[${a.kind}] ${a.name}`,
+    hint:
+      a.description.length > 60
+        ? a.description.slice(0, 57) + "…"
+        : a.description,
+  }));
+}
+
+async function searchAssets(
+  searchableAssets: Asset[],
+  allAssets: Asset[],
+): Promise<Asset[]> {
+  const query = await p.text({
+    message: `${colors.primary("/")} Search assets`,
+    placeholder: "keyword, category, or empty to show all",
+  });
+  if (p.isCancel(query)) return searchableAssets;
+
+  const q = String(query ?? "").trim();
+  if (!q) return allAssets;
+
+  const fuse = new ModeSearch<Asset>(searchableAssets);
+  const results = fuse.search(q).map((r) => r.item);
+  if (results.length === 0) {
+    p.log.warn(colors.warning(`No assets matched "${q}"`));
+    return searchableAssets;
+  }
+
+  p.log.info(
+    `${colors.primary(String(results.length))} asset${results.length === 1 ? "" : "s"} matched` +
+      ` ${colors.muted(`"${q}"`)}`,
+  );
+  return results;
+}
+
+async function pickAssetsInteractively(initialAssets: Asset[]): Promise<Asset[]> {
+  const allAssets = [...initialAssets];
+  let assets = [...initialAssets];
+
+  while (true) {
+    if (assets.length <= MAX_INTERACTIVE_ASSETS) {
+      const command = await readAssetPickerCommand(assets.length, true);
+      if (command === "cancel") {
+        p.cancel("Cancelled");
+        process.exit(0);
+      }
+      if (command === "all") return assets;
+      if (command === "search") {
+        assets = await searchAssets(assets, allAssets);
+        continue;
+      }
+
+      const picked = await p.multiselect({
+        message: `Pick what to install  ${colors.dim("· / search before browsing")}`,
+        options: makeAssetChoices(assets),
+        required: true,
+      });
+      if (p.isCancel(picked)) {
+        p.cancel("Cancelled");
+        process.exit(0);
+      }
+      return picked as Asset[];
+    }
+
+    p.log.warn(
+      colors.warning(`Too many assets (${assets.length}) to display in a picker.`) +
+        `\n  ${colors.dim("Press / to narrow the results, or use one of these:")}` +
+        `\n  ${colors.secondary(`vibe add <name>`)} - install specific assets by name` +
+        `\n  ${colors.secondary(`vibe add <name> --yes`)} - install without prompts` +
+        `\n  ${colors.secondary(`vibe list -k <kind>`)} - list by kind, then install`,
+    );
+
+    const command = await readAssetPickerCommand(assets.length, false);
+    if (command === "cancel") {
+      p.cancel("Cancelled");
+      process.exit(0);
+    }
+    if (command === "all") return assets;
+    assets = await searchAssets(assets, allAssets);
+  }
+}
+
 interface CliOptions {
   global?: boolean;
   agent?: string[];
@@ -105,9 +243,22 @@ interface CliOptions {
   json?: boolean;
   preview?: string;
   source?: string;
+  animation?: boolean;
   noAnimation?: boolean;
   dryRun?: boolean;
   installed?: boolean;
+}
+
+type AssetPickerCommand = "search" | "browse" | "all" | "cancel";
+
+const MAX_INTERACTIVE_ASSETS = 50;
+
+function rootOptions(): CliOptions {
+  return program.opts<CliOptions>();
+}
+
+function mergeRootOptions<T extends CliOptions>(opts: T): T {
+  return { ...rootOptions(), ...opts };
 }
 
 const EXAMPLES = `
@@ -172,7 +323,7 @@ program
   .option("--json", "JSON output")
   .option("--dry-run", "Preview what would be installed without installing")
   .action(async (names: string[], opts: CliOptions) => {
-    await main(defaultSource(), { ...opts, asset: names, yes: true });
+    await main(defaultSource(), { ...mergeRootOptions(opts), asset: names, yes: true });
   });
 
 program
@@ -183,10 +334,11 @@ program
   .option("--installed", "Show only installed assets")
   .option("--json", "JSON output")
   .action(async (opts: CliOptions & { installed?: boolean }) => {
-    if (opts.installed) {
-      await runListInstalled(opts);
+    const merged = mergeRootOptions(opts);
+    if (merged.installed) {
+      await runListInstalled(merged);
     } else {
-      await main(defaultSource(), { ...opts, list: true });
+      await main(defaultSource(), { ...merged, list: true });
     }
   });
 
@@ -195,7 +347,7 @@ program
   .description("Show a rich preview of one asset")
   .option("--json", "JSON output")
   .action(async (name: string, opts: { json?: boolean }) => {
-    opts.json = opts.json ?? program.opts().json;
+    opts.json = opts.json ?? rootOptions().json;
     const root = defaultSource();
     const items = await discoverAssets(root);
     const search = new ModeSearch<Asset>(items);
@@ -241,7 +393,7 @@ program
   .description("Detect target CLIs and verify the local environment")
   .option("--json", "JSON output")
   .action(async (opts: { json?: boolean }) => {
-    opts.json = opts.json ?? program.opts().json;
+    opts.json = opts.json ?? rootOptions().json;
     await runDoctor(opts);
   });
 
@@ -256,7 +408,7 @@ program
       query: string,
       opts: { kind?: string[]; limit?: string; json?: boolean },
     ) => {
-      opts.json = opts.json ?? program.opts().json;
+      opts.json = opts.json ?? rootOptions().json;
       const root = defaultSource();
       const items = await discoverAssets(root, {
         kinds: parseKinds(opts.kind),
@@ -303,7 +455,7 @@ program
   .description("List the 7 supported target CLIs and their detection status")
   .option("--json", "JSON output")
   .action(async (opts: { json?: boolean }) => {
-    opts.json = opts.json ?? program.opts().json;
+    opts.json = opts.json ?? rootOptions().json;
     const detected = await detectInstalledAgents();
     const detectedSet = new Set(detected);
     const rows = ALL_AGENT_TYPES.map((t) => ({
@@ -375,7 +527,7 @@ program
   .option("--json", "JSON output")
   .option("-y, --yes", "Skip confirmation")
   .action(async (names: string[], opts: CliOptions) => {
-    await runUninstall(names, opts);
+    await runUninstall(names, mergeRootOptions(opts));
   });
 
 program
@@ -387,7 +539,7 @@ program
   .option("--json", "JSON output")
   .option("--dry-run", "Preview what would be updated")
   .action(async (names: string[], opts: CliOptions) => {
-    await runUpdate(names, opts);
+    await runUpdate(names, mergeRootOptions(opts));
   });
 
 program.parse();
@@ -407,11 +559,12 @@ async function main(source: string, options: CliOptions): Promise<void> {
   const merged = mergeConfigWithOptions(config, options as never);
   const json = options.json ?? false;
   const dryRun = options.dryRun ?? false;
+  const animationEnabled = options.animation !== false && !options.noAnimation;
 
   // Interactive mode: animated startup runs concurrently with discovery.
   // All other modes (json, list, preview, --yes, --asset, --no-animation): use spinner.
   const isInteractive =
-    !json && !options.list && !options.preview && !options.asset?.length && !options.yes && !options.noAnimation;
+    !json && !options.list && !options.preview && !options.asset?.length && !options.yes && animationEnabled;
   const animCtrl: AnimController | null = isInteractive ? startAnimation(VERSION) : null;
 
   if (!json && !isInteractive) console.log(renderHeader(VERSION));
@@ -451,65 +604,6 @@ async function main(source: string, options: CliOptions): Promise<void> {
     p.log.step(countMsg);
   } else {
     spinner?.stop(countMsg);
-  }
-
-  // ── Search step (interactive mode only) ──────────────────────────────────
-  // Keeps the full asset list so we can re-search from scratch.
-  const allAssets = [...assets];
-  if (isInteractive) {
-    let searching = true;
-    while (searching) {
-      const searchInput = await p.text({
-        message: `${colors.primary("/")} Search assets`,
-        placeholder: "name, keyword, or category  (Enter = show all)",
-      });
-      if (p.isCancel(searchInput)) {
-        // ESC = show all assets, continue to picker
-        assets = allAssets;
-        p.log.info(colors.dim("Showing all assets"));
-        searching = false;
-      } else {
-        const q = String(searchInput ?? "").trim().toLowerCase();
-        if (!q) {
-          // Empty = show all, continue to picker
-          assets = allAssets;
-          searching = false;
-        } else {
-          const fuse = new ModeSearch<Asset>(allAssets);
-          const fuseResults = fuse.search(q);
-          if (fuseResults.length === 0) {
-            p.log.warn(colors.warning(`No assets matched "${q}" — try a different keyword`));
-            // Loop: let user search again
-          } else {
-            assets = fuseResults.map((r) => r.item);
-            p.log.info(
-              `${colors.primary(String(assets.length))} asset${assets.length === 1 ? "" : "s"} matched` +
-              ` ${colors.muted(`"${q}"`)}`,
-            );
-            // Ask: happy with results, or search again?
-            const action = await p.select({
-              message: "What next?",
-              options: [
-                { value: "select", label: "Select from these results", hint: `${assets.length} items` },
-                { value: "search", label: "Search again", hint: "refine or try a different query" },
-                { value: "all", label: "Show all assets", hint: `${allAssets.length} items` },
-                { value: "cancel", label: "Cancel", hint: "exit vibe" },
-              ],
-            });
-            if (p.isCancel(action) || action === "cancel") {
-              p.cancel("Cancelled");
-              process.exit(0);
-            } else if (action === "select") {
-              searching = false;
-            } else if (action === "all") {
-              assets = allAssets;
-              searching = false;
-            }
-            // action === "search" → loop continues
-          }
-        }
-      }
-    }
   }
 
   // Preview-only mode
@@ -590,95 +684,7 @@ async function main(source: string, options: CliOptions): Promise<void> {
     selected = assets;
     if (!json) p.log.info(`Installing all ${assets.length} items`);
   } else {
-    // Cap multiselect to prevent terminal freeze with huge asset lists
-    const MAX_SELECT = 50;
-    if (assets.length > MAX_SELECT) {
-      p.log.warn(
-        colors.warning(`Too many assets (${assets.length}) to display in a picker.`) +
-        `\n  ${colors.dim("Narrow your search above, or use one of these:")}` +
-        `\n  ${colors.secondary(`vibe add <name>`)} — install specific assets by name` +
-        `\n  ${colors.secondary(`vibe add <name> --yes`)} — install without prompts` +
-        `\n  ${colors.secondary(`vibe list -k <kind>`)} — list by kind, then install`,
-      );
-      const action = await p.select({
-        message: "How would you like to proceed?",
-        options: [
-          { value: "all", label: `Install all ${assets.length} assets`, hint: "skip picker, auto-select everything" },
-          { value: "search", label: "Search again", hint: "type a more specific query to narrow results" },
-          { value: "exit", label: "Cancel", hint: "exit and use CLI flags instead" },
-        ],
-      });
-      if (p.isCancel(action) || action === "exit") {
-        p.cancel("Cancelled");
-        process.exit(0);
-      }
-      if (action === "all") {
-        selected = assets;
-      } else {
-        // Re-search
-        const query = await p.text({
-          message: `${colors.primary("/")} Search assets`,
-          placeholder: "type a more specific keyword",
-        });
-        if (p.isCancel(query)) {
-          p.cancel("Cancelled");
-          process.exit(0);
-        }
-        const q = String(query ?? "").trim();
-        if (q) {
-          const fuse = new ModeSearch<Asset>(assets);
-          const results = fuse.search(q).map((r) => r.item);
-          if (results.length === 0) {
-            p.log.error(colors.error(`No assets matched "${q}"`));
-            process.exit(1);
-          }
-          assets = results;
-        }
-        // Fall through to multiselect below with narrowed results
-        if (assets.length > MAX_SELECT) {
-          // Still too many — just take top matches
-          p.log.info(colors.dim(`Showing top ${MAX_SELECT} matches from ${assets.length} results.`));
-          assets = assets.slice(0, MAX_SELECT);
-        }
-        const choices = assets.map((a) => ({
-          value: a,
-          label: `[${a.kind}] ${a.name}`,
-          hint:
-            a.description.length > 60
-              ? a.description.slice(0, 57) + "…"
-              : a.description,
-        }));
-        const picked = await p.multiselect({
-          message: `Pick what to install  ${colors.dim("· type to filter")}`,
-          options: choices,
-          required: true,
-        });
-        if (p.isCancel(picked)) {
-          p.cancel("Cancelled");
-          process.exit(0);
-        }
-        selected = picked as Asset[];
-      }
-    } else {
-      const choices = assets.map((a) => ({
-        value: a,
-        label: `[${a.kind}] ${a.name}`,
-        hint:
-          a.description.length > 60
-            ? a.description.slice(0, 57) + "…"
-            : a.description,
-      }));
-      const picked = await p.multiselect({
-        message: `Pick what to install  ${colors.dim("· type to filter")}`,
-        options: choices,
-        required: true,
-      });
-      if (p.isCancel(picked)) {
-        p.cancel("Cancelled");
-        process.exit(0);
-      }
-      selected = picked as Asset[];
-    }
+    selected = await pickAssetsInteractively(assets);
   }
 
   // Target selection
