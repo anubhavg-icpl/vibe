@@ -47,25 +47,30 @@ export async function animateHeader(version: string, subtitle?: string): Promise
   const sub     = subtitle ?? "AI Agent Asset Manager";
   const divider = colors.primary(box.heavyH.repeat(WIDTH));
   const quote   = randomSarcasticQuote();
+  const wrapped = wrapWords(quote, TEXT_W);
+  const rows    = Math.max(CAT_ROWS, wrapped.length);
 
-  // Static top section
+  // Print header
   process.stdout.write(`\n${logo}  ${ver}\n\n  ${colors.dim(sub)}\n${divider}\n`);
 
   if (!process.stdout.isTTY) {
     // non-TTY: print static block immediately
-    printCatBlock(CAT_DONE, wrapWords(quote, TEXT_W));
+    printCatBlock(CAT_DONE, wrapped);
     process.stdout.write("\n");
     return;
   }
 
-  // Reserve space: print blank cat block first
-  const totalRows = Math.max(CAT_ROWS, wrapWords(quote, TEXT_W).length);
-  for (let i = 0; i < totalRows; i++) process.stdout.write("\n");
-
-  // Typewriter animation
+  // Typewriter with cat animation — redraws in-place using cursor up.
+  // We track how many rows we've used and only rewind exactly that many.
   const CHARS_PER_FRAME = 2;
-  const FRAME_MS = 38;
+  const FRAME_MS = 35;
   let typed = "";
+  let linesUsed = 0;
+
+  // Print initial blank block
+  const blankCat = Array(CAT_ROWS).fill(" ".repeat(CAT_W));
+  printCatBlock(blankCat, []);
+  linesUsed = CAT_ROWS;
 
   await new Promise<void>((resolve) => {
     const interval = setInterval(() => {
@@ -74,18 +79,19 @@ export async function animateHeader(version: string, subtitle?: string): Promise
       if (!done) typed = quote.slice(0, typed.length + CHARS_PER_FRAME);
 
       const frame = done ? CAT_DONE : (Math.floor(typed.length / 4) % 2 === 0 ? CAT_TYPING_A : CAT_TYPING_B);
-      const wrapped = wrapWords(typed + (done ? "" : "▌"), TEXT_W);
+      const typedWrapped = wrapWords(typed + (done ? "" : "▌"), TEXT_W);
+      const drawRows = Math.max(CAT_ROWS, typedWrapped.length);
 
-      // Rewind
-      process.stdout.write(`\x1B[${totalRows}A`);
-      printCatBlock(frame, wrapped);
+      // Rewind exactly the lines we last drew
+      process.stdout.write(`\x1B[${linesUsed}A\x1B[J`);
+      printCatBlock(frame, typedWrapped);
+      linesUsed = drawRows;
 
       if (done) { clearInterval(interval); resolve(); }
     }, FRAME_MS);
   });
 
-  // Ensure terminal is in a clean state after animation
-  process.stdout.write("\x1B[0m\x1B[?25h\n");
+  process.stdout.write("\n");
 }
 
 // Static fallback (used by non-interactive / json paths)

@@ -355,19 +355,9 @@ export function startAnimation(version: string): AnimController {
       // If animation was already cleaned up (signal handler), just return
       if (halted) return;
 
-      // Flip to ready state — interval keeps spinning the donut until key press
-      ready = true;
-
-      // Safety timeout: if waitForKey never resolves (e.g. stdin closes), bail after 3s
-      const timeout = new Promise<void>((resolve) => {
-        setTimeout(() => {
-          cleanup();
-          resolve();
-        }, 3000);
-      });
-
-      await Promise.race([waitForKey(), timeout]);
-
+      // Stop animation immediately — no keypress wait.
+      // The animation is just eye candy while assets load; waiting for a
+      // keypress corrupts stdin state and breaks @clack/prompts.
       cleanup();
       process.removeListener("SIGINT",  handleSignal);
       process.removeListener("SIGTERM", handleSignal);
