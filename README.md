@@ -1,7 +1,7 @@
 # VIBE — AI Chat Modes, Skills, Agents & Plugins
 
 <p align="center">
-  <img src="assets/vibe-logo-icon.webp" alt="VIBE Logo" width="200"/>
+  <img src="assets/glowing-crystal-orb-floating-abo.webp" alt="VIBE Logo" width="200"/>
 </p>
 
 <p align="center">
@@ -31,6 +31,10 @@
 </p>
 
 ---
+
+<p align="center">
+  <img src="assets/abstract-data-visualization-lumi.webp" alt="5340 skills visualized as luminous constellations" width="800"/>
+</p>
 
 ## What Is This?
 
@@ -84,6 +88,10 @@ pi-dev .........................  5 modes  (pi.dev extensions, prompt-templates,
 ```
 
 ### Defense in Depth — the Mythos suite
+
+<p align="center">
+  <img src="assets/digital-shield-repaired-by-code.webp" alt="Mythos defensive security suite" width="600"/>
+</p>
 
 Inspired by Anthropic's Project Glasswing & Claude Mythos Preview. Defensive-first framing throughout. Real CVEs only — no fabrications.
 
@@ -209,7 +217,7 @@ Copy mode content into your AI assistant. Done.
 ## VIBE CLI — One Command, Zero Install
 
 <p align="center">
-  <img src="assets/vibe-cli-showcase.webp" alt="VIBE CLI in action" width="700"/>
+  <img src="assets/command-line-showing-npx-vibe.webp" alt="VIBE CLI in action" width="700"/>
 </p>
 
 Vibe ships a `vibe` CLI that installs the **entire library** (skills, agents, commands, modes) into any of **7 coding-agent CLIs** in one shot. No `npm install -g`, no clone — just `npx`.
