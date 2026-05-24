@@ -3,6 +3,47 @@ import { join, basename, dirname, sep, posix } from "path";
 import matter from "gray-matter";
 import type { Asset, AssetKind, Mode } from "./types.js";
 
+// ── Index-based fast path ─────────────────────────────────────────────────────
+// assets-index.json is pre-generated at build time; loading it avoids
+// walking thousands of directories on startup.
+
+interface IndexEntry {
+  kind: AssetKind;
+  name: string;
+  description: string;
+  category: string;
+  path: string;       // relative to repo root, forward-slash
+  tags?: string[];
+  modeFile?: string;  // modes only
+  metadata?: Record<string, unknown>;
+}
+
+let _indexCache: Asset[] | null | undefined = undefined; // undefined = not yet tried
+
+async function loadIndexAssets(root: string): Promise<Asset[] | null> {
+  if (_indexCache !== undefined) return _indexCache;
+  try {
+    const raw = await readFile(join(root, "assets-index.json"), "utf-8");
+    const idx = JSON.parse(raw) as { assets: IndexEntry[] };
+    _indexCache = idx.assets.map((e) => ({
+      kind: e.kind,
+      name: e.name,
+      description: e.description,
+      category: e.category,
+      path: join(root, e.path.split("/").join(sep)),
+      metadata: {
+        ...e.metadata,
+        ...(e.tags?.length ? { tags: e.tags } : {}),
+        ...(e.modeFile ? { modeFile: join(root, e.modeFile.split("/").join(sep)) } : {}),
+      },
+    }));
+    return _indexCache;
+  } catch {
+    _indexCache = null;
+    return null;
+  }
+}
+
 const SKIP_DIRS = new Set([
   "node_modules",
   ".git",
@@ -195,20 +236,30 @@ export async function discoverAssets(
       ? options.kinds
       : (["skill", "agent", "command", "mode"] as AssetKind[]),
   );
-  const kindOrder: AssetKind[] = ["skill", "agent", "command", "mode"];
+
+  // ── Fast path: pre-built index ───────────────────────────────────────────
+  const indexed = await loadIndexAssets(root);
+  if (indexed !== null) {
+    const filtered = indexed.filter((a) => wanted.has(a.kind));
+    if (options.onKindFound) {
+      for (const k of ["skill", "agent", "command", "mode"] as AssetKind[]) {
+        if (wanted.has(k)) options.onKindFound(k, filtered.filter((a) => a.kind === k).length);
+      }
+    }
+    return filtered;
+  }
+
+  // ── Slow fallback: walk the filesystem ──────────────────────────────────
   const tasks: Promise<Asset[]>[] = [];
   const taskKinds: AssetKind[] = [];
-  if (wanted.has("skill")) { tasks.push(discoverSkills(root)); taskKinds.push("skill"); }
-  if (wanted.has("agent")) { tasks.push(discoverFlat(root, "agents", "agent")); taskKinds.push("agent"); }
+  if (wanted.has("skill"))   { tasks.push(discoverSkills(root));                    taskKinds.push("skill");   }
+  if (wanted.has("agent"))   { tasks.push(discoverFlat(root, "agents", "agent"));   taskKinds.push("agent");   }
   if (wanted.has("command")) { tasks.push(discoverFlat(root, "commands", "command")); taskKinds.push("command"); }
-  if (wanted.has("mode")) { tasks.push(discoverModesAsset(root)); taskKinds.push("mode"); }
+  if (wanted.has("mode"))    { tasks.push(discoverModesAsset(root));                taskKinds.push("mode");    }
 
-  // Resolve sequentially so we can report per-kind counts to the spinner
-  const buckets: Asset[][] = [];
-  for (let i = 0; i < tasks.length; i++) {
-    const result = await tasks[i];
-    buckets.push(result);
-    options.onKindFound?.(taskKinds[i], result.length);
+  const buckets = await Promise.all(tasks);
+  for (let i = 0; i < buckets.length; i++) {
+    options.onKindFound?.(taskKinds[i], buckets[i].length);
   }
   return buckets.flat();
 }

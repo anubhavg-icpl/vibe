@@ -34,14 +34,16 @@
     "lint:fix": "markdownlint-cli2 --fix 'modes/**/*.md' '*.md'",
     "format": "prettier --write 'modes/**/*.md' '*.md'",
     "format:check": "prettier --check 'modes/**/*.md' '*.md'",
-    "check": "pnpm run lint && pnpm run format:check",
-    "fix": "pnpm run lint:fix && pnpm run format",
+    "check": "npm run lint && npm run format:check",
+    "fix": "npm run lint:fix && npm run format",
     "generate:index": "python scripts/generate-modes-index.py",
     "fix:diagrams": "python scripts/fix-diagrams.py",
     "build": "tsup src/index.ts --format esm --dts --clean --target node18",
+    "build:index": "tsx scripts/build-assets-index.ts",
+    "release": "npm run build && npm run build:index",
     "dev": "tsx src/index.ts",
-    "prepare": "node -e \"const fs=require('fs');if(!fs.existsSync('dist/index.js')&&fs.existsSync('src/index.ts')){try{require('child_process').execSync('npm run build',{stdio:'inherit'})}catch(e){console.warn('vibe: build skipped (dev tools missing)')}}\"",
-    "prepublishOnly": "pnpm run build"
+    "prepare": "node -e \"try{var f=require('fs');if(!f.existsSync('dist/index.js')&&f.existsSync('src/index.ts')){require('child_process').execSync('npx tsup src/index.ts --format esm --dts --clean --target node18',{stdio:'inherit'})}}catch(e){console.warn('[vibe] build skipped:',e.message)}\"",
+    "prepublishOnly": "npm run build"
   },
   "type": "module",
   "bin": {
@@ -49,6 +51,7 @@
   },
   "files": [
     "dist",
+    "assets-index.json",
     "skills",
     "agents",
     "commands",
@@ -79,6 +82,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "packageManager": "pnpm@9.1.0"
+  }
 }

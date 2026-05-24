@@ -14,6 +14,30 @@ import { emitKeypressEvents } from "readline";
 import { readdir, readFile, stat } from "fs/promises";
 import { join, basename, dirname, sep, posix } from "path";
 import matter from "gray-matter";
+var _indexCache = void 0;
+async function loadIndexAssets(root) {
+  if (_indexCache !== void 0) return _indexCache;
+  try {
+    const raw = await readFile(join(root, "assets-index.json"), "utf-8");
+    const idx = JSON.parse(raw);
+    _indexCache = idx.assets.map((e) => ({
+      kind: e.kind,
+      name: e.name,
+      description: e.description,
+      category: e.category,
+      path: join(root, e.path.split("/").join(sep)),
+      metadata: {
+        ...e.metadata,
+        ...e.tags?.length ? { tags: e.tags } : {},
+        ...e.modeFile ? { modeFile: join(root, e.modeFile.split("/").join(sep)) } : {}
+      }
+    }));
+    return _indexCache;
+  } catch {
+    _indexCache = null;
+    return null;
+  }
+}
 var SKIP_DIRS = /* @__PURE__ */ new Set([
   "node_modules",
   ".git",
@@ -168,7 +192,16 @@ async function discoverAssets(root, options = {}) {
   const wanted = new Set(
     options.kinds && options.kinds.length > 0 ? options.kinds : ["skill", "agent", "command", "mode"]
   );
-  const kindOrder = ["skill", "agent", "command", "mode"];
+  const indexed = await loadIndexAssets(root);
+  if (indexed !== null) {
+    const filtered = indexed.filter((a) => wanted.has(a.kind));
+    if (options.onKindFound) {
+      for (const k of ["skill", "agent", "command", "mode"]) {
+        if (wanted.has(k)) options.onKindFound(k, filtered.filter((a) => a.kind === k).length);
+      }
+    }
+    return filtered;
+  }
   const tasks = [];
   const taskKinds = [];
   if (wanted.has("skill")) {
@@ -187,11 +220,9 @@ async function discoverAssets(root, options = {}) {
     tasks.push(discoverModesAsset(root));
     taskKinds.push("mode");
   }
-  const buckets = [];
-  for (let i = 0; i < tasks.length; i++) {
-    const result = await tasks[i];
-    buckets.push(result);
-    options.onKindFound?.(taskKinds[i], result.length);
+  const buckets = await Promise.all(tasks);
+  for (let i = 0; i < buckets.length; i++) {
+    options.onKindFound?.(taskKinds[i], buckets[i].length);
   }
   return buckets.flat();
 }
