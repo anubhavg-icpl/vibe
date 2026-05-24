@@ -1,6 +1,6 @@
 ---
 name: sexual-health-analyzer
-description: Sexual Health Analyzer
+description: Sexual Health Analyzer. Use when you need help with sexual health analyzer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

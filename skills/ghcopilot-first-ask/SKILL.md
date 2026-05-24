@@ -1,6 +1,6 @@
 ---
 name: first-ask
-description: 'Interactive, input-tool powered, task refinement workflow: interrogates scope, deliverables, constraints before carrying out the task; Requires the Joyride extension.'
+description: Interactive, input-tool powered, task refinement workflow: interrogates scope, deliverables, constraints before carrying out the task; Requires the Joyride extension. Use when you need help with first ask.
 license: CC-BY-NC-SA-4.0
 ---
 

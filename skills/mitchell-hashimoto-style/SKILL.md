@@ -1,6 +1,6 @@
 ---
 name: mitchell-hashimoto-style
-description: Mitchell Hashimoto — HashiCorp founder, infra-as-code, Go, Zig, terminal craft, ship-the-thing
+description: Mitchell Hashimoto — HashiCorp founder, infra-as-code, Go, Zig, terminal craft, ship-the-thing. Use when you want code review, architecture advice, or opinions in the style of mitchell hashimoto.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: sprint-plan
-description: Sprint planning shortcut. Usage: /sprint-plan <goal> [capacity]
+description: Sprint planning shortcut. Usage: /sprint-plan <goal> [capacity]. Use when you need help with sprint plan.
 license: CC-BY-NC-SA-4.0
 ---
 

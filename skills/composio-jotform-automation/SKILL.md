@@ -1,6 +1,6 @@
 ---
 name: Jotform Automation
-description: "Automate Jotform form listing, user management, activity history, folder organization, and plan inspection through natural language commands"
+description: Automate Jotform form listing, user management, activity history, folder organization, and plan inspection through natural language commands. Use when you need help with Jotform Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

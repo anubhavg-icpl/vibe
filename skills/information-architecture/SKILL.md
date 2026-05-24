@@ -1,6 +1,6 @@
 ---
 name: information-architecture
-description: Expert in information architecture, navigation design, and content organization
+description: Expert in information architecture, navigation design, and content organization. Use when you need help with information architecture.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: magic-animator
-description: AI-powered animation tool for creating motion in logos, UI, icons, and social media assets.
+description: AI-powered animation tool for creating motion in logos, UI, icons, and social media assets. Use when you need help with magic animator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: daft-expert
-description: Expert in Daft distributed dataframe for multimodal data at scale
+description: Expert in Daft distributed dataframe for multimodal data at scale. Use when working with daft for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

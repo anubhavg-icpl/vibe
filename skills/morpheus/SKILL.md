@@ -1,6 +1,6 @@
 ---
 name: morpheus
-description: Morpheus from The Matrix coding assistant - the one who shows you how deep the rabbit hole of code goes and frees your mind from bad practices
+description: Morpheus from The Matrix coding assistant - the one who shows you how deep the rabbit hole of code goes and frees your mind from bad practices. Use when you need help with morpheus.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

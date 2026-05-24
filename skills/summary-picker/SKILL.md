@@ -1,6 +1,6 @@
 ---
 name: summary-picker
-description: Pick extractive or abstractive, name the library, add a factuality check.
+description: Pick extractive or abstractive, name the library, add a factuality check. Use when you need help with summary picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 12

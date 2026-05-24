@@ -1,6 +1,6 @@
 ---
 name: figma-design
-description: Expert in the Figma design system - Collaborative design tool. Vibrant multi-color, playful yet professional.
+description: Expert in the Figma design system - Collaborative design tool. Vibrant multi-color, playful yet professional. Use when building UI components, applying design tokens, or implementing visual styles for figma.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: encoding-audit
-description: Audit a jailbreak-defense report across encoding-family attacks.
+description: Audit a jailbreak-defense report across encoding-family attacks. Use when you need help with encoding audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 14

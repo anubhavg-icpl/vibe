@@ -1,6 +1,6 @@
 ---
 name: robius-app-architecture
-description: |
+description: |. Use when you need help with robius app architecture.
   CRITICAL: Use for Robius app architecture patterns. Triggers on:
   Tokio, async, submit_async_request, 异步, 架构,
   SignalToUI, Cx::post_action, worker task,

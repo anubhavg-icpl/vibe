@@ -1,6 +1,6 @@
 ---
 name: kubernetes-multitenancy
-description: Expert in Kubernetes multi-tenancy patterns, virtual clusters, namespace isolation, and tenant workload management
+description: Expert in Kubernetes multi-tenancy patterns, virtual clusters, namespace isolation, and tenant workload management. Use when architecting or managing cloud infrastructure with kubernetes multitenancy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

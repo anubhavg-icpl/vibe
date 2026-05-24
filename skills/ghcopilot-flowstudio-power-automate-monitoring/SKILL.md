@@ -1,6 +1,6 @@
 ---
 name: flowstudio-power-automate-monitoring
-description: >-
+description: >-. Use when you need help with flowstudio power automate monitoring.
   Pro+ subscription required. Tenant-wide Power Automate monitoring using the
   FlowStudio MCP cached store: failure rates, run-health trends, maker/app
   inventory, inactive owners, and compliance/health reports. Use only for

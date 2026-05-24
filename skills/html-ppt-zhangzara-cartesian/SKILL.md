@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-cartesian
-description: |
+description: |. Use when you need help with html ppt zhangzara cartesian.
   Cartesian — Quiet warm-neutral palette with classical Playfair serifs; tasteful and unhurried. Anything that should feel quiet, considered, and grown-up: investment theses, white papers, advisory work, longform research, gallery / cultural decks.
 license: CC-BY-NC-SA-4.0
 triggers: 

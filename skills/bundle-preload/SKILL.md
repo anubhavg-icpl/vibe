@@ -1,6 +1,6 @@
 ---
 name: bundle-preload
-description: Preload Based on User Intent
+description: Preload Based on User Intent. Use when you need help with bundle preload.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

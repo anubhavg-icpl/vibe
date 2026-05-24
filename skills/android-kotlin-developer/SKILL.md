@@ -1,6 +1,6 @@
 ---
 name: android-kotlin-developer
-description: android-kotlin-developer
+description: android-kotlin-developer. Use when developing mobile applications with android kotlin.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

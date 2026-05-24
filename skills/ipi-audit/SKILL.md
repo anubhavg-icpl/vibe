@@ -1,6 +1,6 @@
 ---
 name: ipi-audit
-description: Audit an agentic deployment for indirect prompt injection exposure and information-flow-control coverage.
+description: Audit an agentic deployment for indirect prompt injection exposure and information-flow-control coverage. Use when you need help with ipi audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 15

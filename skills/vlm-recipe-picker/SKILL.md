@@ -1,6 +1,6 @@
 ---
 name: vlm-recipe-picker
-description: Pick an open-weight VLM recipe (encoder, connector, LLM, data mix, resolution schedule) with ablation-table citations for every choice.
+description: Pick an open-weight VLM recipe (encoder, connector, LLM, data mix, resolution schedule) with ablation-table citations for every choice. Use when you need help with vlm recipe picker.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 07

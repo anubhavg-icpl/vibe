@@ -1,6 +1,6 @@
 ---
 name: quality-nonconformance
-description: Codified expertise for quality control, non-conformance investigation, root cause analysis, corrective action, and supplier quality management in regulated manufacturing.
+description: Codified expertise for quality control, non-conformance investigation, root cause analysis, corrective action, and supplier quality management in regulated manufacturing. Use when you need help with quality nonconformance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

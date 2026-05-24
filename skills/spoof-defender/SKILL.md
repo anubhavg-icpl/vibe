@@ -1,6 +1,6 @@
 ---
 name: spoof-defender
-description: Pick detection model, watermark, provenance manifest, and operational playbook for a voice-generation / voice-auth deployment.
+description: Pick detection model, watermark, provenance manifest, and operational playbook for a voice-generation / voice-auth deployment. Use when you need help with spoof defender.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 16

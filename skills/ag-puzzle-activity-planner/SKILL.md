@@ -1,6 +1,6 @@
 ---
 name: puzzle-activity-planner
-description: "Plan puzzle-based activities for classrooms, parties, and events with pre-configured generator links"
+description: Plan puzzle-based activities for classrooms, parties, and events with pre-configured generator links. Use when you need help with puzzle activity planner.
 license: CC-BY-NC-SA-4.0
 source_repo: fruitwyatt/puzzle-activity-planner
 source_type: community

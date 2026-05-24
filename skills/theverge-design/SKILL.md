@@ -1,6 +1,6 @@
 ---
 name: theverge-design
-description: Expert in the The Verge design system - Tech editorial media. Acid-mint and ultraviolet accents, Manuka display, rave-flyer story tiles.
+description: Expert in the The Verge design system - Tech editorial media. Acid-mint and ultraviolet accents, Manuka display, rave-flyer story tiles. Use when building UI components, applying design tokens, or implementing visual styles for theverge.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

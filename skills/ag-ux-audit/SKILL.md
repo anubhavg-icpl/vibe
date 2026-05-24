@@ -1,6 +1,6 @@
 ---
 name: ux-audit
-description: "Audit screens against Nielsen's heuristics and mobile UX best practices using the StyleSeed Toss design language as the implementation context."
+description: "Audit screens against Nielsen's heuristics and mobile UX best practices using the StyleSeed Toss design language as the implementation context. Use when you need help with ux audit."
 license: CC-BY-NC-SA-4.0
 source_repo: bitjaru/styleseed
 source_type: community

@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-grove
-description: |
+description: |. Use when you need help with html ppt zhangzara grove.
   Grove — Forest-green canvas with cream type, classical Playfair serifs, and a single rust accent. Anything that should feel organic, considered, and grown-up: sustainability and wellness brands, outdoor / nature products, wineries and restaurants, literary or arts decks, advisory deliverables, bilingual EN/CN reports.
 license: CC-BY-NC-SA-4.0
 triggers: 

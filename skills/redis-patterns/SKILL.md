@@ -1,6 +1,6 @@
 ---
 name: redis-patterns
-description: Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures
+description: Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures. Use when you need help with redis patterns.
 license: CC-BY-NC-SA-4.0
 ---
 

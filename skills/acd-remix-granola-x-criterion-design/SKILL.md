@@ -1,6 +1,6 @@
 ---
 name: acd-remix-granola-x-criterion-design
-description: Remix. Granola's warm cream + frosted glass + Criterion Collection's film-archive editorial rigor. For premium consumer apps that want to feel like a curated library, not a productivity tool.
+description: "Remix. Granola's warm cream + frosted glass + Criterion Collection's film-archive editorial rigor. For premium consumer apps that want to feel like a curated library, not a productivity tool. Use when building UI components, applying design tokens, or implementing visual styles for remix granola x criterion."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

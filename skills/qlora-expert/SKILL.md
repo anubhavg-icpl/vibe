@@ -1,6 +1,6 @@
 ---
 name: qlora-expert
-description: 4-bit quantized LoRA fine-tuning with NF4, double quantization, and paged optimizers
+description: 4-bit quantized LoRA fine-tuning with NF4, double quantization, and paged optimizers. Use when fine-tuning, training, or adapting language models with qlora techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

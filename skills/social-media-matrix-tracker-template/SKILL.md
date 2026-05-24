@@ -1,6 +1,6 @@
 ---
 name: social-media-matrix-tracker-template
-description: |
+description: |. Use when you need help with social media matrix tracker template.
   社媒矩阵数据追踪面板模板（Social Media Matrix Tracker）。
   Use when users ask for a cinematic, data-dense social media analytics dashboard
   with multi-platform metrics, interactive charts, hover insights, range compare,

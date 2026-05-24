@@ -1,6 +1,6 @@
 ---
 name: autogen-expert
-description: Build event-driven, actor-model multi-agent systems with Microsoft AutoGen v0.4+
+description: Build event-driven, actor-model multi-agent systems with Microsoft AutoGen v0.4+. Use when building AI applications with autogen.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

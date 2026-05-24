@@ -1,6 +1,6 @@
 ---
 name: docker-expert
-description: Expert in Docker containerization, multi-stage builds, Docker Compose, and container optimization
+description: Expert in Docker containerization, multi-stage builds, Docker Compose, and container optimization. Use when automating CI/CD, deployments, or operations with docker.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

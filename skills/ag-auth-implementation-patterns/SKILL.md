@@ -1,6 +1,6 @@
 ---
 name: auth-implementation-patterns
-description: "Build secure, scalable authentication and authorization systems using industry-standard patterns and modern best practices."
+description: Build secure, scalable authentication and authorization systems using industry-standard patterns and modern best practices. Use when you need help with auth implementation patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

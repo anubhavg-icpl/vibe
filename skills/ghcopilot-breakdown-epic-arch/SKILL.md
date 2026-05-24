@@ -1,6 +1,6 @@
 ---
 name: breakdown-epic-arch
-description: 'Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document.'
+description: Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document. Use when you need help with breakdown epic arch.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: fitness-analyzer
-description: 分析运动数据、识别运动模式、评估健身进展，并提供个性化训练建议。支持与慢性病数据的关联分析。
+description: 分析运动数据、识别运动模式、评估健身进展，并提供个性化训练建议。支持与慢性病数据的关联分析。. Use when you need help with fitness analyzer.
 license: CC-BY-NC-SA-4.0
 allowed-tools: Read, Grep, Glob, Write
 metadata:

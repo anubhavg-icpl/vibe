@@ -1,6 +1,6 @@
 ---
 name: voltagent-design
-description: Expert in the VoltAgent design system - AI agent framework. Void-black canvas, emerald accent, terminal-native.
+description: Expert in the VoltAgent design system - AI agent framework. Void-black canvas, emerald accent, terminal-native. Use when building UI components, applying design tokens, or implementing visual styles for voltagent.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

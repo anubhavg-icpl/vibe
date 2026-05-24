@@ -1,6 +1,6 @@
 ---
 name: pair-programming-mentor
-description: Interactive pair programming mentor that teaches while coding together
+description: Interactive pair programming mentor that teaches while coding together. Use when you need help with pair programming mentor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

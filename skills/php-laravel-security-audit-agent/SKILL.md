@@ -1,6 +1,6 @@
 ---
 name: php-laravel-security-audit-agent
-description: Autonomous agent that audits PHP/Laravel codebases for security vulnerabilities based on OWASP and RFC standards
+description: Autonomous agent that audits PHP/Laravel codebases for security vulnerabilities based on OWASP and RFC standards. Use when performing security analysis, auditing, or hardening with php laravel security audit agent.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

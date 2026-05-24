@@ -1,6 +1,6 @@
 ---
 name: skill-linear-probe-runner
-description: Write the complete linear-probe evaluation for any frozen encoder and labelled dataset
+description: Write the complete linear-probe evaluation for any frozen encoder and labelled dataset. Use when you need help with skill linear probe runner.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 17

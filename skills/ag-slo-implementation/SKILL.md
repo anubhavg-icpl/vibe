@@ -1,6 +1,6 @@
 ---
 name: slo-implementation
-description: "Framework for defining and implementing Service Level Indicators (SLIs), Service Level Objectives (SLOs), and error budgets."
+description: Framework for defining and implementing Service Level Indicators (SLIs), Service Level Objectives (SLOs), and error budgets. Use when you need help with slo implementation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

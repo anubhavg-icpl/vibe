@@ -1,6 +1,6 @@
 ---
 name: gan-debugger
-description: Diagnose failing GAN training from loss curves and sample grids; prescribe one-line fixes.
+description: Diagnose failing GAN training from loss curves and sample grids; prescribe one-line fixes. Use when you need help with gan debugger.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 03

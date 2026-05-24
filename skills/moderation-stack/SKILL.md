@@ -1,6 +1,6 @@
 ---
 name: moderation-stack
-description: Recommend a moderation stack configuration for a production deployment.
+description: Recommend a moderation stack configuration for a production deployment. Use when you need help with moderation stack.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 29

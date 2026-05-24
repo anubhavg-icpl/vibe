@@ -1,6 +1,6 @@
 ---
 name: atlassian-expert
-description: atlassian-expert
+description: atlassian-expert. Use when you need deep expertise in atlassian.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

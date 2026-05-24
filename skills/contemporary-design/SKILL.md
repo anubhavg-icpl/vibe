@@ -1,6 +1,6 @@
 ---
 name: contemporary-design
-description: Expert in the Contemporary design system - Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.
+description: Expert in the Contemporary design system - Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts. Use when building UI components, applying design tokens, or implementing visual styles for contemporary.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

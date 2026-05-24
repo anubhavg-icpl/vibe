@@ -1,6 +1,6 @@
 ---
 name: "stress-test"
-description: "/em -stress-test — Business Assumption Stress Testing"
+description: /em -stress-test — Business Assumption Stress Testing. Use when you need help with stress test.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-kubernetes-manifests
-description: "Best practices for Kubernetes YAML manifests including labeling conventions, security contexts, pod security, resource management, probes, and validation commands"
+description: Best practices for Kubernetes YAML manifests including labeling conventions, security contexts, pod security, resource management, probes, and validation commands. Use when writing or reviewing kubernetes manifests code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

@@ -1,6 +1,6 @@
 ---
 name: ner-picker
-description: Pick the right NER approach for a given extraction task.
+description: Pick the right NER approach for a given extraction task. Use when you need help with ner picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 06

@@ -1,6 +1,6 @@
 ---
 name: trading-analysis-dashboard-template
-description: |
+description: |. Use when you need help with trading analysis dashboard template.
   Professional trading analysis dashboard template (single-file HTML) with
   light/dark theme switch, dense market panels, chart interactions, demo/live
   playback, and command palette behavior.

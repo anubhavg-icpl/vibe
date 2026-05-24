@@ -1,6 +1,6 @@
 ---
 name: chaos-engineering
-description: Expert in chaos engineering for testing system resilience
+description: Expert in chaos engineering for testing system resilience. Use when writing, running, or improving tests with chaos engineering.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

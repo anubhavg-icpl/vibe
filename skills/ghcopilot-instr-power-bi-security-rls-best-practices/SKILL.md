@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-power-bi-security-rls-best-practices
-description: "Comprehensive Power BI Row-Level Security (RLS) and advanced security patterns implementation guide with dynamic security, best practices, and governance strategies."
+description: Comprehensive Power BI Row-Level Security (RLS) and advanced security patterns implementation guide with dynamic security, best practices, and governance strategies. Use when writing or reviewing power bi security rls best practices code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

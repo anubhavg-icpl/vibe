@@ -1,6 +1,6 @@
 ---
 name: skill-anchor-designer
-description: Given a dataset of ground-truth boxes, run k-means on (w, h) and return anchor sets per FPN level plus coverage statistics
+description: Given a dataset of ground-truth boxes, run k-means on (w, h) and return anchor sets per FPN level plus coverage statistics. Use when you need help with skill anchor designer.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 6

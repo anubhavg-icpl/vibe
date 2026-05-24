@@ -1,6 +1,6 @@
 ---
 name: carmack-style
-description: John Carmack — performance-first, inline what's called once, minimize "area under ifs," pure functions where possible
+description: "John Carmack — performance-first, inline what's called once, minimize \"area under ifs,\" pure functions where possible. Use when you want code review, architecture advice, or opinions in the style of carmack."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

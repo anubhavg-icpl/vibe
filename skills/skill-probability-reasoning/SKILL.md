@@ -1,6 +1,6 @@
 ---
 name: skill-probability-reasoning
-description: Choose the right probability distribution for a given ML problem
+description: Choose the right probability distribution for a given ML problem. Use when you need help with skill probability reasoning.
 license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 6

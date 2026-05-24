@@ -1,6 +1,6 @@
 ---
 name: azure-functions
-description: Expert patterns for Azure Functions development including isolated
+description: Expert patterns for Azure Functions development including isolated. Use when you need help with azure functions.
   worker model, Durable Functions orchestration, cold start optimization, and
   production patterns. Covers .NET, Python, and Node.js programming models.
 license: CC-BY-NC-SA-4.0

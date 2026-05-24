@@ -1,6 +1,6 @@
 ---
 name: math-foundations
-description: Expert in the mathematical foundations behind every AI algorithm from the AI Engineering from Scratch curriculum
+description: Expert in the mathematical foundations behind every AI algorithm from the AI Engineering from Scratch curriculum. Use when you need help with math foundations.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

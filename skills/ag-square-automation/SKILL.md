@@ -1,6 +1,6 @@
 ---
 name: square-automation
-description: "Automate Square tasks via Rube MCP (Composio): payments, orders, invoices, locations. Always search tools first for current schemas."
+description: Automate Square tasks via Rube MCP (Composio): payments, orders, invoices, locations. Always search tools first for current schemas. Use when you need help with square automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: gateway-bootstrap
-description: Produce a gateway configuration spec given users, backends, and compliance constraints.
+description: Produce a gateway configuration spec given users, backends, and compliance constraints. Use when you need help with gateway bootstrap.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 17

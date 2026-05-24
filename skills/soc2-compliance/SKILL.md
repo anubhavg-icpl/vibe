@@ -1,6 +1,6 @@
 ---
 name: soc2-compliance
-description: Expert in SOC 2 compliance implementation and audit preparation
+description: Expert in SOC 2 compliance implementation and audit preparation. Use when performing security analysis, auditing, or hardening with soc2 compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

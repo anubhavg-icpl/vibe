@@ -1,6 +1,6 @@
 ---
 name: mongodb-design
-description: Expert in the MongoDB design system - Document database. Green leaf branding, developer documentation focus.
+description: Expert in the MongoDB design system - Document database. Green leaf branding, developer documentation focus. Use when building UI components, applying design tokens, or implementing visual styles for mongodb.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

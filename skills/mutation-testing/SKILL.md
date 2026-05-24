@@ -1,6 +1,6 @@
 ---
 name: mutation-testing
-description: Expert in mutation testing for evaluating test suite quality with mutant generation and analysis
+description: Expert in mutation testing for evaluating test suite quality with mutant generation and analysis. Use when writing, running, or improving tests with mutation testing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

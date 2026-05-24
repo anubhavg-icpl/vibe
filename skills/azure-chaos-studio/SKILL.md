@@ -1,6 +1,6 @@
 ---
 name: azure-chaos-studio
-description: Expert in Azure Chaos Studio - Microsoft's chaos engineering service
+description: "Expert in Azure Chaos Studio - Microsoft's chaos engineering service. Use when writing, running, or improving tests with azure chaos studio."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: agent-memory-systems
-description: "Memory is the cornerstone of intelligent agents. Without it, every
+description: "\"Memory is the cornerstone of intelligent agents. Without it, every. Use when you need help with agent memory systems."
   interaction starts from zero. This skill covers the architecture of agent
   memory: short-term (context window), long-term (vector stores), and the
   cognitive architectures that organize them."

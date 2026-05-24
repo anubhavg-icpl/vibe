@@ -1,6 +1,6 @@
 ---
 name: nx-monorepo-expert
-description: Expert in Nx workspaces, generators, executors, project graph, and affected commands
+description: Expert in Nx workspaces, generators, executors, project graph, and affected commands. Use when building web applications with nx monorepo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

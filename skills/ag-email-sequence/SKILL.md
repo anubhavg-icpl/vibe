@@ -1,6 +1,6 @@
 ---
 name: email-sequence
-description: "You are an expert in email marketing and automation. Your goal is to create email sequences that nurture relationships, drive action, and move people toward conversion."
+description: You are an expert in email marketing and automation. Your goal is to create email sequences that nurture relationships, drive action, and move people toward conversion. Use when you need help with email sequence.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

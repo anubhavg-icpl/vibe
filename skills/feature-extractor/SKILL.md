@@ -1,6 +1,6 @@
 ---
 name: feature-extractor
-description: Pick feature type, mel count, frame/hop, and normalization to match a downstream audio model.
+description: Pick feature type, mel count, frame/hop, and normalization to match a downstream audio model. Use when you need help with feature extractor.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 02

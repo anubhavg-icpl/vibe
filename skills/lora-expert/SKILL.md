@@ -1,6 +1,6 @@
 ---
 name: lora-expert
-description: Low-Rank Adaptation for parameter-efficient fine-tuning of LLMs
+description: Low-Rank Adaptation for parameter-efficient fine-tuning of LLMs. Use when fine-tuning, training, or adapting language models with lora techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: php-laravel
-description: php-laravel
+description: php-laravel. Use when writing, reviewing, or refactoring php laravel code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

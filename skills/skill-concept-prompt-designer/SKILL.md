@@ -1,6 +1,6 @@
 ---
 name: skill-concept-prompt-designer
-description: Turn user utterances into well-formed SAM 3 concept prompts with splitting, disambiguation, and fallbacks
+description: Turn user utterances into well-formed SAM 3 concept prompts with splitting, disambiguation, and fallbacks. Use when you need help with skill concept prompt designer.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 24

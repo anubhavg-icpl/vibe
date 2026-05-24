@@ -1,6 +1,6 @@
 ---
 name: ppo-trainer
-description: Produce a PPO training config and a diagnostic plan for a given environment.
+description: Produce a PPO training config and a diagnostic plan for a given environment. Use when you need help with ppo trainer.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 8

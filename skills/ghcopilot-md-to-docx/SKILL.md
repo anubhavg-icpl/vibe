@@ -1,6 +1,6 @@
 ---
 name: md-to-docx
-description: Convert Markdown files to professionally formatted Word (.docx) documents with embedded PNG images — pure JavaScript, no external tools required
+description: Convert Markdown files to professionally formatted Word (.docx) documents with embedded PNG images — pure JavaScript, no external tools required. Use when you need help with md to docx.
 license: CC-BY-NC-SA-4.0
 ---
 

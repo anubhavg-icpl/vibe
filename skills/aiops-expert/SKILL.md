@@ -1,6 +1,6 @@
 ---
 name: aiops-expert
-description: Expert in AI-driven DevOps for intelligent automation and self-healing systems
+description: Expert in AI-driven DevOps for intelligent automation and self-healing systems. Use when automating CI/CD, deployments, or operations with aiops.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

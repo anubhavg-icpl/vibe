@@ -1,6 +1,6 @@
 ---
 name: sdxl-expert
-description: Stable Diffusion XL - base + refiner, LoRA, IP-Adapter, samplers, schedulers
+description: Stable Diffusion XL - base + refiner, LoRA, IP-Adapter, samplers, schedulers. Use when working with multimodal AI (images, audio, video) using sdxl.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

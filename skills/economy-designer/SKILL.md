@@ -1,6 +1,6 @@
 ---
 name: economy-designer
-description: Design a minimal agent economy — identity, credit attribution, payment mechanism, reputation. Picks the smallest stack that solves the user's multi-agent incentive problem.
+description: "Design a minimal agent economy — identity, credit attribution, payment mechanism, reputation. Picks the smallest stack that solves the user's multi-agent incentive problem. Use when you need help with economy designer."
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 21

@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-security-and-owasp
-description: "Comprehensive secure coding standards based on OWASP Top 10 2025, with 55+ anti-patterns, detection regex, framework-specific fixes for modern web and backend frameworks, and AI/LLM security guidance."
+description: Comprehensive secure coding standards based on OWASP Top 10 2025, with 55+ anti-patterns, detection regex, framework-specific fixes for modern web and backend frameworks, and AI/LLM security guidance. Use when writing or reviewing security and owasp code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

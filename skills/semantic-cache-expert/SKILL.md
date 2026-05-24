@@ -1,6 +1,6 @@
 ---
 name: semantic-cache-expert
-description: GPTCache, Helicone cache, LangChain semantic cache — embedding-based dedup for LLM apps
+description: GPTCache, Helicone cache, LangChain semantic cache — embedding-based dedup for LLM apps. Use when evaluating, monitoring, or observing LLM performance with semantic cache.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

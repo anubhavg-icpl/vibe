@@ -1,6 +1,6 @@
 ---
 name: "engineering-advanced-skills"
-description: "25 advanced engineering agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. Agent design, RAG, MCP servers, CI/CD, database design, observability, security auditing, release management, platform ops."
+description: 25 advanced engineering agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. Agent design, RAG, MCP servers, CI/CD, database design, observability, security auditing, release management, platform ops. Use when you need help with engineering advanced skills.
 author: Alireza Rezvani
 license: MIT
 agents: 

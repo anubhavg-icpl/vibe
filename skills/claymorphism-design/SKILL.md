@@ -1,6 +1,6 @@
 ---
 name: claymorphism-design
-description: Expert in the Claymorphism design system - Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.
+description: Expert in the Claymorphism design system - Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces. Use when building UI components, applying design tokens, or implementing visual styles for claymorphism.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

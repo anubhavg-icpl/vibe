@@ -1,6 +1,6 @@
 ---
 name: web-prototype
-description: |
+description: |. Use when you need help with web prototype.
   General-purpose desktop web prototype. Single self-contained HTML file built
   by copying the seed `assets/template.html` and pasting section layouts from
   `references/layouts.md`. Default for any landing / marketing / docs / SaaS

@@ -1,6 +1,6 @@
 ---
 name: claude-win11-speckit-update-skill
-description: "Windows 11 system management"
+description: Windows 11 system management. Use when you need help with claude win11 speckit update skill.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

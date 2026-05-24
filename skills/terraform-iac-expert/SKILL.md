@@ -1,6 +1,6 @@
 ---
 name: terraform-iac-expert
-description: terraform-iac-expert
+description: terraform-iac-expert. Use when architecting or managing cloud infrastructure with terraform iac.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

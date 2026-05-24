@@ -1,6 +1,6 @@
 ---
 name: openai-design
-description: Expert in the OpenAI design system - Calm, near-monochrome system anchored in deep teal-black with generous white space and editorial typography.
+description: Expert in the OpenAI design system - Calm, near-monochrome system anchored in deep teal-black with generous white space and editorial typography. Use when building UI components, applying design tokens, or implementing visual styles for openai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

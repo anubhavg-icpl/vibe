@@ -1,6 +1,6 @@
 ---
 name: cloud-secret-provider-expert
-description: Expert in ISecretProvider abstractions, chained providers (env var → AWS Secrets Manager → Vault → GCP/Azure KV), caching with TTL + invalidation, graceful failure modes, secret rotation, and zero-leak logging
+description: Expert in ISecretProvider abstractions, chained providers (env var → AWS Secrets Manager → Vault → GCP/Azure KV), caching with TTL + invalidation, graceful failure modes, secret rotation, and zero-leak logging. Use when performing security analysis, auditing, or hardening with cloud secret provider.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

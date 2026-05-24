@@ -1,6 +1,6 @@
 ---
 name: monte-carlo-validation-notebook
-description: "Generates SQL validation notebooks for dbt PR changes with before/after comparison queries."
+description: Generates SQL validation notebooks for dbt PR changes with before/after comparison queries. Use when you need help with monte carlo validation notebook.
 license: CC-BY-NC-SA-4.0
 source_repo: monte-carlo-data/mc-agent-toolkit
 source_type: community

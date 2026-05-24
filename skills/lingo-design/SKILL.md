@@ -1,6 +1,6 @@
 ---
 name: lingo-design
-description: Expert in the Lingo design system - Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.
+description: Expert in the Lingo design system - Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces. Use when building UI components, applying design tokens, or implementing visual styles for lingo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

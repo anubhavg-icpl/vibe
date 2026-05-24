@@ -1,6 +1,6 @@
 ---
 name: mythos-finding-triage
-description: Sort raw scanner output by exploitability and blast radius using CVSS v4.0, attack-vector analysis, dedup, and chain grouping
+description: Sort raw scanner output by exploitability and blast radius using CVSS v4.0, attack-vector analysis, dedup, and chain grouping. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving finding triage.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

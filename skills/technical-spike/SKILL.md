@@ -1,6 +1,6 @@
 ---
 name: technical-spike
-description: Systematically research and validate technical spike documents through exhaustive investigation and controlled experimentation.
+description: Systematically research and validate technical spike documents through exhaustive investigation and controlled experimentation. Use when you need help with technical spike.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

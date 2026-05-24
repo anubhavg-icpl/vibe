@@ -1,6 +1,6 @@
 ---
 name: helium-mcp
-description: "Connect to Helium's MCP server for news research, media bias analysis, balanced perspectives, stock/options data, and semantic meme search across 3.2M+ articles and 5,000+ sources"
+description: "Connect to Helium's MCP server for news research, media bias analysis, balanced perspectives, stock/options data, and semantic meme search across 3.2M+ articles and 5,000+ sources. Use when you need help with helium mcp."
 license: CC-BY-NC-SA-4.0
 source_repo: connerlambden/helium-mcp
 source_type: community

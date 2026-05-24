@@ -1,6 +1,6 @@
 ---
 name: pi-extensions-expert
-description: Authoring TypeScript extensions for the pi-coding-agent (lifecycle hooks, custom tools, UI, providers)
+description: Authoring TypeScript extensions for the pi-coding-agent (lifecycle hooks, custom tools, UI, providers). Use when working with pi.dev extensions features.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

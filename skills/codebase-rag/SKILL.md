@@ -1,6 +1,6 @@
 ---
 name: codebase-rag
-description: Build a cross-repo semantic search system with AST-aware chunking, hybrid retrieval, incremental re-index, and cited answers.
+description: Build a cross-repo semantic search system with AST-aware chunking, hybrid retrieval, incremental re-index, and cited answers. Use when you need help with codebase rag.
 license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 02

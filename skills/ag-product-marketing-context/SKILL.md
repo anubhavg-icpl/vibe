@@ -1,6 +1,6 @@
 ---
 name: product-marketing-context
-description: "Create or update a reusable product marketing context document with positioning, audience, ICP, use cases, and messaging. Use at the start of a project to avoid repeating core marketing context across tasks."
+description: Create or update a reusable product marketing context document with positioning, audience, ICP, use cases, and messaging. Use at the start of a project to avoid repeating core marketing context across tasks. Use when you need help with product marketing context.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: 1.1.0

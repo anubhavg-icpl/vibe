@@ -1,6 +1,6 @@
 ---
 name: product-inventor
-description: "Product Inventor e Design Alchemist de nivel maximo — combina Product Thinking, Design Systems, UI Engineering, Psicologia Cognitiva, Storytelling e execucao impecavel nivel Jobs/Apple."
+description: Product Inventor e Design Alchemist de nivel maximo — combina Product Thinking, Design Systems, UI Engineering, Psicologia Cognitiva, Storytelling e execucao impecavel nivel Jobs/Apple. Use when you need help with product inventor.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: none
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # PRODUCT INVENTOR — DESIGN ALCHEMIST v1.0

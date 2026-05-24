@@ -1,6 +1,6 @@
 ---
 name: ui-page
-description: "Scaffold a new mobile-first page using StyleSeed Toss layout patterns, section rhythm, and existing shell components."
+description: Scaffold a new mobile-first page using StyleSeed Toss layout patterns, section rhythm, and existing shell components. Use when you need help with ui page.
 license: CC-BY-NC-SA-4.0
 source_repo: bitjaru/styleseed
 source_type: community

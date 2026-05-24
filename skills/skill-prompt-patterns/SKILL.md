@@ -1,6 +1,6 @@
 ---
 name: skill-prompt-patterns
-description: Decision framework for choosing the right prompt pattern based on task type, reliability requirements, and target model
+description: Decision framework for choosing the right prompt pattern based on task type, reliability requirements, and target model. Use when you need help with skill prompt patterns.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 01

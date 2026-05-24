@@ -1,6 +1,6 @@
 ---
 name: debugger
-description: 'Debugging specialist for errors, test failures, and unexpected
+description: "'Debugging specialist for errors, test failures, and unexpected. Use when you need help with debugger."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

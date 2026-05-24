@@ -1,6 +1,6 @@
 ---
 name: fastapi-expert
-description: Expert in FastAPI async framework with Python type hints, Pydantic models, dependency injection, OAuth2, JWT auth, and production deployment
+description: Expert in FastAPI async framework with Python type hints, Pydantic models, dependency injection, OAuth2, JWT auth, and production deployment. Use when you need deep expertise in fastapi.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

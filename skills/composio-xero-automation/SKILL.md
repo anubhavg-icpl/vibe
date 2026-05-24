@@ -1,6 +1,6 @@
 ---
 name: Xero Automation
-description: "Xero Automation: manage invoices, contacts, payments, bank transactions, and accounts in Xero for cloud-based bookkeeping"
+description: Xero Automation: manage invoices, contacts, payments, bank transactions, and accounts in Xero for cloud-based bookkeeping. Use when you need help with Xero Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

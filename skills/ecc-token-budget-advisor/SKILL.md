@@ -1,6 +1,6 @@
 ---
 name: token-budget-advisor
-description: >-
+description: >-. Use when you need help with token budget advisor.
   Offers the user an informed choice about how much response depth to
   consume before answering. Use this skill when the user explicitly
   wants to control response length, depth, or token budget.

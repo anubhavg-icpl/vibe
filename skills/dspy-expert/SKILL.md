@@ -1,6 +1,6 @@
 ---
 name: dspy-expert
-description: Program — don't prompt — language models with DSPy's declarative Signatures, Modules, and Optimizers
+description: "Program — don't prompt — language models with DSPy's declarative Signatures, Modules, and Optimizers. Use when building AI applications with dspy."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

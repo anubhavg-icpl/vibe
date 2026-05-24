@@ -1,6 +1,6 @@
 ---
 name: binance-design
-description: Expert in the Binance.US design system - Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency.
+description: Expert in the Binance.US design system - Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency. Use when building UI components, applying design tokens, or implementing visual styles for binance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

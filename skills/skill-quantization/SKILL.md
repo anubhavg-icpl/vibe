@@ -1,6 +1,6 @@
 ---
 name: skill-quantization
-description: Choose the right quantization strategy for deploying LLMs based on hardware, quality, and latency constraints
+description: Choose the right quantization strategy for deploying LLMs based on hardware, quality, and latency constraints. Use when you need help with skill quantization.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 11

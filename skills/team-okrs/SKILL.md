@@ -1,6 +1,6 @@
 ---
 name: team-okrs
-description: |
+description: |. Use when you need help with team okrs.
   OKR tracker page — quarter banner, three objectives with their key
   results as progress bars, owner avatars, status pills, and a "this
   quarter at a glance" sidebar. Use when the brief mentions "OKRs",

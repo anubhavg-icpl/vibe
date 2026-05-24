@@ -1,6 +1,6 @@
 ---
 name: client-swr-dedup
-description: Use SWR for Automatic Deduplication
+description: Use SWR for Automatic Deduplication. Use when you need help with client swr dedup.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: kontent-ai-automation
-description: "Automate Kontent AI tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Kontent AI tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with kontent ai automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

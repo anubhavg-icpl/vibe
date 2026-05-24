@@ -1,6 +1,6 @@
 ---
 name: openclaw-github-repo-commander
-description: "7-stage super workflow for GitHub repo audit, cleanup, PR review, and competitor analysis"
+description: 7-stage super workflow for GitHub repo audit, cleanup, PR review, and competitor analysis. Use when you need help with openclaw github repo commander.
 license: CC-BY-NC-SA-4.0
 author: wd041216-bit
 tools: [claude, cursor]

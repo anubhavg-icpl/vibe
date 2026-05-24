@@ -1,6 +1,6 @@
 ---
 name: claude-scientific-skills
-description: "Scientific research and analysis skills"
+description: Scientific research and analysis skills. Use when you need help with claude scientific skills.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

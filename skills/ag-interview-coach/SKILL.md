@@ -1,6 +1,6 @@
 ---
 name: interview-coach
-description: "Full job search coaching system — JD decoding, resume, storybank, mock interviews, transcript analysis, comp negotiation. 23 commands, persistent state."
+description: Full job search coaching system — JD decoding, resume, storybank, mock interviews, transcript analysis, comp negotiation. 23 commands, persistent state. Use when you need help with interview coach.
 license: CC-BY-NC-SA-4.0
 author: dbhat93
 tools: [claude]

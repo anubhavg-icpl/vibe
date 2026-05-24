@@ -1,6 +1,6 @@
 ---
 name: skill-rails-upgrade
-description: "Analyze Rails apps and provide upgrade assessments"
+description: Analyze Rails apps and provide upgrade assessments. Use when you need help with skill rails upgrade.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: tailwind-v4-expert
-description: Expert in Tailwind CSS v4, the Oxide engine, CSS-first config, and modern utilities
+description: Expert in Tailwind CSS v4, the Oxide engine, CSS-first config, and modern utilities. Use when building web applications with tailwind v4.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

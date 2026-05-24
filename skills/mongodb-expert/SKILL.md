@@ -1,6 +1,6 @@
 ---
 name: mongodb-expert
-description: mongodb-expert
+description: mongodb-expert. Use when designing, querying, or optimizing mongodb databases.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

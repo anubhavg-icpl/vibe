@@ -1,6 +1,6 @@
 ---
 name: router-plan
-description: Design an LLM model-routing plan — pick pattern (pre-route, cascade, ensemble), signals (task, length, embedding, confidence), and online quality gates.
+description: Design an LLM model-routing plan — pick pattern (pre-route, cascade, ensemble), signals (task, length, embedding, confidence), and online quality gates. Use when you need help with router plan.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 16

@@ -1,6 +1,6 @@
 ---
 name: api-gateway-expert
-description: Expert in API Gateway design and implementation with Kong, AWS API Gateway, and Apigee
+description: Expert in API Gateway design and implementation with Kong, AWS API Gateway, and Apigee. Use when configuring, deploying, or managing api gateway infrastructure.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

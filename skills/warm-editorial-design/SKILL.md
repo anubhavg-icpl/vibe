@@ -1,6 +1,6 @@
 ---
 name: warm-editorial-design
-description: Expert in the Warm Editorial design system - A serif-led magazine aesthetic. Terracotta accent on warm off-white paper —
+description: Expert in the Warm Editorial design system - A serif-led magazine aesthetic. Terracotta accent on warm off-white paper —. Use when building UI components, applying design tokens, or implementing visual styles for warm editorial.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

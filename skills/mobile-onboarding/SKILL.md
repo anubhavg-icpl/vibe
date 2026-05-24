@@ -1,6 +1,6 @@
 ---
 name: mobile-onboarding
-description: |
+description: |. Use when you need help with mobile onboarding.
   A multi-screen mobile onboarding flow rendered as three phone frames
   side by side — splash, value-prop, sign-in. Status bar, swipe dots,
   primary CTA. Use when the brief mentions "mobile onboarding", "iOS

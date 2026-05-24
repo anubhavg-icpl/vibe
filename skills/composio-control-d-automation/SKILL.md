@@ -1,6 +1,6 @@
 ---
 name: control-d-automation
-description: "Automate Control D tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Control D tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with control d automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

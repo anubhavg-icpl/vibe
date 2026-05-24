@@ -1,6 +1,6 @@
 ---
 name: provenance-audit
-description: Audit a content deployment's provenance chain across watermarking and C2PA metadata.
+description: "Audit a content deployment's provenance chain across watermarking and C2PA metadata. Use when you need help with provenance audit."
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 23

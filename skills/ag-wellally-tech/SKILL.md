@@ -1,6 +1,6 @@
 ---
 name: wellally-tech
-description: "Integrate multiple digital health data sources, connect to [WellAlly.tech](https://www.wellally.tech/) knowledge base, providing data import and knowledge reference for personal health management systems."
+description: Integrate multiple digital health data sources, connect to [WellAlly.tech](https://www.wellally.tech/) knowledge base, providing data import and knowledge reference for personal health management systems. Use when you need help with wellally tech.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

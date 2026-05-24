@@ -1,6 +1,6 @@
 ---
 name: swift-coding-standards
-description: Production-ready Swift coding standards for iOS/macOS development enforcing safety, clarity, and modern patterns
+description: Production-ready Swift coding standards for iOS/macOS development enforcing safety, clarity, and modern patterns. Use when enforcing swift coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

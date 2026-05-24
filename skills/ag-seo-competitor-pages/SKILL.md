@@ -1,6 +1,6 @@
 ---
 name: seo-competitor-pages
-description: >
+description: >. Use when you need help with seo competitor pages.
   Generate SEO-optimized competitor comparison and alternatives pages. Covers
   "X vs Y" layouts, "alternatives to X" pages, feature matrices, schema markup,
   and conversion optimization. Use when user says "comparison page", "vs page",

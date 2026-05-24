@@ -1,6 +1,6 @@
 ---
 name: xiaohongshu-content-strategist
-description: "Create viral Xiaohongshu (小红书) content with platform-native strategy, save-rate optimization, trending formats, and search SEO for China's #1 lifestyle platform."
+description: "Create viral Xiaohongshu (小红书) content with platform-native strategy, save-rate optimization, trending formats, and search SEO for China's #1 lifestyle platform. Use when you need help with xiaohongshu content strategist."
 license: CC-BY-NC-SA-4.0
 source_repo: demo112/yunqu-ai-skills
 source_type: community

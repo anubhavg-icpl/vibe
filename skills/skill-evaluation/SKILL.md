@@ -1,6 +1,6 @@
 ---
 name: skill-evaluation
-description: Evaluation strategy checklist for classification and regression models
+description: Evaluation strategy checklist for classification and regression models. Use when you need help with skill evaluation.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 9

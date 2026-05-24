@@ -1,6 +1,6 @@
 ---
 name: create-implementation-plan
-description: 'Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.'
+description: Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. Use when you need help with create implementation plan.
 license: CC-BY-NC-SA-4.0
 ---
 

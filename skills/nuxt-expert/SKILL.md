@@ -1,6 +1,6 @@
 ---
 name: nuxt-expert
-description: Expert in Nuxt 3 for building Vue.js applications with SSR/SSG
+description: Expert in Nuxt 3 for building Vue.js applications with SSR/SSG. Use when building applications with the nuxt framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

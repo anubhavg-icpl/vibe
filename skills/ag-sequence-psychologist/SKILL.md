@@ -1,6 +1,6 @@
 ---
 name: sequence-psychologist
-description: "One sentence - what this skill does and when to invoke it"
+description: One sentence - what this skill does and when to invoke it. Use when you need help with sequence psychologist.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

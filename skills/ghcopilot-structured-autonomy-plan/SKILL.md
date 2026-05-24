@@ -1,6 +1,6 @@
 ---
 name: structured-autonomy-plan
-description: 'Structured Autonomy Planning Prompt'
+description: Structured Autonomy Planning Prompt. Use when you need help with structured autonomy plan.
 license: CC-BY-NC-SA-4.0
 ---
 

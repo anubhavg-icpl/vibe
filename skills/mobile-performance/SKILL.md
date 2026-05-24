@@ -1,6 +1,6 @@
 ---
 name: mobile-performance
-description: Expert in mobile app performance optimization for iOS and Android
+description: Expert in mobile app performance optimization for iOS and Android. Use when developing mobile applications with mobile.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

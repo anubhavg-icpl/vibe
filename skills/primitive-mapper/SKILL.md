@@ -1,6 +1,6 @@
 ---
 name: primitive-mapper
-description: Map any multi-agent framework or codebase to the four primitive axes (agent, handoff, shared state, orchestrator).
+description: Map any multi-agent framework or codebase to the four primitive axes (agent, handoff, shared state, orchestrator). Use when you need help with primitive mapper.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 04

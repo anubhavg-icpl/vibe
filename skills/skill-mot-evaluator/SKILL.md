@@ -1,6 +1,6 @@
 ---
 name: skill-mot-evaluator
-description: Write a complete evaluation harness for MOTA / IDF1 / HOTA against ground-truth tracks
+description: Write a complete evaluation harness for MOTA / IDF1 / HOTA against ground-truth tracks. Use when you need help with skill mot evaluator.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 27

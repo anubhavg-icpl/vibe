@@ -1,6 +1,6 @@
 ---
 name: re-designer
-description: Design a relation extraction pipeline with provenance and canonicalization.
+description: Design a relation extraction pipeline with provenance and canonicalization. Use when you need help with re designer.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 26

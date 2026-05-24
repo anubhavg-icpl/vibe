@@ -1,6 +1,6 @@
 ---
 name: c-pro
-description: "Write efficient C code with proper memory management, pointer"
+description: Write efficient C code with proper memory management, pointer. Use when you need help with c pro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

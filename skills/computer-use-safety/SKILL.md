@@ -1,6 +1,6 @@
 ---
 name: computer-use-safety
-description: Build per-step safety classifier + confirmation gate for a computer-use agent, with allowlist navigation and injection-marker filtering.
+description: Build per-step safety classifier + confirmation gate for a computer-use agent, with allowlist navigation and injection-marker filtering. Use when you need help with computer use safety.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 21

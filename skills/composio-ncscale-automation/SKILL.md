@@ -1,6 +1,6 @@
 ---
 name: ncscale-automation
-description: "Automate Ncscale tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Ncscale tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with ncscale automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

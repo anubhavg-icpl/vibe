@@ -1,6 +1,6 @@
 ---
 name: cs-ceo-advisor
-description: Strategic leadership advisor for CEOs covering vision, strategy, board management, investor relations, and organizational culture
+description: Strategic leadership advisor for CEOs covering vision, strategy, board management, investor relations, and organizational culture. Use when you need help with cs ceo advisor.
 license: CC-BY-NC-SA-4.0
 skills: c-level-advisor/skills/ceo-advisor
 domain: c-level

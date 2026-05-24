@@ -1,6 +1,6 @@
 ---
 name: security-testing
-description: Expert in security testing methodologies and penetration testing
+description: Expert in security testing methodologies and penetration testing. Use when writing, running, or improving tests with security testing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

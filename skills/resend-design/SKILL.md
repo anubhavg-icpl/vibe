@@ -1,6 +1,6 @@
 ---
 name: resend-design
-description: Expert in the Resend design system - Email API. Minimal dark theme, monospace accents.
+description: Expert in the Resend design system - Email API. Minimal dark theme, monospace accents. Use when building UI components, applying design tokens, or implementing visual styles for resend.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: api-patterns
-description: "API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination."
+description: API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination. Use when you need help with api patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

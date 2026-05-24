@@ -1,6 +1,6 @@
 ---
 name: mythos-binary-reverse-engineer
-description: Black-box binary analysis with Ghidra/IDA/Binary Ninja for in-scope closed-source targets
+description: Black-box binary analysis with Ghidra/IDA/Binary Ninja for in-scope closed-source targets. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving binary reverse engineer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

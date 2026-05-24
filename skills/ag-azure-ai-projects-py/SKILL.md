@@ -1,6 +1,6 @@
 ---
 name: azure-ai-projects-py
-description: "Build AI applications on Microsoft Foundry using the azure-ai-projects SDK."
+description: Build AI applications on Microsoft Foundry using the azure-ai-projects SDK. Use when you need help with azure ai projects py.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

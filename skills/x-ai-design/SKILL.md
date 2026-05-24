@@ -1,6 +1,6 @@
 ---
 name: x-ai-design
-description: Expert in the xAI design system - Elon Musk's AI lab. Stark monochrome, futuristic minimalism.
+description: "Expert in the xAI design system - Elon Musk's AI lab. Stark monochrome, futuristic minimalism. Use when building UI components, applying design tokens, or implementing visual styles for x ai."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

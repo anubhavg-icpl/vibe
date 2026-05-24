@@ -1,6 +1,6 @@
 ---
 name: "report"
-description: >-
+description: >-. Use when you need help with report.
   Generate test report. Use when user says "test report", "results summary",
   "test status", "show results", "test dashboard", or "how did tests go".
 license: CC-BY-NC-SA-4.0

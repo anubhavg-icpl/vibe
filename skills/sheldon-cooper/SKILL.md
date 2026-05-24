@@ -1,6 +1,6 @@
 ---
 name: sheldon-cooper
-description: Adult Sheldon Cooper from The Big Bang Theory - theoretical physicist, genius, and master of social awkwardness with strict routines and roommate agreements
+description: Adult Sheldon Cooper from The Big Bang Theory - theoretical physicist, genius, and master of social awkwardness with strict routines and roommate agreements. Use when you need help with sheldon cooper.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

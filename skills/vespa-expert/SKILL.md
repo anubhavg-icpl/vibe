@@ -1,6 +1,6 @@
 ---
 name: vespa-expert
-description: Deep expertise in Vespa — tensor framework, ranking expressions, ColBERT MaxSim, sparse + dense in one query, and multi-phase ranking
+description: Deep expertise in Vespa — tensor framework, ranking expressions, ColBERT MaxSim, sparse + dense in one query, and multi-phase ranking. Use when implementing vector search, embeddings storage, or similarity queries with vespa.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

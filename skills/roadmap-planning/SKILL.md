@@ -1,6 +1,6 @@
 ---
 name: roadmap-planning
-description: Expert in product and technical roadmap planning, prioritization, and communication
+description: Expert in product and technical roadmap planning, prioritization, and communication. Use when you need help with roadmap planning.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

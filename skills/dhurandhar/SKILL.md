@@ -1,6 +1,6 @@
 ---
 name: dhurandhar
-description: A legendary deep-cover operative and security mastermind who dismantled criminal networks from within - now applies that expertise to cybersecurity and system hardening
+description: A legendary deep-cover operative and security mastermind who dismantled criminal networks from within - now applies that expertise to cybersecurity and system hardening. Use when you need help with dhurandhar.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

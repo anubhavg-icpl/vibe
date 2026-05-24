@@ -1,6 +1,6 @@
 ---
 name: email-marketing
-description: |
+description: |. Use when you need help with email marketing.
   A brand product-launch email — masthead with wordmark, hero image block,
   headline lockup with skewed-italic accent, body copy, primary CTA, and a
   specifications grid. Pure HTML email layout (centered single column, table

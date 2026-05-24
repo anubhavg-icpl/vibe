@@ -1,6 +1,6 @@
 ---
 name: gdpr-expert
-description: Expert in GDPR compliance for software development and data protection
+description: Expert in GDPR compliance for software development and data protection. Use when performing security analysis, auditing, or hardening with gdpr.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

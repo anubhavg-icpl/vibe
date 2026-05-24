@@ -1,6 +1,6 @@
 ---
 name: game-development
-description: "Game development orchestrator. Routes to platform-specific skills based on project needs."
+description: Game development orchestrator. Routes to platform-specific skills based on project needs. Use when you need help with game development.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

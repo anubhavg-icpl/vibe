@@ -1,6 +1,6 @@
 ---
 name: identity-mirror
-description: "One sentence - what this skill does and when to invoke it"
+description: One sentence - what this skill does and when to invoke it. Use when you need help with identity mirror.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

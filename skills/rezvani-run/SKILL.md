@@ -1,6 +1,6 @@
 ---
 name: "run"
-description: "One-shot lifecycle command that chains init → baseline → spawn → eval → merge in a single invocation."
+description: One-shot lifecycle command that chains init → baseline → spawn → eval → merge in a single invocation. Use when you need help with run.
 license: CC-BY-NC-SA-4.0
 command: /hub:run
 ---

@@ -1,6 +1,6 @@
 ---
 name: app-store-changelog
-description: Generate user-facing App Store release notes from git history since the last tag.
+description: Generate user-facing App Store release notes from git history since the last tag. Use when you need help with app store changelog.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

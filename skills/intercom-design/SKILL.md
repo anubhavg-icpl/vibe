@@ -1,6 +1,6 @@
 ---
 name: intercom-design
-description: Expert in the Intercom design system - Customer messaging. Friendly blue palette, conversational UI patterns.
+description: Expert in the Intercom design system - Customer messaging. Friendly blue palette, conversational UI patterns. Use when building UI components, applying design tokens, or implementing visual styles for intercom.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

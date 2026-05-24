@@ -1,6 +1,6 @@
 ---
 name: gremlin-expert
-description: Expert in Gremlin - Enterprise Chaos Engineering as a Service platform
+description: Expert in Gremlin - Enterprise Chaos Engineering as a Service platform. Use when writing, running, or improving tests with gremlin.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

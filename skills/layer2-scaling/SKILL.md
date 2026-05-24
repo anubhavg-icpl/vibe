@@ -1,6 +1,6 @@
 ---
 name: layer2-scaling
-description: Expert in Layer 2 scaling solutions, rollups, and blockchain performance
+description: Expert in Layer 2 scaling solutions, rollups, and blockchain performance. Use when building blockchain, DeFi, or Web3 applications with layer2 scaling.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

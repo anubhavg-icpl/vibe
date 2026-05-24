@@ -1,6 +1,6 @@
 ---
 name: nanobanana-ppt-skills
-description: "AI-powered PPT generation with document analysis and styled images"
+description: AI-powered PPT generation with document analysis and styled images. Use when you need help with nanobanana ppt skills.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: skill-information-theory
-description: Apply information theory concepts to ML loss functions, model evaluation, and feature selection
+description: Apply information theory concepts to ML loss functions, model evaluation, and feature selection. Use when you need help with skill information theory.
 license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 9

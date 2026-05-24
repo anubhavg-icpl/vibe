@@ -1,6 +1,6 @@
 ---
 name: wise-design
-description: Expert in the Wise design system - Money transfer. Bright green accent, friendly and clear.
+description: Expert in the Wise design system - Money transfer. Bright green accent, friendly and clear. Use when building UI components, applying design tokens, or implementing visual styles for wise.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

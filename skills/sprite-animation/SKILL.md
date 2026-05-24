@@ -1,6 +1,6 @@
 ---
 name: sprite-animation
-description: |
+description: |. Use when you need help with sprite animation.
   A pixel / sprite-style animated explainer slide — full-bleed cream stage,
   bold display year, animated pixel-art mascot (e.g. Hanafuda card, mushroom,
   or 8-bit console), kinetic Japanese display type, ticking timeline ribbon.

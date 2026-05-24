@@ -1,6 +1,6 @@
 ---
 name: rendering-content-visibility
-description: CSS content-visibility for Long Lists
+description: CSS content-visibility for Long Lists. Use when you need help with rendering content visibility.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

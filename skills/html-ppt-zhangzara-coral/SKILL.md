@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-coral
-description: |
+description: |. Use when you need help with html ppt zhangzara coral.
   Coral — Cream and coral on near-black, set in oversized Bebas Neue. Anything that should feel warm-graphic and editorial: fashion, beauty, fitness, F&B, lifestyle brands, agency credentials.
 license: CC-BY-NC-SA-4.0
 triggers: 

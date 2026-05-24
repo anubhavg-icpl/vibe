@@ -1,6 +1,6 @@
 ---
 name: computer-vision
-description: Expert in computer vision from pixels to understanding across image, video, and 3D, from the AI Engineering from Scratch curriculum
+description: Expert in computer vision from pixels to understanding across image, video, and 3D, from the AI Engineering from Scratch curriculum. Use when you need help with computer vision.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

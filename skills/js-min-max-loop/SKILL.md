@@ -1,6 +1,6 @@
 ---
 name: js-min-max-loop
-description: Use Loop for Min/Max Instead of Sort
+description: Use Loop for Min/Max Instead of Sort. Use when you need help with js min max loop.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-svelte
-description: "Svelte 5 and SvelteKit development standards and best practices for component-based user interfaces and full-stack applications"
+description: Svelte 5 and SvelteKit development standards and best practices for component-based user interfaces and full-stack applications. Use when writing or reviewing svelte code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

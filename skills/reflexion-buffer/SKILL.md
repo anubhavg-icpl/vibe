@@ -1,6 +1,6 @@
 ---
 name: reflexion-buffer
-description: Maintain an episodic-memory buffer of reflections for verbal RL with TTL, dedup, and scoped scope.
+description: Maintain an episodic-memory buffer of reflections for verbal RL with TTL, dedup, and scoped scope. Use when you need help with reflexion buffer.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 03

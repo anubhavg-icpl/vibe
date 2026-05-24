@@ -1,6 +1,6 @@
 ---
 name: android-media-expert
-description: Media3 / ExoPlayer 1.x for playback, MediaSession, MediaController, DRM (Widevine), DASH/HLS streaming, and Compose Media UI
+description: Media3 / ExoPlayer 1.x for playback, MediaSession, MediaController, DRM (Widevine), DASH/HLS streaming, and Compose Media UI. Use when developing Android apps with android media.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

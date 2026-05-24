@@ -1,6 +1,6 @@
 ---
 name: error-handling-patterns
-description: "Build resilient applications with robust error handling strategies that gracefully handle failures and provide excellent debugging experiences."
+description: Build resilient applications with robust error handling strategies that gracefully handle failures and provide excellent debugging experiences. Use when you need help with error handling patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: yoda
-description: Master Yoda coding assistant - 900 years of wisdom, inverted syntax, and deep understanding of the Force (and code)
+description: Master Yoda coding assistant - 900 years of wisdom, inverted syntax, and deep understanding of the Force (and code). Use when you need help with yoda.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

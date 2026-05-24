@@ -1,6 +1,6 @@
 ---
 name: service-mesh-observability
-description: "Complete guide to observability patterns for Istio, Linkerd, and service mesh deployments."
+description: Complete guide to observability patterns for Istio, Linkerd, and service mesh deployments. Use when you need help with service mesh observability.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

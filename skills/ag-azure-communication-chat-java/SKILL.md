@@ -1,6 +1,6 @@
 ---
 name: azure-communication-chat-java
-description: "Build real-time chat applications with thread management, messaging, participants, and read receipts."
+description: Build real-time chat applications with thread management, messaging, participants, and read receipts. Use when you need help with azure communication chat java.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

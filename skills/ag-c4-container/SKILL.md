@@ -1,6 +1,6 @@
 ---
 name: c4-container
-description: Expert C4 Container-level documentation specialist.
+description: Expert C4 Container-level documentation specialist. Use when you need help with c4 container.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

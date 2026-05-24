@@ -1,6 +1,6 @@
 ---
 name: helicone-expert
-description: Helicone proxy/observability — cost tracking, semantic caching, rate limits, prompt versioning
+description: Helicone proxy/observability — cost tracking, semantic caching, rate limits, prompt versioning. Use when evaluating, monitoring, or observing LLM performance with helicone.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

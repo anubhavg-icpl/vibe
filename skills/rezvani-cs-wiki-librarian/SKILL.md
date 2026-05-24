@@ -1,6 +1,6 @@
 ---
 name: cs-wiki-librarian
-description: Dispatched sub-agent that answers queries against an LLM Wiki vault. Reads index.md first, drills into 3-10 relevant pages across categories, synthesizes an answer with inline [[wikilink]] citations, and offers to file the answer back into the wiki as a new comparison or synthesis page. Spawn when the user asks a substantive question the wiki might answer, says "what does the wiki say about X", "compare A and B across my sources", or wants to explore a topic.
+description: "Dispatched sub-agent that answers queries against an LLM Wiki vault. Reads index.md first, drills into 3-10 relevant pages across categories, synthesizes an answer with inline [[wikilink]] citations, and offers to file the answer back into the wiki as a new comparison or synthesis page. Spawn when the user asks a substantive question the wiki might answer, says \"what does the wiki say about X\", \"compare A and B across my sources\", or wants to explore a topic. Use when you need help with cs wiki librarian."
 license: CC-BY-NC-SA-4.0
 skills: engineering/llm-wiki
 domain: engineering

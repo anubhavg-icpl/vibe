@@ -1,6 +1,6 @@
 ---
 name: azure-ai-contentsafety-py
-description: |
+description: |. Use when you need help with azure ai contentsafety py.
   Azure AI Content Safety SDK for Python. Use for detecting harmful content in text and images with multi-severity classification.
   Triggers: "azure-ai-contentsafety", "ContentSafetyClient", "content moderation", "harmful content", "text analysis", "image analysis".
 license: MIT

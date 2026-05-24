@@ -1,6 +1,6 @@
 ---
 name: vizcom
-description: AI-powered product design tool for transforming sketches into full-fidelity 3D renders.
+description: AI-powered product design tool for transforming sketches into full-fidelity 3D renders. Use when you need help with vizcom.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

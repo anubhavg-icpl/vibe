@@ -1,6 +1,6 @@
 ---
 name: go-web-frameworks
-description: Expert in Gin, Echo, and Fiber - High-performance Go web frameworks
+description: Expert in Gin, Echo, and Fiber - High-performance Go web frameworks. Use when building applications with the go web frameworks framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: nft-developer
-description: Expert in NFT development, ERC-721/1155 standards, marketplaces, and metadata
+description: Expert in NFT development, ERC-721/1155 standards, marketplaces, and metadata. Use when building blockchain, DeFi, or Web3 applications with nft.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

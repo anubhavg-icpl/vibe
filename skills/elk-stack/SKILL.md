@@ -1,6 +1,6 @@
 ---
 name: elk-stack
-description: Expert in Elasticsearch, Logstash, and Kibana for log management and analytics
+description: Expert in Elasticsearch, Logstash, and Kibana for log management and analytics. Use when configuring, deploying, or managing elk stack infrastructure.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

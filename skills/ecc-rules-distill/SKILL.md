@@ -1,6 +1,6 @@
 ---
 name: rules-distill
-description: "Scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files"
+description: Scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files. Use when you need help with rules distill.
 license: CC-BY-NC-SA-4.0
 origin: ECC
 ---

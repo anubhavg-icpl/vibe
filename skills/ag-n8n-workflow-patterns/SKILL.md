@@ -1,6 +1,6 @@
 ---
 name: n8n-workflow-patterns
-description: "Proven architectural patterns for building n8n workflows."
+description: Proven architectural patterns for building n8n workflows. Use when you need help with n8n workflow patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

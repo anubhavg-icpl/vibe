@@ -1,6 +1,6 @@
 ---
 name: attack-audit
-description: Audit a red-team evaluation report for attack coverage, budget, judge identity, and behaviour set.
+description: Audit a red-team evaluation report for attack coverage, budget, judge identity, and behaviour set. Use when you need help with attack audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 12

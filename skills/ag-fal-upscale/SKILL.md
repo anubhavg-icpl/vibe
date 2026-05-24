@@ -1,6 +1,6 @@
 ---
 name: fal-upscale
-description: "Upscale and enhance image and video resolution using AI"
+description: Upscale and enhance image and video resolution using AI. Use when you need help with fal upscale.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

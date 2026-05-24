@@ -1,6 +1,6 @@
 ---
 name: "office-hours"
-description: "/cs:office-hours <topic> — YC-style 6-question founder interrogation before any advice. Forces clarity on problem, customer, distribution, defensibility, capital, and founder fit."
+description: /cs:office-hours <topic> — YC-style 6-question founder interrogation before any advice. Forces clarity on problem, customer, distribution, defensibility, capital, and founder fit. Use when you need help with office hours.
 license: CC-BY-NC-SA-4.0
 ---
 

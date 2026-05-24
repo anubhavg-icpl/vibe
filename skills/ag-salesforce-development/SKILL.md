@@ -1,6 +1,6 @@
 ---
 name: salesforce-development
-description: Expert patterns for Salesforce platform development including
+description: Expert patterns for Salesforce platform development including. Use when you need help with salesforce development.
   Lightning Web Components (LWC), Apex triggers and classes, REST/Bulk APIs,
   Connected Apps, and Salesforce DX with scratch orgs and 2nd generation
   packages (2GP).

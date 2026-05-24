@@ -1,6 +1,6 @@
 ---
 name: Toggl Automation
-description: "Automate time tracking workflows in Toggl Track -- create time entries, manage projects, clients, tags, and workspaces through natural language commands."
+description: Automate time tracking workflows in Toggl Track -- create time entries, manage projects, clients, tags, and workspaces through natural language commands. Use when you need help with Toggl Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

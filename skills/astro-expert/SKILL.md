@@ -1,6 +1,6 @@
 ---
 name: astro-expert
-description: Expert in Astro - The web framework for content-driven websites
+description: Expert in Astro - The web framework for content-driven websites. Use when building applications with the astro framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

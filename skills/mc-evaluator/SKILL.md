@@ -1,6 +1,6 @@
 ---
 name: mc-evaluator
-description: Evaluate a policy via Monte Carlo rollouts and produce a convergence report with DP-comparison if available.
+description: Evaluate a policy via Monte Carlo rollouts and produce a convergence report with DP-comparison if available. Use when you need help with mc evaluator.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 3

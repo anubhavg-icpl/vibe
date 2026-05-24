@@ -1,6 +1,6 @@
 ---
 name: lambdatest-agent-skills
-description: "Production-grade test automation skills for 46 frameworks across E2E, unit, mobile, BDD, visual, and cloud testing in 15+ languages."
+description: Production-grade test automation skills for 46 frameworks across E2E, unit, mobile, BDD, visual, and cloud testing in 15+ languages. Use when writing, running, or improving tests with lambdatest agent skills.
 source_repo: LambdaTest/agent-skills
 source_type: community
 author: tanveer-farooq

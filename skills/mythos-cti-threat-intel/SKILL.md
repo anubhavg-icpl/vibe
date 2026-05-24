@@ -1,6 +1,6 @@
 ---
 name: mythos-cti-threat-intel
-description: Cyber threat intelligence with rigor - STIX/TAXII, MITRE ATT&CK mapping, IOC enrichment, attribution-with-uncertainty, end-to-end detection-rule generation per CTI-REALM
+description: Cyber threat intelligence with rigor - STIX/TAXII, MITRE ATT&CK mapping, IOC enrichment, attribution-with-uncertainty, end-to-end detection-rule generation per CTI-REALM. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving cti threat intel.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

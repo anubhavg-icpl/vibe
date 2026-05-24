@@ -1,6 +1,6 @@
 ---
 name: multi-agent-and-swarms
-description: Expert in multi-agent coordination, communication protocols, and emergent collective intelligence, from the AI Engineering from Scratch curriculum
+description: Expert in multi-agent coordination, communication protocols, and emergent collective intelligence, from the AI Engineering from Scratch curriculum. Use when you need help with multi agent and swarms.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

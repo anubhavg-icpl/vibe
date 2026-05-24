@@ -1,6 +1,6 @@
 ---
 name: "post-mortem"
-description: "/cs:post-mortem <decision> — Honest retrospective on an executed decision, scored against original assumptions and dissent. Closes the strategic sprint loop."
+description: /cs:post-mortem <decision> — Honest retrospective on an executed decision, scored against original assumptions and dissent. Closes the strategic sprint loop. Use when you need help with post mortem.
 license: CC-BY-NC-SA-4.0
 ---
 

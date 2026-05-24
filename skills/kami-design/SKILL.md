@@ -1,6 +1,6 @@
 ---
 name: kami-design
-description: Expert in the kami (紙 / 纸) design system - Editorial paper system: warm parchment canvas, ink-blue accent, serif-led hierarchy.
+description: Expert in the kami (紙 / 纸) design system - Editorial paper system: warm parchment canvas, ink-blue accent, serif-led hierarchy. Use when building UI components, applying design tokens, or implementing visual styles for kami.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

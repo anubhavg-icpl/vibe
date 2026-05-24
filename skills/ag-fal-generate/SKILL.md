@@ -1,6 +1,6 @@
 ---
 name: fal-generate
-description: "Generate images and videos using fal.ai AI models"
+description: Generate images and videos using fal.ai AI models. Use when you need help with fal generate.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

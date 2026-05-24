@@ -1,6 +1,6 @@
 ---
 name: delta-lake-expert
-description: Expert in Delta Lake ACID storage, time travel, and deletion vectors
+description: Expert in Delta Lake ACID storage, time travel, and deletion vectors. Use when working with delta lake for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

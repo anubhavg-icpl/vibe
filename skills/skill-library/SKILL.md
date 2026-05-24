@@ -1,6 +1,6 @@
 ---
 name: skill-library
-description: Generate a Voyager-shaped skill library with registration, retrieval by similarity, compositional execution, and failure-driven refinement.
+description: Generate a Voyager-shaped skill library with registration, retrieval by similarity, compositional execution, and failure-driven refinement. Use when you need help with skill library.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 10

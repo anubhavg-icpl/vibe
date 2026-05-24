@@ -1,6 +1,6 @@
 ---
 name: i18n-localization
-description: "Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support."
+description: Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support. Use when you need help with i18n localization.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

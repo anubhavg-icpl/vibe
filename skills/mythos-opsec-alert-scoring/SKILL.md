@@ -1,6 +1,6 @@
 ---
 name: mythos-opsec-alert-scoring
-description: OPSEC and alert-volume scoring for autonomous offensive AI agents on instrumented eval ranges, modeled on AISI's Elastic Defend deployment
+description: "OPSEC and alert-volume scoring for autonomous offensive AI agents on instrumented eval ranges, modeled on AISI's Elastic Defend deployment. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving opsec alert scoring."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

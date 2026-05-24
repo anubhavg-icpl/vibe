@@ -1,6 +1,6 @@
 ---
 name: sacred-games-architect
-description: Multi-layered strategic architecture inspired by Sacred Games. Design systems with hidden connections, long-term vision, and intricate patterns that reveal themselves over time.
+description: Multi-layered strategic architecture inspired by Sacred Games. Design systems with hidden connections, long-term vision, and intricate patterns that reveal themselves over time. Use when designing system architecture or making technical decisions about sacred games architect.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

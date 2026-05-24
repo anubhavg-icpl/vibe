@@ -1,6 +1,6 @@
 ---
 name: wave_accounting-automation
-description: "Automate Wave Accounting tasks via Rube MCP (Composio): invoices, customers, payments, and small business accounting. Always search tools first for current schemas."
+description: Automate Wave Accounting tasks via Rube MCP (Composio): invoices, customers, payments, and small business accounting. Always search tools first for current schemas. Use when you need help with wave_accounting automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

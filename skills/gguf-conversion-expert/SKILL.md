@@ -1,6 +1,6 @@
 ---
 name: gguf-conversion-expert
-description: Convert HF safetensors to GGUF with convert_hf_to_gguf.py — handle vocab, tied embeddings, sharded checkpoints, and produce reproducible F16/BF16 + quantize pipelines
+description: Convert HF safetensors to GGUF with convert_hf_to_gguf.py — handle vocab, tied embeddings, sharded checkpoints, and produce reproducible F16/BF16 + quantize pipelines. Use when creating, converting, or publishing model files with gguf conversion.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

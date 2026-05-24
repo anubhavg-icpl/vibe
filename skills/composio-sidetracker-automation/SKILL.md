@@ -1,6 +1,6 @@
 ---
 name: sidetracker-automation
-description: "Automate Sidetracker tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Sidetracker tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with sidetracker automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

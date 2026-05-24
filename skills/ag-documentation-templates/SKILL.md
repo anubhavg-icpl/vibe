@@ -1,6 +1,6 @@
 ---
 name: documentation-templates
-description: "Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation."
+description: Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation. Use when you need help with documentation templates.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

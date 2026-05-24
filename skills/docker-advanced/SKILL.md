@@ -1,6 +1,6 @@
 ---
 name: docker-advanced
-description: Expert in Docker containerization, Dockerfile best practices, multi-stage builds, networking, volumes, Compose, and production deployment
+description: Expert in Docker containerization, Dockerfile best practices, multi-stage builds, networking, volumes, Compose, and production deployment. Use when configuring, deploying, or managing docker advanced infrastructure.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

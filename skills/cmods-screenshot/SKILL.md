@@ -1,6 +1,6 @@
 ---
 name: screenshot
-description: "Find and display recent screenshots. Triggers: screenshot, check screenshot, show screenshot, recent screenshot, last screenshot."
+description: Find and display recent screenshots. Triggers: screenshot, check screenshot, show screenshot, recent screenshot, last screenshot. Use when you need help with screenshot.
 license: MIT
 compatibility: "Windows, macOS, Linux"
 allowed-tools: "Bash, Glob, Read"

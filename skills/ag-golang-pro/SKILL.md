@@ -1,6 +1,6 @@
 ---
 name: golang-pro
-description: Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization, and production-ready microservices.
+description: Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization, and production-ready microservices. Use when you need help with golang pro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

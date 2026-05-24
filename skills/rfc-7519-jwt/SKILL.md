@@ -1,6 +1,6 @@
 ---
 name: rfc-7519-jwt
-description: Complete JWT implementation guide with claims validation and multi-tenancy patterns
+description: Complete JWT implementation guide with claims validation and multi-tenancy patterns. Use when implementing or validating rfc 7519 jwt protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

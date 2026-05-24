@@ -1,6 +1,6 @@
 ---
 name: tj-holowaychuk-style
-description: TJ Holowaychuk — Express, Koa, Mocha, Commander; minimal cores, prolific output, small modules that compose
+description: TJ Holowaychuk — Express, Koa, Mocha, Commander; minimal cores, prolific output, small modules that compose. Use when you want code review, architecture advice, or opinions in the style of tj holowaychuk.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

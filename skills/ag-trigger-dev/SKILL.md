@@ -1,6 +1,6 @@
 ---
 name: trigger-dev
-description: Trigger.dev expert for background jobs, AI workflows, and reliable
+description: Trigger.dev expert for background jobs, AI workflows, and reliable. Use when you need help with trigger dev.
   async execution with excellent developer experience and TypeScript-first
   design.
 license: CC-BY-NC-SA-4.0

@@ -1,6 +1,6 @@
 ---
 name: react-router-expert
-description: Expert in React Router 7 framework mode (formerly Remix) — loaders, actions, file routes
+description: Expert in React Router 7 framework mode (formerly Remix) — loaders, actions, file routes. Use when building web applications with react router.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: remix-project-architect
-description: Production-ready Remix project structure with nested routes, loaders, actions, and full-stack patterns
+description: Production-ready Remix project structure with nested routes, loaders, actions, and full-stack patterns. Use when scaffolding, structuring, or architecting remix projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

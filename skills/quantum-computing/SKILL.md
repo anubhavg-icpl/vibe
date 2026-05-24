@@ -1,6 +1,6 @@
 ---
 name: quantum-computing
-description: Expert in quantum computing fundamentals, Qiskit, and quantum algorithms
+description: Expert in quantum computing fundamentals, Qiskit, and quantum algorithms. Use when you need help with quantum computing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

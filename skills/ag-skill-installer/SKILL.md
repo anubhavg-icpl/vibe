@@ -1,6 +1,6 @@
 ---
 name: skill-installer
-description: Instala, valida, registra e verifica novas skills no ecossistema. 10 checks de seguranca, copia, registro no orchestrator e verificacao pos-instalacao.
+description: Instala, valida, registra e verifica novas skills no ecossistema. 10 checks de seguranca, copia, registro no orchestrator e verificacao pos-instalacao. Use when you need help with skill installer.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: safe
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # Skill Installer v3.0

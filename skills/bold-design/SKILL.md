@@ -1,6 +1,6 @@
 ---
 name: bold-design
-description: Expert in the Bold design system - Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.
+description: Expert in the Bold design system - Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts. Use when building UI components, applying design tokens, or implementing visual styles for bold.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

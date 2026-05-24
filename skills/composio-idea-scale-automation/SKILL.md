@@ -1,6 +1,6 @@
 ---
 name: idea-scale-automation
-description: "Automate Idea Scale tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Idea Scale tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with idea scale automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

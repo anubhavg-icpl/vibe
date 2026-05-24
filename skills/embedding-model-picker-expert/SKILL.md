@@ -1,6 +1,6 @@
 ---
 name: embedding-model-picker-expert
-description: Decision guide for picking embedding models in 2025-2026 — OpenAI, Cohere, Voyage, Jina, BGE, E5, Nomic, Stella, Snowflake Arctic; reading MTEB; trading dimension/cost/quality
+description: Decision guide for picking embedding models in 2025-2026 — OpenAI, Cohere, Voyage, Jina, BGE, E5, Nomic, Stella, Snowflake Arctic; reading MTEB; trading dimension/cost/quality. Use when implementing vector search, embeddings storage, or similarity queries with embedding model picker.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: skill-conv-shape-calculator
-description: Walk a CNN spec layer by layer and report output shape, receptive field, and parameter count for every block
+description: Walk a CNN spec layer by layer and report output shape, receptive field, and parameter count for every block. Use when you need help with skill conv shape calculator.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 2

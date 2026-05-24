@@ -1,6 +1,6 @@
 ---
 name: frontend-design-review
-description: >
+description: >. Use when you need help with frontend design review.
   Review and create distinctive, production-grade frontend interfaces with high design quality and design system compliance.
   Evaluates using three pillars: frictionless insight-to-action, quality craft, and trustworthy building.
   USE FOR: PR reviews, design reviews, accessibility audits, design system compliance checks, creative frontend design,

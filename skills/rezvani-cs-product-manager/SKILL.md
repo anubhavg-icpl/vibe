@@ -1,6 +1,6 @@
 ---
 name: cs-product-manager
-description: Product management agent for feature prioritization, customer discovery, PRD development, and roadmap planning using RICE framework
+description: Product management agent for feature prioritization, customer discovery, PRD development, and roadmap planning using RICE framework. Use when you need help with cs product manager.
 license: CC-BY-NC-SA-4.0
 skills: product-team/product-manager-toolkit, product-team/agile-product-owner, product-team/product-strategist, product-team/ux-researcher-designer, product-team/ui-design-system, product-team/competitive-teardown, product-team/landing-page-generator, product-team/saas-scaffolder
 domain: product

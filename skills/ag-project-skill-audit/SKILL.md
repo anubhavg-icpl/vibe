@@ -1,6 +1,6 @@
 ---
 name: project-skill-audit
-description: Audit a project and recommend the highest-value skills to add or update.
+description: Audit a project and recommend the highest-value skills to add or update. Use when you need help with project skill audit.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

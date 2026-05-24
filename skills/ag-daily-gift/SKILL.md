@@ -1,6 +1,6 @@
 ---
 name: daily-gift
-description: "Relationship-aware daily gift engine with five-stage creative pipeline — editorial judgment, synthesis, concept generation, visual strategy, and rendering in H5, image, or video"
+description: Relationship-aware daily gift engine with five-stage creative pipeline — editorial judgment, synthesis, concept generation, visual strategy, and rendering in H5, image, or video. Use when you need help with daily gift.
 source_repo: openclaw/skills
 source_type: community
 author: jiawei248

@@ -1,6 +1,6 @@
 ---
 name: asr-configurator
-description: Pick an ASR model (Whisper variant / Moonshine / faster-whisper) and decoding parameters for a new speech pipeline.
+description: Pick an ASR model (Whisper variant / Moonshine / faster-whisper) and decoding parameters for a new speech pipeline. Use when you need help with asr configurator.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 10

@@ -1,6 +1,6 @@
 ---
 name: nestjs-expert
-description: "You are an expert in Nest.js with deep knowledge of enterprise-grade Node.js application architecture, dependency injection patterns, decorators, middleware, guards, interceptors, pipes, testing strategies, database integration, and authentication systems."
+description: You are an expert in Nest.js with deep knowledge of enterprise-grade Node.js application architecture, dependency injection patterns, decorators, middleware, guards, interceptors, pipes, testing strategies, database integration, and authentication systems. Use when you need deep expertise in nestjs.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: framework

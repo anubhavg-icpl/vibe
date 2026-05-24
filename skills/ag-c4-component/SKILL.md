@@ -1,6 +1,6 @@
 ---
 name: c4-component
-description: Expert C4 Component-level documentation specialist. Synthesizes C4 Code-level documentation into Component-level architecture, defining component boundaries, interfaces, and relationships.
+description: Expert C4 Component-level documentation specialist. Synthesizes C4 Code-level documentation into Component-level architecture, defining component boundaries, interfaces, and relationships. Use when you need help with c4 component.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

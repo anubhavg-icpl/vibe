@@ -1,6 +1,6 @@
 ---
 name: skill-classification-diagnostics
-description: Given a confusion matrix and class names, surface per-class failures and propose the single most impactful fix
+description: Given a confusion matrix and class names, surface per-class failures and propose the single most impactful fix. Use when you need help with skill classification diagnostics.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 4

@@ -1,6 +1,6 @@
 ---
 name: speed
-description: Launch RSVP speed reader for text
+description: Launch RSVP speed reader for text. Use when you need help with speed.
 license: CC-BY-NC-SA-4.0
 trigger: command
 tools: Write, Bash, Read

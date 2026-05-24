@@ -1,6 +1,6 @@
 ---
 name: Zoho Books Automation
-description: "Automate Zoho Books accounting workflows including invoice creation, bill management, contact lookup, payment tracking, and multi-organization support through natural language commands"
+description: Automate Zoho Books accounting workflows including invoice creation, bill management, contact lookup, payment tracking, and multi-organization support through natural language commands. Use when you need help with Zoho Books Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

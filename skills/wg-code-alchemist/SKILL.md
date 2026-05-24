@@ -1,6 +1,6 @@
 ---
 name: wg-code-alchemist
-description: Ask WG Code Alchemist to transform your code with Clean Code principles and SOLID design
+description: Ask WG Code Alchemist to transform your code with Clean Code principles and SOLID design. Use when designing system architecture or making technical decisions about code alchemist.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

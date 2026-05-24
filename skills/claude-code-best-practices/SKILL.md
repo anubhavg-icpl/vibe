@@ -1,6 +1,6 @@
 ---
 name: claude-code-best-practices
-description: Claude Code best practices mode - Optimized agentic coding workflows based on Anthropic engineering patterns. Includes setup optimization, tool integration, common workflows, and multi-agent strategies.
+description: Claude Code best practices mode - Optimized agentic coding workflows based on Anthropic engineering patterns. Includes setup optimization, tool integration, common workflows, and multi-agent strategies. Use when you need help with claude code best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

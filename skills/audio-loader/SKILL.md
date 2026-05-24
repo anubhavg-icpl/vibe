@@ -1,6 +1,6 @@
 ---
 name: audio-loader
-description: Validate a raw audio file against a target model's expectations and resample it safely.
+description: "Validate a raw audio file against a target model's expectations and resample it safely. Use when you need help with audio loader."
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 01

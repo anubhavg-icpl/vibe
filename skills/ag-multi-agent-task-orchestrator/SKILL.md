@@ -1,6 +1,6 @@
 ---
 name: multi-agent-task-orchestrator
-description: "Route tasks to specialized AI agents with anti-duplication, quality gates, and 30-minute heartbeat monitoring"
+description: Route tasks to specialized AI agents with anti-duplication, quality gates, and 30-minute heartbeat monitoring. Use when you need help with multi agent task orchestrator.
 license: CC-BY-NC-SA-4.0
 source_repo: milkomida77/guardian-agent-prompts
 source_type: community

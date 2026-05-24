@@ -1,6 +1,6 @@
 ---
 name: recallai-automation
-description: "Automate Recallai tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Recallai tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with recallai automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

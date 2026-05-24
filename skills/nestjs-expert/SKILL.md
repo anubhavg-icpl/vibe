@@ -1,6 +1,6 @@
 ---
 name: nestjs-expert
-description: Expert in NestJS framework for building scalable Node.js server-side applications
+description: Expert in NestJS framework for building scalable Node.js server-side applications. Use when building applications with the nestjs framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: salesforce-automation
-description: "Automate Salesforce tasks via Rube MCP (Composio): leads, contacts, accounts, opportunities, SOQL queries. Always search tools first for current schemas."
+description: Automate Salesforce tasks via Rube MCP (Composio): leads, contacts, accounts, opportunities, SOQL queries. Always search tools first for current schemas. Use when you need help with salesforce automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

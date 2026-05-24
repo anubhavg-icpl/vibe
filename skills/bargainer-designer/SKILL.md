@@ -1,6 +1,6 @@
 ---
 name: bargainer-designer
-description: Design a negotiation protocol: which agent narrates, which component generates offers, how private scratchpads separate from public messages, what the round bound is, and how deal rate is monitored.
+description: Design a negotiation protocol: which agent narrates, which component generates offers, how private scratchpads separate from public messages, what the round bound is, and how deal rate is monitored. Use when you need help with bargainer designer.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 16

@@ -1,6 +1,6 @@
 ---
 name: skill-graph-analysis
-description: Analyze graph-structured data and choose the right graph algorithm for ML tasks
+description: Analyze graph-structured data and choose the right graph algorithm for ML tasks. Use when you need help with skill graph analysis.
 license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 21

@@ -1,6 +1,6 @@
 ---
 name: orbit-general
-description: |
+description: |. Use when you need help with orbit general.
   Open Orbit briefing skill — selected by the Orbit pipeline when the
   user has two or more connectors connected. Pulls the past 24 hours of
   activity from every authenticated connector (GitHub, Linear, Notion,

@@ -1,6 +1,6 @@
 ---
 name: mlx-apple-silicon-expert
-description: Run, quantize, fine-tune (LoRA/QLoRA), and serve LLMs and VLMs natively on Apple Silicon with MLX and mlx-lm
+description: Run, quantize, fine-tune (LoRA/QLoRA), and serve LLMs and VLMs natively on Apple Silicon with MLX and mlx-lm. Use when deploying, running, or configuring local LLM inference with mlx apple silicon.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

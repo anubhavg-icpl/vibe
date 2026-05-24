@@ -1,6 +1,6 @@
 ---
 name: ai-md
-description: "Convert human-written CLAUDE.md into AI-native structured-label format. Battle-tested across 4 models. Same rules, fewer tokens, higher compliance."
+description: Convert human-written CLAUDE.md into AI-native structured-label format. Battle-tested across 4 models. Same rules, fewer tokens, higher compliance. Use when you need help with ai md.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

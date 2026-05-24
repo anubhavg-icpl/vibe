@@ -1,6 +1,6 @@
 ---
 name: llm-ops
-description: "LLM Operations -- RAG, embeddings, vector databases, fine-tuning, prompt engineering avancado, custos de LLM, evals de qualidade e arquiteturas de IA para producao."
+description: LLM Operations -- RAG, embeddings, vector databases, fine-tuning, prompt engineering avancado, custos de LLM, evals de qualidade e arquiteturas de IA para producao. Use when you need help with llm ops.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: safe
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # LLM-OPS -- IA de Producao

@@ -1,6 +1,6 @@
 ---
 name: github-dashboard
-description: |
+description: |. Use when you need help with github dashboard.
   GitHub repository analytics dashboard — stars, forks, contributors,
   issues, pull requests, recent activity, and top contributors. Use when
   the brief asks for a GitHub repo dashboard, open-source growth report,

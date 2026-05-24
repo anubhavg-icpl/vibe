@@ -1,6 +1,6 @@
 ---
 name: ddd-tactical-patterns
-description: "Apply DDD tactical patterns in code using entities, value objects, aggregates, repositories, and domain events with explicit invariants."
+description: Apply DDD tactical patterns in code using entities, value objects, aggregates, repositories, and domain events with explicit invariants. Use when you need help with ddd tactical patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

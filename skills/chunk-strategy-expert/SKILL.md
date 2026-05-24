@@ -1,6 +1,6 @@
 ---
 name: chunk-strategy-expert
-description: Fixed, recursive, semantic, proposition-based, document-aware chunking deep-dive
+description: Fixed, recursive, semantic, proposition-based, document-aware chunking deep-dive. Use when building or optimizing retrieval-augmented generation pipelines with chunk strategy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

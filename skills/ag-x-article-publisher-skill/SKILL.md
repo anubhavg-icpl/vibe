@@ -1,6 +1,6 @@
 ---
 name: x-article-publisher-skill
-description: "Publish articles to X/Twitter"
+description: Publish articles to X/Twitter. Use when you need help with x article publisher skill.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

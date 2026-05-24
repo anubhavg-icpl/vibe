@@ -1,6 +1,6 @@
 ---
 name: after-hours-editorial-template
-description: |
+description: |. Use when you need help with after hours editorial template.
   Luxury dark-editorial HyperFrames template for three-page cinematic storyboards,
   inspired by haute couture title cards and magazine chapter spreads. Use when the
   user asks for premium fashion-style motion pages, moody serif-led storytelling,

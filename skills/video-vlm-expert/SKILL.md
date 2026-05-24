@@ -1,6 +1,6 @@
 ---
 name: video-vlm-expert
-description: Video understanding with VLMs - Qwen2.5-VL video, Apollo, LLaVA-OneVision, frame sampling
+description: Video understanding with VLMs - Qwen2.5-VL video, Apollo, LLaVA-OneVision, frame sampling. Use when working with multimodal AI (images, audio, video) using video vlm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: arrow-expert
-description: Expert in Apache Arrow columnar format, Flight, Flight SQL, and ADBC
+description: Expert in Apache Arrow columnar format, Flight, Flight SQL, and ADBC. Use when working with arrow for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

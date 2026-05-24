@@ -1,6 +1,6 @@
 ---
 name: production-debugging
-description: Expert in debugging production issues with minimal impact
+description: Expert in debugging production issues with minimal impact. Use when diagnosing, troubleshooting, or fixing bugs with production debugging.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

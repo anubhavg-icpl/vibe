@@ -1,6 +1,6 @@
 ---
 name: fal-platform
-description: "Platform APIs for model management, pricing, and usage tracking"
+description: Platform APIs for model management, pricing, and usage tracking. Use when you need help with fal platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

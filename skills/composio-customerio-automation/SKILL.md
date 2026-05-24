@@ -1,6 +1,6 @@
 ---
 name: Customer.io Automation
-description: "Automate customer engagement workflows including broadcast triggers, message analytics, segment management, and newsletter tracking through Customer.io via Composio"
+description: Automate customer engagement workflows including broadcast triggers, message analytics, segment management, and newsletter tracking through Customer.io via Composio. Use when you need help with Customer.io Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

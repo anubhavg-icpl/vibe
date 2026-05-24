@@ -1,6 +1,6 @@
 ---
 name: postgresql-performance
-description: Expert in PostgreSQL performance optimization, indexing, query tuning, replication, connection pooling, and production best practices
+description: Expert in PostgreSQL performance optimization, indexing, query tuning, replication, connection pooling, and production best practices. Use when designing, querying, or optimizing postgresql databases.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

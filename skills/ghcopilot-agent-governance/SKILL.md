@@ -1,6 +1,6 @@
 ---
 name: agent-governance
-description: |
+description: |. Use when you need help with agent governance.
   Patterns and techniques for adding governance, safety, and trust controls to AI agent systems. Use this skill when:
   - Building AI agents that call external tools (APIs, databases, file systems)
   - Implementing policy-based access controls for agent tool usage

@@ -1,6 +1,6 @@
 ---
 name: content-creator
-description: "Professional-grade brand voice analysis, SEO optimization, and platform-specific content frameworks."
+description: Professional-grade brand voice analysis, SEO optimization, and platform-specific content frameworks. Use when you need help with content creator.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: marketing

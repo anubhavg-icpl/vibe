@@ -1,6 +1,6 @@
 ---
 name: misc
-description: misc
+description: misc. Use when you need help with misc.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

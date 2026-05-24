@@ -1,6 +1,6 @@
 ---
 name: dcf-valuation
-description: |
+description: |. Use when you need help with dcf valuation.
   Discounted cash flow valuation and intrinsic value analysis for public
   companies. Use when the brief asks for DCF, fair value, intrinsic value,
   price target, undervalued or overvalued analysis, or "what is this company

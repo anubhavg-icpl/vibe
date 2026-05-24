@@ -1,6 +1,6 @@
 ---
 name: trtllm-blackwell-advisor
-description: Decide whether Blackwell + TensorRT-LLM + Dynamo is worth the NVIDIA-lock for a given workload and budget.
+description: Decide whether Blackwell + TensorRT-LLM + Dynamo is worth the NVIDIA-lock for a given workload and budget. Use when you need help with trtllm blackwell advisor.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 07

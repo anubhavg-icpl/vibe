@@ -1,6 +1,6 @@
 ---
 name: youtube-transcript
-description: Fetch transcripts from YouTube videos for summarization and analysis.
+description: Fetch transcripts from YouTube videos for summarization and analysis. Use when you need help with youtube transcript.
 license: CC-BY-NC-SA-4.0
 ---
 

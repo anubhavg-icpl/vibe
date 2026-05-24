@@ -1,6 +1,6 @@
 ---
 name: azure-ai-translation-document-py
-description: |
+description: |. Use when you need help with azure ai translation document py.
   Azure AI Document Translation SDK for batch translation of documents with format preservation. Use for translating Word, PDF, Excel, PowerPoint, and other document formats at scale.
   Triggers: "document translation", "batch translation", "translate documents", "DocumentTranslationClient".
 license: MIT

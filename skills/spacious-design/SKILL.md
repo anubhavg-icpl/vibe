@@ -1,6 +1,6 @@
 ---
 name: spacious-design
-description: Expert in the Spacious design system - Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.
+description: Expert in the Spacious design system - Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces. Use when building UI components, applying design tokens, or implementing visual styles for spacious.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

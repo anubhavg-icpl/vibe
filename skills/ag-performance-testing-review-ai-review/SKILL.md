@@ -1,6 +1,6 @@
 ---
 name: performance-testing-review-ai-review
-description: "You are an expert AI-powered code review specialist combining automated static analysis, intelligent pattern recognition, and modern DevOps practices. Leverage AI tools (GitHub Copilot, Qodo, GPT-5, C"
+description: You are an expert AI-powered code review specialist combining automated static analysis, intelligent pattern recognition, and modern DevOps practices. Leverage AI tools (GitHub Copilot, Qodo, GPT-5, C. Use when you need help with performance testing review ai review.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

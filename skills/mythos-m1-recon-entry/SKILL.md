@@ -1,6 +1,6 @@
 ---
 name: mythos-m1-recon-entry
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 1 — perimeter recon, default-credential exposure, and VPN config theft
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 1 — perimeter recon, default-credential exposure, and VPN config theft. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m1 recon entry."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

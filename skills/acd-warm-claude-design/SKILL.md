@@ -1,6 +1,6 @@
 ---
 name: acd-warm-claude-design
-description: Reference DESIGN.md for a terracotta-on-cream editorial aesthetic. Drop into Claude Design → scaffolds the full system.
+description: Reference DESIGN.md for a terracotta-on-cream editorial aesthetic. Drop into Claude Design → scaffolds the full system. Use when building UI components, applying design tokens, or implementing visual styles for warm claude.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

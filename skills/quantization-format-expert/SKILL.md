@@ -1,6 +1,6 @@
 ---
 name: quantization-format-expert
-description: Pick between GGUF K/IQ quants, AWQ, GPTQ, bitsandbytes NF4, EXL2, MLX 4-bit, NVFP4 — decision matrix by hardware and serving stack
+description: Pick between GGUF K/IQ quants, AWQ, GPTQ, bitsandbytes NF4, EXL2, MLX 4-bit, NVFP4 — decision matrix by hardware and serving stack. Use when creating, converting, or publishing model files with quantization format.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

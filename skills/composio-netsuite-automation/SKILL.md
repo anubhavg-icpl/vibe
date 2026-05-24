@@ -1,6 +1,6 @@
 ---
 name: NetSuite Automation
-description: "NetSuite Automation: manage customers, sales orders, invoices, inventory, and records via Oracle NetSuite ERP with SuiteQL queries"
+description: NetSuite Automation: manage customers, sales orders, invoices, inventory, and records via Oracle NetSuite ERP with SuiteQL queries. Use when you need help with NetSuite Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

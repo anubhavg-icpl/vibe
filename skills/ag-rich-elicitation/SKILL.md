@@ -1,6 +1,6 @@
 ---
 name: rich-elicitation
-description: "Asks clarifying questions in multiple rounds before starting ambiguous tasks. Fires when 2+ task dimensions each have 3+ viable answers."
+description: Asks clarifying questions in multiple rounds before starting ambiguous tasks. Fires when 2+ task dimensions each have 3+ viable answers. Use when you need help with rich elicitation.
 license: CC-BY-NC-SA-4.0
 source_type: self
 author: abubakar

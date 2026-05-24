@@ -1,6 +1,6 @@
 ---
 name: skill-scanner
-description: "Scan agent skills for security issues before adoption. Detects prompt injection, malicious code, excessive permissions, secret exposure, and supply chain risks."
+description: Scan agent skills for security issues before adoption. Detects prompt injection, malicious code, excessive permissions, secret exposure, and supply chain risks. Use when you need help with skill scanner.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

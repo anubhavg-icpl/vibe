@@ -1,6 +1,6 @@
 ---
 name: sim2real-planner
-description: Plan a sim-to-real transfer pipeline for a given robot + task, covering DR, SI, and safety.
+description: Plan a sim-to-real transfer pipeline for a given robot + task, covering DR, SI, and safety. Use when you need help with sim2real planner.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 11

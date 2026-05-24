@@ -1,6 +1,6 @@
 ---
 name: android-create-template-expert
-description: Expert in `android create` — scaffolding new Android projects from official templates with `--dry-run`, `--name`, `--output`
+description: Expert in `android create` — scaffolding new Android projects from official templates with `--dry-run`, `--name`, `--output`. Use when using Android CLI tools for android create template.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

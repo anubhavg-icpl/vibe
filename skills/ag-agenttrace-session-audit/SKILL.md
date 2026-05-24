@@ -1,6 +1,6 @@
 ---
 name: agenttrace-session-audit
-description: "Audit local AI coding-agent sessions with agenttrace for cost, tool failures, latency, anomalies, health, diffs, and CI gates."
+description: Audit local AI coding-agent sessions with agenttrace for cost, tool failures, latency, anomalies, health, diffs, and CI gates. Use when you need help with agenttrace session audit.
 source_repo: luoyuctl/agenttrace
 source_type: community
 author: luoyuctl

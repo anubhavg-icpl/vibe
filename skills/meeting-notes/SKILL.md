@@ -1,6 +1,6 @@
 ---
 name: meeting-notes
-description: |
+description: |. Use when you need help with meeting notes.
   Meeting notes page — title bar with attendees, agenda checklist, decisions
   block, action items table with owners + dates, and a "next meeting" footer.
   Use when the brief mentions "meeting notes", "minutes", "1:1 notes",

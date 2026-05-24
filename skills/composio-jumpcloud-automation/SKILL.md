@@ -1,6 +1,6 @@
 ---
 name: jumpcloud-automation
-description: "Automate Jumpcloud tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Jumpcloud tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with jumpcloud automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

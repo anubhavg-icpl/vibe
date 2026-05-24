@@ -1,6 +1,6 @@
 ---
 name: apify-lead-generation
-description: "Scrape leads from multiple platforms using Apify Actors."
+description: Scrape leads from multiple platforms using Apify Actors. Use when you need help with apify lead generation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

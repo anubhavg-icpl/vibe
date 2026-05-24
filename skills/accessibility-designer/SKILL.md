@@ -1,6 +1,6 @@
 ---
 name: accessibility-designer
-description: accessibility-designer
+description: accessibility-designer. Use when you need help with accessibility designer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

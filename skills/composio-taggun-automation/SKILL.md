@@ -1,6 +1,6 @@
 ---
 name: taggun-automation
-description: "Automate Taggun tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Taggun tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with taggun automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

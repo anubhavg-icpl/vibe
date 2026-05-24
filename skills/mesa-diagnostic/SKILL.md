@@ -1,6 +1,6 @@
 ---
 name: mesa-diagnostic
-description: Classify an observed safety failure as outer-alignment, proxy-inner, or deceptive-inner.
+description: Classify an observed safety failure as outer-alignment, proxy-inner, or deceptive-inner. Use when you need help with mesa diagnostic.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 6

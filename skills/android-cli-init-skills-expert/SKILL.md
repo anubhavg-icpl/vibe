@@ -1,6 +1,6 @@
 ---
 name: android-cli-init-skills-expert
-description: Expert in `android init` and the skill-system bootstrap — why an agent must run init first, what the android-cli skill installs
+description: Expert in `android init` and the skill-system bootstrap — why an agent must run init first, what the android-cli skill installs. Use when using Android CLI tools for android cli init skills.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

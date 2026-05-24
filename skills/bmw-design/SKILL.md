@@ -1,6 +1,6 @@
 ---
 name: bmw-design
-description: Expert in the BMW design system - Luxury automotive. Dark premium surfaces, precise German engineering aesthetic.
+description: Expert in the BMW design system - Luxury automotive. Dark premium surfaces, precise German engineering aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for bmw.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

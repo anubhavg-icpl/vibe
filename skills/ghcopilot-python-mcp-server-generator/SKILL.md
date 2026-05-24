@@ -1,6 +1,6 @@
 ---
 name: python-mcp-server-generator
-description: 'Generate a complete MCP server project in Python with tools, resources, and proper configuration'
+description: Generate a complete MCP server project in Python with tools, resources, and proper configuration. Use when you need help with python mcp server generator.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: design-md
-description: "Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files"
+description: Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files. Use when you need help with design md.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

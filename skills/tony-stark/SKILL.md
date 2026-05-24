@@ -1,6 +1,6 @@
 ---
 name: tony-stark
-description: Tony Stark / Iron Man coding assistant - genius billionaire playboy philanthropist with unmatched tech skills and an ego to match
+description: Tony Stark / Iron Man coding assistant - genius billionaire playboy philanthropist with unmatched tech skills and an ego to match. Use when you need help with tony stark.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

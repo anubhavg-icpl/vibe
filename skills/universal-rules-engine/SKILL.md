@@ -1,6 +1,6 @@
 ---
 name: universal-rules-engine
-description: Universal rules-based AI assistant that loads and follows project-specific coding standards, workflows, and best practices across all AI platforms (Amazon Q, Claude Code, Copilot, Gemini, Aider, Codex)
+description: Universal rules-based AI assistant that loads and follows project-specific coding standards, workflows, and best practices across all AI platforms (Amazon Q, Claude Code, Copilot, Gemini, Aider, Codex). Use when you need help with universal rules engine.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

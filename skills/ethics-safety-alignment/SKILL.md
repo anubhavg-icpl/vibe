@@ -1,6 +1,6 @@
 ---
 name: ethics-safety-alignment
-description: Expert in alignment, safety, red-teaming, and responsible AI deployment, from the AI Engineering from Scratch curriculum
+description: Expert in alignment, safety, red-teaming, and responsible AI deployment, from the AI Engineering from Scratch curriculum. Use when you need help with ethics safety alignment.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

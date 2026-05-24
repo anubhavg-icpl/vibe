@@ -1,6 +1,6 @@
 ---
 name: recursive-context-pruning-token-budgeting
-description: "Optimizes AI agent performance by pruning redundant context, managing token usage, and enforcing ultra-concise, direct-to-value responses."
+description: Optimizes AI agent performance by pruning redundant context, managing token usage, and enforcing ultra-concise, direct-to-value responses. Use when you need help with recursive context pruning token budgeting.
 license: CC-BY-NC-SA-4.0
 source_repo: Kench001/antigravity-awesome-skills
 source_type: self

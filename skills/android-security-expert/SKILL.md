@@ -1,6 +1,6 @@
 ---
 name: android-security-expert
-description: Play Integrity, BiometricPrompt, KeyStore + key attestation, Credential Manager, Network Security Config, and Encrypted DataStore
+description: Play Integrity, BiometricPrompt, KeyStore + key attestation, Credential Manager, Network Security Config, and Encrypted DataStore. Use when developing Android apps with android security.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

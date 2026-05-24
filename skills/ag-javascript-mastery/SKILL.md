@@ -1,6 +1,6 @@
 ---
 name: javascript-mastery
-description: "33+ essential JavaScript concepts every developer should know, inspired by [33-js-concepts](https://github.com/leonardomso/33-js-concepts)."
+description: 33+ essential JavaScript concepts every developer should know, inspired by [33-js-concepts](https://github.com/leonardomso/33-js-concepts). Use when you need help with javascript mastery.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

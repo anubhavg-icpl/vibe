@@ -1,6 +1,6 @@
 ---
 name: "caio-review"
-description: "/cs:caio-review <plan> — Eval-demanding Chief AI Officer interrogation of any plan that involves AI: model selection, risk classification, cost economics, or AI hiring."
+description: /cs:caio-review <plan> — Eval-demanding Chief AI Officer interrogation of any plan that involves AI: model selection, risk classification, cost economics, or AI hiring. Use when you need help with caio review.
 license: CC-BY-NC-SA-4.0
 ---
 

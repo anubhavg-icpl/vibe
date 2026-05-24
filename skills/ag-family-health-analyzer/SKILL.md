@@ -1,6 +1,6 @@
 ---
 name: family-health-analyzer
-description: 分析家族病史、评估遗传风险、识别家庭健康模式、提供个性化预防建议
+description: 分析家族病史、评估遗传风险、识别家庭健康模式、提供个性化预防建议. Use when you need help with family health analyzer.
 license: CC-BY-NC-SA-4.0
 allowed-tools: Read, Write, Grep, Glob
 metadata:

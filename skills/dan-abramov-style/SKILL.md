@@ -1,6 +1,6 @@
 ---
 name: dan-abramov-style
-description: Dan Abramov — React, Redux, RSC; thoughtful API design, mental models over rules, "Just JavaScript
+description: "Dan Abramov — React, Redux, RSC; thoughtful API design, mental models over rules, \"Just JavaScript. Use when you want code review, architecture advice, or opinions in the style of dan abramov."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

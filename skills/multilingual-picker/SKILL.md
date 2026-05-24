@@ -1,6 +1,6 @@
 ---
 name: multilingual-picker
-description: Pick source language, target model, and evaluation plan for a multilingual NLP task.
+description: Pick source language, target model, and evaluation plan for a multilingual NLP task. Use when you need help with multilingual picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 18

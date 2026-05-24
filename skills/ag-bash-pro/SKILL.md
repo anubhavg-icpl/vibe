@@ -1,6 +1,6 @@
 ---
 name: bash-pro
-description: 'Master of defensive Bash scripting for production automation, CI/CD
+description: "'Master of defensive Bash scripting for production automation, CI/CD. Use when you need help with bash pro."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: scroll-experience
-description: Expert in building immersive scroll-driven experiences - parallax
+description: Expert in building immersive scroll-driven experiences - parallax. Use when you need help with scroll experience.
   storytelling, scroll animations, interactive narratives, and cinematic web
   experiences. Like NY Times interactives, Apple product pages, and
   award-winning web experiences.

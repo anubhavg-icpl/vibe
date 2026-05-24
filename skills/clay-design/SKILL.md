@@ -1,6 +1,6 @@
 ---
 name: clay-design
-description: Expert in the Clay design system - Creative agency. Organic shapes, soft gradients, art-directed layout.
+description: Expert in the Clay design system - Creative agency. Organic shapes, soft gradients, art-directed layout. Use when building UI components, applying design tokens, or implementing visual styles for clay.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

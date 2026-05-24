@@ -1,6 +1,6 @@
 ---
 name: prefect-expert
-description: Expert in Prefect 3 flows, deployments, work pools, and workers
+description: Expert in Prefect 3 flows, deployments, work pools, and workers. Use when working with prefect for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: otel-genai
-description: Instrument an agent with OpenTelemetry GenAI semantic conventions — invoke_agent, chat, tool_call spans with correct attributes and opt-in content capture.
+description: Instrument an agent with OpenTelemetry GenAI semantic conventions — invoke_agent, chat, tool_call spans with correct attributes and opt-in content capture. Use when you need help with otel genai.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 23

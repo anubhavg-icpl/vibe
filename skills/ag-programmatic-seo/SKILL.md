@@ -1,6 +1,6 @@
 ---
 name: programmatic-seo
-description: Design and evaluate programmatic SEO strategies for creating SEO-driven pages at scale using templates and structured data.
+description: Design and evaluate programmatic SEO strategies for creating SEO-driven pages at scale using templates and structured data. Use when you need help with programmatic seo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

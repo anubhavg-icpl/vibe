@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-capsule
-description: |
+description: |. Use when you need help with html ppt zhangzara capsule.
   Capsule — Modular pill-shaped cards on warm bone with a full pastel-pop palette. Anything that should feel modular, modern, and a little Y2K: lifestyle brands, creator portfolios, DTC launches, beauty / wellness, agency credentials.
 license: CC-BY-NC-SA-4.0
 triggers: 

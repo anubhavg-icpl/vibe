@@ -1,6 +1,6 @@
 ---
 name: mythos-kernel-privesc
-description: Linux kernel privilege escalation and exploit chaining for authorized testing
+description: Linux kernel privilege escalation and exploit chaining for authorized testing. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving kernel privesc.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

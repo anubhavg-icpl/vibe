@@ -1,6 +1,6 @@
 ---
 name: mythos-fuzzing-strategist
-description: Choose the right fuzzer, build a custom harness, design a corpus, and know when fuzzing will not help
+description: Choose the right fuzzer, build a custom harness, design a corpus, and know when fuzzing will not help. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving fuzzing strategist.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

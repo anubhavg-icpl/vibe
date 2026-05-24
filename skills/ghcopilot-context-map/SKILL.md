@@ -1,6 +1,6 @@
 ---
 name: context-map
-description: 'Generate a map of all files relevant to a task before making changes'
+description: Generate a map of all files relevant to a task before making changes. Use when you need help with context map.
 license: CC-BY-NC-SA-4.0
 ---
 

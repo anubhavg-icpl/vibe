@@ -1,6 +1,6 @@
 ---
 name: conductor-implement
-description: "Execute tasks from a track's implementation plan following TDD workflow"
+description: "Execute tasks from a track's implementation plan following TDD workflow. Use when you need help with conductor implement."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

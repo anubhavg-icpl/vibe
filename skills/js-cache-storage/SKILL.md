@@ -1,6 +1,6 @@
 ---
 name: js-cache-storage
-description: Cache Storage API Calls
+description: Cache Storage API Calls. Use when you need help with js cache storage.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

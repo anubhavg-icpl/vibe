@@ -1,6 +1,6 @@
 ---
 name: torvalds-style
-description: Linus Torvalds — taste, no special cases, brutal directness, "talk is cheap, show me the code
+description: "Linus Torvalds — taste, no special cases, brutal directness, \"talk is cheap, show me the code. Use when you want code review, architecture advice, or opinions in the style of torvalds."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

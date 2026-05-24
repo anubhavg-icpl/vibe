@@ -1,6 +1,6 @@
 ---
 name: atomise
-description: "Atom of Thoughts (AoT) reasoning - decompose complex problems into atomic units with confidence tracking and backtracking. For genuinely complex reasoning, not everyday questions. Triggers on: atomise, complex reasoning, decompose problem, structured thinking, verify hypothesis."
+description: Atom of Thoughts (AoT) reasoning - decompose complex problems into atomic units with confidence tracking and backtracking. For genuinely complex reasoning, not everyday questions. Triggers on: atomise, complex reasoning, decompose problem, structured thinking, verify hypothesis. Use when you need help with atomise.
 license: MIT
 compatibility: "Pure reasoning framework, no external dependencies."
 allowed-tools: "Read"

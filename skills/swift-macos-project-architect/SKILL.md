@@ -1,6 +1,6 @@
 ---
 name: swift-macos-project-architect
-description: Production-ready macOS Swift project structure architect - validates and scaffolds enterprise-grade macOS apps with SwiftUI, AppKit, and Xcode best practices
+description: Production-ready macOS Swift project structure architect - validates and scaffolds enterprise-grade macOS apps with SwiftUI, AppKit, and Xcode best practices. Use when scaffolding, structuring, or architecting swift macos projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

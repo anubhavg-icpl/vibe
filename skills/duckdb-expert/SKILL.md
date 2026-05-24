@@ -1,6 +1,6 @@
 ---
 name: duckdb-expert
-description: Expert in DuckDB embedded analytics, extensions, and persistent storage
+description: Expert in DuckDB embedded analytics, extensions, and persistent storage. Use when working with duckdb for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

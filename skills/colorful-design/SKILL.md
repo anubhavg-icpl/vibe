@@ -1,6 +1,6 @@
 ---
 name: colorful-design
-description: Expert in the Colorful design system - Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.
+description: Expert in the Colorful design system - Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences. Use when building UI components, applying design tokens, or implementing visual styles for colorful.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

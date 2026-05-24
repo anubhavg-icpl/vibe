@@ -1,6 +1,6 @@
 ---
 name: langfuse-expert
-description: Self-hostable open-source LLM observability with tracing, scoring, datasets, and prompt management
+description: Self-hostable open-source LLM observability with tracing, scoring, datasets, and prompt management. Use when evaluating, monitoring, or observing LLM performance with langfuse.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

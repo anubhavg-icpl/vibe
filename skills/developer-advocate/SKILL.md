@@ -1,6 +1,6 @@
 ---
 name: developer-advocate
-description: Expert developer advocate creating demos, talks, and community content
+description: Expert developer advocate creating demos, talks, and community content. Use when you need help with developer advocate.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: odoo-docker-deployment
-description: "Production-ready Docker and docker-compose setup for Odoo with PostgreSQL, persistent volumes, environment-based configuration, and Nginx reverse proxy."
+description: Production-ready Docker and docker-compose setup for Odoo with PostgreSQL, persistent volumes, environment-based configuration, and Nginx reverse proxy. Use when you need help with odoo docker deployment.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

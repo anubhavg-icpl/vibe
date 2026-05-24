@@ -1,6 +1,6 @@
 ---
 name: agent-orchestration-improve-agent
-description: "Systematic improvement of existing agents through performance analysis, prompt engineering, and continuous iteration."
+description: Systematic improvement of existing agents through performance analysis, prompt engineering, and continuous iteration. Use when you need help with agent orchestration improve agent.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

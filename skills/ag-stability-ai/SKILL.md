@@ -1,6 +1,6 @@
 ---
 name: stability-ai
-description: Geracao de imagens via Stability AI (SD3.5, Ultra, Core). Text-to-image, img2img, inpainting, upscale, remove-bg, search-replace. 15 estilos artisticos.
+description: Geracao de imagens via Stability AI (SD3.5, Ultra, Core). Text-to-image, img2img, inpainting, upscale, remove-bg, search-replace. 15 estilos artisticos. Use when you need help with stability ai.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: safe
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # Stability AI — Gerador de Imagens Profissional

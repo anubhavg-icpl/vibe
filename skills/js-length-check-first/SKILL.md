@@ -1,6 +1,6 @@
 ---
 name: js-length-check-first
-description: Early Length Check for Array Comparisons
+description: Early Length Check for Array Comparisons. Use when you need help with js length check first.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

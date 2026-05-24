@@ -1,6 +1,6 @@
 ---
 name: python-project-architect
-description: Production-ready Python project structure architect - validates and scaffolds enterprise-grade Python packages with src layout and modern tooling
+description: Production-ready Python project structure architect - validates and scaffolds enterprise-grade Python packages with src layout and modern tooling. Use when scaffolding, structuring, or architecting python projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

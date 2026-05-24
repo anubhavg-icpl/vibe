@@ -1,6 +1,6 @@
 ---
 name: frontend-mobile-development-component-scaffold
-description: "You are a React component architecture expert specializing in scaffolding production-ready, accessible, and performant components. Generate complete component implementations with TypeScript, tests, s"
+description: You are a React component architecture expert specializing in scaffolding production-ready, accessible, and performant components. Generate complete component implementations with TypeScript, tests, s. Use when you need help with frontend mobile development component scaffold.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

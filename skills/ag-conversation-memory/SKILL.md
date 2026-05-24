@@ -1,6 +1,6 @@
 ---
 name: conversation-memory
-description: Persistent memory systems for LLM conversations including
+description: Persistent memory systems for LLM conversations including. Use when you need help with conversation memory.
   short-term, long-term, and entity-based memory
 license: CC-BY-NC-SA-4.0
 metadata:

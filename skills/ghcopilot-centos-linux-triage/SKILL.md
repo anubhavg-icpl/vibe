@@ -1,6 +1,6 @@
 ---
 name: centos-linux-triage
-description: 'Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld.'
+description: Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld. Use when you need help with centos linux triage.
 license: CC-BY-NC-SA-4.0
 ---
 

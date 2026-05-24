@@ -1,6 +1,6 @@
 ---
 name: pi-coding-agent-expert
-description: Using pi-coding-agent and its cross-tool skill format with Claude Code, Codex CLI, Amp, and Droid
+description: Using pi-coding-agent and its cross-tool skill format with Claude Code, Codex CLI, Amp, and Droid. Use when working with pi.dev coding agent features.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

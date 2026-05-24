@@ -1,6 +1,6 @@
 ---
 name: vercel-edge-expert
-description: Expert in Vercel Functions, Fluid compute, ISR, and Image Optimization
+description: Expert in Vercel Functions, Fluid compute, ISR, and Image Optimization. Use when deploying to or building on vercel edge edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

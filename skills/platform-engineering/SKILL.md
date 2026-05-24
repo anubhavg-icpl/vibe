@@ -1,6 +1,6 @@
 ---
 name: platform-engineering
-description: Expert in Platform Engineering and Internal Developer Platforms (IDPs)
+description: Expert in Platform Engineering and Internal Developer Platforms (IDPs). Use when automating CI/CD, deployments, or operations with platform engineering.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

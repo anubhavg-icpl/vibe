@@ -1,6 +1,6 @@
 ---
 name: js-early-exit
-description: Early Return from Functions
+description: Early Return from Functions. Use when you need help with js early exit.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

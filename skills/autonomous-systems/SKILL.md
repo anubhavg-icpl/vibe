@@ -1,6 +1,6 @@
 ---
 name: autonomous-systems
-description: Expert in long-horizon, self-improving AI agents that run safely without human intervention, from the AI Engineering from Scratch curriculum
+description: Expert in long-horizon, self-improving AI agents that run safely without human intervention, from the AI Engineering from Scratch curriculum. Use when you need help with autonomous systems.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

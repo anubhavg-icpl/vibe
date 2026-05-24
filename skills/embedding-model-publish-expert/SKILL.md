@@ -1,6 +1,6 @@
 ---
 name: embedding-model-publish-expert
-description: Publish embedding models — sentence-transformers config, modules.json, 1_Pooling, MTEB submission, Matryoshka dims, embedding-specific model card
+description: Publish embedding models — sentence-transformers config, modules.json, 1_Pooling, MTEB submission, Matryoshka dims, embedding-specific model card. Use when creating, converting, or publishing model files with embedding model publish.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

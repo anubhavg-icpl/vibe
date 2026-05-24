@@ -1,6 +1,6 @@
 ---
 name: compose-performance-expert
-description: Recomposition discipline, stability, Strong Skipping, derivedStateOf, baseline profiles, and Layout Inspector for production Compose apps
+description: Recomposition discipline, stability, Strong Skipping, derivedStateOf, baseline profiles, and Layout Inspector for production Compose apps. Use when developing Android apps with compose performance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

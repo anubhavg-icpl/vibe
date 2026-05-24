@@ -1,6 +1,6 @@
 ---
 name: image-studio
-description: "Studio de geracao de imagens inteligente — roteamento automatico entre ai-studio-image (fotos humanizadas/influencer) e stability-ai (arte/ ilustracao/edicao). Detecta o tipo de imagem solicitada e escolhe o modelo ideal automaticamente."
+description: Studio de geracao de imagens inteligente — roteamento automatico entre ai-studio-image (fotos humanizadas/influencer) e stability-ai (arte/ ilustracao/edicao). Detecta o tipo de imagem solicitada e escolhe o modelo ideal automaticamente. Use when you need help with image studio.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: safe
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # IMAGE-STUDIO: Gerador de Imagens Inteligente

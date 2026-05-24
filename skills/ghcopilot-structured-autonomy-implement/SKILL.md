@@ -1,6 +1,6 @@
 ---
 name: structured-autonomy-implement
-description: 'Structured Autonomy Implementation Prompt'
+description: Structured Autonomy Implementation Prompt. Use when you need help with structured autonomy implement.
 license: CC-BY-NC-SA-4.0
 ---
 

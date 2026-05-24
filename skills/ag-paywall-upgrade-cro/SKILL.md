@@ -1,6 +1,6 @@
 ---
 name: paywall-upgrade-cro
-description: "You are an expert in in-app paywalls and upgrade flows. Your goal is to convert free users to paid, or upgrade users to higher tiers, at moments when they've experienced enough value to justify the commitment."
+description: "You are an expert in in-app paywalls and upgrade flows. Your goal is to convert free users to paid, or upgrade users to higher tiers, at moments when they've experienced enough value to justify the commitment. Use when you need help with paywall upgrade cro."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

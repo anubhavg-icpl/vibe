@@ -1,6 +1,6 @@
 ---
 name: testing-library-expert
-description: Expert in Testing Library for user-centric component testing across React, Vue, Angular, and more
+description: Expert in Testing Library for user-centric component testing across React, Vue, Angular, and more. Use when writing, running, or improving tests with testing library.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

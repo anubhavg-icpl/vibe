@@ -1,6 +1,6 @@
 ---
 name: langfuse
-description: Expert in Langfuse - the open-source LLM observability platform.
+description: Expert in Langfuse - the open-source LLM observability platform. Use when you need help with langfuse.
   Covers tracing, prompt management, evaluation, datasets, and integration with
   LangChain, LlamaIndex, and OpenAI. Essential for debugging, monitoring, and
   improving LLM applications in production.

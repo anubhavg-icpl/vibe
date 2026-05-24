@@ -1,6 +1,6 @@
 ---
 name: Hunter Automation
-description: "Automate Hunter.io email intelligence -- search domains for email addresses, find specific contacts, verify email deliverability, manage leads, and monitor account usage -- using natural language through the Composio MCP integration."
+description: Automate Hunter.io email intelligence -- search domains for email addresses, find specific contacts, verify email deliverability, manage leads, and monitor account usage -- using natural language through the Composio MCP integration. Use when you need help with Hunter Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

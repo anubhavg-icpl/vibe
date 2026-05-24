@@ -1,6 +1,6 @@
 ---
 name: netflix-chaos-suite
-description: Expert in Netflix's Simian Army - Chaos Monkey, Chaos Gorilla, Chaos Kong, and ChAP
+description: "Expert in Netflix's Simian Army - Chaos Monkey, Chaos Gorilla, Chaos Kong, and ChAP. Use when writing, running, or improving tests with netflix chaos suite."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

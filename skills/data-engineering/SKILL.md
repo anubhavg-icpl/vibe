@@ -1,6 +1,6 @@
 ---
 name: data-engineering
-description: Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation
+description: Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation. Use when you need help with data engineering.
 license: CC-BY-NC-SA-4.0
 ---
 

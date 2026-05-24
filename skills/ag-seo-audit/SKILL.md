@@ -1,6 +1,6 @@
 ---
 name: seo-audit
-description: Diagnose and audit SEO issues affecting crawlability, indexation, rankings, and organic performance.
+description: Diagnose and audit SEO issues affecting crawlability, indexation, rankings, and organic performance. Use when you need help with seo audit.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: multimodal-rag-designer
-description: Design a production multimodal RAG across text, images, audio, video with retrievers, fusion strategy, and grounded generator.
+description: Design a production multimodal RAG across text, images, audio, video with retrievers, fusion strategy, and grounded generator. Use when you need help with multimodal rag designer.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 24

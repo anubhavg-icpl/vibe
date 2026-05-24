@@ -1,6 +1,6 @@
 ---
 name: supervisor-designer
-description: Design a supervisor/orchestrator-worker system for a given research-style query, specifying lead prompt, worker roles, decomposition rules, and synthesis template.
+description: Design a supervisor/orchestrator-worker system for a given research-style query, specifying lead prompt, worker roles, decomposition rules, and synthesis template. Use when you need help with supervisor designer.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 05

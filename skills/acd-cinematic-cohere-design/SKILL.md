@@ -1,6 +1,6 @@
 ---
 name: acd-cinematic-cohere-design
-description: Reference DESIGN.md for enterprise-AI brands that need to feel premium, dark, and quietly futuristic. Ink canvas, Unica grotesque type, saturated coral-to-violet brand gradient deployed as backdrop and accent rule, full-pill buttons, gen...
+description: Reference DESIGN.md for enterprise-AI brands that need to feel premium, dark, and quietly futuristic. Ink canvas, Unica grotesque type, saturated coral-to-violet brand gradient deployed as backdrop and accent rule, full-pill buttons, gen. Use when building UI components, applying design tokens, or implementing visual styles for cinematic cohere.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

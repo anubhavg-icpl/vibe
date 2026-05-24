@@ -1,6 +1,6 @@
 ---
 name: fsharp-expert
-description: Expert F# development with functional-first programming on .NET
+description: Expert F# development with functional-first programming on .NET. Use when writing, reviewing, or refactoring fsharp code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: coinbase-design
-description: Expert in the Coinbase design system - Crypto exchange. Clean blue identity, trust-focused, institutional feel.
+description: Expert in the Coinbase design system - Crypto exchange. Clean blue identity, trust-focused, institutional feel. Use when building UI components, applying design tokens, or implementing visual styles for coinbase.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

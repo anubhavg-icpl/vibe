@@ -1,6 +1,6 @@
 ---
 name: issue-to-pr
-description: Build an async GitHub issue-to-PR agent that runs in a cloud sandbox, reproduces the build, verifies tests, and opens review-ready PRs within strict per-repo budgets.
+description: Build an async GitHub issue-to-PR agent that runs in a cloud sandbox, reproduces the build, verifies tests, and opens review-ready PRs within strict per-repo budgets. Use when you need help with issue to pr.
 license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 16

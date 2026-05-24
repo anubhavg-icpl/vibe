@@ -1,6 +1,6 @@
 ---
 name: domain-driven-design
-description: "Plan and route Domain-Driven Design work from strategic modeling to tactical implementation and evented architecture patterns."
+description: Plan and route Domain-Driven Design work from strategic modeling to tactical implementation and evented architecture patterns. Use when building UI with domain driven design language and visual style.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

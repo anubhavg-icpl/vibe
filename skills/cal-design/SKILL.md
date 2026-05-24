@@ -1,6 +1,6 @@
 ---
 name: cal-design
-description: Expert in the Cal.com design system - Open-source scheduling. Clean neutral UI, developer-oriented simplicity.
+description: Expert in the Cal.com design system - Open-source scheduling. Clean neutral UI, developer-oriented simplicity. Use when building UI components, applying design tokens, or implementing visual styles for cal.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

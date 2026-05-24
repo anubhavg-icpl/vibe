@@ -1,6 +1,6 @@
 ---
 name: gmail-automation
-description: "Lightweight Gmail integration with standalone OAuth authentication. No MCP server required."
+description: Lightweight Gmail integration with standalone OAuth authentication. No MCP server required. Use when you need help with gmail automation.
 license: Apache-2.0
 metadata:
   author: sanjay3290

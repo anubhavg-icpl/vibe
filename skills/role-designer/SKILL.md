@@ -1,6 +1,6 @@
 ---
 name: role-designer
-description: Produce a role roster for a multi-agent system, naming the planner/executor/critic/verifier for a given task with explicit I/O schemas.
+description: Produce a role roster for a multi-agent system, naming the planner/executor/critic/verifier for a given task with explicit I/O schemas. Use when you need help with role designer.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 08

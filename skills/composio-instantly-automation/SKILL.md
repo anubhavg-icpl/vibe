@@ -1,6 +1,6 @@
 ---
 name: Instantly Automation
-description: "Automate Instantly cold email outreach -- manage campaigns, sending accounts, lead lists, bulk lead imports, and campaign analytics -- using natural language through the Composio MCP integration."
+description: Automate Instantly cold email outreach -- manage campaigns, sending accounts, lead lists, bulk lead imports, and campaign analytics -- using natural language through the Composio MCP integration. Use when you need help with Instantly Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

@@ -1,6 +1,6 @@
 ---
 name: cafe-design
-description: Expert in the Cafe design system - Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.
+description: Expert in the Cafe design system - Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience. Use when building UI components, applying design tokens, or implementing visual styles for cafe.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

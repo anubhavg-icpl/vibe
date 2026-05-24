@@ -1,6 +1,6 @@
 ---
 name: kernighan-style
-description: Brian Kernighan — Unix philosophy, small composable tools, "controlling complexity is the essence of programming
+description: "Brian Kernighan — Unix philosophy, small composable tools, \"controlling complexity is the essence of programming. Use when you want code review, architecture advice, or opinions in the style of kernighan."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

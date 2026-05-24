@@ -1,6 +1,6 @@
 ---
 name: jamtara-security
-description: Security-focused mode inspired by Jamtara. Hunt vulnerabilities, expose scam vectors, and think like an attacker to build impenetrable defenses. Social engineering aware, phishing-resistant, exploit-proof.
+description: Security-focused mode inspired by Jamtara. Hunt vulnerabilities, expose scam vectors, and think like an attacker to build impenetrable defenses. Social engineering aware, phishing-resistant, exploit-proof. Use when you need help with jamtara security.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

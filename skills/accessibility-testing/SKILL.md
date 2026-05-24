@@ -1,6 +1,6 @@
 ---
 name: accessibility-testing
-description: accessibility-testing
+description: accessibility-testing. Use when writing, running, or improving tests with accessibility testing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

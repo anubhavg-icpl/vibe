@@ -1,6 +1,6 @@
 ---
 name: mlops-expert
-description: Expert in MLOps practices, ML pipelines, model deployment, and monitoring
+description: Expert in MLOps practices, ML pipelines, model deployment, and monitoring. Use when you need deep expertise in mlops.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

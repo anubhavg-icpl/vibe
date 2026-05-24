@@ -1,6 +1,6 @@
 ---
 name: power-bi-expert
-description: power-bi-expert
+description: power-bi-expert. Use when you need deep expertise in power bi.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

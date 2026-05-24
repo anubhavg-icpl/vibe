@@ -1,6 +1,6 @@
 ---
 name: ios-debugger-agent
-description: Debug the current iOS project on a booted simulator with XcodeBuildMCP.
+description: Debug the current iOS project on a booted simulator with XcodeBuildMCP. Use when you need help with ios debugger agent.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: energy-procurement
-description: Codified expertise for electricity and gas procurement, tariff optimisation, demand charge management, renewable PPA evaluation, and multi-facility energy cost management.
+description: Codified expertise for electricity and gas procurement, tariff optimisation, demand charge management, renewable PPA evaluation, and multi-facility energy cost management. Use when you need help with energy procurement.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: molykit
-description: |
+description: |. Use when you need help with molykit.
   CRITICAL: Use for MolyKit AI chat toolkit. Triggers on:
   BotClient, OpenAI, SSE streaming, AI chat, molykit,
   PlatformSend, spawn(), ThreadToken, cross-platform async,

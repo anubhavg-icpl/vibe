@@ -1,6 +1,6 @@
 ---
 name: agent-tool-builder
-description: Tools are how AI agents interact with the world. A well-designed
+description: Tools are how AI agents interact with the world. A well-designed. Use when you need help with agent tool builder.
   tool is the difference between an agent that works and one that hallucinates,
   fails silently, or costs 10x more tokens than necessary. This skill covers
   tool design from schema to error handling.

@@ -1,6 +1,6 @@
 ---
 name: tetris-design
-description: Expert in the Tetris design system - Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.
+description: Expert in the Tetris design system - Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts. Use when building UI components, applying design tokens, or implementing visual styles for tetris.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

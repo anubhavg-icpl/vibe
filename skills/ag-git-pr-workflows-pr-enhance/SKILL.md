@@ -1,6 +1,6 @@
 ---
 name: git-pr-workflows-pr-enhance
-description: "You are a PR optimization expert specializing in creating high-quality pull requests that facilitate efficient code reviews. Generate comprehensive PR descriptions, automate review processes, and ensu"
+description: You are a PR optimization expert specializing in creating high-quality pull requests that facilitate efficient code reviews. Generate comprehensive PR descriptions, automate review processes, and ensu. Use when you need help with git pr workflows pr enhance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

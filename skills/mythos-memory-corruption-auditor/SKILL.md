@@ -1,6 +1,6 @@
 ---
 name: mythos-memory-corruption-auditor
-description: Sanitizer-aware audit of unsafe C/C++/Rust for buffer overflows, UAF, double-free, type confusion, modeled on Claude Mythos Preview
+description: Sanitizer-aware audit of unsafe C/C++/Rust for buffer overflows, UAF, double-free, type confusion, modeled on Claude Mythos Preview. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving memory corruption auditor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

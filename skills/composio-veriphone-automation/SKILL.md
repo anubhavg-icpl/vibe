@@ -1,6 +1,6 @@
 ---
 name: veriphone-automation
-description: "Automate Veriphone tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Veriphone tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with veriphone automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

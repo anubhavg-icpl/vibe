@@ -1,6 +1,6 @@
 ---
 name: context-degradation
-description: "Language models exhibit predictable degradation patterns as context length increases. Understanding these patterns is essential for diagnosing failures and designing resilient systems."
+description: Language models exhibit predictable degradation patterns as context length increases. Understanding these patterns is essential for diagnosing failures and designing resilient systems. Use when you need help with context degradation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

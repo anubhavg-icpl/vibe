@@ -1,6 +1,6 @@
 ---
 name: cc-skill-continuous-learning
-description: "Development skill from everything-claude-code"
+description: Development skill from everything-claude-code. Use when you need help with cc skill continuous learning.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: none

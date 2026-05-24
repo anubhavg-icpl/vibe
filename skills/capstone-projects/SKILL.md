@@ -1,6 +1,6 @@
 ---
 name: capstone-projects
-description: Expert in building portfolio-grade end-to-end AI systems from the AI Engineering from Scratch curriculum
+description: Expert in building portfolio-grade end-to-end AI systems from the AI Engineering from Scratch curriculum. Use when you need help with capstone projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

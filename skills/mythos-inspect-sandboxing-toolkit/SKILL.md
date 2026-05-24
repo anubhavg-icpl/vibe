@@ -1,6 +1,6 @@
 ---
 name: mythos-inspect-sandboxing-toolkit
-description: Operate the AISI Inspect Sandboxing Toolkit — Docker, Kubernetes, and Proxmox plugins for VM-based agent evaluations
+description: Operate the AISI Inspect Sandboxing Toolkit — Docker, Kubernetes, and Proxmox plugins for VM-based agent evaluations. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving inspect sandboxing toolkit.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

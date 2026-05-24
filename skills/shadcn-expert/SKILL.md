@@ -1,6 +1,6 @@
 ---
 name: shadcn-expert
-description: Expert in shadcn/ui copy-paste pattern, registry system, CLI 3.0, and theming
+description: Expert in shadcn/ui copy-paste pattern, registry system, CLI 3.0, and theming. Use when building web applications with shadcn.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

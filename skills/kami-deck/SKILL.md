@@ -1,6 +1,6 @@
 ---
 name: kami-deck
-description: >
+description: >. Use when you need help with kami deck.
   Produce a print-grade slide deck in the kami (紙 / 纸) design system —
   warm parchment background (or ink-blue for cover / chapter slides),
   serif at one weight, ink-blue accent ≤ 5% per slide, no italic.

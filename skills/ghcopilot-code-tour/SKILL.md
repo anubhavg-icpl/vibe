@@ -1,6 +1,6 @@
 ---
 name: code-tour
-description: >
+description: >. Use when you need help with code tour.
   Use this skill to create CodeTour .tour files — persona-targeted, step-by-step walkthroughs
   that link to real files and line numbers. Trigger for: "create a tour", "make a code tour",
   "generate a tour", "onboarding tour", "tour for this PR", "tour for this bug", "RCA tour",

@@ -1,6 +1,6 @@
 ---
 name: skill-rectified-flow-trainer
-description: Write a complete rectified-flow training loop with AdaLN DiT and Euler sampling
+description: Write a complete rectified-flow training loop with AdaLN DiT and Euler sampling. Use when you need help with skill rectified flow trainer.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 23

@@ -1,6 +1,6 @@
 ---
 name: dotnet-backend-patterns
-description: "Master C#/.NET patterns for building production-grade APIs, MCP servers, and enterprise backends with modern best practices (2024/2025)."
+description: Master C#/.NET patterns for building production-grade APIs, MCP servers, and enterprise backends with modern best practices (2024/2025). Use when you need help with dotnet backend patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

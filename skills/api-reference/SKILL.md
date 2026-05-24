@@ -1,6 +1,6 @@
 ---
 name: api-reference
-description: Expert in writing clear, comprehensive API reference documentation
+description: Expert in writing clear, comprehensive API reference documentation. Use when generating, improving, or structuring documentation with api reference.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

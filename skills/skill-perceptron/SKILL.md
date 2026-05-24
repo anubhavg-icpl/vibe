@@ -1,6 +1,6 @@
 ---
 name: skill-perceptron
-description: Understand the perceptron pattern and when to use single-layer vs multi-layer architectures
+description: Understand the perceptron pattern and when to use single-layer vs multi-layer architectures. Use when you need help with skill perceptron.
 license: CC-BY-NC-SA-4.0
 phase: 3
 lesson: 1

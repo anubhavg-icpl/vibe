@@ -1,6 +1,6 @@
 ---
 name: mythos-oss-maintainer-helper
-description: Trusted sidekick for solo and small-team OSS maintainers — triage backlog, prioritize security issues, draft conventions-aware patches
+description: Trusted sidekick for solo and small-team OSS maintainers — triage backlog, prioritize security issues, draft conventions-aware patches. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving oss maintainer helper.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

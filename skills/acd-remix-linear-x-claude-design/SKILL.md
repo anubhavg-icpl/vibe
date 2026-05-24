@@ -1,6 +1,6 @@
 ---
 name: acd-remix-linear-x-claude-design
-description: Remix example. Linear's surgical density + Claude's warm editorial restraint. Inherits Linear geometry, swaps accent to terracotta, keeps Inter for UI but adds Tiempos for headlines.
+description: "Remix example. Linear's surgical density + Claude's warm editorial restraint. Inherits Linear geometry, swaps accent to terracotta, keeps Inter for UI but adds Tiempos for headlines. Use when building UI components, applying design tokens, or implementing visual styles for remix linear x claude."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: git-advanced-workflows
-description: "Master advanced Git techniques to maintain clean history, collaborate effectively, and recover from any situation with confidence."
+description: Master advanced Git techniques to maintain clean history, collaborate effectively, and recover from any situation with confidence. Use when you need help with git advanced workflows.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: code-documentation-code-explain
-description: "You are a code education expert specializing in explaining complex code through clear narratives, visual diagrams, and step-by-step breakdowns. Transform difficult concepts into understandable explanations for developers at all levels."
+description: You are a code education expert specializing in explaining complex code through clear narratives, visual diagrams, and step-by-step breakdowns. Transform difficult concepts into understandable explanations for developers at all levels. Use when you need help with code documentation code explain.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

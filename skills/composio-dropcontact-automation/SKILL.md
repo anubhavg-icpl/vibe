@@ -1,6 +1,6 @@
 ---
 name: dropcontact-automation
-description: "Automate Dropcontact tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Dropcontact tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with dropcontact automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

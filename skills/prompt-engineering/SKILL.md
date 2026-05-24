@@ -1,6 +1,6 @@
 ---
 name: prompt-engineering
-description: Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design
+description: Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design. Use when you need help with prompt engineering.
 license: CC-BY-NC-SA-4.0
 ---
 

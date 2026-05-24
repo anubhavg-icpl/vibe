@@ -1,6 +1,6 @@
 ---
 name: open-model-picker
-description: Pick an open LLM family, quantization, and inference stack for a given deployment target.
+description: Pick an open LLM family, quantization, and inference stack for a given deployment target. Use when you need help with open model picker.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 14

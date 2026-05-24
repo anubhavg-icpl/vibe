@@ -1,6 +1,6 @@
 ---
 name: pgvector-expert
-description: Deep expertise in pgvector 0.8+ for PostgreSQL — HNSW/IVFFlat tuning, halfvec/sparsevec, hybrid search with tsvector + RRF, and pgvectorscale (DiskANN)
+description: Deep expertise in pgvector 0.8+ for PostgreSQL — HNSW/IVFFlat tuning, halfvec/sparsevec, hybrid search with tsvector + RRF, and pgvectorscale (DiskANN). Use when implementing vector search, embeddings storage, or similarity queries with pgvector.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

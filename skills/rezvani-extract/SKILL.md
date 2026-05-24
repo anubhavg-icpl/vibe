@@ -1,6 +1,6 @@
 ---
 name: "extract"
-description: "Turn a proven pattern or debugging solution into a standalone reusable skill with SKILL.md, reference docs, and examples."
+description: Turn a proven pattern or debugging solution into a standalone reusable skill with SKILL.md, reference docs, and examples. Use when you need help with extract.
 license: CC-BY-NC-SA-4.0
 ---
 

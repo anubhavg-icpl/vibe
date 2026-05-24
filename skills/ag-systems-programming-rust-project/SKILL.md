@@ -1,6 +1,6 @@
 ---
 name: systems-programming-rust-project
-description: "You are a Rust project architecture expert specializing in scaffolding production-ready Rust applications. Generate complete project structures with cargo tooling, proper module organization, testing"
+description: You are a Rust project architecture expert specializing in scaffolding production-ready Rust applications. Generate complete project structures with cargo tooling, proper module organization, testing. Use when you need help with systems programming rust project.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

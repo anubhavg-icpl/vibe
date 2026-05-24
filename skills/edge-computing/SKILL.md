@@ -1,6 +1,6 @@
 ---
 name: edge-computing
-description: Expert in edge computing and serverless at the edge
+description: Expert in edge computing and serverless at the edge. Use when you need help with edge computing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

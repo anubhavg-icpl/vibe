@@ -1,6 +1,6 @@
 ---
 name: cc-skill-strategic-compact
-description: "Development skill from everything-claude-code"
+description: Development skill from everything-claude-code. Use when you need help with cc skill strategic compact.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: none

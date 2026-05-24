@@ -1,6 +1,6 @@
 ---
 name: wit-ai-automation
-description: "Automate Wit AI tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Wit AI tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with wit ai automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

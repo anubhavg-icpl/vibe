@@ -1,6 +1,6 @@
 ---
 name: opengraph-io-automation
-description: "Automate Opengraph IO tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Opengraph IO tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with opengraph io automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

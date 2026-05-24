@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-biennale-yellow
-description: |
+description: |. Use when you need help with html ppt zhangzara biennale yellow.
   Biennale Yellow — Solar yellow on warm parchment with deep indigo serif and atmospheric sun-glow gradients. Anything that should feel like an art-biennale poster or a museum's annual programme: exhibition decks, arts-institution announcements, design conference brochures, curatorial pitches, literary publications, studio retrospectives.
 license: CC-BY-NC-SA-4.0
 triggers: 

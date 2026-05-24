@@ -1,6 +1,6 @@
 ---
 name: data-quality-auditor
-description: Audit datasets for completeness, consistency, accuracy, and validity. Profile data distributions, detect anomalies and outliers, surface structural issues, and produce an actionable remediation plan.
+description: Audit datasets for completeness, consistency, accuracy, and validity. Profile data distributions, detect anomalies and outliers, surface structural issues, and produce an actionable remediation plan. Use when you need help with data quality auditor.
 license: CC-BY-NC-SA-4.0
 ---
 

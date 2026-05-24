@@ -1,6 +1,6 @@
 ---
 name: uxui-principles
-description: "Evaluate interfaces against 168 research-backed UX/UI principles, detect antipatterns, and inject UX context into AI coding sessions."
+description: Evaluate interfaces against 168 research-backed UX/UI principles, detect antipatterns, and inject UX context into AI coding sessions. Use when you need help with uxui principles.
 license: CC-BY-NC-SA-4.0
 author: uxuiprinciples
 tools: [claude, cursor, windsurf]

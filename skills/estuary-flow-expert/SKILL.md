@@ -1,6 +1,6 @@
 ---
 name: estuary-flow-expert
-description: Expert in Estuary Flow real-time CDC captures, collections, and materializations
+description: Expert in Estuary Flow real-time CDC captures, collections, and materializations. Use when working with estuary flow for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

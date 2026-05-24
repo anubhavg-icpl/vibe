@@ -1,6 +1,6 @@
 ---
 name: dependency-upgrade
-description: "Master major dependency version upgrades, compatibility analysis, staged upgrade strategies, and comprehensive testing approaches."
+description: Master major dependency version upgrades, compatibility analysis, staged upgrade strategies, and comprehensive testing approaches. Use when you need help with dependency upgrade.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

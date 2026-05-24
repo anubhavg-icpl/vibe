@@ -1,6 +1,6 @@
 ---
 name: centralstationcrm-automation
-description: "Automate Centralstationcrm tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Centralstationcrm tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with centralstationcrm automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

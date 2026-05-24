@@ -1,6 +1,6 @@
 ---
 name: android-ml-on-device-expert
-description: AICore + Gemini Nano, ML Kit GenAI APIs, LiteRT (formerly TFLite), and MediaPipe LLM Inference for on-device AI on Android
+description: AICore + Gemini Nano, ML Kit GenAI APIs, LiteRT (formerly TFLite), and MediaPipe LLM Inference for on-device AI on Android. Use when developing Android apps with android ml on device.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

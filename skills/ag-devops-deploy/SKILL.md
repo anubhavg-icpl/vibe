@@ -1,6 +1,6 @@
 ---
 name: devops-deploy
-description: "DevOps e deploy de aplicacoes — Docker, CI/CD com GitHub Actions, AWS Lambda, SAM, Terraform, infraestrutura como codigo e monitoramento."
+description: DevOps e deploy de aplicacoes — Docker, CI/CD com GitHub Actions, AWS Lambda, SAM, Terraform, infraestrutura como codigo e monitoramento. Use when you need help with devops deploy.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: critical
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # DEVOPS-DEPLOY — Da Ideia para Producao

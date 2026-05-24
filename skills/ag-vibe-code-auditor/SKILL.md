@@ -1,6 +1,6 @@
 ---
 name: vibe-code-auditor
-description: Audit rapidly generated or AI-produced code for structural flaws, fragility, and production risks.
+description: Audit rapidly generated or AI-produced code for structural flaws, fragility, and production risks. Use when you need help with vibe code auditor.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: 2.0.0

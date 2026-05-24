@@ -1,6 +1,6 @@
 ---
 name: tdd-workflows-tdd-green
-description: "Implement the minimal code needed to make failing tests pass in the TDD green phase."
+description: Implement the minimal code needed to make failing tests pass in the TDD green phase. Use when you need help with tdd workflows tdd green.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

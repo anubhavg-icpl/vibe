@@ -1,6 +1,6 @@
 ---
 name: token-gen-cost-analyzer
-description: Compute token counts, inference latency, and quality ceiling for Emu3-style next-token generation and pick between Emu3-family and diffusion.
+description: Compute token counts, inference latency, and quality ceiling for Emu3-style next-token generation and pick between Emu3-family and diffusion. Use when you need help with token gen cost analyzer.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 12

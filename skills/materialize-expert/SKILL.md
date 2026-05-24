@@ -1,6 +1,6 @@
 ---
 name: materialize-expert
-description: Expert in Materialize streaming SQL, sources, sinks, and incremental views
+description: Expert in Materialize streaming SQL, sources, sinks, and incremental views. Use when working with materialize for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

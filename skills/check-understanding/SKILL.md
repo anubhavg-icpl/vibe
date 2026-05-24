@@ -1,6 +1,6 @@
 ---
 name: check-understanding
-description: Phase quiz for AI Engineering from Scratch. Trigger with "quiz me", "test phase", "check my understanding", "do I know phase 3", or `/check-understanding <phase>`.
+description: "Phase quiz for AI Engineering from Scratch. Trigger with \"quiz me\", \"test phase\", \"check my understanding\", \"do I know phase 3\", or `/check-understanding <phase>`. Use when you need help with check understanding."
 license: CC-BY-NC-SA-4.0
 metadata:
   version: 1.0.0

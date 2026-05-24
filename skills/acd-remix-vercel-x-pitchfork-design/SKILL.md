@@ -1,6 +1,6 @@
 ---
 name: acd-remix-vercel-x-pitchfork-design
-description: Remix. Vercel's grayscale-only restraint + Pitchfork's `#ff5d1f` orange and editorial serif. For docs, changelogs, and developer-marketing pages that want to read like a magazine review without losing technical credibility.
+description: "Remix. Vercel's grayscale-only restraint + Pitchfork's `#ff5d1f` orange and editorial serif. For docs, changelogs, and developer-marketing pages that want to read like a magazine review without losing technical credibility. Use when building UI components, applying design tokens, or implementing visual styles for remix vercel x pitchfork."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

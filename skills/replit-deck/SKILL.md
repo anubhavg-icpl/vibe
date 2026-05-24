@@ -1,6 +1,6 @@
 ---
 name: replit-deck
-description: |
+description: |. Use when you need help with replit deck.
   Single-file horizontal-swipe HTML deck in the style of Replit Slides's
   landing-page template gallery. Eight distinct themes (helix, holm, vance,
   bevel, world-dark, world-mint, atlas, bluehouse) — each a complete visual

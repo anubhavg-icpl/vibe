@@ -1,6 +1,6 @@
 ---
 name: tool-interface-reviewer
-description: Audit a tool definition (name + description + JSON Schema + executor outline) for loop fitness before it ships to an LLM.
+description: Audit a tool definition (name + description + JSON Schema + executor outline) for loop fitness before it ships to an LLM. Use when you need help with tool interface reviewer.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 01

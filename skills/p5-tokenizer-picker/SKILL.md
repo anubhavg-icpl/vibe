@@ -1,6 +1,6 @@
 ---
 name: tokenizer-picker
-description: Pick tokenizer algorithm, vocab size, library for a given corpus and deployment target.
+description: Pick tokenizer algorithm, vocab size, library for a given corpus and deployment target. Use when you need help with tokenizer picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 19

@@ -1,6 +1,6 @@
 ---
 name: dora-expert
-description: Weight-Decomposed Low-Rank Adaptation — magnitude + direction split for better LoRA quality
+description: Weight-Decomposed Low-Rank Adaptation — magnitude + direction split for better LoRA quality. Use when fine-tuning, training, or adapting language models with dora techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

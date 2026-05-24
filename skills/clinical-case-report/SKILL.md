@@ -1,6 +1,6 @@
 ---
 name: clinical-case-report
-description: |
+description: |. Use when you need help with clinical case report.
   Structured medical case presentation for clinical rounds, conferences,
   and documentation. Generates SOAP-format or narrative case reports
   with physiologically accurate vitals, labs, and evidence-based plans.

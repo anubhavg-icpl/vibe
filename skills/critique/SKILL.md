@@ -1,6 +1,6 @@
 ---
 name: critique
-description: |
+description: |. Use when you need help with critique.
   Run a 5-dimension expert design review on any HTML artifact in the
   project — Philosophy / Visual hierarchy / Detail / Functionality /
   Innovation, each scored 0–10. Outputs a single self-contained HTML

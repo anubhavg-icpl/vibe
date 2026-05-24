@@ -1,6 +1,6 @@
 ---
 name: plaid-fintech
-description: Expert patterns for Plaid API integration including Link token
+description: Expert patterns for Plaid API integration including Link token. Use when you need help with plaid fintech.
   flows, transactions sync, identity verification, Auth for ACH, balance checks,
   webhook handling, and fintech compliance best practices.
 license: CC-BY-NC-SA-4.0

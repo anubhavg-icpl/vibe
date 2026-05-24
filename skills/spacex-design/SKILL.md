@@ -1,6 +1,6 @@
 ---
 name: spacex-design
-description: Expert in the SpaceX design system - Space technology. Stark black and white, full-bleed imagery, futuristic.
+description: Expert in the SpaceX design system - Space technology. Stark black and white, full-bleed imagery, futuristic. Use when building UI components, applying design tokens, or implementing visual styles for spacex.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

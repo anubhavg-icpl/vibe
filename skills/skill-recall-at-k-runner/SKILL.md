@@ -1,6 +1,6 @@
 ---
 name: skill-recall-at-k-runner
-description: Write a clean evaluation harness for recall@K with train/val/gallery splits and proper data contract
+description: Write a clean evaluation harness for recall@K with train/val/gallery splits and proper data contract. Use when you need help with skill recall at k runner.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 20

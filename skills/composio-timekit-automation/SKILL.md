@@ -1,6 +1,6 @@
 ---
 name: timekit-automation
-description: "Automate Timekit tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Timekit tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with timekit automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

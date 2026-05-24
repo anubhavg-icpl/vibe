@@ -1,6 +1,6 @@
 ---
 name: testing-qa
-description: "Comprehensive testing and QA workflow covering unit testing, integration testing, E2E testing, browser automation, and quality assurance."
+description: Comprehensive testing and QA workflow covering unit testing, integration testing, E2E testing, browser automation, and quality assurance. Use when you need help with testing qa.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: workflow-bundle

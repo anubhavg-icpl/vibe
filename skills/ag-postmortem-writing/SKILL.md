@@ -1,6 +1,6 @@
 ---
 name: postmortem-writing
-description: "Comprehensive guide to writing effective, blameless postmortems that drive organizational learning and prevent incident recurrence."
+description: Comprehensive guide to writing effective, blameless postmortems that drive organizational learning and prevent incident recurrence. Use when you need help with postmortem writing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

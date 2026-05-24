@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-vellum
-description: |
+description: |. Use when you need help with html ppt zhangzara vellum.
   Vellum — Deep navy canvas with warm-yellow italic Cormorant serifs and a single dusty teal accent. A quiet, scholarly aesthetic. Anything that should feel scholarly, literary, and quietly intelligent: research synthesis, white papers, academic and policy briefs, advisory deliverables, longform editorial pieces, founder reflections.
 license: CC-BY-NC-SA-4.0
 triggers: 

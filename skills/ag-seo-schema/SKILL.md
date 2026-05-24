@@ -1,6 +1,6 @@
 ---
 name: seo-schema
-description: >
+description: >. Use when you need help with seo schema.
   Detect, validate, and generate Schema.org structured data. JSON-LD format
   preferred. Use when user says "schema", "structured data", "rich results",
   "JSON-LD", or "markup".

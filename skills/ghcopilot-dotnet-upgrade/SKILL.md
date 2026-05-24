@@ -1,6 +1,6 @@
 ---
 name: dotnet-upgrade
-description: 'Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution'
+description: Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution. Use when you need help with dotnet upgrade.
 license: CC-BY-NC-SA-4.0
 ---
 

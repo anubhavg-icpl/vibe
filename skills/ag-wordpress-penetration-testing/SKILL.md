@@ -1,6 +1,6 @@
 ---
 name: wordpress-penetration-testing
-description: "Assess WordPress installations for common vulnerabilities and WordPress 7.0 attack surfaces."
+description: Assess WordPress installations for common vulnerabilities and WordPress 7.0 attack surfaces. Use when you need help with wordpress penetration testing.
 license: CC-BY-NC-SA-4.0
 author: zebbern
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-task-implementation
-description: "Instructions for implementing task plans with progressive tracking and change record - Brought to you by microsoft/edge-ai"
+description: Instructions for implementing task plans with progressive tracking and change record - Brought to you by microsoft/edge-ai. Use when writing or reviewing task implementation code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

@@ -1,6 +1,6 @@
 ---
 name: rfc-8705-mtls
-description: Certificate-based client authentication and token binding for high-security OAuth 2.0
+description: Certificate-based client authentication and token binding for high-security OAuth 2.0. Use when implementing or validating rfc 8705 mtls protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

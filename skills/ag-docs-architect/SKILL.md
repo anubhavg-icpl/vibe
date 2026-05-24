@@ -1,6 +1,6 @@
 ---
 name: docs-architect
-description: Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks.
+description: Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks. Use when you need help with docs architect.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

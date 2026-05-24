@@ -1,6 +1,6 @@
 ---
 name: clickhouse-expert
-description: Expert in ClickHouse MergeTree, materialized views, and projections
+description: Expert in ClickHouse MergeTree, materialized views, and projections. Use when working with clickhouse for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

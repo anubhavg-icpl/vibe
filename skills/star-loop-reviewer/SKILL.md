@@ -1,6 +1,6 @@
 ---
 name: star-loop-reviewer
-description: Audit a proposed self-taught reasoning pipeline (STaR-family) before you commit training compute to it.
+description: Audit a proposed self-taught reasoning pipeline (STaR-family) before you commit training compute to it. Use when you need help with star loop reviewer.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 2

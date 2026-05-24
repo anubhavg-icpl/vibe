@@ -1,6 +1,6 @@
 ---
 name: context-window-management
-description: Strategies for managing LLM context windows including
+description: Strategies for managing LLM context windows including. Use when you need help with context window management.
   summarization, trimming, routing, and avoiding context rot
 license: CC-BY-NC-SA-4.0
 metadata:

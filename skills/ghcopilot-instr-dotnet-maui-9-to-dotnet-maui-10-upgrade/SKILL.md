@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-dotnet-maui-9-to-dotnet-maui-10-upgrade
-description: "Instructions for upgrading .NET MAUI applications from version 9 to version 10, including breaking changes, deprecated APIs, and migration strategies for ListView to CollectionView."
+description: Instructions for upgrading .NET MAUI applications from version 9 to version 10, including breaking changes, deprecated APIs, and migration strategies for ListView to CollectionView. Use when writing or reviewing dotnet maui 9 to dotnet maui 10 upgrade code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

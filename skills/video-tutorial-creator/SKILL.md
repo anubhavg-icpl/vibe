@@ -1,6 +1,6 @@
 ---
 name: video-tutorial-creator
-description: Expert in creating engaging developer tutorial videos and screencasts
+description: Expert in creating engaging developer tutorial videos and screencasts. Use when you need help with video tutorial creator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

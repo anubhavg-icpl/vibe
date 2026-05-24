@@ -1,6 +1,6 @@
 ---
 name: auto-skill
-description: "Evaluate current session for skill-worthy workflows and create reusable skills. Triggers on: auto-skill, create skill from session, save workflow, capture this as a skill."
+description: Evaluate current session for skill-worthy workflows and create reusable skills. Triggers on: auto-skill, create skill from session, save workflow, capture this as a skill. Use when you need help with auto skill.
 license: MIT
 allowed-tools: "Read Glob Grep Bash Write Edit"
 metadata:

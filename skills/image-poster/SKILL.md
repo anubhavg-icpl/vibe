@@ -1,6 +1,6 @@
 ---
 name: image-poster
-description: |
+description: |. Use when you need help with image poster.
   Single-image generation skill for posters, key art, and editorial
   illustrations. Defaults to gpt-image-2 but is provider-agnostic — the
   same workflow drives Flux, Imagen, or Midjourney via the active

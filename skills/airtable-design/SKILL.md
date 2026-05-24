@@ -1,6 +1,6 @@
 ---
 name: airtable-design
-description: Expert in the Airtable design system - Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic.
+description: Expert in the Airtable design system - Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for airtable.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

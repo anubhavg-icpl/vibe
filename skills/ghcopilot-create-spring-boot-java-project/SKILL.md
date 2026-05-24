@@ -1,6 +1,6 @@
 ---
 name: create-spring-boot-java-project
-description: 'Create Spring Boot Java Project Skeleton'
+description: Create Spring Boot Java Project Skeleton. Use when you need help with create spring boot java project.
 license: CC-BY-NC-SA-4.0
 ---
 

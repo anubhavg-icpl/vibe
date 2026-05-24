@@ -1,6 +1,6 @@
 ---
 name: ip-adapter-expert
-description: IP-Adapter for image-conditioned generation - plus, face ID, full-face, instant-style
+description: IP-Adapter for image-conditioned generation - plus, face ID, full-face, instant-style. Use when working with multimodal AI (images, audio, video) using ip adapter.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

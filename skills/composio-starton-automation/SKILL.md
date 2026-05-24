@@ -1,6 +1,6 @@
 ---
 name: starton-automation
-description: "Automate Starton tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Starton tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with starton automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

@@ -1,6 +1,6 @@
 ---
 name: ollama-modelfile-expert
-description: Author production Modelfiles with FROM, PARAMETER, TEMPLATE, SYSTEM, ADAPTER, MESSAGE, and LICENSE directives for Llama 3, Qwen, Phi, and Gemma
+description: Author production Modelfiles with FROM, PARAMETER, TEMPLATE, SYSTEM, ADAPTER, MESSAGE, and LICENSE directives for Llama 3, Qwen, Phi, and Gemma. Use when creating, converting, or publishing model files with ollama modelfile.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

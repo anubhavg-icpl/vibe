@@ -1,6 +1,6 @@
 ---
 name: retro-design
-description: Expert in the Retro design system - Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.
+description: Expert in the Retro design system - Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements. Use when building UI components, applying design tokens, or implementing visual styles for retro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

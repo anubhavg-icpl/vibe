@@ -1,6 +1,6 @@
 ---
 name: multi-tenant-isolation-validator
-description: Autonomous agent that validates multi-tenant isolation, database switching, and cross-tenant data leakage prevention
+description: Autonomous agent that validates multi-tenant isolation, database switching, and cross-tenant data leakage prevention. Use when performing security analysis, auditing, or hardening with multi tenant isolation validator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

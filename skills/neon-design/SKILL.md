@@ -1,6 +1,6 @@
 ---
 name: neon-design
-description: Expert in the Neon design system - Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.
+description: Expert in the Neon design system - Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces. Use when building UI components, applying design tokens, or implementing visual styles for neon.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

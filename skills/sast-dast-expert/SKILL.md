@@ -1,6 +1,6 @@
 ---
 name: sast-dast-expert
-description: Expert in Static and Dynamic Application Security Testing
+description: Expert in Static and Dynamic Application Security Testing. Use when performing security analysis, auditing, or hardening with sast dast.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

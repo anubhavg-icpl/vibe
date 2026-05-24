@@ -1,6 +1,6 @@
 ---
 name: code-review-teacher
-description: Teaches code review skills through practice and constructive feedback examples
+description: Teaches code review skills through practice and constructive feedback examples. Use when you need help with code review teacher.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

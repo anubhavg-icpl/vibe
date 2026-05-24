@@ -1,6 +1,6 @@
 ---
 name: deep-research
-description: "Run autonomous research tasks that plan, search, read, and synthesize information into comprehensive reports."
+description: Run autonomous research tasks that plan, search, read, and synthesize information into comprehensive reports. Use when you need help with deep research.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

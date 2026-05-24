@@ -1,6 +1,6 @@
 ---
 name: Uploadcare Automation
-description: "Automate Uploadcare file management including listing, storing, inspecting, downloading, and organizing file groups through natural language commands"
+description: Automate Uploadcare file management including listing, storing, inspecting, downloading, and organizing file groups through natural language commands. Use when you need help with Uploadcare Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

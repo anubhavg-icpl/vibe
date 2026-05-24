@@ -1,6 +1,6 @@
 ---
 name: csharp-tunit
-description: 'Get best practices for TUnit unit testing, including data-driven tests'
+description: Get best practices for TUnit unit testing, including data-driven tests. Use when you need help with csharp tunit.
 license: CC-BY-NC-SA-4.0
 ---
 

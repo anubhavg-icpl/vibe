@@ -1,6 +1,6 @@
 ---
 name: search-policy
-description: Pick a search strategy (ReAct, ToT, LATS, evolutionary) given task shape, token budget, and evaluator quality.
+description: Pick a search strategy (ReAct, ToT, LATS, evolutionary) given task shape, token budget, and evaluator quality. Use when you need help with search policy.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 04

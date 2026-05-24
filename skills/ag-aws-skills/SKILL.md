@@ -1,6 +1,6 @@
 ---
 name: aws-skills
-description: "AWS development with infrastructure automation and cloud architecture patterns"
+description: AWS development with infrastructure automation and cloud architecture patterns. Use when you need help with aws skills.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

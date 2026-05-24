@@ -1,6 +1,6 @@
 ---
 name: rfc-6750-bearer-token
-description: Implementation guide for OAuth 2.0 Bearer Token Usage with multi-tenancy security
+description: Implementation guide for OAuth 2.0 Bearer Token Usage with multi-tenancy security. Use when implementing or validating rfc 6750 bearer token protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

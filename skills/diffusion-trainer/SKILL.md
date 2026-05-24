@@ -1,6 +1,6 @@
 ---
 name: diffusion-trainer
-description: Configure a diffusion training run: schedule, prediction target, sampler, and eval plan.
+description: Configure a diffusion training run: schedule, prediction target, sampler, and eval plan. Use when you need help with diffusion trainer.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 06

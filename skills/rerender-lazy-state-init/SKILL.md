@@ -1,6 +1,6 @@
 ---
 name: rerender-lazy-state-init
-description: Use Lazy State Initialization
+description: Use Lazy State Initialization. Use when you need help with rerender lazy state init.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

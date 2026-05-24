@@ -1,6 +1,6 @@
 ---
 name: food-database-query
-description: Food Database Query
+description: Food Database Query. Use when you need help with food database query.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

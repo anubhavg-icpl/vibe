@@ -1,6 +1,6 @@
 ---
 name: flowai-live-dashboard-template
-description: |
+description: |. Use when you need help with flowai live dashboard template.
   Team-management dashboard skill in the FlowAI aesthetic — three tabs
   (Team Members, Team Details, Activity Log), KPI stat row, member table,
   role distribution bar chart, online presence and activity sparklines,

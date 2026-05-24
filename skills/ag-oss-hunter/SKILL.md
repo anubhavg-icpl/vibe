@@ -1,6 +1,6 @@
 ---
 name: oss-hunter
-description: "Automatically hunt for high-impact OSS contribution opportunities in trending repositories."
+description: Automatically hunt for high-impact OSS contribution opportunities in trending repositories. Use when you need help with oss hunter.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: rabbitmq-expert
-description: Expert in RabbitMQ message broker for reliable messaging
+description: Expert in RabbitMQ message broker for reliable messaging. Use when configuring, deploying, or managing rabbitmq infrastructure.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

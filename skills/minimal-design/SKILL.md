@@ -1,6 +1,6 @@
 ---
 name: minimal-design
-description: Expert in the Minimal design system - Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.
+description: Expert in the Minimal design system - Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus. Use when building UI components, applying design tokens, or implementing visual styles for minimal.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

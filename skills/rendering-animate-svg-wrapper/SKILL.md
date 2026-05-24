@@ -1,6 +1,6 @@
 ---
 name: rendering-animate-svg-wrapper
-description: Animate SVG Wrapper Instead of SVG Element
+description: Animate SVG Wrapper Instead of SVG Element. Use when you need help with rendering animate svg wrapper.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

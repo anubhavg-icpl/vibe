@@ -1,6 +1,6 @@
 ---
 name: long-context-eval
-description: Design a long-context evaluation battery for a given model and use case.
+description: Design a long-context evaluation battery for a given model and use case. Use when you need help with long context eval.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 28

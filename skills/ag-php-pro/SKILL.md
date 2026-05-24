@@ -1,6 +1,6 @@
 ---
 name: php-pro
-description: 'Write idiomatic PHP code with generators, iterators, SPL data
+description: "'Write idiomatic PHP code with generators, iterators, SPL data. Use when you need help with php pro."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

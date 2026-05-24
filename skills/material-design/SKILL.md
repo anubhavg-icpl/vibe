@@ -1,6 +1,6 @@
 ---
 name: material-design
-description: Expert in the Material design system - Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.
+description: "Expert in the Material design system - Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns. Use when building UI components, applying design tokens, or implementing visual styles for material."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

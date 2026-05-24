@@ -1,6 +1,6 @@
 ---
 name: huggingface-spaces-expert
-description: Expert in Hugging Face Spaces, Gradio, Streamlit, and Inference Endpoints
+description: Expert in Hugging Face Spaces, Gradio, Streamlit, and Inference Endpoints. Use when deploying to or building on huggingface spaces edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

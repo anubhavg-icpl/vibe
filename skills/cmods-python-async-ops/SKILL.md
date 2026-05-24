@@ -1,6 +1,6 @@
 ---
 name: python-async-ops
-description: "Python asyncio patterns for concurrent programming. Triggers on: asyncio, async, await, coroutine, gather, semaphore, TaskGroup, event loop, aiohttp, concurrent."
+description: Python asyncio patterns for concurrent programming. Triggers on: asyncio, async, await, coroutine, gather, semaphore, TaskGroup, event loop, aiohttp, concurrent. Use when you need help with python async ops.
 license: MIT
 compatibility: "Python 3.10+ recommended. Some patterns require 3.11+ (TaskGroup, timeout)."
 allowed-tools: "Read Write"

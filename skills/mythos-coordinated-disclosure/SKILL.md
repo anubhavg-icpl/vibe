@@ -1,6 +1,6 @@
 ---
 name: mythos-coordinated-disclosure
-description: Run a vulnerability through validation, severity scoring, maintainer outreach, and embargoed disclosure
+description: Run a vulnerability through validation, severity scoring, maintainer outreach, and embargoed disclosure. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving coordinated disclosure.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

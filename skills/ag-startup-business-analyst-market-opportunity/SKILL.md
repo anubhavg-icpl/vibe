@@ -1,6 +1,6 @@
 ---
 name: startup-business-analyst-market-opportunity
-description: 'Generate comprehensive market opportunity analysis with TAM/SAM/SOM
+description: "'Generate comprehensive market opportunity analysis with TAM/SAM/SOM. Use when you need help with startup business analyst market opportunity."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

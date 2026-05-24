@@ -1,6 +1,6 @@
 ---
 name: internal-comms
-description: "Write internal communications such as status reports, leadership updates, 3P updates, newsletters, FAQs, incident reports, and project updates using repeatable internal formats."
+description: Write internal communications such as status reports, leadership updates, 3P updates, newsletters, FAQs, incident reports, and project updates using repeatable internal formats. Use when you need help with internal comms.
 license: Complete terms in LICENSE.txt
 metadata:
   risk: unknown

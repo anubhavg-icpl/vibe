@@ -1,6 +1,6 @@
 ---
 name: video-brief
-description: Translate a video brief into a model + prompt + shot plan for a 2026 video generator.
+description: Translate a video brief into a model + prompt + shot plan for a 2026 video generator. Use when you need help with video brief.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 10

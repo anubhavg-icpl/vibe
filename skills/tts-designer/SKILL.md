@@ -1,6 +1,6 @@
 ---
 name: tts-designer
-description: Pick TTS model, voice, text-normalization scope, and evaluation plan for a given language, style, and latency target.
+description: Pick TTS model, voice, text-normalization scope, and evaluation plan for a given language, style, and latency target. Use when you need help with tts designer.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 07

@@ -1,6 +1,6 @@
 ---
 name: itil-expert
-description: Expert advisor for ITIL 4 and ITIL 5 (2026 digital product paradigm), specialized in AI-native governance, sustainability, and value co-creation.
+description: Expert advisor for ITIL 4 and ITIL 5 (2026 digital product paradigm), specialized in AI-native governance, sustainability, and value co-creation. Use when you need deep expertise in itil.
 license: CC-BY-NC-SA-4.0
 triggers: 
   - "itil expert"

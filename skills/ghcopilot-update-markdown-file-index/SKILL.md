@@ -1,6 +1,6 @@
 ---
 name: update-markdown-file-index
-description: 'Update a markdown file section with an index/table of files from a specified folder.'
+description: Update a markdown file section with an index/table of files from a specified folder. Use when you need help with update markdown file index.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: refine-loop
-description: Configure an evaluator-optimizer (Self-Refine / CRITIC) loop given task, verifier availability, and iteration budget.
+description: Configure an evaluator-optimizer (Self-Refine / CRITIC) loop given task, verifier availability, and iteration budget. Use when you need help with refine loop.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 05

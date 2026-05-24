@@ -1,6 +1,6 @@
 ---
 name: tool-use-guardian
-description: "FREE — Intelligent tool-call reliability wrapper. Monitors, retries, fixes, and learns from tool failures. Auto-recovers from truncated JSON, timeouts, rate limits, and mid-chain failures."
+description: FREE — Intelligent tool-call reliability wrapper. Monitors, retries, fixes, and learns from tool failures. Auto-recovers from truncated JSON, timeouts, rate limits, and mid-chain failures. Use when you need help with tool use guardian.
 license: CC-BY-NC-SA-4.0
 author: christopherlhammer11-ai
 tools: [claude, cursor, codex, gemini, copilot, windsurf, antigravity]

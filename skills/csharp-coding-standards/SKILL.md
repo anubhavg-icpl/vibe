@@ -1,6 +1,6 @@
 ---
 name: csharp-coding-standards
-description: Production-ready C# coding standards enforcing modern patterns, type safety, and maintainability for .NET
+description: Production-ready C# coding standards enforcing modern patterns, type safety, and maintainability for .NET. Use when enforcing csharp coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

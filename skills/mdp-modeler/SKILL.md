@@ -1,6 +1,6 @@
 ---
 name: mdp-modeler
-description: Given a task description, produce a Markov Decision Process spec and flag formulation risks before training.
+description: Given a task description, produce a Markov Decision Process spec and flag formulation risks before training. Use when you need help with mdp modeler.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 1

@@ -1,6 +1,6 @@
 ---
 name: flowstudio-power-automate-governance
-description: >-
+description: >-. Use when you need help with flowstudio power automate governance.
   Govern Power Automate flows and Power Apps at scale using the FlowStudio MCP
   cached store. Classify flows by business impact, detect orphaned resources,
   audit connector usage, enforce compliance standards, manage notification rules,

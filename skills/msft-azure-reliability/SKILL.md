@@ -1,6 +1,6 @@
 ---
 name: azure-reliability
-description: "Assess and improve the reliability posture of Azure Functions: zone redundancy, ZRS storage, health probes, multi-region failover. Scans deployed resources, presents a feature-pivoted checklist, then drives staged remediation (CLI or IaC patches) end-to-end with user confirmation. WHEN: \"assess reliability\", \"check reliability\", \"zone redundant\", \"multi-region failover\", \"high availability\", \"disaster recovery\", \"single points of failure\", \"reliability posture\"."
+description: "Assess and improve the reliability posture of Azure Functions: zone redundancy, ZRS storage, health probes, multi-region failover. Scans deployed resources, presents a feature-pivoted checklist, then drives staged remediation (CLI or IaC patches) end-to-end with user confirmation. WHEN: \\"assess reliability\\", \\"check reliability\\", \\"zone redundant\\", \\"multi-region failover\\", \\"high availability\\", \\"disaster recovery\\", \\"single points of failure\\", \\"reliability posture\\". Use when you need help with azure reliability."
 license: MIT
 metadata:
   author: Microsoft

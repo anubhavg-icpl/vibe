@@ -1,6 +1,6 @@
 ---
 name: rlhf-expert
-description: Reward-model + PPO RLHF pipeline — when it still beats DPO and how to run it correctly
+description: Reward-model + PPO RLHF pipeline — when it still beats DPO and how to run it correctly. Use when fine-tuning, training, or adapting language models with rlhf techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

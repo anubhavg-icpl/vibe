@@ -1,6 +1,6 @@
 ---
 name: database-credential-hygiene-expert
-description: Expert in separating DB config (host/port/db/user) from DB secret (password), runtime connection-string assembly via ISecretProvider, dynamic credentials, IAM/RDS auth, SCRAM/SSL, connection pooling under rotation, and zero password-in-catalog guarantees
+description: Expert in separating DB config (host/port/db/user) from DB secret (password), runtime connection-string assembly via ISecretProvider, dynamic credentials, IAM/RDS auth, SCRAM/SSL, connection pooling under rotation, and zero password-in-catalog guarantees. Use when performing security analysis, auditing, or hardening with database credential hygiene.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

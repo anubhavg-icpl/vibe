@@ -1,6 +1,6 @@
 ---
 name: makepad-dsl
-description: |
+description: |. Use when you need help with makepad dsl.
   CRITICAL: Use for Makepad DSL syntax and inheritance. Triggers on:
   makepad dsl, live_design, makepad inheritance, makepad prototype,
   "<Widget>", "Foo = { }", makepad object, makepad property,

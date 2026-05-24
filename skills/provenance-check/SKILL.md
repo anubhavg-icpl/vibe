@@ -1,6 +1,6 @@
 ---
 name: provenance-check
-description: Check a training dataset against California AB 2013 and EU TDM opt-out obligations.
+description: Check a training dataset against California AB 2013 and EU TDM opt-out obligations. Use when you need help with provenance check.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 27

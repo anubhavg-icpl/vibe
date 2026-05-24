@@ -1,6 +1,6 @@
 ---
 name: docugenerate-automation
-description: "Automate Docugenerate tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Docugenerate tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with docugenerate automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

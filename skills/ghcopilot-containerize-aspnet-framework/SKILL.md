@@ -1,6 +1,6 @@
 ---
 name: containerize-aspnet-framework
-description: 'Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files customized for the project.'
+description: Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files customized for the project. Use when you need help with containerize aspnet framework.
 license: CC-BY-NC-SA-4.0
 ---
 

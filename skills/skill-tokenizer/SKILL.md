@@ -1,6 +1,6 @@
 ---
 name: skill-tokenizer
-description: Choosing and building tokenizers for LLM projects
+description: Choosing and building tokenizers for LLM projects. Use when you need help with skill tokenizer.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 1

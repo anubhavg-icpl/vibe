@@ -1,6 +1,6 @@
 ---
 name: binary-analysis-patterns
-description: "Comprehensive patterns and techniques for analyzing compiled binaries, understanding assembly code, and reconstructing program logic."
+description: Comprehensive patterns and techniques for analyzing compiled binaries, understanding assembly code, and reconstructing program logic. Use when you need help with binary analysis patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

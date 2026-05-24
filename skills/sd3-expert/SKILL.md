@@ -1,6 +1,6 @@
 ---
 name: sd3-expert
-description: SD3 / SD3.5 Large, MMDiT architecture, T5-XXL prompting, differences from SDXL
+description: SD3 / SD3.5 Large, MMDiT architecture, T5-XXL prompting, differences from SDXL. Use when working with multimodal AI (images, audio, video) using sd3.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

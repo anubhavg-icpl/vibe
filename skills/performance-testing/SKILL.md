@@ -1,6 +1,6 @@
 ---
 name: performance-testing
-description: performance-testing
+description: performance-testing. Use when writing, running, or improving tests with performance testing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

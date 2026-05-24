@@ -1,6 +1,6 @@
 ---
 name: backendless-automation
-description: "Automate Backendless tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Backendless tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with backendless automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

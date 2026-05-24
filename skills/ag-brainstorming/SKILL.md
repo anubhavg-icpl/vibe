@@ -1,6 +1,6 @@
 ---
 name: brainstorming
-description: "Use before creative or constructive work (features, architecture, behavior). Transforms vague ideas into validated designs through disciplined reasoning and collaboration."
+description: Use before creative or constructive work (features, architecture, behavior). Transforms vague ideas into validated designs through disciplined reasoning and collaboration. Use when you need help with brainstorming.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

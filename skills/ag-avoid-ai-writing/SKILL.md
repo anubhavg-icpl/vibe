@@ -1,6 +1,6 @@
 ---
 name: avoid-ai-writing
-description: "Audit and rewrite content to remove 21 categories of AI writing patterns with a 43-entry replacement table"
+description: Audit and rewrite content to remove 21 categories of AI writing patterns with a 43-entry replacement table. Use when you need help with avoid ai writing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: none

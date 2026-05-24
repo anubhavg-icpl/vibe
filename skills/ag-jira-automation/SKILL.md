@@ -1,6 +1,6 @@
 ---
 name: jira-automation
-description: "Automate Jira tasks via Rube MCP (Composio): issues, projects, sprints, boards, comments, users. Always search tools first for current schemas."
+description: Automate Jira tasks via Rube MCP (Composio): issues, projects, sprints, boards, comments, users. Always search tools first for current schemas. Use when you need help with jira automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

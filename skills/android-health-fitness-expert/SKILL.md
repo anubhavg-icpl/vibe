@@ -1,6 +1,6 @@
 ---
 name: android-health-fitness-expert
-description: Health Connect (FHIR + structured types), Health Services on Wear OS, sensor APIs, sleep/workout sessions, and Google Fit migration
+description: Health Connect (FHIR + structured types), Health Services on Wear OS, sensor APIs, sleep/workout sessions, and Google Fit migration. Use when developing Android apps with android health fitness.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

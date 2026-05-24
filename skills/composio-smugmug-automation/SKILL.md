@@ -1,6 +1,6 @@
 ---
 name: smugmug-automation
-description: "Automate Smugmug tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Smugmug tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with smugmug automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

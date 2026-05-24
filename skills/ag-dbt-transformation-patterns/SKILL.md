@@ -1,6 +1,6 @@
 ---
 name: dbt-transformation-patterns
-description: "Production-ready patterns for dbt (data build tool) including model organization, testing strategies, documentation, and incremental processing."
+description: Production-ready patterns for dbt (data build tool) including model organization, testing strategies, documentation, and incremental processing. Use when you need help with dbt transformation patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: none

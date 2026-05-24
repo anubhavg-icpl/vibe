@@ -1,6 +1,6 @@
 ---
 name: azure-ai-translation-ts
-description: "Text and document translation with REST-style clients."
+description: Text and document translation with REST-style clients. Use when you need help with azure ai translation ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: alert-event-pipeline-expert
-description: Expert in alert pipelines — single source of truth AlertService, dedup, rate limiting, fan-out (notifications + SignalR + webhook), severity taxonomy, correlation/grouping, alert storms, and audit trails. Closes every direct-DB-write bypass.
+description: Expert in alert pipelines — single source of truth AlertService, dedup, rate limiting, fan-out (notifications + SignalR + webhook), severity taxonomy, correlation/grouping, alert storms, and audit trails. Closes every direct-DB-write bypass. Use when performing security analysis, auditing, or hardening with alert event pipeline.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

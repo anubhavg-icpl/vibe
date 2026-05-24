@@ -1,6 +1,6 @@
 ---
 name: skill-structured-outputs
-description: Decision framework for choosing the right structured output strategy based on provider, reliability, and complexity
+description: Decision framework for choosing the right structured output strategy based on provider, reliability, and complexity. Use when you need help with skill structured outputs.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 03

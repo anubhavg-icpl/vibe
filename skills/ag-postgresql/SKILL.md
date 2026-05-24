@@ -1,6 +1,6 @@
 ---
 name: postgresql
-description: "Design a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features"
+description: Design a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features. Use when you need help with postgresql.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

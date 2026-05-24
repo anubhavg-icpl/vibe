@@ -1,6 +1,6 @@
 ---
 name: android-automotive-expert
-description: Android for Cars App Library templates, Android Auto vs AAOS, distraction-optimized UX, and navigation/POI/IoT app development
+description: Android for Cars App Library templates, Android Auto vs AAOS, distraction-optimized UX, and navigation/POI/IoT app development. Use when developing Android apps with android automotive.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

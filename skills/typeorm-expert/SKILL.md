@@ -1,6 +1,6 @@
 ---
 name: typeorm-expert
-description: Expert in TypeORM with TypeScript, entities, repositories, migrations, query building, and production best practices
+description: Expert in TypeORM with TypeScript, entities, repositories, migrations, query building, and production best practices. Use when you need deep expertise in typeorm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

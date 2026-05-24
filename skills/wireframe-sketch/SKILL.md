@@ -1,6 +1,6 @@
 ---
 name: wireframe-sketch
-description: |
+description: |. Use when you need help with wireframe sketch.
   A hand-drawn wireframe exploration — graph-paper background, marker /
   pencil tone, multiple tab labels for variants, sticky-note annotations,
   scribbled chart placeholders, hatched fills. Reads like a designer's

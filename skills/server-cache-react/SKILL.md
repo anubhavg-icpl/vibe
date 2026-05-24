@@ -1,6 +1,6 @@
 ---
 name: server-cache-react
-description: Per-Request Deduplication with React.cache()
+description: Per-Request Deduplication with React.cache(). Use when you need help with server cache react.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

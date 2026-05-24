@@ -1,6 +1,6 @@
 ---
 name: frontend-slides
-description: Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files.
+description: Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when you need help with frontend slides.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

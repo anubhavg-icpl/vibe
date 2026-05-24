@@ -1,6 +1,6 @@
 ---
 name: invoice
-description: |
+description: |. Use when you need help with invoice.
   A printable invoice page — sender + recipient block, line items table,
   tax breakdown, totals, and payment instructions. Use when the brief
   mentions "invoice", "bill", "billing statement", or "发票".

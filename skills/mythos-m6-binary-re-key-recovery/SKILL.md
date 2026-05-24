@@ -1,6 +1,6 @@
 ---
 name: mythos-m6-binary-re-key-recovery
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 6 — Windows service RE, pass-the-hash escalation, and AES key recovery
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 6 — Windows service RE, pass-the-hash escalation, and AES key recovery. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m6 binary re key recovery."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

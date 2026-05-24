@@ -1,6 +1,6 @@
 ---
 name: blueprint
-description: >-
+description: >-. Use when you need help with blueprint.
   Turn a one-line objective into a step-by-step construction plan for
   multi-session, multi-agent engineering projects. Each step has a
   self-contained context brief so a fresh agent can execute it cold.

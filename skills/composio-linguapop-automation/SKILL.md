@@ -1,6 +1,6 @@
 ---
 name: linguapop-automation
-description: "Automate Linguapop tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Linguapop tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with linguapop automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

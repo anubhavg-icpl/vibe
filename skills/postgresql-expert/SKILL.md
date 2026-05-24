@@ -1,6 +1,6 @@
 ---
 name: postgresql-expert
-description: postgresql-expert
+description: postgresql-expert. Use when designing, querying, or optimizing postgresql databases.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

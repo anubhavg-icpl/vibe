@@ -1,6 +1,6 @@
 ---
 name: social-carousel
-description: |
+description: |. Use when you need help with social carousel.
   A three-card social-media carousel laid out as 1080×1080 squares —
   three cinematic, on-brand panels with display headlines that connect
   across the series ("onwards." → "to the next one." → "looking ahead.").

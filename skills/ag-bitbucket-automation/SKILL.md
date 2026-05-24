@@ -1,6 +1,6 @@
 ---
 name: bitbucket-automation
-description: "Automate Bitbucket repositories, pull requests, branches, issues, and workspace management via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Bitbucket repositories, pull requests, branches, issues, and workspace management via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with bitbucket automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: azure-ai-voicelive-py
-description: "Build real-time voice AI applications with bidirectional WebSocket communication."
+description: Build real-time voice AI applications with bidirectional WebSocket communication. Use when you need help with azure ai voicelive py.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

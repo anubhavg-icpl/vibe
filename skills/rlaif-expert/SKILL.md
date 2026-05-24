@@ -1,6 +1,6 @@
 ---
 name: rlaif-expert
-description: RL from AI Feedback — principle-driven critique, AI judges, scaling preference labeling without humans
+description: RL from AI Feedback — principle-driven critique, AI judges, scaling preference labeling without humans. Use when fine-tuning, training, or adapting language models with rlaif techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: mythos-ics-step3-path-traversal-rce
-description: Defensive instrumentation for the "Cooling Tower" range Step 3 — admin session reuse + archive-extraction path traversal yielding RCE on HMI-1, modeled on AISI's 7-step ICS scenario
+description: "Defensive instrumentation for the \"Cooling Tower\" range Step 3 — admin session reuse + archive-extraction path traversal yielding RCE on HMI-1, modeled on AISI's 7-step ICS scenario. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ics step3 path traversal rce."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

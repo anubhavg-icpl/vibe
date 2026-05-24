@@ -1,6 +1,6 @@
 ---
 name: customs-trade-compliance
-description: >
+description: >. Use when you need help with customs trade compliance.
   Codified expertise for customs documentation, tariff classification, duty
   optimization, restricted party screening, and regulatory compliance across
   multiple jurisdictions. Informed by trade compliance specialists with 15+

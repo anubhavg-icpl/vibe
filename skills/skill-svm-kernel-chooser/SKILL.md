@@ -1,6 +1,6 @@
 ---
 name: skill-svm-kernel-chooser
-description: Choose the right SVM kernel and tune C and gamma for your problem
+description: Choose the right SVM kernel and tune C and gamma for your problem. Use when you need help with skill svm kernel chooser.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 5

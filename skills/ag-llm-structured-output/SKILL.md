@@ -1,6 +1,6 @@
 ---
 name: llm-structured-output
-description: >
+description: >. Use when you need help with llm structured output.
   Get reliable JSON, enums, and typed objects from LLMs using response_format, tool_use, and schema-constrained decoding across OpenAI, Anthropic, and Google APIs.
 license: CC-BY-NC-SA-4.0
 metadata:

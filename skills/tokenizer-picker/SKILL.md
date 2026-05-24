@@ -1,6 +1,6 @@
 ---
 name: tokenizer-picker
-description: Pick a tokenization approach for a new language model or text pipeline.
+description: Pick a tokenization approach for a new language model or text pipeline. Use when you need help with tokenizer picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 04

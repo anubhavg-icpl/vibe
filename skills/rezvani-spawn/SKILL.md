@@ -1,6 +1,6 @@
 ---
 name: "spawn"
-description: "Launch N parallel subagents in isolated git worktrees to compete on the session task."
+description: Launch N parallel subagents in isolated git worktrees to compete on the session task. Use when you need help with spawn.
 license: CC-BY-NC-SA-4.0
 command: /hub:spawn
 ---

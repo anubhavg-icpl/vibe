@@ -1,6 +1,6 @@
 ---
 name: resend-automation
-description: "Automate Resend tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Resend tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with resend automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

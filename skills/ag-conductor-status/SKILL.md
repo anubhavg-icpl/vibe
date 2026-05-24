@@ -1,6 +1,6 @@
 ---
 name: conductor-status
-description: "Display project status, active tracks, and next actions"
+description: Display project status, active tracks, and next actions. Use when you need help with conductor status.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

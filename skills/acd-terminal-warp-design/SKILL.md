@@ -1,6 +1,6 @@
 ---
 name: acd-terminal-warp-design
-description: Reference DESIGN.md for terminal-aesthetic with chromatic warmth. Mono-first, but neon teal and coral break the ascetic.
+description: Reference DESIGN.md for terminal-aesthetic with chromatic warmth. Mono-first, but neon teal and coral break the ascetic. Use when building UI components, applying design tokens, or implementing visual styles for terminal warp.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: odoo-performance-tuner
-description: "Expert guide for diagnosing and fixing Odoo performance issues: slow queries, worker configuration, memory limits, PostgreSQL tuning, and profiling tools."
+description: Expert guide for diagnosing and fixing Odoo performance issues: slow queries, worker configuration, memory limits, PostgreSQL tuning, and profiling tools. Use when you need help with odoo performance tuner.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

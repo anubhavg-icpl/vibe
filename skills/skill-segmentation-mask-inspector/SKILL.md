@@ -1,6 +1,6 @@
 ---
 name: skill-segmentation-mask-inspector
-description: Report class distribution, predicted-mask statistics, and the classes most likely to be under-predicted or boundary-blurred
+description: Report class distribution, predicted-mask statistics, and the classes most likely to be under-predicted or boundary-blurred. Use when you need help with skill segmentation mask inspector.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 7

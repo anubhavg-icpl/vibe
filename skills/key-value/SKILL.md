@@ -1,6 +1,6 @@
 ---
 name: key-value
-description: key-value
+description: key-value. Use when you need help with key value.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

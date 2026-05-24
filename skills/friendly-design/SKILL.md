@@ -1,6 +1,6 @@
 ---
 name: friendly-design
-description: Expert in the Friendly design system - Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.
+description: Expert in the Friendly design system - Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes. Use when building UI components, applying design tokens, or implementing visual styles for friendly.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

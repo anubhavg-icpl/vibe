@@ -1,6 +1,6 @@
 ---
 name: finetuning-pipeline
-description: Run a reproducible data-to-SFT-to-DPO-to-serve fine-tuning pipeline with ablations, quantization, and a 2026 Model Openness Framework model card.
+description: Run a reproducible data-to-SFT-to-DPO-to-serve fine-tuning pipeline with ablations, quantization, and a 2026 Model Openness Framework model card. Use when you need help with finetuning pipeline.
 license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 07

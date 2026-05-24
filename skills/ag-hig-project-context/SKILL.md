@@ -1,6 +1,6 @@
 ---
 name: hig-project-context
-description: Create or update a shared Apple design context document that other HIG skills use to tailor guidance.
+description: Create or update a shared Apple design context document that other HIG skills use to tailor guidance. Use when you need help with hig project context.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

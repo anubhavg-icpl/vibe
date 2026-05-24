@@ -1,6 +1,6 @@
 ---
 name: videodb-skills
-description: "Upload, stream, search, edit, transcribe, and generate AI video and audio using the VideoDB SDK."
+description: Upload, stream, search, edit, transcribe, and generate AI video and audio using the VideoDB SDK. Use when you need help with videodb skills.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: media

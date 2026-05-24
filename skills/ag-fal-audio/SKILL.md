@@ -1,6 +1,6 @@
 ---
 name: fal-audio
-description: "Text-to-speech and speech-to-text using fal.ai audio models"
+description: Text-to-speech and speech-to-text using fal.ai audio models. Use when you need help with fal audio.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

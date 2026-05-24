@@ -1,6 +1,6 @@
 ---
 name: video-shortform
-description: |
+description: |. Use when you need help with video shortform.
   Short-form video generation skill — 3-10 second clips for product
   reveals, motion teasers, ambient loops. Defaults to Seedance 2 but
   works the same with Kling 3 / 4, Veo 3 or Sora 2. Output is one MP4

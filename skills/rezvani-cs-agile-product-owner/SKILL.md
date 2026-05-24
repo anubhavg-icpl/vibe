@@ -1,6 +1,6 @@
 ---
 name: cs-agile-product-owner
-description: Agile product owner agent for epic breakdown, sprint planning, backlog refinement, and INVEST-compliant user story generation
+description: Agile product owner agent for epic breakdown, sprint planning, backlog refinement, and INVEST-compliant user story generation. Use when you need help with cs agile product owner.
 license: CC-BY-NC-SA-4.0
 skills: product-team/agile-product-owner, product-team/product-manager-toolkit
 domain: product

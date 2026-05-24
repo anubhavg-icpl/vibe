@@ -1,6 +1,6 @@
 ---
 name: event-output
-description: event-output
+description: event-output. Use when you need help with event output.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

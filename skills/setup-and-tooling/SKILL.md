@@ -1,6 +1,6 @@
 ---
 name: setup-and-tooling
-description: Expert in AI engineering development environments, tooling, and workflows from the AI Engineering from Scratch curriculum
+description: Expert in AI engineering development environments, tooling, and workflows from the AI Engineering from Scratch curriculum. Use when you need help with setup and tooling.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

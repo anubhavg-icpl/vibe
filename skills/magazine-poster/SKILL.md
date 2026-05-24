@@ -1,6 +1,6 @@
 ---
 name: magazine-poster
-description: |
+description: |. Use when you need help with magazine poster.
   An editorial-style poster — newsprint paper, dateline, oversized serif
   headline with a struck-through word and italic accent, a 2-column body
   block, and 6 numbered sections with annotated pull-quote captions.

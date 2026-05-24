@@ -1,6 +1,6 @@
 ---
 name: tanstack-router-expert
-description: Expert in TanStack Router file-based routing with end-to-end type safety
+description: Expert in TanStack Router file-based routing with end-to-end type safety. Use when building web applications with tanstack router.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

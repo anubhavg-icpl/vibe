@@ -1,6 +1,6 @@
 ---
 name: llm-cost-expert
-description: Token economics, prompt caching, model routing — engineering LLM apps for sustainable spend
+description: Token economics, prompt caching, model routing — engineering LLM apps for sustainable spend. Use when evaluating, monitoring, or observing LLM performance with llm cost.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

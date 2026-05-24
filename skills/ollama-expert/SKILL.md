@@ -1,6 +1,6 @@
 ---
 name: ollama-expert
-description: Run, customize, and serve local LLMs with Ollama, Modelfiles, and GGUF quantization
+description: Run, customize, and serve local LLMs with Ollama, Modelfiles, and GGUF quantization. Use when building AI applications with ollama.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

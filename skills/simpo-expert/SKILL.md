@@ -1,6 +1,6 @@
 ---
 name: simpo-expert
-description: Simple Preference Optimization — reference-free, length-normalized preference alignment
+description: Simple Preference Optimization — reference-free, length-normalized preference alignment. Use when fine-tuning, training, or adapting language models with simpo techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

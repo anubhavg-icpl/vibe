@@ -1,6 +1,6 @@
 ---
 name: mcp-transport-migrator
-description: Produce a migration plan from legacy HTTP+SSE to Streamable HTTP with session id continuity and Origin validation.
+description: Produce a migration plan from legacy HTTP+SSE to Streamable HTTP with session id continuity and Origin validation. Use when you need help with mcp transport migrator.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 09

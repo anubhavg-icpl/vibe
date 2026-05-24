@@ -1,6 +1,6 @@
 ---
 name: live-dashboard
-description: |
+description: |. Use when you need help with live dashboard.
   Notion-style team dashboard rendered as a Live Artifact. A single-page,
   self-contained HTML dashboard with KPIs, a 7-day sparkline, a real-time
   activity feed and a linked-database task table — wired to Notion via the

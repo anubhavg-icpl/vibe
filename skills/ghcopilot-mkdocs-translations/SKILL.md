@@ -1,6 +1,6 @@
 ---
 name: mkdocs-translations
-description: 'Generate a language translation for a mkdocs documentation stack.'
+description: Generate a language translation for a mkdocs documentation stack. Use when you need help with mkdocs translations.
 license: CC-BY-NC-SA-4.0
 ---
 

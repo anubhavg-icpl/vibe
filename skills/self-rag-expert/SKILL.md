@@ -1,6 +1,6 @@
 ---
 name: self-rag-expert
-description: Self-RAG — model decides when to retrieve and critiques evidence with reflection tokens
+description: Self-RAG — model decides when to retrieve and critiques evidence with reflection tokens. Use when building or optimizing retrieval-augmented generation pipelines with self rag.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

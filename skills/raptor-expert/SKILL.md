@@ -1,6 +1,6 @@
 ---
 name: raptor-expert
-description: RAPTOR — recursive abstractive summarization tree for long-document RAG
+description: RAPTOR — recursive abstractive summarization tree for long-document RAG. Use when building or optimizing retrieval-augmented generation pipelines with raptor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

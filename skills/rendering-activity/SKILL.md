@@ -1,6 +1,6 @@
 ---
 name: rendering-activity
-description: Use Activity Component for Show/Hide
+description: Use Activity Component for Show/Hide. Use when you need help with rendering activity.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

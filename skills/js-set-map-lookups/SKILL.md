@@ -1,6 +1,6 @@
 ---
 name: js-set-map-lookups
-description: Use Set/Map for O(1) Lookups
+description: Use Set/Map for O(1) Lookups. Use when you need help with js set map lookups.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

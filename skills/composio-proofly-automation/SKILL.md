@@ -1,6 +1,6 @@
 ---
 name: proofly-automation
-description: "Automate Proofly tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Proofly tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with proofly automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

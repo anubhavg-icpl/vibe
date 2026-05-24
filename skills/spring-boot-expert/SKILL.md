@@ -1,6 +1,6 @@
 ---
 name: spring-boot-expert
-description: Expert in Spring Boot framework with REST APIs, security, testing, performance, dependency injection, and production deployment
+description: Expert in Spring Boot framework with REST APIs, security, testing, performance, dependency injection, and production deployment. Use when you need deep expertise in spring boot.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

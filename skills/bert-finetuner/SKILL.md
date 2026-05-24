@@ -1,6 +1,6 @@
 ---
 name: bert-finetuner
-description: Scope a BERT fine-tune for a new classification, extraction, or retrieval task.
+description: Scope a BERT fine-tune for a new classification, extraction, or retrieval task. Use when you need help with bert finetuner.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 6

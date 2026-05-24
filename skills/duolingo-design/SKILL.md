@@ -1,6 +1,6 @@
 ---
 name: duolingo-design
-description: Expert in the Duolingo design system - Language-learning platform. Bright owl green, chunky shadows, gamified joy.
+description: Expert in the Duolingo design system - Language-learning platform. Bright owl green, chunky shadows, gamified joy. Use when building UI components, applying design tokens, or implementing visual styles for duolingo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: td-agent
-description: Pick between Q-learning, SARSA, Expected SARSA for a tabular or small-feature RL task.
+description: Pick between Q-learning, SARSA, Expected SARSA for a tabular or small-feature RL task. Use when you need help with td agent.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 4

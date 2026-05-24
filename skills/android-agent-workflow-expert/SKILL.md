@@ -1,6 +1,6 @@
 ---
 name: android-agent-workflow-expert
-description: End-to-end agent recipes — init → create → sdk install → emulator → run → layout → screen → docs. Composes every Android CLI command cluster.
+description: End-to-end agent recipes — init → create → sdk install → emulator → run → layout → screen → docs. Composes every Android CLI command cluster. Use when using Android CLI tools for android agent workflow.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

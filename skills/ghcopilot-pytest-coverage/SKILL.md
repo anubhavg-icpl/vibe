@@ -1,6 +1,6 @@
 ---
 name: pytest-coverage
-description: 'Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%.'
+description: Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%. Use when you need help with pytest coverage.
 license: CC-BY-NC-SA-4.0
 ---
 

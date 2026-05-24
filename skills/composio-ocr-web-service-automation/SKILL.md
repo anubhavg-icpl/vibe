@@ -1,6 +1,6 @@
 ---
 name: ocr-web-service-automation
-description: "Automate OCR Web Service tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate OCR Web Service tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with ocr web service automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

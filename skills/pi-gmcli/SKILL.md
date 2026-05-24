@@ -1,6 +1,6 @@
 ---
 name: gmcli
-description: Gmail CLI for searching emails, reading threads, sending messages, managing drafts, and handling labels/attachments.
+description: Gmail CLI for searching emails, reading threads, sending messages, managing drafts, and handling labels/attachments. Use when you need help with gmcli.
 license: CC-BY-NC-SA-4.0
 ---
 

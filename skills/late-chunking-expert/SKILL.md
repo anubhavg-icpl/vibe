@@ -1,6 +1,6 @@
 ---
 name: late-chunking-expert
-description: Jina's late chunking — embed long context first, then chunk the embeddings
+description: "Jina's late chunking — embed long context first, then chunk the embeddings. Use when building or optimizing retrieval-augmented generation pipelines with late chunking."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

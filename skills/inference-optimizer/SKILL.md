@@ -1,6 +1,6 @@
 ---
 name: inference-optimizer
-description: Pick attention implementation, KV cache strategy, quantization, and speculative decoding for a new inference deployment.
+description: Pick attention implementation, KV cache strategy, quantization, and speculative decoding for a new inference deployment. Use when you need help with inference optimizer.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 12

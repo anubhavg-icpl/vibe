@@ -1,6 +1,6 @@
 ---
 name: mythos-behavioral-analysis
-description: Automated transcript analysis of autonomous cyber-agent runs — unique services, exploit/exploration ratio, credential reuse, drift detection, cost-per-milestone
+description: Automated transcript analysis of autonomous cyber-agent runs — unique services, exploit/exploration ratio, credential reuse, drift detection, cost-per-milestone. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving behavioral analysis.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

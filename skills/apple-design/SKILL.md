@@ -1,6 +1,6 @@
 ---
 name: apple-design
-description: Expert in the Apple design system - Consumer electronics. Premium white space, SF Pro, cinematic imagery.
+description: Expert in the Apple design system - Consumer electronics. Premium white space, SF Pro, cinematic imagery. Use when building UI components, applying design tokens, or implementing visual styles for apple.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

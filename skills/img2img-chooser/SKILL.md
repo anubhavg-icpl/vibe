@@ -1,6 +1,6 @@
 ---
 name: img2img-chooser
-description: Pick an image-to-image approach given paired vs unpaired data, domain specificity, and latency budget.
+description: Pick an image-to-image approach given paired vs unpaired data, domain specificity, and latency budget. Use when you need help with img2img chooser.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 04

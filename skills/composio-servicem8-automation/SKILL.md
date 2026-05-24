@@ -1,6 +1,6 @@
 ---
 name: servicem8-automation
-description: "Automate Servicem8 tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Servicem8 tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with servicem8 automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

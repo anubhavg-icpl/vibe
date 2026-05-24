@@ -1,6 +1,6 @@
 ---
 name: rerender-derived-state
-description: Subscribe to Derived State
+description: Subscribe to Derived State. Use when you need help with rerender derived state.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

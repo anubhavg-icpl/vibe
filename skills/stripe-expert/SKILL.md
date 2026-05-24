@@ -1,6 +1,6 @@
 ---
 name: stripe-expert
-description: Expert in Stripe Payments, Subscriptions, Invoicing, Connect, and webhooks
+description: Expert in Stripe Payments, Subscriptions, Invoicing, Connect, and webhooks. Use when deploying to or building on stripe edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

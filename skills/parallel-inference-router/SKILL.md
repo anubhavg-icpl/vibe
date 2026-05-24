@@ -1,6 +1,6 @@
 ---
 name: parallel-inference-router
-description: Route a reasoning workload between voting, tree-of-thought, multi-agent, Hogwild!, and speculative decoding strategies.
+description: Route a reasoning workload between voting, tree-of-thought, multi-agent, Hogwild!, and speculative decoding strategies. Use when you need help with parallel inference router.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 22

@@ -1,6 +1,6 @@
 ---
 name: acd-terminal-ollama-design
-description: Reference DESIGN.md for monochrome, mono-everywhere, CLI-first aesthetic.
+description: Reference DESIGN.md for monochrome, mono-everywhere, CLI-first aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for terminal ollama.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: futuristic-design
-description: Expert in the Futuristic design system - Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.
+description: Expert in the Futuristic design system - Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for futuristic.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

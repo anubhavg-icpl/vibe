@@ -1,6 +1,6 @@
 ---
 name: android-ndk-expert
-description: Native Android development with NDK — CMake, JNI, Prefab AAR packaging, NEON SIMD, and native crash debugging
+description: Native Android development with NDK — CMake, JNI, Prefab AAR packaging, NEON SIMD, and native crash debugging. Use when developing Android apps with android ndk.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

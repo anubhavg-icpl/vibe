@@ -1,6 +1,6 @@
 ---
 name: fp-errors
-description: Stop throwing everywhere - handle errors as values using Either and TaskEither for cleaner, more predictable code
+description: Stop throwing everywhere - handle errors as values using Either and TaskEither for cleaner, more predictable code. Use when you need help with fp errors.
 license: CC-BY-NC-SA-4.0
 author: kadu
 metadata:

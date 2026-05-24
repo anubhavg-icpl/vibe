@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.
+description: Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling. Use when you need help with design system.
 license: CC-BY-NC-SA-4.0
 origin: ECC
 ---

@@ -1,6 +1,6 @@
 ---
 name: powershell-windows
-description: "PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling."
+description: PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling. Use when you need help with powershell windows.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: acd-playful-canva-design
-description: Reference DESIGN.md for design tools that need to feel friendly and full-spectrum without sliding into kitsch. Canva-purple action, periwinkle and sky support tones, generous radii, gradient surfaces used as backdrops not buttons.
+description: Reference DESIGN.md for design tools that need to feel friendly and full-spectrum without sliding into kitsch. Canva-purple action, periwinkle and sky support tones, generous radii, gradient surfaces used as backdrops not buttons. Use when building UI components, applying design tokens, or implementing visual styles for playful canva.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

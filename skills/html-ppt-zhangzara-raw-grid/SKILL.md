@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-raw-grid
-description: |
+description: |. Use when you need help with html ppt zhangzara raw grid.
   Raw Grid — Neo-brutalist deck with thick borders, offset shadows, and a pink/sage/ink palette. Anything that should feel direct and graphic-confident: founder pitches, accelerator demos, brand decks, indie launches, creator portfolios.
 license: CC-BY-NC-SA-4.0
 triggers: 

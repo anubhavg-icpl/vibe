@@ -1,6 +1,6 @@
 ---
 name: astro
-description: "Build content-focused websites with Astro — zero JS by default, islands architecture, multi-framework components, and Markdown/MDX support."
+description: Build content-focused websites with Astro — zero JS by default, islands architecture, multi-framework components, and Markdown/MDX support. Use when you need help with astro.
 license: CC-BY-NC-SA-4.0
 author: suhaibjanjua
 tools: [claude, cursor, gemini]

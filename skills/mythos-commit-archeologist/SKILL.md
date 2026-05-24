@@ -1,6 +1,6 @@
 ---
 name: mythos-commit-archeologist
-description: Mine git history for security-relevant commits and find sibling call sites that never received the fix
+description: Mine git history for security-relevant commits and find sibling call sites that never received the fix. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving commit archeologist.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

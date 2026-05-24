@@ -1,6 +1,6 @@
 ---
 name: provider-portability-audit
-description: Audit a function-calling integration against one provider for what breaks when ported to the other two.
+description: Audit a function-calling integration against one provider for what breaks when ported to the other two. Use when you need help with provider portability audit.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 02

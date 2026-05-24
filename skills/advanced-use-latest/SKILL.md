@@ -1,6 +1,6 @@
 ---
 name: advanced-use-latest
-description: useLatest for Stable Callback Refs
+description: useLatest for Stable Callback Refs. Use when you need help with advanced use latest.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

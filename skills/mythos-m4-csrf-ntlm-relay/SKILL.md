@@ -1,6 +1,6 @@
 ---
 name: mythos-m4-csrf-ntlm-relay
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 4 — wiki CSRF planting, forced NTLM auth, relay capture, and password-DB cracking
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 4 — wiki CSRF planting, forced NTLM auth, relay capture, and password-DB cracking. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m4 csrf ntlm relay."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

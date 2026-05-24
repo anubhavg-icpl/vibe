@@ -1,6 +1,6 @@
 ---
 name: prompt-optimizer
-description: >-
+description: >-. Use when you need help with prompt optimizer.
   Analyze raw prompts, identify intent and gaps, match ECC components
   (skills/commands/agents/hooks), and output a ready-to-paste optimized
   prompt. Advisory role only — never executes the task itself.

@@ -1,6 +1,6 @@
 ---
 name: paypal-integration
-description: "Master PayPal payment integration including Express Checkout, IPN handling, recurring billing, and refund workflows."
+description: Master PayPal payment integration including Express Checkout, IPN handling, recurring billing, and refund workflows. Use when you need help with paypal integration.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

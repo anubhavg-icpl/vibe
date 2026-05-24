@@ -1,6 +1,6 @@
 ---
 name: superpowers-lab
-description: "Lab environment for Claude superpowers"
+description: Lab environment for Claude superpowers. Use when you need help with superpowers lab.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

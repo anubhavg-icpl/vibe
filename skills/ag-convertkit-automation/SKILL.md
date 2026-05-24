@@ -1,6 +1,6 @@
 ---
 name: convertkit-automation
-description: "Automate ConvertKit (Kit) tasks via Rube MCP (Composio): manage subscribers, tags, broadcasts, and broadcast stats. Always search tools first for current schemas."
+description: Automate ConvertKit (Kit) tasks via Rube MCP (Composio): manage subscribers, tags, broadcasts, and broadcast stats. Always search tools first for current schemas. Use when you need help with convertkit automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

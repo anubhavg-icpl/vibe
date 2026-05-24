@@ -1,6 +1,6 @@
 ---
 name: coref-picker
-description: Pick a coreference approach, evaluation plan, and integration strategy.
+description: Pick a coreference approach, evaluation plan, and integration strategy. Use when you need help with coref picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 24

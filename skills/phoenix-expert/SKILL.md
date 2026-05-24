@@ -1,6 +1,6 @@
 ---
 name: phoenix-expert
-description: Expert in Phoenix - Elixir's productive web framework for reliable, fast applications
+description: "Expert in Phoenix - Elixir's productive web framework for reliable, fast applications. Use when building applications with the phoenix framework."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

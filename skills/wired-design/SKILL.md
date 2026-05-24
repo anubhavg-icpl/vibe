@@ -1,6 +1,6 @@
 ---
 name: wired-design
-description: Expert in the WIRED design system - Tech magazine. Paper-white broadsheet density, custom serif display, mono kickers, ink-blue links.
+description: Expert in the WIRED design system - Tech magazine. Paper-white broadsheet density, custom serif display, mono kickers, ink-blue links. Use when building UI components, applying design tokens, or implementing visual styles for wired.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

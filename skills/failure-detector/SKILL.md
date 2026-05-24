@@ -1,6 +1,6 @@
 ---
 name: failure-detector
-description: Generate failure-mode detectors for agent traces, wired to a trace store, tagging the five industry-recurring modes plus domain-specific signatures.
+description: Generate failure-mode detectors for agent traces, wired to a trace store, tagging the five industry-recurring modes plus domain-specific signatures. Use when you need help with failure detector.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 26

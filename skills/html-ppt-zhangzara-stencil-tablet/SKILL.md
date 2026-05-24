@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-stencil-tablet
-description: |
+description: |. Use when you need help with html ppt zhangzara stencil tablet.
   Stencil & Tablet — Bone paper with stencil-cut headlines and a six-color earth palette: archaeology meets brand. Anything that should feel archival, tactile, and weighty-graphic: museum and cultural-institution decks, art / architecture brands, longform research, heritage and craft brands, manifestos.
 license: CC-BY-NC-SA-4.0
 triggers: 

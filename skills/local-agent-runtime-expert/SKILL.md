@@ -1,6 +1,6 @@
 ---
 name: local-agent-runtime-expert
-description: Wire local-only agentic stacks — Continue.dev, Cline, Aider, Open Interpreter, Goose — to Ollama, LM Studio, llama-server, and Jan
+description: Wire local-only agentic stacks — Continue.dev, Cline, Aider, Open Interpreter, Goose — to Ollama, LM Studio, llama-server, and Jan. Use when deploying, running, or configuring local LLM inference with local agent runtime.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

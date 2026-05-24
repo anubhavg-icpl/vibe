@@ -1,6 +1,6 @@
 ---
 name: huggingface-design
-description: Expert in the Hugging Face design system - ML community hub. Sunny yellow accent, monospace identity, cheerful and dense.
+description: Expert in the Hugging Face design system - ML community hub. Sunny yellow accent, monospace identity, cheerful and dense. Use when building UI components, applying design tokens, or implementing visual styles for huggingface.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

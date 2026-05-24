@@ -1,6 +1,6 @@
 ---
 name: airbyte-expert
-description: Expert in Airbyte connectors, the Connector Development Kit, and sync modes
+description: Expert in Airbyte connectors, the Connector Development Kit, and sync modes. Use when working with airbyte for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

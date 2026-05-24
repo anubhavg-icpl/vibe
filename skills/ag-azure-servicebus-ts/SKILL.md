@@ -1,6 +1,6 @@
 ---
 name: azure-servicebus-ts
-description: "Enterprise messaging with queues, topics, and subscriptions."
+description: Enterprise messaging with queues, topics, and subscriptions. Use when you need help with azure servicebus ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

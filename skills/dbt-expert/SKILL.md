@@ -1,6 +1,6 @@
 ---
 name: dbt-expert
-description: Expert in dbt-core 1.8+ with contracts, unit tests, and the semantic layer
+description: Expert in dbt-core 1.8+ with contracts, unit tests, and the semantic layer. Use when working with dbt for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

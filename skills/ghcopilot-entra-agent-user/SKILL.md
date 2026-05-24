@@ -1,6 +1,6 @@
 ---
 name: entra-agent-user
-description: 'Create Agent Users in Microsoft Entra ID from Agent Identities, enabling AI agents to act as digital workers with user identity capabilities in Microsoft 365 and Azure environments.'
+description: Create Agent Users in Microsoft Entra ID from Agent Identities, enabling AI agents to act as digital workers with user identity capabilities in Microsoft 365 and Azure environments. Use when you need help with entra agent user.
 license: CC-BY-NC-SA-4.0
 ---
 

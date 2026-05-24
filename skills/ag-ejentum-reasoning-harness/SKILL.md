@@ -1,6 +1,6 @@
 ---
 name: ejentum-reasoning-harness
-description: "MCP server exposing four cognitive harness modes (reasoning, code, anti-deception, memory). Each call returns an engineered scaffold (failure pattern, procedure, suppression vectors, falsification test) the agent ingests before generating."
+description: MCP server exposing four cognitive harness modes (reasoning, code, anti-deception, memory). Each call returns an engineered scaffold (failure pattern, procedure, suppression vectors, falsification test) the agent ingests before generating. Use when you need help with ejentum reasoning harness.
 source_repo: ejentum/ejentum-mcp
 source_type: community
 license: "MIT"

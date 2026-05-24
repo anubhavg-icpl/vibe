@@ -1,6 +1,6 @@
 ---
 name: otel-genai-instrumentation
-description: Produce an instrumentation plan for an agent codebase to emit OTel GenAI spans end-to-end.
+description: Produce an instrumentation plan for an agent codebase to emit OTel GenAI spans end-to-end. Use when you need help with otel genai instrumentation.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 19

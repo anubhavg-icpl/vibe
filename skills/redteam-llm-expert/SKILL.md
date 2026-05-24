@@ -1,6 +1,6 @@
 ---
 name: redteam-llm-expert
-description: Jailbreak suites, garak, PyRIT, Promptfoo red-team — adversarial testing for LLM apps
+description: Jailbreak suites, garak, PyRIT, Promptfoo red-team — adversarial testing for LLM apps. Use when evaluating, monitoring, or observing LLM performance with redteam llm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

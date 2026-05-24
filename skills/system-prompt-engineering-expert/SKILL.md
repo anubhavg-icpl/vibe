@@ -1,6 +1,6 @@
 ---
 name: system-prompt-engineering-expert
-description: Author durable system prompts — persona, capability scoping, refusal patterns, output format directives, jailbreak hardening, prompt caching, dynamic injection
+description: Author durable system prompts — persona, capability scoping, refusal patterns, output format directives, jailbreak hardening, prompt caching, dynamic injection. Use when creating, converting, or publishing model files with system prompt engineering.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

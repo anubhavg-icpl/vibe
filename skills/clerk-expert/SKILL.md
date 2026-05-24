@@ -1,6 +1,6 @@
 ---
 name: clerk-expert
-description: Expert in Clerk authentication, organizations, webhooks, and Next.js integration
+description: Expert in Clerk authentication, organizations, webhooks, and Next.js integration. Use when deploying to or building on clerk edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

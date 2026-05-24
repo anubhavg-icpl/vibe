@@ -1,6 +1,6 @@
 ---
 name: vercel-deployment
-description: Expert knowledge for deploying to Vercel with Next.js
+description: Expert knowledge for deploying to Vercel with Next.js. Use when you need help with vercel deployment.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: unsloth-expert
-description: Unsloth — 2x faster LLM fine-tuning with 70% less VRAM via fused Triton kernels
+description: Unsloth — 2x faster LLM fine-tuning with 70% less VRAM via fused Triton kernels. Use when fine-tuning, training, or adapting language models with unsloth techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

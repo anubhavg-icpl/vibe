@@ -1,6 +1,6 @@
 ---
 name: skill-svd
-description: Apply SVD to real problems including compression, denoising, recommendations, and least-squares solving
+description: Apply SVD to real problems including compression, denoising, recommendations, and least-squares solving. Use when you need help with skill svd.
 license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 11

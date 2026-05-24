@@ -1,6 +1,6 @@
 ---
 name: givebutter-automation
-description: "Automate Givebutter tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Givebutter tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with givebutter automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

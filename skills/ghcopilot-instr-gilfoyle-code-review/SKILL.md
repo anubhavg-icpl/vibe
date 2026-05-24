@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-gilfoyle-code-review
-description: "Gilfoyle-style code review instructions that channel the sardonic technical supremacy of Silicon Valley''s most arrogant systems architect."
+description: "Gilfoyle-style code review instructions that channel the sardonic technical supremacy of Silicon Valley''s most arrogant systems architect. Use when writing or reviewing gilfoyle code review code and need idiomatic conventions and best practices."
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

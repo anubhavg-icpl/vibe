@@ -1,6 +1,6 @@
 ---
 name: perf-ops
-description: "Performance profiling and optimization orchestrator - diagnoses symptoms, dispatches profiling to language experts, manages before/after comparisons. Triggers on: performance, profiling, flamegraph, pprof, py-spy, clinic.js, memray, heaptrack, bundle size, webpack analyzer, load testing, k6, artillery, vegeta, locust, benchmark, hyperfine, criterion, slow query, EXPLAIN ANALYZE, N+1, caching, optimization, latency, throughput, p99, memory leak, CPU spike, bottleneck."
+description: Performance profiling and optimization orchestrator - diagnoses symptoms, dispatches profiling to language experts, manages before/after comparisons. Triggers on: performance, profiling, flamegraph, pprof, py-spy, clinic.js, memray, heaptrack, bundle size, webpack analyzer, load testing, k6, artillery, vegeta, locust, benchmark, hyperfine, criterion, slow query, EXPLAIN ANALYZE, N+1, caching, optimization, latency, throughput, p99, memory leak, CPU spike, bottleneck. Use when you need help with perf ops.
 license: MIT
 allowed-tools: "Read Edit Write Bash Glob Grep Agent TaskCreate TaskUpdate"
 metadata:

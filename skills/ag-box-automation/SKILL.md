@@ -1,6 +1,6 @@
 ---
 name: box-automation
-description: "Automate Box operations including file upload/download, content search, folder management, collaboration, metadata queries, and sign requests through Composio's Box toolkit."
+description: "Automate Box operations including file upload/download, content search, folder management, collaboration, metadata queries, and sign requests through Composio's Box toolkit. Use when you need help with box automation."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

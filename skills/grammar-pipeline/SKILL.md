@@ -1,6 +1,6 @@
 ---
 name: grammar-pipeline
-description: Design a classical POS + dependency pipeline for a downstream NLP task.
+description: Design a classical POS + dependency pipeline for a downstream NLP task. Use when you need help with grammar pipeline.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 07

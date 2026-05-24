@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-use-cliche-data-in-docs
-description: "Ensure documentation and examples use only generic, cliche placeholder data — never real or sensitive data sourced from local scripts, configuration, task files, or prompt context."
+description: Ensure documentation and examples use only generic, cliche placeholder data — never real or sensitive data sourced from local scripts, configuration, task files, or prompt context. Use when writing or reviewing use cliche data in docs code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

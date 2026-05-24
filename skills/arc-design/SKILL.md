@@ -1,6 +1,6 @@
 ---
 name: arc-design
-description: Expert in the Arc Browser design system - \"The browser that browses for you.\" Translucent surfaces, gradient warmth, sidebar-first layout.
+description: "Expert in the Arc Browser design system - \\"The browser that browses for you.\\" Translucent surfaces, gradient warmth, sidebar-first layout. Use when building UI components, applying design tokens, or implementing visual styles for arc."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

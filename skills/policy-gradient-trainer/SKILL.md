@@ -1,6 +1,6 @@
 ---
 name: policy-gradient-trainer
-description: Produce a REINFORCE / actor-critic / PPO training config for a given task and diagnose variance issues.
+description: Produce a REINFORCE / actor-critic / PPO training config for a given task and diagnose variance issues. Use when you need help with policy gradient trainer.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 6

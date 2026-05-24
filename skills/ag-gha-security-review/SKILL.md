@@ -1,6 +1,6 @@
 ---
 name: gha-security-review
-description: "Find exploitable vulnerabilities in GitHub Actions workflows. Every finding MUST include a concrete exploitation scenario — if you can't build the attack, don't report it."
+description: "Find exploitable vulnerabilities in GitHub Actions workflows. Every finding MUST include a concrete exploitation scenario — if you can't build the attack, don't report it. Use when you need help with gha security review."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: skill-3dgs-export-router
-description: Pick the right 3DGS export format (.ply / .splat / glTF KHR_gaussian_splatting / USD) given the downstream viewer or engine
+description: Pick the right 3DGS export format (.ply / .splat / glTF KHR_gaussian_splatting / USD) given the downstream viewer or engine. Use when you need help with skill 3dgs export router.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 22

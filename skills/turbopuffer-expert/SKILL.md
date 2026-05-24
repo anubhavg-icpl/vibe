@@ -1,6 +1,6 @@
 ---
 name: turbopuffer-expert
-description: Deep expertise in Turbopuffer — object-storage-first vector + full-text search, three-tier caching, and ~$0.02/GB cold storage economics
+description: Deep expertise in Turbopuffer — object-storage-first vector + full-text search, three-tier caching, and ~$0.02/GB cold storage economics. Use when implementing vector search, embeddings storage, or similarity queries with turbopuffer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

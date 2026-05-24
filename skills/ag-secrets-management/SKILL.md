@@ -1,6 +1,6 @@
 ---
 name: secrets-management
-description: "Secure secrets management practices for CI/CD pipelines using Vault, AWS Secrets Manager, and other tools."
+description: Secure secrets management practices for CI/CD pipelines using Vault, AWS Secrets Manager, and other tools. Use when you need help with secrets management.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

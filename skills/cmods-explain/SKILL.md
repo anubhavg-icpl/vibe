@@ -1,6 +1,6 @@
 ---
 name: explain
-description: "Deep explanation of complex code, files, or concepts. Routes to expert agents, uses structural search, generates mermaid diagrams. Triggers on: explain, deep dive, how does X work, architecture, data flow."
+description: Deep explanation of complex code, files, or concepts. Routes to expert agents, uses structural search, generates mermaid diagrams. Triggers on: explain, deep dive, how does X work, architecture, data flow. Use when you need help with explain.
 license: MIT
 compatibility: "Uses ast-grep, tokei, rg, fd if available. Falls back to standard tools."
 allowed-tools: "Read Glob Grep Bash Task"

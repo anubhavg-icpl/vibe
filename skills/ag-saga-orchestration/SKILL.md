@@ -1,6 +1,6 @@
 ---
 name: saga-orchestration
-description: "Patterns for managing distributed transactions and long-running business processes."
+description: Patterns for managing distributed transactions and long-running business processes. Use when you need help with saga orchestration.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

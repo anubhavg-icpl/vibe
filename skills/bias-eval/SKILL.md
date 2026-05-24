@@ -1,6 +1,6 @@
 ---
 name: bias-eval
-description: Audit a bias evaluation report across metric categories, intersectionality, and debias mechanism.
+description: Audit a bias evaluation report across metric categories, intersectionality, and debias mechanism. Use when you need help with bias eval.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 20

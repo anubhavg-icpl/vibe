@@ -1,6 +1,6 @@
 ---
 name: query-rewriting-expert
-description: Query expansion, decomposition, multi-query retrieval, step-back prompting
+description: Query expansion, decomposition, multi-query retrieval, step-back prompting. Use when building or optimizing retrieval-augmented generation pipelines with query rewriting.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

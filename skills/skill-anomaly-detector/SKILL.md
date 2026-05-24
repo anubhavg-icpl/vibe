@@ -1,6 +1,6 @@
 ---
 name: skill-anomaly-detector
-description: Choose the right anomaly detection approach for your problem
+description: Choose the right anomaly detection approach for your problem. Use when you need help with skill anomaly detector.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 16

@@ -1,6 +1,6 @@
 ---
 name: webassembly-expert
-description: Expert in WebAssembly for high-performance web and edge applications
+description: Expert in WebAssembly for high-performance web and edge applications. Use when you need deep expertise in webassembly.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

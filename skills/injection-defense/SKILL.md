@@ -1,6 +1,6 @@
 ---
 name: injection-defense
-description: Build a PVE (Prompt-Validator-Executor) layer with source-tagged content, injection-marker scanning, and allowlist navigation for any agent runtime.
+description: Build a PVE (Prompt-Validator-Executor) layer with source-tagged content, injection-marker scanning, and allowlist navigation for any agent runtime. Use when you need help with injection defense.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 27

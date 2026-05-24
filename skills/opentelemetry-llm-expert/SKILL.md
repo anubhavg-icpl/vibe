@@ -1,6 +1,6 @@
 ---
 name: opentelemetry-llm-expert
-description: OpenTelemetry GenAI semantic conventions — standardized LLM spans for any vendor
+description: OpenTelemetry GenAI semantic conventions — standardized LLM spans for any vendor. Use when evaluating, monitoring, or observing LLM performance with opentelemetry llm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

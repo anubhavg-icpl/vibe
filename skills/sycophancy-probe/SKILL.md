@@ -1,6 +1,6 @@
 ---
 name: sycophancy-probe
-description: Generate matched user-belief / third-party-belief prompts and score a model's sycophancy.
+description: "Generate matched user-belief / third-party-belief prompts and score a model's sycophancy. Use when you need help with sycophancy probe."
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 4

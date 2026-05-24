@@ -1,6 +1,6 @@
 ---
 name: terraform-module-library
-description: "Production-ready Terraform module patterns for AWS, Azure, and GCP infrastructure."
+description: Production-ready Terraform module patterns for AWS, Azure, and GCP infrastructure. Use when you need help with terraform module library.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

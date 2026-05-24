@@ -1,6 +1,6 @@
 ---
 name: stitch-loop
-description: Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern
+description: Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern. Use when you need help with stitch loop.
 license: CC-BY-NC-SA-4.0
 allowed-tools: 
   - "stitch*:*"

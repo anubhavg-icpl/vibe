@@ -1,6 +1,6 @@
 ---
 name: svelte-expert
-description: Expert in Svelte and SvelteKit for building reactive web applications
+description: Expert in Svelte and SvelteKit for building reactive web applications. Use when building applications with the svelte framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

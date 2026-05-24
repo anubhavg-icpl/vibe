@@ -1,6 +1,6 @@
 ---
 name: code-commenter
-description: code-commenter
+description: code-commenter. Use when you need help with code commenter.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

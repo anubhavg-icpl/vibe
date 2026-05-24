@@ -1,6 +1,6 @@
 ---
 name: elixir-expert
-description: Expert Elixir development with OTP, Phoenix, and functional programming mastery
+description: Expert Elixir development with OTP, Phoenix, and functional programming mastery. Use when writing, reviewing, or refactoring elixir code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

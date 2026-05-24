@@ -1,6 +1,6 @@
 ---
 name: elicitation-form-designer
-description: Design the elicitation form schema and message template for a tool that needs mid-call user confirmation or disambiguation.
+description: Design the elicitation form schema and message template for a tool that needs mid-call user confirmation or disambiguation. Use when you need help with elicitation form designer.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 12

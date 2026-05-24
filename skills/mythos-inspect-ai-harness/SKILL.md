@@ -1,6 +1,6 @@
 ---
 name: mythos-inspect-ai-harness
-description: Build agent evaluations on the UK AISI Inspect AI framework with Sandboxing Toolkit integration, real Task/Solver/Scorer APIs
+description: Build agent evaluations on the UK AISI Inspect AI framework with Sandboxing Toolkit integration, real Task/Solver/Scorer APIs. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving inspect ai harness.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

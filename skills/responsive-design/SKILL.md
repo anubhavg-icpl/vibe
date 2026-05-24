@@ -1,6 +1,6 @@
 ---
 name: responsive-design
-description: Expert in responsive web design, mobile-first development, and adaptive layouts
+description: Expert in responsive web design, mobile-first development, and adaptive layouts. Use when building UI with responsive design language and visual style.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: orbit-gmail
-description: |
+description: |. Use when you need help with orbit gmail.
   Open Orbit briefing skill — selected by the Orbit pipeline when
   Gmail is the user's only connected connector, or when the user
   explicitly scopes their daily digest to Gmail. Pulls the past 24

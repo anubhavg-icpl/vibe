@@ -1,6 +1,6 @@
 ---
 name: mini-context-graph
-description: |
+description: |. Use when you need help with mini context graph.
   A persistent, compounding knowledge base combining Karpathy's LLM Wiki pattern
   with a structured knowledge graph. Ingest documents once — the LLM writes wiki
   pages, extracts entities/relations into the graph, and stores raw content for

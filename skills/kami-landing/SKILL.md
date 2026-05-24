@@ -1,6 +1,6 @@
 ---
 name: kami-landing
-description: >
+description: >. Use when you need help with kami landing.
   Produce a print-grade single-page kami (紙 / 纸) document — warm
   parchment canvas, ink-blue accent, serif at one weight, no italic,
   no cool grays. The output reads like a professional white paper or

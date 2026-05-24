@@ -1,6 +1,6 @@
 ---
 name: qdrant-expert
-description: Deep expertise in Qdrant — payload filtering, scalar/binary/PQ quantization, multi-vector, dense+sparse hybrid, and distributed mode
+description: Deep expertise in Qdrant — payload filtering, scalar/binary/PQ quantization, multi-vector, dense+sparse hybrid, and distributed mode. Use when implementing vector search, embeddings storage, or similarity queries with qdrant.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

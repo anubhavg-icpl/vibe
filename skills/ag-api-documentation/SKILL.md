@@ -1,6 +1,6 @@
 ---
 name: api-documentation
-description: "API documentation workflow for generating OpenAPI specs, creating developer guides, and maintaining comprehensive API documentation."
+description: API documentation workflow for generating OpenAPI specs, creating developer guides, and maintaining comprehensive API documentation. Use when you need help with api documentation.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: granular-workflow-bundle

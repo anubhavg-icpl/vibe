@@ -1,6 +1,6 @@
 ---
 name: algolia-search
-description: Expert patterns for Algolia search implementation, indexing
+description: Expert patterns for Algolia search implementation, indexing. Use when you need help with algolia search.
   strategies, React InstantSearch, and relevance tuning
 license: CC-BY-NC-SA-4.0
 metadata:

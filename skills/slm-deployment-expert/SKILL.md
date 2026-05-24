@@ -1,6 +1,6 @@
 ---
 name: slm-deployment-expert
-description: Pick, quantize, and deploy sub-7B SLMs (Phi-4-mini, Qwen3 0.6-4B, Gemma 3 1B/4B, Llama 3.2 1B/3B, SmolLM3) to edge and constrained hardware
+description: Pick, quantize, and deploy sub-7B SLMs (Phi-4-mini, Qwen3 0.6-4B, Gemma 3 1B/4B, Llama 3.2 1B/3B, SmolLM3) to edge and constrained hardware. Use when deploying, running, or configuring local LLM inference with slm deployment.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

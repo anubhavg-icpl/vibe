@@ -1,6 +1,6 @@
 ---
 name: cc-skill-coding-standards
-description: "Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development."
+description: Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development. Use when enforcing cc skill coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

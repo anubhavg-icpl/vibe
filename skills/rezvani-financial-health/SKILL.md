@@ -1,6 +1,6 @@
 ---
 name: financial-health
-description: Run financial ratio analysis, DCF valuation, budget variance analysis, and rolling forecasts. Usage: /financial-health <ratios|dcf|budget|forecast> <data.json>
+description: Run financial ratio analysis, DCF valuation, budget variance analysis, and rolling forecasts. Usage: /financial-health <ratios|dcf|budget|forecast> <data.json>. Use when you need help with financial health.
 license: CC-BY-NC-SA-4.0
 ---
 

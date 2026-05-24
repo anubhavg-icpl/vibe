@@ -1,6 +1,6 @@
 ---
 name: marqo-expert
-description: Deep expertise in Marqo — end-to-end vector search with embedding inference baked in, ONNX/GPU acceleration, and ecommerce-specialized models
+description: Deep expertise in Marqo — end-to-end vector search with embedding inference baked in, ONNX/GPU acceleration, and ecommerce-specialized models. Use when implementing vector search, embeddings storage, or similarity queries with marqo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

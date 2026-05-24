@@ -1,6 +1,6 @@
 ---
 name: mlflow-llm-expert
-description: MLflow Tracing for LLMs, Prompt Engineering UI, mlflow.evaluate(), prompt registry
+description: MLflow Tracing for LLMs, Prompt Engineering UI, mlflow.evaluate(), prompt registry. Use when evaluating, monitoring, or observing LLM performance with mlflow llm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

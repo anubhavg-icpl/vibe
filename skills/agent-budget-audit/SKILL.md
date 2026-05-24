@@ -1,6 +1,6 @@
 ---
 name: agent-budget-audit
-description: Audit an agent deployment's cost-governor stack and flag missing layers before enabling unattended runs.
+description: "Audit an agent deployment's cost-governor stack and flag missing layers before enabling unattended runs. Use when you need help with agent budget audit."
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 13

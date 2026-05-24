@@ -1,6 +1,6 @@
 ---
 name: gitops-expert
-description: Expert in GitOps practices with ArgoCD and Flux for Kubernetes deployments
+description: Expert in GitOps practices with ArgoCD and Flux for Kubernetes deployments. Use when automating CI/CD, deployments, or operations with gitops.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

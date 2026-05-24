@@ -1,6 +1,6 @@
 ---
 name: agentql-automation
-description: "Automate Agentql tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Agentql tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with agentql automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

@@ -1,7 +1,7 @@
 ---
 id: 10-andruia-skill-smith
 name: 10-andruia-skill-smith
-description: "Ingeniero de Sistemas de Andru.ia. Diseña, redacta y despliega nuevas habilidades (skills) dentro del repositorio siguiendo el Estándar de Diamante."
+description: Ingeniero de Sistemas de Andru.ia. Diseña, redacta y despliega nuevas habilidades (skills) dentro del repositorio siguiendo el Estándar de Diamante. Use when you need help with 10 andruia skill smith.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: andruia

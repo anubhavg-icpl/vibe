@@ -1,6 +1,6 @@
 ---
 name: acd-cinematic-runway-design
-description: Reference DESIGN.md for film-grade dark UI, oversized type, motion-forward hero sections.
+description: Reference DESIGN.md for film-grade dark UI, oversized type, motion-forward hero sections. Use when building UI components, applying design tokens, or implementing visual styles for cinematic runway.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

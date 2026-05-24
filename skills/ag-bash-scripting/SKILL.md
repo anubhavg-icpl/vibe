@@ -1,6 +1,6 @@
 ---
 name: bash-scripting
-description: "Bash scripting workflow for creating production-ready shell scripts with defensive patterns, error handling, and testing."
+description: Bash scripting workflow for creating production-ready shell scripts with defensive patterns, error handling, and testing. Use when you need help with bash scripting.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: granular-workflow-bundle

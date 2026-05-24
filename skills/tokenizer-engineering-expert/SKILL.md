@@ -1,6 +1,6 @@
 ---
 name: tokenizer-engineering-expert
-description: Train tokenizers from scratch with HF tokenizers — BPE / SentencePiece / WordPiece — extend vocab for new languages or code, and add chat / special tokens
+description: Train tokenizers from scratch with HF tokenizers — BPE / SentencePiece / WordPiece — extend vocab for new languages or code, and add chat / special tokens. Use when creating, converting, or publishing model files with tokenizer engineering.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

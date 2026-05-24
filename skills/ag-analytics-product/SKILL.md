@@ -1,6 +1,6 @@
 ---
 name: analytics-product
-description: "Analytics de produto — PostHog, Mixpanel, eventos, funnels, cohorts, retencao, north star metric, OKRs e dashboards de produto."
+description: Analytics de produto — PostHog, Mixpanel, eventos, funnels, cohorts, retencao, north star metric, OKRs e dashboards de produto. Use when you need help with analytics product.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: none
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # ANALYTICS-PRODUCT — Decida com Dados

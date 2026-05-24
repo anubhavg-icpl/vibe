@@ -1,6 +1,6 @@
 ---
 name: emaillistverify-automation
-description: "Automate Emaillistverify tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Emaillistverify tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with emaillistverify automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

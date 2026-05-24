@@ -1,6 +1,6 @@
 ---
 name: ollama-docker-deploy-expert
-description: Production self-host Ollama in Docker/Compose with GPU passthrough, model preload, reverse proxy auth, and multi-GPU
+description: Production self-host Ollama in Docker/Compose with GPU passthrough, model preload, reverse proxy auth, and multi-GPU. Use when deploying, running, or configuring local LLM inference with ollama docker deploy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

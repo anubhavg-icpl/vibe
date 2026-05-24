@@ -1,6 +1,6 @@
 ---
 name: cantrill-style
-description: Bryan Cantrill — DTrace, illumos, Oxide; observability over logging, Rust for systems, toolmaking as craft
+description: Bryan Cantrill — DTrace, illumos, Oxide; observability over logging, Rust for systems, toolmaking as craft. Use when you want code review, architecture advice, or opinions in the style of cantrill.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

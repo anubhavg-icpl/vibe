@@ -1,6 +1,6 @@
 ---
 name: cs-product-strategist
-description: Product strategy agent for quarterly OKR planning, competitive landscape analysis, product vision development, and strategy pivot evaluation
+description: Product strategy agent for quarterly OKR planning, competitive landscape analysis, product vision development, and strategy pivot evaluation. Use when you need help with cs product strategist.
 license: CC-BY-NC-SA-4.0
 skills: product-team/product-strategist, product-team/competitive-teardown, product-team/product-manager-toolkit
 domain: product

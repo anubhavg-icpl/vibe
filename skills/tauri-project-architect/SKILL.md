@@ -1,6 +1,6 @@
 ---
 name: tauri-project-architect
-description: Production-ready Tauri desktop app structure with Rust backend and web frontend
+description: Production-ready Tauri desktop app structure with Rust backend and web frontend. Use when scaffolding, structuring, or architecting tauri projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

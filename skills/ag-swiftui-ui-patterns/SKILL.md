@@ -1,6 +1,6 @@
 ---
 name: swiftui-ui-patterns
-description: Apply proven SwiftUI UI patterns for navigation, sheets, async state, and reusable screens.
+description: Apply proven SwiftUI UI patterns for navigation, sheets, async state, and reusable screens. Use when you need help with swiftui ui patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: carrier-relationship-management
-description: >
+description: >. Use when you need help with carrier relationship management.
   Codified expertise for managing carrier portfolios, negotiating freight rates,
   tracking carrier performance, allocating freight, and maintaining strategic
   carrier relationships. Informed by transportation managers with 15+ years

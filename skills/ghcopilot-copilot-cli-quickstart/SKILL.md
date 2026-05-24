@@ -1,6 +1,6 @@
 ---
 name: copilot-cli-quickstart
-description: >
+description: >. Use when you need help with copilot cli quickstart.
   Use this skill when someone wants to learn GitHub Copilot CLI from scratch.
   Offers interactive step-by-step tutorials with separate Developer and
   Non-Developer tracks, plus on-demand Q&A. Just say "start tutorial" or

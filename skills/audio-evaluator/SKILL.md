@@ -1,6 +1,6 @@
 ---
 name: audio-evaluator
-description: Pick metrics, benchmarks, normalization rules, and reporting format for any audio model release.
+description: Pick metrics, benchmarks, normalization rules, and reporting format for any audio model release. Use when you need help with audio evaluator.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 17

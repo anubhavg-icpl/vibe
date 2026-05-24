@@ -1,6 +1,6 @@
 ---
 name: simulation-designer
-description: Design a generative-agent simulation (Smallville-style) for a given scenario. Specifies memory schema, reflection cadence, plan horizon, spatial/social constraints, and evaluation metrics.
+description: Design a generative-agent simulation (Smallville-style) for a given scenario. Specifies memory schema, reflection cadence, plan horizon, spatial/social constraints, and evaluation metrics. Use when you need help with simulation designer.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 17

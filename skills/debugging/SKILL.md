@@ -1,6 +1,6 @@
 ---
 name: debugging
-description: debugging
+description: debugging. Use when you need help with debugging.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

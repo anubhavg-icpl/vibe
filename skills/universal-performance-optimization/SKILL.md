@@ -1,6 +1,6 @@
 ---
 name: universal-performance-optimization
-description: Universal performance optimization best practices for all languages, frameworks, and stacks. Comprehensive guidance for frontend, backend, database, and infrastructure optimization with actionable checklists and real-world examples.
+description: Universal performance optimization best practices for all languages, frameworks, and stacks. Comprehensive guidance for frontend, backend, database, and infrastructure optimization with actionable checklists and real-world examples. Use when you need help with universal performance optimization.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

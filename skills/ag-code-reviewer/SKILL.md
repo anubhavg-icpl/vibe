@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-description: "Elite code review expert specializing in modern AI-powered code"
+description: Elite code review expert specializing in modern AI-powered code. Use when you need help with code reviewer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: typescript-expert
-description: TypeScript and JavaScript expert with deep knowledge of type-level programming, performance optimization, monorepo management, migration strategies, and modern tooling.
+description: TypeScript and JavaScript expert with deep knowledge of type-level programming, performance optimization, monorepo management, migration strategies, and modern tooling. Use when you need deep expertise in typescript.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: framework

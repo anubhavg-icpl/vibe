@@ -1,6 +1,6 @@
 ---
 name: azure-eventhub-rust
-description: |
+description: |. Use when you need help with azure eventhub rust.
   Azure Event Hubs library for Rust. Send and receive events for streaming data ingestion and batch processing.
   Triggers: "event hubs rust", "ProducerClient rust", "ConsumerClient rust", "send event rust", "streaming rust", "eventhub rust".
 license: MIT

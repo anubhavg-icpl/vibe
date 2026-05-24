@@ -1,6 +1,6 @@
 ---
 name: edge-target-picker
-description: Pick an edge inference target (Apple ANE, Qualcomm Hexagon, WebGPU/WebLLM, NVIDIA Jetson) and matching quantization format given device, model, and latency budget.
+description: Pick an edge inference target (Apple ANE, Qualcomm Hexagon, WebGPU/WebLLM, NVIDIA Jetson) and matching quantization format given device, model, and latency budget. Use when you need help with edge target picker.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 12

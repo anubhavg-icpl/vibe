@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-sakura-chroma
-description: |
+description: |. Use when you need help with html ppt zhangzara sakura chroma.
   Sakura Chroma — Vintage Japanese cassette-package aesthetic: cream paper, diagonal rainbow ribbons, condensed bold type, JIS-style spec checkboxes. Anything that should feel like a vintage Japanese cassette package or a TDK / Sony / Sakura Color product catalogue: indie hardware brand decks, music-label release schedules, analog studio retrospectives, zine and magazine pitches, kawaii-tech product launches, creative-studio annual reports.
 license: CC-BY-NC-SA-4.0
 triggers: 

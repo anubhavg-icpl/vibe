@@ -1,6 +1,6 @@
 ---
 name: html-ppt-xhs-post
-description: 小红书 / Instagram 风 9 页 3:4 竖版图文（810×1080）— 暖色 pastel、虚线 sticker 卡片、底部页码点点。用于发小红书图文、Instagram carousel、品牌种草内容。
+description: 小红书 / Instagram 风 9 页 3:4 竖版图文（810×1080）— 暖色 pastel、虚线 sticker 卡片、底部页码点点。用于发小红书图文、Instagram carousel、品牌种草内容。. Use when you need help with html ppt xhs post.
 license: CC-BY-NC-SA-4.0
 triggers: 
   - "小红书"

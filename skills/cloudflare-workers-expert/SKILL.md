@@ -1,6 +1,6 @@
 ---
 name: cloudflare-workers-expert
-description: Expert in Cloudflare Workers, Durable Objects, R2, KV, D1, Queues, and AI bindings
+description: Expert in Cloudflare Workers, Durable Objects, R2, KV, D1, Queues, and AI bindings. Use when deploying to or building on cloudflare workers edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

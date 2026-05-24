@@ -1,6 +1,6 @@
 ---
 name: multi-stage-dockerfile
-description: 'Create optimized multi-stage Dockerfiles for any language or framework'
+description: Create optimized multi-stage Dockerfiles for any language or framework. Use when you need help with multi stage dockerfile.
 license: CC-BY-NC-SA-4.0
 ---
 

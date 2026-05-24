@@ -1,6 +1,6 @@
 ---
 name: mythos-adversary-emulator
-description: MITRE ATT&CK-driven adversary emulation modeled on PNNL's ALOHA water-plant scaffold
+description: "MITRE ATT&CK-driven adversary emulation modeled on PNNL's ALOHA water-plant scaffold. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving adversary emulator."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: iot-expert
-description: Expert in IoT development with embedded systems and cloud connectivity
+description: Expert in IoT development with embedded systems and cloud connectivity. Use when you need deep expertise in iot.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

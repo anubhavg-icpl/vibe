@@ -1,6 +1,6 @@
 ---
 name: incident-runbook-templates
-description: "Production-ready templates for incident response runbooks covering detection, triage, mitigation, resolution, and communication."
+description: Production-ready templates for incident response runbooks covering detection, triage, mitigation, resolution, and communication. Use when you need help with incident runbook templates.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

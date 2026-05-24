@@ -1,6 +1,6 @@
 ---
 name: pi-packages-expert
-description: Authoring, publishing, installing, and filtering pi-coding-agent packages (npm, git, local)
+description: Authoring, publishing, installing, and filtering pi-coding-agent packages (npm, git, local). Use when working with pi.dev packages features.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: music-designer
-description: Pick a music-generation model, license strategy, length plan, and disclosure metadata for a deployment.
+description: Pick a music-generation model, license strategy, length plan, and disclosure metadata for a deployment. Use when you need help with music designer.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 09

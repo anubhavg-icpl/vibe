@@ -1,6 +1,6 @@
 ---
 name: viral-generator-builder
-description: Expert in building shareable generator tools that go viral - name
+description: Expert in building shareable generator tools that go viral - name. Use when you need help with viral generator builder.
   generators, quiz makers, avatar creators, personality tests, and calculator
   tools. Covers the psychology of sharing, viral mechanics, and building tools
   people can't resist sharing with friends.

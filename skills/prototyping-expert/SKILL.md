@@ -1,6 +1,6 @@
 ---
 name: prototyping-expert
-description: Expert in rapid prototyping with Figma, Framer, and code-based prototypes
+description: Expert in rapid prototyping with Figma, Framer, and code-based prototypes. Use when you need deep expertise in prototyping.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

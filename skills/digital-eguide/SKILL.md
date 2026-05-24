@@ -1,6 +1,6 @@
 ---
 name: digital-eguide
-description: |
+description: |. Use when you need help with digital eguide.
   A two-spread digital e-guide preview — page 1 is a cover (display title,
   author, "What's inside" stats, table of contents teaser); page 2 is a
   spread (lesson body with pull-quote and a step list). Lifestyle / creator

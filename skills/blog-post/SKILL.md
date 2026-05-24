@@ -1,6 +1,6 @@
 ---
 name: blog-post
-description: |
+description: |. Use when you need help with blog post.
   A long-form article / blog post — masthead, hero image placeholder,
   article body with figures and pull quotes, author byline, related posts.
   Use when the brief asks for "blog", "article", "post", "essay", or

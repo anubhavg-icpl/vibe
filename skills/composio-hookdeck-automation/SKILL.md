@@ -1,6 +1,6 @@
 ---
 name: hookdeck-automation
-description: "Automate Hookdeck tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Hookdeck tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with hookdeck automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

@@ -1,6 +1,6 @@
 ---
 name: text-generation-webui-expert
-description: Run oobabooga's textgen with multiple backends, OpenAI/Anthropic-compatible API, characters, training tab, and portable installer
+description: "Run oobabooga's textgen with multiple backends, OpenAI/Anthropic-compatible API, characters, training tab, and portable installer. Use when deploying, running, or configuring local LLM inference with text generation webui."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: react-coding-standards
-description: Production-ready React coding standards enforcing component patterns, hooks, state management, and accessibility
+description: Production-ready React coding standards enforcing component patterns, hooks, state management, and accessibility. Use when enforcing react coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

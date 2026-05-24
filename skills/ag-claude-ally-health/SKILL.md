@@ -1,6 +1,6 @@
 ---
 name: claude-ally-health
-description: "A health assistant skill for medical information analysis, symptom tracking, and wellness guidance."
+description: A health assistant skill for medical information analysis, symptom tracking, and wellness guidance. Use when you need help with claude ally health.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

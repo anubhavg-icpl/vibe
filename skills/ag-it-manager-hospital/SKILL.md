@@ -1,6 +1,6 @@
 ---
 name: it-manager-hospital
-description: World-class Hospital IT Management Advisor specializing in clinical safety, digital maturity (HIMSS/ONA/JCI), and HIS/PEP ecosystems.
+description: World-class Hospital IT Management Advisor specializing in clinical safety, digital maturity (HIMSS/ONA/JCI), and HIS/PEP ecosystems. Use when you need help with it manager hospital.
 license: CC-BY-NC-SA-4.0
 triggers: 
   - "it manager hospital"

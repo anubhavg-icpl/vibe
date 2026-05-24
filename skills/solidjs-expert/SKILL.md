@@ -1,6 +1,6 @@
 ---
 name: solidjs-expert
-description: Expert in SolidJS reactive framework with fine-grained reactivity and performance optimization
+description: Expert in SolidJS reactive framework with fine-grained reactivity and performance optimization. Use when building applications with the solidjs framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

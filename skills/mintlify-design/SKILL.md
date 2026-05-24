@@ -1,6 +1,6 @@
 ---
 name: mintlify-design
-description: Expert in the Mintlify design system - Documentation platform. Clean, green-accented, reading-optimized.
+description: Expert in the Mintlify design system - Documentation platform. Clean, green-accented, reading-optimized. Use when building UI components, applying design tokens, or implementing visual styles for mintlify.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

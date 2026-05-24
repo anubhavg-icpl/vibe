@@ -1,6 +1,6 @@
 ---
 name: breakdown-test
-description: 'Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.'
+description: Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects. Use when you need help with breakdown test.
 license: CC-BY-NC-SA-4.0
 ---
 

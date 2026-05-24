@@ -1,6 +1,6 @@
 ---
 name: terraform-skill
-description: "Terraform infrastructure as code best practices"
+description: Terraform infrastructure as code best practices. Use when you need help with terraform skill.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: hig-platforms
-description: Apple Human Interface Guidelines for platform-specific design.
+description: Apple Human Interface Guidelines for platform-specific design. Use when you need help with hig platforms.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

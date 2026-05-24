@@ -1,6 +1,6 @@
 ---
 name: multimodal-rag-expert
-description: RAG over images+text — ColPali, DSE, jina-embeddings-v4, voyage-multimodal-3, PDF chunking
+description: RAG over images+text — ColPali, DSE, jina-embeddings-v4, voyage-multimodal-3, PDF chunking. Use when building or optimizing retrieval-augmented generation pipelines with multimodal rag.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

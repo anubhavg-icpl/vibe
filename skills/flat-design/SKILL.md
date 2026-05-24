@@ -1,6 +1,6 @@
 ---
 name: flat-design
-description: Expert in the Flat design system - Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.
+description: Expert in the Flat design system - Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces. Use when building UI components, applying design tokens, or implementing visual styles for flat.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

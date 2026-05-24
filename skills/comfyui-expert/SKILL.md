@@ -1,6 +1,6 @@
 ---
 name: comfyui-expert
-description: ComfyUI graph design, custom nodes, workflow JSON, queue, API integration
+description: ComfyUI graph design, custom nodes, workflow JSON, queue, API integration. Use when working with multimodal AI (images, audio, video) using comfyui.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

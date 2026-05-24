@@ -1,6 +1,6 @@
 ---
 name: clickup-automation
-description: "Automate ClickUp project management including tasks, spaces, folders, lists, comments, and team operations via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate ClickUp project management including tasks, spaces, folders, lists, comments, and team operations via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with clickup automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: vit-configurator
-description: Pick a ViT variant, patch size, and pretraining source for a new vision task.
+description: Pick a ViT variant, patch size, and pretraining source for a new vision task. Use when you need help with vit configurator.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 9

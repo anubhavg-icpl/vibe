@@ -1,6 +1,6 @@
 ---
 name: idor-testing
-description: "Provide systematic methodologies for identifying and exploiting Insecure Direct Object Reference (IDOR) vulnerabilities in web applications."
+description: Provide systematic methodologies for identifying and exploiting Insecure Direct Object Reference (IDOR) vulnerabilities in web applications. Use when you need help with idor testing.
 license: CC-BY-NC-SA-4.0
 author: zebbern
 metadata:

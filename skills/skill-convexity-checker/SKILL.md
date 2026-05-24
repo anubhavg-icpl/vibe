@@ -1,6 +1,6 @@
 ---
 name: skill-convexity-checker
-description: Determine if an optimization problem is convex and choose the right solver
+description: Determine if an optimization problem is convex and choose the right solver. Use when you need help with skill convexity checker.
 license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 18

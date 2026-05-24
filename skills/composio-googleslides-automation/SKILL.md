@@ -1,6 +1,6 @@
 ---
 name: googleslides-automation
-description: "Automate Google Slides tasks via Rube MCP (Composio): create presentations, add slides from Markdown, batch update, copy from templates, get thumbnails. Always search tools first for current schemas."
+description: Automate Google Slides tasks via Rube MCP (Composio): create presentations, add slides from Markdown, batch update, copy from templates, get thumbnails. Always search tools first for current schemas. Use when you need help with googleslides automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

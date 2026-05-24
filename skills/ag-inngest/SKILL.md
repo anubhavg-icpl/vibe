@@ -1,6 +1,6 @@
 ---
 name: inngest
-description: Inngest expert for serverless-first background jobs, event-driven
+description: Inngest expert for serverless-first background jobs, event-driven. Use when you need help with inngest.
   workflows, and durable execution without managing queues or workers.
 license: CC-BY-NC-SA-4.0
 metadata:

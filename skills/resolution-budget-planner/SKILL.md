@@ -1,6 +1,6 @@
 ---
 name: resolution-budget-planner
-description: Pick between square-resize, AnyRes, M-RoPE, and NaFlex for a mixed-aspect-ratio VLM workload and emit a per-task token budget plan.
+description: Pick between square-resize, AnyRes, M-RoPE, and NaFlex for a mixed-aspect-ratio VLM workload and emit a per-task token budget plan. Use when you need help with resolution budget planner.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 06

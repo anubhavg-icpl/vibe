@@ -1,6 +1,6 @@
 ---
 name: voice-cloner
-description: Pick cloning approach (zero-shot / conversion / adaptation), consent artifact, watermark, and safety filters for a voice-cloning deployment.
+description: Pick cloning approach (zero-shot / conversion / adaptation), consent artifact, watermark, and safety filters for a voice-cloning deployment. Use when you need help with voice cloner.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 08

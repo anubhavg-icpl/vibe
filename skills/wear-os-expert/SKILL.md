@@ -1,6 +1,6 @@
 ---
 name: wear-os-expert
-description: Wear OS 5/6 with Compose for Wear, tiles, complications, declarative Watch Face Format, and Health Services
+description: Wear OS 5/6 with Compose for Wear, tiles, complications, declarative Watch Face Format, and Health Services. Use when developing Android apps with wear os.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

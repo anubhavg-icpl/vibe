@@ -1,6 +1,6 @@
 ---
 name: ux-copy
-description: "Generate UX microcopy in StyleSeed's Toss-inspired voice for buttons, empty states, errors, toasts, confirmations, and form guidance."
+description: "Generate UX microcopy in StyleSeed's Toss-inspired voice for buttons, empty states, errors, toasts, confirmations, and form guidance. Use when you need help with ux copy."
 license: CC-BY-NC-SA-4.0
 source_repo: bitjaru/styleseed
 source_type: community

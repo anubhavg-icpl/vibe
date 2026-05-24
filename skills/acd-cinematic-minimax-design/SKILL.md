@@ -1,6 +1,6 @@
 ---
 name: acd-cinematic-minimax-design
-description: Reference DESIGN.md for AI-lab cinematic: pure black canvas, neon-lime accent on charcoal chrome, geometric DM Sans / Outfit type, pill-shaped CTAs.
+description: Reference DESIGN.md for AI-lab cinematic: pure black canvas, neon-lime accent on charcoal chrome, geometric DM Sans / Outfit type, pill-shaped CTAs. Use when building UI components, applying design tokens, or implementing visual styles for cinematic minimax.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

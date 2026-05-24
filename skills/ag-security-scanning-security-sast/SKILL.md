@@ -1,6 +1,6 @@
 ---
 name: security-scanning-security-sast
-description: 'Static Application Security Testing (SAST) for code vulnerability
+description: "'Static Application Security Testing (SAST) for code vulnerability. Use when you need help with security scanning security sast."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

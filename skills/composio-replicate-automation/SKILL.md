@@ -1,6 +1,6 @@
 ---
 name: Replicate Automation
-description: "Automate Replicate AI model operations -- run predictions, upload files, inspect model schemas, list versions, and manage prediction history via the Composio MCP integration."
+description: Automate Replicate AI model operations -- run predictions, upload files, inspect model schemas, list versions, and manage prediction history via the Composio MCP integration. Use when you need help with Replicate Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

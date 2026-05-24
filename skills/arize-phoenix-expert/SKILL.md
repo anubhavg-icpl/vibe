@@ -1,6 +1,6 @@
 ---
 name: arize-phoenix-expert
-description: Open-source LLM tracing and evaluation built on OpenInference and OpenTelemetry
+description: Open-source LLM tracing and evaluation built on OpenInference and OpenTelemetry. Use when evaluating, monitoring, or observing LLM performance with arize phoenix.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

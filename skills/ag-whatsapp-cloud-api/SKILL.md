@@ -1,6 +1,6 @@
 ---
 name: whatsapp-cloud-api
-description: Integracao com WhatsApp Business Cloud API (Meta). Mensagens, templates, webhooks HMAC-SHA256, automacao de atendimento. Boilerplates Node.js e Python.
+description: Integracao com WhatsApp Business Cloud API (Meta). Mensagens, templates, webhooks HMAC-SHA256, automacao de atendimento. Boilerplates Node.js e Python. Use when you need help with whatsapp cloud api.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: critical
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # WhatsApp Cloud API - Integracao Profissional

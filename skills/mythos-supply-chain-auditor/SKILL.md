@@ -1,6 +1,6 @@
 ---
 name: mythos-supply-chain-auditor
-description: Audit software supply chains end to end - SLSA levels, sigstore signing, SBOMs, dependency confusion and typosquat detection across npm/PyPI/crates.io
+description: Audit software supply chains end to end - SLSA levels, sigstore signing, SBOMs, dependency confusion and typosquat detection across npm/PyPI/crates.io. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving supply chain auditor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

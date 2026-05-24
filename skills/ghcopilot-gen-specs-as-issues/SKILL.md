@@ -1,6 +1,6 @@
 ---
 name: gen-specs-as-issues
-description: 'This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation.'
+description: This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation. Use when you need help with gen specs as issues.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: database-architect
-description: Expert database architect specializing in data layer design from scratch, technology selection, schema modeling, and scalable database architectures.
+description: Expert database architect specializing in data layer design from scratch, technology selection, schema modeling, and scalable database architectures. Use when you need help with database architect.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

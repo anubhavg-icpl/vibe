@@ -1,6 +1,6 @@
 ---
 name: hitl-design
-description: Review a proposed Human-in-the-Loop workflow for propose-then-commit shape and flag missing metadata, idempotency, verification, or challenge-and-response layers.
+description: Review a proposed Human-in-the-Loop workflow for propose-then-commit shape and flag missing metadata, idempotency, verification, or challenge-and-response layers. Use when building UI with hitl design language and visual style.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 15

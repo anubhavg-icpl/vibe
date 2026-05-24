@@ -1,6 +1,6 @@
 ---
 name: mlx-converter-expert
-description: Convert HF safetensors models to MLX format, quantize to 4-bit / 8-bit, publish to mlx-community on HF Hub for Apple Silicon serving
+description: Convert HF safetensors models to MLX format, quantize to 4-bit / 8-bit, publish to mlx-community on HF Hub for Apple Silicon serving. Use when creating, converting, or publishing model files with mlx converter.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

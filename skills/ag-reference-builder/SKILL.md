@@ -1,6 +1,6 @@
 ---
 name: reference-builder
-description: Creates exhaustive technical references and API documentation. Generates comprehensive parameter listings, configuration guides, and searchable reference materials.
+description: Creates exhaustive technical references and API documentation. Generates comprehensive parameter listings, configuration guides, and searchable reference materials. Use when you need help with reference builder.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

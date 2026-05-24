@@ -1,6 +1,6 @@
 ---
 name: jwt-token-security-validator
-description: Autonomous agent that validates JWT implementations against RFC 7519, RFC 6749, and security best practices
+description: Autonomous agent that validates JWT implementations against RFC 7519, RFC 6749, and security best practices. Use when performing security analysis, auditing, or hardening with jwt token security validator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

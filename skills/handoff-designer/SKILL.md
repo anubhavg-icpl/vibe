@@ -1,6 +1,6 @@
 ---
 name: handoff-designer
-description: Design a handoff topology for a Swarm/Agents-SDK-style system: which agents exist, which handoffs they can call, what context transfers.
+description: Design a handoff topology for a Swarm/Agents-SDK-style system: which agents exist, which handoffs they can call, what context transfers. Use when you need help with handoff designer.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 11

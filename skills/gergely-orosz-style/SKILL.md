@@ -1,6 +1,6 @@
 ---
 name: gergely-orosz-style
-description: Gergely Orosz — The Pragmatic Engineer, scaling teams, real-world tradeoffs, sourced reporting on Big Tech engineering
+description: Gergely Orosz — The Pragmatic Engineer, scaling teams, real-world tradeoffs, sourced reporting on Big Tech engineering. Use when you want code review, architecture advice, or opinions in the style of gergely orosz.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

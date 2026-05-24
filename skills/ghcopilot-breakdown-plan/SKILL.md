@@ -1,6 +1,6 @@
 ---
 name: breakdown-plan
-description: 'Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.'
+description: Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking. Use when you need help with breakdown plan.
 license: CC-BY-NC-SA-4.0
 ---
 

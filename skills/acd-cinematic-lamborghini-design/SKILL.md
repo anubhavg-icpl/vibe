@@ -1,6 +1,6 @@
 ---
 name: acd-cinematic-lamborghini-design
-description: Reference DESIGN.md for hyper-luxury that needs to feel forged. True-black canvas, oversized LamboType nameplates at 120px+, hexagonal angle motifs, single warm-gold accent for primary actions, photography lit like a vault.
+description: Reference DESIGN.md for hyper-luxury that needs to feel forged. True-black canvas, oversized LamboType nameplates at 120px+, hexagonal angle motifs, single warm-gold accent for primary actions, photography lit like a vault. Use when building UI components, applying design tokens, or implementing visual styles for cinematic lamborghini.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

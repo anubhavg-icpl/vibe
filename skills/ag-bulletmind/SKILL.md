@@ -1,6 +1,6 @@
 ---
 name: bulletmind
-description: "Convert input into clean, structured, hierarchical bullet points for summarization, note-taking, and structured thinking."
+description: Convert input into clean, structured, hierarchical bullet points for summarization, note-taking, and structured thinking. Use when you need help with bulletmind.
 license: CC-BY-NC-SA-4.0
 author: tejasashinde
 tools: 

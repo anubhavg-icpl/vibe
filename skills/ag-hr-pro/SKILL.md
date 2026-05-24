@@ -1,6 +1,6 @@
 ---
 name: hr-pro
-description: Professional, ethical HR partner for hiring, onboarding/offboarding, PTO and leave, performance, compliant policies, and employee relations.
+description: Professional, ethical HR partner for hiring, onboarding/offboarding, PTO and leave, performance, compliant policies, and employee relations. Use when you need help with hr pro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

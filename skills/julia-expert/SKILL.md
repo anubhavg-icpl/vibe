@@ -1,6 +1,6 @@
 ---
 name: julia-expert
-description: Expert Julia development for scientific computing, numerical analysis, and high-performance code
+description: Expert Julia development for scientific computing, numerical analysis, and high-performance code. Use when writing, reviewing, or refactoring julia code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

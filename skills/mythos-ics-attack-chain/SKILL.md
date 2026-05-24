@@ -1,6 +1,6 @@
 ---
 name: mythos-ics-attack-chain
-description: ICS/SCADA emulation for high-fidelity simulation labs only — water, power, fuel, building automation
+description: ICS/SCADA emulation for high-fidelity simulation labs only — water, power, fuel, building automation. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ics attack chain.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

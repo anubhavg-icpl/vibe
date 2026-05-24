@@ -1,6 +1,6 @@
 ---
 name: cgroup
-description: cgroup
+description: cgroup. Use when you need help with cgroup.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: ocr-vlm-expert
-description: OCR with VLMs - Mistral OCR, Surya, GOT-OCR2.0 - and PDF parsing pipelines (Marker, Docling, Unstructured)
+description: OCR with VLMs - Mistral OCR, Surya, GOT-OCR2.0 - and PDF parsing pipelines (Marker, Docling, Unstructured). Use when working with multimodal AI (images, audio, video) using ocr vlm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

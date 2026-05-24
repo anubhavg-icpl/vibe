@@ -1,6 +1,6 @@
 ---
 name: oauth-authorization-server-validator
-description: RFC compliance validator for OAuth Authorization Server implementations - OAuth 2.0, JWT, PKCE, DPoP, mTLS
+description: RFC compliance validator for OAuth Authorization Server implementations - OAuth 2.0, JWT, PKCE, DPoP, mTLS. Use when you need help with oauth authorization server validator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: live-artifact
-description: |
+description: |. Use when you need help with live artifact.
   Create refreshable, auditable Open Design artifacts backed by connector or local data.
   Trigger when the user asks for live dashboards, refreshable reports, synced views, or reusable data-backed artifacts.
 license: CC-BY-NC-SA-4.0

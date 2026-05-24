@@ -1,6 +1,6 @@
 ---
 name: dashboard-design
-description: Expert in the Dashboard design system - Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.
+description: Expert in the Dashboard design system - Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards. Use when building UI components, applying design tokens, or implementing visual styles for dashboard.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

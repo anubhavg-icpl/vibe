@@ -1,6 +1,6 @@
 ---
 name: solidity-smart-contract
-description: solidity-smart-contract
+description: solidity-smart-contract. Use when building blockchain, DeFi, or Web3 applications with solidity smart contract.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

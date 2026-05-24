@@ -1,6 +1,6 @@
 ---
 name: telegram
-description: Integracao completa com Telegram Bot API. Setup com BotFather, mensagens, webhooks, inline keyboards, grupos, canais. Boilerplates Node.js e Python.
+description: Integracao completa com Telegram Bot API. Setup com BotFather, mensagens, webhooks, inline keyboards, grupos, canais. Boilerplates Node.js e Python. Use when you need help with telegram.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: critical
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # Telegram Bot API - Integracao Profissional

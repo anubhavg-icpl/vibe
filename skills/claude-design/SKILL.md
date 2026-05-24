@@ -1,6 +1,6 @@
 ---
 name: claude-design
-description: Expert in the Claude (Anthropic) design system - Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.
+description: "Expert in the Claude (Anthropic) design system - Anthropic's AI assistant. Warm terracotta accent, clean editorial layout. Use when building UI components, applying design tokens, or implementing visual styles for claude."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

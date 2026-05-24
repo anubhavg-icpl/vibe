@@ -1,6 +1,6 @@
 ---
 name: "generate"
-description: >-
+description: >-. Use when you need help with generate.
   Generate Playwright tests. Use when user says "write tests", "generate tests",
   "add tests for", "test this component", "e2e test", "create test for",
   "test this page", or "test this feature".

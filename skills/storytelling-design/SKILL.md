@@ -1,6 +1,6 @@
 ---
 name: storytelling-design
-description: Expert in the Storytelling design system - Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.
+description: Expert in the Storytelling design system - Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys. Use when building UI components, applying design tokens, or implementing visual styles for storytelling.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: code-review-checklist
-description: "Comprehensive checklist for conducting thorough code reviews covering functionality, security, performance, and maintainability"
+description: Comprehensive checklist for conducting thorough code reviews covering functionality, security, performance, and maintainability. Use when you need help with code review checklist.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

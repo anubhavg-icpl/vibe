@@ -1,6 +1,6 @@
 ---
 name: Firecrawl Automation
-description: "Automate web crawling and data extraction with Firecrawl -- scrape pages, crawl sites, extract structured data, batch scrape URLs, and map website structures through the Composio Firecrawl integration."
+description: Automate web crawling and data extraction with Firecrawl -- scrape pages, crawl sites, extract structured data, batch scrape URLs, and map website structures through the Composio Firecrawl integration. Use when you need help with Firecrawl Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

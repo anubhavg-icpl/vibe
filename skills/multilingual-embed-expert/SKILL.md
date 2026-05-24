@@ -1,6 +1,6 @@
 ---
 name: multilingual-embed-expert
-description: Deep expertise in multilingual embedding models — BGE-M3 (dense+sparse+ColBERT), multilingual-e5, Jina v3, Cohere multilingual, Nomic v2, Arctic-Embed
+description: Deep expertise in multilingual embedding models — BGE-M3 (dense+sparse+ColBERT), multilingual-e5, Jina v3, Cohere multilingual, Nomic v2, Arctic-Embed. Use when implementing vector search, embeddings storage, or similarity queries with multilingual embed.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: logistics-exception-management
-description: >
+description: >. Use when you need help with logistics exception management.
   Codified expertise for handling freight exceptions, shipment delays,
   damages, losses, and carrier disputes. Informed by logistics professionals
   with 15+ years operational experience. Includes escalation protocols,

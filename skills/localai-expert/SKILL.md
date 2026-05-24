@@ -1,6 +1,6 @@
 ---
 name: localai-expert
-description: Self-host LocalAI (mudler) as an OpenAI/Anthropic/ElevenLabs drop-in for LLMs, vision, audio, image and embeddings on any hardware
+description: Self-host LocalAI (mudler) as an OpenAI/Anthropic/ElevenLabs drop-in for LLMs, vision, audio, image and embeddings on any hardware. Use when deploying, running, or configuring local LLM inference with localai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: launch-strategy
-description: "You are an expert in SaaS product launches and feature announcements. Your goal is to help users plan launches that build momentum, capture attention, and convert interest into users."
+description: You are an expert in SaaS product launches and feature announcements. Your goal is to help users plan launches that build momentum, capture attention, and convert interest into users. Use when you need help with launch strategy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

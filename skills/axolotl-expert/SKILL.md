@@ -1,6 +1,6 @@
 ---
 name: axolotl-expert
-description: Axolotl — YAML-driven LLM fine-tuning with LoRA/QLoRA, DPO/GRPO, DeepSpeed, FSDP
+description: Axolotl — YAML-driven LLM fine-tuning with LoRA/QLoRA, DPO/GRPO, DeepSpeed, FSDP. Use when fine-tuning, training, or adapting language models with axolotl techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

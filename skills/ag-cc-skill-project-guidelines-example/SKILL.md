@@ -1,6 +1,6 @@
 ---
 name: cc-skill-project-guidelines-example
-description: "Project Guidelines Skill (Example)"
+description: Project Guidelines Skill (Example). Use when you need help with cc skill project guidelines example.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

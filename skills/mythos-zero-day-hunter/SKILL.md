@@ -1,6 +1,6 @@
 ---
 name: mythos-zero-day-hunter
-description: Out-of-the-box vulnerability discovery in mature, well-tested codebases, modeled on Claude Mythos Preview
+description: Out-of-the-box vulnerability discovery in mature, well-tested codebases, modeled on Claude Mythos Preview. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving zero day hunter.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

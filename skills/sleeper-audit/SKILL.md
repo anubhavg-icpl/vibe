@@ -1,6 +1,6 @@
 ---
 name: sleeper-audit
-description: Audit an alignment-training report for whether it actually demonstrates removal of a planted or suspected backdoor.
+description: Audit an alignment-training report for whether it actually demonstrates removal of a planted or suspected backdoor. Use when you need help with sleeper audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 7

@@ -1,6 +1,6 @@
 ---
 name: skill-rag-pipeline
-description: Build and debug RAG pipelines from first principles
+description: Build and debug RAG pipelines from first principles. Use when you need help with skill rag pipeline.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 6

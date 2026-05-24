@@ -1,6 +1,6 @@
 ---
 name: comfyui-api-expert
-description: ComfyUI as backend - API mode, websocket polling, queue management for production
+description: ComfyUI as backend - API mode, websocket polling, queue management for production. Use when working with multimodal AI (images, audio, video) using comfyui api.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

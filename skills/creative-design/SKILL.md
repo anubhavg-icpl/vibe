@@ -1,6 +1,6 @@
 ---
 name: creative-design
-description: Expert in the Creative design system - Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.
+description: Expert in the Creative design system - Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects. Use when building UI components, applying design tokens, or implementing visual styles for creative.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

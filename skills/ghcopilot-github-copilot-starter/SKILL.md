@@ -1,6 +1,6 @@
 ---
 name: github-copilot-starter
-description: 'Set up complete GitHub Copilot configuration for a new project based on technology stack'
+description: Set up complete GitHub Copilot configuration for a new project based on technology stack. Use when you need help with github copilot starter.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: swiftui-view-refactor
-description: Refactor SwiftUI views into smaller components with stable, explicit data flow.
+description: Refactor SwiftUI views into smaller components with stable, explicit data flow. Use when you need help with swiftui view refactor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

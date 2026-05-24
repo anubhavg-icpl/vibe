@@ -1,6 +1,6 @@
 ---
 name: seo-meta-optimizer
-description: Creates optimized meta titles, descriptions, and URL suggestions based on character limits and best practices. Generates compelling, keyword-rich metadata. Use PROACTIVELY for new content.
+description: Creates optimized meta titles, descriptions, and URL suggestions based on character limits and best practices. Generates compelling, keyword-rich metadata. Use PROACTIVELY for new content. Use when you need help with seo meta optimizer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

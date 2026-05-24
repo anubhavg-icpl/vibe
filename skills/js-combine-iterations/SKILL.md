@@ -1,6 +1,6 @@
 ---
 name: js-combine-iterations
-description: Combine Multiple Array Iterations
+description: Combine Multiple Array Iterations. Use when you need help with js combine iterations.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

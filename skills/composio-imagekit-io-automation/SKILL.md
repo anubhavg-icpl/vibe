@@ -1,6 +1,6 @@
 ---
 name: imagekit-io-automation
-description: "Automate Imagekit IO tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Imagekit IO tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with imagekit io automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

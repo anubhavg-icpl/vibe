@@ -1,6 +1,6 @@
 ---
 name: biome-expert
-description: Expert in Biome — Rust-powered linter and formatter replacing ESLint and Prettier
+description: Expert in Biome — Rust-powered linter and formatter replacing ESLint and Prettier. Use when building web applications with biome.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

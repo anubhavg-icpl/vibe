@@ -1,6 +1,6 @@
 ---
 name: rayden-code
-description: Generate React code with Rayden UI components using correct props, tokens, and premium layout patterns
+description: Generate React code with Rayden UI components using correct props, tokens, and premium layout patterns. Use when you need help with rayden code.
 license: CC-BY-NC-SA-4.0
 source_type: community
 author: Leslie Williams

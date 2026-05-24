@@ -1,6 +1,6 @@
 ---
 name: appinsights-instrumentation
-description: 'Instrument a webapp to send useful telemetry data to Azure App Insights'
+description: Instrument a webapp to send useful telemetry data to Azure App Insights. Use when you need help with appinsights instrumentation.
 license: CC-BY-NC-SA-4.0
 ---
 

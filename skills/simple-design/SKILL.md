@@ -1,6 +1,6 @@
 ---
 name: simple-design
-description: Expert in the Simple design system - Straightforward, no-frills design with clean typography, neutral colors, and intuitive layouts that stay out of the way.
+description: Expert in the Simple design system - Straightforward, no-frills design with clean typography, neutral colors, and intuitive layouts that stay out of the way. Use when building UI components, applying design tokens, or implementing visual styles for simple.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

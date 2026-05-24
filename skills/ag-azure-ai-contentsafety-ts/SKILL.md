@@ -1,6 +1,6 @@
 ---
 name: azure-ai-contentsafety-ts
-description: "Analyze text and images for harmful content with customizable blocklists."
+description: Analyze text and images for harmful content with customizable blocklists. Use when you need help with azure ai contentsafety ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

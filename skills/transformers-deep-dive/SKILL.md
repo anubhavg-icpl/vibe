@@ -1,6 +1,6 @@
 ---
 name: transformers-deep-dive
-description: Expert in transformer architectures from self-attention to modern variants, from the AI Engineering from Scratch curriculum
+description: Expert in transformer architectures from self-attention to modern variants, from the AI Engineering from Scratch curriculum. Use when you need help with transformers deep dive.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

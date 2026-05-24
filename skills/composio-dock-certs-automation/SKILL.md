@@ -1,6 +1,6 @@
 ---
 name: dock-certs-automation
-description: "Automate Dock Certs tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Dock Certs tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with dock certs automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

@@ -1,6 +1,6 @@
 ---
 name: "merge"
-description: "Merge the winning agent's branch into base, archive losers, and clean up worktrees."
+description: "Merge the winning agent's branch into base, archive losers, and clean up worktrees. Use when you need help with merge."
 license: CC-BY-NC-SA-4.0
 command: /hub:merge
 ---

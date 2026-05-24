@@ -1,6 +1,6 @@
 ---
 name: plugin-audit
-description: |
+description: |. Use when you need help with plugin audit.
   Comprehensive audit pipeline for skills, plugins, agents, and commands. Validates structure,
   quality, security, marketplace compliance, cross-platform compatibility, and ecosystem integration.
   Runs all built-in validation tools, invokes domain-appropriate agents for code review,

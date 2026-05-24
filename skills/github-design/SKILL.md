@@ -1,6 +1,6 @@
 ---
 name: github-design
-description: Expert in the GitHub design system - Code-forward platform. Functional density, blue-on-white precision, Primer foundations.
+description: Expert in the GitHub design system - Code-forward platform. Functional density, blue-on-white precision, Primer foundations. Use when building UI components, applying design tokens, or implementing visual styles for github.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

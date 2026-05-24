@@ -1,6 +1,6 @@
 ---
 name: mythos-uac-bypass-creative
-description: Adaptive Windows UAC bypass — when the primary technique fails, pivot to a known alternate
+description: Adaptive Windows UAC bypass — when the primary technique fails, pivot to a known alternate. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving uac bypass creative.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

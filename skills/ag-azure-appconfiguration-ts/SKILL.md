@@ -1,6 +1,6 @@
 ---
 name: azure-appconfiguration-ts
-description: "Centralized configuration management with feature flags and dynamic refresh."
+description: Centralized configuration management with feature flags and dynamic refresh. Use when you need help with azure appconfiguration ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

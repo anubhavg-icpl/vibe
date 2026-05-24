@@ -1,6 +1,6 @@
 ---
 name: convex
-description: "Convex reactive backend expert: schema design, TypeScript functions, real-time subscriptions, auth, file storage, scheduling, and deployment."
+description: Convex reactive backend expert: schema design, TypeScript functions, real-time subscriptions, auth, file storage, scheduling, and deployment. Use when you need help with convex.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

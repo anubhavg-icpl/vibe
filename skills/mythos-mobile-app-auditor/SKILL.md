@@ -1,6 +1,6 @@
 ---
 name: mythos-mobile-app-auditor
-description: Audit iOS and Android applications against OWASP MASVS using static analysis, Frida instrumentation, and certificate pinning review - for apps you own or are authorized to test
+description: Audit iOS and Android applications against OWASP MASVS using static analysis, Frida instrumentation, and certificate pinning review - for apps you own or are authorized to test. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving mobile app auditor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

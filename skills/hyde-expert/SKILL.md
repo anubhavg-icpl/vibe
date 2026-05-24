@@ -1,6 +1,6 @@
 ---
 name: hyde-expert
-description: Hypothetical Document Embeddings — generate a fake answer, embed that, then retrieve
+description: Hypothetical Document Embeddings — generate a fake answer, embed that, then retrieve. Use when building or optimizing retrieval-augmented generation pipelines with hyde.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: skill-sampling-strategy
-description: Choose the right sampling method for generation, estimation, or inference
+description: Choose the right sampling method for generation, estimation, or inference. Use when you need help with skill sampling strategy.
 license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 16

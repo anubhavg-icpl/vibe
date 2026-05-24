@@ -1,6 +1,6 @@
 ---
 name: legal-advisor
-description: Draft privacy policies, terms of service, disclaimers, and legal notices. Creates GDPR-compliant texts, cookie policies, and data processing agreements.
+description: Draft privacy policies, terms of service, disclaimers, and legal notices. Creates GDPR-compliant texts, cookie policies, and data processing agreements. Use when you need help with legal advisor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

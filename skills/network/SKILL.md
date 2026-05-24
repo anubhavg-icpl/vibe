@@ -1,6 +1,6 @@
 ---
 name: network
-description: network
+description: network. Use when you need help with network.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

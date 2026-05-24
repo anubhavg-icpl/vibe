@@ -1,6 +1,6 @@
 ---
 name: classifier-designer
-description: Pick architecture, augmentation, class-balance strategy, and eval metric for an audio classification task.
+description: Pick architecture, augmentation, class-balance strategy, and eval metric for an audio classification task. Use when you need help with classifier designer.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 03

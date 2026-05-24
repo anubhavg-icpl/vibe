@@ -1,6 +1,6 @@
 ---
 name: skill-fine-tuning-guide
-description: Decision tree for when and how to fine-tune LLMs with LoRA and QLoRA
+description: Decision tree for when and how to fine-tune LLMs with LoRA and QLoRA. Use when you need help with skill fine tuning guide.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 8

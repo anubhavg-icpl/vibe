@@ -1,6 +1,6 @@
 ---
 name: acd-terminal-opencode-design
-description: Reference DESIGN.md for OSS terminal coding agent: near-black canvas, off-white text, phosphor-green action, IBM Plex Mono everywhere, hard edges.
+description: Reference DESIGN.md for OSS terminal coding agent: near-black canvas, off-white text, phosphor-green action, IBM Plex Mono everywhere, hard edges. Use when building UI components, applying design tokens, or implementing visual styles for terminal opencode.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

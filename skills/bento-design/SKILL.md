@@ -1,6 +1,6 @@
 ---
 name: bento-design
-description: Expert in the Bento design system - Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces.
+description: Expert in the Bento design system - Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces. Use when building UI components, applying design tokens, or implementing visual styles for bento.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

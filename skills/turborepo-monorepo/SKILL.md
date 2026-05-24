@@ -1,6 +1,6 @@
 ---
 name: turborepo-monorepo
-description: Expert in Turborepo, monorepo architecture, workspace management, and build optimization
+description: Expert in Turborepo, monorepo architecture, workspace management, and build optimization. Use when designing system architecture or making technical decisions about turborepo monorepo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

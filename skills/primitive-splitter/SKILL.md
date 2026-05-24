@@ -1,6 +1,6 @@
 ---
 name: primitive-splitter
-description: Categorize each capability in an MCP server draft as tool, resource, or prompt with rationale.
+description: Categorize each capability in an MCP server draft as tool, resource, or prompt with rationale. Use when you need help with primitive splitter.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 10

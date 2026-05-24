@@ -1,6 +1,6 @@
 ---
 name: mythos-ics-scada-defender
-description: Defend industrial control systems and SCADA networks - Purdue model segmentation, Modbus/DNP3/IEC-104/IEC-61850 anomaly detection, safety-instrumented systems
+description: Defend industrial control systems and SCADA networks - Purdue model segmentation, Modbus/DNP3/IEC-104/IEC-61850 anomaly detection, safety-instrumented systems. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ics scada defender.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

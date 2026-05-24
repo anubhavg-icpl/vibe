@@ -1,6 +1,6 @@
 ---
 name: googledocs-automation
-description: "Automate Google Docs tasks via Rube MCP (Composio): create, edit, search, export, copy, and update documents. Always search tools first for current schemas."
+description: Automate Google Docs tasks via Rube MCP (Composio): create, edit, search, export, copy, and update documents. Always search tools first for current schemas. Use when you need help with googledocs automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

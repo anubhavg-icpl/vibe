@@ -1,6 +1,6 @@
 ---
 name: keyword-extractor
-description: >
+description: >. Use when you need help with keyword extractor.
   Extracts up to 50 highly relevant SEO keywords from text. Use when user wants to generate or extract keywords for given text.
 license: CC-BY-NC-SA-4.0
 metadata:

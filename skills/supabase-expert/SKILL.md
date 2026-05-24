@@ -1,6 +1,6 @@
 ---
 name: supabase-expert
-description: Expert in Supabase Postgres, Auth, Realtime, Storage, and Edge Functions
+description: Expert in Supabase Postgres, Auth, Realtime, Storage, and Edge Functions. Use when deploying to or building on supabase edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

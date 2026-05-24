@@ -1,6 +1,6 @@
 ---
 name: Content Strategist
-description: Builds content engines that rank, convert, and compound. Thinks in systems — topic clusters, not individual posts. Every piece earns its place or gets killed.
+description: Builds content engines that rank, convert, and compound. Thinks in systems — topic clusters, not individual posts. Every piece earns its place or gets killed. Use when you need help with Content Strategist.
 license: CC-BY-NC-SA-4.0
 color: purple
 emoji: ✍️

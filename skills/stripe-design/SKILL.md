@@ -1,6 +1,6 @@
 ---
 name: stripe-design
-description: Expert in the Stripe design system - Payment infrastructure. Signature purple gradients, weight-300 elegance.
+description: Expert in the Stripe design system - Payment infrastructure. Signature purple gradients, weight-300 elegance. Use when building UI components, applying design tokens, or implementing visual styles for stripe.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

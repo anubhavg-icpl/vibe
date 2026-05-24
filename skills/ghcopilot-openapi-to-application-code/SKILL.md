@@ -1,6 +1,6 @@
 ---
 name: openapi-to-application-code
-description: 'Generate a complete, production-ready application from an OpenAPI specification'
+description: Generate a complete, production-ready application from an OpenAPI specification. Use when you need help with openapi to application code.
 license: CC-BY-NC-SA-4.0
 ---
 

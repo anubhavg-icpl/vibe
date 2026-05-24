@@ -1,6 +1,6 @@
 ---
 name: serverless-expert
-description: Expert in serverless architecture with AWS Lambda, Azure Functions, and Google Cloud Functions
+description: Expert in serverless architecture with AWS Lambda, Azure Functions, and Google Cloud Functions. Use when you need deep expertise in serverless.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

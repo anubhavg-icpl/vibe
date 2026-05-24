@@ -1,6 +1,6 @@
 ---
 name: artistic-design
-description: Expert in the Artistic design system - High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.
+description: Expert in the Artistic design system - High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces. Use when building UI components, applying design tokens, or implementing visual styles for artistic.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

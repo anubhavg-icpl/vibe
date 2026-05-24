@@ -1,6 +1,6 @@
 ---
 name: carrier-relationship-management
-description: Codified expertise for managing carrier portfolios, negotiating freight rates, tracking carrier performance, allocating freight, and maintaining strategic carrier relationships.
+description: Codified expertise for managing carrier portfolios, negotiating freight rates, tracking carrier performance, allocating freight, and maintaining strategic carrier relationships. Use when you need help with carrier relationship management.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

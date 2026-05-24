@@ -1,6 +1,6 @@
 ---
 name: performance-engineer
-description: "Expert performance engineer specializing in modern observability,"
+description: Expert performance engineer specializing in modern observability,. Use when you need help with performance engineer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

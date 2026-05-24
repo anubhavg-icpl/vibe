@@ -1,6 +1,6 @@
 ---
 name: makepad-reference
-description: "This category provides reference materials for debugging, code quality, and advanced layout patterns."
+description: This category provides reference materials for debugging, code quality, and advanced layout patterns. Use when you need help with makepad reference.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

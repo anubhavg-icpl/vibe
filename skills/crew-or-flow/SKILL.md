@@ -1,6 +1,6 @@
 ---
 name: crew-or-flow
-description: Pick CrewAI Crew or Flow for a given task, and scaffold the minimal implementation.
+description: Pick CrewAI Crew or Flow for a given task, and scaffold the minimal implementation. Use when you need help with crew or flow.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 15

@@ -1,6 +1,6 @@
 ---
 name: rollback-rehearsal
-description: Design a rollback-rehearsal test for a proposed autonomous workflow and audit the checkpoint backend for audit-trail persistence.
+description: Design a rollback-rehearsal test for a proposed autonomous workflow and audit the checkpoint backend for audit-trail persistence. Use when you need help with rollback rehearsal.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 16

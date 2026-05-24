@@ -1,6 +1,6 @@
 ---
 name: editing-pipeline
-description: Plan an image-editing pipeline from source + edit description to a ready-to-ship output.
+description: Plan an image-editing pipeline from source + edit description to a ready-to-ship output. Use when you need help with editing pipeline.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 09

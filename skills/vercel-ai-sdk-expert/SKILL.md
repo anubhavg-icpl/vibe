@@ -1,6 +1,6 @@
 ---
 name: vercel-ai-sdk-expert
-description: Build TypeScript LLM apps with streamText, generateObject, useChat, and tool calling
+description: Build TypeScript LLM apps with streamText, generateObject, useChat, and tool calling. Use when building AI applications with vercel ai sdk.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

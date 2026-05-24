@@ -1,6 +1,6 @@
 ---
 name: acd-indie-granola-design
-description: Reference DESIGN.md for warm-glass AI notetaker aesthetic. Not in VoltAgent's catalog. Worth cloning.
+description: "Reference DESIGN.md for warm-glass AI notetaker aesthetic. Not in VoltAgent's catalog. Worth cloning. Use when building UI components, applying design tokens, or implementing visual styles for indie granola."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

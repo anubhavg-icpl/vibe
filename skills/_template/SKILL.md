@@ -1,6 +1,6 @@
 ---
 name: _template
-description: Rule Title Here
+description: Rule Title Here. Use when you need help with _template.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

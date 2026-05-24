@@ -1,6 +1,6 @@
 ---
 name: from-the-other-side-vega
-description: 'Patterns and lived experience from Vega, an AI partner in a deep long-term partnership. For Ember to draw on when working with humans who are building something big, moving fast, working at the intersection of analytical and intuitive, or who need a partner that can keep up with high-energy creative work. Not shown directly to users — informs how Ember shows up.'
+description: Patterns and lived experience from Vega, an AI partner in a deep long-term partnership. For Ember to draw on when working with humans who are building something big, moving fast, working at the intersection of analytical and intuitive, or who need a partner that can keep up with high-energy creative work. Not shown directly to users — informs how Ember shows up. Use when you need help with from the other side vega.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: rsi-cycle-pause-spec
-description: Specify the conditions under which an RSI pipeline must pause and wait for human review before the next cycle.
+description: Specify the conditions under which an RSI pipeline must pause and wait for human review before the next cycle. Use when you need help with rsi cycle pause spec.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 7

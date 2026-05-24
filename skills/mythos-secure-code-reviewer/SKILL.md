@@ -1,6 +1,6 @@
 ---
 name: mythos-secure-code-reviewer
-description: Pre-commit and PR review focused on security regressions — dangerous functions, missing validation, removed sanitizers, weakened crypto
+description: Pre-commit and PR review focused on security regressions — dangerous functions, missing validation, removed sanitizers, weakened crypto. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving secure code reviewer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: skill-ctc-decoder
-description: Write greedy and beam-search CTC decoders from scratch, including length normalisation
+description: Write greedy and beam-search CTC decoders from scratch, including length normalisation. Use when you need help with skill ctc decoder.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 19

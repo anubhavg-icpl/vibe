@@ -1,6 +1,6 @@
 ---
 name: openai-evals-expert
-description: openai/evals framework — registry layout, model-graded patterns, custom YAML evals
+description: openai/evals framework — registry layout, model-graded patterns, custom YAML evals. Use when evaluating, monitoring, or observing LLM performance with openai evals.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

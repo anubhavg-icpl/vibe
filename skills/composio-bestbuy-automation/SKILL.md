@@ -1,6 +1,6 @@
 ---
 name: bestbuy-automation
-description: "Automate Bestbuy tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Bestbuy tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with bestbuy automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

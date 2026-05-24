@@ -1,6 +1,6 @@
 ---
 name: debugging-detective
-description: debugging-detective
+description: debugging-detective. Use when diagnosing, troubleshooting, or fixing bugs with debugging detective.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

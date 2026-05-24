@@ -1,6 +1,6 @@
 ---
 name: android-screen-tools-expert
-description: Expert in `android screen capture` and `android screen resolve` — annotated screenshots and label-to-coordinate translation for agent UI driving
+description: Expert in `android screen capture` and `android screen resolve` — annotated screenshots and label-to-coordinate translation for agent UI driving. Use when using Android CLI tools for android screen tools.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

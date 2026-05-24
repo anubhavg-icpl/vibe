@@ -1,6 +1,6 @@
 ---
 name: wg-code-sentinel
-description: Ask WG Code Sentinel to review your code for security issues.
+description: Ask WG Code Sentinel to review your code for security issues. Use when applying Project Glasswing code sentinel security patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

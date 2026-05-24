@@ -1,6 +1,6 @@
 ---
 name: customs-trade-compliance
-description: Codified expertise for customs documentation, tariff classification, duty optimisation, restricted party screening, and regulatory compliance across multiple jurisdictions.
+description: Codified expertise for customs documentation, tariff classification, duty optimisation, restricted party screening, and regulatory compliance across multiple jurisdictions. Use when you need help with customs trade compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

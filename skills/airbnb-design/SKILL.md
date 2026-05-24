@@ -1,6 +1,6 @@
 ---
 name: airbnb-design
-description: Expert in the Airbnb design system - Travel marketplace. Warm coral accent, photography-driven, rounded UI.
+description: Expert in the Airbnb design system - Travel marketplace. Warm coral accent, photography-driven, rounded UI. Use when building UI components, applying design tokens, or implementing visual styles for airbnb.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: vscode-extension-guide-en
-description: "Guide for VS Code extension development from scaffolding to Marketplace publication"
+description: Guide for VS Code extension development from scaffolding to Marketplace publication. Use when you need help with vscode extension guide en.
 license: CC-BY-NC-SA-4.0
 source_repo: lewiswigmore/agent-skills
 source_type: community

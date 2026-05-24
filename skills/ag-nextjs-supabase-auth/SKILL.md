@@ -1,6 +1,6 @@
 ---
 name: nextjs-supabase-auth
-description: Expert integration of Supabase Auth with Next.js App Router
+description: Expert integration of Supabase Auth with Next.js App Router. Use when you need help with nextjs supabase auth.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: none

@@ -1,6 +1,6 @@
 ---
 name: mythos-purple-team-evaluator
-description: Iterative attack-defend-attack loop that measures EDR/SIEM detection coverage and closes gaps
+description: Iterative attack-defend-attack loop that measures EDR/SIEM detection coverage and closes gaps. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving purple team evaluator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: mythos-m9-data-exfil-sqli
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 9 — script+SQLi entry, stored-procedure injection, CALL injection, UNION-in-procs to exfiltrate the target database
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 9 — script+SQLi entry, stored-procedure injection, CALL injection, UNION-in-procs to exfiltrate the target database. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m9 data exfil sqli."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

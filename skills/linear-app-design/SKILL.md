@@ -1,6 +1,6 @@
 ---
 name: linear-app-design
-description: Expert in the Linear design system - Project management. Ultra-minimal, precise, purple accent.
+description: Expert in the Linear design system - Project management. Ultra-minimal, precise, purple accent. Use when building UI components, applying design tokens, or implementing visual styles for linear app.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

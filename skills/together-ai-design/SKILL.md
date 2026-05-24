@@ -1,6 +1,6 @@
 ---
 name: together-ai-design
-description: Expert in the Together AI design system - Open-source AI infrastructure. Technical, blueprint-style design.
+description: Expert in the Together AI design system - Open-source AI infrastructure. Technical, blueprint-style design. Use when building UI components, applying design tokens, or implementing visual styles for together ai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

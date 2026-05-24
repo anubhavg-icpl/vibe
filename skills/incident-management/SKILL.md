@@ -1,6 +1,6 @@
 ---
 name: incident-management
-description: Expert in incident response, on-call management, postmortems, and operational excellence
+description: Expert in incident response, on-call management, postmortems, and operational excellence. Use when automating CI/CD, deployments, or operations with incident management.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

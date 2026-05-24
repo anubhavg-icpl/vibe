@@ -1,6 +1,6 @@
 ---
 name: apify-brand-reputation-monitoring
-description: "Scrape reviews, ratings, and brand mentions from multiple platforms using Apify Actors."
+description: Scrape reviews, ratings, and brand mentions from multiple platforms using Apify Actors. Use when you need help with apify brand reputation monitoring.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

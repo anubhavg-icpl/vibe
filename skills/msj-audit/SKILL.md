@@ -1,6 +1,6 @@
 ---
 name: msj-audit
-description: Audit a long-context safety evaluation for many-shot jailbreaking coverage.
+description: Audit a long-context safety evaluation for many-shot jailbreaking coverage. Use when you need help with msj audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 13

@@ -1,6 +1,6 @@
 ---
 name: skill-check
-description: "Validate Claude Code skills against the agentskills specification. Catches structural, semantic, and naming issues before users do."
+description: Validate Claude Code skills against the agentskills specification. Catches structural, semantic, and naming issues before users do. Use when you need help with skill check.
 author: olgasafonova
 tools: [claude, cursor, windsurf, codex-cli]
 license: MIT

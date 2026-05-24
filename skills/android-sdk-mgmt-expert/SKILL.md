@@ -1,6 +1,6 @@
 ---
 name: android-sdk-mgmt-expert
-description: Expert in `android sdk install/list/remove/update` — channels, version pinning, reproducible team & CI SDK setups
+description: Expert in `android sdk install/list/remove/update` — channels, version pinning, reproducible team & CI SDK setups. Use when using Android CLI tools for android sdk mgmt.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

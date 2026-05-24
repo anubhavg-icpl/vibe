@@ -1,6 +1,6 @@
 ---
 name: positional-encoding-picker
-description: Pick positional encoding (RoPE, ALiBi, sinusoidal) + scaling strategy given context length and training budget.
+description: Pick positional encoding (RoPE, ALiBi, sinusoidal) + scaling strategy given context length and training budget. Use when you need help with positional encoding picker.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 4

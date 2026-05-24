@@ -1,6 +1,6 @@
 ---
 name: acd-glass-apple-design
-description: Reference DESIGN.md for premium consumer software with translucent surfaces. SF Pro everywhere, system tints sparingly, vibrancy materials over solid fills.
+description: Reference DESIGN.md for premium consumer software with translucent surfaces. SF Pro everywhere, system tints sparingly, vibrancy materials over solid fills. Use when building UI components, applying design tokens, or implementing visual styles for glass apple.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

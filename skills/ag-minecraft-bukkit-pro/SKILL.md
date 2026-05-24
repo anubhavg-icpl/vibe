@@ -1,6 +1,6 @@
 ---
 name: minecraft-bukkit-pro
-description: Master Minecraft server plugin development with Bukkit, Spigot, and Paper APIs.
+description: Master Minecraft server plugin development with Bukkit, Spigot, and Paper APIs. Use when you need help with minecraft bukkit pro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

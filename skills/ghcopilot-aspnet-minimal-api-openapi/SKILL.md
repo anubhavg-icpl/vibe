@@ -1,6 +1,6 @@
 ---
 name: aspnet-minimal-api-openapi
-description: 'Create ASP.NET Minimal API endpoints with proper OpenAPI documentation'
+description: Create ASP.NET Minimal API endpoints with proper OpenAPI documentation. Use when you need help with aspnet minimal api openapi.
 license: CC-BY-NC-SA-4.0
 ---
 

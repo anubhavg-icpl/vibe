@@ -1,6 +1,6 @@
 ---
 name: skill-imbalanced-data
-description: Decision checklist for handling imbalanced classification problems
+description: Decision checklist for handling imbalanced classification problems. Use when you need help with skill imbalanced data.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 17

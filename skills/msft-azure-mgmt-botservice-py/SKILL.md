@@ -1,6 +1,6 @@
 ---
 name: azure-mgmt-botservice-py
-description: |-
+description: |-. Use when you need help with azure mgmt botservice py.
   Azure Bot Service Management SDK for Python. Use for creating, managing, and configuring Azure Bot Service resources.
   Triggers: "azure-mgmt-botservice", "AzureBotService", "bot management", "conversational AI", "bot channels".
 license: MIT

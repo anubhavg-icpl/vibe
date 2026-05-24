@@ -1,6 +1,6 @@
 ---
 name: create-llms
-description: 'Create an llms.txt file from scratch based on repository structure following the llms.txt specification at https://llmstxt.org/'
+description: Create an llms.txt file from scratch based on repository structure following the llms.txt specification at https://llmstxt.org/. Use when you need help with create llms.
 license: CC-BY-NC-SA-4.0
 ---
 

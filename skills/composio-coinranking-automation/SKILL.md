@@ -1,6 +1,6 @@
 ---
 name: coinranking-automation
-description: "Automate Coinranking tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Coinranking tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with coinranking automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

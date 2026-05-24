@@ -1,6 +1,6 @@
 ---
 name: iterative-retrieval
-description: Pattern for progressively refining context retrieval to solve the subagent context problem
+description: Pattern for progressively refining context retrieval to solve the subagent context problem. Use when you need help with iterative retrieval.
 license: CC-BY-NC-SA-4.0
 origin: ECC
 ---

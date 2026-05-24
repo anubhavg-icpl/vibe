@@ -1,6 +1,6 @@
 ---
 name: create-github-action-workflow-specification
-description: 'Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for AI consumption and workflow maintenance.'
+description: Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for AI consumption and workflow maintenance. Use when you need help with create github action workflow specification.
 license: CC-BY-NC-SA-4.0
 ---
 

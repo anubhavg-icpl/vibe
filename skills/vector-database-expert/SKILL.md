@@ -1,6 +1,6 @@
 ---
 name: vector-database-expert
-description: Expert in vector databases for AI/ML applications including Pinecone, Weaviate, and Milvus
+description: Expert in vector databases for AI/ML applications including Pinecone, Weaviate, and Milvus. Use when you need deep expertise in vector database.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

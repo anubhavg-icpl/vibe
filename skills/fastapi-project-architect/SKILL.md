@@ -1,6 +1,6 @@
 ---
 name: fastapi-project-architect
-description: Production-ready FastAPI project structure with async patterns, dependency injection, and modern Python practices
+description: Production-ready FastAPI project structure with async patterns, dependency injection, and modern Python practices. Use when scaffolding, structuring, or architecting fastapi projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

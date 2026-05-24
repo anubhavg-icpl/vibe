@@ -1,6 +1,6 @@
 ---
 name: brooks-lint
-description: "AI code reviewer grounded in classic software engineering books for catching design smells, coupling issues, and architectural risks."
+description: AI code reviewer grounded in classic software engineering books for catching design smells, coupling issues, and architectural risks. Use when you need help with brooks lint.
 source_repo: hyhmrright/brooks-lint
 source_type: community
 license: "MIT"

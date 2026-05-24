@@ -1,6 +1,6 @@
 ---
 name: rob-pike-style
-description: Rob Pike — Plan 9, Go, "less is exponentially more," concurrency primitives, composition over inheritance
+description: "Rob Pike — Plan 9, Go, \"less is exponentially more,\" concurrency primitives, composition over inheritance. Use when you want code review, architecture advice, or opinions in the style of rob pike."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

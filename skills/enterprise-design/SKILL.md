@@ -1,6 +1,6 @@
 ---
 name: enterprise-design
-description: Expert in the Enterprise design system - Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.
+description: Expert in the Enterprise design system - Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts. Use when building UI components, applying design tokens, or implementing visual styles for enterprise.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

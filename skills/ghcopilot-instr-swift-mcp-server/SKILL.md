@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-swift-mcp-server
-description: "Best practices and patterns for building Model Context Protocol (MCP) servers in Swift using the official MCP Swift SDK package."
+description: Best practices and patterns for building Model Context Protocol (MCP) servers in Swift using the official MCP Swift SDK package. Use when writing or reviewing swift mcp server code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

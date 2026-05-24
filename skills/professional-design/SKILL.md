@@ -1,6 +1,6 @@
 ---
 name: professional-design
-description: Expert in the Professional design system - Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.
+description: Expert in the Professional design system - Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity. Use when building UI components, applying design tokens, or implementing visual styles for professional.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: ray-expert
-description: Expert in Ray remote, actors, Ray Data, Ray Serve, and Ray Tune
+description: Expert in Ray remote, actors, Ray Data, Ray Serve, and Ray Tune. Use when working with ray for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

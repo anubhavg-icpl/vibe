@@ -1,6 +1,6 @@
 ---
 name: screenshot-fyi-automation
-description: "Automate Screenshot Fyi tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Screenshot Fyi tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with screenshot fyi automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

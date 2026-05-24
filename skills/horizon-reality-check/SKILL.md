@@ -1,6 +1,6 @@
 ---
 name: horizon-reality-check
-description: Given a task you want to hand to an agent, decide whether the current frontier's horizon covers it with enough margin.
+description: "Given a task you want to hand to an agent, decide whether the current frontier's horizon covers it with enough margin. Use when you need help with horizon reality check."
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 1

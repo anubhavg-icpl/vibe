@@ -1,6 +1,6 @@
 ---
 name: file-organizer
-description: "6. Reduces Clutter: Identifies old files you probably don't need anymore"
+description: "6. Reduces Clutter: Identifies old files you probably don't need anymore. Use when you need help with file organizer."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

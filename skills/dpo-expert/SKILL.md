@@ -1,6 +1,6 @@
 ---
 name: dpo-expert
-description: Direct Preference Optimization — preference alignment without an explicit reward model
+description: Direct Preference Optimization — preference alignment without an explicit reward model. Use when fine-tuning, training, or adapting language models with dpo techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

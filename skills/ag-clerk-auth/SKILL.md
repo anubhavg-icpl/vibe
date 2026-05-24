@@ -1,6 +1,6 @@
 ---
 name: clerk-auth
-description: Expert patterns for Clerk auth implementation, middleware,
+description: Expert patterns for Clerk auth implementation, middleware,. Use when you need help with clerk auth.
   organizations, webhooks, and user sync
 license: CC-BY-NC-SA-4.0
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: rich-hickey-style
-description: Rich Hickey — Clojure, "Simple Made Easy," immutability, hammock-driven design, decomplecting
+description: "Rich Hickey — Clojure, \"Simple Made Easy,\" immutability, hammock-driven design, decomplecting. Use when you want code review, architecture advice, or opinions in the style of rich hickey."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

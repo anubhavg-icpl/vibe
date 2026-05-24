@@ -1,6 +1,6 @@
 ---
 name: busybox-on-windows
-description: "How to use a Win32 build of BusyBox to run many of the standard UNIX command line tools on Windows."
+description: How to use a Win32 build of BusyBox to run many of the standard UNIX command line tools on Windows. Use when you need help with busybox on windows.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

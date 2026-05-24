@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-monochrome
-description: |
+description: |. Use when you need help with html ppt zhangzara monochrome.
   Monochrome — Ivory ledger paper with all-black type; Lora serif headlines, Jost body, no color at all. Anything that should feel like a hand-typeset ledger: user research synthesis, white papers, longform reports, academic and policy briefs, advisory deliverables, bilingual EN/CN reports.
 license: CC-BY-NC-SA-4.0
 triggers: 

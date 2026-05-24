@@ -6,7 +6,7 @@ Dependencies: none
 Author: Alireza Rezvani
 Version: 2.1.2
 name: code-to-prd
-description: |
+description: |. Use when you need help with code to prd.
   Reverse-engineer any codebase into a complete Product Requirements Document (PRD).
   Analyzes routes, components, state management, API integrations, and user interactions to produce
   business-readable documentation detailed enough for engineers or AI agents to fully reconstruct

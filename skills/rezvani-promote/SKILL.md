@@ -1,6 +1,6 @@
 ---
 name: "promote"
-description: "Graduate a proven pattern from auto-memory (MEMORY.md) to CLAUDE.md or .claude/rules/ for permanent enforcement."
+description: Graduate a proven pattern from auto-memory (MEMORY.md) to CLAUDE.md or .claude/rules/ for permanent enforcement. Use when you need help with promote.
 license: CC-BY-NC-SA-4.0
 ---
 

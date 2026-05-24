@@ -1,6 +1,6 @@
 ---
 name: code-review-excellence
-description: "Transform code reviews from gatekeeping to knowledge sharing through constructive feedback, systematic analysis, and collaborative improvement."
+description: Transform code reviews from gatekeeping to knowledge sharing through constructive feedback, systematic analysis, and collaborative improvement. Use when you need help with code review excellence.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

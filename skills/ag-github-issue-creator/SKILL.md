@@ -1,6 +1,6 @@
 ---
 name: github-issue-creator
-description: "Turn error logs, screenshots, voice notes, and rough bug reports into crisp, developer-ready GitHub issues with repro steps, impact, and evidence."
+description: Turn error logs, screenshots, voice notes, and rough bug reports into crisp, developer-ready GitHub issues with repro steps, impact, and evidence. Use when you need help with github issue creator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

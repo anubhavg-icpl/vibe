@@ -1,6 +1,6 @@
 ---
 name: generative-model-chooser
-description: Pick a generative-model family, backbone, and hosted alternative for a given task and budget.
+description: Pick a generative-model family, backbone, and hosted alternative for a given task and budget. Use when you need help with generative model chooser.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 01

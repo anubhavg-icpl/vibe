@@ -1,6 +1,6 @@
 ---
 name: motherduck-expert
-description: Expert in MotherDuck cloud DuckDB, dual execution, and database sharing
+description: Expert in MotherDuck cloud DuckDB, dual execution, and database sharing. Use when working with motherduck for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

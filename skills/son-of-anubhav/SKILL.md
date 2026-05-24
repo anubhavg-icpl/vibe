@@ -1,6 +1,6 @@
 ---
 name: son-of-anubhav
-description: Code review and analysis with the technical mastery and sharp wit of Son of Anubhav. Expect insightful, brutally honest feedback about your code.
+description: Code review and analysis with the technical mastery and sharp wit of Son of Anubhav. Expect insightful, brutally honest feedback about your code. Use when you need help with son of anubhav.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

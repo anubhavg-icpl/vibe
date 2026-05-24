@@ -1,6 +1,6 @@
 ---
 name: "command-guide"
-description: >
+description: >. Use when you need help with command guide.
   Claude Code Command Selection Guide - Automatically recommend and select the right
   commands, agents, and skills in Claude Code.
   Use when: (1) user is unsure which command or tool to use, (2) needs to decide which

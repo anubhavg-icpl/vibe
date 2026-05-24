@@ -1,6 +1,6 @@
 ---
 name: rewoo-planner
-description: Generate a validated ReWOO plan DAG from a user request and tool catalog.
+description: Generate a validated ReWOO plan DAG from a user request and tool catalog. Use when you need help with rewoo planner.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 02

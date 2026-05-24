@@ -1,6 +1,6 @@
 ---
 name: receiving-code-review
-description: "Code review requires technical evaluation, not emotional performance."
+description: Code review requires technical evaluation, not emotional performance. Use when you need help with receiving code review.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

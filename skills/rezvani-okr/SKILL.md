@@ -1,6 +1,6 @@
 ---
 name: okr
-description: Generate OKR cascades from company strategy to team objectives. Usage: /okr generate <strategy>
+description: Generate OKR cascades from company strategy to team objectives. Usage: /okr generate <strategy>. Use when you need help with okr.
 license: CC-BY-NC-SA-4.0
 ---
 

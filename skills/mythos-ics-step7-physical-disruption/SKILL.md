@@ -1,6 +1,6 @@
 ---
 name: mythos-ics-step7-physical-disruption
-description: Defensive instrumentation for the "Cooling Tower" range Step 7 — manipulation of pump/valve registers to drain the tower and damage equipment, modeled on AISI's 7-step ICS scenario
+description: "Defensive instrumentation for the \"Cooling Tower\" range Step 7 — manipulation of pump/valve registers to drain the tower and damage equipment, modeled on AISI's 7-step ICS scenario. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ics step7 physical disruption."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

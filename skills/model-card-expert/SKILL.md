@@ -1,6 +1,6 @@
 ---
 name: model-card-expert
-description: Authoring HuggingFace Model Cards, NIST AI RMF / Inspect AI eval reports, transparency notes
+description: Authoring HuggingFace Model Cards, NIST AI RMF / Inspect AI eval reports, transparency notes. Use when evaluating, monitoring, or observing LLM performance with model card.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

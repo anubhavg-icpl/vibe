@@ -1,6 +1,6 @@
 ---
 name: prompt-caching-planner
-description: Design a cache-friendly prompt layout and pick the right provider caching mode.
+description: Design a cache-friendly prompt layout and pick the right provider caching mode. Use when you need help with prompt caching planner.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 15

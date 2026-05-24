@@ -1,6 +1,6 @@
 ---
 name: QuickBooks Automation
-description: "QuickBooks Automation: manage invoices, customers, accounts, and payments in QuickBooks Online for streamlined bookkeeping"
+description: QuickBooks Automation: manage invoices, customers, accounts, and payments in QuickBooks Online for streamlined bookkeeping. Use when you need help with QuickBooks Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

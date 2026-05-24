@@ -1,6 +1,6 @@
 ---
 name: skill-pytorch-patterns
-description: Reference patterns for PyTorch training, evaluation, and deployment
+description: Reference patterns for PyTorch training, evaluation, and deployment. Use when you need help with skill pytorch patterns.
 license: CC-BY-NC-SA-4.0
 phase: 03
 lesson: 11

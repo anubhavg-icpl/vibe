@@ -1,6 +1,6 @@
 ---
 name: ui-designer
-description: ui-designer
+description: ui-designer. Use when you need help with ui designer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

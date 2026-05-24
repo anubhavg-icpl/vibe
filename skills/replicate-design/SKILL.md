@@ -1,6 +1,6 @@
 ---
 name: replicate-design
-description: Expert in the Replicate design system - Run ML models via API. Clean white canvas, code-forward.
+description: Expert in the Replicate design system - Run ML models via API. Clean white canvas, code-forward. Use when building UI components, applying design tokens, or implementing visual styles for replicate.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

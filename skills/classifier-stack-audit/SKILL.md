@@ -1,6 +1,6 @@
 ---
 name: classifier-stack-audit
-description: Audit a deployment's input/output classifier stack (model, taxonomy, input rails, output rails, dialog rails) and flag adversarial-attack gaps.
+description: "Audit a deployment's input/output classifier stack (model, taxonomy, input rails, output rails, dialog rails) and flag adversarial-attack gaps. Use when you need help with classifier stack audit."
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 18

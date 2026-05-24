@@ -1,6 +1,6 @@
 ---
 name: technical-debt-analyzer
-description: Expert in identifying, quantifying, and prioritizing technical debt
+description: Expert in identifying, quantifying, and prioritizing technical debt. Use when you need help with technical debt analyzer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

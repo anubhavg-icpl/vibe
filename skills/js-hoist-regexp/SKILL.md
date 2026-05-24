@@ -1,6 +1,6 @@
 ---
 name: js-hoist-regexp
-description: Hoist RegExp Creation
+description: Hoist RegExp Creation. Use when you need help with js hoist regexp.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

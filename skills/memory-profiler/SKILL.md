@@ -1,6 +1,6 @@
 ---
 name: memory-profiler
-description: Expert in memory profiling, leak detection, and memory optimization across languages
+description: Expert in memory profiling, leak detection, and memory optimization across languages. Use when diagnosing, troubleshooting, or fixing bugs with memory profiler.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

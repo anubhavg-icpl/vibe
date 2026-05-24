@@ -1,6 +1,6 @@
 ---
 name: bun-runtime
-description: Expert in Bun JavaScript runtime, bundler, package manager, and test runner for high-performance applications
+description: Expert in Bun JavaScript runtime, bundler, package manager, and test runner for high-performance applications. Use when you need help with bun runtime.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

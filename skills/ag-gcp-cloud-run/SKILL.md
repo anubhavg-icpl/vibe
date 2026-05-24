@@ -1,6 +1,6 @@
 ---
 name: gcp-cloud-run
-description: Specialized skill for building production-ready serverless
+description: Specialized skill for building production-ready serverless. Use when you need help with gcp cloud run.
   applications on GCP. Covers Cloud Run services (containerized), Cloud Run
   Functions (event-driven), cold start optimization, and event-driven
   architecture with Pub/Sub.

@@ -1,6 +1,6 @@
 ---
 name: svix-automation
-description: "Automate Svix tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Svix tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with svix automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

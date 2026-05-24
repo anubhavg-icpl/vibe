@@ -1,6 +1,6 @@
 ---
 name: drawio
-description: Generate draw.io diagrams as .drawio files and export to PNG/SVG/PDF with embedded XML
+description: Generate draw.io diagrams as .drawio files and export to PNG/SVG/PDF with embedded XML. Use when you need help with drawio.
 license: CC-BY-NC-SA-4.0
 ---
 

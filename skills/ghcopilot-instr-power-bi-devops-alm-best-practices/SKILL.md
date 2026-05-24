@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-power-bi-devops-alm-best-practices
-description: "Comprehensive guide for Power BI DevOps, Application Lifecycle Management (ALM), CI/CD pipelines, deployment automation, and version control best practices."
+description: Comprehensive guide for Power BI DevOps, Application Lifecycle Management (ALM), CI/CD pipelines, deployment automation, and version control best practices. Use when writing or reviewing power bi devops alm best practices code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

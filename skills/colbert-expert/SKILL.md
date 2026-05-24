@@ -1,6 +1,6 @@
 ---
 name: colbert-expert
-description: ColBERT v2 / late interaction retrieval, MaxSim, RAGatouille, indexing tradeoffs
+description: ColBERT v2 / late interaction retrieval, MaxSim, RAGatouille, indexing tradeoffs. Use when building or optimizing retrieval-augmented generation pipelines with colbert.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

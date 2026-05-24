@@ -1,6 +1,6 @@
 ---
 name: formbricks-automation
-description: "Automate Formbricks tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Formbricks tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with formbricks automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

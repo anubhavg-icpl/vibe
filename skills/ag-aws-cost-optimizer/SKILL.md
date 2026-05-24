@@ -1,6 +1,6 @@
 ---
 name: aws-cost-optimizer
-description: "Comprehensive AWS cost analysis and optimization recommendations using AWS CLI and Cost Explorer"
+description: Comprehensive AWS cost analysis and optimization recommendations using AWS CLI and Cost Explorer. Use when you need help with aws cost optimizer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

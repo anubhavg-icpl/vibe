@@ -1,6 +1,6 @@
 ---
 name: hashicorp-design
-description: Expert in the HashiCorp design system - Infrastructure automation. Enterprise-clean, black and white.
+description: Expert in the HashiCorp design system - Infrastructure automation. Enterprise-clean, black and white. Use when building UI components, applying design tokens, or implementing visual styles for hashicorp.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

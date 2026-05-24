@@ -1,6 +1,6 @@
 ---
 name: ruby-rails
-description: ruby-rails
+description: ruby-rails. Use when writing, reviewing, or refactoring ruby rails code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: last30days
-description: "Research a topic from the last 30 days on Reddit + X + Web, become an expert, and write copy-paste-ready prompts for the user's target tool."
+description: "Research a topic from the last 30 days on Reddit + X + Web, become an expert, and write copy-paste-ready prompts for the user's target tool. Use when you need help with last30days."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

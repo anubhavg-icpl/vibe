@@ -1,6 +1,6 @@
 ---
 name: text-to-pdf-automation
-description: "Automate Text To PDF tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Text To PDF tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with text to pdf automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

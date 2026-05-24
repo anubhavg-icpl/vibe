@@ -1,6 +1,6 @@
 ---
 name: crewai
-description: Expert in CrewAI - the leading role-based multi-agent framework
+description: Expert in CrewAI - the leading role-based multi-agent framework. Use when you need help with crewai.
   used by 60% of Fortune 500 companies.
 license: CC-BY-NC-SA-4.0
 metadata:

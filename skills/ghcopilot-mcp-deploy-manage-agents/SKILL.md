@@ -1,6 +1,6 @@
 ---
 name: mcp-deploy-manage-agents
-description: 'Skill converted from mcp-deploy-manage-agents.prompt.md'
+description: Skill converted from mcp-deploy-manage-agents.prompt.md. Use when you need help with mcp deploy manage agents.
 license: CC-BY-NC-SA-4.0
 ---
 

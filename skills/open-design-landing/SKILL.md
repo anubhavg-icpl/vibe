@@ -1,6 +1,6 @@
 ---
 name: open-design-landing
-description: >
+description: >. Use when you need help with open design landing.
   Produce a world-class single-page editorial landing site in the
   Atelier Zero visual language (Monocle / Apartamento / Études editorial
   collage) — the same aesthetic Open Design uses for its own marketing

@@ -1,6 +1,6 @@
 ---
 name: skill-advanced-rag
-description: Build production-grade RAG with hybrid search, reranking, and evaluation
+description: Build production-grade RAG with hybrid search, reranking, and evaluation. Use when you need help with skill advanced rag.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 7

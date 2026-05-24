@@ -1,6 +1,6 @@
 ---
 name: server-serialization
-description: Minimize Serialization at RSC Boundaries
+description: Minimize Serialization at RSC Boundaries. Use when you need help with server serialization.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

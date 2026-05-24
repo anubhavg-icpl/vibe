@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-broadside
-description: |
+description: |. Use when you need help with html ppt zhangzara broadside.
   Broadside — Dark editorial canvas with a single fire orange accent and bilingual Latin/Chinese type stack. Anything that should land like a broadside newspaper headline: brand manifestos, magazine and cultural pitches, design talks, bilingual EN/CN decks, founder vision statements.
 license: CC-BY-NC-SA-4.0
 triggers: 

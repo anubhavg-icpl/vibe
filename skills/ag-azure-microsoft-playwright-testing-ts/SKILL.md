@@ -1,6 +1,6 @@
 ---
 name: azure-microsoft-playwright-testing-ts
-description: "Run Playwright tests at scale with cloud-hosted browsers and integrated Azure portal reporting."
+description: Run Playwright tests at scale with cloud-hosted browsers and integrated Azure portal reporting. Use when you need help with azure microsoft playwright testing ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

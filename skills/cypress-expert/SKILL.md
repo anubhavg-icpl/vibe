@@ -1,6 +1,6 @@
 ---
 name: cypress-expert
-description: Expert in Cypress for end-to-end testing, component testing, and modern web application testing
+description: Expert in Cypress for end-to-end testing, component testing, and modern web application testing. Use when writing, running, or improving tests with cypress.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

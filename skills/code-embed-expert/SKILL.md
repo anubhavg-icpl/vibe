@@ -1,6 +1,6 @@
 ---
 name: code-embed-expert
-description: Deep expertise in code-specific embedding models — voyage-code-3, jina-embeddings-v2-base-code, jina-code-embeddings, CodeRankEmbed, GraphCodeBERT
+description: Deep expertise in code-specific embedding models — voyage-code-3, jina-embeddings-v2-base-code, jina-code-embeddings, CodeRankEmbed, GraphCodeBERT. Use when implementing vector search, embeddings storage, or similarity queries with code embed.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: llm-expert
-description: Expert in Large Language Model development, fine-tuning, and deployment
+description: Expert in Large Language Model development, fine-tuning, and deployment. Use when you need deep expertise in llm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

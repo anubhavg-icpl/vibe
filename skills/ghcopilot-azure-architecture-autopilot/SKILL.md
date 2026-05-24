@@ -1,6 +1,6 @@
 ---
 name: azure-architecture-autopilot
-description: >
+description: >. Use when you need help with azure architecture autopilot.
   Design Azure infrastructure using natural language, or analyze existing Azure resources
   to auto-generate architecture diagrams, refine them through conversation, and deploy with Bicep.
 license: CC-BY-NC-SA-4.0

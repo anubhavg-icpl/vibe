@@ -1,6 +1,6 @@
 ---
 name: os-scripting
-description: "Operating system and shell scripting troubleshooting workflow for Linux, macOS, and Windows. Covers bash scripting, system administration, debugging, and automation."
+description: Operating system and shell scripting troubleshooting workflow for Linux, macOS, and Windows. Covers bash scripting, system administration, debugging, and automation. Use when you need help with os scripting.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: workflow-bundle

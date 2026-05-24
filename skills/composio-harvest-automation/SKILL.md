@@ -1,6 +1,6 @@
 ---
 name: Harvest Automation
-description: "Automate time tracking, project management, and invoicing workflows in Harvest -- log hours, manage projects, clients, and tasks through natural language commands."
+description: Automate time tracking, project management, and invoicing workflows in Harvest -- log hours, manage projects, clients, and tasks through natural language commands. Use when you need help with Harvest Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

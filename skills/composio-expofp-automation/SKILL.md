@@ -1,6 +1,6 @@
 ---
 name: expofp-automation
-description: "Automate Expofp tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Expofp tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with expofp automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

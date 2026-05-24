@@ -1,6 +1,6 @@
 ---
 name: audit-skills
-description: "Expert security auditor for AI Skills and Bundles. Performs non-intrusive static analysis to identify malicious patterns, data leaks, system stability risks, and obfuscated payloads across Windows, macOS, Linux/Unix, and Mobile (Android/iOS)."
+description: Expert security auditor for AI Skills and Bundles. Performs non-intrusive static analysis to identify malicious patterns, data leaks, system stability risks, and obfuscated payloads across Windows, macOS, Linux/Unix, and Mobile (Android/iOS). Use when performing security analysis, auditing, or hardening with audit skills.
 license: CC-BY-NC-SA-4.0
 author: MAIOStudio
 tools: [claude, gemini, gpt, llama, mistral, etc]

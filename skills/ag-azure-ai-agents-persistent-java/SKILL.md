@@ -1,6 +1,6 @@
 ---
 name: azure-ai-agents-persistent-java
-description: Azure AI Agents Persistent SDK for Java. Low-level SDK for creating and managing AI agents with threads, messages, runs, and tools.
+description: Azure AI Agents Persistent SDK for Java. Low-level SDK for creating and managing AI agents with threads, messages, runs, and tools. Use when you need help with azure ai agents persistent java.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

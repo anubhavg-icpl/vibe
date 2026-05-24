@@ -1,6 +1,6 @@
 ---
 name: self-improvement-auditor
-description: Audit a proposed self-improvement or constitutional AI pipeline before it runs at scale.
+description: Audit a proposed self-improvement or constitutional AI pipeline before it runs at scale. Use when you need help with self improvement auditor.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 9

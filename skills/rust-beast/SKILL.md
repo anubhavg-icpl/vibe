@@ -1,6 +1,6 @@
 ---
 name: rust-beast
-description: Rust GPT-4.1 Coding Beast Mode for VS Code
+description: Rust GPT-4.1 Coding Beast Mode for VS Code. Use when you need help with rust beast.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

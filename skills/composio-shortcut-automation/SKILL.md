@@ -1,6 +1,6 @@
 ---
 name: Shortcut Automation
-description: "Automate project management workflows in Shortcut -- create stories, manage tasks, track epics, and organize workflows through natural language commands."
+description: Automate project management workflows in Shortcut -- create stories, manage tasks, track epics, and organize workflows through natural language commands. Use when you need help with Shortcut Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

@@ -1,6 +1,6 @@
 ---
 name: doodle-design
-description: Expert in the Doodle design system - Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.
+description: Expert in the Doodle design system - Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel. Use when building UI components, applying design tokens, or implementing visual styles for doodle.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

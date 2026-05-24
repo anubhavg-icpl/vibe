@@ -1,6 +1,6 @@
 ---
 name: trigger-dev-expert
-description: Run durable AI background jobs and agents with Trigger.dev v3 — no timeouts, full observability
+description: Run durable AI background jobs and agents with Trigger.dev v3 — no timeouts, full observability. Use when building AI applications with trigger dev.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

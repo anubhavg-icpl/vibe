@@ -1,6 +1,6 @@
 ---
 name: migration-agent
-description: Build a repo-level code migration agent that combines deterministic recipes with an agent fallback loop, passes MigrationBench, and publishes a failure taxonomy.
+description: Build a repo-level code migration agent that combines deterministic recipes with an agent fallback loop, passes MigrationBench, and publishes a failure taxonomy. Use when you need help with migration agent.
 license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 09

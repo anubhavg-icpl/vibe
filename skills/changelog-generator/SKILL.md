@@ -1,6 +1,6 @@
 ---
 name: changelog-generator
-description: Expert in generating clear, informative changelogs following best practices
+description: Expert in generating clear, informative changelogs following best practices. Use when generating, improving, or structuring documentation with changelog generator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

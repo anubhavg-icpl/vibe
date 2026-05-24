@@ -1,6 +1,6 @@
 ---
 name: explain-like-socrates
-description: >
+description: >. Use when you need help with explain like socrates.
   Explains concepts using Socratic-style dialogue. Use when the user asks to explain, teach or help understand a concept like socrates.
 license: CC-BY-NC-SA-4.0
 metadata:

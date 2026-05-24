@@ -1,6 +1,6 @@
 ---
 name: beaconstac-automation
-description: "Automate Beaconstac tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Beaconstac tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with beaconstac automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

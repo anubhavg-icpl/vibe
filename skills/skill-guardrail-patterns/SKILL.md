@@ -1,6 +1,6 @@
 ---
 name: skill-guardrail-patterns
-description: Decision framework for choosing and implementing guardrails in production -- tool selection, layering strategy, and cost-performance tradeoffs
+description: Decision framework for choosing and implementing guardrails in production -- tool selection, layering strategy, and cost-performance tradeoffs. Use when you need help with skill guardrail patterns.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 12

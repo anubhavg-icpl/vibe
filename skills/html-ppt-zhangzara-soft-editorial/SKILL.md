@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-soft-editorial
-description: |
+description: |. Use when you need help with html ppt zhangzara soft editorial.
   Soft Editorial — Cormorant Garamond serif on warm paper with sage, blush, and lemon accents. Anything that should feel literary, elegant, and unhurried: editorial features, longform brand stories, gallery / museum decks, advisory deliverables, wedding / lifestyle media, founder essays.
 license: CC-BY-NC-SA-4.0
 triggers: 

@@ -1,6 +1,6 @@
 ---
 name: moe-configurator
-description: Pick expert count, top-k, balancing strategy, and shared-expert layout for a new MoE transformer.
+description: Pick expert count, top-k, balancing strategy, and shared-expert layout for a new MoE transformer. Use when you need help with moe configurator.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 11

@@ -1,6 +1,6 @@
 ---
 name: kubestellar-console
-description: "Multi-cluster Kubernetes dashboard with AI-powered operations via MCP server and 10+ built-in agent skills"
+description: Multi-cluster Kubernetes dashboard with AI-powered operations via MCP server and 10+ built-in agent skills. Use when automating CI/CD, deployments, or operations with kubestellar console.
 source_repo: kubestellar/console
 source_type: community
 author: kubestellar

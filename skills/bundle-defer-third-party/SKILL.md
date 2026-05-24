@@ -1,6 +1,6 @@
 ---
 name: bundle-defer-third-party
-description: Defer Non-Critical Third-Party Libraries
+description: Defer Non-Critical Third-Party Libraries. Use when you need help with bundle defer third party.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

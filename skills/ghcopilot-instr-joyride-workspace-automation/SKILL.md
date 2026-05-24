@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-joyride-workspace-automation
-description: "Expert assistance for Joyride Workspace automation - REPL-driven and user space ClojureScript automation within specific VS Code workspaces"
+description: Expert assistance for Joyride Workspace automation - REPL-driven and user space ClojureScript automation within specific VS Code workspaces. Use when writing or reviewing joyride workspace automation code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

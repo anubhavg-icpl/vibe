@@ -1,6 +1,6 @@
 ---
 name: aws-fault-injection
-description: Expert in AWS FIS - Native chaos engineering service for AWS infrastructure
+description: Expert in AWS FIS - Native chaos engineering service for AWS infrastructure. Use when writing, running, or improving tests with aws fault injection.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

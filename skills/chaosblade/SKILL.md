@@ -1,6 +1,6 @@
 ---
 name: chaosblade
-description: Expert in ChaosBlade - Alibaba's multi-platform chaos engineering tool
+description: "Expert in ChaosBlade - Alibaba's multi-platform chaos engineering tool. Use when writing, running, or improving tests with chaosblade."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

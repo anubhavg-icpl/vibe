@@ -1,6 +1,6 @@
 ---
 name: hybrid-picker
-description: Pick between pure Transformer, Jamba-style hybrid, and pure SSM for a given workload.
+description: Pick between pure Transformer, Jamba-style hybrid, and pure SSM for a given workload. Use when you need help with hybrid picker.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 21

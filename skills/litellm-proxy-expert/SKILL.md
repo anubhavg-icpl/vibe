@@ -1,6 +1,6 @@
 ---
 name: litellm-proxy-expert
-description: Run LiteLLM as a unified gateway over local + cloud LLMs with router config, virtual keys, budgets, fallbacks, and Redis caching
+description: Run LiteLLM as a unified gateway over local + cloud LLMs with router config, virtual keys, budgets, fallbacks, and Redis caching. Use when deploying, running, or configuring local LLM inference with litellm proxy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

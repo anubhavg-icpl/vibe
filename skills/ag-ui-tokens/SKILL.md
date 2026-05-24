@@ -1,6 +1,6 @@
 ---
 name: ui-tokens
-description: "List, add, and update StyleSeed design tokens while keeping JSON sources, CSS variables, and dark-mode values in sync."
+description: List, add, and update StyleSeed design tokens while keeping JSON sources, CSS variables, and dark-mode values in sync. Use when you need help with ui tokens.
 license: CC-BY-NC-SA-4.0
 source_repo: bitjaru/styleseed
 source_type: community

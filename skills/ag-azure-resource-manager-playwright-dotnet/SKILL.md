@@ -1,6 +1,6 @@
 ---
 name: azure-resource-manager-playwright-dotnet
-description: Azure Resource Manager SDK for Microsoft Playwright Testing in .NET.
+description: Azure Resource Manager SDK for Microsoft Playwright Testing in .NET. Use when you need help with azure resource manager playwright dotnet.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

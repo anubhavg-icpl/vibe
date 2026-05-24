@@ -1,6 +1,6 @@
 ---
 name: faf-wizard
-description: "Done-for-you .faf generator. One-click AI context for any project - new, legacy, or famous. Auto-detects stack, scores readiness, works everywhere."
+description: Done-for-you .faf generator. One-click AI context for any project - new, legacy, or famous. Auto-detects stack, scores readiness, works everywhere. Use when you need help with faf wizard.
 license: CC-BY-NC-SA-4.0
 source_repo: Wolfe-Jam/faf-skills
 source_type: community

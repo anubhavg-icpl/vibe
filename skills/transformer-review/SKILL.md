@@ -1,6 +1,6 @@
 ---
 name: transformer-review
-description: Review a transformer-from-scratch implementation against the 13 Phase 7 lessons.
+description: Review a transformer-from-scratch implementation against the 13 Phase 7 lessons. Use when you need help with transformer review.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 14

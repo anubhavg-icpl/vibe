@@ -1,6 +1,6 @@
 ---
 name: acd-data-dense-clickhouse-design
-description: Reference DESIGN.md for dashboard-first, chart-heavy, saturated-on-charcoal dev-tool aesthetic.
+description: Reference DESIGN.md for dashboard-first, chart-heavy, saturated-on-charcoal dev-tool aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for data dense clickhouse.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

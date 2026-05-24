@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-no-heredoc
-description: "Prevents terminal heredoc file corruption in VS Code Copilot by enforcing use of file editing tools instead of shell redirections"
+description: Prevents terminal heredoc file corruption in VS Code Copilot by enforcing use of file editing tools instead of shell redirections. Use when writing or reviewing no heredoc code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

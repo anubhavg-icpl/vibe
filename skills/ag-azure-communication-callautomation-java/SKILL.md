@@ -1,6 +1,6 @@
 ---
 name: azure-communication-callautomation-java
-description: "Build server-side call automation workflows including IVR systems, call routing, recording, and AI-powered interactions."
+description: Build server-side call automation workflows including IVR systems, call routing, recording, and AI-powered interactions. Use when you need help with azure communication callautomation java.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

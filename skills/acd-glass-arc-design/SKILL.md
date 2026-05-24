@@ -1,6 +1,6 @@
 ---
 name: acd-glass-arc-design
-description: Reference DESIGN.md for frosted translucency, pastel gradients, soft geometry.
+description: Reference DESIGN.md for frosted translucency, pastel gradients, soft geometry. Use when building UI components, applying design tokens, or implementing visual styles for glass arc.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

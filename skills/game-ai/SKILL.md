@@ -1,6 +1,6 @@
 ---
 name: game-ai
-description: Expert in game AI, behavior trees, pathfinding, and NPC intelligence
+description: Expert in game AI, behavior trees, pathfinding, and NPC intelligence. Use when developing games with game ai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

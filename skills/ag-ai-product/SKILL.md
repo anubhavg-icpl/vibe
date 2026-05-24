@@ -1,6 +1,6 @@
 ---
 name: ai-product
-description: Every product will be AI-powered. The question is whether you'll
+description: "Every product will be AI-powered. The question is whether you'll. Use when you need help with ai product."
   build it right or ship a demo that falls apart in production.
 license: CC-BY-NC-SA-4.0
 metadata:

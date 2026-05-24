@@ -1,6 +1,6 @@
 ---
 name: dst-designer
-description: Design a dialogue state tracker — schema, extractor, update policy, evaluation.
+description: Design a dialogue state tracker — schema, extractor, update policy, evaluation. Use when you need help with dst designer.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 29

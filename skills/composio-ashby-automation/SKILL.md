@@ -1,6 +1,6 @@
 ---
 name: Ashby Automation
-description: "Automate recruiting and hiring workflows in Ashby -- manage candidates, jobs, applications, interviews, and notes through natural language commands."
+description: Automate recruiting and hiring workflows in Ashby -- manage candidates, jobs, applications, interviews, and notes through natural language commands. Use when you need help with Ashby Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

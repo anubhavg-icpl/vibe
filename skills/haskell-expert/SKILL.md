@@ -1,6 +1,6 @@
 ---
 name: haskell-expert
-description: Expert Haskell development with pure functional programming, type system mastery, and category theory
+description: Expert Haskell development with pure functional programming, type system mastery, and category theory. Use when writing, reviewing, or refactoring haskell code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: claude-code-headless
-description: "Run Claude Code programmatically without interactive UI. Triggers on: headless, CLI automation, --print, output-format, stream-json, CI/CD, scripting."
+description: Run Claude Code programmatically without interactive UI. Triggers on: headless, CLI automation, --print, output-format, stream-json, CI/CD, scripting. Use when you need help with claude code headless.
 license: MIT
 compatibility: "Claude Code CLI"
 allowed-tools: "Bash Read"

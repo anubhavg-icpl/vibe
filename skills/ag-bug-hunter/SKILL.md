@@ -1,6 +1,6 @@
 ---
 name: bug-hunter
-description: "Systematically finds and fixes bugs using proven debugging techniques. Traces from symptoms to root cause, implements fixes, and prevents regression."
+description: Systematically finds and fixes bugs using proven debugging techniques. Traces from symptoms to root cause, implements fixes, and prevents regression. Use when you need help with bug hunter.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: development

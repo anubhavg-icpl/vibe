@@ -1,6 +1,6 @@
 ---
 name: qwen-vl-pipeline-designer
-description: Configure a Qwen2.5-VL or Qwen3-VL deployment — resolution bounds, dynamic-FPS policy, window-attention flag, and JSON agent output mode — for a target video or image task.
+description: Configure a Qwen2.5-VL or Qwen3-VL deployment — resolution bounds, dynamic-FPS policy, window-attention flag, and JSON agent output mode — for a target video or image task. Use when you need help with qwen vl pipeline designer.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 09

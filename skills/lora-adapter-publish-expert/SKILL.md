@@ -1,6 +1,6 @@
 ---
 name: lora-adapter-publish-expert
-description: Package and publish LoRA adapters — HF Hub layout, vLLM dynamic loading, llama.cpp LoRA GGUF, Ollama ADAPTER directive, Replicate Cog
+description: Package and publish LoRA adapters — HF Hub layout, vLLM dynamic loading, llama.cpp LoRA GGUF, Ollama ADAPTER directive, Replicate Cog. Use when creating, converting, or publishing model files with lora adapter publish.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: dating-web
-description: |
+description: |. Use when you need help with dating web.
   A consumer-feeling dating / matchmaking dashboard — left rail navigation,
   ticker bar of community signals, headline KPIs, a 30-day mutual-matches
   bar chart, and a match-rate trend block. Editorial typography, restrained

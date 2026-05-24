@@ -1,6 +1,6 @@
 ---
 name: entity-linker
-description: Design an entity linking pipeline — KB, candidate generator, disambiguator, evaluation.
+description: Design an entity linking pipeline — KB, candidate generator, disambiguator, evaluation. Use when you need help with entity linker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 25

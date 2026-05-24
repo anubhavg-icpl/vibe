@@ -1,6 +1,6 @@
 ---
 name: android-tv-expert
-description: Compose for TV, tv-material library, focus management, channels, recommendations, and remote-first UX
+description: Compose for TV, tv-material library, focus management, channels, recommendations, and remote-first UX. Use when developing Android apps with android tv.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

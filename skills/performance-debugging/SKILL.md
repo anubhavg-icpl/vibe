@@ -1,6 +1,6 @@
 ---
 name: performance-debugging
-description: Expert in debugging performance issues, bottlenecks, and optimization
+description: Expert in debugging performance issues, bottlenecks, and optimization. Use when diagnosing, troubleshooting, or fixing bugs with performance debugging.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

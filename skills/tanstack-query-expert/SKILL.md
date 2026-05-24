@@ -1,6 +1,6 @@
 ---
 name: tanstack-query-expert
-description: Expert in TanStack Query v5 (React Query) — server state, mutations, suspense, infinite queries
+description: Expert in TanStack Query v5 (React Query) — server state, mutations, suspense, infinite queries. Use when building web applications with tanstack query.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

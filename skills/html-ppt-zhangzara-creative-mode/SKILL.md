@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-creative-mode
-description: |
+description: |. Use when you need help with html ppt zhangzara creative mode.
   Creative Mode — Cream paper canvas with confident multi-color (green, pink, orange, yellow) accents and Archivo Black display. Anything that should feel design-led and confident: creative agency pitches, design studio decks, ad shop credentials, brand creative reviews, art-direction reviews.
 license: CC-BY-NC-SA-4.0
 triggers: 

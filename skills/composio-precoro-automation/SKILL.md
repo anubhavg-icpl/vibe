@@ -1,6 +1,6 @@
 ---
 name: precoro-automation
-description: "Automate Precoro tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Precoro tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with precoro automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

@@ -1,6 +1,6 @@
 ---
 name: price-psychology-strategist
-description: "One sentence - what this skill does and when to invoke it"
+description: One sentence - what this skill does and when to invoke it. Use when you need help with price psychology strategist.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

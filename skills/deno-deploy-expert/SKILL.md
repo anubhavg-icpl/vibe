@@ -1,6 +1,6 @@
 ---
 name: deno-deploy-expert
-description: Expert in Deno Deploy, Deno KV, queues, and globally distributed TypeScript
+description: Expert in Deno Deploy, Deno KV, queues, and globally distributed TypeScript. Use when deploying to or building on deno deploy edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

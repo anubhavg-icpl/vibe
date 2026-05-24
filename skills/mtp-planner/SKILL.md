@@ -1,6 +1,6 @@
 ---
 name: mtp-planner
-description: Plan a multi-token prediction integration for a new pre-training run.
+description: Plan a multi-token prediction integration for a new pre-training run. Use when you need help with mtp planner.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 18

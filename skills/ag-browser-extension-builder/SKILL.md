@@ -1,6 +1,6 @@
 ---
 name: browser-extension-builder
-description: Expert in building browser extensions that solve real problems -
+description: Expert in building browser extensions that solve real problems -. Use when you need help with browser extension builder.
   Chrome, Firefox, and cross-browser extensions. Covers extension architecture,
   manifest v3, content scripts, popup UIs, monetization strategies, and Chrome
   Web Store publishing.

@@ -1,6 +1,6 @@
 ---
 name: skill-inference-optimization
-description: Diagnose and optimize LLM inference serving throughput, latency, and cost
+description: Diagnose and optimize LLM inference serving throughput, latency, and cost. Use when you need help with skill inference optimization.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 12

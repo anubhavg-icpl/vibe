@@ -1,6 +1,6 @@
 ---
 name: lever-sandbox-automation
-description: "Automate Lever Sandbox tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Lever Sandbox tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with lever sandbox automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

@@ -1,6 +1,6 @@
 ---
 name: phoenix-project-architect
-description: Production-ready Phoenix/Elixir project structure with contexts, LiveView, and OTP patterns
+description: Production-ready Phoenix/Elixir project structure with contexts, LiveView, and OTP patterns. Use when scaffolding, structuring, or architecting phoenix projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: mcp-create-adaptive-cards
-description: 'Skill converted from mcp-create-adaptive-cards.prompt.md'
+description: Skill converted from mcp-create-adaptive-cards.prompt.md. Use when you need help with mcp create adaptive cards.
 license: CC-BY-NC-SA-4.0
 ---
 

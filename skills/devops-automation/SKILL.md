@@ -1,6 +1,6 @@
 ---
 name: devops-automation
-description: CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns
+description: CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns. Use when you need help with devops automation.
 license: CC-BY-NC-SA-4.0
 ---
 

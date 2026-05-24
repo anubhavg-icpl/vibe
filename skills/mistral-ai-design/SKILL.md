@@ -1,6 +1,6 @@
 ---
 name: mistral-ai-design
-description: Expert in the Mistral AI design system - Open-weight LLM provider. French-engineered minimalism, purple-toned.
+description: Expert in the Mistral AI design system - Open-weight LLM provider. French-engineered minimalism, purple-toned. Use when building UI components, applying design tokens, or implementing visual styles for mistral ai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: bullmq-specialist
-description: BullMQ expert for Redis-backed job queues, background processing,
+description: BullMQ expert for Redis-backed job queues, background processing,. Use when you need specialized bullmq knowledge.
   and reliable async execution in Node.js/TypeScript applications.
 license: CC-BY-NC-SA-4.0
 metadata:

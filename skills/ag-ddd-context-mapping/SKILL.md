@@ -1,6 +1,6 @@
 ---
 name: ddd-context-mapping
-description: "Map relationships between bounded contexts and define integration contracts using DDD context mapping patterns."
+description: Map relationships between bounded contexts and define integration contracts using DDD context mapping patterns. Use when you need help with ddd context mapping.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: bundle-dynamic-imports
-description: Dynamic Imports for Heavy Components
+description: Dynamic Imports for Heavy Components. Use when you need help with bundle dynamic imports.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

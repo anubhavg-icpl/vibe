@@ -1,6 +1,6 @@
 ---
 name: dotnet-backend
-description: "Build ASP.NET Core 8+ backend services with EF Core, auth, background jobs, and production API patterns."
+description: Build ASP.NET Core 8+ backend services with EF Core, auth, background jobs, and production API patterns. Use when you need help with dotnet backend.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

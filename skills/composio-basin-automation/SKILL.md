@@ -1,6 +1,6 @@
 ---
 name: basin-automation
-description: "Automate Basin tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Basin tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with basin automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

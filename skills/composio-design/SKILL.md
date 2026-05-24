@@ -1,6 +1,6 @@
 ---
 name: composio-design
-description: Expert in the Composio design system - Tool integration platform. Modern dark with colorful integration icons.
+description: Expert in the Composio design system - Tool integration platform. Modern dark with colorful integration icons. Use when building UI components, applying design tokens, or implementing visual styles for composio.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

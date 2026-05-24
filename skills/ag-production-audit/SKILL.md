@@ -1,6 +1,6 @@
 ---
 name: production-audit
-description: "Audit a shipped repo for production-readiness gaps across RLS, webhooks, secrets, grants, Stripe idempotency, mobile UX, and deployment health."
+description: Audit a shipped repo for production-readiness gaps across RLS, webhooks, secrets, grants, Stripe idempotency, mobile UX, and deployment health. Use when performing security analysis, auditing, or hardening with production audit.
 source_repo: commitshow/production-audit
 source_type: community
 author: commitshow

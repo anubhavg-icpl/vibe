@@ -1,6 +1,6 @@
 ---
 name: seo-authority-builder
-description: 'Analyzes content for E-E-A-T signals and suggests improvements to
+description: "'Analyzes content for E-E-A-T signals and suggests improvements to. Use when you need help with seo authority builder."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

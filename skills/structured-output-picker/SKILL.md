@@ -1,6 +1,6 @@
 ---
 name: structured-output-picker
-description: Choose a structured output approach, schema design, and validation plan.
+description: Choose a structured output approach, schema design, and validation plan. Use when you need help with structured output picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 20

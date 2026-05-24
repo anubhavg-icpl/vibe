@@ -1,6 +1,6 @@
 ---
 name: fleet-ops
-description: "EXPERIMENTAL — manage a fleet of concurrent Claude sessions on parallel branches or worktrees. Landing queue with test gate, fleet status view, pre-land scrub, one-shot revert. Triggers on: multiple Claude sessions, parallel sessions, concurrent agents, 5 sessions, branch queue, landing queue, fleet of sessions, parallel feature work, merge multiple branches, parallel branches."
+description: EXPERIMENTAL — manage a fleet of concurrent Claude sessions on parallel branches or worktrees. Landing queue with test gate, fleet status view, pre-land scrub, one-shot revert. Triggers on: multiple Claude sessions, parallel sessions, concurrent agents, 5 sessions, branch queue, landing queue, fleet of sessions, parallel feature work, merge multiple branches, parallel branches. Use when you need help with fleet ops.
 license: MIT
 allowed-tools: "Read Bash Glob Grep AskUserQuestion"
 metadata:

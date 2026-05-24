@@ -1,6 +1,6 @@
 ---
 name: daily
-description: Documentation and capabilities reference for Daily
+description: Documentation and capabilities reference for Daily. Use when you need help with daily.
 license: CC-BY-NC-SA-4.0
 metadata:
   mintlify-proj: daily

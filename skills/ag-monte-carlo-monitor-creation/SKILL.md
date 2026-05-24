@@ -1,6 +1,6 @@
 ---
 name: monte-carlo-monitor-creation
-description: "Guides creation of Monte Carlo monitors via MCP tools, producing monitors-as-code YAML for CI/CD deployment."
+description: Guides creation of Monte Carlo monitors via MCP tools, producing monitors-as-code YAML for CI/CD deployment. Use when you need help with monte carlo monitor creation.
 license: CC-BY-NC-SA-4.0
 source_repo: monte-carlo-data/mc-agent-toolkit
 source_type: community

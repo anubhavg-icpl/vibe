@@ -1,6 +1,6 @@
 ---
 name: salesforce-marketing-cloud-automation
-description: "Automate Salesforce Marketing Cloud tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Salesforce Marketing Cloud tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with salesforce marketing cloud automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

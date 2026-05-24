@@ -1,6 +1,6 @@
 ---
 name: llama-cpp-server-expert
-description: Run llama.cpp's HTTP server with OpenAI-compatible endpoints, slots, multimodal, and reverse proxies
+description: "Run llama.cpp's HTTP server with OpenAI-compatible endpoints, slots, multimodal, and reverse proxies. Use when deploying, running, or configuring local LLM inference with llama cpp server."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

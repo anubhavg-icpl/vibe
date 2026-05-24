@@ -1,6 +1,6 @@
 ---
 name: card-audit
-description: Audit a model card, datasheet, or system card for completeness and verifiability.
+description: Audit a model card, datasheet, or system card for completeness and verifiability. Use when you need help with card audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 26

@@ -1,6 +1,6 @@
 ---
 name: testing
-description: testing
+description: testing. Use when you need help with testing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: electron-project-architect
-description: Production-ready Electron desktop app structure with main/renderer process separation and security best practices
+description: Production-ready Electron desktop app structure with main/renderer process separation and security best practices. Use when scaffolding, structuring, or architecting electron projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

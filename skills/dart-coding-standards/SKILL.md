@@ -1,6 +1,6 @@
 ---
 name: dart-coding-standards
-description: Production-ready Dart and Flutter coding standards
+description: Production-ready Dart and Flutter coding standards. Use when enforcing dart coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

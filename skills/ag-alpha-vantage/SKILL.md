@@ -1,6 +1,6 @@
 ---
 name: alpha-vantage
-description: "Access 20+ years of global financial data: equities, options, forex, crypto, commodities, economic indicators, and 50+ technical indicators."
+description: Access 20+ years of global financial data: equities, options, forex, crypto, commodities, economic indicators, and 50+ technical indicators. Use when you need help with alpha vantage.
 license: CC-BY-NC-SA-4.0
 metadata:
   skill-author: K-Dense Inc.

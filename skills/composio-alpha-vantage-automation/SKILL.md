@@ -1,6 +1,6 @@
 ---
 name: alpha-vantage-automation
-description: "Automate Alpha Vantage tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Alpha Vantage tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with alpha vantage automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

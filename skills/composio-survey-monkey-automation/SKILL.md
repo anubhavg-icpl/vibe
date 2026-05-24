@@ -1,6 +1,6 @@
 ---
 name: SurveyMonkey Automation
-description: "Automate SurveyMonkey survey creation, response collection, collector management, and survey discovery through natural language commands"
+description: Automate SurveyMonkey survey creation, response collection, collector management, and survey discovery through natural language commands. Use when you need help with SurveyMonkey Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

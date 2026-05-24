@@ -1,6 +1,6 @@
 ---
 name: python-database-ops
-description: "SQLAlchemy and database patterns for Python. Triggers on: sqlalchemy, database, orm, migration, alembic, async database, connection pool, repository pattern, unit of work."
+description: SQLAlchemy and database patterns for Python. Triggers on: sqlalchemy, database, orm, migration, alembic, async database, connection pool, repository pattern, unit of work. Use when you need help with python database ops.
 license: MIT
 compatibility: "SQLAlchemy 2.0+, Python 3.10+. Async requires asyncpg (PostgreSQL) or aiosqlite."
 allowed-tools: "Read Write Bash"

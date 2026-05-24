@@ -1,6 +1,6 @@
 ---
 name: seq2seq-picker
-description: Choose encoder-decoder vs decoder-only for a new sequence-to-sequence task.
+description: Choose encoder-decoder vs decoder-only for a new sequence-to-sequence task. Use when you need help with seq2seq picker.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 8

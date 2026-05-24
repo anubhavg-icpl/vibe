@@ -1,6 +1,6 @@
 ---
 name: swiftui-performance-audit
-description: Audit SwiftUI performance issues from code review and profiling evidence.
+description: Audit SwiftUI performance issues from code review and profiling evidence. Use when you need help with swiftui performance audit.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

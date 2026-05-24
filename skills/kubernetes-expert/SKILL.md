@@ -1,6 +1,6 @@
 ---
 name: kubernetes-expert
-description: kubernetes-expert
+description: kubernetes-expert. Use when architecting or managing cloud infrastructure with kubernetes.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

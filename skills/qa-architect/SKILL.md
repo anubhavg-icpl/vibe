@@ -1,6 +1,6 @@
 ---
 name: qa-architect
-description: Choose QA architecture, retrieval strategy, and evaluation plan.
+description: Choose QA architecture, retrieval strategy, and evaluation plan. Use when you need help with qa architect.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 13

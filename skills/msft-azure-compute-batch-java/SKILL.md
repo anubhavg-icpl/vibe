@@ -1,6 +1,6 @@
 ---
 name: azure-compute-batch-java
-description: |-
+description: |-. Use when you need help with azure compute batch java.
   Azure Batch SDK for Java. Run large-scale parallel and HPC batch jobs with pools, jobs, tasks, and compute nodes.
   Triggers: "BatchClient java", "azure batch java", "batch pool java", "batch job java", "HPC java", "parallel computing java".
 license: MIT

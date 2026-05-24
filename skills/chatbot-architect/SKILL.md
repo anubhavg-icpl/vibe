@@ -1,6 +1,6 @@
 ---
 name: chatbot-architect
-description: Design a chatbot stack for a given use case.
+description: Design a chatbot stack for a given use case. Use when you need help with chatbot architect.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 17

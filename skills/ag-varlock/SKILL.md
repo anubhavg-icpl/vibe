@@ -1,6 +1,6 @@
 ---
 name: varlock
-description: "Secure-by-default environment variable management for Claude Code sessions."
+description: Secure-by-default environment variable management for Claude Code sessions. Use when you need help with varlock.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: android-run-deploy-expert
-description: Expert in `android run` — APK deploy, multi-APK splits, --activity, --device, --type for activities/services/watch faces/tiles
+description: Expert in `android run` — APK deploy, multi-APK splits, --activity, --device, --type for activities/services/watch faces/tiles. Use when using Android CLI tools for android run deploy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

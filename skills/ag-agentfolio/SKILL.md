@@ -1,6 +1,6 @@
 ---
 name: agentfolio
-description: "Skill for discovering and researching autonomous AI agents, tools, and ecosystems using the AgentFolio directory."
+description: Skill for discovering and researching autonomous AI agents, tools, and ecosystems using the AgentFolio directory. Use when you need help with agentfolio.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

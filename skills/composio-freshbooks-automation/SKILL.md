@@ -1,6 +1,6 @@
 ---
 name: FreshBooks Automation
-description: "FreshBooks Automation: manage businesses, projects, time tracking, and billing in FreshBooks cloud accounting"
+description: FreshBooks Automation: manage businesses, projects, time tracking, and billing in FreshBooks cloud accounting. Use when you need help with FreshBooks Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

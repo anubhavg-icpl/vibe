@@ -1,6 +1,6 @@
 ---
 name: next-intl-add-language
-description: 'Add new language to a Next.js + next-intl application'
+description: Add new language to a Next.js + next-intl application. Use when you need help with next intl add language.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: raycast-design
-description: Expert in the Raycast design system - Productivity launcher. Sleek dark chrome, vibrant gradient accents.
+description: Expert in the Raycast design system - Productivity launcher. Sleek dark chrome, vibrant gradient accents. Use when building UI components, applying design tokens, or implementing visual styles for raycast.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

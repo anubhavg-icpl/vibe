@@ -1,6 +1,6 @@
 ---
 name: w2sg-pgr
-description: Audit a scalable-oversight or W2SG claim via the performance-gap-recovered metric.
+description: Audit a scalable-oversight or W2SG claim via the performance-gap-recovered metric. Use when you need help with w2sg pgr.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 11

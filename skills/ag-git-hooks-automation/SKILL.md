@@ -1,6 +1,6 @@
 ---
 name: git-hooks-automation
-description: "Master Git hooks setup with Husky, lint-staged, pre-commit framework, and commitlint. Automate code quality gates, formatting, linting, and commit message enforcement before code reaches CI."
+description: Master Git hooks setup with Husky, lint-staged, pre-commit framework, and commitlint. Automate code quality gates, formatting, linting, and commit message enforcement before code reaches CI. Use when you need help with git hooks automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

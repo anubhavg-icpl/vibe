@@ -1,6 +1,6 @@
 ---
 name: build
-description: build
+description: build. Use when you need help with build.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

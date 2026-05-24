@@ -1,6 +1,6 @@
 ---
 name: aar-deployment-review
-description: Pre-deployment review of an automated-alignment-research pipeline, including sandbox isolation and log integrity.
+description: Pre-deployment review of an automated-alignment-research pipeline, including sandbox isolation and log integrity. Use when you need help with aar deployment review.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 6

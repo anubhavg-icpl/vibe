@@ -1,6 +1,6 @@
 ---
 name: safetensors-expert
-description: Author and inspect safetensors files — header layout, sharding via model.safetensors.index.json, mmap loading, and PEFT adapter format
+description: Author and inspect safetensors files — header layout, sharding via model.safetensors.index.json, mmap loading, and PEFT adapter format. Use when creating, converting, or publishing model files with safetensors.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

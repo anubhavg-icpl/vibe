@@ -1,6 +1,6 @@
 ---
 name: lm-eval-harness-expert
-description: EleutherAI lm-evaluation-harness — MMLU, ARC, HellaSwag, GSM8K, IFEval, BBH benchmarks
+description: EleutherAI lm-evaluation-harness — MMLU, ARC, HellaSwag, GSM8K, IFEval, BBH benchmarks. Use when evaluating, monitoring, or observing LLM performance with lm eval harness.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

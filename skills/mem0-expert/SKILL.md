@@ -1,6 +1,6 @@
 ---
 name: mem0-expert
-description: Build long-term, scalable memory layers for AI agents with Mem0
+description: Build long-term, scalable memory layers for AI agents with Mem0. Use when building AI applications with mem0.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

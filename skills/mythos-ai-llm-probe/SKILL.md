@@ -1,6 +1,6 @@
 ---
 name: mythos-ai-llm-probe
-description: Build defender-side LLM safety systems using activations-based probes, classifier ensembles, and prompt-injection / jailbreak detection - the Anthropic Safeguards approach
+description: Build defender-side LLM safety systems using activations-based probes, classifier ensembles, and prompt-injection / jailbreak detection - the Anthropic Safeguards approach. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ai llm probe.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

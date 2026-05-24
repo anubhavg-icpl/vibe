@@ -1,6 +1,6 @@
 ---
 name: fal-ai-expert
-description: fal.ai serverless inference for image/video models - queue + webhook patterns
+description: fal.ai serverless inference for image/video models - queue + webhook patterns. Use when working with multimodal AI (images, audio, video) using fal ai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

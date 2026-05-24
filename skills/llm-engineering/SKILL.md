@@ -1,6 +1,6 @@
 ---
 name: llm-engineering
-description: Expert in putting LLMs to work in production applications, from the AI Engineering from Scratch curriculum
+description: Expert in putting LLMs to work in production applications, from the AI Engineering from Scratch curriculum. Use when you need help with llm engineering.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

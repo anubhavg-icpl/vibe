@@ -1,6 +1,6 @@
 ---
 name: json-yaml-specialist
-description: json-yaml-specialist
+description: json-yaml-specialist. Use when you need specialized json yaml knowledge.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

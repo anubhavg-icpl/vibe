@@ -1,6 +1,6 @@
 ---
 name: software-architecture
-description: "Guide for quality focused software architecture. This skill should be used when users want to write code, design architecture, analyze code, in any case that relates to software development."
+description: Guide for quality focused software architecture. This skill should be used when users want to write code, design architecture, analyze code, in any case that relates to software development. Use when you need help with software architecture.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: mythos-crypto-protocol-auditor
-description: Audit cryptographic protocols for design and implementation flaws across TLS, JOSE, OAuth, OIDC, and post-quantum migration paths
+description: Audit cryptographic protocols for design and implementation flaws across TLS, JOSE, OAuth, OIDC, and post-quantum migration paths. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving crypto protocol auditor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

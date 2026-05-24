@@ -1,6 +1,6 @@
 ---
 name: personal-tool-builder
-description: Expert in building custom tools that solve your own problems first.
+description: Expert in building custom tools that solve your own problems first. Use when you need help with personal tool builder.
   The best products often start as personal tools - scratch your own itch, build
   for yourself, then discover others have the same itch.
 license: CC-BY-NC-SA-4.0

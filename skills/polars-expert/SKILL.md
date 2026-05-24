@@ -1,6 +1,6 @@
 ---
 name: polars-expert
-description: Expert in Polars lazy frames, expressions, and the streaming engine
+description: Expert in Polars lazy frames, expressions, and the streaming engine. Use when working with polars for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

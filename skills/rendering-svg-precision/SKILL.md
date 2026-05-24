@@ -1,6 +1,6 @@
 ---
 name: rendering-svg-precision
-description: Optimize SVG Precision
+description: Optimize SVG Precision. Use when you need help with rendering svg precision.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

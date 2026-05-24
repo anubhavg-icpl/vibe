@@ -1,6 +1,6 @@
 ---
 name: log-ops
-description: "Log analysis and JSONL processing - structured extraction, cross-log correlation, timeline reconstruction, pattern search"
+description: Log analysis and JSONL processing - structured extraction, cross-log correlation, timeline reconstruction, pattern search. Use when you need help with log ops.
 license: MIT
 allowed-tools: "Read Edit Write Bash Glob Grep Agent"
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: mythos-incident-responder
-description: Active incident response — scope triage, containment, eradication, recovery, customer notification, and legal coordination per NIST SP 800-61r3
+description: Active incident response — scope triage, containment, eradication, recovery, customer notification, and legal coordination per NIST SP 800-61r3. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving incident responder.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

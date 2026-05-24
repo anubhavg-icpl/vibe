@@ -1,6 +1,6 @@
 ---
 name: hugging-face-jobs
-description: Run workloads on Hugging Face Jobs with managed CPUs, GPUs, TPUs, secrets, and Hub persistence.
+description: Run workloads on Hugging Face Jobs with managed CPUs, GPUs, TPUs, secrets, and Hub persistence. Use when you need help with hugging face jobs.
 license: Complete terms in LICENSE.txt
 metadata:
   source: "https://github.com/huggingface/skills/tree/main/skills/huggingface-jobs"

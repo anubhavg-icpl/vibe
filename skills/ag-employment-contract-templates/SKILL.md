@@ -1,6 +1,6 @@
 ---
 name: employment-contract-templates
-description: "Templates and patterns for creating legally sound employment documentation including contracts, offer letters, and HR policies."
+description: Templates and patterns for creating legally sound employment documentation including contracts, offer letters, and HR policies. Use when you need help with employment contract templates.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

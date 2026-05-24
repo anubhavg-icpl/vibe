@@ -1,6 +1,6 @@
 ---
 name: weaviate-expert
-description: Deep expertise in Weaviate v1.27+ — collections, named vectors, vectorizer modules, hybrid search, and per-tenant shard isolation at million-tenant scale
+description: Deep expertise in Weaviate v1.27+ — collections, named vectors, vectorizer modules, hybrid search, and per-tenant shard isolation at million-tenant scale. Use when implementing vector search, embeddings storage, or similarity queries with weaviate.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

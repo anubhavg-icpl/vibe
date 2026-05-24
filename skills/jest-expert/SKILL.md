@@ -1,6 +1,6 @@
 ---
 name: jest-expert
-description: Expert in Jest testing framework for unit tests, integration tests, mocking, and snapshot testing
+description: Expert in Jest testing framework for unit tests, integration tests, mocking, and snapshot testing. Use when writing, running, or improving tests with jest.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

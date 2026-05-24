@@ -1,6 +1,6 @@
 ---
 name: finops-expert
-description: Expert in FinOps for cloud financial management and cost optimization
+description: Expert in FinOps for cloud financial management and cost optimization. Use when automating CI/CD, deployments, or operations with finops.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

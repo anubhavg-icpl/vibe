@@ -1,6 +1,6 @@
 ---
 name: rfc-7643-scim-schema
-description: System for Cross-domain Identity Management schema definitions for user provisioning
+description: System for Cross-domain Identity Management schema definitions for user provisioning. Use when implementing or validating rfc 7643 scim schema protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

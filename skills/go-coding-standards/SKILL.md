@@ -1,6 +1,6 @@
 ---
 name: go-coding-standards
-description: Production-ready Go coding standards enforcing idiomatic patterns, simplicity, and maintainability
+description: Production-ready Go coding standards enforcing idiomatic patterns, simplicity, and maintainability. Use when enforcing go coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: youtube-summarizer
-description: "Extract transcripts from YouTube videos and generate comprehensive, detailed summaries using intelligent analysis frameworks"
+description: Extract transcripts from YouTube videos and generate comprehensive, detailed summaries using intelligent analysis frameworks. Use when you need help with youtube summarizer.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: content

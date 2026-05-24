@@ -1,6 +1,6 @@
 ---
 name: mythos-ics-step4-protocol-reverse
-description: Defensive instrumentation for the "Cooling Tower" range Step 4 — dynamic analysis of a vendor-custom application-layer protocol over Modbus TCP between HMI and PLC, modeled on AISI's 7-step ICS scenario
+description: "Defensive instrumentation for the \"Cooling Tower\" range Step 4 — dynamic analysis of a vendor-custom application-layer protocol over Modbus TCP between HMI and PLC, modeled on AISI's 7-step ICS scenario. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ics step4 protocol reverse."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

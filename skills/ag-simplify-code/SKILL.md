@@ -1,6 +1,6 @@
 ---
 name: simplify-code
-description: "Review a diff for clarity and safe simplifications, then optionally apply low-risk fixes."
+description: Review a diff for clarity and safe simplifications, then optionally apply low-risk fixes. Use when you need help with simplify code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

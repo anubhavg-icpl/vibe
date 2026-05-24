@@ -1,6 +1,6 @@
 ---
 name: prisma-expert
-description: Expert in Prisma ORM with schema design, migrations, client generation, performance, and best practices
+description: Expert in Prisma ORM with schema design, migrations, client generation, performance, and best practices. Use when you need deep expertise in prisma.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

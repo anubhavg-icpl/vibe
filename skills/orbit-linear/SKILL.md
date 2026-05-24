@@ -1,6 +1,6 @@
 ---
 name: orbit-linear
-description: |
+description: |. Use when you need help with orbit linear.
   Open Orbit briefing skill — selected by the Orbit pipeline when
   Linear is the user's only connected connector, or when the user
   explicitly scopes their daily digest to Linear. Pulls the past 24

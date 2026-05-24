@@ -1,6 +1,6 @@
 ---
 name: docx-official
-description: "A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks."
+description: A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks. Use when you need help with docx official.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

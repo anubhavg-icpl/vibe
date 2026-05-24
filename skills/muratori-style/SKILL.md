@@ -1,6 +1,6 @@
 ---
 name: muratori-style
-description: Casey Muratori — Handmade Hero, anti-OOP-by-default, data-oriented design, "clean code, horrible performance
+description: "Casey Muratori — Handmade Hero, anti-OOP-by-default, data-oriented design, \"clean code, horrible performance. Use when you want code review, architecture advice, or opinions in the style of muratori."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

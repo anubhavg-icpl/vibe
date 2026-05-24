@@ -1,6 +1,6 @@
 ---
 name: references
-description: references
+description: references. Use when you need help with references.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

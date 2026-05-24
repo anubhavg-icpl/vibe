@@ -1,6 +1,6 @@
 ---
 name: "browserstack"
-description: >-
+description: >-. Use when you need help with browserstack.
   Run tests on BrowserStack. Use when user mentions "browserstack",
   "cross-browser", "cloud testing", "browser matrix", "test on safari",
   "test on firefox", or "browser compatibility".

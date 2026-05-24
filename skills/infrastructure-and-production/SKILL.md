@@ -1,6 +1,6 @@
 ---
 name: infrastructure-and-production
-description: Expert in shipping AI to production at scale — serving, monitoring, optimization, and FinOps, from the AI Engineering from Scratch curriculum
+description: Expert in shipping AI to production at scale — serving, monitoring, optimization, and FinOps, from the AI Engineering from Scratch curriculum. Use when you need help with infrastructure and production.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

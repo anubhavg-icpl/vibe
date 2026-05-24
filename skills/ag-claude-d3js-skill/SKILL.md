@@ -1,6 +1,6 @@
 ---
 name: claude-d3js-skill
-description: "This skill provides guidance for creating sophisticated, interactive data visualisations using d3.js."
+description: This skill provides guidance for creating sophisticated, interactive data visualisations using d3.js. Use when you need help with claude d3js skill.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: xlsx-official
-description: "Unless otherwise stated by the user or existing template"
+description: Unless otherwise stated by the user or existing template. Use when you need help with xlsx official.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

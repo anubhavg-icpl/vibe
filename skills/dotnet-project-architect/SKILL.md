@@ -1,6 +1,6 @@
 ---
 name: dotnet-project-architect
-description: Production-ready .NET project structure architect - validates and scaffolds enterprise-grade .NET 8/9 solutions with Clean Architecture and DDD patterns
+description: Production-ready .NET project structure architect - validates and scaffolds enterprise-grade .NET 8/9 solutions with Clean Architecture and DDD patterns. Use when scaffolding, structuring, or architecting dotnet projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

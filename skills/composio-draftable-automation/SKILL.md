@@ -1,6 +1,6 @@
 ---
 name: draftable-automation
-description: "Automate Draftable tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Draftable tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with draftable automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

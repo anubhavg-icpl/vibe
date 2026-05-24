@@ -1,6 +1,6 @@
 ---
 name: Ramp Automation
-description: "Ramp Automation: manage corporate card transactions, reimbursements, users, and expense tracking via the Ramp platform"
+description: Ramp Automation: manage corporate card transactions, reimbursements, users, and expense tracking via the Ramp platform. Use when you need help with Ramp Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

@@ -1,6 +1,6 @@
 ---
 name: mythos-patch-generator
-description: Generate minimal, style-preserving patches for confirmed vulnerabilities with regression tests and contribution-norm-aware PRs
+description: Generate minimal, style-preserving patches for confirmed vulnerabilities with regression tests and contribution-norm-aware PRs. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving patch generator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

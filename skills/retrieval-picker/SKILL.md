@@ -1,6 +1,6 @@
 ---
 name: retrieval-picker
-description: Pick a retrieval stack for a given corpus and query pattern.
+description: Pick a retrieval stack for a given corpus and query pattern. Use when you need help with retrieval picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 14

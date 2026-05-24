@@ -1,6 +1,6 @@
 ---
 name: chaos-mesh
-description: Expert in Chaos Mesh - PingCAP's Kubernetes-native chaos engineering platform
+description: "Expert in Chaos Mesh - PingCAP's Kubernetes-native chaos engineering platform. Use when writing, running, or improving tests with chaos mesh."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

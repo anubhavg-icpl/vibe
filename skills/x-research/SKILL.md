@@ -1,6 +1,6 @@
 ---
 name: x-research
-description: |
+description: |. Use when you need help with x research.
   X/Twitter public sentiment research for recent market, company, product, or
   community discourse. Use when the brief asks what people are saying on X,
   Twitter sentiment, CT sentiment, public opinion, expert posts, or social

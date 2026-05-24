@@ -1,6 +1,6 @@
 ---
 name: monetization
-description: "Estrategia e implementacao de monetizacao para produtos digitais - Stripe, subscriptions, pricing experiments, freemium, upgrade flows, churn prevention, revenue optimization e modelos de negocio SaaS."
+description: Estrategia e implementacao de monetizacao para produtos digitais - Stripe, subscriptions, pricing experiments, freemium, upgrade flows, churn prevention, revenue optimization e modelos de negocio SaaS. Use when you need help with monetization.
 license: CC-BY-NC-SA-4.0
 author: renat
 tools: 
@@ -8,7 +8,7 @@ metadata:
   risk: none
   source: community
   date_added: '2026-03-06'
-  tags: 
+  tags:
 ---
 
 # MONETIZATION - Do Produto ao Revenue

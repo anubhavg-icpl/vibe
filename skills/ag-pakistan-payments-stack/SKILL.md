@@ -1,6 +1,6 @@
 ---
 name: pakistan-payments-stack
-description: "Design and implement production-grade Pakistani payment integrations (JazzCash, Easypaisa, bank/PSP rails, optional Raast) for SaaS with PKR billing, webhook reliability, and reconciliation."
+description: Design and implement production-grade Pakistani payment integrations (JazzCash, Easypaisa, bank/PSP rails, optional Raast) for SaaS with PKR billing, webhook reliability, and reconciliation. Use when you need help with pakistan payments stack.
 license: CC-BY-NC-SA-4.0
 author: community-contributor
 tools: [cursor, claude, gemini]

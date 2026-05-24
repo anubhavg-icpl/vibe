@@ -1,6 +1,6 @@
 ---
 name: podcast-generation
-description: "Generate real audio narratives from text content using Azure OpenAI's Realtime API."
+description: "Generate real audio narratives from text content using Azure OpenAI's Realtime API. Use when you need help with podcast generation."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

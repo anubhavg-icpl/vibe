@@ -1,6 +1,6 @@
 ---
 name: hybrid-memory
-description: Generate a Mem0-shaped three-store memory system (vector + KV + graph) with a fusion scorer, scope taxonomy, and temporal invalidation.
+description: Generate a Mem0-shaped three-store memory system (vector + KV + graph) with a fusion scorer, scope taxonomy, and temporal invalidation. Use when you need help with hybrid memory.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 09

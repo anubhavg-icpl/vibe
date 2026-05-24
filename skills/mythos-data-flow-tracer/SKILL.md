@@ -1,6 +1,6 @@
 ---
 name: mythos-data-flow-tracer
-description: Cross-file taint tracking from sources to sinks, with sanitizer-gap analysis
+description: Cross-file taint tracking from sources to sinks, with sanitizer-gap analysis. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving data flow tracer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

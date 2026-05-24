@@ -1,6 +1,6 @@
 ---
 name: Contentful Automation
-description: "Automate headless CMS operations in Contentful -- list spaces, retrieve space metadata, and update space configurations through the Composio Contentful integration."
+description: Automate headless CMS operations in Contentful -- list spaces, retrieve space metadata, and update space configurations through the Composio Contentful integration. Use when you need help with Contentful Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

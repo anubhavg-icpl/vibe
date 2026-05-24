@@ -1,6 +1,6 @@
 ---
 name: red-team-stack
-description: Recommend a red-team tool stack and configuration for a given deployment.
+description: Recommend a red-team tool stack and configuration for a given deployment. Use when you need help with red team stack.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 16

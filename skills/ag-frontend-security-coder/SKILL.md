@@ -1,6 +1,6 @@
 ---
 name: frontend-security-coder
-description: Expert in secure frontend coding practices specializing in XSS prevention, output sanitization, and client-side security patterns.
+description: Expert in secure frontend coding practices specializing in XSS prevention, output sanitization, and client-side security patterns. Use when you need help with frontend security coder.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

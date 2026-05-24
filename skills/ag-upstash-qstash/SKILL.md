@@ -1,6 +1,6 @@
 ---
 name: upstash-qstash
-description: Upstash QStash expert for serverless message queues, scheduled
+description: Upstash QStash expert for serverless message queues, scheduled. Use when you need help with upstash qstash.
   jobs, and reliable HTTP-based task delivery without managing infrastructure.
 license: CC-BY-NC-SA-4.0
 metadata:

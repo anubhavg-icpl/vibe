@@ -1,6 +1,6 @@
 ---
 name: synthetic-data-expert
-description: Generate fine-tuning datasets — distilabel, Magpie, Self-Instruct, Evol-Instruct, augmentoolkit
+description: Generate fine-tuning datasets — distilabel, Magpie, Self-Instruct, Evol-Instruct, augmentoolkit. Use when fine-tuning, training, or adapting language models with synthetic data techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: senior-architect
-description: "Complete toolkit for senior architect with modern tools and best practices."
+description: Complete toolkit for senior architect with modern tools and best practices. Use when you need help with senior architect.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

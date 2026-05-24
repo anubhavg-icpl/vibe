@@ -1,6 +1,6 @@
 ---
 name: android-describe-expert
-description: Expert in `android describe` — JSON project introspection for build targets, output artifact paths, and module graph
+description: Expert in `android describe` — JSON project introspection for build targets, output artifact paths, and module graph. Use when using Android CLI tools for android describe.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

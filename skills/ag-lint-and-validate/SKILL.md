@@ -1,6 +1,6 @@
 ---
 name: lint-and-validate
-description: "MANDATORY: Run appropriate validation tools after EVERY code change. Do not finish a task until the code is error-free."
+description: MANDATORY: Run appropriate validation tools after EVERY code change. Do not finish a task until the code is error-free. Use when you need help with lint and validate.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

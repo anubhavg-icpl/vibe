@@ -1,6 +1,6 @@
 ---
 name: alttext-ai-automation
-description: "Automate Alttext AI tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Alttext AI tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with alttext ai automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

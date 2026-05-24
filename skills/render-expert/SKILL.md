@@ -1,6 +1,6 @@
 ---
 name: render-expert
-description: Expert in Render web services, background workers, cron jobs, and Blueprints
+description: Expert in Render web services, background workers, cron jobs, and Blueprints. Use when deploying to or building on render edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: timescaledb-expert
-description: Expert in TimescaleDB hypertables, continuous aggregates, and compression
+description: Expert in TimescaleDB hypertables, continuous aggregates, and compression. Use when working with timescaledb for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

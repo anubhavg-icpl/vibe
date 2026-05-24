@@ -1,6 +1,6 @@
 ---
 name: playwright-explore-website
-description: 'Website exploration for testing using Playwright MCP'
+description: Website exploration for testing using Playwright MCP. Use when you need help with playwright explore website.
 license: CC-BY-NC-SA-4.0
 ---
 

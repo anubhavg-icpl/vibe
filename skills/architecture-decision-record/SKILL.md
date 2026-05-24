@@ -1,6 +1,6 @@
 ---
 name: architecture-decision-record
-description: Expert in writing and maintaining Architecture Decision Records (ADRs)
+description: Expert in writing and maintaining Architecture Decision Records (ADRs). Use when generating, improving, or structuring documentation with architecture decision record.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: skill-seekers
-description: "-Automatically convert documentation websites, GitHub repositories, and PDFs into Claude AI skills in minutes."
+description: -Automatically convert documentation websites, GitHub repositories, and PDFs into Claude AI skills in minutes. Use when you need help with skill seekers.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

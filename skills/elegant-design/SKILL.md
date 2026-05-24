@@ -1,6 +1,6 @@
 ---
 name: elegant-design
-description: Expert in the Elegant design system - Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.
+description: Expert in the Elegant design system - Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication. Use when building UI components, applying design tokens, or implementing visual styles for elegant.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

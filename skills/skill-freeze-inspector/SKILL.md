@@ -1,6 +1,6 @@
 ---
 name: skill-freeze-inspector
-description: Report which parameters are trainable, which BatchNorm layers are in eval mode, and whether the optimizer is actually consuming the trainable parameters
+description: Report which parameters are trainable, which BatchNorm layers are in eval mode, and whether the optimizer is actually consuming the trainable parameters. Use when you need help with skill freeze inspector.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 5

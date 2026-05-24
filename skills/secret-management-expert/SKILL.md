@@ -1,6 +1,6 @@
 ---
 name: secret-management-expert
-description: Expert in secret management with HashiCorp Vault, AWS Secrets Manager, and secure secrets handling
+description: Expert in secret management with HashiCorp Vault, AWS Secrets Manager, and secure secrets handling. Use when performing security analysis, auditing, or hardening with secret management.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

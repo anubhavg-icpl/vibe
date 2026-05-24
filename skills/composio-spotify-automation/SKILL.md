@@ -1,6 +1,6 @@
 ---
 name: Spotify Automation
-description: "Automate Spotify workflows including playlist management, music search, playback control, and user profile access via Composio"
+description: Automate Spotify workflows including playlist management, music search, playback control, and user profile access via Composio. Use when you need help with Spotify Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

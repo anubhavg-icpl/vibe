@@ -1,6 +1,6 @@
 ---
 name: sprint-health
-description: Sprint health scoring and velocity analysis for agile teams. Usage: /sprint-health <analyze|velocity> [options]
+description: Sprint health scoring and velocity analysis for agile teams. Usage: /sprint-health <analyze|velocity> [options]. Use when you need help with sprint health.
 license: CC-BY-NC-SA-4.0
 ---
 

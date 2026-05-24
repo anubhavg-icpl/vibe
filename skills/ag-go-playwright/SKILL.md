@@ -1,6 +1,6 @@
 ---
 name: go-playwright
-description: "Expert capability for robust, stealthy, and efficient browser automation using Playwright Go."
+description: Expert capability for robust, stealthy, and efficient browser automation using Playwright Go. Use when you need help with go playwright.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: dgm-evaluator-firewall
-description: Specify the evaluator separation a Darwin-Godel-Machine-style self-modifying agent loop needs to avoid documented reward hacking.
+description: Specify the evaluator separation a Darwin-Godel-Machine-style self-modifying agent loop needs to avoid documented reward hacking. Use when you need help with dgm evaluator firewall.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 4

@@ -1,6 +1,6 @@
 ---
 name: qa-automation-expert
-description: qa-automation-expert
+description: qa-automation-expert. Use when writing, running, or improving tests with qa automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

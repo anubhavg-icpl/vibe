@@ -1,6 +1,6 @@
 ---
 name: copilot-instructions-blueprint-generator
-description: 'Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions.'
+description: Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions. Use when you need help with copilot instructions blueprint generator.
 license: CC-BY-NC-SA-4.0
 ---
 

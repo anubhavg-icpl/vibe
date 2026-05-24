@@ -1,6 +1,6 @@
 ---
 name: skill-latency-profiler
-description: Write a complete latency-benchmarking script with warmup, synchronisation, percentiles, and memory tracking
+description: Write a complete latency-benchmarking script with warmup, synchronisation, percentiles, and memory tracking. Use when you need help with skill latency profiler.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 15

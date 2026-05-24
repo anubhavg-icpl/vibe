@@ -1,6 +1,6 @@
 ---
 name: structural-search
-description: "Search code by AST structure using ast-grep. Find semantic patterns like function calls, imports, class definitions instead of text patterns. Triggers on: find all calls to X, search for pattern, refactor usages, find where function is used, structural search, ast-grep, sg."
+description: Search code by AST structure using ast-grep. Find semantic patterns like function calls, imports, class definitions instead of text patterns. Triggers on: find all calls to X, search for pattern, refactor usages, find where function is used, structural search, ast-grep, sg. Use when you need help with structural search.
 license: MIT
 compatibility: "Requires ast-grep (sg) CLI tool. Install: brew install ast-grep (macOS) or cargo install ast-grep (cross-platform)."
 allowed-tools: "Bash"

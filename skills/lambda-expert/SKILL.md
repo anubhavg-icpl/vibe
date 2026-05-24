@@ -1,6 +1,6 @@
 ---
 name: lambda-expert
-description: Expert in AWS Lambda 2025 patterns, SnapStart, Layers, and provisioned concurrency
+description: Expert in AWS Lambda 2025 patterns, SnapStart, Layers, and provisioned concurrency. Use when deploying to or building on lambda edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

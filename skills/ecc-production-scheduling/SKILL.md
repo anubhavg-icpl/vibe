@@ -1,6 +1,6 @@
 ---
 name: production-scheduling
-description: >
+description: >. Use when you need help with production scheduling.
   Codified expertise for production scheduling, job sequencing, line balancing,
   changeover optimization, and bottleneck resolution in discrete and batch
   manufacturing. Informed by production schedulers with 15+ years experience.

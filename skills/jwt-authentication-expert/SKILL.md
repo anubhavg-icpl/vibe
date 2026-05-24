@@ -1,6 +1,6 @@
 ---
 name: jwt-authentication-expert
-description: Expert in JWT authentication, token generation, validation, refresh tokens, security best practices, and OAuth 2.0 flows
+description: Expert in JWT authentication, token generation, validation, refresh tokens, security best practices, and OAuth 2.0 flows. Use when you need deep expertise in jwt authentication.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

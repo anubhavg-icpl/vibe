@@ -1,6 +1,6 @@
 ---
 name: kanban-board
-description: |
+description: |. Use when you need help with kanban board.
   Kanban / task board with columns (To do / In progress / In review / Done),
   draggable-looking cards, assignee avatars, swimlanes, and a top filter
   bar. Use when the brief mentions "kanban", "task board", "sprint board",

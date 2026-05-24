@@ -1,6 +1,6 @@
 ---
 name: dagster-expert
-description: Expert in Dagster software-defined assets, sensors, partitions, and Declarative Automation
+description: Expert in Dagster software-defined assets, sensors, partitions, and Declarative Automation. Use when working with dagster for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

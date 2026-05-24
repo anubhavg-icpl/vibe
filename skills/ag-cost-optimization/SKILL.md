@@ -1,6 +1,6 @@
 ---
 name: cost-optimization
-description: "Strategies and patterns for optimizing cloud costs across AWS, Azure, and GCP."
+description: Strategies and patterns for optimizing cloud costs across AWS, Azure, and GCP. Use when you need help with cost optimization.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

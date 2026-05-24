@@ -1,6 +1,6 @@
 ---
 name: mobile-design
-description: "(Mobile-First · Touch-First · Platform-Respectful)"
+description: (Mobile-First · Touch-First · Platform-Respectful). Use when building UI with mobile design language and visual style.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

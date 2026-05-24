@@ -1,6 +1,6 @@
 ---
 name: swarm-fit
-description: Decide whether a task fits a swarm (decentralized) architecture or a supervisor (centralized) one.
+description: Decide whether a task fits a swarm (decentralized) architecture or a supervisor (centralized) one. Use when you need help with swarm fit.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 09

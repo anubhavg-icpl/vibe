@@ -1,6 +1,6 @@
 ---
 name: structured-rag-expert
-description: RAG over structured data — text-to-SQL with retrieval, semantic layer, table-augmented generation
+description: RAG over structured data — text-to-SQL with retrieval, semantic layer, table-augmented generation. Use when building or optimizing retrieval-augmented generation pipelines with structured rag.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

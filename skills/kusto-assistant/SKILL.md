@@ -1,6 +1,6 @@
 ---
 name: kusto-assistant
-description: Expert KQL assistant for live Azure Data Explorer analysis via Azure MCP server
+description: Expert KQL assistant for live Azure Data Explorer analysis via Azure MCP server. Use when you need help with kusto assistant.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

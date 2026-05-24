@@ -1,6 +1,6 @@
 ---
 name: prompt-caching
-description: Caching strategies for LLM prompts including Anthropic prompt
+description: Caching strategies for LLM prompts including Anthropic prompt. Use when you need help with prompt caching.
   caching, response caching, and CAG (Cache Augmented Generation)
 license: CC-BY-NC-SA-4.0
 metadata:

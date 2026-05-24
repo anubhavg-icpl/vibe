@@ -1,6 +1,6 @@
 ---
 name: clojure-expert
-description: Expert Clojure development with immutable data, REPL-driven development, and JVM interop
+description: Expert Clojure development with immutable data, REPL-driven development, and JVM interop. Use when writing, reviewing, or refactoring clojure code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: bugatti-design
-description: Expert in the Bugatti design system - Hypercar brand. Cinema-black canvas, monochrome austerity, monumental display type.
+description: Expert in the Bugatti design system - Hypercar brand. Cinema-black canvas, monochrome austerity, monumental display type. Use when building UI components, applying design tokens, or implementing visual styles for bugatti.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

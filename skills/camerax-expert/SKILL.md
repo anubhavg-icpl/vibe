@@ -1,6 +1,6 @@
 ---
 name: camerax-expert
-description: CameraX 1.4+ use cases, Compose integration, extensions, video recording, and concurrent camera composition
+description: CameraX 1.4+ use cases, Compose integration, extensions, video recording, and concurrent camera composition. Use when developing Android apps with camerax.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

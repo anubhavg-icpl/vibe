@@ -1,6 +1,6 @@
 ---
 name: async-suspense-boundaries
-description: Strategic Suspense Boundaries
+description: Strategic Suspense Boundaries. Use when you need help with async suspense boundaries.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

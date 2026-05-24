@@ -1,6 +1,6 @@
 ---
 name: ai-native-cli
-description: "Design spec with 98 rules for building CLI tools that AI agents can safely use. Covers structured JSON output, error handling, input contracts, safety guardrails, exit codes, and agent self-description."
+description: Design spec with 98 rules for building CLI tools that AI agents can safely use. Covers structured JSON output, error handling, input contracts, safety guardrails, exit codes, and agent self-description. Use when you need help with ai native cli.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

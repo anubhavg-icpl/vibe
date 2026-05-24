@@ -1,6 +1,6 @@
 ---
 name: PandaDoc Automation
-description: "Automate document workflows with PandaDoc -- create documents from files, manage contacts, organize folders, set up webhooks, create templates, and track document status through the Composio PandaDoc integration."
+description: Automate document workflows with PandaDoc -- create documents from files, manage contacts, organize folders, set up webhooks, create templates, and track document status through the Composio PandaDoc integration. Use when you need help with PandaDoc Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

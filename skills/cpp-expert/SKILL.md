@@ -1,6 +1,6 @@
 ---
 name: cpp-expert
-description: cpp-expert
+description: cpp-expert. Use when writing, reviewing, or refactoring cpp code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

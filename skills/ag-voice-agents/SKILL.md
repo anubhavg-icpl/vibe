@@ -1,6 +1,6 @@
 ---
 name: voice-agents
-description: Voice agents represent the frontier of AI interaction - humans
+description: Voice agents represent the frontier of AI interaction - humans. Use when you need help with voice agents.
   speaking naturally with AI systems.
 license: CC-BY-NC-SA-4.0
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: multimodal-ai
-description: Expert in models that see, hear, read, and reason across modalities, from the AI Engineering from Scratch curriculum
+description: Expert in models that see, hear, read, and reason across modalities, from the AI Engineering from Scratch curriculum. Use when you need help with multimodal ai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

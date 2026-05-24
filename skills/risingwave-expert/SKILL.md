@@ -1,6 +1,6 @@
 ---
 name: risingwave-expert
-description: Expert in RisingWave streaming database with PostgreSQL-compatible materialized views
+description: Expert in RisingWave streaming database with PostgreSQL-compatible materialized views. Use when working with risingwave for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

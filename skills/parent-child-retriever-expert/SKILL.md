@@ -1,6 +1,6 @@
 ---
 name: parent-child-retriever-expert
-description: Small chunks for retrieval, large parents for context — sentence-window, multi-vector
+description: Small chunks for retrieval, large parents for context — sentence-window, multi-vector. Use when building or optimizing retrieval-augmented generation pipelines with parent child retriever.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: whisper-expert
-description: Whisper variants - large-v3, faster-whisper, distil-whisper, whisper-cpp - VAD, diarization, real-time
+description: Whisper variants - large-v3, faster-whisper, distil-whisper, whisper-cpp - VAD, diarization, real-time. Use when working with multimodal AI (images, audio, video) using whisper.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

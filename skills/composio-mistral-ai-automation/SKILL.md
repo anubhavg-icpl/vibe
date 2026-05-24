@@ -1,6 +1,6 @@
 ---
 name: Mistral AI Automation
-description: "Automate Mistral AI operations -- manage files and libraries, upload documents for fine-tuning, batch processing, and OCR, track fine-tuning jobs, and build RAG pipelines via the Composio MCP integration."
+description: Automate Mistral AI operations -- manage files and libraries, upload documents for fine-tuning, batch processing, and OCR, track fine-tuning jobs, and build RAG pipelines via the Composio MCP integration. Use when you need help with Mistral AI Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

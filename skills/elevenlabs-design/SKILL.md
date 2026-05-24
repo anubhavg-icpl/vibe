@@ -1,6 +1,6 @@
 ---
 name: elevenlabs-design
-description: Expert in the ElevenLabs design system - AI voice platform. Dark cinematic UI, audio-waveform aesthetics.
+description: Expert in the ElevenLabs design system - AI voice platform. Dark cinematic UI, audio-waveform aesthetics. Use when building UI components, applying design tokens, or implementing visual styles for elevenlabs.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

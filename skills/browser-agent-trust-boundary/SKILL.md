@@ -1,6 +1,6 @@
 ---
 name: browser-agent-trust-boundary
-description: Scope a proposed browser-agent deployment — trust zones, authorized writes, required defenses — before the agent touches a real site.
+description: Scope a proposed browser-agent deployment — trust zones, authorized writes, required defenses — before the agent touches a real site. Use when you need help with browser agent trust boundary.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 11

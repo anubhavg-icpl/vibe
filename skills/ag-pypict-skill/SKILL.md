@@ -1,6 +1,6 @@
 ---
 name: pypict-skill
-description: "Pairwise test generation"
+description: Pairwise test generation. Use when you need help with pypict skill.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

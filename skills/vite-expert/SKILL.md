@@ -1,6 +1,6 @@
 ---
 name: vite-expert
-description: Expert in Vite build tool, configuration, plugins, optimization, and best practices for modern web development
+description: Expert in Vite build tool, configuration, plugins, optimization, and best practices for modern web development. Use when automating CI/CD, deployments, or operations with vite.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

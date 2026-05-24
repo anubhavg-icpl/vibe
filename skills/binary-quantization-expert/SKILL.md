@@ -1,6 +1,6 @@
 ---
 name: binary-quantization-expert
-description: Deep expertise in embedding quantization — binary (1-bit), scalar (int8), product (PQ); rescore-after-quant pipeline, Hamming distance, when it's free vs lossy
+description: "Deep expertise in embedding quantization — binary (1-bit), scalar (int8), product (PQ); rescore-after-quant pipeline, Hamming distance, when it's free vs lossy. Use when implementing vector search, embeddings storage, or similarity queries with binary quantization."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

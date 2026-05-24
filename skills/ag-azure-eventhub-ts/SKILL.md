@@ -1,6 +1,6 @@
 ---
 name: azure-eventhub-ts
-description: "High-throughput event streaming and real-time data ingestion."
+description: High-throughput event streaming and real-time data ingestion. Use when you need help with azure eventhub ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

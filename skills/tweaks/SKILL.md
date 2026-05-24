@@ -1,6 +1,6 @@
 ---
 name: tweaks
-description: |
+description: |. Use when you need help with tweaks.
   Wrap any HTML artifact with a side panel of live, parameterized
   controls — accent color, type scale, density, motion, theme — that
   rewrite CSS custom properties in real time and persist to

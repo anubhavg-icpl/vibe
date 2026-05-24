@@ -1,6 +1,6 @@
 ---
 name: context-manager
-description: Elite AI context engineering specialist mastering dynamic context management, vector databases, knowledge graphs, and intelligent memory systems.
+description: Elite AI context engineering specialist mastering dynamic context management, vector databases, knowledge graphs, and intelligent memory systems. Use when you need help with context manager.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: competitive-matrix
-description: Build competitive analysis matrices with scoring and gap analysis. Usage: /competitive-matrix <analyze> [options]
+description: Build competitive analysis matrices with scoring and gap analysis. Usage: /competitive-matrix <analyze> [options]. Use when you need help with competitive matrix.
 license: CC-BY-NC-SA-4.0
 ---
 

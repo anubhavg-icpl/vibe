@@ -1,6 +1,6 @@
 ---
 name: reverse-engineer
-description: Expert reverse engineer specializing in binary analysis, disassembly, decompilation, and software analysis. Masters IDA Pro, Ghidra, radare2, x64dbg, and modern RE toolchains.
+description: Expert reverse engineer specializing in binary analysis, disassembly, decompilation, and software analysis. Masters IDA Pro, Ghidra, radare2, x64dbg, and modern RE toolchains. Use when you need help with reverse engineer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: offensive

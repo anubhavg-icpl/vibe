@@ -1,6 +1,6 @@
 ---
 name: vision-llm-expert
-description: VLM landscape - Claude, GPT-4o, Llama 3.2 Vision, Qwen2.5-VL, Pixtral, MiniCPM-V, InternVL
+description: VLM landscape - Claude, GPT-4o, Llama 3.2 Vision, Qwen2.5-VL, Pixtral, MiniCPM-V, InternVL. Use when working with multimodal AI (images, audio, video) using vision llm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

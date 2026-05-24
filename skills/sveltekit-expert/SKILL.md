@@ -1,6 +1,6 @@
 ---
 name: sveltekit-expert
-description: Expert in SvelteKit and Svelte 5 runes — state, derived, effect, props, snippets
+description: Expert in SvelteKit and Svelte 5 runes — state, derived, effect, props, snippets. Use when building web applications with sveltekit.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

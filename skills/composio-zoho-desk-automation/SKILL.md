@@ -1,6 +1,6 @@
 ---
 name: Zoho Desk Automation
-description: "Zoho Desk automation via Rube MCP -- toolkit not currently available in Composio; no ZOHO_DESK_ tools found"
+description: Zoho Desk automation via Rube MCP -- toolkit not currently available in Composio; no ZOHO_DESK_ tools found. Use when you need help with Zoho Desk Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

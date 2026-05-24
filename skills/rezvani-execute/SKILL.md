@@ -1,6 +1,6 @@
 ---
 name: "execute"
-description: "/cs:execute <decision> — Generate a 90-day execution plan with weekly milestones, DRIs, and check-in cadence from an approved decision."
+description: /cs:execute <decision> — Generate a 90-day execution plan with weekly milestones, DRIs, and check-in cadence from an approved decision. Use when you need help with execute.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: marl-picker
-description: Choose a MARL algorithm (MADDPG, QMIX, MAPPO, IQL, or extensions) for a given multi-agent task. Consider cooperative vs competitive, action-space type, heterogeneity, reward structure, and scale.
+description: Choose a MARL algorithm (MADDPG, QMIX, MAPPO, IQL, or extensions) for a given multi-agent task. Consider cooperative vs competitive, action-space type, heterogeneity, reward structure, and scale. Use when you need help with marl picker.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 20

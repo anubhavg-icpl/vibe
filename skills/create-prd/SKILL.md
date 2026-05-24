@@ -1,6 +1,6 @@
 ---
 name: create-prd
-description: Generate a comprehensive Product Requirements Document (PRD) in Markdown, detailing user stories, acceptance criteria, technical considerations, and metrics. Optionally create GitHub issues upon user confirmation.
+description: Generate a comprehensive Product Requirements Document (PRD) in Markdown, detailing user stories, acceptance criteria, technical considerations, and metrics. Optionally create GitHub issues upon user confirmation. Use when generating, improving, or structuring documentation with create prd.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

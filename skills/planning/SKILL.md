@@ -1,6 +1,6 @@
 ---
 name: planning
-description: Generate an implementation plan for new features or refactoring existing code.
+description: Generate an implementation plan for new features or refactoring existing code. Use when you need help with planning.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

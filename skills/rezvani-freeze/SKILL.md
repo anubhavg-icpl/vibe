@@ -1,6 +1,6 @@
 ---
 name: "freeze"
-description: "/cs:freeze <decision> <days> — Lock a strategic decision for a cooldown period to prevent impulse reversal. Mirrors gstack's safety primitives for the business layer."
+description: "/cs:freeze <decision> <days> — Lock a strategic decision for a cooldown period to prevent impulse reversal. Mirrors gstack's safety primitives for the business layer. Use when you need help with freeze."
 license: CC-BY-NC-SA-4.0
 ---
 

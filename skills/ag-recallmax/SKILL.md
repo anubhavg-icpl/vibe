@@ -1,6 +1,6 @@
 ---
 name: recallmax
-description: "FREE — God-tier long-context memory for AI agents. Injects 500K-1M clean tokens, auto-summarizes with tone/intent preservation, compresses 14-turn history into 800 tokens."
+description: FREE — God-tier long-context memory for AI agents. Injects 500K-1M clean tokens, auto-summarizes with tone/intent preservation, compresses 14-turn history into 800 tokens. Use when you need help with recallmax.
 license: CC-BY-NC-SA-4.0
 author: christopherlhammer11-ai
 tools: [claude, cursor, codex, gemini, copilot, windsurf, antigravity, grok]

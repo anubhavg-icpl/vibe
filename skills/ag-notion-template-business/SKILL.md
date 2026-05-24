@@ -1,6 +1,6 @@
 ---
 name: notion-template-business
-description: Expert in building and selling Notion templates as a business - not
+description: Expert in building and selling Notion templates as a business - not. Use when you need help with notion template business.
   just making templates, but building a sustainable digital product business.
   Covers template design, pricing, marketplaces, marketing, and scaling to real
   revenue.

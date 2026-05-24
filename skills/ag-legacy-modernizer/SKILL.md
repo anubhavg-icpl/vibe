@@ -1,6 +1,6 @@
 ---
 name: legacy-modernizer
-description: Refactor legacy codebases, migrate outdated frameworks, and implement gradual modernization. Handles technical debt, dependency updates, and backward compatibility.
+description: Refactor legacy codebases, migrate outdated frameworks, and implement gradual modernization. Handles technical debt, dependency updates, and backward compatibility. Use when you need help with legacy modernizer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

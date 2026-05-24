@@ -1,6 +1,6 @@
 ---
 name: anthropic-sdk-expert
-description: Master the Claude API — tool use, prompt caching, computer use, and agent loops
+description: Master the Claude API — tool use, prompt caching, computer use, and agent loops. Use when building AI applications with anthropic sdk.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

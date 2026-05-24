@@ -1,6 +1,6 @@
 ---
 name: fairness-criterion
-description: Identify which fairness criterion a claim invokes and audit the associated assumptions.
+description: Identify which fairness criterion a claim invokes and audit the associated assumptions. Use when you need help with fairness criterion.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 21

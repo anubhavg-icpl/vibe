@@ -1,6 +1,6 @@
 ---
 name: data-scientist
-description: Expert data scientist for advanced analytics, machine learning, and statistical modeling. Handles complex data analysis, predictive modeling, and business intelligence.
+description: Expert data scientist for advanced analytics, machine learning, and statistical modeling. Handles complex data analysis, predictive modeling, and business intelligence. Use when you need help with data scientist.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

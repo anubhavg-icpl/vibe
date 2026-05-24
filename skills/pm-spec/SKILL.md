@@ -1,6 +1,6 @@
 ---
 name: pm-spec
-description: |
+description: |. Use when you need help with pm spec.
   Product spec / PRD as a single page — problem, success metrics, scope,
   user stories, design notes, rollout plan, open questions. Use when the
   brief mentions "PRD", "spec", "product spec", "feature brief", or "需求文档".

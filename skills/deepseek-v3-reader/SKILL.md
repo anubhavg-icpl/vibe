@@ -1,6 +1,6 @@
 ---
 name: deepseek-v3-reader
-description: Read a DeepSeek-family config and produce a component-by-component architecture analysis.
+description: Read a DeepSeek-family config and produce a component-by-component architecture analysis. Use when you need help with deepseek v3 reader.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 20

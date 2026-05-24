@@ -1,6 +1,6 @@
 ---
 name: controlnet-expert
-description: ControlNet variants - canny, depth, openpose, lineart, tile, inpaint - and multi-controlnet stacking
+description: ControlNet variants - canny, depth, openpose, lineart, tile, inpaint - and multi-controlnet stacking. Use when working with multimodal AI (images, audio, video) using controlnet.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

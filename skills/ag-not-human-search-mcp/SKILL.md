@@ -1,6 +1,6 @@
 ---
 name: not-human-search-mcp
-description: "Search AI-ready websites, inspect indexed site details, verify MCP endpoints, and discover tools and APIs using the Not Human Search MCP server"
+description: Search AI-ready websites, inspect indexed site details, verify MCP endpoints, and discover tools and APIs using the Not Human Search MCP server. Use when you need help with not human search mcp.
 license: CC-BY-NC-SA-4.0
 source_type: community
 author: unitedideas

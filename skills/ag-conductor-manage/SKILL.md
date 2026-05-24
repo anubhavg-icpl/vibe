@@ -1,6 +1,6 @@
 ---
 name: conductor-manage
-description: "Manage track lifecycle: archive, restore, delete, rename, and cleanup"
+description: Manage track lifecycle: archive, restore, delete, rename, and cleanup. Use when you need help with conductor manage.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

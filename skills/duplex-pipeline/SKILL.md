@@ -1,6 +1,6 @@
 ---
 name: duplex-pipeline
-description: Pick full-duplex (Moshi) vs pipeline (VAD + STT + LLM + TTS) architecture for a voice-agent workload.
+description: Pick full-duplex (Moshi) vs pipeline (VAD + STT + LLM + TTS) architecture for a voice-agent workload. Use when you need help with duplex pipeline.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 15

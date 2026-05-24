@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-php-mcp-server
-description: "Best practices for building Model Context Protocol servers in PHP using the official PHP SDK with attribute-based discovery and multiple transport options"
+description: Best practices for building Model Context Protocol servers in PHP using the official PHP SDK with attribute-based discovery and multiple transport options. Use when writing or reviewing php mcp server code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

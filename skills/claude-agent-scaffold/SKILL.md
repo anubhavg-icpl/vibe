@@ -1,6 +1,6 @@
 ---
 name: claude-agent-scaffold
-description: Scaffold a Claude Agent SDK app with subagents, lifecycle hooks, session store, MCP server attachment, and W3C trace propagation.
+description: Scaffold a Claude Agent SDK app with subagents, lifecycle hooks, session store, MCP server attachment, and W3C trace propagation. Use when you need help with claude agent scaffold.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 17

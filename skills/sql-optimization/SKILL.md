@@ -1,6 +1,6 @@
 ---
 name: sql-optimization
-description: sql-optimization
+description: sql-optimization. Use when designing, querying, or optimizing sql optimization databases.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

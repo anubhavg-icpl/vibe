@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-pin-and-paper
-description: |
+description: |. Use when you need help with html ppt zhangzara pin and paper.
   Pin & Paper — Yellow paper with safety-pin illustrations, ink-blue handwritten Caveat, paper-grain texture. Anything that should feel hand-crafted, warm, and literary: qualitative research findings, founder reflections, longform brand stories, workshop debriefs.
 license: CC-BY-NC-SA-4.0
 triggers: 

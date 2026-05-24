@@ -1,6 +1,6 @@
 ---
 name: azure-web-pubsub-ts
-description: "Real-time messaging with WebSocket connections and pub/sub patterns."
+description: Real-time messaging with WebSocket connections and pub/sub patterns. Use when you need help with azure web pubsub ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

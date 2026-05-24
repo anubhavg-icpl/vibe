@@ -1,6 +1,6 @@
 ---
 name: acd-cinematic-ferrari-design
-description: Reference DESIGN.md for performance brands that need to feel theatrical. High-contrast black-and-white frames cut by Rosso Corsa red, sharp 0-radius components, FerrariSans across the entire page, photography that treats the car as sculp...
+description: Reference DESIGN.md for performance brands that need to feel theatrical. High-contrast black-and-white frames cut by Rosso Corsa red, sharp 0-radius components, FerrariSans across the entire page, photography that treats the car as sculp. Use when building UI components, applying design tokens, or implementing visual styles for cinematic ferrari.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

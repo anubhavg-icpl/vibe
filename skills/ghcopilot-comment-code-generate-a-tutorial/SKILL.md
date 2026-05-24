@@ -1,6 +1,6 @@
 ---
 name: comment-code-generate-a-tutorial
-description: 'Transform this Python script into a polished, beginner-friendly project by refactoring the code, adding clear instructional comments, and generating a complete markdown tutorial.'
+description: Transform this Python script into a polished, beginner-friendly project by refactoring the code, adding clear instructional comments, and generating a complete markdown tutorial. Use when you need help with comment code generate a tutorial.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: mythos-eval-limitations-framework
-description: Use the AISI cyber-evals limitations list as a positive design framework for honest, lower-bound capability claims
+description: Use the AISI cyber-evals limitations list as a positive design framework for honest, lower-bound capability claims. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving eval limitations framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

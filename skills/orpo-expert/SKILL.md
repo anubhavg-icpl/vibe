@@ -1,6 +1,6 @@
 ---
 name: orpo-expert
-description: Odds-Ratio Preference Optimization — single-stage SFT + preference alignment without a reference model
+description: Odds-Ratio Preference Optimization — single-stage SFT + preference alignment without a reference model. Use when fine-tuning, training, or adapting language models with orpo techniques.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

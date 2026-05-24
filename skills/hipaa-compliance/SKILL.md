@@ -1,6 +1,6 @@
 ---
 name: hipaa-compliance
-description: Expert in HIPAA compliance for healthcare applications - PHI protection, security rules, and audit controls
+description: Expert in HIPAA compliance for healthcare applications - PHI protection, security rules, and audit controls. Use when performing security analysis, auditing, or hardening with hipaa compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

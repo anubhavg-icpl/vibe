@@ -1,6 +1,6 @@
 ---
 name: development
-description: "Comprehensive web, mobile, and backend development workflow bundling frontend, backend, full-stack, and mobile development skills for end-to-end application delivery."
+description: Comprehensive web, mobile, and backend development workflow bundling frontend, backend, full-stack, and mobile development skills for end-to-end application delivery. Use when you need help with development.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: workflow-bundle

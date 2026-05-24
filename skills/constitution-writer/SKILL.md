@@ -1,6 +1,6 @@
 ---
 name: constitution-writer
-description: Draft a four-tier constitution for a domain-specific AI system.
+description: Draft a four-tier constitution for a domain-specific AI system. Use when you need help with constitution writer.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 5

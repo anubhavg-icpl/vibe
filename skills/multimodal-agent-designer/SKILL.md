@@ -1,6 +1,6 @@
 ---
 name: multimodal-agent-designer
-description: Design a multimodal agent (computer-use, GUI grounding, web or mobile) with action schema, memory strategy, and benchmark evaluation plan.
+description: Design a multimodal agent (computer-use, GUI grounding, web or mobile) with action schema, memory strategy, and benchmark evaluation plan. Use when you need help with multimodal agent designer.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 25

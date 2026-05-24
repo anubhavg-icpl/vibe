@@ -1,6 +1,6 @@
 ---
 name: acd-remix-notion-x-duolingo-design
-description: Remix. Notion's warm neutral document surface + Duolingo's saturated greens, rounded corners, and tactile feedback. For learning platforms, courses, and education tools that want to feel like a serious workspace and a friendly tutor at o...
+description: "Remix. Notion's warm neutral document surface + Duolingo's saturated greens, rounded corners, and tactile feedback. For learning platforms, courses, and education tools that want to feel like a serious workspace and a friendly tutor at o. Use when building UI components, applying design tokens, or implementing visual styles for remix notion x duolingo."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

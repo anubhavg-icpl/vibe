@@ -1,6 +1,6 @@
 ---
 name: prometheus-grafana-expert
-description: Expert in Prometheus monitoring and Grafana visualization
+description: Expert in Prometheus monitoring and Grafana visualization. Use when configuring, deploying, or managing prometheus grafana infrastructure.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

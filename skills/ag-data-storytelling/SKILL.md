@@ -1,6 +1,6 @@
 ---
 name: data-storytelling
-description: "Transform raw data into compelling narratives that drive decisions and inspire action."
+description: Transform raw data into compelling narratives that drive decisions and inspire action. Use when you need help with data storytelling.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

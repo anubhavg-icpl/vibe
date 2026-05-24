@@ -1,6 +1,6 @@
 ---
 name: solid-expert
-description: Expert in SolidJS signals, fine-grained reactivity, stores, and SolidStart
+description: Expert in SolidJS signals, fine-grained reactivity, stores, and SolidStart. Use when building web applications with solid.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

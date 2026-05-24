@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-tasksync
-description: "TaskSync V5 - Allows you to give the agent new instructions or feedback after completing a task using terminal while agent is running."
+description: TaskSync V5 - Allows you to give the agent new instructions or feedback after completing a task using terminal while agent is running. Use when writing or reviewing tasksync code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

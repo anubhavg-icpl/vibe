@@ -1,6 +1,6 @@
 ---
 name: battlenet-automation
-description: "Automate Battlenet tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Battlenet tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with battlenet automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

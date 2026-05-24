@@ -1,6 +1,6 @@
 ---
 name: eval-suite
-description: Build a three-layer eval suite (static benchmarks, custom offline, online production) with evaluator-optimizer loop and CI gates.
+description: Build a three-layer eval suite (static benchmarks, custom offline, online production) with evaluator-optimizer loop and CI gates. Use when you need help with eval suite.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 30

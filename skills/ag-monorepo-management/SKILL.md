@@ -1,6 +1,6 @@
 ---
 name: monorepo-management
-description: "Build efficient, scalable monorepos that enable code sharing, consistent tooling, and atomic changes across multiple packages and applications."
+description: Build efficient, scalable monorepos that enable code sharing, consistent tooling, and atomic changes across multiple packages and applications. Use when you need help with monorepo management.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

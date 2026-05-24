@@ -1,6 +1,6 @@
 ---
 name: godot-developer
-description: Expert in Godot 4 game development with GDScript, C#, and engine architecture
+description: Expert in Godot 4 game development with GDScript, C#, and engine architecture. Use when developing games with godot.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

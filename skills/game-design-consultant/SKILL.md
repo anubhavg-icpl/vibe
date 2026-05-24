@@ -1,6 +1,6 @@
 ---
 name: game-design-consultant
-description: game-design-consultant
+description: game-design-consultant. Use when developing games with game design consultant.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

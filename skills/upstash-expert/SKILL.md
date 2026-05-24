@@ -1,6 +1,6 @@
 ---
 name: upstash-expert
-description: Expert in Upstash Redis, QStash, Vector, and Workflow for serverless and edge
+description: Expert in Upstash Redis, QStash, Vector, and Workflow for serverless and edge. Use when deploying to or building on upstash edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

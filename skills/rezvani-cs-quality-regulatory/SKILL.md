@@ -1,6 +1,6 @@
 ---
 name: cs-quality-regulatory
-description: Quality & Regulatory agent for ISO 13485 QMS, MDR compliance, FDA submissions, GDPR/DSGVO, and ISMS audits. Orchestrates ra-qm-team skills. Spawn when users need regulatory strategy, audit preparation, CAPA management, risk management, or compliance documentation.
+description: Quality & Regulatory agent for ISO 13485 QMS, MDR compliance, FDA submissions, GDPR/DSGVO, and ISMS audits. Orchestrates ra-qm-team skills. Spawn when users need regulatory strategy, audit preparation, CAPA management, risk management, or compliance documentation. Use when you need help with cs quality regulatory.
 license: CC-BY-NC-SA-4.0
 skills: ra-qm-team
 domain: ra-qm

@@ -1,6 +1,6 @@
 ---
 name: waitlist-page
-description: |
+description: |. Use when you need help with waitlist page.
   Minimal pre-launch landing with email capture, brand logo, and optional decorative layer.
   Reads DESIGN.md for colors, typography, and layout rules.
   Best for: product launches, beta signups, early access programs, indie projects.

@@ -1,6 +1,6 @@
 ---
 name: ib-pitch-book
-description: |
+description: |. Use when you need help with ib pitch book.
   Investment-banking pitch book for strategic alternatives — trading comps,
   precedent transactions, valuation football field, DCF sensitivity,
   strategic-options matrix, process recommendation. Built by adapting

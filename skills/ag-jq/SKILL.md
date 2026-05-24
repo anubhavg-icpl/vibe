@@ -1,6 +1,6 @@
 ---
 name: jq
-description: "Expert jq usage for JSON querying, filtering, transformation, and pipeline integration. Practical patterns for real shell workflows."
+description: Expert jq usage for JSON querying, filtering, transformation, and pipeline integration. Practical patterns for real shell workflows. Use when you need help with jq.
 license: CC-BY-NC-SA-4.0
 author: kostakost2
 tools: [claude, cursor, gemini]

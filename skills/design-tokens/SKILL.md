@@ -1,6 +1,6 @@
 ---
 name: design-tokens
-description: Expert in design tokens, design systems, and cross-platform design consistency
+description: Expert in design tokens, design systems, and cross-platform design consistency. Use when you need help with design tokens.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

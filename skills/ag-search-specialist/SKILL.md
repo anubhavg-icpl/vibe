@@ -1,6 +1,6 @@
 ---
 name: search-specialist
-description: "Expert web researcher using advanced search techniques and"
+description: Expert web researcher using advanced search techniques and. Use when you need specialized search knowledge.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

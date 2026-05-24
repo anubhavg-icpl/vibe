@@ -1,6 +1,6 @@
 ---
 name: modality-bridge-picker
-description: Recommend Q-Former vs MLP projector vs Perceiver resampler for a VLM configuration given token budget, quality target, and training compute.
+description: Recommend Q-Former vs MLP projector vs Perceiver resampler for a VLM configuration given token budget, quality target, and training compute. Use when you need help with modality bridge picker.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 03

@@ -1,6 +1,6 @@
 ---
 name: hugging-face-gradio
-description: Build or edit Gradio apps, layouts, components, and chat interfaces in Python.
+description: Build or edit Gradio apps, layouts, components, and chat interfaces in Python. Use when you need help with hugging face gradio.
 license: CC-BY-NC-SA-4.0
 metadata:
   source: "https://github.com/huggingface/skills/tree/main/skills/huggingface-gradio"

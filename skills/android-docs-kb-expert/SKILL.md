@@ -1,6 +1,6 @@
 ---
 name: android-docs-kb-expert
-description: Expert in `android docs search` and `android docs fetch kb://...` — querying Android KB and pulling authoritative docs into agent context
+description: Expert in `android docs search` and `android docs fetch kb://...` — querying Android KB and pulling authoritative docs into agent context. Use when using Android CLI tools for android docs kb.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

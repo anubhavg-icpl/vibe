@@ -1,6 +1,6 @@
 ---
 name: skill-embedding-patterns
-description: Production patterns for embeddings, vector search, and similarity
+description: Production patterns for embeddings, vector search, and similarity. Use when you need help with skill embedding patterns.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 4

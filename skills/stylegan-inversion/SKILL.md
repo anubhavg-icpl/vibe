@@ -1,6 +1,6 @@
 ---
 name: stylegan-inversion
-description: Choose an inversion and editing pipeline for a pretrained StyleGAN over a real photo.
+description: Choose an inversion and editing pipeline for a pretrained StyleGAN over a real photo. Use when you need help with stylegan inversion.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 05

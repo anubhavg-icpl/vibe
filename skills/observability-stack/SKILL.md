@@ -1,6 +1,6 @@
 ---
 name: observability-stack
-description: Pick an LLM observability stack (development platform + gateway + optional scale layer) given stack, scale, budget, and license posture, and define the OpenTelemetry GenAI attribute set.
+description: Pick an LLM observability stack (development platform + gateway + optional scale layer) given stack, scale, budget, and license posture, and define the OpenTelemetry GenAI attribute set. Use when you need help with observability stack.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 13

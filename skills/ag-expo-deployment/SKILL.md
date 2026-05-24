@@ -1,6 +1,6 @@
 ---
 name: expo-deployment
-description: "Deploy Expo apps to production"
+description: Deploy Expo apps to production. Use when you need help with expo deployment.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

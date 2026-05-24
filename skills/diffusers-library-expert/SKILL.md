@@ -1,6 +1,6 @@
 ---
 name: diffusers-library-expert
-description: HF diffusers - pipelines, schedulers, IP-Adapter loading, LoRA loading, custom model loading
+description: HF diffusers - pipelines, schedulers, IP-Adapter loading, LoRA loading, custom model loading. Use when working with multimodal AI (images, audio, video) using diffusers library.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

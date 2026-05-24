@@ -1,6 +1,6 @@
 ---
 name: replicate-expert
-description: Expert in Replicate predictions API, Cog model packaging, and fine-tunes
+description: Expert in Replicate predictions API, Cog model packaging, and fine-tunes. Use when deploying to or building on replicate edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

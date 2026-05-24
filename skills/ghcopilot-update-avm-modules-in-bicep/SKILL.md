@@ -1,6 +1,6 @@
 ---
 name: update-avm-modules-in-bicep
-description: 'Update Azure Verified Modules (AVM) to latest versions in Bicep files.'
+description: Update Azure Verified Modules (AVM) to latest versions in Bicep files. Use when you need help with update avm modules in bicep.
 license: CC-BY-NC-SA-4.0
 ---
 

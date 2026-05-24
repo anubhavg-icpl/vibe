@@ -1,6 +1,6 @@
 ---
 name: eval-report
-description: Plan a full generative-model evaluation: sample quality, adherence, preference, failure audit.
+description: Plan a full generative-model evaluation: sample quality, adherence, preference, failure audit. Use when you need help with eval report.
 license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 14

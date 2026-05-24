@@ -1,6 +1,6 @@
 ---
 name: prometheus-configuration
-description: "Complete guide to Prometheus setup, metric collection, scrape configuration, and recording rules."
+description: Complete guide to Prometheus setup, metric collection, scrape configuration, and recording rules. Use when you need help with prometheus configuration.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

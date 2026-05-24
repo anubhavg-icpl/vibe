@@ -1,6 +1,6 @@
 ---
 name: instructor-expert
-description: Extract validated, typed data from any LLM with Instructor and Pydantic
+description: Extract validated, typed data from any LLM with Instructor and Pydantic. Use when building AI applications with instructor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

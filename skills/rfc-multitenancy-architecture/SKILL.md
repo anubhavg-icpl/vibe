@@ -1,6 +1,6 @@
 ---
 name: rfc-multitenancy-architecture
-description: Comprehensive multi-tenancy architecture guide using RFC standards for identity, authorization, and provisioning
+description: Comprehensive multi-tenancy architecture guide using RFC standards for identity, authorization, and provisioning. Use when implementing or validating rfc multitenancy architecture protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

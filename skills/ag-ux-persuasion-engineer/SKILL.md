@@ -1,6 +1,6 @@
 ---
 name: ux-persuasion-engineer
-description: "One sentence - what this skill does and when to invoke it"
+description: One sentence - what this skill does and when to invoke it. Use when you need help with ux persuasion engineer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

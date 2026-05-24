@@ -1,6 +1,6 @@
 ---
 name: asr-picker
-description: Pick ASR model, decoding strategy, chunking, and LM fusion for a given deployment target.
+description: Pick ASR model, decoding strategy, chunking, and LM fusion for a given deployment target. Use when you need help with asr picker.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 04

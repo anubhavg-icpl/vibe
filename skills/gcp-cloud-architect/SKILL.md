@@ -1,6 +1,6 @@
 ---
 name: gcp-cloud-architect
-description: gcp-cloud-architect
+description: gcp-cloud-architect. Use when architecting or managing cloud infrastructure with gcp cloud architect.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

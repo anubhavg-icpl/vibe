@@ -1,6 +1,6 @@
 ---
 name: ollama-multimodal-modelfile-expert
-description: Author Ollama Modelfiles for vision models — llava, llama3.2-vision, MiniCPM-V — with mmproj projector handling and image-token templates
+description: Author Ollama Modelfiles for vision models — llava, llama3.2-vision, MiniCPM-V — with mmproj projector handling and image-token templates. Use when creating, converting, or publishing model files with ollama multimodal modelfile.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

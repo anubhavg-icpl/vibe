@@ -1,6 +1,6 @@
 ---
 name: java-docs
-description: 'Ensure that Java types are documented with Javadoc comments and follow best practices for documentation.'
+description: Ensure that Java types are documented with Javadoc comments and follow best practices for documentation. Use when you need help with java docs.
 license: CC-BY-NC-SA-4.0
 ---
 

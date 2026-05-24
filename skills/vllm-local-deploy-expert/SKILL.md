@@ -1,6 +1,6 @@
 ---
 name: vllm-local-deploy-expert
-description: Self-host vLLM in Docker for high-throughput local inference with tensor parallelism, prefix caching, and AWQ/GPTQ quantization
+description: Self-host vLLM in Docker for high-throughput local inference with tensor parallelism, prefix caching, and AWQ/GPTQ quantization. Use when deploying, running, or configuring local LLM inference with vllm local deploy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

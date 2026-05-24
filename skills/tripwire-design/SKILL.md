@@ -1,6 +1,6 @@
 ---
 name: tripwire-design
-description: Review a proposed agent detector stack (kill switch, circuit breakers, canary tokens) and flag missing tripwires before the first autonomous run.
+description: Review a proposed agent detector stack (kill switch, circuit breakers, canary tokens) and flag missing tripwires before the first autonomous run. Use when building UI with tripwire design language and visual style.
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 14

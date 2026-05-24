@@ -1,6 +1,6 @@
 ---
 name: makepad-widgets
-description: "Version: makepad-widgets (dev branch) | Last Updated: 2026-01-19 > > Check for updates: https://crates.io/crates/makepad-widgets"
+description: Version: makepad-widgets (dev branch) | Last Updated: 2026-01-19 > > Check for updates: https://crates.io/crates/makepad-widgets. Use when you need help with makepad widgets.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

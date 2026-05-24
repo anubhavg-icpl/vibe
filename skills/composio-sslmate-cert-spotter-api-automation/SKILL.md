@@ -1,6 +1,6 @@
 ---
 name: sslmate-cert-spotter-api-automation
-description: "Automate Sslmate Cert Spotter API tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Sslmate Cert Spotter API tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with sslmate cert spotter api automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

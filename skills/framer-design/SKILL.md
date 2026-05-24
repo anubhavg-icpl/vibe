@@ -1,6 +1,6 @@
 ---
 name: framer-design
-description: Expert in the Framer design system - Website builder. Bold black and blue, motion-first, design-forward.
+description: Expert in the Framer design system - Website builder. Bold black and blue, motion-first, design-forward. Use when building UI components, applying design tokens, or implementing visual styles for framer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

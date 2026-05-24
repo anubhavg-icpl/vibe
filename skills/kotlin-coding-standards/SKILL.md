@@ -1,6 +1,6 @@
 ---
 name: kotlin-coding-standards
-description: Production-ready Kotlin coding standards for Android/JVM development enforcing safety, conciseness, and modern patterns
+description: Production-ready Kotlin coding standards for Android/JVM development enforcing safety, conciseness, and modern patterns. Use when enforcing kotlin coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

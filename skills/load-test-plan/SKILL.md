@@ -1,6 +1,6 @@
 ---
 name: load-test-plan
-description: Design a realistic LLM load test — pick tool (LLMPerf, k6, GenAI-Perf, guidellm), build four patterns (steady, ramp, spike, soak), and gate in CI.
+description: Design a realistic LLM load test — pick tool (LLMPerf, k6, GenAI-Perf, guidellm), build four patterns (steady, ramp, spike, soak), and gate in CI. Use when you need help with load test plan.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 22

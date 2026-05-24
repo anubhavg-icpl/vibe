@@ -1,6 +1,6 @@
 ---
 name: seo-plan
-description: >
+description: >. Use when you need help with seo plan.
   Strategic SEO planning for new or existing websites. Industry-specific
   templates, competitive analysis, content strategy, and implementation
   roadmap. Use when user says "SEO plan", "SEO strategy", "content strategy",

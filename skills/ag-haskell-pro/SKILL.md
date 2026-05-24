@@ -1,6 +1,6 @@
 ---
 name: haskell-pro
-description: "Expert Haskell engineer specializing in advanced type systems, pure"
+description: Expert Haskell engineer specializing in advanced type systems, pure. Use when you need help with haskell pro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

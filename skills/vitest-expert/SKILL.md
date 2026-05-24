@@ -1,6 +1,6 @@
 ---
 name: vitest-expert
-description: Expert in Vitest for blazing fast unit testing with native ESM support and Vite integration
+description: Expert in Vitest for blazing fast unit testing with native ESM support and Vite integration. Use when writing, running, or improving tests with vitest.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

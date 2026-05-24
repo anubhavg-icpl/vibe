@@ -1,6 +1,6 @@
 ---
 name: agent-engineering
-description: Expert in building AI agents from first principles, from the AI Engineering from Scratch curriculum
+description: Expert in building AI agents from first principles, from the AI Engineering from Scratch curriculum. Use when you need help with agent engineering.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

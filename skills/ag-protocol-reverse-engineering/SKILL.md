@@ -1,6 +1,6 @@
 ---
 name: protocol-reverse-engineering
-description: "Comprehensive techniques for capturing, analyzing, and documenting network protocols for security research, interoperability, and debugging."
+description: Comprehensive techniques for capturing, analyzing, and documenting network protocols for security research, interoperability, and debugging. Use when you need help with protocol reverse engineering.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: azure-ai-voicelive-java
-description: Azure AI VoiceLive SDK for Java. Real-time bidirectional voice conversations with AI assistants using WebSocket.
+description: Azure AI VoiceLive SDK for Java. Real-time bidirectional voice conversations with AI assistants using WebSocket. Use when you need help with azure ai voicelive java.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

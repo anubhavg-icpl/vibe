@@ -1,6 +1,6 @@
 ---
 name: ship-gate
-description: >
+description: >. Use when you need help with ship gate.
   Pre-production audit that scans a codebase for security, database,
   deployment, code quality, AI/LLM, dependency, frontend, and observability
   issues. Intercepts deploy commands and blocks until critical items pass.

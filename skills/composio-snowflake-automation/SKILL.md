@@ -1,6 +1,6 @@
 ---
 name: Snowflake Automation
-description: "Automate Snowflake data warehouse operations -- list databases, schemas, and tables, execute SQL statements, and manage data workflows via the Composio MCP integration."
+description: Automate Snowflake data warehouse operations -- list databases, schemas, and tables, execute SQL statements, and manage data workflows via the Composio MCP integration. Use when you need help with Snowflake Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

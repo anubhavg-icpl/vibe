@@ -1,6 +1,6 @@
 ---
 name: clickhouse-design
-description: Expert in the ClickHouse design system - Fast analytics database. Yellow-accented, technical documentation style.
+description: Expert in the ClickHouse design system - Fast analytics database. Yellow-accented, technical documentation style. Use when building UI components, applying design tokens, or implementing visual styles for clickhouse.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

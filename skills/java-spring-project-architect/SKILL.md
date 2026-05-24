@@ -1,6 +1,6 @@
 ---
 name: java-spring-project-architect
-description: Production-ready Java Spring Boot project structure architect - validates and scaffolds enterprise-grade Spring Boot 3.x applications with Hexagonal Architecture
+description: Production-ready Java Spring Boot project structure architect - validates and scaffolds enterprise-grade Spring Boot 3.x applications with Hexagonal Architecture. Use when scaffolding, structuring, or architecting java spring projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

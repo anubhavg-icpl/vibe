@@ -1,6 +1,6 @@
 ---
 name: mythos-false-positive-hunter
-description: Reduce noise from Snyk, Trivy, Semgrep, CodeQL, and Dependabot by verifying reachability before raising findings
+description: Reduce noise from Snyk, Trivy, Semgrep, CodeQL, and Dependabot by verifying reachability before raising findings. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving false positive hunter.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

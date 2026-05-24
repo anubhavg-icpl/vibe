@@ -1,6 +1,6 @@
 ---
 name: android-cli-expert
-description: Master overview of Google's agent-first Android CLI (v0.7, April 2026) — install, config, global flags, and command map
+description: "Master overview of Google's agent-first Android CLI (v0.7, April 2026) — install, config, global flags, and command map. Use when using Android CLI tools for android cli."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

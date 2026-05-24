@@ -1,6 +1,6 @@
 ---
 name: rfc-8693-token-exchange
-description: Token exchange for delegation, impersonation, and cross-domain identity federation
+description: Token exchange for delegation, impersonation, and cross-domain identity federation. Use when implementing or validating rfc 8693 token exchange protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

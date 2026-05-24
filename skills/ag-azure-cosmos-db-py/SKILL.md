@@ -1,6 +1,6 @@
 ---
 name: azure-cosmos-db-py
-description: "Build production-grade Azure Cosmos DB NoSQL services following clean code, security best practices, and TDD principles."
+description: Build production-grade Azure Cosmos DB NoSQL services following clean code, security best practices, and TDD principles. Use when you need help with azure cosmos db py.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

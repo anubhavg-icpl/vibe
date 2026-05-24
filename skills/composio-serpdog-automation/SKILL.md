@@ -1,6 +1,6 @@
 ---
 name: serpdog-automation
-description: "Automate Serpdog tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Serpdog tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with serpdog automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

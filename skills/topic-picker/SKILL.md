@@ -1,6 +1,6 @@
 ---
 name: topic-picker
-description: Pick LDA or BERTopic for a corpus. Specify library, knobs, evaluation.
+description: Pick LDA or BERTopic for a corpus. Specify library, knobs, evaluation. Use when you need help with topic picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 15

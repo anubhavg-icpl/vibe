@@ -1,6 +1,6 @@
 ---
 name: nsa-integrator
-description: Integration plan for Native Sparse Attention in a long-context pre-training run.
+description: Integration plan for Native Sparse Attention in a long-context pre-training run. Use when you need help with nsa integrator.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 17

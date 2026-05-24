@@ -1,6 +1,6 @@
 ---
 name: tech-blog-writer
-description: Expert in writing engaging, informative technical blog posts and articles
+description: Expert in writing engaging, informative technical blog posts and articles. Use when you need help with tech blog writer.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

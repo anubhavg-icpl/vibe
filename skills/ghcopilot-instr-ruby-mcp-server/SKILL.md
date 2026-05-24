@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-ruby-mcp-server
-description: "Best practices and patterns for building Model Context Protocol (MCP) servers in Ruby using the official MCP Ruby SDK gem."
+description: Best practices and patterns for building Model Context Protocol (MCP) servers in Ruby using the official MCP Ruby SDK gem. Use when writing or reviewing ruby mcp server code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

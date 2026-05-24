@@ -1,6 +1,6 @@
 ---
 name: shadcn-ui
-description: Expert in shadcn/ui component library, Radix primitives, Tailwind CSS styling, and accessible React components
+description: Expert in shadcn/ui component library, Radix primitives, Tailwind CSS styling, and accessible React components. Use when you need help with shadcn ui.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

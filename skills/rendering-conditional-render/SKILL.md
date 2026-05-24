@@ -1,6 +1,6 @@
 ---
 name: rendering-conditional-render
-description: Use Explicit Conditional Rendering
+description: Use Explicit Conditional Rendering. Use when you need help with rendering conditional render.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

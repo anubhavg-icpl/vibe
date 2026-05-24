@@ -1,6 +1,6 @@
 ---
 name: remotion
-description: Generate walkthrough videos from Stitch projects using Remotion with smooth transitions, zooming, and text overlays
+description: Generate walkthrough videos from Stitch projects using Remotion with smooth transitions, zooming, and text overlays. Use when you need help with remotion.
 license: CC-BY-NC-SA-4.0
 allowed-tools: 
   - "stitch*:*"

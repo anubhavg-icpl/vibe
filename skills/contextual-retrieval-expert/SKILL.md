@@ -1,6 +1,6 @@
 ---
 name: contextual-retrieval-expert
-description: Anthropic's Contextual Retrieval — prepend chunk-specific context before embedding
+description: "Anthropic's Contextual Retrieval — prepend chunk-specific context before embedding. Use when building or optimizing retrieval-augmented generation pipelines with contextual retrieval."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

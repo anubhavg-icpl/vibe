@@ -1,6 +1,6 @@
 ---
 name: multitenancy-spiffe
-description: Expert in multi-tenant architecture with SPIFFE/SPIRE, mTLS, certificate rotation, and Rust SDK implementation
+description: Expert in multi-tenant architecture with SPIFFE/SPIRE, mTLS, certificate rotation, and Rust SDK implementation. Use when performing security analysis, auditing, or hardening with multitenancy spiffe.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

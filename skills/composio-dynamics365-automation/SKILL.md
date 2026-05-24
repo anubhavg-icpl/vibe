@@ -1,6 +1,6 @@
 ---
 name: Dynamics 365 Automation
-description: "Dynamics 365 Automation: manage CRM contacts, accounts, leads, opportunities, sales orders, invoices, and cases via the Dynamics CRM Web API"
+description: Dynamics 365 Automation: manage CRM contacts, accounts, leads, opportunities, sales orders, invoices, and cases via the Dynamics CRM Web API. Use when you need help with Dynamics 365 Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

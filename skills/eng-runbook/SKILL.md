@@ -1,6 +1,6 @@
 ---
 name: eng-runbook
-description: |
+description: |. Use when you need help with eng runbook.
   An engineering runbook — service overview, alerts table, dashboards
   links, common procedures with copy-pasteable commands, on-call rotation,
   and an incident-response checklist. Use when the brief mentions

@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-power-platform-mcp-development
-description: "Instructions for developing Power Platform custom connectors with Model Context Protocol (MCP) integration for Microsoft Copilot Studio"
+description: Instructions for developing Power Platform custom connectors with Model Context Protocol (MCP) integration for Microsoft Copilot Studio. Use when writing or reviewing power platform mcp development code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

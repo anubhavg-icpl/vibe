@@ -1,6 +1,6 @@
 ---
 name: convex-expert
-description: Expert in Convex queries, mutations, actions, scheduling, and reactive data
+description: Expert in Convex queries, mutations, actions, scheduling, and reactive data. Use when deploying to or building on convex edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: seo-content-auditor
-description: Analyzes provided content for quality, E-E-A-T signals, and SEO best practices. Scores content and provides improvement recommendations based on established guidelines.
+description: Analyzes provided content for quality, E-E-A-T signals, and SEO best practices. Scores content and provides improvement recommendations based on established guidelines. Use when you need help with seo content auditor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

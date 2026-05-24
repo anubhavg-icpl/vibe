@@ -1,6 +1,6 @@
 ---
 name: social-media-dashboard
-description: |
+description: |. Use when you need help with social media dashboard.
   Creator-facing social media analytics dashboard in a single HTML file.
   A platform switcher (X / LinkedIn / YouTube / Instagram), a row of KPI
   cards (followers, engagement rate, likes, reposts), a follower-growth

@@ -1,6 +1,6 @@
 ---
 name: react-nextjs-development
-description: "React and Next.js 14+ application development with App Router, Server Components, TypeScript, Tailwind CSS, and modern frontend patterns."
+description: React and Next.js 14+ application development with App Router, Server Components, TypeScript, Tailwind CSS, and modern frontend patterns. Use when you need help with react nextjs development.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: granular-workflow-bundle

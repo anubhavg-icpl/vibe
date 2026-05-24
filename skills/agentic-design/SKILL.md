@@ -1,6 +1,6 @@
 ---
 name: agentic-design
-description: Expert in the Agentic design system - Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.
+description: Expert in the Agentic design system - Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows. Use when building UI components, applying design tokens, or implementing visual styles for agentic.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: skill-regression
-description: Choose the right regression approach based on data characteristics and problem constraints
+description: Choose the right regression approach based on data characteristics and problem constraints. Use when you need help with skill regression.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 2

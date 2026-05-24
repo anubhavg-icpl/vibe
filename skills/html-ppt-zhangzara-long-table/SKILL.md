@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-long-table
-description: |
+description: |. Use when you need help with html ppt zhangzara long table.
   Long Table — Warm cream and rust-red supper-club aesthetic with bold uppercase grotesk headlines, italic Fraunces, and pill-shaped outlined buttons. Anything that should feel like a warm, intimate, modern hospitality / community brand: supper clubs, dinner series, small restaurants, creative-studio events, membership pitches, lifestyle and wine brands.
 license: CC-BY-NC-SA-4.0
 triggers: 

@@ -1,6 +1,6 @@
 ---
 name: transformer-block-reviewer
-description: Review a transformer block implementation against 2026 defaults and flag drift.
+description: Review a transformer block implementation against 2026 defaults and flag drift. Use when you need help with transformer block reviewer.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 5

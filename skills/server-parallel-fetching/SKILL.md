@@ -1,6 +1,6 @@
 ---
 name: server-parallel-fetching
-description: Parallel Data Fetching with Component Composition
+description: Parallel Data Fetching with Component Composition. Use when you need help with server parallel fetching.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

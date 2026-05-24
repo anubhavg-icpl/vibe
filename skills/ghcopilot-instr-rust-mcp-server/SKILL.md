@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-rust-mcp-server
-description: "Best practices for building Model Context Protocol servers in Rust using the official rmcp SDK with async/await patterns"
+description: Best practices for building Model Context Protocol servers in Rust using the official rmcp SDK with async/await patterns. Use when writing or reviewing rust mcp server code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

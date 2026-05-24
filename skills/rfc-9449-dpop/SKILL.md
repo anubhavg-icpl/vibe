@@ -1,6 +1,6 @@
 ---
 name: rfc-9449-dpop
-description: Sender-constrained access tokens using DPoP for enhanced OAuth 2.0 security
+description: Sender-constrained access tokens using DPoP for enhanced OAuth 2.0 security. Use when implementing or validating rfc 9449 dpop protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

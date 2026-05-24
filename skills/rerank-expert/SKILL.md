@@ -1,6 +1,6 @@
 ---
 name: rerank-expert
-description: Cross-encoder rerankers — Cohere Rerank, Jina, BGE, Voyage, ColBERT-as-reranker
+description: Cross-encoder rerankers — Cohere Rerank, Jina, BGE, Voyage, ColBERT-as-reranker. Use when building or optimizing retrieval-augmented generation pipelines with rerank.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

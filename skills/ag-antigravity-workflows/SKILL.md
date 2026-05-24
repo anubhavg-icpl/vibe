@@ -1,6 +1,6 @@
 ---
 name: antigravity-workflows
-description: "Orchestrate multiple Antigravity skills through guided workflows for SaaS MVP delivery, security audits, AI agent builds, and browser QA."
+description: Orchestrate multiple Antigravity skills through guided workflows for SaaS MVP delivery, security audits, AI agent builds, and browser QA. Use when you need help with antigravity workflows.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: none

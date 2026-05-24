@@ -1,6 +1,6 @@
 ---
 name: sampling-tuner
-description: Pick decoding strategy (greedy / temperature / top-k / top-p / min-p / speculative) for a given generation task.
+description: Pick decoding strategy (greedy / temperature / top-k / top-p / min-p / speculative) for a given generation task. Use when you need help with sampling tuner.
 license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 7

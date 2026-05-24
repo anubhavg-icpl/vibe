@@ -1,6 +1,6 @@
 ---
 name: mcp-apps-spec
-description: Produce the full MCP Apps contract for a tool that needs an interactive UI resource.
+description: Produce the full MCP Apps contract for a tool that needs an interactive UI resource. Use when you need help with mcp apps spec.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 14

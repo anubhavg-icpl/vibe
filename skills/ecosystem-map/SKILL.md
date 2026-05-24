@@ -1,6 +1,6 @@
 ---
 name: ecosystem-map
-description: Map an alignment claim or evaluation to the organisation, methodology, and cross-checks.
+description: Map an alignment claim or evaluation to the organisation, methodology, and cross-checks. Use when you need help with ecosystem map.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 28

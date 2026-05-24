@@ -1,6 +1,6 @@
 ---
 name: news-sentiment-engine
-description: Multi-source RSS news aggregation with Claude-powered sentiment analysis and structured briefing output
+description: Multi-source RSS news aggregation with Claude-powered sentiment analysis and structured briefing output. Use when you need help with news sentiment engine.
 license: CC-BY-NC-SA-4.0
 source_repo: tellmefrankie/news-engine
 source_type: community

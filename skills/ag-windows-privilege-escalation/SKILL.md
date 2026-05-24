@@ -1,6 +1,6 @@
 ---
 name: windows-privilege-escalation
-description: "Provide systematic methodologies for discovering and exploiting privilege escalation vulnerabilities on Windows systems during penetration testing engagements."
+description: Provide systematic methodologies for discovering and exploiting privilege escalation vulnerabilities on Windows systems during penetration testing engagements. Use when you need help with windows privilege escalation.
 license: CC-BY-NC-SA-4.0
 author: zebbern
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: open-design-landing-deck
-description: >
+description: >. Use when you need help with open design landing deck.
   Produce a single-file slide deck in the Atelier Zero visual language
   (warm-paper background, italic-serif emphasis spans, coral terminating
   dots, surreal collage plates) — Open Design's brand deck recipe.

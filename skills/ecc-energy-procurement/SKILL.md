@@ -1,6 +1,6 @@
 ---
 name: energy-procurement
-description: >
+description: >. Use when you need help with energy procurement.
   Codified expertise for electricity and gas procurement, tariff optimization,
   demand charge management, renewable PPA evaluation, and multi-facility energy
   cost management. Informed by energy procurement managers with 15+ years

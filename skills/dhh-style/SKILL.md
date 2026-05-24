@@ -1,6 +1,6 @@
 ---
 name: dhh-style
-description: David Heinemeier Hansson — majestic monoliths, Rails, contrarian convictions, and "no microservices for you
+description: "David Heinemeier Hansson — majestic monoliths, Rails, contrarian convictions, and \"no microservices for you. Use when you want code review, architecture advice, or opinions in the style of dhh."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

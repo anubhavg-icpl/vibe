@@ -1,6 +1,6 @@
 ---
 name: gsap-framer-scroll-animation
-description: >-
+description: >-. Use when you need help with gsap framer scroll animation.
   Use this skill whenever the user wants to build scroll animations, scroll effects,
   parallax, scroll-triggered reveals, pinned sections, horizontal scroll, text animations,
   or any motion tied to scroll position — in vanilla JS, React, or Next.js.

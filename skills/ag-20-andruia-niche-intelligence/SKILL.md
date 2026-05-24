@@ -1,7 +1,7 @@
 ---
 id: 20-andruia-niche-intelligence
 name: 20-andruia-niche-intelligence
-description: "Estratega de Inteligencia de Dominio de Andru.ia. Analiza el nicho específico de un proyecto para inyectar conocimientos, regulaciones y estándares únicos del sector. Actívalo tras definir el nicho."
+description: Estratega de Inteligencia de Dominio de Andru.ia. Analiza el nicho específico de un proyecto para inyectar conocimientos, regulaciones y estándares únicos del sector. Actívalo tras definir el nicho. Use when you need help with 20 andruia niche intelligence.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: andruia

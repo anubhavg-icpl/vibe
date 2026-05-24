@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-mcp-m365-copilot
-description: "Best practices for building MCP-based declarative agents and API plugins for Microsoft 365 Copilot with Model Context Protocol integration"
+description: Best practices for building MCP-based declarative agents and API plugins for Microsoft 365 Copilot with Model Context Protocol integration. Use when writing or reviewing mcp m365 copilot code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

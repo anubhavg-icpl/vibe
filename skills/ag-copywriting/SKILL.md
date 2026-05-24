@@ -1,6 +1,6 @@
 ---
 name: copywriting
-description: Write rigorous, conversion-focused marketing copy for landing pages and emails. Enforces brief confirmation and strict no-fabrication rules.
+description: Write rigorous, conversion-focused marketing copy for landing pages and emails. Enforces brief confirmation and strict no-fabrication rules. Use when you need help with copywriting.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: infinite-gratitude
-description: "Multi-agent research skill for parallel research execution (10 agents, battle-tested with real case studies)."
+description: Multi-agent research skill for parallel research execution (10 agents, battle-tested with real case studies). Use when you need help with infinite gratitude.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

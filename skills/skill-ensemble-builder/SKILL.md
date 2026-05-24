@@ -1,6 +1,6 @@
 ---
 name: skill-ensemble-builder
-description: Choose the right ensemble method and configure it for your problem
+description: Choose the right ensemble method and configure it for your problem. Use when you need help with skill ensemble builder.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 11

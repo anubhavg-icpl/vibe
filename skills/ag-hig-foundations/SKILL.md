@@ -1,6 +1,6 @@
 ---
 name: hig-foundations
-description: Apple Human Interface Guidelines design foundations.
+description: Apple Human Interface Guidelines design foundations. Use when you need help with hig foundations.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

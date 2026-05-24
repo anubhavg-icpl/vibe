@@ -1,6 +1,6 @@
 ---
 name: inference-server
-description: Ship a speculative-decoding inference server with EAGLE-3 or P-EAGLE drafts, K8s autoscaling, and a full throughput/latency/cost report.
+description: Ship a speculative-decoding inference server with EAGLE-3 or P-EAGLE drafts, K8s autoscaling, and a full throughput/latency/cost report. Use when you need help with inference server.
 license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 14

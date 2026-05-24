@@ -1,6 +1,6 @@
 ---
 name: development
-description: development
+description: development. Use when you need help with development.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: htmx-expert
-description: Expert in htmx — hypermedia-driven applications, server-rendered HTML over the wire
+description: Expert in htmx — hypermedia-driven applications, server-rendered HTML over the wire. Use when building web applications with htmx.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

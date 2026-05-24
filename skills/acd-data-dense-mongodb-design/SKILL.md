@@ -1,6 +1,6 @@
 ---
 name: acd-data-dense-mongodb-design
-description: Reference DESIGN.md for developer database UIs: forest-green leaf brand, deep slate chrome, dashboard-first density with marketing surfaces in light editorial.
+description: Reference DESIGN.md for developer database UIs: forest-green leaf brand, deep slate chrome, dashboard-first density with marketing surfaces in light editorial. Use when building UI components, applying design tokens, or implementing visual styles for data dense mongodb.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

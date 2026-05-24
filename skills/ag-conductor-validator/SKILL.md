@@ -1,6 +1,6 @@
 ---
 name: conductor-validator
-description: 'Validates Conductor project artifacts for completeness,
+description: "'Validates Conductor project artifacts for completeness,. Use when you need help with conductor validator."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

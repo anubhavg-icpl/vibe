@@ -1,6 +1,6 @@
 ---
 name: rust-systems
-description: Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines
+description: Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines. Use when you need help with rust systems.
 license: CC-BY-NC-SA-4.0
 ---
 

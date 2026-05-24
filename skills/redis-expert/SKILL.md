@@ -1,6 +1,6 @@
 ---
 name: redis-expert
-description: redis-expert
+description: redis-expert. Use when designing, querying, or optimizing redis databases.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: neon-expert
-description: Expert in Neon serverless Postgres, branching, autoscaling, and the serverless driver
+description: Expert in Neon serverless Postgres, branching, autoscaling, and the serverless driver. Use when deploying to or building on neon edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

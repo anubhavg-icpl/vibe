@@ -1,6 +1,6 @@
 ---
 name: skill-evaluation
-description: Decision framework for choosing the right LLM evaluation strategy based on task type, budget, and requirements
+description: Decision framework for choosing the right LLM evaluation strategy based on task type, budget, and requirements. Use when you need help with skill evaluation.
 license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 10

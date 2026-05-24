@@ -1,6 +1,6 @@
 ---
 name: Apify Automation
-description: "Automate web scraping and data extraction with Apify -- run Actors, manage datasets, create reusable tasks, and retrieve crawl results through the Composio Apify integration."
+description: Automate web scraping and data extraction with Apify -- run Actors, manage datasets, create reusable tasks, and retrieve crawl results through the Composio Apify integration. Use when you need help with Apify Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

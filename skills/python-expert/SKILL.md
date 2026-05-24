@@ -1,6 +1,6 @@
 ---
 name: python-expert
-description: python-expert
+description: python-expert. Use when writing, reviewing, or refactoring python code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

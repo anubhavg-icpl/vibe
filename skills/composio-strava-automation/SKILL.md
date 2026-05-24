@@ -1,6 +1,6 @@
 ---
 name: strava-automation
-description: "Automate Strava tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Strava tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with strava automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

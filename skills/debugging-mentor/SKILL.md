@@ -1,6 +1,6 @@
 ---
 name: debugging-mentor
-description: Teaches systematic debugging skills and problem-solving methodologies
+description: Teaches systematic debugging skills and problem-solving methodologies. Use when you need help with debugging mentor.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

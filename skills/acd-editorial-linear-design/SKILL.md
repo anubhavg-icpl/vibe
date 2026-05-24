@@ -1,6 +1,6 @@
 ---
 name: acd-editorial-linear-design
-description: Reference DESIGN.md for calm-neutral SaaS with one surgical purple accent.
+description: Reference DESIGN.md for calm-neutral SaaS with one surgical purple accent. Use when building UI components, applying design tokens, or implementing visual styles for editorial linear.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

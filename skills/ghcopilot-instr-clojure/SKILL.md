@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-clojure
-description: "Clojure-specific coding patterns, inline def usage, code block templates, and namespace handling for Clojure development."
+description: Clojure-specific coding patterns, inline def usage, code block templates, and namespace handling for Clojure development. Use when writing or reviewing clojure code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

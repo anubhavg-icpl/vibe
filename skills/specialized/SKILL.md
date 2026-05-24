@@ -1,6 +1,6 @@
 ---
 name: specialized
-description: specialized
+description: specialized. Use when you need help with specialized.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

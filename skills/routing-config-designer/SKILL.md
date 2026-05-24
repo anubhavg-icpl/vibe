@@ -1,6 +1,6 @@
 ---
 name: routing-config-designer
-description: Given a workload profile, pick LiteLLM / OpenRouter / Portkey and produce a routing config.
+description: Given a workload profile, pick LiteLLM / OpenRouter / Portkey and produce a routing config. Use when you need help with routing config designer.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 20

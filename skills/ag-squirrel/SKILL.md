@@ -1,6 +1,6 @@
 ---
 name: squirrel
-description: "Full-cycle AI coding skill: plans, builds, tests, lints, fixes bugs, and writes production-grade docs. Auto-detects project state and adapts its 8-phase pipeline."
+description: Full-cycle AI coding skill: plans, builds, tests, lints, fixes bugs, and writes production-grade docs. Auto-detects project state and adapts its 8-phase pipeline. Use when you need help with squirrel.
 source_repo: flyingsquirrel0419/squirrel-skill
 source_type: community
 license: "Apache-2.0"

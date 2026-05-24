@@ -1,6 +1,6 @@
 ---
 name: litmus-chaos
-description: Expert in LitmusChaos - CNCF graduated Kubernetes-native chaos engineering platform
+description: Expert in LitmusChaos - CNCF graduated Kubernetes-native chaos engineering platform. Use when writing, running, or improving tests with litmus chaos.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

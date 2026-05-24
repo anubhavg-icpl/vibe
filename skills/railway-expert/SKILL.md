@@ -1,6 +1,6 @@
 ---
 name: railway-expert
-description: Expert in Railway services, environments, Postgres, and PR previews
+description: Expert in Railway services, environments, Postgres, and PR previews. Use when deploying to or building on railway edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

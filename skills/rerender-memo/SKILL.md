@@ -1,6 +1,6 @@
 ---
 name: rerender-memo
-description: Extract to Memoized Components
+description: Extract to Memoized Components. Use when you need help with rerender memo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

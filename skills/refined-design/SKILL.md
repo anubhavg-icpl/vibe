@@ -1,6 +1,6 @@
 ---
 name: refined-design
-description: Expert in the Refined design system - Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.
+description: Expert in the Refined design system - Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes. Use when building UI components, applying design tokens, or implementing visual styles for refined.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

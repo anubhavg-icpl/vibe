@@ -1,6 +1,6 @@
 ---
 name: langchain-architecture
-description: "Master the LangChain framework for building sophisticated LLM applications with agents, chains, memory, and tool integration."
+description: Master the LangChain framework for building sophisticated LLM applications with agents, chains, memory, and tool integration. Use when you need help with langchain architecture.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: hugging-face-community-evals
-description: Run local evaluations for Hugging Face Hub models with inspect-ai or lighteval.
+description: Run local evaluations for Hugging Face Hub models with inspect-ai or lighteval. Use when you need help with hugging face community evals.
 license: CC-BY-NC-SA-4.0
 metadata:
   source: "https://github.com/huggingface/skills/tree/main/skills/huggingface-community-evals"

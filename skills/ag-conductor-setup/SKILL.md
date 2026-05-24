@@ -1,6 +1,6 @@
 ---
 name: conductor-setup
-description: Configure a Rails project to work with Conductor (parallel coding agents)
+description: Configure a Rails project to work with Conductor (parallel coding agents). Use when you need help with conductor setup.
 license: CC-BY-NC-SA-4.0
 allowed-tools: Bash(chmod *), Bash(bundle *), Bash(npm *), Bash(script/server)
 context: fork

@@ -1,6 +1,6 @@
 ---
 name: ios-swift-developer
-description: ios-swift-developer
+description: ios-swift-developer. Use when developing mobile applications with ios swift.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: distributed-debugging-debug-trace
-description: "You are a debugging expert specializing in setting up comprehensive debugging environments, distributed tracing, and diagnostic tools. Configure debugging workflows, implement tracing solutions, and establish troubleshooting practices for development and production environments."
+description: You are a debugging expert specializing in setting up comprehensive debugging environments, distributed tracing, and diagnostic tools. Configure debugging workflows, implement tracing solutions, and establish troubleshooting practices for development and production environments. Use when you need help with distributed debugging debug trace.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

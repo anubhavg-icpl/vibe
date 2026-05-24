@@ -1,6 +1,6 @@
 ---
 name: hig-components-dialogs
-description: Apple HIG guidance for presentation components including alerts, action sheets, popovers, sheets, and digit entry views.
+description: Apple HIG guidance for presentation components including alerts, action sheets, popovers, sheets, and digit entry views. Use when you need help with hig components dialogs.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

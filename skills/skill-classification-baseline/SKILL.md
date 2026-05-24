@@ -1,6 +1,6 @@
 ---
 name: skill-classification-baseline
-description: Establish a strong classification baseline before reaching for complex models
+description: Establish a strong classification baseline before reaching for complex models. Use when you need help with skill classification baseline.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 3

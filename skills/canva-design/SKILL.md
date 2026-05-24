@@ -1,6 +1,6 @@
 ---
 name: canva-design
-description: Expert in the Canva design system - Visual creation platform. Vivid purple-blue gradient, generous spacing, friendly geometry.
+description: Expert in the Canva design system - Visual creation platform. Vivid purple-blue gradient, generous spacing, friendly geometry. Use when building UI components, applying design tokens, or implementing visual styles for canva.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

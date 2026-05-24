@@ -1,6 +1,6 @@
 ---
 name: seo-page
-description: >
+description: >. Use when you need help with seo page.
   Deep single-page SEO analysis covering on-page elements, content quality,
   technical meta tags, schema, images, and performance. Use when user says
   "analyze this page", "check page SEO", or provides a single URL for review.

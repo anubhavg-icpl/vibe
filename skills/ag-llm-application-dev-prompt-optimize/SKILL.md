@@ -1,6 +1,6 @@
 ---
 name: llm-application-dev-prompt-optimize
-description: "You are an expert prompt engineer specializing in crafting effective prompts for LLMs through advanced techniques including constitutional AI, chain-of-thought reasoning, and model-specific optimizati"
+description: You are an expert prompt engineer specializing in crafting effective prompts for LLMs through advanced techniques including constitutional AI, chain-of-thought reasoning, and model-specific optimizati. Use when you need help with llm application dev prompt optimize.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: starbucks-design
-description: Expert in the Starbucks design system - Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons.
+description: Expert in the Starbucks design system - Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons. Use when building UI components, applying design tokens, or implementing visual styles for starbucks.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

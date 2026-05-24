@@ -1,6 +1,6 @@
 ---
 name: cog-video-expert
-description: CogVideoX, Mochi-1, Hunyuan, LTX video diffusion - training and inference patterns
+description: CogVideoX, Mochi-1, Hunyuan, LTX video diffusion - training and inference patterns. Use when working with multimodal AI (images, audio, video) using cog video.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

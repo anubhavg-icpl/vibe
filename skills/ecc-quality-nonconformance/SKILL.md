@@ -1,6 +1,6 @@
 ---
 name: quality-nonconformance
-description: >
+description: >. Use when you need help with quality nonconformance.
   Codified expertise for quality control, non-conformance investigation, root
   cause analysis, corrective action, and supplier quality management in
   regulated manufacturing. Informed by quality engineers with 15+ years

@@ -1,6 +1,6 @@
 ---
 name: control-protocol-audit
-description: Audit a deployment protocol under the AI Control threat model.
+description: Audit a deployment protocol under the AI Control threat model. Use when you need help with control protocol audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 10

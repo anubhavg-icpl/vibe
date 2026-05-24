@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-bold-poster
-description: |
+description: |. Use when you need help with html ppt zhangzara bold poster.
   Bold Poster — Editorial poster aesthetic with massive Shrikhand display and a single fire-engine red accent. Anything that should land like a magazine cover: brand manifestos, founder vision decks, editorial / cultural pitches, creative reviews.
 license: CC-BY-NC-SA-4.0
 triggers: 

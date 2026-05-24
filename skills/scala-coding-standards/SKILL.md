@@ -1,6 +1,6 @@
 ---
 name: scala-coding-standards
-description: Production-ready Scala coding standards enforcing functional patterns, type safety, and maintainability
+description: Production-ready Scala coding standards enforcing functional patterns, type safety, and maintainability. Use when enforcing scala coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

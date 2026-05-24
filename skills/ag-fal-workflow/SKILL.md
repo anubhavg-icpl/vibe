@@ -1,6 +1,6 @@
 ---
 name: fal-workflow
-description: "Generate workflow JSON files for chaining AI models"
+description: Generate workflow JSON files for chaining AI models. Use when you need help with fal workflow.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: shopify-design
-description: Expert in the Shopify design system - E-commerce platform. Dark-first cinematic, neon green accent, ultra-light type.
+description: Expert in the Shopify design system - E-commerce platform. Dark-first cinematic, neon green accent, ultra-light type. Use when building UI components, applying design tokens, or implementing visual styles for shopify.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

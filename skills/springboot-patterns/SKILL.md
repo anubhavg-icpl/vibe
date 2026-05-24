@@ -1,6 +1,6 @@
 ---
 name: springboot-patterns
-description: Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration
+description: Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration. Use when you need help with springboot patterns.
 license: CC-BY-NC-SA-4.0
 ---
 

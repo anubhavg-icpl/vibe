@@ -1,6 +1,6 @@
 ---
 name: kafka-expert
-description: Expert in Kafka 3.x/4.0 with KRaft, exactly-once semantics, and consumer groups
+description: Expert in Kafka 3.x/4.0 with KRaft, exactly-once semantics, and consumer groups. Use when working with kafka for data processing, streaming, or analytics.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

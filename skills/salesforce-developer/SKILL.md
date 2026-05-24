@@ -1,6 +1,6 @@
 ---
 name: salesforce-developer
-description: salesforce-developer
+description: salesforce-developer. Use when developing salesforce applications.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

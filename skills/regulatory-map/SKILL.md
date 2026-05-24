@@ -1,6 +1,6 @@
 ---
 name: regulatory-map
-description: Map a deployment's AI regulatory obligations across EU, US, UK, Korea.
+description: "Map a deployment's AI regulatory obligations across EU, US, UK, Korea. Use when you need help with regulatory map."
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 24

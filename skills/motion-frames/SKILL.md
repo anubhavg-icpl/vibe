@@ -1,6 +1,6 @@
 ---
 name: motion-frames
-description: |
+description: |. Use when you need help with motion frames.
   A single-frame motion-design composition with looping CSS animations —
   rotating type ring, animated globe, ticking timer, parallax labels.
   Renders as a hero video poster you can hand straight to HyperFrames or

@@ -1,6 +1,6 @@
 ---
 name: fp-async
-description: Practical async patterns using TaskEither - clean pipelines instead of try/catch hell, with real API examples
+description: Practical async patterns using TaskEither - clean pipelines instead of try/catch hell, with real API examples. Use when you need help with fp async.
 license: CC-BY-NC-SA-4.0
 author: kadu
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: eagle3-rollout
-description: Produce a staged EAGLE-3 speculative-decoding rollout plan that measures acceptance rate alpha on real traffic before shipping.
+description: Produce a staged EAGLE-3 speculative-decoding rollout plan that measures acceptance rate alpha on real traffic before shipping. Use when you need help with eagle3 rollout.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 05

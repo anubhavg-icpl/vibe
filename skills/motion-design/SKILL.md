@@ -1,6 +1,6 @@
 ---
 name: motion-design
-description: Expert in UI motion design, animations, and micro-interactions
+description: Expert in UI motion design, animations, and micro-interactions. Use when building UI with motion design language and visual style.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

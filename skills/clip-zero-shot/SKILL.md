@@ -1,6 +1,6 @@
 ---
 name: clip-zero-shot
-description: Run zero-shot image classification with a CLIP / SigLIP checkpoint, producing ranked predictions with similarity scores.
+description: Run zero-shot image classification with a CLIP / SigLIP checkpoint, producing ranked predictions with similarity scores. Use when you need help with clip zero shot.
 license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 02

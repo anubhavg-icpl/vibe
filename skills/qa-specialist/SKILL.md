@@ -1,6 +1,6 @@
 ---
 name: qa-specialist
-description: qa-specialist
+description: qa-specialist. Use when writing, running, or improving tests with qa.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

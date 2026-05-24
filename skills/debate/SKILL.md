@@ -1,6 +1,6 @@
 ---
 name: debate
-description: Scaffold a multi-agent debate with N debaters, R rounds, configurable topology (full mesh, star, ring), and a convergence rule.
+description: Scaffold a multi-agent debate with N debaters, R rounds, configurable topology (full mesh, star, ring), and a convergence rule. Use when you need help with debate.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 25

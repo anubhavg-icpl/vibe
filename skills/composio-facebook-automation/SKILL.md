@@ -1,6 +1,6 @@
 ---
 name: Facebook Automation
-description: "Automate Facebook Page management including post creation, scheduling, video uploads, Messenger conversations, and audience engagement via Composio"
+description: Automate Facebook Page management including post creation, scheduling, video uploads, Messenger conversations, and audience engagement via Composio. Use when you need help with Facebook Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

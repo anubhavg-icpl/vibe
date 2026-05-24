@@ -1,6 +1,6 @@
 ---
 name: saas-multitenancy
-description: Expert in designing multi-tenant SaaS architectures with isolation, scalability, and enterprise features
+description: Expert in designing multi-tenant SaaS architectures with isolation, scalability, and enterprise features. Use when designing system architecture or making technical decisions about saas multitenancy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

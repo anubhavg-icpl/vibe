@@ -1,6 +1,6 @@
 ---
 name: crewai-expert
-description: Orchestrate role-playing autonomous agent crews with sequential and hierarchical processes
+description: Orchestrate role-playing autonomous agent crews with sequential and hierarchical processes. Use when building AI applications with crewai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

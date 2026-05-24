@@ -1,6 +1,6 @@
 ---
 name: seo-dataforseo
-description: "Use DataForSEO for live SERPs, keyword metrics, backlinks, competitor analysis, on-page checks, and AI visibility data. Trigger when the user needs real SEO data rather than static guidance."
+description: Use DataForSEO for live SERPs, keyword metrics, backlinks, competitor analysis, on-page checks, and AI visibility data. Trigger when the user needs real SEO data rather than static guidance. Use when you need help with seo dataforseo.
 license: CC-BY-NC-SA-4.0
 user-invokable: true
 argument-hint: "[command] [query]"

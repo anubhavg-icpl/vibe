@@ -1,6 +1,6 @@
 ---
 name: database
-description: "Database development and operations workflow covering SQL, NoSQL, database design, migrations, optimization, and data engineering."
+description: Database development and operations workflow covering SQL, NoSQL, database design, migrations, optimization, and data engineering. Use when you need help with database.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: workflow-bundle

@@ -1,6 +1,6 @@
 ---
 name: turborepo-expert
-description: Expert in Turborepo 2 monorepo orchestration, task pipelines, and remote caching
+description: Expert in Turborepo 2 monorepo orchestration, task pipelines, and remote caching. Use when building web applications with turborepo.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

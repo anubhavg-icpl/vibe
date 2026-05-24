@@ -1,6 +1,6 @@
 ---
 name: web-design-guidelines
-description: "Review files for compliance with Web Interface Guidelines."
+description: Review files for compliance with Web Interface Guidelines. Use when you need help with web design guidelines.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

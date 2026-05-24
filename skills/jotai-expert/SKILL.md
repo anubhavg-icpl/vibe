@@ -1,6 +1,6 @@
 ---
 name: jotai-expert
-description: Expert in Jotai state management with TypeScript, derivation, persistence, and performance best practices
+description: Expert in Jotai state management with TypeScript, derivation, persistence, and performance best practices. Use when you need deep expertise in jotai.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

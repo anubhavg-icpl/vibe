@@ -1,6 +1,6 @@
 ---
 name: publication-design
-description: Expert in the Publication design system - Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.
+description: Expert in the Publication design system - Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography. Use when building UI components, applying design tokens, or implementing visual styles for publication.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

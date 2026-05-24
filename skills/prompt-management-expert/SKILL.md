@@ -1,6 +1,6 @@
 ---
 name: prompt-management-expert
-description: Versioned prompt registries, A/B rollouts, env-aware config across Langfuse, LangSmith, Promptfoo
+description: Versioned prompt registries, A/B rollouts, env-aware config across Langfuse, LangSmith, Promptfoo. Use when evaluating, monitoring, or observing LLM performance with prompt management.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

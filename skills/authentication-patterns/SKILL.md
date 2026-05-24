@@ -1,6 +1,6 @@
 ---
 name: authentication-patterns
-description: Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows
+description: Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows. Use when you need help with authentication patterns.
 license: CC-BY-NC-SA-4.0
 ---
 

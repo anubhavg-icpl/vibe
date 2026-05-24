@@ -1,6 +1,6 @@
 ---
 name: 8-bit-orbit-video-template
-description: |
+description: |. Use when you need help with 8 bit orbit video template.
   Hyperframes-based video template for retro pixel deck motion design.
   Use when users want a high-fidelity, multi-scene HTML-to-video composition
   with advanced transitions, interactive preview controls, and ready-to-render

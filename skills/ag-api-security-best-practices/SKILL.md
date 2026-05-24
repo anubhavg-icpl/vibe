@@ -1,6 +1,6 @@
 ---
 name: api-security-best-practices
-description: "Implement secure API design patterns including authentication, authorization, input validation, rate limiting, and protection against common API vulnerabilities"
+description: Implement secure API design patterns including authentication, authorization, input validation, rate limiting, and protection against common API vulnerabilities. Use when you need help with api security best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

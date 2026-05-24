@@ -1,6 +1,6 @@
 ---
 name: case-study-mapper
-description: Map a proposed multi-agent system design to the closest 2026 production reference (Anthropic Research, MetaGPT/ChatDev, or OpenClaw/Moltbook). Surface known trade-offs, recommended framework, and the specific design decisions already tested in production.
+description: Map a proposed multi-agent system design to the closest 2026 production reference (Anthropic Research, MetaGPT/ChatDev, or OpenClaw/Moltbook). Surface known trade-offs, recommended framework, and the specific design decisions already tested in production. Use when you need help with case study mapper.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 25

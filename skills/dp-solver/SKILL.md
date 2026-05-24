@@ -1,6 +1,6 @@
 ---
 name: dp-solver
-description: Solve a small tabular MDP exactly via policy iteration or value iteration. Report convergence behavior.
+description: Solve a small tabular MDP exactly via policy iteration or value iteration. Report convergence behavior. Use when you need help with dp solver.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 2

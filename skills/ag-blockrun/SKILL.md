@@ -1,6 +1,6 @@
 ---
 name: blockrun
-description: "BlockRun works with Claude Code and Google Antigravity."
+description: BlockRun works with Claude Code and Google Antigravity. Use when you need help with blockrun.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

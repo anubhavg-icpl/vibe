@@ -1,6 +1,6 @@
 ---
 name: agentic-rag-expert
-description: Agent loops over retrieval — tool-calling search, query decomposition, iterative refinement
+description: Agent loops over retrieval — tool-calling search, query decomposition, iterative refinement. Use when building or optimizing retrieval-augmented generation pipelines with agentic rag.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

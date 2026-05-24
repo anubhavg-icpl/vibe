@@ -1,6 +1,6 @@
 ---
 name: jetpack-compose-expert
-description: Modern Compose UI for Android — composables, state, side effects, navigation, animations, lazy lists, and Compose Multiplatform considerations
+description: Modern Compose UI for Android — composables, state, side effects, navigation, animations, lazy lists, and Compose Multiplatform considerations. Use when developing Android apps with jetpack compose.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

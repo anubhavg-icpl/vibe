@@ -1,6 +1,6 @@
 ---
 name: cs-cto-advisor
-description: Technical leadership advisor for CTOs covering technology strategy, team scaling, architecture decisions, and engineering excellence
+description: Technical leadership advisor for CTOs covering technology strategy, team scaling, architecture decisions, and engineering excellence. Use when you need help with cs cto advisor.
 license: CC-BY-NC-SA-4.0
 skills: c-level-advisor/skills/cto-advisor
 domain: c-level

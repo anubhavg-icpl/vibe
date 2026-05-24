@@ -1,6 +1,6 @@
 ---
 name: skyvern-browser-automation
-description: "AI-powered browser automation — navigate sites, fill forms, extract structured data, log in with stored credentials, and build reusable workflows."
+description: AI-powered browser automation — navigate sites, fill forms, extract structured data, log in with stored credentials, and build reusable workflows. Use when you need help with skyvern browser automation.
 source_repo: Skyvern-AI/skyvern
 source_type: official
 author: mark1ian

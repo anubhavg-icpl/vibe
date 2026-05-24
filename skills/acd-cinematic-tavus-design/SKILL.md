@@ -1,6 +1,6 @@
 ---
 name: acd-cinematic-tavus-design
-description: Reference DESIGN.md for video-AI products that need to feel premium and human at once. Cream off-white canvas with deep ink contrast, one warm pink accent, oversized display serif intercut with a compact display grotesque.
+description: Reference DESIGN.md for video-AI products that need to feel premium and human at once. Cream off-white canvas with deep ink contrast, one warm pink accent, oversized display serif intercut with a compact display grotesque. Use when building UI components, applying design tokens, or implementing visual styles for cinematic tavus.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

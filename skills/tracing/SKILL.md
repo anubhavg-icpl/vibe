@@ -1,6 +1,6 @@
 ---
 name: tracing
-description: tracing
+description: tracing. Use when you need help with tracing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

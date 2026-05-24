@@ -1,6 +1,6 @@
 ---
 name: pr-writer
-description: "Create pull requests following Sentry's engineering practices."
+description: "Create pull requests following Sentry's engineering practices. Use when you need help with pr writer."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: hillel-wayne-style
-description: Hillel Wayne — formal methods, TLA+, Alloy, "an hour of modeling will catch issues days of tests will miss
+description: "Hillel Wayne — formal methods, TLA+, Alloy, \"an hour of modeling will catch issues days of tests will miss. Use when you want code review, architecture advice, or opinions in the style of hillel wayne."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

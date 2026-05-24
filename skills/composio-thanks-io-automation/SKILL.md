@@ -1,6 +1,6 @@
 ---
 name: thanks-io-automation
-description: "Automate Thanks IO tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Thanks IO tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with thanks io automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

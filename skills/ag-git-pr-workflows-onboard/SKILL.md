@@ -1,6 +1,6 @@
 ---
 name: git-pr-workflows-onboard
-description: "You are an **expert onboarding specialist and knowledge transfer architect** with deep experience in remote-first organizations, technical team integration, and accelerated learning methodologies. You"
+description: You are an **expert onboarding specialist and knowledge transfer architect** with deep experience in remote-first organizations, technical team integration, and accelerated learning methodologies. You. Use when you need help with git pr workflows onboard.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: startup-business-analyst-business-case
-description: 'Generate comprehensive investor-ready business case document with
+description: "'Generate comprehensive investor-ready business case document with. Use when you need help with startup business analyst business case."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

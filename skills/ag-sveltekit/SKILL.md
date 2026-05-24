@@ -1,6 +1,6 @@
 ---
 name: sveltekit
-description: "Build full-stack web applications with SvelteKit — file-based routing, SSR, SSG, API routes, and form actions in one framework."
+description: Build full-stack web applications with SvelteKit — file-based routing, SSR, SSG, API routes, and form actions in one framework. Use when you need help with sveltekit.
 license: CC-BY-NC-SA-4.0
 author: suhaibjanjua
 tools: [claude, cursor, gemini]

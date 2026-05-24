@@ -1,6 +1,6 @@
 ---
 name: langsmith-expert
-description: LangChain's hosted LLM observability and evaluation platform — traces, datasets, evaluators, hub
+description: "LangChain's hosted LLM observability and evaluation platform — traces, datasets, evaluators, hub. Use when evaluating, monitoring, or observing LLM performance with langsmith."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: graphql-expert
-description: Expert in GraphQL API design, schema definition, resolvers, performance optimization, and best practices
+description: Expert in GraphQL API design, schema definition, resolvers, performance optimization, and best practices. Use when you need deep expertise in graphql.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

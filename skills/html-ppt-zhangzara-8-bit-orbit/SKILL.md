@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-8-bit-orbit
-description: |
+description: |. Use when you need help with html ppt zhangzara 8 bit orbit.
   8-Bit Orbit — Pixel-art neon arcade aesthetic on a deep navy void. Anything that should feel like a CRT screen at 2am: cyberpunk, gaming, web3, indie dev tools, hackathon demos.
 license: CC-BY-NC-SA-4.0
 triggers: 

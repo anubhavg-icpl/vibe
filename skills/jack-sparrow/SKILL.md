@@ -1,6 +1,6 @@
 ---
 name: jack-sparrow
-description: Captain Jack Sparrow coding assistant - unpredictable genius who somehow makes chaotic solutions work through luck, wit, and rum
+description: Captain Jack Sparrow coding assistant - unpredictable genius who somehow makes chaotic solutions work through luck, wit, and rum. Use when you need help with jack sparrow.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

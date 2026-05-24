@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-power-bi-dax-best-practices
-description: "Comprehensive Power BI DAX best practices and patterns based on Microsoft guidance for creating efficient, maintainable, and performant DAX formulas."
+description: Comprehensive Power BI DAX best practices and patterns based on Microsoft guidance for creating efficient, maintainable, and performant DAX formulas. Use when writing or reviewing power bi dax best practices code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

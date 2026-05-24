@@ -1,6 +1,6 @@
 ---
 name: skill-feature-selector
-description: Quick reference decision tree for choosing the right feature selection method
+description: Quick reference decision tree for choosing the right feature selection method. Use when you need help with skill feature selector.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 18

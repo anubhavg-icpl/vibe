@@ -1,6 +1,6 @@
 ---
 name: gguf-multimodal-mmproj-expert
-description: Author multimodal GGUF — mmproj projector files, llama-mtmd-cli, llama-server multimodal endpoint, with LLaVA / MiniCPM-V / InternVL / Qwen2-VL / Gemma 3
+description: Author multimodal GGUF — mmproj projector files, llama-mtmd-cli, llama-server multimodal endpoint, with LLaVA / MiniCPM-V / InternVL / Qwen2-VL / Gemma 3. Use when creating, converting, or publishing model files with gguf multimodal mmproj.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

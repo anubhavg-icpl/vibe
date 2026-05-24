@@ -1,6 +1,6 @@
 ---
 name: short-menu-automation
-description: "Automate Short Menu tasks via Rube MCP (Composio). Always search tools first for current schemas."
+description: Automate Short Menu tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with short menu automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp: [rube]

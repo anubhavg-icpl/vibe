@@ -1,6 +1,6 @@
 ---
 name: framework-diff
-description: Compare a new safety framework or release note against RSP v3.0, PF v2, FSF v3.0.
+description: Compare a new safety framework or release note against RSP v3.0, PF v2, FSF v3.0. Use when you need help with framework diff.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 18

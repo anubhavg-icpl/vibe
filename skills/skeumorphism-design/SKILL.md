@@ -1,6 +1,6 @@
 ---
 name: skeumorphism-design
-description: Expert in the Skeumorphism design system - Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.
+description: Expert in the Skeumorphism design system - Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces. Use when building UI components, applying design tokens, or implementing visual styles for skeumorphism.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

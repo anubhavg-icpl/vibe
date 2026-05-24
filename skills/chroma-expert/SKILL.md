@@ -1,6 +1,6 @@
 ---
 name: chroma-expert
-description: Deep expertise in Chroma 1.0+ — collections, multi-modal (OpenCLIP), distance metrics, persistence options, server vs embedded, Rust core performance
+description: Deep expertise in Chroma 1.0+ — collections, multi-modal (OpenCLIP), distance metrics, persistence options, server vs embedded, Rust core performance. Use when implementing vector search, embeddings storage, or similarity queries with chroma.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

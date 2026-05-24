@@ -1,6 +1,6 @@
 ---
 name: telegram-automation
-description: "Automate Telegram tasks via Rube MCP (Composio): send messages, manage chats, share photos/documents, and handle bot commands. Always search tools first for current schemas."
+description: Automate Telegram tasks via Rube MCP (Composio): send messages, manage chats, share photos/documents, and handle bot commands. Always search tools first for current schemas. Use when you need help with telegram automation.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

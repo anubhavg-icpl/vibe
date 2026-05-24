@@ -1,6 +1,6 @@
 ---
 name: ragas-expert
-description: RAGAS metrics for RAG and agent evaluation — faithfulness, relevancy, context precision/recall
+description: RAGAS metrics for RAG and agent evaluation — faithfulness, relevancy, context precision/recall. Use when evaluating, monitoring, or observing LLM performance with ragas.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

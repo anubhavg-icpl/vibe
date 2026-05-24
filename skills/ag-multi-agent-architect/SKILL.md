@@ -1,6 +1,6 @@
 ---
 name: multi-agent-architect
-description: "Design and optimize production-grade multi-agent systems with LangGraph, LangChain, and DeepAgents for complex AI workflows."
+description: Design and optimize production-grade multi-agent systems with LangGraph, LangChain, and DeepAgents for complex AI workflows. Use when you need help with multi agent architect.
 license: CC-BY-NC-SA-4.0
 metadata:
   category: ai-engineering

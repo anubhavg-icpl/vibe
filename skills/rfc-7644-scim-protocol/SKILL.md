@@ -1,6 +1,6 @@
 ---
 name: rfc-7644-scim-protocol
-description: SCIM REST API protocol for identity provisioning operations
+description: SCIM REST API protocol for identity provisioning operations. Use when implementing or validating rfc 7644 scim protocol protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

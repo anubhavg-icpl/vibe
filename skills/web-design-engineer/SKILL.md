@@ -1,6 +1,6 @@
 ---
 name: web-design-engineer
-description: |
+description: |. Use when you need help with web design engineer.
   Build high-quality visual Web artifacts using HTML/CSS/JavaScript/React — web pages, landing pages, dashboards, interactive prototypes, HTML slide decks, animated demos, UI mockups, data visualizations, and more.
   Use this skill whenever the user's request involves a visual, interactive, or front-end deliverable, including:
   - Creating web pages, landing pages, dashboards, marketing pages

@@ -1,6 +1,6 @@
 ---
 name: create-agentsmd
-description: 'Prompt for generating an AGENTS.md file for a repository'
+description: Prompt for generating an AGENTS.md file for a repository. Use when you need help with create agentsmd.
 license: CC-BY-NC-SA-4.0
 ---
 

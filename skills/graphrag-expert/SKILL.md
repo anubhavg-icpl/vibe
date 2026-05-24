@@ -1,6 +1,6 @@
 ---
 name: graphrag-expert
-description: Microsoft GraphRAG — entity/community extraction, hierarchical summarization, local vs global queries
+description: Microsoft GraphRAG — entity/community extraction, hierarchical summarization, local vs global queries. Use when building or optimizing retrieval-augmented generation pipelines with graphrag.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

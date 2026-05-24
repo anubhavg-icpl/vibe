@@ -1,6 +1,6 @@
 ---
 name: prompt-template-marketplace-expert
-description: Share and version prompt templates — LangChain Hub, Langfuse, dotprompt, OpenAI Playground exports, promptfoo configs — with deprecation patterns
+description: Share and version prompt templates — LangChain Hub, Langfuse, dotprompt, OpenAI Playground exports, promptfoo configs — with deprecation patterns. Use when creating, converting, or publishing model files with prompt template marketplace.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

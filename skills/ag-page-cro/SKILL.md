@@ -1,6 +1,6 @@
 ---
 name: page-cro
-description: Analyze and optimize individual pages for conversion performance.
+description: Analyze and optimize individual pages for conversion performance. Use when you need help with page cro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

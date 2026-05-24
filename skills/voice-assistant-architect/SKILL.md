@@ -1,6 +1,6 @@
 ---
 name: voice-assistant-architect
-description: Produce a full-stack voice-assistant spec — components, latency budget, observability, compliance — for a given workload.
+description: Produce a full-stack voice-assistant spec — components, latency budget, observability, compliance — for a given workload. Use when you need help with voice assistant architect.
 license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 12

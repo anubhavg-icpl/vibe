@@ -1,6 +1,6 @@
 ---
 name: unity-ai-game-creator
-description: "Transform raw game ideas into complete Unity projects with AI-powered asset generation, scene blueprints, music/SFX prompts, and step-by-step development procedures using Unity 6+ and modern AI tools."
+description: Transform raw game ideas into complete Unity projects with AI-powered asset generation, scene blueprints, music/SFX prompts, and step-by-step development procedures using Unity 6+ and modern AI tools. Use when developing games with unity ai game creator.
 license: CC-BY-NC-SA-4.0
 source_type: community
 author: Mann-Makhecha

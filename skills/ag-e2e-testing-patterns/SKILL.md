@@ -1,6 +1,6 @@
 ---
 name: e2e-testing-patterns
-description: "Build reliable, fast, and maintainable end-to-end test suites that provide confidence to ship code quickly and catch regressions before users do."
+description: Build reliable, fast, and maintainable end-to-end test suites that provide confidence to ship code quickly and catch regressions before users do. Use when you need help with e2e testing patterns.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

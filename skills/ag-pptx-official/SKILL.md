@@ -1,6 +1,6 @@
 ---
 name: pptx-official
-description: "A user may ask you to create, edit, or analyze the contents of a .pptx file. A .pptx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks."
+description: A user may ask you to create, edit, or analyze the contents of a .pptx file. A .pptx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks. Use when you need help with pptx official.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

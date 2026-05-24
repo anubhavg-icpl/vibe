@@ -1,6 +1,6 @@
 ---
 name: api-documentation-generator
-description: Expert in automatic OpenAPI/Swagger generation from code - zero manual documentation with Scalar, oRPC, Hono OpenAPI, and framework-native solutions
+description: Expert in automatic OpenAPI/Swagger generation from code - zero manual documentation with Scalar, oRPC, Hono OpenAPI, and framework-native solutions. Use when you need help with api documentation generator.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

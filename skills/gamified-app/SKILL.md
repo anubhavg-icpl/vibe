@@ -1,6 +1,6 @@
 ---
 name: gamified-app
-description: |
+description: |. Use when you need help with gamified app.
   A multi-frame gamified mobile-app prototype — three phone frames on a dark
   showcase stage. Frame 1: cover / poster, Frame 2: today's quests with XP
   ribbons and a level bar, Frame 3: quest detail. Vivid quest tiles, level

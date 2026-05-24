@@ -1,6 +1,6 @@
 ---
 name: bun-expert
-description: Expert in Bun runtime, package manager, test runner, and bundler for JavaScript/TypeScript
+description: Expert in Bun runtime, package manager, test runner, and bundler for JavaScript/TypeScript. Use when building web applications with bun.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

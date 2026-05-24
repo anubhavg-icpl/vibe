@@ -1,6 +1,6 @@
 ---
 name: skill-heatmap-to-coords
-description: Write the sub-pixel heatmap-to-coordinate routine used by every production pose model
+description: Write the sub-pixel heatmap-to-coordinate routine used by every production pose model. Use when you need help with skill heatmap to coords.
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 21

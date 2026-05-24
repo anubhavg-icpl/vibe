@@ -1,6 +1,6 @@
 ---
 name: gradient-design
-description: Expert in the Gradient design system - Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.
+description: Expert in the Gradient design system - Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth. Use when building UI components, applying design tokens, or implementing visual styles for gradient.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

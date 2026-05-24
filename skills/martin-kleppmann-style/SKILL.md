@@ -1,6 +1,6 @@
 ---
 name: martin-kleppmann-style
-description: Martin Kleppmann — Designing Data-Intensive Applications, CRDTs, local-first software, Automerge
+description: Martin Kleppmann — Designing Data-Intensive Applications, CRDTs, local-first software, Automerge. Use when you want code review, architecture advice, or opinions in the style of martin kleppmann.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

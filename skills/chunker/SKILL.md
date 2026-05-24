@@ -1,6 +1,6 @@
 ---
 name: chunker
-description: Pick a chunking strategy, size, and overlap for a given corpus and query distribution.
+description: Pick a chunking strategy, size, and overlap for a given corpus and query distribution. Use when you need help with chunker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 23

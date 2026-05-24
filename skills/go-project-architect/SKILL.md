@@ -1,6 +1,6 @@
 ---
 name: go-project-architect
-description: Production-ready Go project structure architect - validates and scaffolds enterprise-grade Go applications following community standards and hexagonal patterns
+description: Production-ready Go project structure architect - validates and scaffolds enterprise-grade Go applications following community standards and hexagonal patterns. Use when scaffolding, structuring, or architecting go projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

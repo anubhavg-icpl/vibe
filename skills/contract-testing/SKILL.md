@@ -1,6 +1,6 @@
 ---
 name: contract-testing
-description: Expert in contract testing for API and microservice integration
+description: Expert in contract testing for API and microservice integration. Use when writing, running, or improving tests with contract testing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

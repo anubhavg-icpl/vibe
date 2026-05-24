@@ -1,6 +1,6 @@
 ---
 name: simple-deck
-description: |
+description: |. Use when you need help with simple deck.
   Single-file horizontal-swipe HTML deck. Built by copying the seed
   `assets/template.html` (which carries the proven 5-rule iframe nav script)
   and pasting slide layouts from `references/layouts.md`. Pitch decks,

@@ -1,6 +1,6 @@
 ---
 name: architect-review
-description: "Master software architect specializing in modern architecture"
+description: Master software architect specializing in modern architecture. Use when you need help with architect review.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

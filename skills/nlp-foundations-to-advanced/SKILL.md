@@ -1,6 +1,6 @@
 ---
 name: nlp-foundations-to-advanced
-description: Expert in natural language processing from text processing through transformers, from the AI Engineering from Scratch curriculum
+description: Expert in natural language processing from text processing through transformers, from the AI Engineering from Scratch curriculum. Use when you need help with nlp foundations to advanced.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

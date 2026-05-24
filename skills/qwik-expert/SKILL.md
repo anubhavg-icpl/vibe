@@ -1,6 +1,6 @@
 ---
 name: qwik-expert
-description: Expert in Qwik resumability, lazy execution, server functions, and Qwik City routing
+description: Expert in Qwik resumability, lazy execution, server functions, and Qwik City routing. Use when building web applications with qwik.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

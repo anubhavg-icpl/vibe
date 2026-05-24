@@ -1,7 +1,7 @@
 ---
 name: new-rails-project
 argument-hint: [project name]
-description: Create a new Rails project
+description: Create a new Rails project. Use when you need help with new rails project.
 license: CC-BY-NC-SA-4.0
 allowed-tools: Bash(rails *), Bash(bundle *), Bash(bin/*), Bash(npm *), Bash(yarn *)
 context: fork

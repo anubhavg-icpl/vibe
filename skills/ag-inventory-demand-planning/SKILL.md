@@ -1,6 +1,6 @@
 ---
 name: inventory-demand-planning
-description: Codified expertise for demand forecasting, safety stock optimisation, replenishment planning, and promotional lift estimation at multi-location retailers.
+description: Codified expertise for demand forecasting, safety stock optimisation, replenishment planning, and promotional lift estimation at multi-location retailers. Use when you need help with inventory demand planning.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

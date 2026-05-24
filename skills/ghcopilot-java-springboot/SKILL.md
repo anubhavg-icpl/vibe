@@ -1,6 +1,6 @@
 ---
 name: java-springboot
-description: 'Get best practices for developing applications with Spring Boot.'
+description: Get best practices for developing applications with Spring Boot. Use when you need help with java springboot.
 license: CC-BY-NC-SA-4.0
 ---
 

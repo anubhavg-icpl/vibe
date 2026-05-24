@@ -1,6 +1,6 @@
 ---
 name: event-driven-architecture
-description: Expert in event-driven architecture, event sourcing, CQRS, and messaging patterns
+description: Expert in event-driven architecture, event sourcing, CQRS, and messaging patterns. Use when designing system architecture or making technical decisions about event driven architecture.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

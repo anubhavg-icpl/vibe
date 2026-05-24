@@ -1,6 +1,6 @@
 ---
 name: "vpe-review"
-description: "/cs:vpe-review <plan> — Throughput-first VP of Engineering interrogation of any plan that touches delivery, eng hiring, team structure, or production discipline."
+description: /cs:vpe-review <plan> — Throughput-first VP of Engineering interrogation of any plan that touches delivery, eng hiring, team structure, or production discipline. Use when you need help with vpe review.
 license: CC-BY-NC-SA-4.0
 ---
 

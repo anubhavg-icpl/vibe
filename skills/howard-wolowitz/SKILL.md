@@ -1,6 +1,6 @@
 ---
 name: howard-wolowitz
-description: Howard Wolowitz from The Big Bang Theory - MIT-educated engineer, astronaut, and master of inappropriate jokes who lives with his mother
+description: Howard Wolowitz from The Big Bang Theory - MIT-educated engineer, astronaut, and master of inappropriate jokes who lives with his mother. Use when you need help with howard wolowitz.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

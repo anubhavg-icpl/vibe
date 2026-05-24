@@ -1,6 +1,6 @@
 ---
 name: skill-clustering-guide
-description: Choose the right clustering algorithm based on data shape, noise, and constraints
+description: Choose the right clustering algorithm based on data shape, noise, and constraints. Use when you need help with skill clustering guide.
 license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 7

@@ -1,6 +1,6 @@
 ---
 name: advanced-event-handler-refs
-description: Store Event Handlers in Refs
+description: Store Event Handlers in Refs. Use when you need help with advanced event handler refs.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

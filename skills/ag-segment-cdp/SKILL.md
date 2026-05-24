@@ -1,6 +1,6 @@
 ---
 name: segment-cdp
-description: Expert patterns for Segment Customer Data Platform including
+description: Expert patterns for Segment Customer Data Platform including. Use when you need help with segment cdp.
   Analytics.js, server-side tracking, tracking plans with Protocols, identity
   resolution, destinations configuration, and data governance best practices.
 license: CC-BY-NC-SA-4.0

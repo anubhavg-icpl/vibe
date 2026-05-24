@@ -1,6 +1,6 @@
 ---
 name: queue-stack-bloom
-description: queue-stack-bloom
+description: queue-stack-bloom. Use when you need help with queue stack bloom.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

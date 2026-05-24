@@ -1,6 +1,6 @@
 ---
 name: audio-jingle
-description: |
+description: |. Use when you need help with audio jingle.
   Audio generation skill — jingles, beds, voiceover, and sound effects.
   Routes music requests to Suno V5 / Udio / Lyria, speech to MiniMax
   TTS / FishAudio / ElevenLabs V3, and SFX to ElevenLabs SFX or

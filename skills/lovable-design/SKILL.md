@@ -1,6 +1,6 @@
 ---
 name: lovable-design
-description: Expert in the Lovable design system - AI full-stack builder. Playful gradients, friendly dev aesthetic.
+description: Expert in the Lovable design system - AI full-stack builder. Playful gradients, friendly dev aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for lovable.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

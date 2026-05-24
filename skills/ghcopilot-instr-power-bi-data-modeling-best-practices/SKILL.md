@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-power-bi-data-modeling-best-practices
-description: "Comprehensive Power BI data modeling best practices based on Microsoft guidance for creating efficient, scalable, and maintainable semantic models using star schema principles."
+description: Comprehensive Power BI data modeling best practices based on Microsoft guidance for creating efficient, scalable, and maintainable semantic models using star schema principles. Use when writing or reviewing power bi data modeling best practices code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

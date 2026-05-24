@@ -1,6 +1,6 @@
 ---
 name: consensus-designer
-description: Design a BFT-aware consensus protocol for a multi-agent ensemble. Picks clustering, weighting, threshold, and escalation policy; attack-tests the design against byzantine, sycophancy, and monoculture patterns.
+description: Design a BFT-aware consensus protocol for a multi-agent ensemble. Picks clustering, weighting, threshold, and escalation policy; attack-tests the design against byzantine, sycophancy, and monoculture patterns. Use when you need help with consensus designer.
 license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 14

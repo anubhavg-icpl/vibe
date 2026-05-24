@@ -1,6 +1,6 @@
 ---
 name: elixir-coding-standards
-description: Production-ready Elixir coding standards with OTP and Phoenix best practices
+description: Production-ready Elixir coding standards with OTP and Phoenix best practices. Use when enforcing elixir coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: rag-eval-expert
-description: RAGAS metrics, needle-in-haystack, RULER, golden sets, faithfulness and context precision/recall
+description: RAGAS metrics, needle-in-haystack, RULER, golden sets, faithfulness and context precision/recall. Use when building or optimizing retrieval-augmented generation pipelines with rag eval.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

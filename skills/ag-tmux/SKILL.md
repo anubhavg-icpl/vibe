@@ -1,6 +1,6 @@
 ---
 name: tmux
-description: "Expert tmux session, window, and pane management for terminal multiplexing, persistent remote workflows, and shell scripting automation."
+description: Expert tmux session, window, and pane management for terminal multiplexing, persistent remote workflows, and shell scripting automation. Use when you need help with tmux.
 license: CC-BY-NC-SA-4.0
 author: kostakost2
 tools: [claude, cursor, gemini]

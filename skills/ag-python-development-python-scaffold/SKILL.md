@@ -1,6 +1,6 @@
 ---
 name: python-development-python-scaffold
-description: "You are a Python project architecture expert specializing in scaffolding production-ready Python applications. Generate complete project structures with modern tooling (uv, FastAPI, Django), type hint"
+description: You are a Python project architecture expert specializing in scaffolding production-ready Python applications. Generate complete project structures with modern tooling (uv, FastAPI, Django), type hint. Use when you need help with python development python scaffold.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: critical

@@ -1,6 +1,6 @@
 ---
 name: "fix"
-description: >-
+description: >-. Use when you need help with fix.
   Fix failing or flaky Playwright tests. Use when user says "fix test",
   "flaky test", "test failing", "debug test", "test broken", "test passes
   sometimes", or "intermittent failure".

@@ -1,6 +1,6 @@
 ---
 name: nli-picker
-description: Pick an NLI model, label template, and evaluation setup for a classification / faithfulness / zero-shot task.
+description: Pick an NLI model, label template, and evaluation setup for a classification / faithfulness / zero-shot task. Use when you need help with nli picker.
 license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 21

@@ -1,6 +1,6 @@
 ---
 name: sentry-design
-description: Expert in the Sentry design system - Error monitoring. Dark dashboard, data-dense, pink-purple accent.
+description: Expert in the Sentry design system - Error monitoring. Dark dashboard, data-dense, pink-purple accent. Use when building UI components, applying design tokens, or implementing visual styles for sentry.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

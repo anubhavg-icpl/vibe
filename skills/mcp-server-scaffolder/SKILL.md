@@ -1,6 +1,6 @@
 ---
 name: mcp-server-scaffolder
-description: Scaffold a domain-specific MCP server with the right tools/resources/prompts split and SDK graduation path.
+description: Scaffold a domain-specific MCP server with the right tools/resources/prompts split and SDK graduation path. Use when you need help with mcp server scaffolder.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 07

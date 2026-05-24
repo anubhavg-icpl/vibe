@@ -1,6 +1,6 @@
 ---
 name: inference-platform-picker
-description: Pick an inference platform (Fireworks, Together, Baseten, Modal, Replicate, Anyscale, or custom silicon) given workload, SLA, budget, and operational constraints. Normalize per-token, per-minute, and per-prediction pricing.
+description: Pick an inference platform (Fireworks, Together, Baseten, Modal, Replicate, Anyscale, or custom silicon) given workload, SLA, budget, and operational constraints. Normalize per-token, per-minute, and per-prediction pricing. Use when you need help with inference platform picker.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 02

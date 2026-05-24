@@ -1,6 +1,6 @@
 ---
 name: async-api-routes
-description: Prevent Waterfall Chains in API Routes
+description: Prevent Waterfall Chains in API Routes. Use when you need help with async api routes.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

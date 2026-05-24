@@ -1,6 +1,6 @@
 ---
 name: dashboard
-description: |
+description: |. Use when you need help with dashboard.
   Admin / analytics dashboard in a single HTML file. Fixed left sidebar,
   top bar with user/search, main grid of KPI cards and one or two charts.
   Use when the brief asks for a "dashboard", "admin", "analytics", or

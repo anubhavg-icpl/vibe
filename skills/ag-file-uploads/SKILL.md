@@ -1,6 +1,6 @@
 ---
 name: file-uploads
-description: Expert at handling file uploads and cloud storage. Covers S3,
+description: Expert at handling file uploads and cloud storage. Covers S3,. Use when you need help with file uploads.
   Cloudflare R2, presigned URLs, multipart uploads, and image optimization.
   Knows how to handle large files without blocking.
 license: CC-BY-NC-SA-4.0

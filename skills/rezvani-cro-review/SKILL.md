@@ -1,6 +1,6 @@
 ---
 name: "cro-review"
-description: "/cs:cro-review <plan> — Pipeline-paranoid interrogation of revenue, win rate, NRR, and ramp time."
+description: /cs:cro-review <plan> — Pipeline-paranoid interrogation of revenue, win rate, NRR, and ramp time. Use when you need help with cro review.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: structured-autonomy-generate
-description: 'Structured Autonomy Implementation Generator Prompt'
+description: Structured Autonomy Implementation Generator Prompt. Use when you need help with structured autonomy generate.
 license: CC-BY-NC-SA-4.0
 ---
 

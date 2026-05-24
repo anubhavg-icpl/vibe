@@ -1,6 +1,6 @@
 ---
 name: supabase-design
-description: Expert in the Supabase design system - Open-source Firebase alternative. Dark emerald theme, code-first.
+description: Expert in the Supabase design system - Open-source Firebase alternative. Dark emerald theme, code-first. Use when building UI components, applying design tokens, or implementing visual styles for supabase.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

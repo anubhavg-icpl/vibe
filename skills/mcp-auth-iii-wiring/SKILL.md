@@ -1,6 +1,6 @@
 ---
 name: mcp-auth-iii-wiring
-description: Wire production MCP authorization (RFC 8414, 7591, 8707, 7636 PKCE, 9728) onto iii primitives — registerTrigger for HTTP/cron, registerFunction for validation, state::* for JWKS cache.
+description: Wire production MCP authorization (RFC 8414, 7591, 8707, 7636 PKCE, 9728) onto iii primitives — registerTrigger for HTTP/cron, registerFunction for validation, state::* for JWKS cache. Use when you need help with mcp auth iii wiring.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 18

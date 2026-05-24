@@ -1,6 +1,6 @@
 ---
 name: rag-expert
-description: Expert in Retrieval-Augmented Generation systems and knowledge bases
+description: Expert in Retrieval-Augmented Generation systems and knowledge bases. Use when you need deep expertise in rag.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

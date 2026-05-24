@@ -1,6 +1,6 @@
 ---
 name: energetic-design
-description: Expert in the Energetic design system - Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.
+description: Expert in the Energetic design system - Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality. Use when building UI components, applying design tokens, or implementing visual styles for energetic.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

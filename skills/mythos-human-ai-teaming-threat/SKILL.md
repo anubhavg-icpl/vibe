@@ -1,6 +1,6 @@
 ---
 name: mythos-human-ai-teaming-threat
-description: Model and measure the operator-with-AI threat — uplift methodology, bottleneck-intervention cases, teaming-aware eval design
+description: Model and measure the operator-with-AI threat — uplift methodology, bottleneck-intervention cases, teaming-aware eval design. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving human ai teaming threat.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

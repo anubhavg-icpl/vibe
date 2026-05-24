@@ -1,6 +1,6 @@
 ---
 name: mythos-pattern-vuln-finder
-description: Mass-scan repos for known dangerous patterns and prioritize by exploitability
+description: Mass-scan repos for known dangerous patterns and prioritize by exploitability. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving pattern vuln finder.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

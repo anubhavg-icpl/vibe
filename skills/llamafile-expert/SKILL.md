@@ -1,6 +1,6 @@
 ---
 name: llamafile-expert
-description: Build and run Mozilla llamafile single-file LLM executables with Cosmopolitan Libc / APE
+description: Build and run Mozilla llamafile single-file LLM executables with Cosmopolitan Libc / APE. Use when deploying, running, or configuring local LLM inference with llamafile.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

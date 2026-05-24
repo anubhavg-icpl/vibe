@@ -1,6 +1,6 @@
 ---
 name: wechat-official-account-strategist
-description: "Grow WeChat Official Accounts (微信公众号) with high-conversion content strategy, title formulas, article architecture, and Mini-Program integration."
+description: Grow WeChat Official Accounts (微信公众号) with high-conversion content strategy, title formulas, article architecture, and Mini-Program integration. Use when you need help with wechat official account strategist.
 license: CC-BY-NC-SA-4.0
 source_repo: demo112/yunqu-ai-skills
 source_type: community

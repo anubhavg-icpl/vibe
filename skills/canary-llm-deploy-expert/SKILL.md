@@ -1,6 +1,6 @@
 ---
 name: canary-llm-deploy-expert
-description: Safe LLM deploys — canary, shadow traffic, rollback triggers, eval-gated promotion
+description: Safe LLM deploys — canary, shadow traffic, rollback triggers, eval-gated promotion. Use when evaluating, monitoring, or observing LLM performance with canary llm deploy.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

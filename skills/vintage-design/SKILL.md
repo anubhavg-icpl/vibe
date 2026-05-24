@@ -1,6 +1,6 @@
 ---
 name: vintage-design
-description: Expert in the Vintage design system - 1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.
+description: Expert in the Vintage design system - 1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography. Use when building UI components, applying design tokens, or implementing visual styles for vintage.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

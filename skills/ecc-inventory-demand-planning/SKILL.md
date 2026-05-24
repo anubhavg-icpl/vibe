@@ -1,6 +1,6 @@
 ---
 name: inventory-demand-planning
-description: >
+description: >. Use when you need help with inventory demand planning.
   Codified expertise for demand forecasting, safety stock optimization,
   replenishment planning, and promotional lift estimation at multi-location
   retailers. Informed by demand planners with 15+ years experience managing

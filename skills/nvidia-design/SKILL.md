@@ -1,6 +1,6 @@
 ---
 name: nvidia-design
-description: Expert in the NVIDIA design system - GPU computing. Green-black energy, technical power aesthetic.
+description: Expert in the NVIDIA design system - GPU computing. Green-black energy, technical power aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for nvidia.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

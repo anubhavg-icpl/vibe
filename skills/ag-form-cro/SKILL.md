@@ -1,6 +1,6 @@
 ---
 name: form-cro
-description: Optimize any form that is NOT signup or account registration — including lead capture, contact, demo request, application, survey, quote, and checkout forms.
+description: Optimize any form that is NOT signup or account registration — including lead capture, contact, demo request, application, survey, quote, and checkout forms. Use when you need help with form cro.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

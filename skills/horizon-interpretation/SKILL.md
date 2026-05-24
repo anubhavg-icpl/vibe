@@ -1,6 +1,6 @@
 ---
 name: horizon-interpretation
-description: Review a vendor's time-horizon claim and produce a gap analysis between benchmark claim and deployment reality.
+description: "Review a vendor's time-horizon claim and produce a gap analysis between benchmark claim and deployment reality. Use when you need help with horizon interpretation."
 license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 21

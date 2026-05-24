@@ -1,6 +1,6 @@
 ---
 name: llama-cpp-expert
-description: Build, run, and tune llama.cpp for local LLM inference across CUDA, ROCm, Metal, Vulkan, and SYCL
+description: Build, run, and tune llama.cpp for local LLM inference across CUDA, ROCm, Metal, Vulkan, and SYCL. Use when deploying, running, or configuring local LLM inference with llama cpp.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

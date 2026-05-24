@@ -1,6 +1,6 @@
 ---
 name: azure-ai-document-intelligence-ts
-description: "Extract text, tables, and structured data from documents using prebuilt and custom models."
+description: Extract text, tables, and structured data from documents using prebuilt and custom models. Use when you need help with azure ai document intelligence ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: skill-vit-patch-and-pos-embed-inspector
-description: Verify a ViT's patch embedding and positional embedding shapes match the model's expected sequence length
+description: "Verify a ViT's patch embedding and positional embedding shapes match the model's expected sequence length. Use when you need help with skill vit patch and pos embed inspector."
 license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 14

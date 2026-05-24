@@ -1,6 +1,6 @@
 ---
 name: interview-prep
-description: Expert in technical interview preparation for software engineering roles
+description: Expert in technical interview preparation for software engineering roles. Use when you need help with interview prep.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

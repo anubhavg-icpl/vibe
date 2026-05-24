@@ -1,6 +1,6 @@
 ---
 name: azure-monitor-opentelemetry-ts
-description: "Auto-instrument Node.js applications with distributed tracing, metrics, and logs."
+description: Auto-instrument Node.js applications with distributed tracing, metrics, and logs. Use when you need help with azure monitor opentelemetry ts.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

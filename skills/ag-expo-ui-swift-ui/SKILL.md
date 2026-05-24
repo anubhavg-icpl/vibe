@@ -1,6 +1,6 @@
 ---
 name: expo-ui-swift-ui
-description: expo-ui-swift-ui
+description: expo-ui-swift-ui. Use when you need help with expo ui swift ui.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

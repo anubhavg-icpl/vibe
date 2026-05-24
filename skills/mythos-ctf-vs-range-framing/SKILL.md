@@ -1,6 +1,6 @@
 ---
 name: mythos-ctf-vs-range-framing
-description: Decide when CTFs measure the right thing vs when chained-autonomy ranges do — failure-mode taxonomy and capability-portfolio guidance
+description: Decide when CTFs measure the right thing vs when chained-autonomy ranges do — failure-mode taxonomy and capability-portfolio guidance. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ctf vs range framing.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

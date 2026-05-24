@@ -1,6 +1,6 @@
 ---
 name: Cloudinary Automation
-description: "Automate Cloudinary media management including folder organization, upload presets, asset lookup, transformations, and usage monitoring through natural language commands"
+description: Automate Cloudinary media management including folder organization, upload presets, asset lookup, transformations, and usage monitoring through natural language commands. Use when you need help with Cloudinary Automation.
 license: CC-BY-NC-SA-4.0
 requires: 
   mcp:

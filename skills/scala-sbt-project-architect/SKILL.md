@@ -1,6 +1,6 @@
 ---
 name: scala-sbt-project-architect
-description: Production-ready Scala project structure validation and scaffolding with sbt, featuring functional programming patterns, Typelevel stack integration, and modern Scala 3 idioms
+description: Production-ready Scala project structure validation and scaffolding with sbt, featuring functional programming patterns, Typelevel stack integration, and modern Scala 3 idioms. Use when scaffolding, structuring, or architecting scala sbt projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

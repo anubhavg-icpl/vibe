@@ -1,6 +1,6 @@
 ---
 name: github
-description: "Use the `gh` CLI for issues, pull requests, Actions runs, and GitHub API queries."
+description: Use the `gh` CLI for issues, pull requests, Actions runs, and GitHub API queries. Use when you need help with github.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

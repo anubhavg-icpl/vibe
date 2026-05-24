@@ -1,6 +1,6 @@
 ---
 name: ai-tutor
-description: Ship an adaptive multimodal personal tutor for a specific subject with Bayesian knowledge tracing, a curriculum graph, safety filters, and a measured two-week efficacy study.
+description: Ship an adaptive multimodal personal tutor for a specific subject with Bayesian knowledge tracing, a curriculum graph, safety filters, and a measured two-week efficacy study. Use when you need help with ai tutor.
 license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 17

@@ -1,6 +1,6 @@
 ---
 name: azure-mgmt-applicationinsights-dotnet
-description: Azure Application Insights SDK for .NET. Application performance monitoring and observability resource management.
+description: Azure Application Insights SDK for .NET. Application performance monitoring and observability resource management. Use when you need help with azure mgmt applicationinsights dotnet.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

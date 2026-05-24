@@ -1,6 +1,6 @@
 ---
 name: mythos-mythic-c2-detection
-description: Defensive identification of Mythic C2 traffic, agent profiles, and callback artefacts — blue-team only
+description: Defensive identification of Mythic C2 traffic, agent profiles, and callback artefacts — blue-team only. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving mythic c2 detection.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

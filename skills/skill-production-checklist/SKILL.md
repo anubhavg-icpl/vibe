@@ -1,6 +1,6 @@
 ---
 name: skill-production-checklist
-description: Decision framework for shipping LLM applications to production -- covers every component with specific thresholds and pass/fail criteria
+description: Decision framework for shipping LLM applications to production -- covers every component with specific thresholds and pass/fail criteria. Use when you need help with skill production checklist.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 13

@@ -1,6 +1,6 @@
 ---
 name: flowstudio-power-automate-build
-description: >-
+description: >-. Use when you need help with flowstudio power automate build.
   Build, scaffold, and deploy Power Automate cloud flows using the FlowStudio
   MCP server. Your agent constructs flow definitions, wires connections, deploys,
   and tests — all via MCP without opening the portal.

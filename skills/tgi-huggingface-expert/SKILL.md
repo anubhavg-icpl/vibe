@@ -1,6 +1,6 @@
 ---
 name: tgi-huggingface-expert
-description: Deploy HuggingFace TGI in Docker with sharding, AWQ/GPTQ/EETQ/bitsandbytes quantization, and the OpenAI-compatible Messages API
+description: Deploy HuggingFace TGI in Docker with sharding, AWQ/GPTQ/EETQ/bitsandbytes quantization, and the OpenAI-compatible Messages API. Use when deploying, running, or configuring local LLM inference with tgi huggingface.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

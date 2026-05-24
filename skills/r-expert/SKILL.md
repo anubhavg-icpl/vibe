@@ -1,6 +1,6 @@
 ---
 name: r-expert
-description: Expert R development for statistical computing, data science, and visualization
+description: Expert R development for statistical computing, data science, and visualization. Use when writing, reviewing, or refactoring r code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

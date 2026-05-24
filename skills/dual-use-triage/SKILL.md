@@ -1,6 +1,6 @@
 ---
 name: dual-use-triage
-description: Triage a capability claim or incident report across the four CBRN domains.
+description: Triage a capability claim or incident report across the four CBRN domains. Use when you need help with dual use triage.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 30

@@ -1,6 +1,6 @@
 ---
 name: redux-expert
-description: Expert in Redux state management for React applications with modern patterns, best practices, and performance optimization
+description: Expert in Redux state management for React applications with modern patterns, best practices, and performance optimization. Use when building applications with the redux framework.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

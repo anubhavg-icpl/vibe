@@ -1,6 +1,6 @@
 ---
 name: vllm-expert
-description: Serve LLMs at scale with PagedAttention, continuous batching, and speculative decoding
+description: Serve LLMs at scale with PagedAttention, continuous batching, and speculative decoding. Use when building AI applications with vllm.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

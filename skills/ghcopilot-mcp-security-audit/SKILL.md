@@ -1,6 +1,6 @@
 ---
 name: mcp-security-audit
-description: |
+description: |. Use when you need help with mcp security audit.
   Audit MCP (Model Context Protocol) server configurations for security issues. Use this skill when:
   - Reviewing .mcp.json files for security risks
   - Checking MCP server args for hardcoded secrets or shell injection patterns

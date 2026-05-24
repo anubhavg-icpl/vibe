@@ -1,6 +1,6 @@
 ---
 name: mythos-binary-fuzz-corpus
-description: Build and maintain high-quality fuzzing corpora for OSS-Fuzz, ClusterFuzzLite, and libFuzzer - seed selection, dictionaries, structure-aware grammars, coverage gap analysis
+description: Build and maintain high-quality fuzzing corpora for OSS-Fuzz, ClusterFuzzLite, and libFuzzer - seed selection, dictionaries, structure-aware grammars, coverage gap analysis. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving binary fuzz corpus.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

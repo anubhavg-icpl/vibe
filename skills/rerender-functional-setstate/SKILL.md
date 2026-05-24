@@ -1,6 +1,6 @@
 ---
 name: rerender-functional-setstate
-description: Use Functional setState Updates
+description: Use Functional setState Updates. Use when you need help with rerender functional setstate.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

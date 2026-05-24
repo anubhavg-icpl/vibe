@@ -1,6 +1,6 @@
 ---
 name: doc-qa
-description: Build a vision-first multimodal document QA system on 10k pages with late-interaction retrieval and evidence-region citations.
+description: Build a vision-first multimodal document QA system on 10k pages with late-interaction retrieval and evidence-region citations. Use when you need help with doc qa.
 license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 04

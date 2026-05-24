@@ -1,6 +1,6 @@
 ---
 name: gdb-cli
-description: "GDB debugging assistant for AI agents - analyze core dumps, debug live processes, investigate crashes and deadlocks with source code correlation"
+description: GDB debugging assistant for AI agents - analyze core dumps, debug live processes, investigate crashes and deadlocks with source code correlation. Use when you need help with gdb cli.
 license: CC-BY-NC-SA-4.0
 author: Cerdore
 tools: 
@@ -9,7 +9,7 @@ metadata:
   risk: critical
   source: community
   date_added: "2026-03-22"
-  tags: 
+  tags:
 ---
 
 # GDB Debugging Assistant

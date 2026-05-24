@@ -1,6 +1,6 @@
 ---
 name: claude-code-guide
-description: "To provide a comprehensive reference for configuring and using Claude Code (the agentic coding tool) to its full potential. This skill synthesizes best practices, configuration templates, and advanced usage patterns."
+description: To provide a comprehensive reference for configuring and using Claude Code (the agentic coding tool) to its full potential. This skill synthesizes best practices, configuration templates, and advanced usage patterns. Use when you need help with claude code guide.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: application-design
-description: Expert in the Application design system - App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.
+description: Expert in the Application design system - App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows. Use when building UI components, applying design tokens, or implementing visual styles for application.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

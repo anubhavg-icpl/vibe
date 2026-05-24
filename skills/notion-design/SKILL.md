@@ -1,6 +1,6 @@
 ---
 name: notion-design
-description: Expert in the Notion design system - All-in-one workspace. Warm minimalism, serif headings, soft surfaces.
+description: Expert in the Notion design system - All-in-one workspace. Warm minimalism, serif headings, soft surfaces. Use when building UI components, applying design tokens, or implementing visual styles for notion.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

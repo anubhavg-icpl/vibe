@@ -1,6 +1,6 @@
 ---
 name: android-agent-skills-expert
-description: Authoring, distributing, and consuming Android skills (SKILL.md format, .skills/ layout, android CLI integration) for Gemini and other agent runtimes
+description: Authoring, distributing, and consuming Android skills (SKILL.md format, .skills/ layout, android CLI integration) for Gemini and other agent runtimes. Use when developing Android apps with android agent skills.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

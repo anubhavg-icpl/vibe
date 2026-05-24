@@ -1,6 +1,6 @@
 ---
 name: typescript-coding-standards
-description: Production-ready TypeScript coding standards enforcing type safety, modern patterns, and maintainability
+description: Production-ready TypeScript coding standards enforcing type safety, modern patterns, and maintainability. Use when enforcing typescript coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

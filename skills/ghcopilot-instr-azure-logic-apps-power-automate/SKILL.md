@@ -1,6 +1,6 @@
 ---
 name: ghcopilot-instr-azure-logic-apps-power-automate
-description: "Guidelines for developing Azure Logic Apps and Power Automate workflows with best practices for Workflow Definition Language (WDL), integration patterns, and enterprise automation"
+description: Guidelines for developing Azure Logic Apps and Power Automate workflows with best practices for Workflow Definition Language (WDL), integration patterns, and enterprise automation. Use when writing or reviewing azure logic apps power automate code and need idiomatic conventions and best practices.
 license: CC-BY-NC-SA-4.0
 metadata:
   version: "1.0.0"

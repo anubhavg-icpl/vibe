@@ -1,6 +1,6 @@
 ---
 name: premium-design
-description: Expert in the Premium design system - Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.
+description: Expert in the Premium design system - Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language. Use when building UI components, applying design tokens, or implementing visual styles for premium.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

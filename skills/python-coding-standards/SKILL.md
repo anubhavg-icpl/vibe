@@ -1,6 +1,6 @@
 ---
 name: python-coding-standards
-description: Production-ready Python coding standards enforcing PEP 8, type hints, modern patterns, and maintainability
+description: Production-ready Python coding standards enforcing PEP 8, type hints, modern patterns, and maintainability. Use when enforcing python coding conventions and style rules.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

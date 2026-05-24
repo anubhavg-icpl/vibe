@@ -1,6 +1,6 @@
 ---
 name: a2a-agent-spec
-description: Produce the Agent Card and skills schema for an agent that should be callable over A2A.
+description: Produce the Agent Card and skills schema for an agent that should be callable over A2A. Use when you need help with a2a agent spec.
 license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 18

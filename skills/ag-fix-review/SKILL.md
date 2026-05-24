@@ -1,6 +1,6 @@
 ---
 name: fix-review
-description: "Verify fix commits address audit findings without new bugs"
+description: Verify fix commits address audit findings without new bugs. Use when you need help with fix review.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: linear-claude-skill
-description: "Manage Linear issues, projects, and teams"
+description: Manage Linear issues, projects, and teams. Use when you need help with linear claude skill.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

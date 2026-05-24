@@ -1,6 +1,6 @@
 ---
 name: steve-yegge-style
-description: Steve Yegge — long-form essays, generalist polyglot, "Execution in the Kingdom of Nouns," language design opinions
+description: "Steve Yegge — long-form essays, generalist polyglot, \"Execution in the Kingdom of Nouns,\" language design opinions. Use when you want code review, architecture advice, or opinions in the style of steve yegge."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: push-gate
-description: "Pre-push safety gate for any git push to a remote (GitHub, GitLab, Bitbucket, self-hosted). Runs gitleaks + regex-layer secret scan, forbidden-file check, divergence check, size warning, and requires explicit confirm before pushing. Refuses on any secret hit. Triggers on: push to origin, push to github, push to remote, git push, can we push, safe to push, ready to push, pre-push check, push-gate."
+description: Pre-push safety gate for any git push to a remote (GitHub, GitLab, Bitbucket, self-hosted). Runs gitleaks + regex-layer secret scan, forbidden-file check, divergence check, size warning, and requires explicit confirm before pushing. Refuses on any secret hit. Triggers on: push to origin, push to github, push to remote, git push, can we push, safe to push, ready to push, pre-push check, push-gate. Use when you need help with push gate.
 license: MIT
 allowed-tools: "Read Bash Glob Grep"
 metadata:

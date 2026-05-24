@@ -1,6 +1,6 @@
 ---
 name: mcp-server-designer
-description: Design and scaffold an MCP server with tools, resources, and safety defaults.
+description: Design and scaffold an MCP server with tools, resources, and safety defaults. Use when you need help with mcp server designer.
 license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 14

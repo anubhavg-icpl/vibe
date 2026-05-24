@@ -1,6 +1,6 @@
 ---
 name: dependabot
-description: >-
+description: >-. Use when you need help with dependabot.
   Comprehensive guide for configuring and managing GitHub Dependabot. Use this skill when
   users ask about creating or optimizing dependabot.yml files, managing Dependabot pull requests,
   configuring dependency update strategies, setting up grouped updates, monorepo patterns,

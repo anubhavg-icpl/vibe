@@ -1,6 +1,6 @@
 ---
 name: marl-architect
-description: Pick the right multi-agent RL regime (IPPO, CTDE, self-play, league) for a given task.
+description: Pick the right multi-agent RL regime (IPPO, CTDE, self-play, league) for a given task. Use when you need help with marl architect.
 license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 10

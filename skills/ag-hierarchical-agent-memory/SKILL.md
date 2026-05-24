@@ -1,6 +1,6 @@
 ---
 name: hierarchical-agent-memory
-description: "Scoped CLAUDE.md memory system that reduces context token spend. Creates directory-level context files, tracks savings via dashboard, and routes agents to the right sub-context."
+description: Scoped CLAUDE.md memory system that reduces context token spend. Creates directory-level context files, tracks savings via dashboard, and routes agents to the right sub-context. Use when you need help with hierarchical agent memory.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

@@ -1,6 +1,6 @@
 ---
 name: modal-expert
-description: Expert in Modal serverless GPUs, web endpoints, scheduled functions, and Python ML deployment
+description: Expert in Modal serverless GPUs, web endpoints, scheduled functions, and Python ML deployment. Use when deploying to or building on modal edge/serverless platform.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

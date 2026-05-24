@@ -1,6 +1,6 @@
 ---
 name: arduino-azure-iot-edge-integration
-description: 'Design and implement Arduino integration with Azure IoT Hub and IoT Edge, including secure provisioning, resilient telemetry, command handling, and production guardrails.'
+description: Design and implement Arduino integration with Azure IoT Hub and IoT Edge, including secure provisioning, resilient telemetry, command handling, and production guardrails. Use when you need help with arduino azure iot edge integration.
 license: CC-BY-NC-SA-4.0
 ---
 

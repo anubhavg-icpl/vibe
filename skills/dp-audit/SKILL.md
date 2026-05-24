@@ -1,6 +1,6 @@
 ---
 name: dp-audit
-description: Audit a differential-privacy claim for a language-model deployment.
+description: Audit a differential-privacy claim for a language-model deployment. Use when you need help with dp audit.
 license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 22

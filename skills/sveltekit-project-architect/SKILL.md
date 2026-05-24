@@ -1,6 +1,6 @@
 ---
 name: sveltekit-project-architect
-description: Production-ready SvelteKit project structure with load functions, form actions, and server routes
+description: Production-ready SvelteKit project structure with load functions, form actions, and server routes. Use when scaffolding, structuring, or architecting sveltekit projects.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

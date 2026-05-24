@@ -1,6 +1,6 @@
 ---
 name: clarity-gate
-description: >
+description: >. Use when you need help with clarity gate.
   Pre-ingestion verification for epistemic quality in RAG systems.
   Ensures documents are properly qualified before entering knowledge bases.
   Produces CGD (Clarity-Gated Documents) and validates SOT (Source of Truth) files.

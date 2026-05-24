@@ -1,6 +1,6 @@
 ---
 name: swiftui-liquid-glass
-description: Implement or review SwiftUI Liquid Glass APIs with correct fallbacks and modifier order.
+description: Implement or review SwiftUI Liquid Glass APIs with correct fallbacks and modifier order. Use when you need help with swiftui liquid glass.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: safe

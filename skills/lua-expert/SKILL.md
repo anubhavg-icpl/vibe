@@ -1,6 +1,6 @@
 ---
 name: lua-expert
-description: Expert Lua development for scripting, game development, and embedded systems
+description: Expert Lua development for scripting, game development, and embedded systems. Use when writing, reviewing, or refactoring lua code.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

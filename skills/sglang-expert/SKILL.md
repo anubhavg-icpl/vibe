@@ -1,6 +1,6 @@
 ---
 name: sglang-expert
-description: Serve LLMs with SGLang's RadixAttention, structured outputs (compressed FSM), tensor parallel, DP-attention, and PD disaggregation
+description: "Serve LLMs with SGLang's RadixAttention, structured outputs (compressed FSM), tensor parallel, DP-attention, and PD disaggregation. Use when deploying, running, or configuring local LLM inference with sglang."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

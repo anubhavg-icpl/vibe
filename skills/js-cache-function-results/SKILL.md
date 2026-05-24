@@ -1,6 +1,6 @@
 ---
 name: js-cache-function-results
-description: Cache Repeated Function Calls
+description: Cache Repeated Function Calls. Use when you need help with js cache function results.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

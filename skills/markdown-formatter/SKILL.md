@@ -1,6 +1,6 @@
 ---
 name: markdown-formatter
-description: markdown-formatter
+description: markdown-formatter. Use when you need help with markdown formatter.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

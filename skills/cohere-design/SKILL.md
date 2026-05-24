@@ -1,6 +1,6 @@
 ---
 name: cohere-design
-description: Expert in the Cohere design system - Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic.
+description: Expert in the Cohere design system - Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for cohere.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

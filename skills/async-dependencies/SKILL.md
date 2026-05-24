@@ -1,6 +1,6 @@
 ---
 name: async-dependencies
-description: Dependency-Based Parallelization
+description: Dependency-Based Parallelization. Use when you need help with async dependencies.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

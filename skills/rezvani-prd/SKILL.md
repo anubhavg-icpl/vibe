@@ -1,6 +1,6 @@
 ---
 name: prd
-description: Quick PRD generation command. Usage: /prd <feature-or-problem>
+description: Quick PRD generation command. Usage: /prd <feature-or-problem>. Use when you need help with prd.
 license: CC-BY-NC-SA-4.0
 ---
 

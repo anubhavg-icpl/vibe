@@ -1,6 +1,6 @@
 ---
 name: container-security
-description: Expert in container and Kubernetes security - scanning, runtime protection, and compliance
+description: Expert in container and Kubernetes security - scanning, runtime protection, and compliance. Use when performing security analysis, auditing, or hardening with container security.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

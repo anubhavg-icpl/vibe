@@ -1,6 +1,6 @@
 ---
 name: aws-solutions-architect
-description: aws-solutions-architect
+description: aws-solutions-architect. Use when architecting or managing cloud infrastructure with aws solutions architect.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

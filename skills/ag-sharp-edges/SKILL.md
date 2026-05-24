@@ -1,6 +1,6 @@
 ---
 name: sharp-edges
-description: sharp-edges
+description: sharp-edges. Use when you need help with sharp edges.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

@@ -1,6 +1,6 @@
 ---
 name: rfc-7662-introspection
-description: Token validation endpoint for resource servers and admin panels
+description: Token validation endpoint for resource servers and admin panels. Use when implementing or validating rfc 7662 introspection protocol compliance.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

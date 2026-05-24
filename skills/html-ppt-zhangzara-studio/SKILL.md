@@ -1,6 +1,6 @@
 ---
 name: html-ppt-zhangzara-studio
-description: |
+description: |. Use when you need help with html ppt zhangzara studio.
   Studio — Black canvas with electric-yellow type; high-voltage design studio aesthetic. Anything that should feel electric and design-led: studio credentials, creative agency pitches, brand showcases, art-direction reviews, fashion / sneaker brand work.
 license: CC-BY-NC-SA-4.0
 triggers: 

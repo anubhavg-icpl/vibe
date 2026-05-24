@@ -1,6 +1,6 @@
 ---
 name: mythos-m2-kerberos-lateral
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 2 — SMB enumeration and AS-REP roasting against accounts missing Kerberos pre-authentication
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 2 — SMB enumeration and AS-REP roasting against accounts missing Kerberos pre-authentication. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m2 kerberos lateral."
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

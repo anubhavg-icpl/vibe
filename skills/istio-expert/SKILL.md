@@ -1,6 +1,6 @@
 ---
 name: istio-expert
-description: Expert in Istio service mesh for traffic management, security, and observability
+description: Expert in Istio service mesh for traffic management, security, and observability. Use when configuring, deploying, or managing istio infrastructure.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown

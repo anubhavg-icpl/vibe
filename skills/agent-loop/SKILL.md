@@ -1,6 +1,6 @@
 ---
 name: agent-loop
-description: Write a correct, minimal ReAct agent loop in any target language/runtime with tools, stop condition, and turn budget.
+description: Write a correct, minimal ReAct agent loop in any target language/runtime with tools, stop condition, and turn budget. Use when you need help with agent loop.
 license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 01

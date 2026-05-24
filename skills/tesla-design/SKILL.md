@@ -1,6 +1,6 @@
 ---
 name: tesla-design
-description: Expert in the Tesla design system - Electric automotive. Radical subtraction, full-viewport photography, near-zero UI.
+description: Expert in the Tesla design system - Electric automotive. Radical subtraction, full-viewport photography, near-zero UI. Use when building UI components, applying design tokens, or implementing visual styles for tesla.
 license: CC-BY-NC-SA-4.0
 metadata:
   risk: unknown
