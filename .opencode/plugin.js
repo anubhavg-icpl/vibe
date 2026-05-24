@@ -2,7 +2,7 @@
  * Vibe plugin for OpenCode.ai
  *
  * Auto-registers Vibe's skills directory via OpenCode's config hook so the
- * agent discovers all 675 skills without manual symlinks or config edits.
+ * agent discovers all 5340 skills without manual symlinks or config edits.
  *
  * Adapted from obra/superpowers `.opencode/plugin.js` (MIT) for the Vibe
  * library (CC-BY-NC-SA-4.0).
