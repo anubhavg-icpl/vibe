@@ -1,9 +1,37 @@
 ---
 import Base from '../layouts/Base.astro';
-import { counts, categories, categoryCount, KIND_META, type Kind } from '../lib/data';
+import { counts, categories, categoryCount, KIND_META, AUTHOR, SITE_URL, type Kind } from '../lib/data';
 import { withBase } from '../lib/url';
 
 const fmt = (n: number) => n.toLocaleString('en-US');
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'VIBE',
+    alternateName: 'VIBE — AI Chat Modes, Skills, Agents & Plugins',
+    url: SITE_URL,
+    description:
+      'Open library of AI-agent skills, sub-agents, slash commands and expert chat modes for Claude Code, Codex, Cursor, OpenCode, Gemini CLI & more.',
+    inLanguage: 'en',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}browse?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+    author: { '@type': 'Person', name: AUTHOR.name, url: AUTHOR.url },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: AUTHOR.name,
+    jobTitle: AUTHOR.jobTitle,
+    url: AUTHOR.url,
+    sameAs: AUTHOR.sameAs,
+    worksFor: { '@type': 'Organization', name: 'Infopercept Consulting' },
+  },
+];
 
 const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
 const sparkColors: Record<Kind, string> = {
@@ -55,7 +83,7 @@ const installs = [
   { name: 'Codex CLI / App', dot: 'var(--teal)', tag: 'ui flow', lines: ['/plugins  →  search "vibe"  →  Install'] },
 ];
 ---
-<Base>
+<Base jsonld={jsonld}>
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <img class="hero-mark" src={withBase('assets/minimal-geometric-logo-mark.webp')} alt="" aria-hidden="true" />
@@ -160,7 +188,7 @@ const installs = [
       </div>
       <div class="cat-grid">
         {topCategories.map((c, i) => (
-          <a class="cat-card" href={withBase(`browse?cat=${encodeURIComponent(c.slug)}`)} data-reveal>
+          <a class="cat-card" href={withBase(`category/${c.slug}`)} data-reveal>
             <span class="cat-chip" style={`background:linear-gradient(135deg, ${chipColors[i % chipColors.length]}, ${chipColors[(i + 4) % chipColors.length]})`}>
               {monogram(c.label)}
             </span>
@@ -239,8 +267,29 @@ const installs = [
     </div>
   </section>
 
+  <!-- ===================== AUTHOR ===================== -->
+  <section id="author">
+    <div class="wrap">
+      <div class="author-band" data-reveal>
+        <div>
+          <span class="eyebrow">◆ Built by</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(24px,3.6vw,38px);letter-spacing:-0.02em;margin:16px 0 12px">Anubhav Gain</h2>
+          <p style="color:var(--text-soft);max-width:600px;font-size:16px">
+            {AUTHOR.jobTitle} at Infopercept &amp; CEO at TechAnv Consulting — XDR/OXDR platforms,
+            DevSecOps, Rust &amp; eBPF. VIBE is his open library of AI-agent assets, free under CC BY-NC-SA 4.0.
+          </p>
+          <div class="cli-targets" style="margin-top:20px">
+            <a class="btn btn-ghost" href={AUTHOR.url} target="_blank" rel="noopener author">Website</a>
+            <a class="btn btn-ghost" href={AUTHOR.github} target="_blank" rel="noopener author">GitHub</a>
+            <a class="btn btn-ghost" href={AUTHOR.linkedin} target="_blank" rel="noopener author">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== CTA ===================== -->
-  <section>
+  <section style="padding-top:0">
     <div class="wrap">
       <div class="cta" data-reveal>
         <img class="cta-bg" src={withBase('assets/seven-light-beams-rising.webp')} alt="" aria-hidden="true" loading="lazy" />

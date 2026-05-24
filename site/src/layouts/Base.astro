@@ -8,12 +8,17 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  /** Per-page JSON-LD objects (schema.org). */
+  jsonld?: Record<string, unknown>[];
+  ogType?: string;
 }
 
 const {
   title = 'VIBE — AI Chat Modes, Skills, Agents & Plugins',
   description = 'A massive open library of AI-agent skills, sub-agents, slash commands and expert chat modes — for Claude Code, Codex, Cursor, OpenCode, Gemini CLI & more. Search 5,900+ assets.',
   image = withBase('assets/abstract-data-visualization-lumi.webp'),
+  jsonld = [],
+  ogType = 'website',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -30,19 +35,28 @@ const ogImage = new URL(image, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#070611" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Anubhav Gain" />
+    <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={title} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="VIBE" />
+    <meta property="og:locale" content="en_US" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    {jsonld.map((obj) => (
+      <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+    ))}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

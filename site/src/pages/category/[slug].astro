@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import {
+  assetsByCategory, slugFor, prettyLabel, KIND_META, SITE_URL, AUTHOR,
+  type AssetEntry,
+} from '../../lib/data';
+import { withBase } from '../../lib/url';
+
+export function getStaticPaths() {
+  return Object.entries(assetsByCategory).map(([slug, list]) => ({
+    params: { slug },
+    props: { slug, list },
+  }));
+}
+
+interface Props { slug: string; list: AssetEntry[] }
+const { slug, list } = Astro.props;
+const label = prettyLabel(slug);
+const fmt = (n: number) => n.toLocaleString('en-US');
+
+const sorted = [...list].sort((a, b) => a.name.localeCompare(b.name));
+const kinds = [...new Set(list.map((a) => a.kind))].map((k) => KIND_META[k].plural);
+const title = `${label} — ${fmt(list.length)} VIBE assets`;
+const desc = `Browse ${fmt(list.length)} ${label} ${kinds.join(', ').toLowerCase()} for AI coding agents — production-grounded, cited, installable. Part of the VIBE library.`;
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${label} — VIBE`,
+    description: desc,
+    url: pageUrl,
+    isPartOf: { '@type': 'WebSite', name: 'VIBE', url: SITE_URL },
+    author: { '@type': 'Person', name: AUTHOR.name, url: AUTHOR.url },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: list.length,
+      itemListElement: sorted.slice(0, 50).map((a, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: a.name,
+        url: new URL(withBase(slugFor(a)), Astro.site).href,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'VIBE', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: label, item: pageUrl },
+    ],
+  },
+];
+---
+<Base title={title} description={desc} jsonld={jsonld}>
+  <section class="detail">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href={withBase('')}>VIBE</a><span class="sep">/</span>
+        <a href={withBase('#categories')}>Categories</a><span class="sep">/</span>
+        <span class="cur">{label}</span>
+      </nav>
+      <span class="eyebrow">◆ Category · {fmt(list.length)} assets</span>
+      <h1 style="font-family:var(--font-display);font-size:clamp(28px,4.5vw,46px);letter-spacing:-0.02em;line-height:1.08;margin:16px 0 12px">{label}</h1>
+      <p class="lede" style="max-width:720px">{desc}</p>
+      <div class="detail-actions" style="margin:18px 0 30px">
+        <a class="btn btn-ghost" href={withBase(`browse?cat=${encodeURIComponent(slug)}`)}>🔎 Search within {label}</a>
+      </div>
+
+      <div class="results">
+        {sorted.map((a) => (
+          <a class="acard" href={withBase(slugFor(a))}>
+            <span class="top"><span class={`badge ${a.kind}`}>{a.kind}</span></span>
+            <h3>{a.name}</h3>
+            <p>{a.description}</p>
+            <span class="arrow">View →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

@@ -75,7 +75,6 @@ const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
     }
 
     const PAGE = 60;
-    const REPO = 'https://github.com/anubhavg-icpl/vibe';
     const rawBase = import.meta.env.BASE_URL || '/';
     const base = rawBase.endsWith('/') ? rawBase : rawBase + '/';
 
@@ -116,8 +115,8 @@ const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
       return out + esc(text.slice(last));
     }
 
-    function sourceUrl(a: Asset) {
-      return `${REPO}/tree/master/${a.modeFile ?? a.path}`;
+    function slugFor(a: Asset) {
+      return (a.modeFile ?? a.path).replace(/\.md$/, '');
     }
 
     function prettyCat(slug: string) {
@@ -145,14 +144,14 @@ const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
 
     function cardHtml({ item }: { item: Asset }) {
       const cat = prettyCat(item.category);
-      return `<a class="acard" href="${sourceUrl(item)}" target="_blank" rel="noopener">
+      return `<a class="acard" href="${base}${slugFor(item)}">
         <span class="top">
           <span class="badge ${item.kind}">${item.kind}</span>
           ${cat ? `<span class="cat">${esc(cat)}</span>` : ''}
         </span>
         <h3>${highlight(item.name)}</h3>
         <p>${highlight(item.description || '')}</p>
-        <span class="arrow">View source ↗</span>
+        <span class="arrow">Open →</span>
       </a>`;
     }
 

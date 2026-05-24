@@ -1,5 +1,5 @@
 ---
-import { counts, categoryCount } from '../lib/data';
+import { counts, categoryCount, AUTHOR } from '../lib/data';
 import { BASE, withBase } from '../lib/url';
 const year = new Date().getFullYear();
 ---
@@ -28,10 +28,16 @@ const year = new Date().getFullYear();
           <a href="https://www.npmjs.com/package/vibe-modes" target="_blank" rel="noopener">npm</a>
           <a href="https://github.com/anubhavg-icpl/vibe/blob/master/README.md" target="_blank" rel="noopener">README</a>
         </div>
+        <div class="footer-col">
+          <h4>Author</h4>
+          <a href={AUTHOR.url} target="_blank" rel="noopener author">Anubhav Gain</a>
+          <a href={AUTHOR.github} target="_blank" rel="noopener author">GitHub</a>
+          <a href={AUTHOR.linkedin} target="_blank" rel="noopener author">LinkedIn</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© {year} Anubhav Gain · CC BY-NC-SA 4.0</span>
+      <span>© {year} <a href={AUTHOR.url} target="_blank" rel="noopener author" style="color:inherit">Anubhav Gain</a> · CC BY-NC-SA 4.0</span>
       <span>Built with Astro · Deployed via GitHub Actions</span>
     </div>
   </div>

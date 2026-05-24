@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+import {
+  assets, slugFor, sourceUrl, prettyLabel, KIND_META, REPO,
+  AUTHOR, SITE_URL, assetsByCategory, type AssetEntry, type Kind,
+} from '../lib/data';
+import { withBase } from '../lib/url';
+
+export function getStaticPaths() {
+  return assets.map((asset) => ({
+    params: { slug: slugFor(asset) },
+    props: { asset },
+  }));
+}
+
+interface Props { asset: AssetEntry }
+const { asset } = Astro.props;
+
+const kindMeta = KIND_META[asset.kind];
+const isRealCat = !['skill', 'agent', 'command', 'mode'].includes(asset.category) && !asset.category.endsWith('.md');
+const catLabel = isRealCat ? prettyLabel(asset.category) : '';
+const src = sourceUrl(asset);
+const desc = (asset.description || `${asset.name} — a VIBE ${asset.kind}.`).trim();
+const metaDesc = desc.length > 158 ? desc.slice(0, 155).trimEnd() + '…' : desc;
+const title = `${asset.name} — ${kindMeta.label} · VIBE`;
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+// related: same category (real), else same kind — up to 6, excluding self
+const pool = isRealCat ? assetsByCategory[asset.category] : assets.filter((a) => a.kind === asset.kind);
+const related = pool.filter((a) => slugFor(a) !== slugFor(asset)).slice(0, 6);
+
+const crumbCat = isRealCat
+  ? { name: catLabel, url: new URL(withBase(`category/${asset.category}`), Astro.site).href }
+  : { name: kindMeta.plural, url: new URL(withBase(`browse?kind=${asset.kind}`), Astro.site).href };
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareSourceCode',
+    name: asset.name,
+    description: desc,
+    url: pageUrl,
+    codeRepository: REPO,
+    sameAs: src,
+    programmingLanguage: 'Markdown',
+    keywords: [asset.kind, catLabel].filter(Boolean).join(', '),
+    license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+    isPartOf: { '@type': 'WebSite', name: 'VIBE', url: SITE_URL },
+    author: { '@type': 'Person', name: AUTHOR.name, url: AUTHOR.url },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'VIBE', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: crumbCat.name, item: crumbCat.url },
+      { '@type': 'ListItem', position: 3, name: asset.name, item: pageUrl },
+    ],
+  },
+];
+---
+<Base title={title} description={metaDesc} jsonld={jsonld} ogType="article">
+  <section class="detail">
+    <div class="wrap" style="max-width:880px">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href={withBase('')}>VIBE</a><span class="sep">/</span>
+        {isRealCat
+          ? <a href={withBase(`category/${asset.category}`)}>{catLabel}</a>
+          : <a href={withBase(`browse?kind=${asset.kind}`)}>{kindMeta.plural}</a>}
+        <span class="sep">/</span><span class="cur">{asset.name}</span>
+      </nav>
+
+      <div class="detail-head">
+        <span class={`badge ${asset.kind}`}>{asset.kind}</span>
+        {catLabel && <span class="acard"><span class="cat" style="font-family:var(--mono);font-size:12px;color:var(--faint)">{catLabel}</span></span>}
+      </div>
+      <h1>{asset.name}</h1>
+      <p class="lede">{desc}</p>
+
+      <div class="detail-actions">
+        <a class="btn btn-primary" href={src} target="_blank" rel="noopener">View source on GitHub ↗</a>
+        <a class="btn btn-ghost" href={withBase('browse')}>← Back to search</a>
+      </div>
+
+      <div class="meta-row">
+        <div class="m"><b>Kind</b><span>{kindMeta.label}</span></div>
+        {catLabel && <div class="m"><b>Category</b><span>{catLabel}</span></div>}
+        <div class="m"><b>Install</b><span>npx -y github:anubhavg-icpl/vibe add {asset.name}</span></div>
+        <div class="m"><b>License</b><span>CC BY-NC-SA 4.0</span></div>
+      </div>
+
+      {related.length > 0 && (
+        <>
+          <h2 class="related-head">{isRealCat ? `More in ${catLabel}` : `More ${kindMeta.plural.toLowerCase()}`}</h2>
+          <div class="results">
+            {related.map((r) => (
+              <a class="acard" href={withBase(slugFor(r))}>
+                <span class="top"><span class={`badge ${r.kind}`}>{r.kind}</span></span>
+                <h3>{r.name}</h3>
+                <p>{r.description}</p>
+                <span class="arrow">View →</span>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+</Base>

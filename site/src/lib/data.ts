@@ -90,6 +90,39 @@ export function sourceUrl(a: AssetEntry): string {
   return `${REPO}/tree/master/${p}`;
 }
 
+/** Unique, descriptive, path-based slug for an asset's own page (no extension). */
+export function slugFor(a: AssetEntry): string {
+  return (a.modeFile ?? a.path).replace(/\.md$/, '');
+}
+
+/** Assets grouped by (real) category — for category hub pages. */
+export const assetsByCategory: Record<string, AssetEntry[]> = {};
+for (const a of assets) {
+  if (!isRealCategory(a.category)) continue;
+  (assetsByCategory[a.category] ??= []).push(a);
+}
+
+/** Author / publisher metadata for structured data + about section. */
+export const AUTHOR = {
+  name: 'Anubhav Gain',
+  jobTitle: 'Security Software Engineer',
+  url: 'https://mranv.pages.dev',
+  github: 'https://github.com/anubhavg-icpl',
+  linkedin: 'https://www.linkedin.com/in/anubhavgain/',
+  blurb:
+    'Security Software Engineer at Infopercept & CEO at TechAnv Consulting — XDR/OXDR platforms, DevSecOps, Rust & eBPF. VIBE is his open library of AI-agent assets.',
+  sameAs: [
+    'https://github.com/anubhavg-icpl',
+    'https://github.com/mranv',
+    'https://www.linkedin.com/in/anubhavgain/',
+    'https://mranv.pages.dev',
+  ],
+};
+
+export const SITE_ORIGIN = 'https://anubhavg-icpl.github.io';
+export const SITE_BASE = '/vibe';
+export const SITE_URL = `${SITE_ORIGIN}${SITE_BASE}/`;
+
 export const KIND_META: Record<Kind, { label: string; plural: string; blurb: string }> = {
   skill: { label: 'Skill', plural: 'Skills', blurb: 'Reusable bundles for Claude, Codex, Amp & Droid' },
   agent: { label: 'Agent', plural: 'Agents', blurb: 'Specialized sub-agents for orchestration & QA' },

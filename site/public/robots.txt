@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anubhavg-icpl.github.io/vibe/sitemap-index.xml
