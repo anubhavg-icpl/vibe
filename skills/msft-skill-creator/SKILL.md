@@ -1,0 +1,871 @@
+---
+name: skill-creator
+description: Guide for creating effective skills for AI coding agents working with Azure SDKs and Microsoft Foundry services. Use when creating new skills or updating existing skills.
+---
+
+# Skill Creator
+
+Guide for creating skills that extend AI agent capabilities, with emphasis on Azure SDKs and Microsoft Foundry.
+
+> **Required Context:** When creating SDK or API skills, users MUST provide the SDK package name, documentation URL, or repository reference for the skill to be based on.
+
+## About Skills
+
+Skills are modular knowledge packages that transform general-purpose agents into specialized experts:
+
+1. **Procedural knowledge** — Multi-step workflows for specific domains
+2. **SDK expertise** — API patterns, authentication, error handling for Azure services
+3. **Domain context** — Schemas, business logic, company-specific patterns
+4. **Bundled resources** — Scripts, references, templates for complex tasks
+
+---
+
+## Core Principles
+
+### 1. Concise is Key
+
+The context window is a shared resource. Challenge each piece: "Does this justify its token cost?"
+
+**For domain/procedural skills**: Agents are already capable. Only add what they don't already know.
+
+**For SDK/API skills**: Users MUST provide SDK package name, documentation URL, or repository reference. The skill cannot be created without this context.
+
+### 2. Fresh Documentation First
+
+**Azure SDKs change constantly.** Skills should instruct agents to verify documentation:
+
+```markdown
+## Before Implementation
+
+Search `microsoft-docs` MCP for current API patterns:
+
+- Query: "[SDK name] [operation] python"
+- Verify: Parameters match your installed SDK version
+```
+
+### 3. Degrees of Freedom
+
+Match specificity to implementation constraints. High freedom when approaches vary; low freedom when precise execution is required:
+
+| Freedom    | When                             | Example          |
+| ---------- | -------------------------------- | ---------------- |
+| **High**   | Multiple valid approaches        | Text guidelines  |
+| **Medium** | Preferred pattern with variation | Pseudocode       |
+| **Low**    | Must be exact                    | Specific scripts |
+
+### 4. Progressive Disclosure
+
+Skills load in three levels:
+
+1. **Metadata** (~100 words) — Always in context
+2. **SKILL.md body** (<5k words) — When skill triggers
+3. **References** (unlimited) — As needed
+
+**Keep SKILL.md under 500 lines.** Split into reference files when approaching this limit.
+
+---
+
+## Skill Structure
+
+**Quick reference:**
+
+```
+skill-name/
+├── SKILL.md (required)
+│   ├── YAML frontmatter (name, description)
+│   └── Markdown instructions
+└── Bundled Resources (optional)
+    ├── scripts/      — Executable code
+    ├── references/   — Documentation loaded as needed
+    └── assets/       — Output resources (templates, images)
+```
+
+For Azure SDK skills, follow the **Skill Section Order** below. For domain skills, use your judgment to organize logically.
+
+### SKILL.md Essentials
+
+- **Frontmatter**: `name` and `description` (description triggers the skill)
+- **Body**: Keep under 500 lines; split large skills into reference files
+
+### Bundled Resources (Optional)
+
+| Type          | When to Include           | Examples                   |
+| ------------- | ------------------------- | -------------------------- |
+| `scripts/`    | Reused code patterns      | Auth setup, CLI scripts    |
+| `references/` | Detailed patterns/schemas | API docs, migration guides |
+| `assets/`     | Output templates          | Boilerplate code, images   |
+
+---
+
+## Creating Azure SDK Skills
+
+When creating skills for Azure SDKs, follow these patterns consistently.
+
+### Skill Section Order
+
+Follow this structure (based on existing Azure SDK skills):
+
+1. **Title** — `# SDK Name`
+2. **Installation** — `pip install`, `npm install`, etc.
+3. **Environment Variables** — Required configuration, with an inline comment explaining when it's required . If using `DefaultAzureCredential`in production,include `AZURE_TOKEN_CREDENTIALS` (set to `prod` or `<specific_credential>`)
+4. **Authentication & Lifecycle** — Use a specific Microsoft Entra Token credential like `ManagedIdentityCredential` or `WorkloadIdentityCredential` for production. `DefaultAzureCredential` is only recommended for local development. To use DefaultAzureCredential in production, set the environment variable `AZURE_TOKEN_CREDENTIALS` to `prod` or the specific target credential. **For Python skills, this section MUST start with the standard callout block** (see [Required Authentication & Lifecycle Callout (Python)](#required-authentication--lifecycle-callout-python) below).
+5. **Core Workflow** — Minimal viable example
+6. **Feature Tables** — Clients, methods, tools
+7. **Best Practices** — Numbered list
+8. **Reference Links** — Table linking to `/references/*.md`
+
+### Required Authentication & Lifecycle Callout (Python)
+
+> **Scope:** Python skills (`-py` suffix) only. Other languages may follow their own idioms.
+
+Every Python Azure SDK skill MUST open its `## Authentication & Lifecycle` section with the following callout block, **verbatim**, before any code samples. This makes the two non-negotiable rules visible to users before they read or copy any client setup code.
+
+```markdown
+## Authentication & Lifecycle
+
+> **🔑 Two rules apply to every code sample below:**
+>
+> 1. **Prefer `DefaultAzureCredential`.** It works locally (Azure CLI / VS Code / Developer CLI) and in Azure (managed identity, workload identity) with no code change. Avoid connection strings, account/API keys — they bypass Entra audit and rotation.
+>    - Local dev: `DefaultAzureCredential` works as-is.
+>    - Production: set `AZURE_TOKEN_CREDENTIALS=prod` (or `AZURE_TOKEN_CREDENTIALS=<specific_credential>`) to constrain the credential chain to production-safe credentials.
+> 2. **Wrap every client in a context manager** so HTTP transports, sockets, and token caches are released deterministically:
+>    - Sync: `with <Client>(...) as client:`
+>    - Async: `async with <Client>(...) as client:` **and** `async with DefaultAzureCredential() as credential:` (from `azure.identity.aio`)
+>
+> Snippets may abbreviate this setup, but production code should always follow both rules.
+```
+
+**Placement rules:**
+
+- Insert immediately under the `## Authentication & Lifecycle` heading, before the first code sample.
+- Do not paraphrase or restructure the wording — the consistency across skills is the point.
+- If the SDK does not support Entra ID at all (rare — e.g. some legacy speech REST endpoints, websocket APIs that require subscription keys), keep rule #2 (context managers) and replace rule #1 with a single sentence noting the SDK requires API-key auth and explaining why Entra is not yet available.
+- If the SDK is async-only (e.g. `azure-ai-voicelive`), keep both rules but show only the async form in the bullets.
+- Skip the callout entirely for non-Azure Python skills with no client lifecycle (e.g. `pydantic-models-py`).
+
+**Code sample enforcement.** Every client construction in the skill body must demonstrate both rules:
+
+- Show `with` / `async with` on every client instantiation in usage examples (not just the auth section).
+- Show `DefaultAzureCredential` in the primary auth example. **Do not delete API-key examples for SDKs where keys are still officially supported** — many existing users (especially in regulated environments still completing their Entra rollout) need a copy-pastable working sample. Demote the keyed snippet into a clearly-labeled `### Legacy: API Key (existing keyed deployments)` subsection placed *after* the primary `DefaultAzureCredential` block in the same `## Authentication & Lifecycle` section. Include a one-line note that new code should use `DefaultAzureCredential` and that the keyed path is for existing deployments. Also add the `<SERVICE>_KEY` env var back to the Environment Variables block with a `# Only required for the legacy API-key auth path below` comment.
+- A handful of services have key-specific quirks worth calling out in the Legacy subsection (e.g. `azure-ai-translation-text` requires a `region=` parameter when using a key against the global endpoint, because token-credential auth requires a custom subdomain endpoint). Surface these in the demoted block rather than dropping the example.
+- For async examples, wrap `DefaultAzureCredential` from `azure.identity.aio` in `async with credential:` alongside the client.
+
+### Authentication Pattern (All Languages)
+
+For local development, use `DefaultAzureCredential` which supports multiple auth methods. For production, use a specific credential type or configure `DefaultAzureCredential` with environment variable `AZURE_TOKEN_CREDENTIALS` set to `prod` or specify the target credential.
+
+If configuring a Rust skill, use `DeveloperToolsCredential` for local development and `ManagedIdentityCredential` for production. The Rust SDK does not support `DefaultAzureCredential`, so explicitly use the appropriate credential in each environment.
+
+```python
+# Python — note: client is wrapped in `with` for deterministic cleanup
+from azure.identity import DefaultAzureCredential, ManagedIdentityCredential
+# Local dev: DefaultAzureCredential. Production: set AZURE_TOKEN_CREDENTIALS=prod or AZURE_TOKEN_CREDENTIALS=<specific_credential>
+credential = DefaultAzureCredential(require_envvar=True)
+# Or use a specific credential directly in production:
+# See https://learn.microsoft.com/python/api/overview/azure/identity-readme?view=azure-python#credential-classes
+# credential = ManagedIdentityCredential()
+with ServiceClient(endpoint, credential) as client:
+    client.do_thing()
+```
+
+```csharp
+// C#
+using Azure.Identity;
+
+// Local dev: DefaultAzureCredential. Production: set AZURE_TOKEN_CREDENTIALS=prod or AZURE_TOKEN_CREDENTIALS=<specific_credential>
+var credential = new DefaultAzureCredential(
+    DefaultAzureCredential.DefaultEnvironmentVariableName
+);
+// Or use a specific credential directly in production:
+// See https://learn.microsoft.com/dotnet/api/overview/azure/identity-readme?view=azure-dotnet#credential-classes
+// var credential = new ManagedIdentityCredential();
+var client = new ServiceClient(new Uri(endpoint), credential);
+```
+
+```java
+// Java
+import com.azure.identity.AzureIdentityEnvVars;
+import com.azure.identity.DefaultAzureCredentialBuilder;
+import com.azure.identity.ManagedIdentityCredential;
+import com.azure.identity.ManagedIdentityCredentialBuilder;
+
+// Local dev: DefaultAzureCredential. Production: set AZURE_TOKEN_CREDENTIALS=prod or AZURE_TOKEN_CREDENTIALS=<specific_credential>
+TokenCredential credential = new DefaultAzureCredentialBuilder()
+    .requireEnvVars(AzureIdentityEnvVars.AZURE_TOKEN_CREDENTIALS)
+    .build();
+// Or use a specific credential directly in production:
+// See https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable#credential-classes
+// TokenCredential credential = new ManagedIdentityCredentialBuilder().build();
+ServiceClient client = new ServiceClientBuilder()
+    .endpoint(endpoint)
+    .credential(credential)
+    .buildClient();
+```
+
+```typescript
+// TypeScript
+import {
+  DefaultAzureCredential,
+  ManagedIdentityCredential,
+} from "@azure/identity";
+// Local dev: DefaultAzureCredential. Production: set AZURE_TOKEN_CREDENTIALS=prod or AZURE_TOKEN_CREDENTIALS=<specific_credential>
+const credential = new DefaultAzureCredential({
+  requiredEnvVars: ["AZURE_TOKEN_CREDENTIALS"],
+});
+// Or use a specific credential directly in production:
+// See https://learn.microsoft.com/javascript/api/overview/azure/identity-readme?view=azure-node-latest#credential-classes
+// const credential = new ManagedIdentityCredential();
+const client = new ServiceClient(endpoint, credential);
+```
+
+```rust
+// Rust
+use azure_identity::DeveloperToolsCredential;
+use azure_storage_blob::BlobServiceClient;
+
+let credential = DeveloperToolsCredential::new(); // Local dev
+let client = BlobServiceClient::new(
+    "https://<account>.blob.core.windows.net/",
+    credential,
+    None,
+)?;
+```
+
+**Never hardcode credentials. Use environment variables.**
+
+### Standard Verb Patterns
+
+Azure SDKs use consistent verbs across all languages:
+
+| Verb     | Behavior                     |
+| -------- | ---------------------------- |
+| `create` | Create new; fail if exists   |
+| `upsert` | Create or update             |
+| `get`    | Retrieve; error if missing   |
+| `list`   | Return collection            |
+| `delete` | Succeed even if missing      |
+| `begin`  | Start long-running operation |
+
+### Language-Specific Patterns
+
+See `references/azure-sdk-patterns.md` for detailed patterns including:
+
+- **Python**: `ItemPaged`, `LROPoller`, context managers, Sphinx docstrings. Pick **sync or async** for the whole skill and stick with it — never mix. Always show `with` / `async with` context managers first.
+- **.NET**: `Response<T>`, `Pageable<T>`, `Operation<T>`, mocking support
+- **Java**: Builder pattern, `PagedIterable`/`PagedFlux`, Reactor types
+- **TypeScript**: `PagedAsyncIterableIterator`, `AbortSignal`, browser considerations
+- **Rust**: `Response<T>`, `Pager<T>`, `RequestContent::from()`, `.into_model()`, explicit credential types, RBAC roles for Entra ID authentication.
+
+### Required Best Practices in Every Skill (User-Facing)
+
+#### Python, .Net, Java, and Typescript languages
+
+**These two rules are not just authoring conventions for the skill itself — they MUST be explicitly written into every generated skill's `## Best Practices` section so end users who follow the skill apply them in their own code.**
+
+Add both items verbatim (adapted only for language/SDK specifics) as the **first two items** of the Best Practices list. Do not assume users will infer them from examples.
+
+**Standard wording (Python; adapt for other languages):**
+
+```markdown
+1. **Pick sync OR async and stay consistent.** Do not mix `azure.xxx` sync clients with `azure.xxx.aio` async clients in the same call path. Choose one mode per module.
+2. **Always use context managers for clients and async credentials.** Wrap every client in `with Client(...) as client:` (sync) or `async with Client(...) as client:` (async). For async `DefaultAzureCredential` from `azure.identity.aio`, also use `async with credential:` so tokens and transports are cleaned up.
+3. **Use `DefaultAzureCredential`** for code that runs locally. Use a specific token credential (e.g. `ManagedIdentityCredential`, `WorkloadIdentityCredential`) for code that runs in Azure.
+```
+
+**Variants to apply when the SDK shape differs:**
+
+| Skill type                                           | Adjust item #1 to                                                                                                                | Adjust item #2 to                                                                                                                                                                                                              |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Async-only SDK (e.g. voicelive)                      | "This SDK is async-only; use the `.aio` namespace throughout."                                                                   | keep standard                                                                                                                                                                                                                  |
+| Async-first framework (agent framework, m365-agents) | "This SDK is async-first — use `async def` handlers and `async with` throughout."                                                | keep standard                                                                                                                                                                                                                  |
+| Provider-pattern (OpenTelemetry exporters/distro)    | keep standard                                                                                                                    | "Call `provider.shutdown()` / `flush()` at process exit to flush telemetry — providers are not context managers."                                                                                                              |
+| REST-over-httpx skills                               | keep standard                                                                                                                    | "Use `with httpx.Client(...) as client:` (sync) or `async with httpx.AsyncClient(...) as client:` (async) so connections pool and close deterministically."                                                                    |
+| Identity skill                                       | keep standard                                                                                                                    | "Use credentials as context managers (`with DefaultAzureCredential() as credential:`) when they own token caches / HTTP transports you want cleaned up; for async, use `async with` on credentials from `azure.identity.aio`." |
+| FastAPI (non-Azure)                                  | "Pick `def` or `async def` per endpoint based on whether you call async I/O; do not mix sync and blocking calls in one handler." | "Manage long-lived resources (DB pools, HTTP clients) in `lifespan` and inject via `Depends`; use `with`/`async with` for per-request resources."                                                                              |
+| Pure model/schema skill (no I/O, e.g. pydantic)      | **skip both** — not applicable                                                                                                   | **skip**                                                                                                                                                                                                                       |
+
+**Enforcement in code examples.** Every code example inside the skill must itself obey both rules, so the skill demonstrates what it prescribes:
+
+- Do not show sync and async calls interleaved in the same example. If you must show both modes, keep the primary example in one mode and isolate the alternative into a single `### Async variant` (or `### Sync variant`) subsection with its own complete example.
+- Every client instantiation in every example must be wrapped in `with` / `async with`. The only permitted exception is the mandatory Authentication snippet (which illustrates the credential + client construction pattern) and framework lifespan patterns where a client is owned by the app (e.g. FastAPI `lifespan`).
+- When async credentials from `azure.identity.aio` appear in an example, wrap them in `async with credential:` alongside the client.
+
+#### Rust Language
+
+1. **Use `DeveloperToolsCredential` for local development and `ManagedIdentityCredential` for production.** The Rust SDK does not support `DefaultAzureCredential`, so explicitly use the appropriate credential in each environment.
+
+2. **Use `RequestContent::from()` to wrap upload data.** When uploading data (e.g., blobs), wrap the content in `RequestContent::from(your_data)` to ensure proper handling by the SDK.
+
+3. **Assign appropriate RBAC roles for Entra ID auth.** For production authentication using Entra ID, ensure the identity has the necessary RBAC role assigned (e.g., "Storage Blob Data Contributor" for blob write access).
+
+4. **Always verify package versions using crates.io.** Before using a package, check its version on [crates.io](https://crates.io/) to ensure you are using a stable and supported release.
+
+### Handling Deprecated or Rebranded SDKs
+
+When an Azure SDK has been deprecated or rebranded, update skills to guide users toward the current package while maintaining backward compatibility:
+
+**1. Add a migration notice at the top of the skill:**
+
+```markdown
+> **⚠️ MIGRATION NOTICE**: The [Old Service Name] has been rebranded to **[New Service Name]**. While the package `old-package-name` remains available for compatibility, **new projects should use `new-package-name`** which provides the latest features and updates.
+>
+> **For new projects**: Use the `new-package-name` package instead.
+>
+> **This skill remains valid** for existing projects using `old-package-name`, but be aware you're using the legacy package name. The API patterns shown here are compatible with both packages.
+```
+
+**2. Show both installation options:**
+
+```markdown
+## Installation
+
+### Legacy Package (Old Name)
+
+\`\`\`xml
+<dependency>
+<groupId>com.azure</groupId>
+<artifactId>azure-old-package</artifactId>
+<version>4.2.0</version>
+</dependency>
+\`\`\`
+
+### Recommended Package (New Name)
+
+**For new projects, use the rebranded package:**
+
+\`\`\`xml
+<dependency>
+<groupId>com.azure</groupId>
+<artifactId>azure-new-package</artifactId>
+<version>1.0.0</version>
+</dependency>
+\`\`\`
+
+> **Note**: The API patterns in this skill apply to both packages. Replace package names and imports as needed when using `azure-new-package`.
+```
+
+**3. When to create a new skill vs. update existing:**
+
+- **Update existing skill** if the API is largely compatible (same or similar class/method names)
+- **Create new skill + migration guide** if the API changed significantly (use `references/migration.md`)
+- **Always cross-reference** between old and new skills
+
+**Examples:**
+
+- `azure-ai-formrecognizer-java` → `azure-ai-documentintelligence` (rebranded service)
+- `azure-communication-callingserver-java` → `azure-communication-callautomation` (deprecated, with migration guide)
+
+### Example: Azure SDK Skill Structure
+
+```markdown
+---
+name: skill-creator
+description: |
+  Azure AI Example SDK for Python. Use for [specific service features].
+  Triggers: "example service", "create example", "list examples".
+---
+
+# Azure AI Example SDK
+
+## Installation
+
+\`\`\`bash
+pip install azure-ai-example
+\`\`\`
+
+## Environment Variables
+
+\`\`\`bash
+AZURE_EXAMPLE_ENDPOINT=https://<resource>.example.azure.com
+AZURE_TOKEN_CREDENTIALS=prod # Required only if DefaultAzureCredential is used in production
+\`\`\`
+
+## Authentication & Lifecycle
+
+> **🔑 Two rules apply to every code sample below:**
+>
+> 1. **Prefer `DefaultAzureCredential`.** It works locally (Azure CLI / VS Code / Developer CLI) and in Azure (managed identity, workload identity) with no code change. Avoid connection strings, account/API keys — they bypass Entra audit and rotation.
+>    - Local dev: `DefaultAzureCredential` works as-is.
+>    - Production: set `AZURE_TOKEN_CREDENTIALS=prod` (or `AZURE_TOKEN_CREDENTIALS=<specific_credential>`) to constrain the credential chain to production-safe credentials.
+> 2. **Wrap every client in a context manager** so HTTP transports, sockets, and token caches are released deterministically:
+>    - Sync: `with <Client>(...) as client:`
+>    - Async: `async with <Client>(...) as client:` **and** `async with DefaultAzureCredential() as credential:` (from `azure.identity.aio`)
+>
+> Snippets may abbreviate this setup, but production code should always follow both rules.
+
+\`\`\`python
+from azure.identity import DefaultAzureCredential, ManagedIdentityCredential
+from azure.ai.example import ExampleClient
+
+# Local dev: DefaultAzureCredential. Production: set AZURE_TOKEN_CREDENTIALS=prod or AZURE_TOKEN_CREDENTIALS=<specific_credential>
+
+credential = DefaultAzureCredential(require_envvar=True)
+
+# Or use a specific credential directly in production:
+
+# See https://learn.microsoft.com/python/api/overview/azure/identity-readme?view=azure-python#credential-classes
+
+# credential = ManagedIdentityCredential()
+with ExampleClient(
+    endpoint=os.environ["AZURE_EXAMPLE_ENDPOINT"],
+    credential=credential,
+) as client:
+    item = client.get_item("example")
+\`\`\`
+
+## Core Workflow
+
+\`\`\`python
+with ExampleClient(endpoint=endpoint, credential=credential) as client:
+    # Create
+    item = client.create_item(name="example", data={...})
+
+    # List (pagination handled automatically)
+    for item in client.list_items():
+        print(item.name)
+
+    # Long-running operation
+    poller = client.begin_process(item.id)
+    result = poller.result()
+
+    # Cleanup
+    client.delete_item(item.id)
+\`\`\`
+
+## Reference Files
+
+| File                                               | Contents                 |
+| -------------------------------------------------- | ------------------------ |
+| [references/tools.md](references/tools.md)         | Tool integrations        |
+| [references/streaming.md](references/streaming.md) | Event streaming patterns |
+```
+
+---
+
+## Skill Creation Process
+
+1. **Gather SDK Context** — User provides SDK/API reference (REQUIRED)
+2. **Understand** — Research SDK patterns from official docs
+3. **Plan** — Identify reusable resources and product area category
+4. **Create** — Write SKILL.md in `.github/skills/<skill-name>/`
+5. **Categorize** — Create symlink in `skills/<language>/<category>/`
+6. **Test** — Create acceptance criteria and test scenarios
+7. **Document** — Update README.md skill catalog
+8. **Iterate** — Refine based on real usage
+
+### Step 1: Gather SDK Context (REQUIRED)
+
+**Before creating any SDK skill, the user MUST provide:**
+
+| Required                  | Example                                                   | Purpose                  |
+| ------------------------- | --------------------------------------------------------- | ------------------------ |
+| **SDK Package**           | `azure-ai-agents`, `Azure.AI.OpenAI`                      | Identifies the exact SDK |
+| **Documentation URL**     | `https://learn.microsoft.com/en-us/azure/ai-services/...` | Primary source of truth  |
+| **Repository** (optional) | `Azure/azure-sdk-for-python`                              | For code patterns        |
+
+**Prompt the user if not provided:**
+
+```
+To create this skill, I need:
+1. The SDK package name (e.g., azure-ai-projects)
+2. The Microsoft Learn documentation URL or GitHub repo
+3. The target language (py/dotnet/ts/java)
+```
+
+**Search official docs first:**
+
+```bash
+# Use microsoft-docs MCP to get current API patterns
+# Query: "[SDK name] [operation] [language]"
+# Verify: Parameters match the latest SDK version
+```
+
+### Step 2: Understand the Skill
+
+Gather concrete examples:
+
+- "What SDK operations should this skill cover?"
+- "What triggers should activate this skill?"
+- "What errors do developers commonly encounter?"
+
+| Example Task               | Reusable Resource              |
+| -------------------------- | ------------------------------ |
+| Same auth code each time   | Code example in SKILL.md       |
+| Complex streaming patterns | `references/streaming.md`      |
+| Tool configurations        | `references/tools.md`          |
+| Error handling patterns    | `references/error-handling.md` |
+
+### Step 3: Plan Product Area Category
+
+Skills are organized by **language** and **product area** in the `skills/` directory via symlinks.
+
+**Product Area Categories:**
+
+| Category      | Description                             | Examples                                     |
+| ------------- | --------------------------------------- | -------------------------------------------- |
+| `foundry`     | AI Foundry, agents, projects, inference | `azure-ai-agents-py`, `azure-ai-projects-py` |
+| `data`        | Storage, Cosmos DB, Tables, Data Lake   | `azure-cosmos-py`, `azure-storage-blob-py`   |
+| `messaging`   | Event Hubs, Service Bus, Event Grid     | `azure-eventhub-py`, `azure-servicebus-py`   |
+| `monitoring`  | OpenTelemetry, App Insights, Query      | `azure-monitor-opentelemetry-py`             |
+| `identity`    | Authentication, DefaultAzureCredential  | `azure-identity-py`                          |
+| `security`    | Key Vault, secrets, keys, certificates  | `azure-keyvault-py`                          |
+| `integration` | API Management, App Configuration       | `azure-appconfiguration-py`                  |
+| `compute`     | Batch, ML compute                       | `azure-compute-batch-java`                   |
+| `container`   | Container Registry, ACR                 | `azure-containerregistry-py`                 |
+
+**Determine the category** based on:
+
+1. Azure service family (Storage → `data`, Event Hubs → `messaging`)
+2. Primary use case (AI agents → `foundry`)
+3. Existing skills in the same service area
+
+### Step 4: Create the Skill
+
+**Location:** `.github/skills/<skill-name>/SKILL.md`
+
+**Naming convention:**
+
+- `azure-<service>-<subservice>-<language>`
+- Examples: `azure-ai-agents-py`, `azure-cosmos-java`, `azure-storage-blob-ts`
+
+**For Azure SDK skills:**
+
+1. Search `microsoft-docs` MCP for current API patterns
+2. Verify against installed SDK version
+3. Follow the section order above
+4. Include cleanup code in examples
+5. Add feature comparison tables
+
+**Write bundled resources first**, then SKILL.md.
+
+**Frontmatter:**
+
+```yaml
+---
+name: skill-name-py
+description: |
+  Azure Service SDK for Python. Use for [specific features].
+  Triggers: "service name", "create resource", "specific operation".
+---
+```
+
+### Step 5: Categorize with Symlinks
+
+After creating the skill in `.github/skills/`, create a symlink in the appropriate category:
+
+```bash
+# Pattern: skills/<language>/<category>/<short-name> -> ../../../.github/skills/<full-skill-name>
+
+# Example for azure-ai-agents-py in python/foundry:
+cd skills/python/foundry
+ln -s ../../../.github/skills/azure-ai-agents-py agents
+
+# Example for azure-cosmos-db-py in python/data:
+cd skills/python/data
+ln -s ../../../.github/skills/azure-cosmos-db-py cosmos-db
+```
+
+**Symlink naming:**
+
+- Use short, descriptive names (e.g., `agents`, `cosmos`, `blob`)
+- Remove the `azure-` prefix and language suffix
+- Match existing patterns in the category
+
+**Verify the symlink:**
+
+```bash
+ls -la skills/python/foundry/agents
+# Should show: agents -> ../../../.github/skills/azure-ai-agents-py
+```
+
+### Step 6: Create Tests
+
+**Every skill MUST have acceptance criteria and test scenarios.**
+
+#### 6.1 Create Acceptance Criteria
+
+**Location:** `tests/scenarios/<skill-name>/acceptance-criteria.md`
+
+**Source materials** (in priority order):
+
+1. Official Microsoft Learn docs (via `microsoft-docs` MCP)
+2. SDK source code from the repository
+3. Existing reference files in the skill
+
+**Format:**
+
+```markdown
+# Acceptance Criteria: <skill-name>
+
+**SDK**: `package-name`
+**Repository**: https://github.com/Azure/azure-sdk-for-<language>
+**Purpose**: Skill testing acceptance criteria
+
+---
+
+## 1. Correct Import Patterns
+
+### 1.1 Client Imports
+
+#### ✅ CORRECT: Main Client
+
+\`\`\`python
+from azure.ai.mymodule import MyClient
+from azure.identity import DefaultAzureCredential
+\`\`\`
+
+#### ❌ INCORRECT: Wrong Module Path
+
+\`\`\`python
+from azure.ai.mymodule.models import MyClient # Wrong - Client is not in models
+\`\`\`
+
+## 2. Authentication Patterns
+
+#### ✅ CORRECT: DefaultAzureCredential + context manager
+
+\`\`\`python
+credential = DefaultAzureCredential()
+with MyClient(endpoint, credential) as client:
+    client.do_thing()
+\`\`\`
+
+#### ❌ INCORRECT: Hardcoded Credentials
+
+\`\`\`python
+client = MyClient(endpoint, api_key="hardcoded")  # Security risk
+\`\`\`
+
+#### ❌ INCORRECT: Connection string / account key when Entra is supported
+
+\`\`\`python
+client = MyClient.from_connection_string(os.environ["CONNECTION_STRING"])  # Bypasses Entra audit/rotation
+\`\`\`
+
+#### ❌ INCORRECT: Bare client without context manager
+
+\`\`\`python
+client = MyClient(endpoint, credential)  # Leaks HTTP transport on exception / interpreter exit
+client.do_thing()
+\`\`\`
+```
+
+**Critical patterns to document:**
+
+- Import paths (these vary significantly between Azure SDKs)
+- Authentication patterns
+- Client initialization
+- Async variants (`.aio` modules)
+- Common anti-patterns
+
+#### 6.2 Create Test Scenarios
+
+**Location:** `tests/scenarios/<skill-name>/scenarios.yaml`
+
+```yaml
+config:
+  model: gpt-4
+  max_tokens: 2000
+  temperature: 0.3
+
+scenarios:
+  - name: basic_client_creation
+    prompt: |
+      Create a basic example using the Azure SDK.
+      Include proper authentication and client initialization.
+    expected_patterns:
+      - "DefaultAzureCredential"
+      - "MyClient"
+      - "with MyClient"  # enforce context manager
+    forbidden_patterns:
+      - "api_key="
+      - "hardcoded"
+      - "from_connection_string"  # prefer Entra over connection strings
+    tags:
+      - basic
+      - authentication
+    mock_response: |
+      import os
+      from azure.identity import DefaultAzureCredential
+      from azure.ai.mymodule import MyClient
+
+      credential = DefaultAzureCredential()
+      with MyClient(
+          endpoint=os.environ["AZURE_ENDPOINT"],
+          credential=credential,
+      ) as client:
+          # ... rest of working example
+          pass
+```
+
+**Scenario design principles:**
+
+- Each scenario tests ONE specific pattern or feature
+- `expected_patterns` — patterns that MUST appear
+- `forbidden_patterns` — common mistakes that must NOT appear
+- `mock_response` — complete, working code that passes all checks
+- `tags` — for filtering (`basic`, `async`, `streaming`, `tools`)
+
+#### 6.3 Run Tests
+
+```bash
+cd tests
+pnpm install
+
+# Check skill is discovered
+pnpm harness --list
+
+# Run in mock mode (fast, deterministic)
+pnpm harness <skill-name> --mock --verbose
+
+# Run with Ralph Loop (iterative improvement)
+pnpm harness <skill-name> --ralph --mock --max-iterations 5 --threshold 85
+```
+
+**Success criteria:**
+
+- All scenarios pass (100% pass rate)
+- No false positives (mock responses always pass)
+- Patterns catch real mistakes
+
+### Step 7: Update Documentation
+
+After creating the skill:
+
+1. **Update README.md** — Add the skill to the appropriate language section in the Skill Catalog
+   - Update total skill count (line ~73: `> N skills in...`)
+   - Update Skill Explorer link count (line ~15: `Browse all N skills`)
+   - Update language count table (lines ~77-83)
+   - Update language section count (e.g., `> N skills • suffix: -py`)
+   - Update category count (e.g., `<summary><strong>Foundry & AI</strong> (N skills)</summary>`)
+   - Add skill row in alphabetical order within its category
+   - Update test coverage summary (line ~622: `**N skills with N test scenarios**`)
+   - Update test coverage table — update skill count, scenario count, and top skills for the language
+
+2. **Regenerate GitHub Pages data** — Run the extraction script to update the docs site
+
+   ```bash
+   cd docs-site && npx tsx scripts/extract-skills.ts
+   ```
+
+   This updates `docs-site/src/data/skills.json` which feeds the Astro-based docs site.
+   Then rebuild the docs site:
+
+   ```bash
+   cd docs-site && npm run build
+   ```
+
+   This outputs to `docs/` which is served by GitHub Pages.
+
+3. **Verify AGENTS.md** — Ensure the skill count is accurate
+
+---
+
+## Progressive Disclosure Patterns
+
+### Pattern 1: High-Level Guide with References
+
+```markdown
+# SDK Name
+
+## Quick Start
+
+[Minimal example]
+
+## Advanced Features
+
+- **Streaming**: See [references/streaming.md](references/streaming.md)
+- **Tools**: See [references/tools.md](references/tools.md)
+```
+
+### Pattern 2: Language Variants
+
+```
+azure-service-skill/
+├── SKILL.md (overview + language selection)
+└── references/
+    ├── python.md
+    ├── dotnet.md
+    ├── java.md
+    └── typescript.md
+```
+
+### Pattern 3: Feature Organization
+
+```
+azure-ai-agents/
+├── SKILL.md (core workflow)
+└── references/
+    ├── tools.md
+    ├── streaming.md
+    ├── async-patterns.md
+    └── error-handling.md
+```
+
+---
+
+## Design Pattern References
+
+| Reference                          | Contents                             |
+| ---------------------------------- | ------------------------------------ |
+| `references/workflows.md`          | Sequential and conditional workflows |
+| `references/output-patterns.md`    | Templates and examples               |
+| `references/azure-sdk-patterns.md` | Language-specific Azure SDK patterns |
+
+---
+
+## Anti-Patterns
+
+| Don't                            | Why                                        |
+| -------------------------------- | ------------------------------------------ |
+| Create skill without SDK context | Users must provide package name/docs URL   |
+| Put "when to use" in body        | Body loads AFTER triggering                |
+| Hardcode credentials             | Security risk                              |
+| Skip authentication section      | Agents will improvise poorly               |
+| Use outdated SDK patterns        | APIs change; search docs first             |
+| Include README.md                | Agents don't need meta-docs                |
+| Deeply nest references           | Keep one level deep                        |
+| Skip acceptance criteria         | Skills without tests can't be validated    |
+| Skip symlink categorization      | Skills won't be discoverable by category   |
+| Use wrong import paths           | Azure SDKs have specific module structures |
+| Omit sync/async + context-manager bullets from Best Practices in Python skills | End users won't follow rules that aren't written down; examples alone aren't enough |
+| Mix sync and async in the same Python example | Demonstrates the anti-pattern the skill is supposed to prevent |
+
+---
+
+## Checklist
+
+Before completing a skill:
+
+**Prerequisites:**
+
+- [ ] User provided SDK package name or documentation URL
+- [ ] Verified SDK patterns via `microsoft-docs` MCP
+
+**Skill Creation:**
+
+- [ ] Description includes what AND when (trigger phrases)
+- [ ] SKILL.md under 500 lines
+- [ ] Authentication guidance matches language-specific recommendations (including Rust credential guidance)
+- [ ] Includes cleanup/delete in examples
+- [ ] References organized by feature
+- [ ] **(Python skills only) Best Practices section contains the two user-facing rules** (sync-or-async consistency + context managers for clients and async credentials), using the variant matched to the skill type
+- [ ] **(Python skills only)** Every code example obeys both rules (no mixed sync/async; every client wrapped in `with` / `async with`)
+
+**Categorization:**
+
+- [ ] Skill created in `.github/skills/<skill-name>/`
+- [ ] Symlink created in `skills/<language>/<category>/<short-name>`
+- [ ] Symlink points to `../../../.github/skills/<skill-name>`
+
+**Testing:**
+
+- [ ] `tests/scenarios/<skill-name>/acceptance-criteria.md` created with correct/incorrect patterns
+- [ ] `tests/scenarios/<skill-name>/scenarios.yaml` created
+- [ ] All scenarios pass (`pnpm harness <skill> --mock`)
+- [ ] Import paths documented precisely
+
+**Documentation:**
+
+- [ ] README.md skill catalog updated
+- [ ] Instructs to search `microsoft-docs` MCP for current APIs
