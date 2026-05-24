@@ -1,6 +1,7 @@
 ---
 name: user-story
-description: Generate user stories with acceptance criteria and sprint planning. Usage: /user-story <generate|sprint> [options]
+description: Generate user stories with acceptance criteria and sprint planning. Usage: /user-story <generate|sprint> [options]. Use when you need help with user story.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /user-story

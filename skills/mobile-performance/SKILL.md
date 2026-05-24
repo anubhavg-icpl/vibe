@@ -1,10 +1,12 @@
 ---
 name: mobile-performance
-description: Expert in mobile app performance optimization for iOS and Android
-risk: unknown
-source: community
-kind: mode
-category: mobile
+description: Expert in mobile app performance optimization for iOS and Android. Use when developing mobile applications with mobile.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: mobile
 ---
 
 # Mobile Performance Expert Mode

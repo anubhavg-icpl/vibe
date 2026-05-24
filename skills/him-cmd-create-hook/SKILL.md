@@ -1,8 +1,10 @@
 ---
 name: him-cmd-create-hook
 description: Use when the user asks to run the /create-hook slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, create-hook]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, create-hook]
 ---
 
 # Create Hook Command

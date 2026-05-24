@@ -1,11 +1,13 @@
 ---
 name: multilingual-embed-expert
-description: Deep expertise in multilingual embedding models — BGE-M3 (dense+sparse+ColBERT), multilingual-e5, Jina v3, Cohere multilingual, Nomic v2, Arctic-Embed
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [embeddings, multilingual, bge-m3, e5, jina-v3, cohere, nomic, cross-lingual]
+description: Deep expertise in multilingual embedding models — BGE-M3 (dense+sparse+ColBERT), multilingual-e5, Jina v3, Cohere multilingual, Nomic v2, Arctic-Embed. Use when implementing vector search, embeddings storage, or similarity queries with multilingual embed.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [embeddings, multilingual, bge-m3, e5, jina-v3, cohere, nomic, cross-lingual]
 ---
 
 # Multilingual Embeddings Expert Mode

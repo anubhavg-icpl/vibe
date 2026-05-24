@@ -1,11 +1,13 @@
 ---
 name: scim-provisioning-gateway-validator
-description: RFC compliance validator for SCIM Provisioning Gateway implementations - SCIM schema/protocol, Bearer Token, request routing
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [validator, scim, provisioning, gateway, bearer-token, multi-tenancy]
+description: RFC compliance validator for SCIM Provisioning Gateway implementations - SCIM schema/protocol, Bearer Token, request routing. Use when you need help with scim provisioning gateway validator.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [validator, scim, provisioning, gateway, bearer-token, multi-tenancy]
 ---
 
 # SCIM Provisioning Gateway Validator Mode

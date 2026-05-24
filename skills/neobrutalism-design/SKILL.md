@@ -1,11 +1,13 @@
 ---
 name: neobrutalism-design
-description: Expert in the Neobrutalism design system - Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, bold]
+description: Expert in the Neobrutalism design system - Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces. Use when building UI components, applying design tokens, or implementing visual styles for neobrutalism.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, bold]
 ---
 
 # Neobrutalism Design System Mode

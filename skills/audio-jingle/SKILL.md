@@ -1,11 +1,12 @@
 ---
 name: audio-jingle
-description: |
+description: |. Use when you need help with audio jingle.
   Audio generation skill — jingles, beds, voiceover, and sound effects.
   Routes music requests to Suno V5 / Udio / Lyria, speech to MiniMax
   TTS / FishAudio / ElevenLabs V3, and SFX to ElevenLabs SFX or
   AudioCraft. Output is one MP3/WAV file saved to the project folder.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "music"
   - "jingle"
   - "bed"
@@ -15,7 +16,7 @@ triggers:
   - "音乐"
   - "配音"
   - "音效"
-od:
+od: 
   mode: audio
   surface: audio
   scenario: marketing

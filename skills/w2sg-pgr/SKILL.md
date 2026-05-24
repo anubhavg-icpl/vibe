@@ -1,10 +1,12 @@
 ---
 name: w2sg-pgr
-description: Audit a scalable-oversight or W2SG claim via the performance-gap-recovered metric.
-version: 1.0.0
+description: Audit a scalable-oversight or W2SG claim via the performance-gap-recovered metric. Use when you need help with w2sg pgr.
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 11
-tags: [scalable-oversight, weak-to-strong, pgr, debate, recursive-reward-modeling]
+metadata:
+  version: 1.0.0
+  tags: [scalable-oversight, weak-to-strong, pgr, debate, recursive-reward-modeling]
 ---
 
 Given a scalable-oversight or W2SG paper / report, audit whether the setup supports its claim.

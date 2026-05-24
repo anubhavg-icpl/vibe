@@ -1,6 +1,7 @@
 ---
 name: "gc-review"
-description: "/cs:gc-review <plan> — General Counsel interrogation of contracts, IP, regulatory, term sheets, and employment-law surface."
+description: /cs:gc-review <plan> — General Counsel interrogation of contracts, IP, regulatory, term sheets, and employment-law surface. Use when you need help with gc review.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:gc-review — General Counsel Forcing Questions

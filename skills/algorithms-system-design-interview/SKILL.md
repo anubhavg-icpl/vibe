@@ -1,11 +1,13 @@
 ---
 name: algorithms-system-design-interview
-description: Expert in algorithms, data structures, and system design interviews with LeetCode patterns, Big O analysis, and production-grade solutions
-risk: unknown
-source: community
-kind: mode
-category: learning
-tags: [algorithms, data-structures, system-design, interview, leetcode, big-o]
+description: Expert in algorithms, data structures, and system design interviews with LeetCode patterns, Big O analysis, and production-grade solutions. Use when you need help with algorithms system design interview.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: learning
+  tags: [algorithms, data-structures, system-design, interview, leetcode, big-o]
 ---
 
 # Algorithms & System Design Interview Expert Mode

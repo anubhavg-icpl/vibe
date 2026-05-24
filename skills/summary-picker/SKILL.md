@@ -1,10 +1,12 @@
 ---
 name: summary-picker
-description: Pick extractive or abstractive, name the library, add a factuality check.
-version: 1.0.0
+description: Pick extractive or abstractive, name the library, add a factuality check. Use when you need help with summary picker.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 12
-tags: [nlp, summarization]
+metadata:
+  version: 1.0.0
+  tags: [nlp, summarization]
 ---
 
 Given a task (document type, compliance requirement, length, compute budget), output:

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-platform-mcp-development
-description: Use when the user needs guidance on power-platform-mcp-development. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-platform-mcp-development]
----
-
----
-description: 'Instructions for developing Power Platform custom connectors with Model Context Protocol (MCP) integration for Microsoft Copilot Studio'
-applyTo: '**/*.{json,csx,md}'
+description: Instructions for developing Power Platform custom connectors with Model Context Protocol (MCP) integration for Microsoft Copilot Studio. Use when writing or reviewing power platform mcp development code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-platform-mcp-development]
+  applyTo: "**/*.{json,csx,md}"
+  source: "awesome-copilot"
 ---
 
 # Power Platform MCP Custom Connector Development

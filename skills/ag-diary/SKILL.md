@@ -1,8 +1,10 @@
 ---
 name: diary
-description: "Unified Diary System: A context-preserving automated logger for multi-project development."
-risk: safe
-source: self
+description: Unified Diary System: A context-preserving automated logger for multi-project development. Use when you need help with diary.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: self
 ---
 
 # 📔 Unified Diary System

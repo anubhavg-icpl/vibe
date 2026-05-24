@@ -1,10 +1,12 @@
 ---
 name: js-index-maps
-description: Build Index Maps for Repeated Lookups
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Build Index Maps for Repeated Lookups. Use when you need help with js index maps.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Build Index Maps for Repeated Lookups

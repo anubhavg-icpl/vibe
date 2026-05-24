@@ -1,10 +1,12 @@
 ---
 name: slo-goodput-gate
-description: Produce a CI/CD-ready benchmark recipe that gates LLM deploys on goodput, not throughput, with P50/P90/P99 percentiles and a documented tool choice.
-version: 1.0.0
+description: Produce a CI/CD-ready benchmark recipe that gates LLM deploys on goodput, not throughput, with P50/P90/P99 percentiles and a documented tool choice. Use when you need help with slo goodput gate.
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 08
-tags: [inference-metrics, goodput, ttft, tpot, itl, slo, benchmarking]
+metadata:
+  version: 1.0.0
+  tags: [inference-metrics, goodput, ttft, tpot, itl, slo, benchmarking]
 ---
 
 Given a workload (model, hardware, target concurrency, user-facing interaction type — streaming chat / one-shot / voice / agent), produce a goodput-based SLO gate for CI/CD.

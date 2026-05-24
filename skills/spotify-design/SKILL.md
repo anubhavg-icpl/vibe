@@ -1,11 +1,13 @@
 ---
 name: spotify-design
-description: Expert in the Spotify design system - Music streaming. Vibrant green on dark, bold type, album-art-driven.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+description: Expert in the Spotify design system - Music streaming. Vibrant green on dark, bold type, album-art-driven. Use when building UI components, applying design tokens, or implementing visual styles for spotify.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # Spotify Design System Mode

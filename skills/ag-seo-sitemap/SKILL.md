@@ -1,21 +1,23 @@
 ---
 name: seo-sitemap
-description: >
+description: >. Use when you need help with seo sitemap.
   Analyze existing XML sitemaps or generate new ones with industry templates.
   Validates format, URLs, and structure. Use when user says "sitemap",
   "generate sitemap", "sitemap issues", or "XML sitemap".
-risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 user-invokable: true
 argument-hint: "[url or generate]"
-allowed-tools:
+allowed-tools: 
   - Read
   - Grep
   - Glob
   - Bash
   - WebFetch
   - Write
+metadata:
+  risk: unknown
+  source: "https://github.com/AgriciDaniel/claude-seo"
+  date_added: "2026-03-21"
 ---
 
 # Sitemap Analysis & Generation

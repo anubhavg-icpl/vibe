@@ -1,9 +1,11 @@
 ---
 name: oss-hunter
-description: "Automatically hunt for high-impact OSS contribution opportunities in trending repositories."
-risk: safe
-source: "https://github.com/jackjin1997/ClawForge"
-date_added: "2026-02-27"
+description: Automatically hunt for high-impact OSS contribution opportunities in trending repositories. Use when you need help with oss hunter.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/jackjin1997/ClawForge"
+  date_added: "2026-02-27"
 ---
 
 # OSS Hunter 🎯

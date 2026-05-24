@@ -1,6 +1,6 @@
 ---
 name: social-carousel
-description: |
+description: |. Use when you need help with social carousel.
   A three-card social-media carousel laid out as 1080×1080 squares —
   three cinematic, on-brand panels with display headlines that connect
   across the series ("onwards." → "to the next one." → "looking ahead.").
@@ -8,7 +8,8 @@ description: |
   affordance. Use when the brief asks for a "carousel post", "social
   carousel", "Instagram carousel", "LinkedIn series", "X thread cards",
   or "三连发".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "social carousel"
   - "carousel post"
   - "instagram carousel"
@@ -17,7 +18,7 @@ triggers:
   - "social series"
   - "三连发"
   - "轮播图"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

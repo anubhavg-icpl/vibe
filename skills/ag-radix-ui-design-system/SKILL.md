@@ -1,9 +1,11 @@
 ---
 name: radix-ui-design-system
-description: "Build accessible design systems with Radix UI primitives. Headless component customization, theming strategies, and compound component patterns for production-grade UI libraries."
-risk: safe
-source: self
-date_added: "2026-02-27"
+description: Build accessible design systems with Radix UI primitives. Headless component customization, theming strategies, and compound component patterns for production-grade UI libraries. Use when you need help with radix ui design system.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: self
+  date_added: "2026-02-27"
 ---
 
 # Radix UI Design System

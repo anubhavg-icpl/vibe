@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-csharp-ja
-description: Use when the user needs guidance on csharp-ja. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, csharp-ja]
----
-
----
-description: 'C# アプリケーション構築指針 by @tsubakimoto'
-applyTo: '**/*.cs'
+description: "Use when the user needs guidance on csharp-ja. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, csharp-ja]
+  applyTo: "**/*.cs"
+  source: "awesome-copilot"
 ---
 
 # C# アプリケーション開発

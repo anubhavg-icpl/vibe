@@ -1,13 +1,14 @@
 ---
 name: digital-eguide
-description: |
+description: |. Use when you need help with digital eguide.
   A two-spread digital e-guide preview — page 1 is a cover (display title,
   author, "What's inside" stats, table of contents teaser); page 2 is a
   spread (lesson body with pull-quote and a step list). Lifestyle / creator
   brand tone. Use when the brief asks for an "e-guide", "digital guide",
   "lookbook", "lead magnet", "creator guide", "playbook", "PDF guide",
   or "电子指南".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "e-guide"
   - "digital guide"
   - "lead magnet"
@@ -18,7 +19,7 @@ triggers:
   - "ebook"
   - "电子指南"
   - "电子书"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

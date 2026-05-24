@@ -1,11 +1,13 @@
 ---
 name: acd-remix-mercury-x-linear-design
-description: Remix. Mercury's cream-canvas fintech warmth + Linear's surgical UI density. For B2B finance dashboards, billing consoles, and treasury tools that need Linear-grade information density without losing the trust-broadcasting warmth Mercury...
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, remix, claude-design]
+description: "Remix. Mercury's cream-canvas fintech warmth + Linear's surgical UI density. For B2B finance dashboards, billing consoles, and treasury tools that need Linear-grade information density without losing the trust-broadcasting warmth Mercury. Use when building UI components, applying design tokens, or implementing visual styles for remix mercury x linear."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, remix, claude-design]
 ---
 
 # Mercury × Linear — Surgical Density On Warm Paper Design Mode

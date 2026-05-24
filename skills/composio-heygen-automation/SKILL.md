@@ -1,7 +1,8 @@
 ---
 name: HeyGen Automation
-description: "Automate AI video generation, avatar browsing, template-based video creation, and video status tracking through HeyGen's platform via Composio"
-requires:
+description: "Automate AI video generation, avatar browsing, template-based video creation, and video status tracking through HeyGen's platform via Composio. Use when you need help with HeyGen Automation."
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

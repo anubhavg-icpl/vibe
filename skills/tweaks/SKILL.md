@@ -1,6 +1,6 @@
 ---
 name: tweaks
-description: |
+description: |. Use when you need help with tweaks.
   Wrap any HTML artifact with a side panel of live, parameterized
   controls — accent color, type scale, density, motion, theme — that
   rewrite CSS custom properties in real time and persist to
@@ -8,7 +8,8 @@ description: |
   re-prompting the agent. Use when the brief asks for "variants",
   "side-by-side options", "tweak this", "let me adjust", "live
   knobs", or "实时调参".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "tweaks"
   - "variants"
   - "tweak panel"
@@ -18,7 +19,7 @@ triggers:
   - "可调参数面板"
   - "side panel"
   - "knobs"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: design

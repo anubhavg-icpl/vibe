@@ -1,10 +1,12 @@
 ---
 name: web3-developer
-description: web3-developer
-risk: unknown
-source: community
-kind: mode
-category: blockchain
+description: web3-developer. Use when building blockchain, DeFi, or Web3 applications with web3.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: blockchain
 ---
 
 # Web3 Developer Mode

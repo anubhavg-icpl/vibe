@@ -1,7 +1,8 @@
 ---
 name: chaser-automation
-description: "Automate Chaser tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Chaser tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with chaser automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

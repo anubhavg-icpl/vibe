@@ -1,13 +1,15 @@
 ---
 name: lex
-description: "Centralized 'Truth Engine' for cross-jurisdictional legal context (US, EU, CA) and contract scaffolding."
-category: business
-risk: safe
-source: community
-date_added: "2026-03-10"
+description: "Centralized 'Truth Engine' for cross-jurisdictional legal context (US, EU, CA) and contract scaffolding. Use when you need help with lex."
+license: CC-BY-NC-SA-4.0
 author: Svobikl
-tags: [legal, context, cross-jurisdictional, compliance, scaffolding]
 tools: [claude, cursor, gemini]
+metadata:
+  category: business
+  risk: safe
+  source: community
+  date_added: "2026-03-10"
+  tags: [legal, context, cross-jurisdictional, compliance, scaffolding]
 ---
 
 # LEX: Legal-Entity-X-ref

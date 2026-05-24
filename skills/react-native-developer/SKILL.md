@@ -1,10 +1,12 @@
 ---
 name: react-native-developer
-description: react-native-developer
-risk: unknown
-source: community
-kind: mode
-category: mobile
+description: react-native-developer. Use when developing mobile applications with react native.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: mobile
 ---
 
 # React Native Developer Mode

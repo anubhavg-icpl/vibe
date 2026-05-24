@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-terraform
-description: Use when the user needs guidance on terraform. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, terraform]
----
-
----
-description: 'Terraform Conventions and Guidelines'
-applyTo: '**/*.tf'
+description: "Use when the user needs guidance on terraform. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, terraform]
+  applyTo: "**/*.tf"
+  source: "awesome-copilot"
 ---
 
 # Terraform Conventions

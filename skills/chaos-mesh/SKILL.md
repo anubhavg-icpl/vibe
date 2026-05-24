@@ -1,11 +1,13 @@
 ---
 name: chaos-mesh
-description: Expert in Chaos Mesh - PingCAP's Kubernetes-native chaos engineering platform
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [chaos-mesh, pingcap, kubernetes, chaos-engineering, fault-injection, tidb]
+description: "Expert in Chaos Mesh - PingCAP's Kubernetes-native chaos engineering platform. Use when writing, running, or improving tests with chaos mesh."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [chaos-mesh, pingcap, kubernetes, chaos-engineering, fault-injection, tidb]
 ---
 
 # Chaos Mesh Expert Mode

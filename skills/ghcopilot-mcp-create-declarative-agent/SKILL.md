@@ -1,6 +1,7 @@
 ---
 name: mcp-create-declarative-agent
-description: 'Skill converted from mcp-create-declarative-agent.prompt.md'
+description: Skill converted from mcp-create-declarative-agent.prompt.md. Use when you need help with mcp create declarative agent.
+license: CC-BY-NC-SA-4.0
 ---
 
 ````prompt

@@ -1,7 +1,8 @@
 ---
 name: Eventbrite Automation
-description: "Automate Eventbrite event management, attendee tracking, organization discovery, and category browsing through natural language commands"
-requires:
+description: Automate Eventbrite event management, attendee tracking, organization discovery, and category browsing through natural language commands. Use when you need help with Eventbrite Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

@@ -1,10 +1,12 @@
 ---
 name: development
-description: development
-risk: unknown
-source: community
-kind: mode
-category: workflows
+description: development. Use when you need help with development.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: workflows
 ---
 
 # Development Workflow

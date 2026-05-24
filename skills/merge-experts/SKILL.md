@@ -1,11 +1,13 @@
 ---
 name: merge-experts
-description: MergeKit recipes — SLERP, TIES, DARE, model soups, task arithmetic, MoE merging
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [merging, mergekit, slerp, ties, dare, model-soups]
+description: MergeKit recipes — SLERP, TIES, DARE, model soups, task arithmetic, MoE merging. Use when fine-tuning, training, or adapting language models with merge experts techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [merging, mergekit, slerp, ties, dare, model-soups]
 ---
 
 # Model Merging Expert Mode

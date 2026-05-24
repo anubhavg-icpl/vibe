@@ -1,11 +1,13 @@
 ---
 name: model-card-publish-expert
-description: Author HF model cards — README.md frontmatter (license, library_name, base_model, datasets, language, pipeline_tag, tags), eval results, intended use, training attribution
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, model-card, huggingface, readme, frontmatter, license, attribution]
+description: Author HF model cards — README.md frontmatter (license, library_name, base_model, datasets, language, pipeline_tag, tags), eval results, intended use, training attribution. Use when creating, converting, or publishing model files with model card publish.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, model-card, huggingface, readme, frontmatter, license, attribution]
 ---
 
 # Model Card Publish Expert Mode

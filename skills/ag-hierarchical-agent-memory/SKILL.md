@@ -1,9 +1,11 @@
 ---
 name: hierarchical-agent-memory
-description: "Scoped CLAUDE.md memory system that reduces context token spend. Creates directory-level context files, tracks savings via dashboard, and routes agents to the right sub-context."
-risk: safe
-source: "https://github.com/kromahlusenii-ops/ham"
-date_added: "2026-02-27"
+description: Scoped CLAUDE.md memory system that reduces context token spend. Creates directory-level context files, tracks savings via dashboard, and routes agents to the right sub-context. Use when you need help with hierarchical agent memory.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/kromahlusenii-ops/ham"
+  date_added: "2026-02-27"
 ---
 
 # Hierarchical Agent Memory (HAM)

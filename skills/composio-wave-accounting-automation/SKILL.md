@@ -1,10 +1,12 @@
 ---
 name: Wave Accounting Automation
-description: "Wave Accounting toolkit is not currently available as a native integration. No Wave-specific tools were found in the Composio platform. This skill is a placeholder pending future integration."
-category: accounting
-requires:
+description: Wave Accounting toolkit is not currently available as a native integration. No Wave-specific tools were found in the Composio platform. This skill is a placeholder pending future integration. Use when you need help with Wave Accounting Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
+metadata:
+  category: accounting
 ---
 
 # Wave Accounting Automation

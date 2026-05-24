@@ -1,6 +1,6 @@
 ---
 name: azure-storage-blob-ts
-description: |
+description: |. Use when you need help with azure storage blob ts.
   Azure Blob Storage JavaScript/TypeScript SDK (@azure/storage-blob) for blob operations. Use for uploading, downloading, listing, and managing blobs and containers. Supports block blobs, append blobs, page blobs, SAS tokens, and streaming. Triggers: "blob storage", "@azure/storage-blob", "BlobServiceClient", "ContainerClient", "upload blob", "download blob", "SAS token", "block blob".
 license: MIT
 metadata:

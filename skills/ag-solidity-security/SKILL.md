@@ -1,9 +1,11 @@
 ---
 name: solidity-security
-description: "Master smart contract security best practices, vulnerability prevention, and secure Solidity development patterns."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Master smart contract security best practices, vulnerability prevention, and secure Solidity development patterns. Use when you need help with solidity security.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Solidity Security

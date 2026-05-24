@@ -1,11 +1,13 @@
 ---
 name: aws-fault-injection
-description: Expert in AWS FIS - Native chaos engineering service for AWS infrastructure
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [aws, fis, chaos-engineering, fault-injection, resilience, cloud-native]
+description: Expert in AWS FIS - Native chaos engineering service for AWS infrastructure. Use when writing, running, or improving tests with aws fault injection.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [aws, fis, chaos-engineering, fault-injection, resilience, cloud-native]
 ---
 
 # AWS Fault Injection Simulator Expert Mode

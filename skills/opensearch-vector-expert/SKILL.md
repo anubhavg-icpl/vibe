@@ -1,11 +1,13 @@
 ---
 name: opensearch-vector-expert
-description: Deep expertise in OpenSearch k-NN — Lucene/Faiss/NMSLIB engines, neural sparse, hybrid query DSL, and ML Commons inference
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, opensearch, knn, faiss, lucene, neural-sparse, hybrid-search]
+description: Deep expertise in OpenSearch k-NN — Lucene/Faiss/NMSLIB engines, neural sparse, hybrid query DSL, and ML Commons inference. Use when implementing vector search, embeddings storage, or similarity queries with opensearch vector.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, opensearch, knn, faiss, lucene, neural-sparse, hybrid-search]
 ---
 
 # OpenSearch Vector Search Expert Mode

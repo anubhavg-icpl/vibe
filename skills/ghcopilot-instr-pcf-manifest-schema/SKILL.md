@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-manifest-schema
-description: Use when the user needs guidance on pcf-manifest-schema. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-manifest-schema]
----
-
----
-description: 'Complete manifest schema reference for PCF components with all available XML elements'
-applyTo: '**/*.xml'
+description: "Use when the user needs guidance on pcf-manifest-schema. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-manifest-schema]
+  applyTo: "**/*.xml"
+  source: "awesome-copilot"
 ---
 
 # Manifest Schema Reference

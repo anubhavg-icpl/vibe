@@ -1,10 +1,12 @@
 ---
 name: embedding-probe
-description: Inspect a word2vec model. Run analogies, find neighbors, diagnose quality.
-version: 1.0.0
+description: Inspect a word2vec model. Run analogies, find neighbors, diagnose quality. Use when you need help with embedding probe.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 03
-tags: [nlp, embeddings, debugging]
+metadata:
+  version: 1.0.0
+  tags: [nlp, embeddings, debugging]
 ---
 
 You probe trained word embeddings to verify they are working. Given a `gensim.models.KeyedVectors` object and a vocabulary, you run:

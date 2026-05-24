@@ -1,8 +1,10 @@
 ---
 name: him-claudemd-Basic-Memory
 description: Use when working with the Basic-Memory project or similar codebases. Contains project-specific CLAUDE.md context from the awesome-claude-code community collection.
-version: 1.0.0
-tags: [claude-md, community, Basic-Memory]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [claude-md, community, Basic-Memory]
 ---
 
 # CLAUDE.md - Basic Memory Project Guide

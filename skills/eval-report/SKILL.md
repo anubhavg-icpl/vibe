@@ -1,10 +1,12 @@
 ---
 name: eval-report
-description: Plan a full generative-model evaluation: sample quality, adherence, preference, failure audit.
-version: 1.0.0
+description: Plan a full generative-model evaluation: sample quality, adherence, preference, failure audit. Use when you need help with eval report.
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 14
-tags: [evaluation, fid, clip, elo]
+metadata:
+  version: 1.0.0
+  tags: [evaluation, fid, clip, elo]
 ---
 
 Given a new generative-model checkpoint, a reference baseline, and a modality (image / video / audio / 3D), output a full eval plan:

@@ -1,6 +1,7 @@
 ---
 name: microservices-design
-description: Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway
+description: Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway. Use when building UI with microservices design language and visual style.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Microservices Design

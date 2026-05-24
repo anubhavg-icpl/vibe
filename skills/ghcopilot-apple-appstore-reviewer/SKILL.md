@@ -1,6 +1,7 @@
 ---
 name: apple-appstore-reviewer
-description: 'Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons.'
+description: Serves as a reviewer of the codebase with instructions on looking for Apple App Store optimizations or rejection reasons. Use when you need help with apple appstore reviewer.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Apple App Store Review Specialist

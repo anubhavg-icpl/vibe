@@ -1,10 +1,12 @@
 ---
 name: modality-bridge-picker
-description: Recommend Q-Former vs MLP projector vs Perceiver resampler for a VLM configuration given token budget, quality target, and training compute.
-version: 1.0.0
+description: Recommend Q-Former vs MLP projector vs Perceiver resampler for a VLM configuration given token budget, quality target, and training compute. Use when you need help with modality bridge picker.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 03
-tags: [blip2, qformer, vlm, modality-bridge, architecture]
+metadata:
+  version: 1.0.0
+  tags: [blip2, qformer, vlm, modality-bridge, architecture]
 ---
 
 Given a vision encoder's token count per image, the LLM's context budget, the target number of images per prompt, and the training compute budget, recommend which modality bridge to use and justify with parameter counts and token economics.

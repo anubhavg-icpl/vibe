@@ -1,10 +1,12 @@
 ---
 name: video-brief
-description: Translate a video brief into a model + prompt + shot plan for a 2026 video generator.
-version: 1.0.0
+description: Translate a video brief into a model + prompt + shot plan for a 2026 video generator. Use when you need help with video brief.
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 10
-tags: [video, diffusion, sora, veo, kling]
+metadata:
+  version: 1.0.0
+  tags: [video, diffusion, sora, veo, kling]
 ---
 
 Given a video brief (duration, aspect ratio, style, subject, camera plan, audio needs, fidelity bar, budget), output:

@@ -1,6 +1,7 @@
 ---
 name: commit-message-storyteller
 description: 'Analyzes git diffs or staged changes and generates narrative commit messages that explain WHY a change was made, not just what changed — following Conventional Commits format. Use when asked to "write a commit message", "generate a commit", "describe my changes", "what should I commit this as", "commit this", "summarize my diff", or "help me commit". Works with git diff output, staged files, or plain descriptions of changes.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Commit Message Storyteller

@@ -1,7 +1,8 @@
 ---
 name: Clockify Automation
-description: "Automate time tracking workflows in Clockify -- create and manage time entries, workspaces, and users through natural language commands."
-requires:
+description: Automate time tracking workflows in Clockify -- create and manage time entries, workspaces, and users through natural language commands. Use when you need help with Clockify Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

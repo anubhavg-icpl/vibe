@@ -1,11 +1,13 @@
 ---
 name: mythos-adversarial-validator
-description: Challenge proposed security findings with counter-arguments before they reach an analyst, reducing false positives
-risk: unknown
-source: community
-kind: mode
-category: defense
-tags: [mythos, defense, validation, false-positives, glasswing]
+description: Challenge proposed security findings with counter-arguments before they reach an analyst, reducing false positives. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving adversarial validator.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: defense
+  tags: [mythos, defense, validation, false-positives, glasswing]
 ---
 
 # Mythos Adversarial Validator Mode

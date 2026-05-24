@@ -1,11 +1,13 @@
 ---
 name: together-ai-design
-description: Expert in the Together AI design system - Open-source AI infrastructure. Technical, blueprint-style design.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+description: Expert in the Together AI design system - Open-source AI infrastructure. Technical, blueprint-style design. Use when building UI components, applying design tokens, or implementing visual styles for together ai.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # Together AI Design System Mode

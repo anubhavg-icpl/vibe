@@ -1,11 +1,13 @@
 ---
 name: mythos-pattern-vuln-finder
-description: Mass-scan repos for known dangerous patterns and prioritize by exploitability
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, sast, semgrep, ripgrep, pattern-matching, defensive]
+description: Mass-scan repos for known dangerous patterns and prioritize by exploitability. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving pattern vuln finder.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, sast, semgrep, ripgrep, pattern-matching, defensive]
 ---
 
 # Mythos Pattern Vuln Finder Mode

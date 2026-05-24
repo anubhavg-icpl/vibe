@@ -1,13 +1,14 @@
 ---
 name: ghcopilot-instr-memory-bank
-description: Use when the user needs guidance on memory-bank. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, memory-bank]
+description: "Use when the user needs guidance on memory-bank. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, memory-bank]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
----
-applyTo: '**'
----
 Coding standards, domain knowledge, and preferences that AI should follow.
 
 # Memory Bank

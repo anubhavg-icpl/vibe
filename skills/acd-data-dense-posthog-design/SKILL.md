@@ -1,11 +1,13 @@
 ---
 name: acd-data-dense-posthog-design
-description: Reference DESIGN.md for analytics products that don't want to feel cold. Saturated cobalt + warning yellow on white. Hedgehog-tier personality without losing chart density.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, data-dense, claude-design]
+description: "Reference DESIGN.md for analytics products that don't want to feel cold. Saturated cobalt + warning yellow on white. Hedgehog-tier personality without losing chart density. Use when building UI components, applying design tokens, or implementing visual styles for data dense posthog."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, data-dense, claude-design]
 ---
 
 # PostHog — Friendly Data-Dense Design Mode

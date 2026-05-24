@@ -1,10 +1,12 @@
 ---
 name: sampling-loop-designer
-description: Design a server-hosted agent loop using MCP sampling with the right modelPreferences, rate limits, and safety confirmations.
-version: 1.0.0
+description: Design a server-hosted agent loop using MCP sampling with the right modelPreferences, rate limits, and safety confirmations. Use when you need help with sampling loop designer.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 11
-tags: [mcp, sampling, agent-loop, model-preferences]
+metadata:
+  version: 1.0.0
+  tags: [mcp, sampling, agent-loop, model-preferences]
 ---
 
 Given a server-side algorithm that needs LLM reasoning (research, summarization, planning, triage), design an MCP sampling-based implementation.

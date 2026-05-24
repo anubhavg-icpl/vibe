@@ -1,12 +1,13 @@
 ---
 name: issues
-description: Interact with GitHub issues - create, list, and view issues.
+description: Interact with GitHub issues - create, list, and view issues. Use when you need help with issues.
+license: CC-BY-NC-SA-4.0
 allowed-tools: Bash(gh *)
-risk: unknown
-source: community
 metadata:
   author: Shpigford
   version: "1.0"
+  risk: unknown
+  source: community
 ---
 
 Interact with GitHub issues - create, list, and view issues.

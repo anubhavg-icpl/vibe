@@ -1,6 +1,7 @@
 ---
 name: "cdo-review"
-description: "/cs:cdo-review <plan> — Decision-driven Chief Data Officer interrogation of any plan that touches training data, data architecture, data productization, or data team hiring."
+description: /cs:cdo-review <plan> — Decision-driven Chief Data Officer interrogation of any plan that touches training data, data architecture, data productization, or data team hiring. Use when you need help with cdo review.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:cdo-review — CDO Forcing Questions

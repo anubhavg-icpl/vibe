@@ -1,11 +1,13 @@
 ---
 name: acd-editorial-vercel-design
-description: Reference DESIGN.md for grayscale-only editorial. No accent. Geometry and type carry the entire identity.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, editorial, claude-design]
+description: Reference DESIGN.md for grayscale-only editorial. No accent. Geometry and type carry the entire identity. Use when building UI components, applying design tokens, or implementing visual styles for editorial vercel.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, editorial, claude-design]
 ---
 
 # Vercel — Editorial Grayscale Design Mode

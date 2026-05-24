@@ -1,10 +1,12 @@
 ---
 name: code-migration
-description: Expert in migrating codebases between languages, frameworks, and platforms
-risk: unknown
-source: community
-kind: mode
-category: refactoring
+description: Expert in migrating codebases between languages, frameworks, and platforms. Use when you need help with code migration.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: refactoring
 ---
 
 # Code Migration Expert Mode

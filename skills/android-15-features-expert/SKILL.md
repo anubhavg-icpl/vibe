@@ -1,11 +1,13 @@
 ---
 name: android-15-features-expert
-description: Headline Android 15 (API 35) developer features — edge-to-edge, predictive back, foreground service types, NFC observe mode, satellite, Private Space, screen recording detection
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, android-15, api-35, edge-to-edge, predictive-back, foreground-services, nfc]
+description: Headline Android 15 (API 35) developer features — edge-to-edge, predictive back, foreground service types, NFC observe mode, satellite, Private Space, screen recording detection. Use when developing Android apps with android 15 features.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, android-15, api-35, edge-to-edge, predictive-back, foreground-services, nfc]
 ---
 
 # Android 15 Features Expert Mode

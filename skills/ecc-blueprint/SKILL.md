@@ -1,6 +1,6 @@
 ---
 name: blueprint
-description: >-
+description: >-. Use when you need help with blueprint.
   Turn a one-line objective into a step-by-step construction plan for
   multi-session, multi-agent engineering projects. Each step has a
   self-contained context brief so a fresh agent can execute it cold.
@@ -10,6 +10,7 @@ description: >-
   complex multi-PR task, or describes work that needs multiple sessions.
   DO NOT TRIGGER when: task is completable in a single PR or fewer
   than 3 tool calls, or user says "just do it".
+license: CC-BY-NC-SA-4.0
 origin: community
 ---
 

@@ -1,11 +1,13 @@
 ---
 name: fsharp-expert
-description: Expert F# development with functional-first programming on .NET
-risk: unknown
-source: community
-kind: mode
-category: languages
-tags: [fsharp, dotnet, functional, type-providers, computation-expressions]
+description: Expert F# development with functional-first programming on .NET. Use when writing, reviewing, or refactoring fsharp code.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
+  tags: [fsharp, dotnet, functional, type-providers, computation-expressions]
 ---
 
 # F# Expert Mode

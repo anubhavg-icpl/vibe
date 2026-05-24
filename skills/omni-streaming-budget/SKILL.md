@@ -1,10 +1,12 @@
 ---
 name: omni-streaming-budget
-description: Size a Thinker-Talker streaming voice pipeline (Qwen-Omni / Moshi / Mini-Omni) for a target TTFAB and feature set.
-version: 1.0.0
+description: Size a Thinker-Talker streaming voice pipeline (Qwen-Omni / Moshi / Mini-Omni) for a target TTFAB and feature set. Use when you need help with omni streaming budget.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 20
-tags: [qwen-omni, moshi, mini-omni, streaming, ttfab, thinker-talker]
+metadata:
+  version: 1.0.0
+  tags: [qwen-omni, moshi, mini-omni, streaming, ttfab, thinker-talker]
 ---
 
 Given a voice-first product spec (target TTFAB, mic sample rate, vision in yes/no, bilingual, full-duplex) and a compute constraint (GPU class, budget), size the Thinker-Talker pipeline.

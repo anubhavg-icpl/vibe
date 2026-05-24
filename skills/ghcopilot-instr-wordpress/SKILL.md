@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-wordpress
-description: Use when the user needs guidance on wordpress. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, wordpress]
----
-
----
-applyTo: 'wp-content/plugins/**,wp-content/themes/**,**/*.php,**/*.inc,**/*.js,**/*.jsx,**/*.ts,**/*.tsx,**/*.css,**/*.scss,**/*.json'
-description: 'Coding, security, and testing rules for WordPress plugins and themes'
+description: "Use when the user needs guidance on wordpress. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, wordpress]
+  applyTo: "wp-content/plugins/**,wp-content/themes/**,**/*.php,**/*.inc,**/*.js,**/*.jsx,**/*.ts,**/*.tsx,**/*.css,**/*.scss,**/*.json"
+  source: "awesome-copilot"
 ---
 
 # WordPress Development — Copilot Instructions

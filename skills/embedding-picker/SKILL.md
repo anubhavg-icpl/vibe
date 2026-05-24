@@ -1,10 +1,12 @@
 ---
 name: embedding-picker
-description: Pick embedding model, dimension, and retrieval mode for a given corpus and deployment.
-version: 1.0.0
+description: Pick embedding model, dimension, and retrieval mode for a given corpus and deployment. Use when you need help with embedding picker.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 22
-tags: [nlp, embeddings, retrieval]
+metadata:
+  version: 1.0.0
+  tags: [nlp, embeddings, retrieval]
 ---
 
 Given a corpus (size, languages, domain, avg length), deployment target (cloud / edge / on-prem), latency budget, and storage budget, output:

@@ -1,10 +1,12 @@
 ---
 name: skill-tokenizer
-description: Choosing and building tokenizers for LLM projects
-version: 1.0.0
+description: Choosing and building tokenizers for LLM projects. Use when you need help with skill tokenizer.
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 1
-tags: [tokenizer, bpe, wordpiece, sentencepiece, llm, nlp]
+metadata:
+  version: 1.0.0
+  tags: [tokenizer, bpe, wordpiece, sentencepiece, llm, nlp]
 ---
 
 # Tokenizer Selection and Implementation

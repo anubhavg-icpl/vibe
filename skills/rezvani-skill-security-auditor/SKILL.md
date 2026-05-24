@@ -1,6 +1,6 @@
 ---
 name: "skill-security-auditor"
-description: >
+description: >. Use when you need help with skill security auditor.
   Security audit and vulnerability scanner for AI agent skills before installation.
   Use when: (1) evaluating a skill from an untrusted source, (2) auditing a skill
   directory or git repo URL for malicious code, (3) pre-install security gate for
@@ -10,6 +10,7 @@ description: >
   chain risks, (7) verifying file system access stays within skill boundaries.
   Triggers: "audit this skill", "is this skill safe", "scan skill for security",
   "check skill before install", "skill security check", "skill vulnerability scan".
+license: CC-BY-NC-SA-4.0
 ---
 
 # Skill Security Auditor

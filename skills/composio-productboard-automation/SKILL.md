@@ -1,7 +1,8 @@
 ---
 name: Productboard Automation
-description: "Automate product management workflows in Productboard -- manage features, notes, objectives, components, and releases through natural language commands."
-requires:
+description: Automate product management workflows in Productboard -- manage features, notes, objectives, components, and releases through natural language commands. Use when you need help with Productboard Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

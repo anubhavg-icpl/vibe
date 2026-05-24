@@ -1,7 +1,8 @@
 ---
 name: mailcoach-automation
-description: "Automate Mailcoach tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Mailcoach tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with mailcoach automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

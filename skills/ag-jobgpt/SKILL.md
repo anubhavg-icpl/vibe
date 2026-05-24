@@ -1,9 +1,11 @@
 ---
 name: jobgpt
-description: "Job search automation, auto apply, resume generation, application tracking, salary intelligence, and recruiter outreach using the JobGPT MCP server."
-risk: safe
-source: community
-date_added: "2026-03-23"
+description: Job search automation, auto apply, resume generation, application tracking, salary intelligence, and recruiter outreach using the JobGPT MCP server. Use when you need help with jobgpt.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-03-23"
 ---
 
 # JobGPT - Job Search Automation

@@ -1,11 +1,13 @@
 ---
 name: rabbitmq-expert
-description: Expert in RabbitMQ message broker for reliable messaging
-risk: unknown
-source: community
-kind: mode
-category: infrastructure
-tags: [rabbitmq, messaging, amqp, queue, microservices, event-driven]
+description: Expert in RabbitMQ message broker for reliable messaging. Use when configuring, deploying, or managing rabbitmq infrastructure.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: infrastructure
+  tags: [rabbitmq, messaging, amqp, queue, microservices, event-driven]
 ---
 
 # RabbitMQ Expert Mode

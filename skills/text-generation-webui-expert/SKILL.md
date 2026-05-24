@@ -1,11 +1,13 @@
 ---
 name: text-generation-webui-expert
-description: Run oobabooga's textgen with multiple backends, OpenAI/Anthropic-compatible API, characters, training tab, and portable installer
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, oobabooga, text-generation-webui, textgen, openai-api, characters, training, lora]
+description: "Run oobabooga's textgen with multiple backends, OpenAI/Anthropic-compatible API, characters, training tab, and portable installer. Use when deploying, running, or configuring local LLM inference with text generation webui."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, oobabooga, text-generation-webui, textgen, openai-api, characters, training, lora]
 ---
 
 # oobabooga text-generation-webui Expert Mode

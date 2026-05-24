@@ -1,11 +1,13 @@
 ---
 name: posthog-design
-description: Expert in the PostHog design system - Product analytics. Playful hedgehog branding, developer-friendly dark UI.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, backend]
+description: Expert in the PostHog design system - Product analytics. Playful hedgehog branding, developer-friendly dark UI. Use when building UI components, applying design tokens, or implementing visual styles for posthog.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, backend]
 ---
 
 # PostHog Design System Mode

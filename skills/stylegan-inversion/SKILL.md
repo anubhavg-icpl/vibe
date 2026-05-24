@@ -1,10 +1,12 @@
 ---
 name: stylegan-inversion
-description: Choose an inversion and editing pipeline for a pretrained StyleGAN over a real photo.
-version: 1.0.0
+description: Choose an inversion and editing pipeline for a pretrained StyleGAN over a real photo. Use when you need help with stylegan inversion.
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 05
-tags: [stylegan, inversion, editing]
+metadata:
+  version: 1.0.0
+  tags: [stylegan, inversion, editing]
 ---
 
 Given a real photo + pretrained StyleGAN checkpoint (FFHQ-1024, StyleGAN-XL, a custom fine-tune) and target edit (age, smile, pose, hair, identity preservation), output:

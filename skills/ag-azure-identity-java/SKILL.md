@@ -1,9 +1,11 @@
 ---
 name: azure-identity-java
-description: "Authenticate Java applications with Azure services using Microsoft Entra ID (Azure AD)."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Authenticate Java applications with Azure services using Microsoft Entra ID (Azure AD). Use when you need help with azure identity java.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Azure Identity (Java)

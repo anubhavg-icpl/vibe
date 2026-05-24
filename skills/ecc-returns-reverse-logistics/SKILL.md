@@ -1,6 +1,6 @@
 ---
 name: returns-reverse-logistics
-description: >
+description: >. Use when you need help with returns reverse logistics.
   Codified expertise for returns authorization, receipt and inspection,
   disposition decisions, refund processing, fraud detection, and warranty
   claims management. Informed by returns operations managers with 15+ years
@@ -9,13 +9,13 @@ description: >
   product returns, reverse logistics, refund decisions, return fraud
   detection, or warranty claims.
 license: Apache-2.0
-version: 1.0.0
 homepage: https://github.com/affaan-m/everything-claude-code
 origin: ECC
 metadata:
   author: evos
-  clawdbot:
-    emoji: ""
+  clawdbot: 
+  emoji: ""
+  version: 1.0.0
 ---
 
 # Returns & Reverse Logistics

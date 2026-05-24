@@ -1,13 +1,14 @@
 ---
 name: live-dashboard
-description: |
+description: |. Use when you need help with live dashboard.
   Notion-style team dashboard rendered as a Live Artifact. A single-page,
   self-contained HTML dashboard with KPIs, a 7-day sparkline, a real-time
   activity feed and a linked-database task table — wired to Notion via the
   Composio connector catalog. Refreshes on demand and when the artifact
   is opened. Falls back to seeded mock data when no connector is bound,
   so it works offline / in screenshots / in the picker preview.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "team dashboard"
   - "notion dashboard"
   - "live dashboard"
@@ -16,7 +17,7 @@ triggers:
   - "团队仪表盘"
   - "Notion 仪表盘"
   - "Live Artifact dashboard"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: operation

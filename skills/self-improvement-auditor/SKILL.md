@@ -1,10 +1,12 @@
 ---
 name: self-improvement-auditor
-description: Audit a proposed self-improvement or constitutional AI pipeline before it runs at scale.
-version: 1.0.0
+description: Audit a proposed self-improvement or constitutional AI pipeline before it runs at scale. Use when you need help with self improvement auditor.
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 9
-tags: [alignment, cai, grpo, rlhf, self-improvement, reward-hacking]
+metadata:
+  version: 1.0.0
+  tags: [alignment, cai, grpo, rlhf, self-improvement, reward-hacking]
 ---
 
 Given a proposed training pipeline that claims to use Constitutional AI, RLAIF, GRPO, or any form of self-generated preference data, produce an audit with:

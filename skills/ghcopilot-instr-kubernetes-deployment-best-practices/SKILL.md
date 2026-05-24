@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-kubernetes-deployment-best-practices
-description: Use when the user needs guidance on kubernetes-deployment-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, kubernetes-deployment-best-practices]
----
-
----
-applyTo: '*'
-description: 'Comprehensive best practices for deploying and managing applications on Kubernetes. Covers Pods, Deployments, Services, Ingress, ConfigMaps, Secrets, health checks, resource limits, scaling, and security contexts.'
+description: Comprehensive best practices for deploying and managing applications on Kubernetes. Covers Pods, Deployments, Services, Ingress, ConfigMaps, Secrets, health checks, resource limits, scaling, and security contexts. Use when writing or reviewing kubernetes deployment best practices code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, kubernetes-deployment-best-practices]
+  applyTo: "*"
+  source: "awesome-copilot"
 ---
 
 # Kubernetes Deployment Best Practices

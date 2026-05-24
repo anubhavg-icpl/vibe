@@ -1,11 +1,13 @@
 ---
 name: opentelemetry-expert
-description: Expert in OpenTelemetry for distributed tracing, metrics, and logging
-risk: unknown
-source: community
-kind: mode
-category: infrastructure
-tags: [opentelemetry, observability, tracing, metrics, logging, distributed-systems]
+description: Expert in OpenTelemetry for distributed tracing, metrics, and logging. Use when configuring, deploying, or managing opentelemetry infrastructure.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: infrastructure
+  tags: [opentelemetry, observability, tracing, metrics, logging, distributed-systems]
 ---
 
 # OpenTelemetry Expert Mode

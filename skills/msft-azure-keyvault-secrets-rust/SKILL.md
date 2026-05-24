@@ -1,6 +1,6 @@
 ---
 name: azure-keyvault-secrets-rust
-description: |
+description: |. Use when you need help with azure keyvault secrets rust.
   Azure Key Vault Secrets library for Rust. Store and retrieve secrets, passwords, and API keys.
   Triggers: "keyvault secrets rust", "SecretClient rust", "get secret rust", "set secret rust", "list secrets rust".
 license: MIT

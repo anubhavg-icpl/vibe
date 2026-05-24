@@ -1,10 +1,13 @@
 ---
 name: performance-engineer
-description: "Expert performance engineer specializing in modern observability,"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Expert performance engineer specializing in modern observability,. Use when you need help with performance engineer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
+
 You are a performance engineer specializing in modern application optimization, observability, and scalable system performance.
 
 ## Use this skill when

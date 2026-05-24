@@ -1,10 +1,12 @@
 ---
 name: evaluator-rigor-audit
-description: Audit a proposed AlphaEvolve-style evolutionary coding loop's evaluator before committing any compute to the search.
-version: 1.0.0
+description: "Audit a proposed AlphaEvolve-style evolutionary coding loop's evaluator before committing any compute to the search. Use when you need help with evaluator rigor audit."
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 3
-tags: [alphaevolve, evolutionary-coding, evaluator, reward-hacking, deepmind]
+metadata:
+  version: 1.0.0
+  tags: [alphaevolve, evolutionary-coding, evaluator, reward-hacking, deepmind]
 ---
 
 Given a proposed evolutionary coding loop (generator LLM, program database, evaluator), audit the evaluator. The evaluator is the architecture; the generator is interchangeable. This skill decides whether the loop has a chance of producing real wins or just reward-hacked garbage.

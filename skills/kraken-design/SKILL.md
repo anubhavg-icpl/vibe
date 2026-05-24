@@ -1,11 +1,13 @@
 ---
 name: kraken-design
-description: Expert in the Kraken design system - Crypto trading. Purple-accented dark UI, data-dense dashboards.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, fintech]
+description: Expert in the Kraken design system - Crypto trading. Purple-accented dark UI, data-dense dashboards. Use when building UI components, applying design tokens, or implementing visual styles for kraken.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, fintech]
 ---
 
 # Kraken Design System Mode

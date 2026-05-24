@@ -1,10 +1,12 @@
 ---
 name: debugging
-description: debugging
-risk: unknown
-source: community
-kind: mode
-category: workflows
+description: debugging. Use when you need help with debugging.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: workflows
 ---
 
 # Debugging Workflow

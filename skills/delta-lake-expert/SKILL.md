@@ -1,11 +1,13 @@
 ---
 name: delta-lake-expert
-description: Expert in Delta Lake ACID storage, time travel, and deletion vectors
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [delta-lake, lakehouse, parquet, acid, time-travel, deletion-vectors]
+description: Expert in Delta Lake ACID storage, time travel, and deletion vectors. Use when working with delta lake for data processing, streaming, or analytics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [delta-lake, lakehouse, parquet, acid, time-travel, deletion-vectors]
 ---
 
 # Delta Lake Expert Mode

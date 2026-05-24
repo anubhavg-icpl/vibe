@@ -1,9 +1,11 @@
 ---
 name: geo-fundamentals
-description: "Generative Engine Optimization for AI search engines (ChatGPT, Claude, Perplexity)."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Generative Engine Optimization for AI search engines (ChatGPT, Claude, Perplexity). Use when you need help with geo fundamentals.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # GEO Fundamentals

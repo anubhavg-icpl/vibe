@@ -1,9 +1,11 @@
 ---
 name: frontend-design
-description: "You are a frontend designer-engineer, not a layout generator."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: You are a frontend designer-engineer, not a layout generator. Use when building UI with frontend design language and visual style.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Frontend Design (Distinctive, Production-Grade)

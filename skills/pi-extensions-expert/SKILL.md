@@ -1,11 +1,13 @@
 ---
 name: pi-extensions-expert
-description: Authoring TypeScript extensions for the pi-coding-agent (lifecycle hooks, custom tools, UI, providers)
-risk: unknown
-source: community
-kind: mode
-category: pi-dev
-tags: [pi-dev, pi-coding-agent, extensions, typescript, agent-tooling]
+description: Authoring TypeScript extensions for the pi-coding-agent (lifecycle hooks, custom tools, UI, providers). Use when working with pi.dev extensions features.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: pi-dev
+  tags: [pi-dev, pi-coding-agent, extensions, typescript, agent-tooling]
 ---
 
 # Pi Extensions Expert Mode

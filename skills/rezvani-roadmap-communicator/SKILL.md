@@ -1,6 +1,7 @@
 ---
 name: roadmap-communicator
 description: Use when preparing roadmap narratives, release notes, changelogs, or stakeholder updates tailored for executives, engineering teams, and customers.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Roadmap Communicator

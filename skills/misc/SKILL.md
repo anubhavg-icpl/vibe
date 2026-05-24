@@ -1,10 +1,12 @@
 ---
 name: misc
-description: misc
-risk: unknown
-source: community
-kind: mode
-category: program-types
+description: misc. Use when you need help with misc.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: program-types
 ---
 
 # Miscellaneous Program Types

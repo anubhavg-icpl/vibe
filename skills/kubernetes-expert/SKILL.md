@@ -1,10 +1,12 @@
 ---
 name: kubernetes-expert
-description: kubernetes-expert
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+description: kubernetes-expert. Use when architecting or managing cloud infrastructure with kubernetes.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # Kubernetes Expert Mode

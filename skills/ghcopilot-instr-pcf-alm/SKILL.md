@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-alm
-description: Use when the user needs guidance on pcf-alm. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-alm]
----
-
----
-description: 'Application lifecycle management (ALM) for PCF code components'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj,sln}'
+description: "Use when the user needs guidance on pcf-alm. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-alm]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj,sln}"
+  source: "awesome-copilot"
 ---
 
 # Code Components Application Lifecycle Management (ALM)

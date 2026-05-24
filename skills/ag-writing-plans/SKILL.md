@@ -1,9 +1,11 @@
 ---
 name: writing-plans
 description: "Use when you have a spec or requirements for a multi-step task, before touching code"
-risk: critical
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: critical
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Writing Plans

@@ -1,10 +1,12 @@
 ---
 name: qa-automation-expert
-description: qa-automation-expert
-risk: unknown
-source: community
-kind: mode
-category: testing
+description: qa-automation-expert. Use when writing, running, or improving tests with qa automation.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
 ---
 
 # QA Automation Expert Mode

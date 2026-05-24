@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-logic-apps-power-automate
-description: Use when the user needs guidance on azure-logic-apps-power-automate. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-logic-apps-power-automate]
----
-
----
-description: 'Guidelines for developing Azure Logic Apps and Power Automate workflows with best practices for Workflow Definition Language (WDL), integration patterns, and enterprise automation'
-applyTo: "**/*.json,**/*.logicapp.json,**/workflow.json,**/*-definition.json,**/*.flow.json"
+description: Guidelines for developing Azure Logic Apps and Power Automate workflows with best practices for Workflow Definition Language (WDL), integration patterns, and enterprise automation. Use when writing or reviewing azure logic apps power automate code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-logic-apps-power-automate]
+  applyTo: "**/*.json,**/*.logicapp.json,**/workflow.json,**/*-definition.json,**/*.flow.json"
+  source: "awesome-copilot"
 ---
 
 # Azure Logic Apps and Power Automate Instructions

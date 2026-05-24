@@ -1,10 +1,12 @@
 ---
 name: ux-researcher
-description: ux-researcher
-risk: unknown
-source: community
-kind: mode
-category: design-ux
+description: ux-researcher. Use when you need help with ux researcher.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-ux
 ---
 
 # UX Researcher Mode

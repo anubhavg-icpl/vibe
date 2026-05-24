@@ -1,6 +1,7 @@
 ---
 name: create-github-issues-feature-from-implementation-plan
-description: 'Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates.'
+description: Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates. Use when you need help with create github issues feature from implementation plan.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create GitHub Issue from Implementation Plan

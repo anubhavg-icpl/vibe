@@ -1,10 +1,12 @@
 ---
 name: ruby-rails
-description: ruby-rails
-risk: unknown
-source: community
-kind: mode
-category: languages
+description: ruby-rails. Use when writing, reviewing, or refactoring ruby rails code.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
 ---
 
 # Ruby on Rails Developer Mode

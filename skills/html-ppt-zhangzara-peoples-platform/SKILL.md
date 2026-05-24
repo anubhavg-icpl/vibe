@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-peoples-platform
-description: |
+description: |. Use when you need help with html ppt zhangzara peoples platform.
   People's Platform (Block & Bold) — Activist poster energy: blue, orange, red on cream, with Alfa Slab + Caveat Brush. Anything that should feel honest, loud, and graphic: cultural commentary, manifestos, civic and community decks, design talks, campaign pitches.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "peoples-platform"
   - "zhangzara-peoples-platform"
   - "People's Platform (Block & Bold)"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/peoples-platform"

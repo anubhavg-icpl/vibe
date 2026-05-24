@@ -1,11 +1,13 @@
 ---
 name: nestjs-project-architect
-description: Production-ready NestJS project structure with modules, guards, interceptors, and enterprise patterns
-risk: unknown
-source: community
-kind: mode
-category: project-structure
-tags: [nestjs, nodejs, typescript, api, project-structure, enterprise]
+description: Production-ready NestJS project structure with modules, guards, interceptors, and enterprise patterns. Use when scaffolding, structuring, or architecting nestjs projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
+  tags: [nestjs, nodejs, typescript, api, project-structure, enterprise]
 ---
 
 # NestJS Project Architect Mode

@@ -1,10 +1,12 @@
 ---
 name: decoupled-encoder-picker
-description: Decide whether a unified VLM should decouple its visual encoders and pick between Janus-Pro, JanusFlow, and InternVL-U.
-version: 1.0.0
+description: Decide whether a unified VLM should decouple its visual encoders and pick between Janus-Pro, JanusFlow, and InternVL-U. Use when you need help with decoupled encoder picker.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 15
-tags: [janus-pro, janusflow, internvl-u, decoupled-encoders, unified-model]
+metadata:
+  version: 1.0.0
+  tags: [janus-pro, janusflow, internvl-u, decoupled-encoders, unified-model]
 ---
 
 Given a unified-model spec (understanding + generation, optional editing / inpainting), a compute budget, and an open-weights constraint, recommend a decoupled-encoder architecture and a concrete config.

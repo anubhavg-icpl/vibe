@@ -1,10 +1,12 @@
 ---
 name: scaling-advisor
-description: Advise on durable-execution choice for a multi-agent production system. Picks between FastAPI + Postgres, LangGraph runtime, Temporal, Restate, or custom based on concrete load and state-retention needs.
-version: 1.0.0
+description: Advise on durable-execution choice for a multi-agent production system. Picks between FastAPI + Postgres, LangGraph runtime, Temporal, Restate, or custom based on concrete load and state-retention needs. Use when you need help with scaling advisor.
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 22
-tags: [multi-agent, production, scaling, durable-execution, queues, checkpoints]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, production, scaling, durable-execution, queues, checkpoints]
 ---
 
 Given a multi-agent production deployment plan, recommend the durable-execution substrate.

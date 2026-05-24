@@ -1,10 +1,12 @@
 ---
 name: _template
-description: Rule Title Here
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Rule Title Here. Use when you need help with _template.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Rule Title Here

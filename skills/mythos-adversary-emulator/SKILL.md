@@ -1,11 +1,13 @@
 ---
 name: mythos-adversary-emulator
-description: MITRE ATT&CK-driven adversary emulation modeled on PNNL's ALOHA water-plant scaffold
-risk: unknown
-source: community
-kind: mode
-category: offense
-tags: [mythos, red-team, defensive-purpose, mitre-attack, caldera, atomic-red-team, emulation]
+description: "MITRE ATT&CK-driven adversary emulation modeled on PNNL's ALOHA water-plant scaffold. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving adversary emulator."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: offense
+  tags: [mythos, red-team, defensive-purpose, mitre-attack, caldera, atomic-red-team, emulation]
 ---
 
 # Mythos Adversary Emulator Mode

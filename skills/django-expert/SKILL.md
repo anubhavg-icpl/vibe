@@ -1,11 +1,13 @@
 ---
 name: django-expert
-description: Expert in Django web framework with REST API, DRF, Django ORM, performance, and production best practices
-risk: unknown
-source: community
-kind: mode
-category: backend
-tags: [django, python, backend, framework, drf, rest-api]
+description: Expert in Django web framework with REST API, DRF, Django ORM, performance, and production best practices. Use when you need deep expertise in django.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
+  tags: [django, python, backend, framework, drf, rest-api]
 ---
 
 # Django Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: mythos-sandbox-escape-hunter
-description: Hunt sandbox escape primitives across browsers, JIT engines, WASM runtimes, containers, and hypervisors - for vendors and defensive researchers under coordinated disclosure
-risk: unknown
-source: community
-kind: mode
-category: specialty
-tags: [mythos, security, sandbox, browser, container, hypervisor, defensive]
+description: Hunt sandbox escape primitives across browsers, JIT engines, WASM runtimes, containers, and hypervisors - for vendors and defensive researchers under coordinated disclosure. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving sandbox escape hunter.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: specialty
+  tags: [mythos, security, sandbox, browser, container, hypervisor, defensive]
 ---
 
 # Mythos Sandbox Escape Hunter Mode

@@ -1,11 +1,13 @@
 ---
 name: fine-tune-eval-expert
-description: Evaluate fine-tuned LLMs — domain benchmarks, regression checks, catastrophic forgetting detection
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [evaluation, benchmarks, mmlu, ifeval, lm-evaluation-harness, fine-tuning]
+description: Evaluate fine-tuned LLMs — domain benchmarks, regression checks, catastrophic forgetting detection. Use when fine-tuning, training, or adapting language models with fine tune eval techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [evaluation, benchmarks, mmlu, ifeval, lm-evaluation-harness, fine-tuning]
 ---
 
 # Fine-Tune Evaluation Expert Mode

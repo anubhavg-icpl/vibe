@@ -1,11 +1,13 @@
 ---
 name: hybrid-search-expert
-description: BM25 + dense vectors fused with RRF, alpha tuning, and SPLADE sparse-dense
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, retrieval, hybrid-search, bm25, rrf, splade]
+description: BM25 + dense vectors fused with RRF, alpha tuning, and SPLADE sparse-dense. Use when building or optimizing retrieval-augmented generation pipelines with hybrid search.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, retrieval, hybrid-search, bm25, rrf, splade]
 ---
 
 # Hybrid Search Expert Mode

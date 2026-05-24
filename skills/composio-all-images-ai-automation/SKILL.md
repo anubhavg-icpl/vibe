@@ -1,7 +1,8 @@
 ---
 name: all-images-ai-automation
-description: "Automate All Images AI tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate All Images AI tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with all images ai automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

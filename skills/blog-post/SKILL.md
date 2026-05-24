@@ -1,11 +1,12 @@
 ---
 name: blog-post
-description: |
+description: |. Use when you need help with blog post.
   A long-form article / blog post — masthead, hero image placeholder,
   article body with figures and pull quotes, author byline, related posts.
   Use when the brief asks for "blog", "article", "post", "essay", or
   "case study".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "blog"
   - "blog post"
   - "article"
@@ -14,7 +15,7 @@ triggers:
   - "newsletter"
   - "博客"
   - "文章"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

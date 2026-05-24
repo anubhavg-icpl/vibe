@@ -2,11 +2,12 @@
 name: vendor-management
 description: Use when reviewing, scoring, or auditing third-party SaaS / vendor relationships — running a vendor scorecard, tracking SLA compliance, classifying third-party risk, preparing a tier-1 vendor review, or auditing the SaaS portfolio. Triggers on "vendor SLA", "vendor scorecard", "third-party risk", "TPRM", "vendor review", "SaaS audit", "supplier performance", "vendor health check", "renewal review". Forks context so large vendor catalogs (50-500 line items) and SLA logs don't pollute the parent thread. Ships 3 stdlib-only Python tools (vendor scorer with industry tuning, SLA compliance tracker with credit-claim flags, vendor risk classifier across 4 risk vectors), 3 reference docs each citing 7+ authoritative sources (Gartner / Shared Assessments / NIST / ISO 27036 / breach post-mortems), and a 5-vendor catalog template. Distinct from c-level-advisor/general-counsel-advisor (contract law, not operational management), business-growth/contract-and-proposal-writer (outbound proposals, not inbound vendor scoring), and sibling procurement-optimizer (spend categorization, not vendor performance).
 context: fork
-version: 2.8.0
 author: claude-code-skills
 license: MIT
-tags: [bizops, vendor, sla, third-party-risk, vendor-management, saas-management, tprm]
 compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini-cli]
+metadata:
+  version: 2.8.0
+  tags: [bizops, vendor, sla, third-party-risk, vendor-management, saas-management, tprm]
 ---
 
 # Vendor Management — Operational Third-Party Performance

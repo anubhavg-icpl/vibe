@@ -1,6 +1,7 @@
 ---
 name: skill-creator
 description: Guide for creating effective skills for AI coding agents working with Azure SDKs and Microsoft Foundry services. Use when creating new skills or updating existing skills.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Skill Creator

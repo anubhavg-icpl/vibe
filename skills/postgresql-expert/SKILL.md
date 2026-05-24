@@ -1,10 +1,12 @@
 ---
 name: postgresql-expert
-description: postgresql-expert
-risk: unknown
-source: community
-kind: mode
-category: database
+description: postgresql-expert. Use when designing, querying, or optimizing postgresql databases.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: database
 ---
 
 # PostgreSQL Expert Mode

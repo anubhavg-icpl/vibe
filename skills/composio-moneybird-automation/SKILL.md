@@ -1,7 +1,8 @@
 ---
 name: moneybird-automation
-description: "Automate Moneybird tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Moneybird tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with moneybird automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

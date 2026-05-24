@@ -1,6 +1,7 @@
 ---
 name: systematic-debugging
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+license: CC-BY-NC-SA-4.0
 ---
 
 # Systematic Debugging

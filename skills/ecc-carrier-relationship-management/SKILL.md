@@ -1,6 +1,6 @@
 ---
 name: carrier-relationship-management
-description: >
+description: >. Use when you need help with carrier relationship management.
   Codified expertise for managing carrier portfolios, negotiating freight rates,
   tracking carrier performance, allocating freight, and maintaining strategic
   carrier relationships. Informed by transportation managers with 15+ years
@@ -8,13 +8,13 @@ description: >
   and compliance vetting. Use when managing carriers, negotiating rates, evaluating
   carrier performance, or building freight strategies.
 license: Apache-2.0
-version: 1.0.0
 homepage: https://github.com/affaan-m/everything-claude-code
 origin: ECC
 metadata:
   author: evos
-  clawdbot:
-    emoji: ""
+  clawdbot: 
+  emoji: ""
+  version: 1.0.0
 ---
 
 # Carrier Relationship Management

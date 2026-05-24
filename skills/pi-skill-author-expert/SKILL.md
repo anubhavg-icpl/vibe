@@ -1,11 +1,13 @@
 ---
 name: pi-skill-author-expert
-description: Authoring SKILL.md capability docs for pi-coding-agent that stay compatible with Claude Code, Codex CLI, Amp, and Droid
-risk: unknown
-source: community
-kind: mode
-category: pi-dev
-tags: [pi-dev, pi-coding-agent, skills, claude-code, cross-tool, authoring]
+description: Authoring SKILL.md capability docs for pi-coding-agent that stay compatible with Claude Code, Codex CLI, Amp, and Droid. Use when working with pi.dev skill author features.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: pi-dev
+  tags: [pi-dev, pi-coding-agent, skills, claude-code, cross-tool, authoring]
 ---
 
 # Pi Skill Author Expert Mode

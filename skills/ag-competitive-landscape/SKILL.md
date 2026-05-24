@@ -1,9 +1,11 @@
 ---
 name: competitive-landscape
-description: "Comprehensive frameworks for analyzing competition, identifying differentiation opportunities, and developing winning market positioning strategies."
-risk: safe
-source: community
-date_added: '2026-02-27'
+description: Comprehensive frameworks for analyzing competition, identifying differentiation opportunities, and developing winning market positioning strategies. Use when you need help with competitive landscape.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Competitive Landscape Analysis

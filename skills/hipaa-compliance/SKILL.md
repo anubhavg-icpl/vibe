@@ -1,11 +1,13 @@
 ---
 name: hipaa-compliance
-description: Expert in HIPAA compliance for healthcare applications - PHI protection, security rules, and audit controls
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [hipaa, healthcare, phi, compliance, security, encryption, audit, privacy]
+description: Expert in HIPAA compliance for healthcare applications - PHI protection, security rules, and audit controls. Use when performing security analysis, auditing, or hardening with hipaa compliance.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [hipaa, healthcare, phi, compliance, security, encryption, audit, privacy]
 ---
 
 # HIPAA Compliance Expert Mode

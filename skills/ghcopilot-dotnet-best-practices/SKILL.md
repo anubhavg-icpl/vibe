@@ -1,6 +1,7 @@
 ---
 name: dotnet-best-practices
-description: 'Ensure .NET/C# code meets best practices for the solution/project.'
+description: Ensure .NET/C# code meets best practices for the solution/project. Use when you need help with dotnet best practices.
+license: CC-BY-NC-SA-4.0
 ---
 
 # .NET/C# Best Practices

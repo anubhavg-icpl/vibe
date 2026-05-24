@@ -1,14 +1,15 @@
 ---
 name: html-ppt-hermes-cyber-terminal
-description: 暗终端 honest-review deck — #0a0c10 黑底 + 56px 赛博网格 + CRT 暗角 + 扫描线、窗口红绿灯 chrome、`$ prompt` 命令行标题、薄荷绿 #7ed3a4 大字、JetBrains Mono、stroke-only 柱状图、blinking 光标、琥珀/绿/红三档 tag、暗色代码块。适合 CLI / agent / dev tool 测评（含 trace、diff、benchmark）。
-triggers:
+description: 暗终端 honest-review deck — #0a0c10 黑底 + 56px 赛博网格 + CRT 暗角 + 扫描线、窗口红绿灯 chrome、`$ prompt` 命令行标题、薄荷绿 #7ed3a4 大字、JetBrains Mono、stroke-only 柱状图、blinking 光标、琥珀/绿/红三档 tag、暗色代码块。适合 CLI / agent / dev tool 测评（含 trace、diff、benchmark）。. Use when you need help with html ppt hermes cyber terminal.
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "terminal review"
   - "cli review"
   - "agent review"
   - "honest review"
   - "dev tool review"
   - "测评"
-od:
+od: 
   mode: deck
   scenario: engineering
   featured: 30
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-hermes-cyber-terminal 模板做一份 CLI / agent 测评 PPT。深色终端风 + scanlines + 命令行标题 + benchmark 柱状图。先确认：被测评对象、3-5 个对比维度、benchmark 数据。"
 ---
+
 # HTML PPT · 暗终端测评
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`hermes-cyber-terminal`** full-deck template.

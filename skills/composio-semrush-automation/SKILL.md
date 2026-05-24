@@ -1,7 +1,8 @@
 ---
 name: SEMrush Automation
-description: "Automate SEO analysis with SEMrush -- research keywords, analyze domain organic rankings, audit backlinks, assess keyword difficulty, and discover related terms through the Composio SEMrush integration."
-requires:
+description: Automate SEO analysis with SEMrush -- research keywords, analyze domain organic rankings, audit backlinks, assess keyword difficulty, and discover related terms through the Composio SEMrush integration. Use when you need help with SEMrush Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

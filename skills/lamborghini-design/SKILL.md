@@ -1,11 +1,13 @@
 ---
 name: lamborghini-design
-description: Expert in the Lamborghini design system - Supercar brand. True black surfaces, gold accents, dramatic uppercase typography.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, automotive]
+description: Expert in the Lamborghini design system - Supercar brand. True black surfaces, gold accents, dramatic uppercase typography. Use when building UI components, applying design tokens, or implementing visual styles for lamborghini.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, automotive]
 ---
 
 # Lamborghini Design System Mode

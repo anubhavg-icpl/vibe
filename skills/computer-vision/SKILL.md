@@ -1,10 +1,12 @@
 ---
 name: computer-vision
-description: Expert in computer vision from pixels to understanding across image, video, and 3D, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+description: Expert in computer vision from pixels to understanding across image, video, and 3D, from the AI Engineering from Scratch curriculum. Use when you need help with computer vision.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # Computer Vision Mode

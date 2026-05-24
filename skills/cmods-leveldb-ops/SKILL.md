@@ -1,6 +1,6 @@
 ---
 name: leveldb-ops
-description: "Read and inspect LevelDB stores - especially Chromium/Electron app state (Local Storage, IndexedDB, Session Storage). Triggers on: leveldb, .ldb files, IndexedDB, Local Storage, Chromium storage, Electron app state, claude.ai cache, browser forensics, decode app state, claude desktop state."
+description: Read and inspect LevelDB stores - especially Chromium/Electron app state (Local Storage, IndexedDB, Session Storage). Triggers on: leveldb, .ldb files, IndexedDB, Local Storage, Chromium storage, Electron app state, claude.ai cache, browser forensics, decode app state, claude desktop state. Use when you need help with leveldb ops.
 license: MIT
 compatibility: "Pure Python via ccl_chromium_reader. Works on Windows/macOS/Linux. No native compilation."
 allowed-tools: "Read Write Bash"

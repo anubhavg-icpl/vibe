@@ -1,10 +1,12 @@
 ---
 name: skill-context-engineering
-description: Decision framework for designing context assembly pipelines based on task type, window size, and latency budget
-version: 1.0.0
+description: Decision framework for designing context assembly pipelines based on task type, window size, and latency budget. Use when you need help with skill context engineering.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 05
-tags: [context-engineering, context-window, rag, memory, tool-selection, lost-in-the-middle]
+metadata:
+  version: 1.0.0
+  tags: [context-engineering, context-window, rag, memory, tool-selection, lost-in-the-middle]
 ---
 
 # Context Engineering

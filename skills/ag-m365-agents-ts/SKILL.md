@@ -1,9 +1,11 @@
 ---
 name: m365-agents-ts
-description: Microsoft 365 Agents SDK for TypeScript/Node.js.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+description: Microsoft 365 Agents SDK for TypeScript/Node.js. Use when you need help with m365 agents ts.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Microsoft 365 Agents SDK (TypeScript)

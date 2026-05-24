@@ -1,6 +1,6 @@
 ---
 name: sql-ops
-description: "Quick reference for common SQL patterns, CTEs, window functions, and indexing strategies. Triggers on: sql patterns, cte example, window functions, sql join, index strategy, pagination sql."
+description: Quick reference for common SQL patterns, CTEs, window functions, and indexing strategies. Triggers on: sql patterns, cte example, window functions, sql join, index strategy, pagination sql. Use when you need help with sql ops.
 license: MIT
 allowed-tools: "Read Write"
 metadata:

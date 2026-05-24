@@ -1,9 +1,11 @@
 ---
 name: microservices-patterns
-description: "Master microservices architecture patterns including service boundaries, inter-service communication, data management, and resilience patterns for building distributed systems."
-risk: none
-source: community
-date_added: "2026-02-27"
+description: Master microservices architecture patterns including service boundaries, inter-service communication, data management, and resilience patterns for building distributed systems. Use when you need help with microservices patterns.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: none
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Microservices Patterns

@@ -1,10 +1,12 @@
 ---
 name: api-documentation
-description: "API documentation workflow for generating OpenAPI specs, creating developer guides, and maintaining comprehensive API documentation."
-category: granular-workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
+description: API documentation workflow for generating OpenAPI specs, creating developer guides, and maintaining comprehensive API documentation. Use when you need help with api documentation.
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: granular-workflow-bundle
+  risk: safe
+  source: personal
+  date_added: "2026-02-27"
 ---
 
 # API Documentation Workflow

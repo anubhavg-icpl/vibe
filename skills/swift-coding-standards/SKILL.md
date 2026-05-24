@@ -1,11 +1,13 @@
 ---
 name: swift-coding-standards
-description: Production-ready Swift coding standards for iOS/macOS development enforcing safety, clarity, and modern patterns
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [swift, ios, macos, coding-standards, swiftui, apple]
+description: Production-ready Swift coding standards for iOS/macOS development enforcing safety, clarity, and modern patterns. Use when enforcing swift coding conventions and style rules.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [swift, ios, macos, coding-standards, swiftui, apple]
 ---
 
 # Swift Coding Standards Mode

@@ -1,13 +1,15 @@
 ---
 name: jq
-description: "Expert jq usage for JSON querying, filtering, transformation, and pipeline integration. Practical patterns for real shell workflows."
-category: development
-risk: safe
-source: community
-date_added: "2026-03-28"
+description: Expert jq usage for JSON querying, filtering, transformation, and pipeline integration. Practical patterns for real shell workflows. Use when you need help with jq.
+license: CC-BY-NC-SA-4.0
 author: kostakost2
-tags: [jq, json, shell, cli, data-transformation, bash]
 tools: [claude, cursor, gemini]
+metadata:
+  category: development
+  risk: safe
+  source: community
+  date_added: "2026-03-28"
+  tags: [jq, json, shell, cli, data-transformation, bash]
 ---
 
 # jq — JSON Querying and Transformation

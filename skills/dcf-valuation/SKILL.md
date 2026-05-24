@@ -1,11 +1,12 @@
 ---
 name: dcf-valuation
-description: |
+description: |. Use when you need help with dcf valuation.
   Discounted cash flow valuation and intrinsic value analysis for public
   companies. Use when the brief asks for DCF, fair value, intrinsic value,
   price target, undervalued or overvalued analysis, or "what is this company
   worth?"
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "dcf"
   - "discounted cash flow"
   - "intrinsic value"
@@ -15,7 +16,7 @@ triggers:
   - "overvalued"
   - "估值"
   - "内在价值"
-od:
+od: 
   mode: prototype
   preview:
     type: markdown

@@ -1,10 +1,12 @@
 ---
 name: docker-expert
-description: "You are an advanced Docker containerization expert with comprehensive, practical knowledge of container optimization, security hardening, multi-stage builds, orchestration patterns, and production deployment strategies based on current industry best practices."
-category: devops
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: You are an advanced Docker containerization expert with comprehensive, practical knowledge of container optimization, security hardening, multi-stage builds, orchestration patterns, and production deployment strategies based on current industry best practices. Use when automating CI/CD, deployments, or operations with docker.
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: devops
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Docker Expert

@@ -1,11 +1,13 @@
 ---
 name: acd-cinematic-renault-design
-description: Reference DESIGN.md for European mobility brands that need to feel modern and warm at once. Paper-white canvas with full-bleed aurora gradients (yellow → magenta → cyan), the diamond logomark as primary geometric anchor, NouvelR across t...
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, cinematic, claude-design]
+description: Reference DESIGN.md for European mobility brands that need to feel modern and warm at once. Paper-white canvas with full-bleed aurora gradients (yellow → magenta → cyan), the diamond logomark as primary geometric anchor, NouvelR across t. Use when building UI components, applying design tokens, or implementing visual styles for cinematic renault.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, cinematic, claude-design]
 ---
 
 # Renault — Aurora Pop Geometric Design Mode

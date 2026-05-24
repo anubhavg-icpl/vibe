@@ -1,10 +1,12 @@
 ---
 name: video-qa
-description: Build a video understanding pipeline with scene segmentation, multi-vector indexing, temporal grounding, and timestamped citations.
-version: 1.0.0
+description: Build a video understanding pipeline with scene segmentation, multi-vector indexing, temporal grounding, and timestamped citations. Use when you need help with video qa.
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 12
-tags: [capstone, video, multimodal, gemini, qwen-vl, molmo, transnet, qdrant]
+metadata:
+  version: 1.0.0
+  tags: [capstone, video, multimodal, gemini, qwen-vl, molmo, transnet, qdrant]
 ---
 
 Given 100 hours of video, build an ingestion pipeline and a query system that answers natural-language questions with (start, end) timestamps plus frame previews.

@@ -1,9 +1,11 @@
 ---
 name: agent-orchestration-improve-agent
-description: "Systematic improvement of existing agents through performance analysis, prompt engineering, and continuous iteration."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Systematic improvement of existing agents through performance analysis, prompt engineering, and continuous iteration. Use when you need help with agent orchestration improve agent.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Agent Performance Optimization Workflow

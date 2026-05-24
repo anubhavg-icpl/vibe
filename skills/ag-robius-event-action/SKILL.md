@@ -1,12 +1,14 @@
 ---
 name: robius-event-action
-description: |
+description: |. Use when you need help with robius event action.
   CRITICAL: Use for Robius event and action patterns. Triggers on:
   custom action, MatchEvent, post_action, cx.widget_action,
   handle_actions, DefaultNone, widget action, event handling,
   事件处理, 自定义动作
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # Robius Event and Action Patterns Skill

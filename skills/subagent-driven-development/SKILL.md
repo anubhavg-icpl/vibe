@@ -1,6 +1,7 @@
 ---
 name: subagent-driven-development
 description: Use when executing implementation plans with independent tasks in the current session
+license: CC-BY-NC-SA-4.0
 ---
 
 # Subagent-Driven Development

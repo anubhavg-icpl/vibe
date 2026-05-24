@@ -1,10 +1,12 @@
 ---
 name: salesforce-developer
-description: salesforce-developer
-risk: unknown
-source: community
-kind: mode
-category: enterprise
+description: salesforce-developer. Use when developing salesforce applications.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: enterprise
 ---
 
 # Salesforce Developer Mode

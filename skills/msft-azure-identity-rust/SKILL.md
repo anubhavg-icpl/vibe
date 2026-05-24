@@ -1,6 +1,6 @@
 ---
 name: azure-identity-rust
-description: |
+description: |. Use when you need help with azure identity rust.
   Azure Identity library for Rust. Microsoft Entra ID authentication for all Azure SDK clients.
   Triggers: "azure identity rust", "DeveloperToolsCredential", "authentication rust", "managed identity rust", "credential rust", "Entra ID rust".
 license: MIT

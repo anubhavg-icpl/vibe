@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-ai-prompt-engineering-safety-best-practices
-description: Use when the user needs guidance on ai-prompt-engineering-safety-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, ai-prompt-engineering-safety-best-practices]
----
-
----
-applyTo: ['*']
-description: "Comprehensive best practices for AI prompt engineering, safety frameworks, bias mitigation, and responsible AI usage for Copilot and LLMs."
+description: "Use when the user needs guidance on ai-prompt-engineering-safety-best-practices. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, ai-prompt-engineering-safety-best-practices]
+  applyTo: "['*']"
+  source: "awesome-copilot"
 ---
 
 # AI Prompt Engineering & Safety Best Practices

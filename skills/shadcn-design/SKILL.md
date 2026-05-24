@@ -1,11 +1,13 @@
 ---
 name: shadcn-design
-description: Expert in the Shadcn design system - Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+description: Expert in the Shadcn design system - Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns. Use when building UI components, applying design tokens, or implementing visual styles for shadcn.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Shadcn Design System Mode

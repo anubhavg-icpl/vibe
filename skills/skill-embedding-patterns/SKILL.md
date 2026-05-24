@@ -1,10 +1,12 @@
 ---
 name: skill-embedding-patterns
-description: Production patterns for embeddings, vector search, and similarity
-version: 1.0.0
+description: Production patterns for embeddings, vector search, and similarity. Use when you need help with skill embedding patterns.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 4
-tags: [embeddings, vectors, similarity, search, chunking, quantization]
+metadata:
+  version: 1.0.0
+  tags: [embeddings, vectors, similarity, search, chunking, quantization]
 ---
 
 # Embedding Patterns

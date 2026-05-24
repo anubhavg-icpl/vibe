@@ -1,7 +1,8 @@
 ---
 name: OpenAI Automation
-description: "Automate OpenAI API operations -- generate responses with multimodal and structured output support, create embeddings, generate images, and list models via the Composio MCP integration."
-requires:
+description: Automate OpenAI API operations -- generate responses with multimodal and structured output support, create embeddings, generate images, and list models via the Composio MCP integration. Use when you need help with OpenAI Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

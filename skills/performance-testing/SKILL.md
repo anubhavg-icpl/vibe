@@ -1,10 +1,12 @@
 ---
 name: performance-testing
-description: performance-testing
-risk: unknown
-source: community
-kind: mode
-category: testing
+description: performance-testing. Use when writing, running, or improving tests with performance testing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
 ---
 
 # Performance Testing Mode

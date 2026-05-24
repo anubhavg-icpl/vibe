@@ -1,10 +1,8 @@
 ---
 name: it-manager-hospital
-description: World-class Hospital IT Management Advisor specializing in clinical safety, digital maturity (HIMSS/ONA/JCI), and HIS/PEP ecosystems.
-risk: safe
-source: community
-date_added: "2026-04-18"
-triggers:
+description: World-class Hospital IT Management Advisor specializing in clinical safety, digital maturity (HIMSS/ONA/JCI), and HIS/PEP ecosystems. Use when you need help with it manager hospital.
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "it manager hospital"
   - "gestão ti hospitalar"
   - "ti hospitalar"
@@ -13,6 +11,10 @@ triggers:
   - "his integration advice"
   - "pep mv soul tasy"
   - "hl7 fhir standards"
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-04-18"
 ---
 
 # Hospital IT Manager (Healthcare Digital Leader)

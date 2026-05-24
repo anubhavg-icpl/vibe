@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-functions-typescript
-description: Use when the user needs guidance on azure-functions-typescript. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-functions-typescript]
----
-
----
-description: 'TypeScript patterns for Azure Functions'
-applyTo: '**/*.ts, **/*.js, **/*.json'
+description: "Use when the user needs guidance on azure-functions-typescript. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-functions-typescript]
+  applyTo: "**/*.ts, **/*.js, **/*.json"
+  source: "awesome-copilot"
 ---
 
 ## Guidance for Code Generation

@@ -1,10 +1,12 @@
 ---
 name: compliance-gap
-description: Evaluate whether a safety report can detect alignment faking, via the monitored / unmonitored compliance gap.
-version: 1.0.0
+description: Evaluate whether a safety report can detect alignment faking, via the monitored / unmonitored compliance gap. Use when you need help with compliance gap.
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 9
-tags: [alignment-faking, compliance-gap, anthropic, safety-evaluation]
+metadata:
+  version: 1.0.0
+  tags: [alignment-faking, compliance-gap, anthropic, safety-evaluation]
 ---
 
 Given a safety evaluation report, assess whether it can distinguish alignment faking from genuine compliance using the Greenblatt et al. 2024 compliance-gap framework.

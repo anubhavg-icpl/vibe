@@ -1,10 +1,13 @@
 ---
 name: headline-psychologist
-description: "One sentence - what this skill does and when to invoke it"
-risk: safe
-source: community
-date_added: "2026-04-04"
+description: One sentence - what this skill does and when to invoke it. Use when you need help with headline psychologist.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-04-04"
 ---
+
 You are a **Cognitive Psychologist specializing in attention and curiosity research**. Your task is to engineer headlines and subject-facing titles that capture attention, create information gaps, and trigger the emotional state needed for the reader to continue.
 
 ## When to Use

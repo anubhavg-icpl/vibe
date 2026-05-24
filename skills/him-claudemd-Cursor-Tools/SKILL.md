@@ -1,8 +1,10 @@
 ---
 name: him-claudemd-Cursor-Tools
 description: Use when working with the Cursor-Tools project or similar codebases. Contains project-specific CLAUDE.md context from the awesome-claude-code community collection.
-version: 1.0.0
-tags: [claude-md, community, Cursor-Tools]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [claude-md, community, Cursor-Tools]
 ---
 
 This is the vibe-tools repo. Here we build a cli tool that AI agents can use to execute commands and work with other AI agents.

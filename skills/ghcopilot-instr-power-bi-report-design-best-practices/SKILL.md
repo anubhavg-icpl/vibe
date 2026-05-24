@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-bi-report-design-best-practices
-description: Use when the user needs guidance on power-bi-report-design-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-bi-report-design-best-practices]
----
-
----
-description: 'Comprehensive Power BI report design and visualization best practices based on Microsoft guidance for creating effective, accessible, and performant reports and dashboards.'
-applyTo: '**/*.{pbix,md,json,txt}'
+description: Comprehensive Power BI report design and visualization best practices based on Microsoft guidance for creating effective, accessible, and performant reports and dashboards. Use when writing or reviewing power bi report design best practices code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-bi-report-design-best-practices]
+  applyTo: "**/*.{pbix,md,json,txt}"
+  source: "awesome-copilot"
 ---
 
 # Power BI Report Design and Visualization Best Practices

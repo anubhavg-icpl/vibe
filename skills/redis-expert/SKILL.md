@@ -1,10 +1,12 @@
 ---
 name: redis-expert
-description: redis-expert
-risk: unknown
-source: community
-kind: mode
-category: database
+description: redis-expert. Use when designing, querying, or optimizing redis databases.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: database
 ---
 
 # Redis Expert Mode

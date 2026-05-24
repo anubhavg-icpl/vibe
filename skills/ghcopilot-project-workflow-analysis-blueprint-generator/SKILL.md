@@ -1,6 +1,7 @@
 ---
 name: project-workflow-analysis-blueprint-generator
-description: 'Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures.'
+description: Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures. Use when you need help with project workflow analysis blueprint generator.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Project Workflow Documentation Generator

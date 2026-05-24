@@ -1,7 +1,8 @@
 ---
 name: zoho-automation
-description: "Automate Zoho tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Zoho tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with zoho automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

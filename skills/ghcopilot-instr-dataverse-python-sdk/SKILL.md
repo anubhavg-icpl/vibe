@@ -1,13 +1,14 @@
 ---
 name: ghcopilot-instr-dataverse-python-sdk
-description: Use when the user needs guidance on dataverse-python-sdk. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dataverse-python-sdk]
+description: "Use when the user needs guidance on dataverse-python-sdk. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dataverse-python-sdk]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
----
-applyTo: '**'
----
 # Dataverse SDK for Python — Official Quickstart
 
 This instruction summarizes Microsoft Learn guidance for the Dataverse SDK for Python (preview) and provides copyable snippets.

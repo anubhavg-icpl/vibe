@@ -1,11 +1,13 @@
 ---
 name: soc2-compliance
-description: Expert in SOC 2 compliance implementation and audit preparation
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [soc2, compliance, security, audit, trust-services-criteria]
+description: Expert in SOC 2 compliance implementation and audit preparation. Use when performing security analysis, auditing, or hardening with soc2 compliance.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [soc2, compliance, security, audit, trust-services-criteria]
 ---
 
 # SOC 2 Compliance Expert Mode

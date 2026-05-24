@@ -1,6 +1,7 @@
 ---
 name: "code-tour"
 description: "Use when the user asks to create a CodeTour .tour file — persona-targeted, step-by-step walkthroughs that link to real files and line numbers. Trigger for: create a tour, onboarding tour, architecture tour, PR review tour, explain how X works, vibe check, RCA tour, contributor guide, or any structured code walkthrough request."
+license: CC-BY-NC-SA-4.0
 ---
 
 # Code Tour

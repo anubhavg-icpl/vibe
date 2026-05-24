@@ -1,11 +1,13 @@
 ---
 name: dspy-expert
-description: Program — don't prompt — language models with DSPy's declarative Signatures, Modules, and Optimizers
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [dspy, stanford, signatures, modules, optimizers, prompting, python]
+description: "Program — don't prompt — language models with DSPy's declarative Signatures, Modules, and Optimizers. Use when building AI applications with dspy."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [dspy, stanford, signatures, modules, optimizers, prompting, python]
 ---
 
 # DSPy Expert Mode

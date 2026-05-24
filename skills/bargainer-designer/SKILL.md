@@ -1,10 +1,12 @@
 ---
 name: bargainer-designer
-description: Design a negotiation protocol: which agent narrates, which component generates offers, how private scratchpads separate from public messages, what the round bound is, and how deal rate is monitored.
-version: 1.0.0
+description: Design a negotiation protocol: which agent narrates, which component generates offers, how private scratchpads separate from public messages, what the round bound is, and how deal rate is monitored. Use when you need help with bargainer designer.
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 16
-tags: [multi-agent, negotiation, bargaining, contract-net, OG-Narrator]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, negotiation, bargaining, contract-net, OG-Narrator]
 ---
 
 Given a negotiation or task-market scenario (two-party bargain, N-party auction, contract-net task allocation), design the protocol.

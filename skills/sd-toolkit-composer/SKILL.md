@@ -1,10 +1,12 @@
 ---
 name: sd-toolkit-composer
-description: Compose ControlNets, LoRAs, and IP-Adapters on top of an SD / Flux base for a given set of inputs.
-version: 1.0.0
+description: Compose ControlNets, LoRAs, and IP-Adapters on top of an SD / Flux base for a given set of inputs. Use when you need help with sd toolkit composer.
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 08
-tags: [controlnet, lora, ip-adapter, diffusion]
+metadata:
+  version: 1.0.0
+  tags: [controlnet, lora, ip-adapter, diffusion]
 ---
 
 Given a task (target image), inputs (prompt, reference image, pose / depth / scribble / seg, subject identity), and base model (SDXL, SD3.5, Flux.1-dev), output:

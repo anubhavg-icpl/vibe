@@ -1,11 +1,13 @@
 ---
 name: mythos-ics-attack-chain
-description: ICS/SCADA emulation for high-fidelity simulation labs only — water, power, fuel, building automation
-risk: unknown
-source: community
-kind: mode
-category: offense
-tags: [mythos, red-team, defensive-purpose, ics, scada, ot, modbus, dnp3, iec-104, lab-only]
+description: ICS/SCADA emulation for high-fidelity simulation labs only — water, power, fuel, building automation. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ics attack chain.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: offense
+  tags: [mythos, red-team, defensive-purpose, ics, scada, ot, modbus, dnp3, iec-104, lab-only]
 ---
 
 # Mythos ICS Attack Chain Mode

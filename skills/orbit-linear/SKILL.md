@@ -1,6 +1,6 @@
 ---
 name: orbit-linear
-description: |
+description: |. Use when you need help with orbit linear.
   Open Orbit briefing skill — selected by the Orbit pipeline when
   Linear is the user's only connected connector, or when the user
   explicitly scopes their daily digest to Linear. Pulls the past 24
@@ -9,13 +9,14 @@ description: |
   the digest in Linear's native Inbox + cycle-progress visual language.
   This skill should not be triggered manually — it is invoked by
   Orbit's daily-digest scheduler against live Linear data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "linear briefing"
   - "linear digest"
   - "issue digest"
   - "linear 简报"
   - "issue 汇总"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

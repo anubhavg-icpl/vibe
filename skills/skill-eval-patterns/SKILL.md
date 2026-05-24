@@ -1,10 +1,12 @@
 ---
 name: skill-eval-patterns
-description: Decision framework for choosing evaluation strategies -- when to use which method, how to size test suites, and how to integrate evals into CI/CD
-version: 1.0.0
+description: Decision framework for choosing evaluation strategies -- when to use which method, how to size test suites, and how to integrate evals into CI/CD. Use when you need help with skill eval patterns.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 10
-tags: [evaluation, testing, llm-as-judge, regression, confidence-intervals, ci-cd]
+metadata:
+  version: 1.0.0
+  tags: [evaluation, testing, llm-as-judge, regression, confidence-intervals, ci-cd]
 ---
 
 # Eval Patterns

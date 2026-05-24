@@ -1,11 +1,12 @@
 ---
 name: site-architecture
 description: "Plan or restructure website hierarchy, navigation, URL patterns, breadcrumbs, and internal linking. Use when mapping pages, sections, and site structure, but not for XML sitemap auditing or schema markup."
-risk: unknown
-source: "https://github.com/coreyhaines31/marketingskills"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 metadata:
   version: 1.1.0
+  risk: unknown
+  source: "https://github.com/coreyhaines31/marketingskills"
+  date_added: "2026-03-21"
 ---
 
 # Site Architecture

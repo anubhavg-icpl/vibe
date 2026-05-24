@@ -1,9 +1,11 @@
 ---
 name: data-engineering-data-driven-feature
-description: "Build features guided by data insights, A/B testing, and continuous measurement using specialized agents for analysis, implementation, and experimentation."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Build features guided by data insights, A/B testing, and continuous measurement using specialized agents for analysis, implementation, and experimentation. Use when you need help with data engineering data driven feature.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Data-Driven Feature Development

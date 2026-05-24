@@ -1,6 +1,6 @@
 ---
 name: customs-trade-compliance
-description: >
+description: >. Use when you need help with customs trade compliance.
   Codified expertise for customs documentation, tariff classification, duty
   optimization, restricted party screening, and regulatory compliance across
   multiple jurisdictions. Informed by trade compliance specialists with 15+
@@ -9,13 +9,13 @@ description: >
   tariff classification, trade compliance, import/export documentation, or
   duty optimization.
 license: Apache-2.0
-version: 1.0.0
 homepage: https://github.com/affaan-m/everything-claude-code
 origin: ECC
 metadata:
   author: evos
-  clawdbot:
-    emoji: ""
+  clawdbot: 
+  emoji: ""
+  version: 1.0.0
 ---
 
 # Customs & Trade Compliance

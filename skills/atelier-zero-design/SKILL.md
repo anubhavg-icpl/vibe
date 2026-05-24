@@ -1,11 +1,13 @@
 ---
 name: atelier-zero-design
-description: Expert in the Atelier Zero design system - A magazine-grade, collage-driven visual system: warm paper canvas, surreal
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, editorial-studio]
+description: Expert in the Atelier Zero design system - A magazine-grade, collage-driven visual system: warm paper canvas, surreal. Use when building UI components, applying design tokens, or implementing visual styles for atelier zero.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, editorial-studio]
 ---
 
 # Atelier Zero Design System Mode

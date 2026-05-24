@@ -1,8 +1,10 @@
 ---
-source: "https://github.com/huggingface/skills/tree/main/skills/huggingface-trackio"
 name: hugging-face-trackio
-description: Track ML experiments with Trackio using Python logging, alerts, and CLI metric retrieval.
-risk: unknown
+description: Track ML experiments with Trackio using Python logging, alerts, and CLI metric retrieval. Use when you need help with hugging face trackio.
+license: CC-BY-NC-SA-4.0
+metadata:
+  source: "https://github.com/huggingface/skills/tree/main/skills/huggingface-trackio"
+  risk: unknown
 ---
 
 # Trackio - Experiment Tracking for ML Training

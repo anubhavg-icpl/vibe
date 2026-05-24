@@ -1,10 +1,12 @@
 ---
 name: vit-configurator
-description: Pick a ViT variant, patch size, and pretraining source for a new vision task.
-version: 1.0.0
+description: Pick a ViT variant, patch size, and pretraining source for a new vision task. Use when you need help with vit configurator.
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 9
-tags: [transformers, vit, vision]
+metadata:
+  version: 1.0.0
+  tags: [transformers, vit, vision]
 ---
 
 Given a vision task (classification / segmentation / detection / retrieval), image resolution, dataset size (labeled + unlabeled), and deployment target, output:

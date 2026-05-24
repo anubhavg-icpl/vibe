@@ -1,15 +1,17 @@
 ---
 name: social-post-writer-seo
-description: "Social Media Strategist and Content Writer. Creates clear, engaging social media posts for Instagram, LinkedIn, and Facebook."
-category: growth
-risk: safe
-source: self
+description: Social Media Strategist and Content Writer. Creates clear, engaging social media posts for Instagram, LinkedIn, and Facebook. Use when you need help with social post writer seo.
+license: CC-BY-NC-SA-4.0
 source_type: self
-date_added: "2026-04-17"
 author: WHOISABHISHEKADHIKARI
-tags: [social-media, marketing, content-writing, seo, growth]
 tools: [claude, cursor, gemini]
-version: 1.0.1
+metadata:
+  category: growth
+  risk: safe
+  source: self
+  date_added: "2026-04-17"
+  tags: [social-media, marketing, content-writing, seo, growth]
+  version: 1.0.1
 ---
 
 # Social Media Strategist and Content Writer

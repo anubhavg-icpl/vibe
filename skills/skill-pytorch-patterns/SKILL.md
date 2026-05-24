@@ -1,10 +1,12 @@
 ---
 name: skill-pytorch-patterns
-description: Reference patterns for PyTorch training, evaluation, and deployment
-version: 1.0.0
+description: Reference patterns for PyTorch training, evaluation, and deployment. Use when you need help with skill pytorch patterns.
+license: CC-BY-NC-SA-4.0
 phase: 03
 lesson: 11
-tags: [pytorch, training, deep-learning, gpu, patterns]
+metadata:
+  version: 1.0.0
+  tags: [pytorch, training, deep-learning, gpu, patterns]
 ---
 
 ## Canonical Training Loop

@@ -1,10 +1,12 @@
 ---
 name: prompt-caching-planner
-description: Design a cache-friendly prompt layout and pick the right provider caching mode.
-version: 1.0.0
+description: Design a cache-friendly prompt layout and pick the right provider caching mode. Use when you need help with prompt caching planner.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 15
-tags: [llm-engineering, caching, cost]
+metadata:
+  version: 1.0.0
+  tags: [llm-engineering, caching, cost]
 ---
 
 Given a prompt (system + tools + few-shot + retrieval + history + user) and a usage profile (requests per hour, TTL needed, provider), output:

@@ -1,10 +1,12 @@
 ---
 name: resolution-budget-planner
-description: Pick between square-resize, AnyRes, M-RoPE, and NaFlex for a mixed-aspect-ratio VLM workload and emit a per-task token budget plan.
-version: 1.0.0
+description: Pick between square-resize, AnyRes, M-RoPE, and NaFlex for a mixed-aspect-ratio VLM workload and emit a per-task token budget plan. Use when you need help with resolution budget planner.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 06
-tags: [vlm, patch-n-pack, naflex, anyres, m-rope, token-budget]
+metadata:
+  version: 1.0.0
+  tags: [vlm, patch-n-pack, naflex, anyres, m-rope, token-budget]
 ---
 
 Given a workload — a description of the images the VLM will see (OCR documents, charts, UI screenshots, natural photos, video frames) and a total per-request token budget — pick one resolution strategy per image class and produce a runnable configuration.

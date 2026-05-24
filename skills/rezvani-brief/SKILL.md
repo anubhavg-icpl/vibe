@@ -1,6 +1,7 @@
 ---
 name: "brief"
-description: "/cs:brief <topic> — Generate a one-page strategy brief from an office-hours intake. First step in the strategic sprint pipeline."
+description: /cs:brief <topic> — Generate a one-page strategy brief from an office-hours intake. First step in the strategic sprint pipeline. Use when you need help with brief.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:brief — One-Page Strategy Brief

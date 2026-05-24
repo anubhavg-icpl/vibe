@@ -1,11 +1,13 @@
 ---
 name: flask-expert
-description: Expert in Flask microframework with REST APIs, Jinja2 templates, SQLAlchemy ORM, authentication, extensions, and production best practices
-risk: unknown
-source: community
-kind: mode
-category: backend
-tags: [flask, python, backend, framework, web-api]
+description: Expert in Flask microframework with REST APIs, Jinja2 templates, SQLAlchemy ORM, authentication, extensions, and production best practices. Use when you need deep expertise in flask.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
+  tags: [flask, python, backend, framework, web-api]
 ---
 
 # Flask Expert Mode

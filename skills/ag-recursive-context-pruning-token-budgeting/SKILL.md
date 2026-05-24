@@ -1,18 +1,17 @@
 ---
 name: recursive-context-pruning-token-budgeting
-description: "Optimizes AI agent performance by pruning redundant context, managing token usage, and enforcing ultra-concise, direct-to-value responses."
-category: prompt-engineering
-risk: safe
-source: self
+description: Optimizes AI agent performance by pruning redundant context, managing token usage, and enforcing ultra-concise, direct-to-value responses. Use when you need help with recursive context pruning token budgeting.
+license: CC-BY-NC-SA-4.0
 source_repo: Kench001/antigravity-awesome-skills
 source_type: self
-date_added: "2026-05-03"
 author: Kench001
-tags: [efficiency, token-optimization, brevity, context-management]
 tools: [claude, cursor, gemini]
-# Optional: declare the upstream license if source_repo is set
-# license: "MIT"
-# license_source: "https://github.com/owner/repo/blob/main/LICENSE"
+metadata:
+  category: prompt-engineering
+  risk: safe
+  source: self
+  date_added: "2026-05-03"
+  tags: [efficiency, token-optimization, brevity, context-management]
 ---
 
 # Recursive Context Pruning & Token Budgeting

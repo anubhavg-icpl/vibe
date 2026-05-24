@@ -1,6 +1,6 @@
 ---
 name: orbit-notion
-description: |
+description: |. Use when you need help with orbit notion.
   Open Orbit briefing skill — selected by the Orbit pipeline when
   Notion is the user's only connected connector, or when the user
   explicitly scopes their daily digest to Notion. Pulls the past 24
@@ -9,13 +9,14 @@ description: |
   digest as a native Notion page (callout / toggle / database table
   primitives). This skill should not be triggered manually — it is
   invoked by Orbit's daily-digest scheduler against live Notion data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "notion briefing"
   - "notion digest"
   - "doc digest"
   - "notion 简报"
   - "文档摘要"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

@@ -1,11 +1,13 @@
 ---
 name: android-privacy-expert
-description: Photo picker, partial photo permissions, per-app language, package visibility, scoped storage, and runtime permission rationales
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, privacy, photo-picker, permissions, scoped-storage, per-app-language]
+description: Photo picker, partial photo permissions, per-app language, package visibility, scoped storage, and runtime permission rationales. Use when developing Android apps with android privacy.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, privacy, photo-picker, permissions, scoped-storage, per-app-language]
 ---
 
 # Android Privacy Expert Mode

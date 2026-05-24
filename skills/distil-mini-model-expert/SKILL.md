@@ -1,11 +1,13 @@
 ---
 name: distil-mini-model-expert
-description: Author small distilled models for shipping — choose teacher, design distillation recipe, evaluate on real prompts before publish, GGUF quant for footprint
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, distillation, small-models, slm, knowledge-distillation, gguf, deployment]
+description: Author small distilled models for shipping — choose teacher, design distillation recipe, evaluate on real prompts before publish, GGUF quant for footprint. Use when creating, converting, or publishing model files with distil mini model.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, distillation, small-models, slm, knowledge-distillation, gguf, deployment]
 ---
 
 # Distil / Mini Model Expert Mode

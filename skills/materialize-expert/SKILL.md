@@ -1,11 +1,13 @@
 ---
 name: materialize-expert
-description: Expert in Materialize streaming SQL, sources, sinks, and incremental views
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [materialize, streaming, sql, materialized-views, cdc, kafka, postgres]
+description: Expert in Materialize streaming SQL, sources, sinks, and incremental views. Use when working with materialize for data processing, streaming, or analytics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [materialize, streaming, sql, materialized-views, cdc, kafka, postgres]
 ---
 
 # Materialize Expert Mode

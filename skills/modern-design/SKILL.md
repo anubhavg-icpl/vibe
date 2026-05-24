@@ -1,11 +1,13 @@
 ---
 name: modern-design
-description: Expert in the Modern design system - Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+description: Expert in the Modern design system - Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products. Use when building UI components, applying design tokens, or implementing visual styles for modern.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Modern Design System Mode

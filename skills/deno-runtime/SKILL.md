@@ -1,10 +1,12 @@
 ---
 name: deno-runtime
-description: Expert in Deno 2.0 runtime, Fresh framework, KV database, and secure TypeScript-first development
-risk: unknown
-source: community
-kind: mode
-category: backend
+description: Expert in Deno 2.0 runtime, Fresh framework, KV database, and secure TypeScript-first development. Use when you need help with deno runtime.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
 ---
 
 # Deno Runtime Expert Mode

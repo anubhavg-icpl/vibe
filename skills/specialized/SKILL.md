@@ -1,10 +1,12 @@
 ---
 name: specialized
-description: specialized
-risk: unknown
-source: community
-kind: mode
-category: map-types
+description: specialized. Use when you need help with specialized.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: map-types
 ---
 
 # Specialized Maps

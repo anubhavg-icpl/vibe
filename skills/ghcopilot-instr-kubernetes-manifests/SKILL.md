@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-kubernetes-manifests
-description: Use when the user needs guidance on kubernetes-manifests. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, kubernetes-manifests]
----
-
----
-applyTo: 'k8s/**/*.yaml,k8s/**/*.yml,manifests/**/*.yaml,manifests/**/*.yml,deploy/**/*.yaml,deploy/**/*.yml,charts/**/templates/**/*.yaml,charts/**/templates/**/*.yml'
-description: 'Best practices for Kubernetes YAML manifests including labeling conventions, security contexts, pod security, resource management, probes, and validation commands'
+description: Best practices for Kubernetes YAML manifests including labeling conventions, security contexts, pod security, resource management, probes, and validation commands. Use when writing or reviewing kubernetes manifests code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, kubernetes-manifests]
+  applyTo: "k8s/**/*.yaml,k8s/**/*.yml,manifests/**/*.yaml,manifests/**/*.yml,deploy/**/*.yaml,deploy/**/*.yml,charts/**/templates/**/*.yaml,charts/**/templates/**/*.yml"
+  source: "awesome-copilot"
 ---
 
 # Kubernetes Manifests Instructions

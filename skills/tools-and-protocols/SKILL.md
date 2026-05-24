@@ -1,10 +1,12 @@
 ---
 name: tools-and-protocols
-description: Expert in tool use, function calling, and MCP — the interfaces between AI and the real world, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+description: Expert in tool use, function calling, and MCP — the interfaces between AI and the real world, from the AI Engineering from Scratch curriculum. Use when you need help with tools and protocols.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # Tools & Protocols Mode

@@ -1,6 +1,6 @@
 ---
 name: python-observability-ops
-description: "Observability patterns for Python applications. Triggers on: logging, metrics, tracing, opentelemetry, prometheus, observability, monitoring, structlog, correlation id."
+description: Observability patterns for Python applications. Triggers on: logging, metrics, tracing, opentelemetry, prometheus, observability, monitoring, structlog, correlation id. Use when you need help with python observability ops.
 license: MIT
 compatibility: "Python 3.10+. Requires structlog, opentelemetry-api, prometheus-client."
 allowed-tools: "Read Write"

@@ -1,6 +1,6 @@
 ---
 name: testgen
-description: "Generate tests with expert routing, framework detection, and auto-TaskCreate. Triggers on: generate tests, write tests, testgen, create test file, add test coverage."
+description: Generate tests with expert routing, framework detection, and auto-TaskCreate. Triggers on: generate tests, write tests, testgen, create test file, add test coverage. Use when you need help with testgen.
 license: MIT
 allowed-tools: "Read Write Edit Bash Glob Grep Task TaskCreate"
 metadata:

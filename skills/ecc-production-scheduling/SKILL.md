@@ -1,6 +1,6 @@
 ---
 name: production-scheduling
-description: >
+description: >. Use when you need help with production scheduling.
   Codified expertise for production scheduling, job sequencing, line balancing,
   changeover optimization, and bottleneck resolution in discrete and batch
   manufacturing. Informed by production schedulers with 15+ years experience.
@@ -9,13 +9,13 @@ description: >
   resolving bottlenecks, optimizing changeovers, responding to disruptions,
   or balancing manufacturing lines.
 license: Apache-2.0
-version: 1.0.0
 homepage: https://github.com/affaan-m/everything-claude-code
 origin: ECC
 metadata:
   author: evos
-  clawdbot:
-    emoji: ""
+  clawdbot: 
+  emoji: ""
+  version: 1.0.0
 ---
 
 # Production Scheduling

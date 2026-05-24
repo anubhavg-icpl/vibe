@@ -1,14 +1,15 @@
 ---
 name: html-ppt-product-launch
 description: Launch keynote deck — dark hero + light content, warm orange→peach accent, feature cards, pricing tiers, CTA. Use when announcing a product, launching a feature, or doing a keynote-style reveal.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "product launch"
   - "keynote"
   - "launch deck"
   - "feature reveal"
   - "launch slides"
   - "发布会"
-od:
+od: 
   mode: deck
   scenario: marketing
   featured: 21
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "Make a product-launch keynote deck in HTML using the html-ppt-product-launch full-deck template (dark hero, warm orange accent, feature cards, pricing tiers). Confirm: product name + tagline, the 3 key features, and pricing tiers — then write the deck."
 ---
+
 # HTML PPT · Product Launch
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`product-launch`** full-deck template.

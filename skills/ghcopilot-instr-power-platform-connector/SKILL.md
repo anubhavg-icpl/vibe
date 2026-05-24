@@ -1,14 +1,12 @@
 ---
 name: ghcopilot-instr-power-platform-connector
-description: Use when the user needs guidance on power-platform-connector. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-platform-connector]
----
-
----
-title: Power Platform Connectors Schema Development Instructions
-description: 'Comprehensive development guidelines for Power Platform Custom Connectors using JSON Schema definitions. Covers API definitions (Swagger 2.0), API properties, and settings configuration with Microsoft extensions.'
-applyTo: '**/*.{json,md}'
+description: Comprehensive development guidelines for Power Platform Custom Connectors using JSON Schema definitions. Covers API definitions (Swagger 2.0), API properties, and settings configuration with Microsoft extensions. Use when writing or reviewing power platform connector code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-platform-connector]
+  applyTo: "**/*.{json,md}"
+  source: "awesome-copilot"
 ---
 
 # Power Platform Connectors Schema Development Instructions

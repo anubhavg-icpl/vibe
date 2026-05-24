@@ -1,7 +1,8 @@
 ---
 name: sourcegraph-automation
-description: "Automate Sourcegraph tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Sourcegraph tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with sourcegraph automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-apps-canvas-yaml
-description: Use when the user needs guidance on power-apps-canvas-yaml. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-apps-canvas-yaml]
----
-
----
-description: 'Comprehensive guide for working with Power Apps Canvas Apps YAML structure based on Microsoft Power Apps YAML schema v3.0. Covers Power Fx formulas, control structures, data types, and source control best practices.'
-applyTo: '**/*.{yaml,yml,md,pa.yaml}'
+description: Comprehensive guide for working with Power Apps Canvas Apps YAML structure based on Microsoft Power Apps YAML schema v3.0. Covers Power Fx formulas, control structures, data types, and source control best practices. Use when writing or reviewing power apps canvas yaml code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-apps-canvas-yaml]
+  applyTo: "**/*.{yaml,yml,md,pa.yaml}"
+  source: "awesome-copilot"
 ---
 
 # Power Apps Canvas Apps YAML Structure Guide

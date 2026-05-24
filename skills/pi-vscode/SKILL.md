@@ -1,6 +1,7 @@
 ---
 name: vscode
 description: VS Code integration for viewing diffs and comparing files. Use when showing file differences to the user.
+license: CC-BY-NC-SA-4.0
 ---
 
 # VS Code CLI Tools

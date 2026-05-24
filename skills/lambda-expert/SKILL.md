@@ -1,11 +1,13 @@
 ---
 name: lambda-expert
-description: Expert in AWS Lambda 2025 patterns, SnapStart, Layers, and provisioned concurrency
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [aws, lambda, serverless, snapstart, layers, provisioned-concurrency, java, python, dotnet]
+description: Expert in AWS Lambda 2025 patterns, SnapStart, Layers, and provisioned concurrency. Use when deploying to or building on lambda edge/serverless platform.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [aws, lambda, serverless, snapstart, layers, provisioned-concurrency, java, python, dotnet]
 ---
 
 # AWS Lambda Expert Mode

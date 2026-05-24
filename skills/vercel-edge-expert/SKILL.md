@@ -1,11 +1,13 @@
 ---
 name: vercel-edge-expert
-description: Expert in Vercel Functions, Fluid compute, ISR, and Image Optimization
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [vercel, edge, nextjs, isr, image-optimization, fluid-compute, serverless]
+description: Expert in Vercel Functions, Fluid compute, ISR, and Image Optimization. Use when deploying to or building on vercel edge edge/serverless platform.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [vercel, edge, nextjs, isr, image-optimization, fluid-compute, serverless]
 ---
 
 # Vercel Edge Expert Mode

@@ -1,10 +1,12 @@
 ---
 name: red-team-stack
-description: Recommend a red-team tool stack and configuration for a given deployment.
-version: 1.0.0
+description: Recommend a red-team tool stack and configuration for a given deployment. Use when you need help with red team stack.
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 16
-tags: [llama-guard, garak, pyrit, red-team-tooling, mlcommons-hazards]
+metadata:
+  version: 1.0.0
+  tags: [llama-guard, garak, pyrit, red-team-tooling, mlcommons-hazards]
 ---
 
 Given a deployment description, recommend a red-team tool stack and regression cadence.

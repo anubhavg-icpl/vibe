@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-apex
-description: Use when the user needs guidance on apex. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, apex]
----
-
----
-description: 'Guidelines and best practices for Apex development on the Salesforce Platform'
-applyTo: '**/*.cls, **/*.trigger'
+description: "Use when the user needs guidance on apex. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, apex]
+  applyTo: "**/*.cls, **/*.trigger"
+  source: "awesome-copilot"
 ---
 
 # Apex Development

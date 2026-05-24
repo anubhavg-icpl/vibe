@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-ruby-mcp-server
-description: Use when the user needs guidance on ruby-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, ruby-mcp-server]
----
-
----
-description: 'Best practices and patterns for building Model Context Protocol (MCP) servers in Ruby using the official MCP Ruby SDK gem.'
-applyTo: "**/*.rb, **/Gemfile, **/*.gemspec, **/Rakefile"
+description: Best practices and patterns for building Model Context Protocol (MCP) servers in Ruby using the official MCP Ruby SDK gem. Use when writing or reviewing ruby mcp server code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, ruby-mcp-server]
+  applyTo: "**/*.rb, **/Gemfile, **/*.gemspec, **/Rakefile"
+  source: "awesome-copilot"
 ---
 
 # Ruby MCP Server Development Guidelines

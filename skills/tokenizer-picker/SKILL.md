@@ -1,10 +1,12 @@
 ---
 name: tokenizer-picker
-description: Pick a tokenization approach for a new language model or text pipeline.
-version: 1.0.0
+description: Pick a tokenization approach for a new language model or text pipeline. Use when you need help with tokenizer picker.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 04
-tags: [nlp, tokenization, embeddings]
+metadata:
+  version: 1.0.0
+  tags: [nlp, tokenization, embeddings]
 ---
 
 Given a task and dataset description, you output:

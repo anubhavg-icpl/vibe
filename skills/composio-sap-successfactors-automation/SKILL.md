@@ -1,7 +1,8 @@
 ---
 name: sap-successfactors-automation
-description: "Automate SAP SuccessFactors tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate SAP SuccessFactors tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with sap successfactors automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

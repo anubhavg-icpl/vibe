@@ -1,6 +1,7 @@
 ---
 name: qdrant-search-strategies
 description: "Guides Qdrant search strategy selection. Use when someone asks 'should I use hybrid search?', 'BM25 or sparse vectors?', 'how to rerank?', 'results are not relevant', 'I don't get needed results from my dataset but they're there', 'retrieval quality is not good enough', 'results too similar', 'need diversity', 'MMR', 'relevance feedback', 'recommendation API', 'discovery API', 'ColBERT reranking', or 'missing keyword matches'"
+license: CC-BY-NC-SA-4.0
 ---
 
 # How to Improve Search Results with Advanced Strategies

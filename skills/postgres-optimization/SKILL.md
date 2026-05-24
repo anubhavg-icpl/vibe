@@ -1,6 +1,7 @@
 ---
 name: postgres-optimization
-description: PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling
+description: PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling. Use when you need help with postgres optimization.
+license: CC-BY-NC-SA-4.0
 ---
 
 # PostgreSQL Optimization

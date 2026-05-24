@@ -1,11 +1,13 @@
 ---
 name: sdxl-expert
-description: Stable Diffusion XL - base + refiner, LoRA, IP-Adapter, samplers, schedulers
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, image-gen, sdxl, diffusion, lora, ip-adapter]
+description: Stable Diffusion XL - base + refiner, LoRA, IP-Adapter, samplers, schedulers. Use when working with multimodal AI (images, audio, video) using sdxl.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, image-gen, sdxl, diffusion, lora, ip-adapter]
 ---
 
 # SDXL Expert Mode

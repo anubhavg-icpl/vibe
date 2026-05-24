@@ -1,10 +1,11 @@
 ---
 name: claude-api
-description: "Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks."
-risk: unknown
-source: "https://github.com/anthropics/skills"
-date_added: "2026-03-21"
+description: Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks. Use when you need help with claude api.
 license: Complete terms in LICENSE.txt
+metadata:
+  risk: unknown
+  source: "https://github.com/anthropics/skills"
+  date_added: "2026-03-21"
 ---
 
 # Building LLM-Powered Applications with Claude

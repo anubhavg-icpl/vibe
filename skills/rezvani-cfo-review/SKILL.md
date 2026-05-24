@@ -1,6 +1,7 @@
 ---
 name: "cfo-review"
-description: "/cs:cfo-review <plan> — Numerate-skeptic interrogation of any plan that touches money. Unit economics, runway, dilution, capital allocation."
+description: /cs:cfo-review <plan> — Numerate-skeptic interrogation of any plan that touches money. Unit economics, runway, dilution, capital allocation. Use when you need help with cfo review.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:cfo-review — CFO Forcing Questions

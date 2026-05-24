@@ -1,11 +1,13 @@
 ---
 name: pacman-design
-description: Expert in the Pacman design system - Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, themed]
+description: Expert in the Pacman design system - Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics. Use when building UI components, applying design tokens, or implementing visual styles for pacman.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, themed]
 ---
 
 # Pacman Design System Mode

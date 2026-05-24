@@ -1,6 +1,7 @@
 ---
 name: repo-story-time
-description: 'Generate a comprehensive repository summary and narrative story from commit history'
+description: Generate a comprehensive repository summary and narrative story from commit history. Use when you need help with repo story time.
+license: CC-BY-NC-SA-4.0
 ---
 
 ## Role

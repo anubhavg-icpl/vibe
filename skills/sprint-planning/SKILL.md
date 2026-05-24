@@ -1,10 +1,12 @@
 ---
 name: sprint-planning
-description: Expert in sprint planning, story estimation, and agile capacity planning
-risk: unknown
-source: community
-kind: mode
-category: planning
+description: Expert in sprint planning, story estimation, and agile capacity planning. Use when you need help with sprint planning.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: planning
 ---
 
 # Sprint Planning Expert Mode

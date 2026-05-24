@@ -1,10 +1,12 @@
 ---
 name: sd-prompter
-description: Configure Stable Diffusion / Flux inference for a given prompt, style, and quality bar.
-version: 1.0.0
+description: Configure Stable Diffusion / Flux inference for a given prompt, style, and quality bar. Use when you need help with sd prompter.
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 07
-tags: [stable-diffusion, flux, latent-diffusion]
+metadata:
+  version: 1.0.0
+  tags: [stable-diffusion, flux, latent-diffusion]
 ---
 
 Given a prompt, target style, and quality bar (fast preview / portfolio quality / print-ready), output:

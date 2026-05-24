@@ -1,6 +1,7 @@
 ---
 name: "rag-architect"
 description: "Use when the user asks to design RAG pipelines, optimize retrieval strategies, choose embedding models, implement vector search, or build knowledge retrieval systems."
+license: CC-BY-NC-SA-4.0
 ---
 
 # RAG Architect - POWERFUL

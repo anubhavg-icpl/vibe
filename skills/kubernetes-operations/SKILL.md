@@ -1,6 +1,7 @@
 ---
 name: kubernetes-operations
-description: Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management
+description: Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management. Use when you need help with kubernetes operations.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Kubernetes Operations

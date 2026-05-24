@@ -1,9 +1,11 @@
 ---
 name: fal-generate
-description: "Generate images and videos using fal.ai AI models"
-risk: safe
-source: "https://github.com/fal-ai-community/skills/blob/main/skills/claude.ai/fal-generate/SKILL.md"
-date_added: "2026-02-27"
+description: Generate images and videos using fal.ai AI models. Use when you need help with fal generate.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/fal-ai-community/skills/blob/main/skills/claude.ai/fal-generate/SKILL.md"
+  date_added: "2026-02-27"
 ---
 
 # Fal Generate

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-devops-pipelines
-description: Use when the user needs guidance on azure-devops-pipelines. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-devops-pipelines]
----
-
----
-description: 'Best practices for Azure DevOps Pipeline YAML files'
-applyTo: '**/azure-pipelines.yml, **/azure-pipelines*.yml, **/*.pipeline.yml'
+description: "Use when the user needs guidance on azure-devops-pipelines. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-devops-pipelines]
+  applyTo: "**/azure-pipelines.yml, **/azure-pipelines*.yml, **/*.pipeline.yml"
+  source: "awesome-copilot"
 ---
 
 # Azure DevOps Pipeline YAML Best Practices

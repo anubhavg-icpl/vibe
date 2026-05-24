@@ -1,6 +1,7 @@
 ---
 name: "tc-tracker"
 description: "Use when the user asks to track technical changes, create change records, manage TC lifecycles, or hand off work between AI sessions. Covers init/create/update/status/resume/close/export workflows for structured code change documentation."
+license: CC-BY-NC-SA-4.0
 ---
 
 # TC Tracker

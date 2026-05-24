@@ -1,9 +1,11 @@
 ---
 name: multi-cloud-architecture
-description: "Decision framework and patterns for architecting applications across AWS, Azure, and GCP."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Decision framework and patterns for architecting applications across AWS, Azure, and GCP. Use when you need help with multi cloud architecture.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Multi-Cloud Architecture

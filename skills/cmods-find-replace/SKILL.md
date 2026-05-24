@@ -1,6 +1,6 @@
 ---
 name: find-replace
-description: "Modern find-and-replace using sd (simpler than sed) and batch replacement patterns. Triggers on: sd, find replace, batch replace, sed replacement, string replacement, rename."
+description: Modern find-and-replace using sd (simpler than sed) and batch replacement patterns. Triggers on: sd, find replace, batch replace, sed replacement, string replacement, rename. Use when you need help with find replace.
 license: MIT
 compatibility: "Requires sd CLI tool. Install: brew install sd (macOS) or cargo install sd (cross-platform)."
 allowed-tools: "Bash"

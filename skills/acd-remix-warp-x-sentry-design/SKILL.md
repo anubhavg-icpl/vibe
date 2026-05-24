@@ -1,11 +1,13 @@
 ---
 name: acd-remix-warp-x-sentry-design
-description: Remix. Warp's mono grid + Sentry's lilac purple. Dashboards that don't read as funeral parlors.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, remix, claude-design]
+description: "Remix. Warp's mono grid + Sentry's lilac purple. Dashboards that don't read as funeral parlors. Use when building UI components, applying design tokens, or implementing visual styles for remix warp x sentry."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, remix, claude-design]
 ---
 
 # Warp × Sentry — Developer Dashboard With Warmth Design Mode

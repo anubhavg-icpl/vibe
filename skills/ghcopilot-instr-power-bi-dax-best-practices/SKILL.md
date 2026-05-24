@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-bi-dax-best-practices
-description: Use when the user needs guidance on power-bi-dax-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-bi-dax-best-practices]
----
-
----
-description: 'Comprehensive Power BI DAX best practices and patterns based on Microsoft guidance for creating efficient, maintainable, and performant DAX formulas.'
-applyTo: '**/*.{pbix,dax,md,txt}'
+description: Comprehensive Power BI DAX best practices and patterns based on Microsoft guidance for creating efficient, maintainable, and performant DAX formulas. Use when writing or reviewing power bi dax best practices code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-bi-dax-best-practices]
+  applyTo: "**/*.{pbix,dax,md,txt}"
+  source: "awesome-copilot"
 ---
 
 # Power BI DAX Best Practices

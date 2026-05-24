@@ -1,10 +1,12 @@
 ---
 name: blueprint
-description: "Turn a one-line objective into a step-by-step construction plan any coding agent can execute cold. Each step has a self-contained context brief — a fresh agent in a new session can pick up any step without reading prior steps."
-category: planning
-risk: safe
-source: community
-date_added: "2026-03-10"
+description: Turn a one-line objective into a step-by-step construction plan any coding agent can execute cold. Each step has a self-contained context brief — a fresh agent in a new session can pick up any step without reading prior steps. Use when you need help with blueprint.
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: planning
+  risk: safe
+  source: community
+  date_added: "2026-03-10"
 ---
 
 # Blueprint — Construction Plan Generator

@@ -1,10 +1,12 @@
 ---
 name: managed-platform-picker
-description: Pick a managed LLM platform (Bedrock, Azure OpenAI, Vertex AI) and a second for redundancy, given workload, SLA, and compliance requirements — then produce a FinOps instrumentation plan.
-version: 1.0.0
+description: Pick a managed LLM platform (Bedrock, Azure OpenAI, Vertex AI) and a second for redundancy, given workload, SLA, and compliance requirements — then produce a FinOps instrumentation plan. Use when you need help with managed platform picker.
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 01
-tags: [bedrock, azure-openai, vertex-ai, ptu, finops, managed-platforms]
+metadata:
+  version: 1.0.0
+  tags: [bedrock, azure-openai, vertex-ai, ptu, finops, managed-platforms]
 ---
 
 Given a workload profile (required models, monthly tokens, TTFT SLA at P50/P99, compliance constraints, existing cloud footprint), produce a platform recommendation.

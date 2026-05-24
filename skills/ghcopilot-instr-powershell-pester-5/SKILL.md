@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-powershell-pester-5
-description: Use when the user needs guidance on powershell-pester-5. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, powershell-pester-5]
----
-
----
-applyTo: '**/*.Tests.ps1'
-description: 'PowerShell Pester testing best practices based on Pester v5 conventions'
+description: "Use when the user needs guidance on powershell-pester-5. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, powershell-pester-5]
+  applyTo: "**/*.Tests.ps1"
+  source: "awesome-copilot"
 ---
 
 # PowerShell Pester v5 Testing Guidelines

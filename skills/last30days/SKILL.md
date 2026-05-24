@@ -1,10 +1,11 @@
 ---
 name: last30days
-description: |
+description: |. Use when you need help with last30days.
   Recent community and social trend research over the last 30 days. Use when
   the brief asks what people are saying now, recent sentiment, community
   reactions, social proof, launch reaction, trend scan, or last-30-days context.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "last 30 days"
   - "last30days"
   - "recent sentiment"
@@ -14,7 +15,7 @@ triggers:
   - "social research"
   - "最近30天"
   - "社区反馈"
-od:
+od: 
   mode: prototype
   preview:
     type: markdown

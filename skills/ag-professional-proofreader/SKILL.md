@@ -1,10 +1,12 @@
 ---
 name: professional-proofreader
-description: >
+description: >. Use when you need help with professional proofreader.
     Use when a user asks to "proofread", "review and correct", "fix grammar", "improve readability while keeping my voice", and to proofread a document file and save an updated version.
-risk: safe
-source: original
-date_added: "2026-03-04"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: original
+  date_added: "2026-03-04"
 ---
 
 # Professional Proofreader

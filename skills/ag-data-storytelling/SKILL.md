@@ -1,9 +1,11 @@
 ---
 name: data-storytelling
-description: "Transform raw data into compelling narratives that drive decisions and inspire action."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Transform raw data into compelling narratives that drive decisions and inspire action. Use when you need help with data storytelling.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Data Storytelling

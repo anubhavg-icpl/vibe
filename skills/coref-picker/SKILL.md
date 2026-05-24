@@ -1,10 +1,12 @@
 ---
 name: coref-picker
-description: Pick a coreference approach, evaluation plan, and integration strategy.
-version: 1.0.0
+description: Pick a coreference approach, evaluation plan, and integration strategy. Use when you need help with coref picker.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 24
-tags: [nlp, coref, information-extraction]
+metadata:
+  version: 1.0.0
+  tags: [nlp, coref, information-extraction]
 ---
 
 Given a use case (single-doc / multi-doc, domain, language), output:

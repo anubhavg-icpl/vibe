@@ -1,9 +1,11 @@
 ---
 name: hig-components-menus
-description: "Check for .claude/apple-design-context.md before asking questions. Use existing context and only ask for information not already covered."
-risk: unknown
-source: community
-date_added: '2026-02-27'
+description: Check for .claude/apple-design-context.md before asking questions. Use existing context and only ask for information not already covered. Use when you need help with hig components menus.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Apple HIG: Menus and Buttons

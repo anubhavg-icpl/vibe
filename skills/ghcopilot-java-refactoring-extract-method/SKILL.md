@@ -1,6 +1,7 @@
 ---
 name: java-refactoring-extract-method
-description: 'Refactoring using Extract Methods in Java Language'
+description: Refactoring using Extract Methods in Java Language. Use when you need help with java refactoring extract method.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Refactoring Java Methods with Extract Method

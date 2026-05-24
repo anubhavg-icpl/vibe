@@ -1,8 +1,10 @@
 ---
 name: sharp-edges
-description: sharp-edges
-risk: unknown
-source: community
+description: sharp-edges. Use when you need help with sharp edges.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 ---

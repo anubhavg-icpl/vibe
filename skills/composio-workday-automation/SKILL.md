@@ -1,7 +1,8 @@
 ---
 name: Workday Automation
-description: "Automate HR operations in Workday -- manage workers, time off requests, absence balances, and employee data through natural language commands."
-requires:
+description: Automate HR operations in Workday -- manage workers, time off requests, absence balances, and employee data through natural language commands. Use when you need help with Workday Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

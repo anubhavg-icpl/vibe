@@ -1,11 +1,13 @@
 ---
 name: tenant-isolation-architect
-description: Expert in multi-tenant data isolation — database-per-tenant, schema-per-tenant, shared-with-RLS; immutable tenant context, per-request DbContextFactory, cross-tenant leak prevention, and tenant-scoped caching, queues, and search indexes
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [multitenancy, tenant-isolation, ef-core, dbcontext, row-level-security, rls, finbuckle, cross-tenant-leak, data-isolation, postgresql]
+description: Expert in multi-tenant data isolation — database-per-tenant, schema-per-tenant, shared-with-RLS; immutable tenant context, per-request DbContextFactory, cross-tenant leak prevention, and tenant-scoped caching, queues, and search indexes. Use when performing security analysis, auditing, or hardening with tenant isolation architect.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [multitenancy, tenant-isolation, ef-core, dbcontext, row-level-security, rls, finbuckle, cross-tenant-leak, data-isolation, postgresql]
 ---
 
 # Tenant Isolation Architect Mode

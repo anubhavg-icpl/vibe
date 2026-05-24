@@ -1,10 +1,12 @@
 ---
 name: ddd-strategic-design
-description: "Design DDD strategic artifacts including subdomains, bounded contexts, and ubiquitous language for complex business domains."
-risk: safe
-source: self
-tags: "[ddd, strategic-design, bounded-context, ubiquitous-language]"
-date_added: "2026-02-27"
+description: Design DDD strategic artifacts including subdomains, bounded contexts, and ubiquitous language for complex business domains. Use when building UI with ddd strategic design language and visual style.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: self
+  tags: "[ddd, strategic-design, bounded-context, ubiquitous-language]"
+  date_added: "2026-02-27"
 ---
 
 # DDD Strategic Design

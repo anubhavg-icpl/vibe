@@ -1,11 +1,13 @@
 ---
 name: tanstack-router-expert
-description: Expert in TanStack Router file-based routing with end-to-end type safety
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [tanstack-router, react, routing, type-safety, file-based]
+description: Expert in TanStack Router file-based routing with end-to-end type safety. Use when building web applications with tanstack router.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [tanstack-router, react, routing, type-safety, file-based]
 ---
 
 # TanStack Router Expert Mode

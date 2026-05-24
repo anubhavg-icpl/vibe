@@ -1,11 +1,13 @@
 ---
 name: exllama-awq-gptq-expert
-description: Quantize and serve LLMs on consumer GPUs with ExLlamaV2/V3 (EXL2/EXL3), AWQ, and GPTQ
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, exllama, exllamav3, exl2, exl3, awq, gptq, quantization, consumer-gpu]
+description: Quantize and serve LLMs on consumer GPUs with ExLlamaV2/V3 (EXL2/EXL3), AWQ, and GPTQ. Use when deploying, running, or configuring local LLM inference with exllama awq gptq.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, exllama, exllamav3, exl2, exl3, awq, gptq, quantization, consumer-gpu]
 ---
 
 # ExLlama / AWQ / GPTQ Expert Mode

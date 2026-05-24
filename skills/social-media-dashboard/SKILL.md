@@ -1,6 +1,6 @@
 ---
 name: social-media-dashboard
-description: |
+description: |. Use when you need help with social media dashboard.
   Creator-facing social media analytics dashboard in a single HTML file.
   A platform switcher (X / LinkedIn / YouTube / Instagram), a row of KPI
   cards (followers, engagement rate, likes, reposts), a follower-growth
@@ -9,7 +9,8 @@ description: |
   dashboard", "creator analytics", "social analytics", or names specific
   platforms (X, Twitter, LinkedIn, YouTube, Instagram, TikTok) together
   with metrics like followers, engagement, likes, reposts.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "social media dashboard"
   - "social analytics"
   - "creator dashboard"
@@ -18,7 +19,7 @@ triggers:
   - "社媒后台"
   - "创作者后台"
   - "社交媒体仪表盘"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: creator

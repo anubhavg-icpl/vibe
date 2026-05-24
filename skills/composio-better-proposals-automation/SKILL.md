@@ -1,7 +1,8 @@
 ---
 name: better-proposals-automation
-description: "Automate Better Proposals tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Better Proposals tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with better proposals automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

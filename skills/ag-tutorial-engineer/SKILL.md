@@ -1,11 +1,12 @@
 ---
 name: tutorial-engineer
-description: Creates step-by-step tutorials and educational content from code. Transforms complex concepts into progressive learning experiences with hands-on examples.
-risk: safe
-source: community
-date_added: '2026-03-02'
+description: Creates step-by-step tutorials and educational content from code. Transforms complex concepts into progressive learning experiences with hands-on examples. Use when you need help with tutorial engineer.
+license: CC-BY-NC-SA-4.0
 metadata:
   version: '2.0.0'
+  risk: safe
+  source: community
+  date_added: '2026-03-02'
 ---
 
 ## Use this skill when

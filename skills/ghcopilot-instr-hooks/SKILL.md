@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-hooks
-description: Use when the user needs guidance on hooks. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, hooks]
----
-
----
-description: 'Portable guidance for authoring safe, fast, and clear hooks and reusable hook examples'
-applyTo: '.github/hooks/**, hooks/**'
+description: "Use when the user needs guidance on hooks. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, hooks]
+  applyTo: ".github/hooks/**, hooks/**"
+  source: "awesome-copilot"
 ---
 
 # Hook Authoring Guidelines

@@ -1,11 +1,11 @@
 ---
 name: astropy
-description: "Astropy is the core Python package for astronomy, providing essential functionality for astronomical research and data analysis."
+description: Astropy is the core Python package for astronomy, providing essential functionality for astronomical research and data analysis. Use when you need help with astropy.
 license: BSD-3-Clause license
 metadata:
-    skill-author: K-Dense Inc.
-risk: unknown
-source: "https://github.com/astropy/astropy"
+  skill-author: K-Dense Inc.
+  risk: unknown
+  source: "https://github.com/astropy/astropy"
 ---
 
 # Astropy

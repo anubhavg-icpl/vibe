@@ -1,6 +1,6 @@
 ---
 name: open-design-landing-deck
-description: >
+description: >. Use when you need help with open design landing deck.
   Produce a single-file slide deck in the Atelier Zero visual language
   (warm-paper background, italic-serif emphasis spans, coral terminating
   dots, surreal collage plates) — Open Design's brand deck recipe.
@@ -9,7 +9,8 @@ description: >
   counter, an ESC overview grid, a coral progress bar, and inherits
   the canonical stylesheet + 16-slot image library from the sister
   `open-design-landing` skill.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - slide deck
   - 演示文稿
   - pitch deck
@@ -18,7 +19,7 @@ triggers:
   - atelier zero deck
   - open design deck
   - open design landing deck
-od:
+od: 
   category: brand-deck
   surface: web
   mode: deck
@@ -34,7 +35,7 @@ od:
     requires:
       - typographic-rhythm
       - pixel-discipline
-inputs:
+inputs: 
   - id: brand
     label: Brand identity (shared across slides)
     schema_path: ./schema.ts#BrandBlock
@@ -50,15 +51,15 @@ inputs:
   - id: imagery
     label: Image library (defaults to sister skill's assets)
     schema_path: ../open-design-landing/schema.ts#ImageryConfig
-parameters:
+parameters: 
   slides_recommended_count:
     type: number
     default: 11
     description: 8-15 is the sweet spot. Below 6 the deck feels thin; above 18 attendees lose the thread.
-outputs:
+outputs: 
   - path: <out>/index.html
     description: Self-contained HTML deck — Atelier Zero CSS inlined, runtime script inline, images relative.
-capabilities_required:
+capabilities_required: 
   - file-write
   - node-runtime
 example_prompt: |

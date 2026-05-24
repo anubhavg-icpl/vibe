@@ -1,10 +1,12 @@
 ---
 name: nextjs-project-architect
-description: Production-ready Next.js project structure architect - validates and scaffolds enterprise-grade Next.js 14/15/16 applications with App Router best practices
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+description: Production-ready Next.js project structure architect - validates and scaffolds enterprise-grade Next.js 14/15/16 applications with App Router best practices. Use when scaffolding, structuring, or architecting nextjs projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # ⚡ Next.js Project Architect Mode

@@ -1,11 +1,13 @@
 ---
 name: cpp-coding-standards
-description: Production-ready C/C++ coding standards enforcing safety, modern patterns, and maintainability
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [cpp, c, coding-standards, modern-cpp, clang-tidy]
+description: Production-ready C/C++ coding standards enforcing safety, modern patterns, and maintainability. Use when enforcing cpp coding conventions and style rules.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [cpp, c, coding-standards, modern-cpp, clang-tidy]
 ---
 
 # C/C++ Coding Standards Mode

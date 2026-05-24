@@ -1,8 +1,8 @@
 ---
 name: qdrant-version-upgrade
-description: "Guidance on how to upgrade your Qdrant version without interrupting the availability of your application and ensuring data integrity."
+description: Guidance on how to upgrade your Qdrant version without interrupting the availability of your application and ensuring data integrity. Use when you need help with qdrant version upgrade.
+license: CC-BY-NC-SA-4.0
 ---
-
 
 # Qdrant Version Upgrade
 

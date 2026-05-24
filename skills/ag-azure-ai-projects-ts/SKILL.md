@@ -1,9 +1,11 @@
 ---
 name: azure-ai-projects-ts
-description: "High-level SDK for Azure AI Foundry projects with agents, connections, deployments, and evaluations."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: High-level SDK for Azure AI Foundry projects with agents, connections, deployments, and evaluations. Use when you need help with azure ai projects ts.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Azure AI Projects SDK for TypeScript

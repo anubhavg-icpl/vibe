@@ -1,6 +1,6 @@
 ---
 name: primekg
-description: Query the Precision Medicine Knowledge Graph (PrimeKG) for multiscale biological data including genes, drugs, diseases, phenotypes, and more.
+description: Query the Precision Medicine Knowledge Graph (PrimeKG) for multiscale biological data including genes, drugs, diseases, phenotypes, and more. Use when you need help with primekg.
 license: Unknown
 metadata:
     skill-author: K-Dense Inc. (PrimeKG original from Harvard MIMS)

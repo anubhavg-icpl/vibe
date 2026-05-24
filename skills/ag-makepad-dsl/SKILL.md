@@ -1,12 +1,14 @@
 ---
 name: makepad-dsl
-description: |
+description: |. Use when you need help with makepad dsl.
   CRITICAL: Use for Makepad DSL syntax and inheritance. Triggers on:
   makepad dsl, live_design, makepad inheritance, makepad prototype,
   "<Widget>", "Foo = { }", makepad object, makepad property,
   makepad DSL 语法, makepad 继承, makepad 原型, 如何定义 makepad 组件
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
 ---
 
 # Makepad DSL Skill

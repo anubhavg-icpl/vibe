@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-java-mcp-server
-description: Use when the user needs guidance on java-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, java-mcp-server]
----
-
----
-description: 'Best practices and patterns for building Model Context Protocol (MCP) servers in Java using the official MCP Java SDK with reactive streams and Spring integration.'
-applyTo: "**/*.java, **/pom.xml, **/build.gradle, **/build.gradle.kts"
+description: Best practices and patterns for building Model Context Protocol (MCP) servers in Java using the official MCP Java SDK with reactive streams and Spring integration. Use when writing or reviewing java mcp server code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, java-mcp-server]
+  applyTo: "**/*.java, **/pom.xml, **/build.gradle, **/build.gradle.kts"
+  source: "awesome-copilot"
 ---
 
 # Java MCP Server Development Guidelines

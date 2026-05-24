@@ -1,15 +1,17 @@
 ---
 name: ui-setup
-description: "Interactive StyleSeed setup wizard for choosing app type, brand color, visual style, typography, and the first screen scaffold."
-category: design
-risk: safe
-source: community
+description: Interactive StyleSeed setup wizard for choosing app type, brand color, visual style, typography, and the first screen scaffold. Use when you need help with ui setup.
+license: CC-BY-NC-SA-4.0
 source_repo: bitjaru/styleseed
 source_type: community
-date_added: "2026-04-08"
 author: bitjaru
-tags: [ui, design-system, setup, frontend, styleseed]
 tools: [claude, cursor, codex, gemini]
+metadata:
+  category: design
+  risk: safe
+  source: community
+  date_added: "2026-04-08"
+  tags: [ui, design-system, setup, frontend, styleseed]
 ---
 
 # UI Setup

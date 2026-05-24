@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-cmake-vcpkg
-description: Use when the user needs guidance on cmake-vcpkg. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, cmake-vcpkg]
----
-
----
-description: 'C++ project configuration and package management'
-applyTo: '**/*.cmake, **/CMakeLists.txt, **/*.cpp, **/*.h, **/*.hpp'
+description: "Use when the user needs guidance on cmake-vcpkg. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, cmake-vcpkg]
+  applyTo: "**/*.cmake, **/CMakeLists.txt, **/*.cpp, **/*.h, **/*.hpp"
+  source: "awesome-copilot"
 ---
 
 This project uses vcpkg in manifest mode. Please keep this in mind when giving vcpkg suggestions. Do not provide suggestions like vcpkg install library, as they will not work as expected.

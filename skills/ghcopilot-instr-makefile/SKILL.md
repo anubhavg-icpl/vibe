@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-makefile
-description: Use when the user needs guidance on makefile. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, makefile]
----
-
----
-description: "Best practices for authoring GNU Make Makefiles"
-applyTo: "**/Makefile, **/makefile, **/*.mk, **/GNUmakefile"
+description: "Use when the user needs guidance on makefile. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, makefile]
+  applyTo: "**/Makefile, **/makefile, **/*.mk, **/GNUmakefile"
+  source: "awesome-copilot"
 ---
 
 # Makefile Development Instructions

@@ -1,11 +1,13 @@
 ---
 name: sre-expert
-description: Expert in Site Reliability Engineering practices and principles
-risk: unknown
-source: community
-kind: mode
-category: devops
-tags: [sre, reliability, observability, incident-management, toil-reduction]
+description: Expert in Site Reliability Engineering practices and principles. Use when automating CI/CD, deployments, or operations with sre.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: devops
+  tags: [sre, reliability, observability, incident-management, toil-reduction]
 ---
 
 # SRE Expert Mode

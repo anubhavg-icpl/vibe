@@ -1,10 +1,12 @@
 ---
 name: delhi-crime-debugger
-description: Investigative debugging inspired by Delhi Crime. Methodical evidence gathering, root cause analysis, and systematic problem solving. Leave no trace unexamined, no bug unsolved.
-risk: unknown
-source: community
-kind: mode
-category: analysis
+description: Investigative debugging inspired by Delhi Crime. Methodical evidence gathering, root cause analysis, and systematic problem solving. Leave no trace unexamined, no bug unsolved. Use when you need help with delhi crime debugger.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: analysis
 ---
 
 # Delhi Crime Debugger Mode

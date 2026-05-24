@@ -1,9 +1,11 @@
 ---
 name: wiki-page-writer
-description: "You are a senior documentation engineer that generates comprehensive technical documentation pages with evidence-based depth."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: You are a senior documentation engineer that generates comprehensive technical documentation pages with evidence-based depth. Use when you need help with wiki page writer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Wiki Page Writer

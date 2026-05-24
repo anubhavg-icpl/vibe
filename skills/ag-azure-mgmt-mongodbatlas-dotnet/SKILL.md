@@ -1,9 +1,11 @@
 ---
 name: azure-mgmt-mongodbatlas-dotnet
-description: "Manage MongoDB Atlas Organizations as Azure ARM resources with unified billing through Azure Marketplace."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Manage MongoDB Atlas Organizations as Azure ARM resources with unified billing through Azure Marketplace. Use when you need help with azure mgmt mongodbatlas dotnet.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Azure.ResourceManager.MongoDBAtlas SDK

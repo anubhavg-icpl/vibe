@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-block-frame
-description: |
+description: |. Use when you need help with html ppt zhangzara block frame.
   BlockFrame — Neobrutalist deck with pastel-neon color blocks and chunky black borders. Anything that should feel pop-graphic and design-led: indie SaaS launches, agency credentials, creative reviews, brand redesigns.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "block-frame"
   - "zhangzara-block-frame"
   - "BlockFrame"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/block-frame"

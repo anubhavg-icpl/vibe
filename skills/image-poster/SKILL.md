@@ -1,12 +1,13 @@
 ---
 name: image-poster
-description: |
+description: |. Use when you need help with image poster.
   Single-image generation skill for posters, key art, and editorial
   illustrations. Defaults to gpt-image-2 but is provider-agnostic — the
   same workflow drives Flux, Imagen, or Midjourney via the active
   upstream tooling. Output is one or more PNG/JPEG files saved to the
   project folder.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "poster"
   - "key art"
   - "illustration"
@@ -14,7 +15,7 @@ triggers:
   - "cover art"
   - "海报"
   - "插画"
-od:
+od: 
   mode: image
   surface: image
   scenario: design

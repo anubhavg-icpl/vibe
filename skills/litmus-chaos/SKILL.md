@@ -1,11 +1,13 @@
 ---
 name: litmus-chaos
-description: Expert in LitmusChaos - CNCF graduated Kubernetes-native chaos engineering platform
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [litmus, chaos-engineering, kubernetes, cncf, cloud-native, resilience]
+description: Expert in LitmusChaos - CNCF graduated Kubernetes-native chaos engineering platform. Use when writing, running, or improving tests with litmus chaos.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [litmus, chaos-engineering, kubernetes, cncf, cloud-native, resilience]
 ---
 
 # LitmusChaos Expert Mode

@@ -1,6 +1,6 @@
 ---
 name: geofeed-tuner
-description: >
+description: >. Use when you need help with geofeed tuner.
   Use this skill whenever the user mentions IP geolocation feeds, RFC 8805, geofeeds, or wants help creating, tuning, validating, or publishing a
   self-published IP geolocation feed in CSV format. Intended user audience is a network
   operator, ISP, mobile carrier, cloud provider, hosting company, IXP, or satellite provider

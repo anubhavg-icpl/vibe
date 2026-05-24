@@ -1,10 +1,12 @@
 ---
 name: dotnet-project-architect
-description: Production-ready .NET project structure architect - validates and scaffolds enterprise-grade .NET 8/9 solutions with Clean Architecture and DDD patterns
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+description: Production-ready .NET project structure architect - validates and scaffolds enterprise-grade .NET 8/9 solutions with Clean Architecture and DDD patterns. Use when scaffolding, structuring, or architecting dotnet projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # 🔷 .NET Project Architect Mode

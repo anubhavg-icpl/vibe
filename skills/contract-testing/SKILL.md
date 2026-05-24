@@ -1,11 +1,13 @@
 ---
 name: contract-testing
-description: Expert in contract testing for API and microservice integration
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [testing, contracts, pact, api, microservices, integration]
+description: Expert in contract testing for API and microservice integration. Use when writing, running, or improving tests with contract testing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [testing, contracts, pact, api, microservices, integration]
 ---
 
 # Contract Testing Expert Mode

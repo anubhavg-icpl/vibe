@@ -1,11 +1,13 @@
 ---
 name: iot-expert
-description: Expert in IoT development with embedded systems and cloud connectivity
-risk: unknown
-source: community
-kind: mode
-category: emerging-tech
-tags: [iot, embedded, mqtt, sensors, edge-devices, raspberry-pi, esp32]
+description: Expert in IoT development with embedded systems and cloud connectivity. Use when you need deep expertise in iot.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: emerging-tech
+  tags: [iot, embedded, mqtt, sensors, edge-devices, raspberry-pi, esp32]
 ---
 
 # IoT Expert Mode

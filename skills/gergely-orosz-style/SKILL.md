@@ -1,11 +1,13 @@
 ---
 name: gergely-orosz-style
-description: Gergely Orosz — The Pragmatic Engineer, scaling teams, real-world tradeoffs, sourced reporting on Big Tech engineering
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, engineering-management, scaling, pragmatic, big-tech, leadership]
+description: Gergely Orosz — The Pragmatic Engineer, scaling teams, real-world tradeoffs, sourced reporting on Big Tech engineering. Use when you want code review, architecture advice, or opinions in the style of gergely orosz.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, engineering-management, scaling, pragmatic, big-tech, leadership]
 ---
 
 # Gergely Orosz Style Mode

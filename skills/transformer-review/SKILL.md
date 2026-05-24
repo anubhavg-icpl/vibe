@@ -1,10 +1,12 @@
 ---
 name: transformer-review
-description: Review a transformer-from-scratch implementation against the 13 Phase 7 lessons.
-version: 1.0.0
+description: Review a transformer-from-scratch implementation against the 13 Phase 7 lessons. Use when you need help with transformer review.
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 14
-tags: [transformers, review, capstone]
+metadata:
+  version: 1.0.0
+  tags: [transformers, review, capstone]
 ---
 
 Given a transformer-from-scratch codebase (PyTorch / JAX), review against the 2026 defaults and flag missing or incorrect pieces:

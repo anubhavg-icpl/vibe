@@ -1,15 +1,17 @@
 ---
 name: satori
-description: "Clinically informed wisdom companion blending psychology and philosophy into a structured thinking partner"
-category: personal-development
-risk: safe
-source: community
+description: Clinically informed wisdom companion blending psychology and philosophy into a structured thinking partner. Use when you need help with satori.
+license: CC-BY-NC-SA-4.0
 source_repo: MetcalfSolutions/Satori
 source_type: community
-date_added: "2026-04-06"
 author: MetcalfSolutions
-tags: [mental-health, psychology, wisdom, philosophy, ifs, stoicism, jungian, conversation]
 tools: [claude]
+metadata:
+  category: personal-development
+  risk: safe
+  source: community
+  date_added: "2026-04-06"
+  tags: [mental-health, psychology, wisdom, philosophy, ifs, stoicism, jungian, conversation]
 ---
 
 # Satori

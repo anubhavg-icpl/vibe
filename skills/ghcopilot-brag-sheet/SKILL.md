@@ -1,6 +1,6 @@
 ---
 name: brag-sheet
-description: >
+description: >. Use when you need help with brag sheet.
   Turn vague "what did I do?" into evidence-backed impact statements for performance
   reviews, self-reviews, promotion packets, and weekly updates. Uniquely mines Copilot
   CLI session logs to reconstruct forgotten work, plus git commits and GitHub PRs.

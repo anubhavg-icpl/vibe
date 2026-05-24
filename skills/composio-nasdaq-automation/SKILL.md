@@ -1,7 +1,8 @@
 ---
 name: nasdaq-automation
-description: "Automate Nasdaq tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Nasdaq tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with nasdaq automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

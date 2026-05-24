@@ -1,10 +1,12 @@
 ---
 name: search-policy
-description: Pick a search strategy (ReAct, ToT, LATS, evolutionary) given task shape, token budget, and evaluator quality.
-version: 1.0.0
+description: Pick a search strategy (ReAct, ToT, LATS, evolutionary) given task shape, token budget, and evaluator quality. Use when you need help with search policy.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 04
-tags: [tree-of-thoughts, lats, mcts, search, value-function]
+metadata:
+  version: 1.0.0
+  tags: [tree-of-thoughts, lats, mcts, search, value-function]
 ---
 
 Given a task shape (single-answer / multi-answer / open-ended), a token budget, and an available evaluator (scalar test / heuristic / self-eval), produce a search strategy recommendation with concrete parameters.

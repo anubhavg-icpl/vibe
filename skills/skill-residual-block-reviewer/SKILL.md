@@ -1,10 +1,12 @@
 ---
 name: skill-residual-block-reviewer
-description: Review a PyTorch residual block for skip-connection correctness, BN placement, activation order, and shape alignment
-version: 1.0.0
+description: Review a PyTorch residual block for skip-connection correctness, BN placement, activation order, and shape alignment. Use when you need help with skill residual block reviewer.
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 3
-tags: [computer-vision, resnet, code-review, pytorch]
+metadata:
+  version: 1.0.0
+  tags: [computer-vision, resnet, code-review, pytorch]
 ---
 
 # Residual Block Reviewer

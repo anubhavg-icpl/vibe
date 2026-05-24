@@ -1,9 +1,11 @@
 ---
 name: pypict-skill
-description: "Pairwise test generation"
-risk: safe
-source: "https://github.com/omkamal/pypict-claude-skill/blob/main/SKILL.md"
-date_added: "2026-02-27"
+description: Pairwise test generation. Use when you need help with pypict skill.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/omkamal/pypict-claude-skill/blob/main/SKILL.md"
+  date_added: "2026-02-27"
 ---
 
 # Pypict Skill

@@ -1,11 +1,13 @@
 ---
 name: wandb-prompts-expert
-description: Weights & Biases Weave — trace agents, log datasets, run evaluations, compare runs
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, observability, wandb, weave, evaluation]
+description: Weights & Biases Weave — trace agents, log datasets, run evaluations, compare runs. Use when evaluating, monitoring, or observing LLM performance with wandb prompts.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, observability, wandb, weave, evaluation]
 ---
 
 # W&B Weave / Prompts Expert Mode

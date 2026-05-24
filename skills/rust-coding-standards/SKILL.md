@@ -1,11 +1,13 @@
 ---
 name: rust-coding-standards
-description: Production-ready Rust coding standards enforcing idiomatic patterns, safety, performance, and maintainability
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [rust, coding-standards, best-practices, clippy, rustfmt]
+description: Production-ready Rust coding standards enforcing idiomatic patterns, safety, performance, and maintainability. Use when enforcing rust coding conventions and style rules.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [rust, coding-standards, best-practices, clippy, rustfmt]
 ---
 
 # Rust Coding Standards Mode

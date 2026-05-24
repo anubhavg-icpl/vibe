@@ -1,11 +1,13 @@
 ---
 name: peft-expert
-description: HuggingFace PEFT library survey — LoRA, IA3, prompt tuning, prefix tuning, AdaLoRA, OFT/BOFT, VeRA
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [peft, lora, ia3, prompt-tuning, prefix-tuning, adalora, fine-tuning]
+description: HuggingFace PEFT library survey — LoRA, IA3, prompt tuning, prefix tuning, AdaLoRA, OFT/BOFT, VeRA. Use when fine-tuning, training, or adapting language models with peft techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [peft, lora, ia3, prompt-tuning, prefix-tuning, adalora, fine-tuning]
 ---
 
 # PEFT Expert Mode

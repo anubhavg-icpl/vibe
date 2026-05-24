@@ -1,6 +1,7 @@
 ---
 name: project-health
-description: Portfolio health dashboard and risk matrix analysis. Usage: /project-health <dashboard|risk> [options]
+description: Portfolio health dashboard and risk matrix analysis. Usage: /project-health <dashboard|risk> [options]. Use when you need help with project health.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /project-health

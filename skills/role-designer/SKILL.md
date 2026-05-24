@@ -1,10 +1,12 @@
 ---
 name: role-designer
-description: Produce a role roster for a multi-agent system, naming the planner/executor/critic/verifier for a given task with explicit I/O schemas.
-version: 1.0.0
+description: Produce a role roster for a multi-agent system, naming the planner/executor/critic/verifier for a given task with explicit I/O schemas. Use when you need help with role designer.
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 08
-tags: [multi-agent, role-specialization, metagpt, chatdev, verification]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, role-specialization, metagpt, chatdev, verification]
 ---
 
 Given a task, produce a specialized role roster with I/O schemas and a deterministic verifier. Ready to map onto CrewAI, LangGraph, AutoGen, or custom loops.

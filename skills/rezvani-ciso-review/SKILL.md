@@ -1,6 +1,7 @@
 ---
 name: "ciso-review"
-description: "/cs:ciso-review <plan> — Risk-paranoid interrogation of any plan that touches data, compliance, or production access."
+description: /cs:ciso-review <plan> — Risk-paranoid interrogation of any plan that touches data, compliance, or production access. Use when you need help with ciso review.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:ciso-review — CISO Forcing Questions

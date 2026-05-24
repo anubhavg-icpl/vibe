@@ -1,11 +1,13 @@
 ---
 name: rspack-expert
-description: Expert in Rspack and Rsbuild — Rust-powered, webpack-compatible bundler
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [rspack, rsbuild, bundler, rust, webpack, build-tools]
+description: Expert in Rspack and Rsbuild — Rust-powered, webpack-compatible bundler. Use when building web applications with rspack.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [rspack, rsbuild, bundler, rust, webpack, build-tools]
 ---
 
 # Rspack Expert Mode

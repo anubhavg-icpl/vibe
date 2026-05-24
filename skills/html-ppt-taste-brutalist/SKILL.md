@@ -1,6 +1,7 @@
 ---
 name: html-ppt-taste-brutalist
-description: 16:9 HTML deck in tactical-telemetry / CRT-terminal taste. Deactivated-CRT charcoal slides, white-phosphor monospace, hazard-red accent, scanline overlay, ASCII syntax, density over decoration. Distilled from Leonxlnx/taste-skill `brutalist-skill` (Tactical Telemetry mode).
+description: 16:9 HTML deck in tactical-telemetry / CRT-terminal taste. Deactivated-CRT charcoal slides, white-phosphor monospace, hazard-red accent, scanline overlay, ASCII syntax, density over decoration. Distilled from Leonxlnx/taste-skill `brutalist-skill` (Tactical Telemetry mode). Use when you need help with html ppt taste brutalist.
+license: CC-BY-NC-SA-4.0
 ---
 
 # HTML PPT — Tactical Telemetry / CRT Terminal

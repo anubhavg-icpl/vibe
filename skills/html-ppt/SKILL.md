@@ -1,7 +1,8 @@
 ---
 name: html-ppt
 description: HTML PPT Studio — author professional static HTML presentations in many styles, layouts, and animations, all driven by templates. Use when the user asks for a presentation, PPT, slides, keynote, deck, slideshow, "幻灯片", "演讲稿", "做一份 PPT", "做一份 slides", a reveal-style HTML deck, a 小红书 图文, or any kind of multi-slide pitch/report/sharing document that should look tasteful and be usable with keyboard navigation. Triggers include keywords like "presentation", "ppt", "slides", "deck", "keynote", "reveal", "slideshow", "幻灯片", "演讲稿", "分享稿", "小红书图文", "talk slides", "pitch deck", "tech sharing", "technical presentation".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "ppt"
   - "deck"
   - "slides"
@@ -16,7 +17,7 @@ triggers:
   - "pitch deck"
   - "tech sharing"
   - "technical presentation"
-od:
+od: 
   mode: deck
   scenario: marketing
   featured: 19

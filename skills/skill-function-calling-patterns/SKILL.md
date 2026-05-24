@@ -1,10 +1,12 @@
 ---
 name: skill-function-calling-patterns
-description: Decision framework for implementing function calling in production -- tool design, error handling, security, and provider patterns
-version: 1.0.0
+description: Decision framework for implementing function calling in production -- tool design, error handling, security, and provider patterns. Use when you need help with skill function calling patterns.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 09
-tags: [function-calling, tool-use, agents, mcp, security, openai, anthropic]
+metadata:
+  version: 1.0.0
+  tags: [function-calling, tool-use, agents, mcp, security, openai, anthropic]
 ---
 
 # Function Calling Patterns

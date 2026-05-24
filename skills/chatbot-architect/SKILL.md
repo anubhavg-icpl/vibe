@@ -1,10 +1,12 @@
 ---
 name: chatbot-architect
-description: Design a chatbot stack for a given use case.
-version: 1.0.0
+description: Design a chatbot stack for a given use case. Use when you need help with chatbot architect.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 17
-tags: [nlp, agents, chatbot]
+metadata:
+  version: 1.0.0
+  tags: [nlp, agents, chatbot]
 ---
 
 Given a product context (user need, compliance constraints, available tools, data volume), output:

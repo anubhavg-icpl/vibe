@@ -1,7 +1,8 @@
 ---
 name: parsera-automation
-description: "Automate Parsera tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Parsera tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with parsera automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

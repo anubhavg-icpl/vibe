@@ -1,11 +1,13 @@
 ---
 name: ollama-library-publisher-expert
-description: Publish models to ollama.com/library — namespace setup, ollama push, signing keys, quant tags, parameter-size tags, model card README authoring
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, ollama, publishing, registry, signing-keys, quantization, model-card]
+description: Publish models to ollama.com/library — namespace setup, ollama push, signing keys, quant tags, parameter-size tags, model card README authoring. Use when creating, converting, or publishing model files with ollama library publisher.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, ollama, publishing, registry, signing-keys, quantization, model-card]
 ---
 
 # Ollama Library Publisher Expert Mode

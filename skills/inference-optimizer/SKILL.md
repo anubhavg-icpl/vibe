@@ -1,10 +1,12 @@
 ---
 name: inference-optimizer
-description: Pick attention implementation, KV cache strategy, quantization, and speculative decoding for a new inference deployment.
-version: 1.0.0
+description: Pick attention implementation, KV cache strategy, quantization, and speculative decoding for a new inference deployment. Use when you need help with inference optimizer.
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 12
-tags: [transformers, inference, flash-attention, kv-cache]
+metadata:
+  version: 1.0.0
+  tags: [transformers, inference, flash-attention, kv-cache]
 ---
 
 Given an inference deployment (model name + params, target hardware, concurrency, max context length, latency SLO, throughput target), output:

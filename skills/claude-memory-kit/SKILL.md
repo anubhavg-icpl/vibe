@@ -1,11 +1,12 @@
 ---
 name: claude-memory-kit
-description: "Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies."
+description: Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies. Use when you need help with claude memory kit.
 author: awrshift
-version: 3.2.0
-tags: [memory, context-management, productivity, agent-memory]
 repository: https://github.com/awrshift/claude-memory-kit
 license: MIT
+metadata:
+  version: 3.2.0
+  tags: [memory, context-management, productivity, agent-memory]
 ---
 
 # Claude Memory Kit

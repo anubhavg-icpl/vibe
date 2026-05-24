@@ -1,6 +1,7 @@
 ---
 name: code-to-prd
-description: Reverse-engineer a frontend codebase into a PRD. Usage: /code-to-prd [path]
+description: Reverse-engineer a frontend codebase into a PRD. Usage: /code-to-prd [path]. Use when you need help with code to prd.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /code-to-prd

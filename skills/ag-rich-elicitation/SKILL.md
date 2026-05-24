@@ -1,14 +1,16 @@
 ---
 name: rich-elicitation
-description: "Asks clarifying questions in multiple rounds before starting ambiguous tasks. Fires when 2+ task dimensions each have 3+ viable answers."
-category: productivity
-risk: none
-source: self
+description: Asks clarifying questions in multiple rounds before starting ambiguous tasks. Fires when 2+ task dimensions each have 3+ viable answers. Use when you need help with rich elicitation.
+license: CC-BY-NC-SA-4.0
 source_type: self
-date_added: "2026-05-07"
 author: abubakar
-tags: [elicitation, clarifying-questions, ambiguity, multi-round, prompt-engineering]
 tools: [antigravity]
+metadata:
+  category: productivity
+  risk: none
+  source: self
+  date_added: "2026-05-07"
+  tags: [elicitation, clarifying-questions, ambiguity, multi-round, prompt-engineering]
 ---
 
 # Rich Elicitation Skill

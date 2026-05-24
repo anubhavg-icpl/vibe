@@ -1,7 +1,8 @@
 ---
 name: yousearch-automation
-description: "Automate Yousearch tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Yousearch tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with yousearch automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

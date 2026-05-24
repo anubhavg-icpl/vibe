@@ -1,11 +1,13 @@
 ---
 name: colbert-expert
-description: ColBERT v2 / late interaction retrieval, MaxSim, RAGatouille, indexing tradeoffs
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, retrieval, colbert, late-interaction, ragatouille]
+description: ColBERT v2 / late interaction retrieval, MaxSim, RAGatouille, indexing tradeoffs. Use when building or optimizing retrieval-augmented generation pipelines with colbert.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, retrieval, colbert, late-interaction, ragatouille]
 ---
 
 # ColBERT Expert Mode

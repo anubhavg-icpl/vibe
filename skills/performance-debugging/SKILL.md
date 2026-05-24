@@ -1,10 +1,12 @@
 ---
 name: performance-debugging
-description: Expert in debugging performance issues, bottlenecks, and optimization
-risk: unknown
-source: community
-kind: mode
-category: debugging
+description: Expert in debugging performance issues, bottlenecks, and optimization. Use when diagnosing, troubleshooting, or fixing bugs with performance debugging.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: debugging
 ---
 
 # Performance Debugging Expert Mode

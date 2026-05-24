@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-nextjs
-description: Use when the user needs guidance on nextjs. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, nextjs]
----
-
----
-description: "Best practices for building Next.js (App Router) apps with modern caching, tooling, and server/client boundaries (aligned with Next.js 16.1.1)."
-applyTo: "**/*.tsx, **/*.ts, **/*.jsx, **/*.js, **/*.css"
+description: Best practices for building Next.js (App Router) apps with modern caching, tooling, and server/client boundaries (aligned with Next.js 16.1.1). Use when writing or reviewing nextjs code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, nextjs]
+  applyTo: "**/*.tsx, **/*.ts, **/*.jsx, **/*.js, **/*.css"
+  source: "awesome-copilot"
 ---
 
 # Next.js Best Practices for LLMs (2026)

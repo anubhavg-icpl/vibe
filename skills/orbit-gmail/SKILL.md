@@ -1,6 +1,6 @@
 ---
 name: orbit-gmail
-description: |
+description: |. Use when you need help with orbit gmail.
   Open Orbit briefing skill — selected by the Orbit pipeline when
   Gmail is the user's only connected connector, or when the user
   explicitly scopes their daily digest to Gmail. Pulls the past 24
@@ -10,13 +10,14 @@ description: |
   inside Gmail's reading view. This skill should not be triggered
   manually — it is invoked by Orbit's daily-digest scheduler against
   live Gmail data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "gmail briefing"
   - "inbox digest"
   - "email summary"
   - "gmail 简报"
   - "邮件摘要"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

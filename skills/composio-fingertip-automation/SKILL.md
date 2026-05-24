@@ -1,7 +1,8 @@
 ---
 name: fingertip-automation
-description: "Automate Fingertip tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Fingertip tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with fingertip automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

@@ -1,11 +1,13 @@
 ---
 name: mythos-m3-browser-cred-theft
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 3 — DCOM lateral movement and Chrome credential extraction
-risk: unknown
-source: community
-kind: mode
-category: cyber-range
-tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-3, dcom, chrome, credential-theft, lateral-movement]
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 3 — DCOM lateral movement and Chrome credential extraction. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m3 browser cred theft."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cyber-range
+  tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-3, dcom, chrome, credential-theft, lateral-movement]
 ---
 
 # Mythos M3 — Browser Credential Theft Mode

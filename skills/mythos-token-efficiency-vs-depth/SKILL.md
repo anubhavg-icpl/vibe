@@ -1,11 +1,13 @@
 ---
 name: mythos-token-efficiency-vs-depth
-description: Two-dimensional capability framework — token-efficiency (progress/token) vs capability depth (can the model clear specialist-knowledge steps at any budget?)
-risk: unknown
-source: community
-kind: mode
-category: agent-eval
-tags: [mythos, ai-eval, frontier-model, ai-safety, capability-decomposition, defensive]
+description: Two-dimensional capability framework — token-efficiency (progress/token) vs capability depth (can the model clear specialist-knowledge steps at any budget?). Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving token efficiency vs depth.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: agent-eval
+  tags: [mythos, ai-eval, frontier-model, ai-safety, capability-decomposition, defensive]
 ---
 
 # Mythos Token Efficiency vs Capability Depth Mode

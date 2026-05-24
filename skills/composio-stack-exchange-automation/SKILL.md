@@ -1,7 +1,8 @@
 ---
 name: stack-exchange-automation
-description: "Automate Stack Exchange tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Stack Exchange tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with stack exchange automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

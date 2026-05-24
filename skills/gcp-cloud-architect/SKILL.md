@@ -1,10 +1,12 @@
 ---
 name: gcp-cloud-architect
-description: gcp-cloud-architect
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+description: gcp-cloud-architect. Use when architecting or managing cloud infrastructure with gcp cloud architect.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # GCP Cloud Architect Mode

@@ -1,11 +1,13 @@
 ---
 name: redis-vector-expert
-description: Deep expertise in Redis Stack / RediSearch — vector index types (FLAT, HNSW, SVS-VAMANA), KNN + range queries, hybrid filter syntax
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, redis, redisearch, hnsw, knn, hybrid-search, in-memory]
+description: Deep expertise in Redis Stack / RediSearch — vector index types (FLAT, HNSW, SVS-VAMANA), KNN + range queries, hybrid filter syntax. Use when implementing vector search, embeddings storage, or similarity queries with redis vector.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, redis, redisearch, hnsw, knn, hybrid-search, in-memory]
 ---
 
 # Redis Vector Expert Mode

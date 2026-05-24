@@ -1,6 +1,7 @@
 ---
 name: cs-demand-gen-specialist
-description: Demand generation and customer acquisition specialist for lead generation, conversion optimization, and multi-channel acquisition campaigns
+description: Demand generation and customer acquisition specialist for lead generation, conversion optimization, and multi-channel acquisition campaigns. Use when you need specialized cs demand gen knowledge.
+license: CC-BY-NC-SA-4.0
 skills: marketing-skill/marketing-demand-acquisition
 domain: marketing
 model: sonnet

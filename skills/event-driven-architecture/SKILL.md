@@ -1,11 +1,13 @@
 ---
 name: event-driven-architecture
-description: Expert in event-driven architecture, event sourcing, CQRS, and messaging patterns
-risk: unknown
-source: community
-kind: mode
-category: architecture
-tags: [eda, event-sourcing, cqrs, messaging, async, microservices, saga]
+description: Expert in event-driven architecture, event sourcing, CQRS, and messaging patterns. Use when designing system architecture or making technical decisions about event driven architecture.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: architecture
+  tags: [eda, event-sourcing, cqrs, messaging, async, microservices, saga]
 ---
 
 # Event-Driven Architecture Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: rfc-7636-pkce
-description: Proof Key for Code Exchange implementation for secure OAuth 2.0 authorization
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [oauth, pkce, security, authorization-code, multi-tenancy]
+description: Proof Key for Code Exchange implementation for secure OAuth 2.0 authorization. Use when implementing or validating rfc 7636 pkce protocol compliance.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [oauth, pkce, security, authorization-code, multi-tenancy]
 ---
 
 # RFC 7636 - Proof Key for Code Exchange (PKCE)

@@ -1,11 +1,12 @@
 ---
 name: procurement-optimizer
 description: Use when running an annual SaaS audit, doing category-level spend review, or rationalizing the supplier base — when the user needs to do a spend audit, spend categorization (UNSPSC-aligned), purchasing-cycle analysis, or risk-balanced supplier consolidation. Triggers on "spend audit", "SaaS audit", "spend categorization", "supplier rationalization", "supplier consolidation", "purchasing cycle", "procurement review", "category strategy", "duplicate SaaS", "renewal cluster". Ships 3 stdlib-only Python tools (UNSPSC-aligned spend categorizer with Pareto breakdown and industry profiles, purchasing-cycle analyzer that surfaces bottleneck categories per Goldratt's Theory of Constraints, supplier-consolidation planner that refuses single-source recommendations for tier-1 categories without a documented break-glass plan), 3 reference docs each citing 7+ authoritative sources (A.T. Kearney / Hackett / Spend Matters / UNSPSC / Productiv / Vendr / Tropic / IACCM / ISM / BCG), and a 20-minute spend-intake template. Distinct from sibling vendor-management (performance scoring of vendors you keep paying), finance/financial-analysis (close + report, not category strategy), and c-level-advisor/general-counsel-advisor (contract law, not category rationalization).
-version: 2.8.0
 author: claude-code-skills
 license: MIT
-tags: [bizops, procurement, spend-categorization, supplier-consolidation, unspsc, saas-audit, purchasing-cycle]
 compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini-cli]
+metadata:
+  version: 2.8.0
+  tags: [bizops, procurement, spend-categorization, supplier-consolidation, unspsc, saas-audit, purchasing-cycle]
 ---
 
 # Procurement Optimizer — Spend Categorization + Supplier Rationalization

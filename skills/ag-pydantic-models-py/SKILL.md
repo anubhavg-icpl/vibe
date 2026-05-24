@@ -1,9 +1,11 @@
 ---
 name: pydantic-models-py
-description: "Create Pydantic models following the multi-model pattern for clean API contracts."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Create Pydantic models following the multi-model pattern for clean API contracts. Use when you need help with pydantic models py.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Pydantic Models

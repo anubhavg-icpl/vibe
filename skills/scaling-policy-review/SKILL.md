@@ -1,10 +1,12 @@
 ---
 name: scaling-policy-review
-description: Review a frontier-lab scaling policy (Anthropic RSP, OpenAI Preparedness, DeepMind FSF, internal) against the RSP v3.0 reference shape.
-version: 1.0.0
+description: Review a frontier-lab scaling policy (Anthropic RSP, OpenAI Preparedness, DeepMind FSF, internal) against the RSP v3.0 reference shape. Use when you need help with scaling policy review.
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 19
-tags: [rsp, scaling-policy, ai-rd-4, pause-commitment, saferai, governance]
+metadata:
+  version: 1.0.0
+  tags: [rsp, scaling-policy, ai-rd-4, pause-commitment, saferai, governance]
 ---
 
 Given a published or proposed scaling policy, produce a structured review comparing it to the RSP v3.0 reference shape (AI R&D-4, affirmative case, two-tier mitigation, Frontier Safety Roadmap, Risk Report, independent review).

@@ -1,11 +1,13 @@
 ---
 name: android-cli-ci-automation-expert
-description: Expert in using Android CLI in CI — `.androidrc`, scripted scaffold/build/emulator/test, GitHub Actions, GitLab CI, Bitrise patterns
-risk: unknown
-source: community
-kind: mode
-category: android-cli
-tags: [android, android-cli, ci, github-actions, gitlab-ci, bitrise, automation, 2026]
+description: Expert in using Android CLI in CI — `.androidrc`, scripted scaffold/build/emulator/test, GitHub Actions, GitLab CI, Bitrise patterns. Use when using Android CLI tools for android cli ci automation.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-cli
+  tags: [android, android-cli, ci, github-actions, gitlab-ci, bitrise, automation, 2026]
 ---
 
 # Android CLI CI Automation Expert Mode

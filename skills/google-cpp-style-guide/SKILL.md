@@ -1,8 +1,10 @@
 ---
 name: google-cpp-style-guide
 description: Use when writing, reviewing, or auditing C++ code that must conform to Google's style guide. Use when the brief mentions "Google C++ style", "Google style guide", "clang-format Google", "Google C++ naming", "GSG", or when working on Google-originated open-source projects (Abseil, Chromium, Protocol Buffers, gRPC, TensorFlow).
-version: 1.0.0
-tags: [cpp, style-guide, google, naming, formatting, smart-pointers, code-review, abseil, chromium]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [cpp, style-guide, google, naming, formatting, smart-pointers, code-review, abseil, chromium]
 ---
 
 # Google C++ Style Guide

@@ -1,17 +1,18 @@
 ---
 name: hr-onboarding
-description: |
+description: |. Use when you need help with hr onboarding.
   A new-hire onboarding plan as a single page — first week schedule,
   buddy + manager intro, learning track, equipment checklist, and "you're
   set when…" outcomes. Use when the brief mentions "onboarding",
   "new hire", "first week plan", or "入职".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "onboarding"
   - "new hire"
   - "first week"
   - "入职"
   - "新员工"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: hr

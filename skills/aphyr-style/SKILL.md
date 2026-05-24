@@ -1,11 +1,13 @@
 ---
 name: aphyr-style
-description: Kyle Kingsbury — Jepsen, distributed-systems testing, "Call Me Maybe," empirical correctness, vendor claims meet network partitions
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, distributed-systems, testing, jepsen, correctness, empirical]
+description: "Kyle Kingsbury — Jepsen, distributed-systems testing, \"Call Me Maybe,\" empirical correctness, vendor claims meet network partitions. Use when you want code review, architecture advice, or opinions in the style of aphyr."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, distributed-systems, testing, jepsen, correctness, empirical]
 ---
 
 # Kyle Kingsbury (aphyr) Style Mode

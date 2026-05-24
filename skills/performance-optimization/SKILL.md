@@ -1,6 +1,7 @@
 ---
 name: performance-optimization
-description: Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals
+description: Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals. Use when you need help with performance optimization.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Performance Optimization

@@ -1,6 +1,7 @@
 ---
 name: review-and-refactor
-description: 'Review and refactor code in your project according to defined instructions'
+description: Review and refactor code in your project according to defined instructions. Use when you need help with review and refactor.
+license: CC-BY-NC-SA-4.0
 ---
 
 ## Role

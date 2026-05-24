@@ -1,11 +1,13 @@
 ---
 name: shadcn-expert
-description: Expert in shadcn/ui copy-paste pattern, registry system, CLI 3.0, and theming
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [shadcn, ui, react, tailwind, radix, design-system, component-library]
+description: Expert in shadcn/ui copy-paste pattern, registry system, CLI 3.0, and theming. Use when building web applications with shadcn.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [shadcn, ui, react, tailwind, radix, design-system, component-library]
 ---
 
 # shadcn/ui Expert Mode

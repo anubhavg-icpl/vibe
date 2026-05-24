@@ -1,6 +1,7 @@
 ---
 name: rice
-description: RICE feature prioritization with scoring and capacity planning. Usage: /rice prioritize <features.csv> [options]
+description: RICE feature prioritization with scoring and capacity planning. Usage: /rice prioritize <features.csv> [options]. Use when you need help with rice.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /rice

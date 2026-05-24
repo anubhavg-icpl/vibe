@@ -1,8 +1,10 @@
 ---
 name: n8n-validation-expert
-description: "Expert guide for interpreting and fixing n8n validation errors."
-risk: unknown
-source: community
+description: Expert guide for interpreting and fixing n8n validation errors. Use when you need deep expertise in n8n validation.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # n8n Validation Expert

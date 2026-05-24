@@ -1,9 +1,11 @@
 ---
 name: conductor-new-track
-description: "Create a new track with specification and phased implementation plan"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Create a new track with specification and phased implementation plan. Use when you need help with conductor new track.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # New Track

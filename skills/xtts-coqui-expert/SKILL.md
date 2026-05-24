@@ -1,11 +1,13 @@
 ---
 name: xtts-coqui-expert
-description: Self-hosted voice cloning - XTTS-v2, Coqui TTS, F5-TTS, StyleTTS2, Kokoro, Chatterbox
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, audio, tts, voice-cloning, open-source, xtts, f5-tts]
+description: Self-hosted voice cloning - XTTS-v2, Coqui TTS, F5-TTS, StyleTTS2, Kokoro, Chatterbox. Use when working with multimodal AI (images, audio, video) using xtts coqui.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, audio, tts, voice-cloning, open-source, xtts, f5-tts]
 ---
 
 # Open-Source TTS Expert Mode

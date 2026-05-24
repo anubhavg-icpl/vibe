@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-clojure
-description: Use when the user needs guidance on clojure. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, clojure]
----
-
----
-description: 'Clojure-specific coding patterns, inline def usage, code block templates, and namespace handling for Clojure development.'
-applyTo: '**/*.{clj,cljs,cljc,bb,edn.mdx?}'
+description: Clojure-specific coding patterns, inline def usage, code block templates, and namespace handling for Clojure development. Use when writing or reviewing clojure code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, clojure]
+  applyTo: "**/*.{clj,cljs,cljc,bb,edn.mdx?}"
+  source: "awesome-copilot"
 ---
 
 # Clojure Development Instructions

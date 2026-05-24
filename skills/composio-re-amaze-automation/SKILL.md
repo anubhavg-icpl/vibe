@@ -1,7 +1,8 @@
 ---
 name: re-amaze-automation
-description: "Automate Re Amaze tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Re Amaze tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with re amaze automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

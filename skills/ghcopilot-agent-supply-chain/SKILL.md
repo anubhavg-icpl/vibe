@@ -1,6 +1,6 @@
 ---
 name: agent-supply-chain
-description: |
+description: |. Use when you need help with agent supply chain.
   Verify supply chain integrity for AI agent plugins, tools, and dependencies. Use this skill when:
   - Generating SHA-256 integrity manifests for agent plugins or tool packages
   - Verifying that installed plugins match their published manifests
@@ -8,6 +8,7 @@ description: |
   - Auditing dependency pinning and version policies for agent components
   - Building provenance chains for agent plugin promotion (dev → staging → production)
   - Any request like "verify plugin integrity", "generate manifest", "check supply chain", or "sign this plugin"
+license: CC-BY-NC-SA-4.0
 ---
 
 # Agent Supply Chain Integrity

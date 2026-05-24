@@ -1,10 +1,12 @@
 ---
 name: crewai
-description: Expert in CrewAI - the leading role-based multi-agent framework
+description: Expert in CrewAI - the leading role-based multi-agent framework. Use when you need help with crewai.
   used by 60% of Fortune 500 companies.
-risk: unknown
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # CrewAI

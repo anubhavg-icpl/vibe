@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-dotnet-maui-9-to-dotnet-maui-10-upgrade
-description: Use when the user needs guidance on dotnet-maui-9-to-dotnet-maui-10-upgrade. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dotnet-maui-9-to-dotnet-maui-10-upgrade]
----
-
----
-description: 'Instructions for upgrading .NET MAUI applications from version 9 to version 10, including breaking changes, deprecated APIs, and migration strategies for ListView to CollectionView.'
-applyTo: '**/*.csproj, **/*.cs, **/*.xaml'
+description: Instructions for upgrading .NET MAUI applications from version 9 to version 10, including breaking changes, deprecated APIs, and migration strategies for ListView to CollectionView. Use when writing or reviewing dotnet maui 9 to dotnet maui 10 upgrade code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dotnet-maui-9-to-dotnet-maui-10-upgrade]
+  applyTo: "**/*.csproj, **/*.cs, **/*.xaml"
+  source: "awesome-copilot"
 ---
 
 # Upgrading from .NET MAUI 9 to .NET MAUI 10

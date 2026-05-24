@@ -1,10 +1,12 @@
 ---
 name: async-parallel
-description: Promise.all() for Independent Operations
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Promise.all() for Independent Operations. Use when you need help with async parallel.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Promise.all() for Independent Operations

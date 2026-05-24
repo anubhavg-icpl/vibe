@@ -1,11 +1,13 @@
 ---
 name: turborepo-expert
-description: Expert in Turborepo 2 monorepo orchestration, task pipelines, and remote caching
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [turborepo, monorepo, build-tools, ci, caching, vercel]
+description: Expert in Turborepo 2 monorepo orchestration, task pipelines, and remote caching. Use when building web applications with turborepo.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [turborepo, monorepo, build-tools, ci, caching, vercel]
 ---
 
 # Turborepo Expert Mode

@@ -1,6 +1,6 @@
 ---
 name: azure-resource-manager-durabletask-dotnet
-description: |
+description: |. Use when you need help with azure resource manager durabletask dotnet.
   Azure Resource Manager SDK for Durable Task Scheduler in .NET. Use for MANAGEMENT PLANE operations: creating/managing Durable Task Schedulers, Task Hubs, and retention policies via Azure Resource Manager. Triggers: "Durable Task Scheduler", "create scheduler", "task hub", "DurableTaskSchedulerResource", "provision Durable Task", "orchestration scheduler".
 license: MIT
 metadata:

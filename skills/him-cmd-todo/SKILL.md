@@ -1,6 +1,7 @@
 ---
 name: todo
-description: Manage project todos in todos.md file
+description: Manage project todos in todos.md file. Use when you need help with todo.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Project Todo Manager

@@ -1,10 +1,12 @@
 ---
 name: skill-prompt-patterns
-description: Decision framework for choosing the right prompt pattern based on task type, reliability requirements, and target model
-version: 1.0.0
+description: Decision framework for choosing the right prompt pattern based on task type, reliability requirements, and target model. Use when you need help with skill prompt patterns.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 01
-tags: [prompt-engineering, patterns, llm, temperature, cross-model, few-shot, chain-of-thought]
+metadata:
+  version: 1.0.0
+  tags: [prompt-engineering, patterns, llm, temperature, cross-model, few-shot, chain-of-thought]
 ---
 
 # Prompt Pattern Selection Guide

@@ -1,10 +1,12 @@
 ---
 name: reinforcement-learning
-description: Expert in reinforcement learning from MDPs through PPO and RLHF, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+description: Expert in reinforcement learning from MDPs through PPO and RLHF, from the AI Engineering from Scratch curriculum. Use when you need help with reinforcement learning.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # Reinforcement Learning Mode

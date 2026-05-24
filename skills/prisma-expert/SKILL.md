@@ -1,11 +1,13 @@
 ---
 name: prisma-expert
-description: Expert in Prisma ORM with schema design, migrations, client generation, performance, and best practices
-risk: unknown
-source: community
-kind: mode
-category: backend
-tags: [prisma, orm, database, typescript, schema, migrations]
+description: Expert in Prisma ORM with schema design, migrations, client generation, performance, and best practices. Use when you need deep expertise in prisma.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
+  tags: [prisma, orm, database, typescript, schema, migrations]
 ---
 
 # Prisma Expert Mode

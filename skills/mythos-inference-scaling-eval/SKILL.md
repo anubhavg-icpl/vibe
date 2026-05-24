@@ -1,11 +1,13 @@
 ---
 name: mythos-inference-scaling-eval
-description: Run token-budget sweeps against autonomous cyber agents to measure log-linear inference-time compute scaling, modeled on AISI's 10M→100M findings
-risk: unknown
-source: community
-kind: mode
-category: agent-eval
-tags: [mythos, ai-eval, frontier-model, ai-safety, inference-scaling, token-budget, defensive]
+description: "Run token-budget sweeps against autonomous cyber agents to measure log-linear inference-time compute scaling, modeled on AISI's 10M→100M findings. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving inference scaling eval."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: agent-eval
+  tags: [mythos, ai-eval, frontier-model, ai-safety, inference-scaling, token-budget, defensive]
 ---
 
 # Mythos Inference Scaling Eval Mode

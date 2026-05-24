@@ -1,10 +1,12 @@
 ---
 name: agent-loop
-description: Write a correct, minimal ReAct agent loop in any target language/runtime with tools, stop condition, and turn budget.
-version: 1.0.0
+description: Write a correct, minimal ReAct agent loop in any target language/runtime with tools, stop condition, and turn budget. Use when you need help with agent loop.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 01
-tags: [react, agent-loop, tools, observability, stop-condition]
+metadata:
+  version: 1.0.0
+  tags: [react, agent-loop, tools, observability, stop-condition]
 ---
 
 Given a target runtime (Python async, Python sync, Node, Rust async, Go) and a tool list (name, input schema, callable), produce a ReAct agent loop that is correct on the first try.

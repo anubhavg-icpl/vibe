@@ -1,10 +1,12 @@
 ---
 name: gateway-bootstrap
-description: Produce a gateway configuration spec given users, backends, and compliance constraints.
-version: 1.0.0
+description: Produce a gateway configuration spec given users, backends, and compliance constraints. Use when you need help with gateway bootstrap.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 17
-tags: [mcp, gateway, rbac, audit, policy]
+metadata:
+  version: 1.0.0
+  tags: [mcp, gateway, rbac, audit, policy]
 ---
 
 Given an enterprise MCP plan (users, backends, compliance constraints), produce the gateway configuration spec.

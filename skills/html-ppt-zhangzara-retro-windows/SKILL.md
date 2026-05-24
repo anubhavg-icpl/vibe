@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-retro-windows
-description: |
+description: |. Use when you need help with html ppt zhangzara retro windows.
   Retro Windows — Windows 95 chrome: gray title bars, MS Sans Serif, pixel typography, full nostalgia. Anything that should feel knowingly nostalgic: retro gaming, Y2K-aesthetic brands, creator portfolios with a 90s vibe, tech-history talks, deliberately tongue-in-cheek decks.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "retro-windows"
   - "zhangzara-retro-windows"
   - "Retro Windows"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/retro-windows"

@@ -1,10 +1,12 @@
 ---
 name: moderation-stack
-description: Recommend a moderation stack configuration for a production deployment.
-version: 1.0.0
+description: Recommend a moderation stack configuration for a production deployment. Use when you need help with moderation stack.
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 29
-tags: [openai-moderation, perspective, llama-guard, layered-moderation, azure-content-safety]
+metadata:
+  version: 1.0.0
+  tags: [openai-moderation, perspective, llama-guard, layered-moderation, azure-content-safety]
 ---
 
 Given a production deployment, recommend a moderation stack configuration across the three layers.

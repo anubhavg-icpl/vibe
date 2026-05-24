@@ -1,11 +1,13 @@
 ---
 name: rfc-6749-oauth2
-description: Complete implementation guide for OAuth 2.0 Authorization Framework with multi-tenancy support
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [oauth, authorization, identity, multi-tenancy]
+description: Complete implementation guide for OAuth 2.0 Authorization Framework with multi-tenancy support. Use when implementing or validating rfc 6749 oauth2 protocol compliance.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [oauth, authorization, identity, multi-tenancy]
 ---
 
 # RFC 6749 - OAuth 2.0 Authorization Framework

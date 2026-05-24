@@ -1,6 +1,6 @@
 ---
 name: epic-design
-description: >
+description: >. Use when building UI with epic design language and visual style.
   Build immersive, cinematic 2.5D interactive websites using scroll storytelling,
   parallax depth, text animations, and premium scroll effects — no WebGL required.
   Use this skill for any web design task: landing pages, product sites, hero sections,

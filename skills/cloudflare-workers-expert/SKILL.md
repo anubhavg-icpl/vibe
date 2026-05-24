@@ -1,11 +1,13 @@
 ---
 name: cloudflare-workers-expert
-description: Expert in Cloudflare Workers, Durable Objects, R2, KV, D1, Queues, and AI bindings
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [cloudflare, workers, edge, durable-objects, r2, kv, d1, queues, vectorize, workers-ai]
+description: Expert in Cloudflare Workers, Durable Objects, R2, KV, D1, Queues, and AI bindings. Use when deploying to or building on cloudflare workers edge/serverless platform.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [cloudflare, workers, edge, durable-objects, r2, kv, d1, queues, vectorize, workers-ai]
 ---
 
 # Cloudflare Workers Expert Mode

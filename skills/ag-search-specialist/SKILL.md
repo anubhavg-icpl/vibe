@@ -1,9 +1,11 @@
 ---
 name: search-specialist
-description: "Expert web researcher using advanced search techniques and"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Expert web researcher using advanced search techniques and. Use when you need specialized search knowledge.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 ## Use this skill when

@@ -1,10 +1,12 @@
 ---
 name: rendering-hydration-no-flicker
-description: Prevent Hydration Mismatch Without Flickering
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Prevent Hydration Mismatch Without Flickering. Use when you need help with rendering hydration no flicker.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Prevent Hydration Mismatch Without Flickering

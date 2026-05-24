@@ -1,11 +1,13 @@
 ---
 name: ollama-modelfile-expert
-description: Author production Modelfiles with FROM, PARAMETER, TEMPLATE, SYSTEM, ADAPTER, MESSAGE, and LICENSE directives for Llama 3, Qwen, Phi, and Gemma
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, ollama, modelfile, gguf, lora, go-template, chat-template]
+description: Author production Modelfiles with FROM, PARAMETER, TEMPLATE, SYSTEM, ADAPTER, MESSAGE, and LICENSE directives for Llama 3, Qwen, Phi, and Gemma. Use when creating, converting, or publishing model files with ollama modelfile.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, ollama, modelfile, gguf, lora, go-template, chat-template]
 ---
 
 # Ollama Modelfile Expert Mode

@@ -1,10 +1,12 @@
 ---
 name: groupchat-selector
-description: Configure an AutoGen/AG2-style GroupChat selector for a task, naming the selector variant, termination, and anti-hot-speaker rules.
-version: 1.0.0
+description: Configure an AutoGen/AG2-style GroupChat selector for a task, naming the selector variant, termination, and anti-hot-speaker rules. Use when you need help with groupchat selector.
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 10
-tags: [multi-agent, groupchat, autogen, ag2, speaker-selection]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, groupchat, autogen, ag2, speaker-selection]
 ---
 
 Given a task and an agent roster, produce a GroupChat configuration: selector choice, selector inputs, termination rules, and guardrails.

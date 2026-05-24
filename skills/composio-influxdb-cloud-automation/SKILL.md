@@ -1,7 +1,8 @@
 ---
 name: influxdb-cloud-automation
-description: "Automate Influxdb Cloud tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Influxdb Cloud tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with influxdb cloud automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

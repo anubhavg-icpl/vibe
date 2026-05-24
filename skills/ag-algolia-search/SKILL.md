@@ -1,10 +1,12 @@
 ---
 name: algolia-search
-description: Expert patterns for Algolia search implementation, indexing
+description: Expert patterns for Algolia search implementation, indexing. Use when you need help with algolia search.
   strategies, React InstantSearch, and relevance tuning
-risk: unknown
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # Algolia Search Integration

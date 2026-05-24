@@ -1,10 +1,12 @@
 ---
 name: power-bi-expert
-description: power-bi-expert
-risk: unknown
-source: community
-kind: mode
-category: enterprise
+description: power-bi-expert. Use when you need deep expertise in power bi.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: enterprise
 ---
 
 # Power BI Expert Mode

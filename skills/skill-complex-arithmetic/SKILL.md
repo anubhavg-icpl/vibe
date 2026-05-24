@@ -1,6 +1,7 @@
 ---
 name: skill-complex-arithmetic
-description: Quick reference for complex number operations in ML and signal processing contexts
+description: Quick reference for complex number operations in ML and signal processing contexts. Use when you need help with skill complex arithmetic.
+license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 19
 ---

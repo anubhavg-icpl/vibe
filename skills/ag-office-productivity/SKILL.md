@@ -1,10 +1,12 @@
 ---
 name: office-productivity
-description: "Office productivity workflow covering document creation, spreadsheet automation, presentation generation, and integration with LibreOffice and Microsoft Office formats."
-category: workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
+description: Office productivity workflow covering document creation, spreadsheet automation, presentation generation, and integration with LibreOffice and Microsoft Office formats. Use when you need help with office productivity.
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: workflow-bundle
+  risk: safe
+  source: personal
+  date_added: "2026-02-27"
 ---
 
 # Office Productivity Workflow Bundle

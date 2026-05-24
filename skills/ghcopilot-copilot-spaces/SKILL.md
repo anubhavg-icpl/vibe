@@ -1,6 +1,7 @@
 ---
 name: copilot-spaces
 description: 'Use Copilot Spaces to provide project-specific context to conversations. Use this skill when users mention a "Copilot space", want to load context from a shared knowledge base, discover available spaces, or ask questions grounded in curated project documentation, code, and instructions.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Copilot Spaces

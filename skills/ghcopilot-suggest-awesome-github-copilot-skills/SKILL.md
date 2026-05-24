@@ -1,6 +1,7 @@
 ---
 name: suggest-awesome-github-copilot-skills
-description: 'Suggest relevant GitHub Copilot skills from the awesome-copilot repository based on current repository context and chat history, avoiding duplicates with existing skills in this repository, and identifying outdated skills that need updates.'
+description: Suggest relevant GitHub Copilot skills from the awesome-copilot repository based on current repository context and chat history, avoiding duplicates with existing skills in this repository, and identifying outdated skills that need updates. Use when you need help with suggest awesome github copilot skills.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Suggest Awesome GitHub Copilot Skills

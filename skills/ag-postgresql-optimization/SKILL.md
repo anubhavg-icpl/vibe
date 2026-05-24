@@ -1,10 +1,12 @@
 ---
 name: postgresql-optimization
-description: "PostgreSQL database optimization workflow for query tuning, indexing strategies, performance analysis, and production database management."
-category: granular-workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
+description: PostgreSQL database optimization workflow for query tuning, indexing strategies, performance analysis, and production database management. Use when you need help with postgresql optimization.
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: granular-workflow-bundle
+  risk: safe
+  source: personal
+  date_added: "2026-02-27"
 ---
 
 # PostgreSQL Optimization Workflow

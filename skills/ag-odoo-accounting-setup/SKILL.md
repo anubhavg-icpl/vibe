@@ -1,8 +1,10 @@
 ---
 name: odoo-accounting-setup
-description: "Expert guide for configuring Odoo Accounting: chart of accounts, journals, fiscal positions, taxes, payment terms, and bank reconciliation."
-risk: safe
-source: "self"
+description: Expert guide for configuring Odoo Accounting: chart of accounts, journals, fiscal positions, taxes, payment terms, and bank reconciliation. Use when you need help with odoo accounting setup.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "self"
 ---
 
 # Odoo Accounting Setup

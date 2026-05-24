@@ -1,11 +1,13 @@
 ---
 name: lm-studio-expert
-description: Run LM Studio with the lms CLI, headless llmster daemon, REST API, and MLX backend on Apple Silicon
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, lm-studio, mlx, apple-silicon, lms-cli, headless, openai-compat]
+description: Run LM Studio with the lms CLI, headless llmster daemon, REST API, and MLX backend on Apple Silicon. Use when deploying, running, or configuring local LLM inference with lm studio.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, lm-studio, mlx, apple-silicon, lms-cli, headless, openai-compat]
 ---
 
 # LM Studio Expert Mode

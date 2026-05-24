@@ -1,10 +1,12 @@
 ---
 name: golang-developer
-description: golang-developer
-risk: unknown
-source: community
-kind: mode
-category: languages
+description: golang-developer. Use when writing, reviewing, or refactoring golang code.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
 ---
 
 # Golang Developer Mode

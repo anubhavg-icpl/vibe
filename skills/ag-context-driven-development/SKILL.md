@@ -1,9 +1,11 @@
 ---
 name: context-driven-development
-description: "Guide for implementing and maintaining context as a managed artifact alongside code, enabling consistent AI interactions and team alignment through structured project documentation."
-risk: unknown
-source: community
-date_added: '2026-02-27'
+description: Guide for implementing and maintaining context as a managed artifact alongside code, enabling consistent AI interactions and team alignment through structured project documentation. Use when you need help with context driven development.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Context-Driven Development

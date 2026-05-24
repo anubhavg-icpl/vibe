@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-playful
-description: |
+description: |. Use when you need help with html ppt zhangzara playful.
   Playful — Sun-warm peach background with Syne display: a friendly indie launch deck. Anything that should feel warm, indie, and approachable: creator portfolios, indie product launches, lifestyle brands, small-business pitches, newsletter / community decks.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "playful"
   - "zhangzara-playful"
   - "warm"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/playful"

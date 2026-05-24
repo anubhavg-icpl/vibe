@@ -1,6 +1,6 @@
 ---
 name: inventory-demand-planning
-description: >
+description: >. Use when you need help with inventory demand planning.
   Codified expertise for demand forecasting, safety stock optimization,
   replenishment planning, and promotional lift estimation at multi-location
   retailers. Informed by demand planners with 15+ years experience managing
@@ -9,13 +9,13 @@ description: >
   Use when forecasting demand, setting safety stock, planning replenishment,
   managing promotions, or optimizing inventory levels.
 license: Apache-2.0
-version: 1.0.0
 homepage: https://github.com/affaan-m/everything-claude-code
 origin: ECC
 metadata:
   author: evos
-  clawdbot:
-    emoji: ""
+  clawdbot: 
+  emoji: ""
+  version: 1.0.0
 ---
 
 # Inventory Demand Planning

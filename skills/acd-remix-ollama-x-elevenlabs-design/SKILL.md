@@ -1,11 +1,13 @@
 ---
 name: acd-remix-ollama-x-elevenlabs-design
-description: Remix. Ollama's pure terminal monochrome + ElevenLabs' cinematic dark gradients and electric-blue motion. For CLI / OSS tool landing pages that want the hero to feel like a product film, then settle into terminal density below the fold.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, remix, claude-design]
+description: "Remix. Ollama's pure terminal monochrome + ElevenLabs' cinematic dark gradients and electric-blue motion. For CLI / OSS tool landing pages that want the hero to feel like a product film, then settle into terminal density below the fold. Use when building UI components, applying design tokens, or implementing visual styles for remix ollama x elevenlabs."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, remix, claude-design]
 ---
 
 # Ollama × ElevenLabs — CLI Tool With A Cinematic Hero Design Mode

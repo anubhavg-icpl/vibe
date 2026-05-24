@@ -1,11 +1,13 @@
 ---
 name: gguf-quantization-expert
-description: Convert HF safetensors to GGUF, run llama-imatrix, choose K-quants vs IQ-quants, and quantize models for llama.cpp
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, gguf, quantization, llama-cpp, imatrix, k-quants, iq-quants]
+description: Convert HF safetensors to GGUF, run llama-imatrix, choose K-quants vs IQ-quants, and quantize models for llama.cpp. Use when deploying, running, or configuring local LLM inference with gguf quantization.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, gguf, quantization, llama-cpp, imatrix, k-quants, iq-quants]
 ---
 
 # GGUF Quantization Expert Mode

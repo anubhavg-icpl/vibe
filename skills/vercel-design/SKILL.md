@@ -1,11 +1,13 @@
 ---
 name: vercel-design
-description: Expert in the Vercel design system - Frontend deployment. Black and white precision, Geist font.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, developer-tools]
+description: Expert in the Vercel design system - Frontend deployment. Black and white precision, Geist font. Use when building UI components, applying design tokens, or implementing visual styles for vercel.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, developer-tools]
 ---
 
 # Vercel Design System Mode

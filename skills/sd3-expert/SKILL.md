@@ -1,11 +1,13 @@
 ---
 name: sd3-expert
-description: SD3 / SD3.5 Large, MMDiT architecture, T5-XXL prompting, differences from SDXL
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, image-gen, sd3, diffusion, mmdit, t5]
+description: SD3 / SD3.5 Large, MMDiT architecture, T5-XXL prompting, differences from SDXL. Use when working with multimodal AI (images, audio, video) using sd3.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, image-gen, sd3, diffusion, mmdit, t5]
 ---
 
 # Stable Diffusion 3 / 3.5 Expert Mode

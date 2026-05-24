@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-functions-csharp
-description: Use when the user needs guidance on azure-functions-csharp. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-functions-csharp]
----
-
----
-description: 'Guidelines and best practices for building Azure Functions in C# using the isolated worker model'
-applyTo: '**/*.cs, **/host.json, **/local.settings.json, **/*.csproj'
+description: "Use when the user needs guidance on azure-functions-csharp. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-functions-csharp]
+  applyTo: "**/*.cs, **/host.json, **/local.settings.json, **/*.csproj"
+  source: "awesome-copilot"
 ---
 
 # Azure Functions C# Development

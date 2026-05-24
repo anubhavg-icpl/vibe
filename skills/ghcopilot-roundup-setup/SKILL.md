@@ -1,6 +1,7 @@
 ---
 name: roundup-setup
-description: 'Interactive onboarding that learns your communication style, audiences, and data sources to configure personalized status briefings. Paste in examples of updates you already write, answer a few questions, and roundup calibrates itself to your workflow.'
+description: Interactive onboarding that learns your communication style, audiences, and data sources to configure personalized status briefings. Paste in examples of updates you already write, answer a few questions, and roundup calibrates itself to your workflow. Use when you need help with roundup setup.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Roundup Setup

@@ -1,7 +1,8 @@
 ---
 name: nasa-automation
-description: "Automate Nasa tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Nasa tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with nasa automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

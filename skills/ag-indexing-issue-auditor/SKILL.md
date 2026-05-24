@@ -1,14 +1,16 @@
 ---
 name: indexing-issue-auditor
-description: "High-level technical SEO and site architecture auditor. Invoke to scan local or live environments for indexing, crawl budget, and structural errors."
-category: growth
-risk: safe
-source: self
+description: High-level technical SEO and site architecture auditor. Invoke to scan local or live environments for indexing, crawl budget, and structural errors. Use when you need help with indexing issue auditor.
+license: CC-BY-NC-SA-4.0
 source_type: self
-date_added: "2026-04-13"
 author: WHOISABHISHEKADHIKARI
-tags: [seo, architecture, indexing, crawler, sitemap]
 tools: [claude, cursor, gemini, antigravity]
+metadata:
+  category: growth
+  risk: safe
+  source: self
+  date_added: "2026-04-13"
+  tags: [seo, architecture, indexing, crawler, sitemap]
 ---
 
 # Indexing Issue Auditor & Technical SEO Architect

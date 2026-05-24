@@ -1,10 +1,12 @@
 ---
 name: skill-point-cloud-loader
-description: Write a PyTorch Dataset for .ply / .pcd / .xyz files with correct normalisation, centring, and point sampling
-version: 1.0.0
+description: Write a PyTorch Dataset for .ply / .pcd / .xyz files with correct normalisation, centring, and point sampling. Use when you need help with skill point cloud loader.
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 13
-tags: [3d-vision, point-cloud, data-loading, pytorch]
+metadata:
+  version: 1.0.0
+  tags: [3d-vision, point-cloud, data-loading, pytorch]
 ---
 
 # Point Cloud Loader

@@ -1,11 +1,13 @@
 ---
 name: jotai-expert
-description: Expert in Jotai state management with TypeScript, derivation, persistence, and performance best practices
-risk: unknown
-source: community
-kind: mode
-category: frontend
-tags: [jotai, state-management, react, typescript, frontend]
+description: Expert in Jotai state management with TypeScript, derivation, persistence, and performance best practices. Use when you need deep expertise in jotai.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frontend
+  tags: [jotai, state-management, react, typescript, frontend]
 ---
 
 # Jotai Expert Mode

@@ -1,13 +1,14 @@
 ---
 name: ghcopilot-instr-dataverse-python-api-reference
-description: Use when the user needs guidance on dataverse-python-api-reference. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dataverse-python-api-reference]
+description: "Use when the user needs guidance on dataverse-python-api-reference. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dataverse-python-api-reference]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
----
-applyTo: '**'
----
 # Dataverse SDK for Python — API Reference Guide
 
 ## DataverseClient Class

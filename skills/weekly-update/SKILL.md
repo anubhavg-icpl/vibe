@@ -1,17 +1,18 @@
 ---
 name: weekly-update
-description: |
+description: |. Use when you need help with weekly update.
   Single-file horizontal-swipe slide deck for a weekly team update —
   shipped, in flight, blocked, metrics, asks. 6–8 slides. Use when the
   brief mentions "weekly update", "team update slides", "weekly status",
   "周报演示".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "weekly update"
   - "team update slides"
   - "weekly status"
   - "weekly review"
   - "周报演示"
-od:
+od: 
   mode: deck
   scenario: operations
   preview:

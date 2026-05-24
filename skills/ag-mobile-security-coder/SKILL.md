@@ -1,9 +1,11 @@
 ---
 name: mobile-security-coder
-description: Expert in secure mobile coding practices specializing in input validation, WebView security, and mobile-specific security patterns.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+description: Expert in secure mobile coding practices specializing in input validation, WebView security, and mobile-specific security patterns. Use when you need help with mobile security coder.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 ## Use this skill when

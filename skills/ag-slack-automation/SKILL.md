@@ -1,9 +1,11 @@
 ---
 name: slack-automation
-description: "Automate Slack workspace operations including messaging, search, channel management, and reaction workflows through Composio's Slack toolkit."
-risk: critical
-source: community
-date_added: "2026-02-27"
+description: "Automate Slack workspace operations including messaging, search, channel management, and reaction workflows through Composio's Slack toolkit. Use when you need help with slack automation."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: critical
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Slack Automation via Rube MCP

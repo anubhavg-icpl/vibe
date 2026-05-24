@@ -1,10 +1,12 @@
 ---
 name: ml-fundamentals
-description: Expert in classical machine learning, the backbone of most production AI, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+description: Expert in classical machine learning, the backbone of most production AI, from the AI Engineering from Scratch curriculum. Use when you need help with ml fundamentals.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # ML Fundamentals Mode

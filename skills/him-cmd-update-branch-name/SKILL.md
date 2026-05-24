@@ -1,8 +1,10 @@
 ---
 name: him-cmd-update-branch-name
 description: Use when the user asks to run the /update-branch-name slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, update-branch-name]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, update-branch-name]
 ---
 
 # Update Branch Name

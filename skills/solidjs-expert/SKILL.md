@@ -1,11 +1,13 @@
 ---
 name: solidjs-expert
-description: Expert in SolidJS reactive framework with fine-grained reactivity and performance optimization
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [solidjs, reactive, signals, jsx, typescript, frontend, performance]
+description: Expert in SolidJS reactive framework with fine-grained reactivity and performance optimization. Use when building applications with the solidjs framework.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [solidjs, reactive, signals, jsx, typescript, frontend, performance]
 ---
 
 # SolidJS Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: whisper-cpp-expert
-description: Run whisper.cpp for local speech-to-text — model selection, CLI, HTTP server, real-time streaming, language detection
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, whisper-cpp, speech-to-text, stt, ggml, real-time, vad, streaming]
+description: Run whisper.cpp for local speech-to-text — model selection, CLI, HTTP server, real-time streaming, language detection. Use when deploying, running, or configuring local LLM inference with whisper cpp.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, whisper-cpp, speech-to-text, stt, ggml, real-time, vad, streaming]
 ---
 
 # whisper.cpp Expert Mode

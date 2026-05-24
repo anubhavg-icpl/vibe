@@ -1,7 +1,8 @@
 ---
 name: tinyurl-automation
-description: "Automate Tinyurl tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Tinyurl tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with tinyurl automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

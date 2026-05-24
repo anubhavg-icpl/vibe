@@ -1,6 +1,6 @@
 ---
 name: azure-messaging-webpubsubservice-py
-description: |
+description: |. Use when you need help with azure messaging webpubsubservice py.
   Azure Web PubSub Service SDK for Python. Use for real-time messaging, WebSocket connections, and pub/sub patterns.
   Triggers: "azure-messaging-webpubsubservice", "WebPubSubServiceClient", "real-time", "WebSocket", "pub/sub".
 license: MIT

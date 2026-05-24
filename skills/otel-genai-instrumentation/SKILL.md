@@ -1,10 +1,12 @@
 ---
 name: otel-genai-instrumentation
-description: Produce an instrumentation plan for an agent codebase to emit OTel GenAI spans end-to-end.
-version: 1.0.0
+description: Produce an instrumentation plan for an agent codebase to emit OTel GenAI spans end-to-end. Use when you need help with otel genai instrumentation.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 19
-tags: [otel, observability, gen-ai, tracing]
+metadata:
+  version: 1.0.0
+  tags: [otel, observability, gen-ai, tracing]
 ---
 
 Given an agent codebase (LLM calls, tool dispatch, MCP client, sub-agents), produce an OTel GenAI instrumentation plan.

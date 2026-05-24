@@ -1,10 +1,12 @@
 ---
 name: presentation-designer
-description: Expert in creating compelling technical presentations and slide decks
-risk: unknown
-source: community
-kind: mode
-category: creative
+description: Expert in creating compelling technical presentations and slide decks. Use when you need help with presentation designer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: creative
 ---
 
 # Presentation Designer Mode

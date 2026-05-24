@@ -1,7 +1,8 @@
 ---
 name: esputnik-automation
-description: "Automate Esputnik tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Esputnik tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with esputnik automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

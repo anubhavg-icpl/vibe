@@ -1,7 +1,8 @@
 ---
 name: front-automation
-description: "Automate Front tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Front tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with front automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

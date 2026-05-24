@@ -1,10 +1,12 @@
 ---
 name: skill-cost-patterns
-description: Decision framework for LLM cost optimization -- caching strategies, rate limiting, model routing, and budget controls
-version: 1.0.0
+description: Decision framework for LLM cost optimization -- caching strategies, rate limiting, model routing, and budget controls. Use when you need help with skill cost patterns.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 11
-tags: [caching, cost-optimization, rate-limiting, model-routing, budget, llm-ops]
+metadata:
+  version: 1.0.0
+  tags: [caching, cost-optimization, rate-limiting, model-routing, budget, llm-ops]
 ---
 
 # LLM Cost Optimization Patterns

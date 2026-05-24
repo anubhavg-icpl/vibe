@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-dotnet-framework
-description: Use when the user needs guidance on dotnet-framework. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dotnet-framework]
----
-
----
-description: 'Guidance for working with .NET Framework projects. Includes project structure, C# language version, NuGet management, and best practices.'
-applyTo: '**/*.csproj, **/*.cs'
+description: Guidance for working with .NET Framework projects. Includes project structure, C# language version, NuGet management, and best practices. Use when writing or reviewing dotnet framework code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dotnet-framework]
+  applyTo: "**/*.csproj, **/*.cs"
+  source: "awesome-copilot"
 ---
 
 # .NET Framework Development

@@ -1,10 +1,12 @@
 ---
 name: js-combine-iterations
-description: Combine Multiple Array Iterations
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Combine Multiple Array Iterations. Use when you need help with js combine iterations.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Combine Multiple Array Iterations

@@ -1,6 +1,7 @@
 ---
 name: fedora-linux-triage
-description: 'Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.'
+description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance. Use when you need help with fedora linux triage.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Fedora Linux Triage

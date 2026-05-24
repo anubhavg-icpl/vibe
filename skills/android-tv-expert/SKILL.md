@@ -1,11 +1,13 @@
 ---
 name: android-tv-expert
-description: Compose for TV, tv-material library, focus management, channels, recommendations, and remote-first UX
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, android-tv, compose-for-tv, tv-material, focus-management, leanback]
+description: Compose for TV, tv-material library, focus management, channels, recommendations, and remote-first UX. Use when developing Android apps with android tv.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, android-tv, compose-for-tv, tv-material, focus-management, leanback]
 ---
 
 # Android TV Expert Mode

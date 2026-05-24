@@ -1,10 +1,12 @@
 ---
 name: diff-attention-integrator
-description: Integration plan for adding Differential Attention V2 to a new pre-training run or LoRA fine-tune.
-version: 1.0.0
+description: Integration plan for adding Differential Attention V2 to a new pre-training run or LoRA fine-tune. Use when you need help with diff attention integrator.
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 16
-tags: [differential-attention, diff-transformer, long-context, flash-attention, pre-training, lora]
+metadata:
+  version: 1.0.0
+  tags: [differential-attention, diff-transformer, long-context, flash-attention, pre-training, lora]
 ---
 
 Given a model architecture (hidden, heads, KV heads, layers, d_head), a target context length, a hallucination or long-context profile (failure modes on your existing evals), and a training budget (tokens available, GPU-hours), produce an integration plan for DIFF V2.

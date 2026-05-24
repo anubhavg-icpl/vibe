@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-mvvm-toolkit
-description: Use when the user needs guidance on mvvm-toolkit. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, mvvm-toolkit]
----
-
----
-description: 'CommunityToolkit.Mvvm (MVVM Toolkit) coding conventions for ViewModels, commands, messaging, validation, and DI across WPF, WinUI 3, .NET MAUI, Uno Platform, and Avalonia.'
-applyTo: '**/*.cs, **/*.xaml, **/*.csproj'
+description: CommunityToolkit.Mvvm (MVVM Toolkit) coding conventions for ViewModels, commands, messaging, validation, and DI across WPF, WinUI 3, .NET MAUI, Uno Platform, and Avalonia. Use when writing or reviewing mvvm toolkit code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, mvvm-toolkit]
+  applyTo: "**/*.cs, **/*.xaml, **/*.csproj"
+  source: "awesome-copilot"
 ---
 
 # CommunityToolkit.Mvvm (MVVM Toolkit)

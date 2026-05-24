@@ -1,11 +1,13 @@
 ---
 name: late-chunking-expert
-description: Jina's late chunking — embed long context first, then chunk the embeddings
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, late-chunking, jina, long-context, embeddings]
+description: "Jina's late chunking — embed long context first, then chunk the embeddings. Use when building or optimizing retrieval-augmented generation pipelines with late chunking."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, late-chunking, jina, long-context, embeddings]
 ---
 
 # Late Chunking Expert Mode

@@ -1,10 +1,11 @@
 ---
 name: arize-annotation
 description: Creates and manages annotation configs (categorical, continuous, freeform label schemas) and annotation queues (human review workflows) on Arize. Applies human annotations to project spans via the Python SDK. Use when the user mentions annotation config, annotation queue, label schema, human feedback, bulk annotate spans, update_annotations, labeling queue, annotate record, or human review.
+license: CC-BY-NC-SA-4.0
+compatibility: Requires the ax CLI and a configured Arize profile.
 metadata:
   author: arize
   version: "1.0"
-compatibility: Requires the ax CLI and a configured Arize profile.
 ---
 
 # Arize Annotation Skill

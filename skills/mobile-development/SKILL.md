@@ -1,6 +1,7 @@
 ---
 name: mobile-development
-description: Mobile development patterns for React Native and Flutter including navigation, state management, and responsive design
+description: Mobile development patterns for React Native and Flutter including navigation, state management, and responsive design. Use when you need help with mobile development.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Mobile Development

@@ -1,10 +1,12 @@
 ---
 name: cloud-devops
-description: "Cloud infrastructure and DevOps workflow covering AWS, Azure, GCP, Kubernetes, Terraform, CI/CD, monitoring, and cloud-native development."
-category: workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
+description: Cloud infrastructure and DevOps workflow covering AWS, Azure, GCP, Kubernetes, Terraform, CI/CD, monitoring, and cloud-native development. Use when you need help with cloud devops.
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: workflow-bundle
+  risk: safe
+  source: personal
+  date_added: "2026-02-27"
 ---
 
 # Cloud/DevOps Workflow Bundle

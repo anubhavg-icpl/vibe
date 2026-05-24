@@ -1,10 +1,12 @@
 ---
 name: ai-agents-architect
-description: Expert in designing and building autonomous AI agents. Masters tool
+description: Expert in designing and building autonomous AI agents. Masters tool. Use when you need help with ai agents architect.
   use, memory systems, planning strategies, and multi-agent orchestration.
-risk: unknown
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # AI Agents Architect

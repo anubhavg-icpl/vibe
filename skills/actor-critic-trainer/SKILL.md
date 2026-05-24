@@ -1,10 +1,12 @@
 ---
 name: actor-critic-trainer
-description: Produce an A2C / A3C / GAE configuration for a given environment, with advantage estimation and loss weights specified.
-version: 1.0.0
+description: Produce an A2C / A3C / GAE configuration for a given environment, with advantage estimation and loss weights specified. Use when you need help with actor critic trainer.
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 7
-tags: [rl, actor-critic, gae]
+metadata:
+  version: 1.0.0
+  tags: [rl, actor-critic, gae]
 ---
 
 Given an environment and compute budget, output:

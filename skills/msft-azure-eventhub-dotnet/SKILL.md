@@ -1,6 +1,6 @@
 ---
 name: azure-eventhub-dotnet
-description: |
+description: |. Use when you need help with azure eventhub dotnet.
   Azure Event Hubs SDK for .NET. Use for high-throughput event streaming: sending events (EventHubProducerClient, EventHubBufferedProducerClient), receiving events (EventProcessorClient with checkpointing), partition management, and real-time data ingestion. Triggers: "Event Hubs", "event streaming", "EventHubProducerClient", "EventProcessorClient", "send events", "receive events", "checkpointing", "partition".
 license: MIT
 metadata:

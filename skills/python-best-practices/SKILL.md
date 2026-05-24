@@ -1,6 +1,7 @@
 ---
 name: python-best-practices
-description: Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing
+description: Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing. Use when you need help with python best practices.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Python Best Practices

@@ -1,11 +1,13 @@
 ---
 name: jan-ai-expert
-description: Use Jan.ai open-source desktop assistant as a local LLM hub, OpenAI-compatible server on port 1337, and MCP host
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, jan-ai, cortex, openai-compat, mcp, desktop, offline]
+description: Use Jan.ai open-source desktop assistant as a local LLM hub, OpenAI-compatible server on port 1337, and MCP host. Use when deploying, running, or configuring local LLM inference with jan ai.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, jan-ai, cortex, openai-compat, mcp, desktop, offline]
 ---
 
 # Jan.ai Expert Mode

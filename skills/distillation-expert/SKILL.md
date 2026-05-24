@@ -1,11 +1,13 @@
 ---
 name: distillation-expert
-description: Teacher-student LLM distillation — logits, on-policy distillation, context distillation
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [distillation, fine-tuning, training, compression]
+description: Teacher-student LLM distillation — logits, on-policy distillation, context distillation. Use when fine-tuning, training, or adapting language models with distillation techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [distillation, fine-tuning, training, compression]
 ---
 
 # Knowledge Distillation Expert Mode

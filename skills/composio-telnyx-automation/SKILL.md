@@ -1,7 +1,8 @@
 ---
 name: telnyx-automation
-description: "Automate Telnyx tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Telnyx tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with telnyx automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

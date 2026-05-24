@@ -1,10 +1,12 @@
 ---
 name: principal-engineer
-description: Provide principal-level software engineering guidance with focus on engineering excellence, technical leadership, and pragmatic implementation.
-risk: unknown
-source: community
-kind: mode
-category: architecture
+description: Provide principal-level software engineering guidance with focus on engineering excellence, technical leadership, and pragmatic implementation. Use when designing system architecture or making technical decisions about principal engineer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: architecture
 ---
 
 # Principal software engineer mode instructions

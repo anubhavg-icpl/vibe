@@ -1,11 +1,13 @@
 ---
 name: fly-io-expert
-description: Expert in Fly Machines, fly.toml, Fly Postgres, and globally distributed deploys
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [fly-io, fly-machines, fly-toml, postgres, edge, multi-region]
+description: Expert in Fly Machines, fly.toml, Fly Postgres, and globally distributed deploys. Use when deploying to or building on fly io edge/serverless platform.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [fly-io, fly-machines, fly-toml, postgres, edge, multi-region]
 ---
 
 # Fly.io Expert Mode

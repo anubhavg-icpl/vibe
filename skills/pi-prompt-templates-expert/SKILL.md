@@ -1,11 +1,13 @@
 ---
 name: pi-prompt-templates-expert
-description: Authoring Markdown prompt templates for pi-coding-agent (frontmatter, argument variables, discovery)
-risk: unknown
-source: community
-kind: mode
-category: pi-dev
-tags: [pi-dev, pi-coding-agent, prompts, templates, markdown]
+description: Authoring Markdown prompt templates for pi-coding-agent (frontmatter, argument variables, discovery). Use when working with pi.dev prompt templates features.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: pi-dev
+  tags: [pi-dev, pi-coding-agent, prompts, templates, markdown]
 ---
 
 # Pi Prompt Templates Expert Mode

@@ -1,6 +1,6 @@
 ---
 name: tool-discovery
-description: "Recommend the right agents and skills for any task. Covers both heavyweight agents (Task tool) and lightweight skills (Skill tool). Triggers on: which agent, which skill, what tool should I use, help me choose, recommend agent, find the right tool."
+description: Recommend the right agents and skills for any task. Covers both heavyweight agents (Task tool) and lightweight skills (Skill tool). Triggers on: which agent, which skill, what tool should I use, help me choose, recommend agent, find the right tool. Use when you need help with tool discovery.
 license: MIT
 allowed-tools: "Read Glob"
 metadata:

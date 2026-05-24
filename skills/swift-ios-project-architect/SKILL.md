@@ -1,10 +1,12 @@
 ---
 name: swift-ios-project-architect
-description: Production-ready Swift iOS project structure architect - validates and scaffolds enterprise-grade iOS apps with SwiftUI, TCA, and modular architecture
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+description: Production-ready Swift iOS project structure architect - validates and scaffolds enterprise-grade iOS apps with SwiftUI, TCA, and modular architecture. Use when scaffolding, structuring, or architecting swift ios projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # 🍎 Swift iOS Project Architect Mode

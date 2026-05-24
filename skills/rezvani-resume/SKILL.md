@@ -1,6 +1,7 @@
 ---
 name: "resume"
-description: "Resume a paused experiment. Checkout the experiment branch, read results history, continue iterating."
+description: Resume a paused experiment. Checkout the experiment branch, read results history, continue iterating. Use when you need help with resume.
+license: CC-BY-NC-SA-4.0
 command: /ar:resume
 ---
 

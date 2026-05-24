@@ -1,11 +1,13 @@
 ---
 name: playwright-expert
-description: Expert in Playwright for end-to-end testing, component testing, API testing, and browser automation
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [playwright, testing, e2e, automation, browser, typescript]
+description: Expert in Playwright for end-to-end testing, component testing, API testing, and browser automation. Use when writing, running, or improving tests with playwright.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [playwright, testing, e2e, automation, browser, typescript]
 ---
 
 # Playwright Expert Mode

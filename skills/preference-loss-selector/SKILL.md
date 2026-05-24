@@ -1,10 +1,12 @@
 ---
 name: preference-loss-selector
-description: Recommend a direct-alignment-algorithm loss given dataset shape and target stage.
-version: 1.0.0
+description: Recommend a direct-alignment-algorithm loss given dataset shape and target stage. Use when you need help with preference loss selector.
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 3
-tags: [dpo, ipo, kto, simpo, orpo, bpo, daa, preference-optimization]
+metadata:
+  version: 1.0.0
+  tags: [dpo, ipo, kto, simpo, orpo, bpo, daa, preference-optimization]
 ---
 
 Given a preference dataset description (paired vs unpaired, preference-strength distribution, length distribution, size) and a training target (one-stage from base, two-stage after SFT, on-policy continuation), recommend a loss from the DPO family and name the single failure mode it protects against.

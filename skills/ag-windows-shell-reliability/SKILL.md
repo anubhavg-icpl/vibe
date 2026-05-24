@@ -1,9 +1,11 @@
 ---
 name: windows-shell-reliability
-description: "Reliable command execution on Windows: paths, encoding, and common binary pitfalls."
-risk: safe
-source: community
-date_added: "2026-03-19"
+description: Reliable command execution on Windows: paths, encoding, and common binary pitfalls. Use when you need help with windows shell reliability.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-03-19"
 ---
 
 # Windows Shell Reliability Patterns

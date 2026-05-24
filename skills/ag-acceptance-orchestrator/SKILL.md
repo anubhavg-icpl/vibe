@@ -1,9 +1,11 @@
 ---
 name: acceptance-orchestrator
 description: Use when a coding task should be driven end-to-end from issue intake through implementation, review, deployment, and acceptance verification with minimal human re-intervention.
-risk: safe
-source: community
-date_added: "2026-03-12"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-03-12"
 ---
 
 # Acceptance Orchestrator

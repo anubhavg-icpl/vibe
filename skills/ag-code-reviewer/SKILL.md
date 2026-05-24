@@ -1,9 +1,11 @@
 ---
 name: code-reviewer
-description: "Elite code review expert specializing in modern AI-powered code"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Elite code review expert specializing in modern AI-powered code. Use when you need help with code reviewer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 ## Use this skill when

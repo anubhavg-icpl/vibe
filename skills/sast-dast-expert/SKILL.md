@@ -1,11 +1,13 @@
 ---
 name: sast-dast-expert
-description: Expert in Static and Dynamic Application Security Testing
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [security, sast, dast, appsec, vulnerability-scanning, devsecops]
+description: Expert in Static and Dynamic Application Security Testing. Use when performing security analysis, auditing, or hardening with sast dast.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [security, sast, dast, appsec, vulnerability-scanning, devsecops]
 ---
 
 # SAST/DAST Expert Mode

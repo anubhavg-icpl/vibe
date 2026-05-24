@@ -1,10 +1,12 @@
 ---
 name: android-kotlin-developer
-description: android-kotlin-developer
-risk: unknown
-source: community
-kind: mode
-category: mobile
+description: android-kotlin-developer. Use when developing mobile applications with android kotlin.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: mobile
 ---
 
 # Android Kotlin Developer Mode

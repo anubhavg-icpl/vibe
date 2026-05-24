@@ -1,6 +1,6 @@
 ---
 name: flowstudio-power-automate-debug
-description: >-
+description: >-. Use when you need help with flowstudio power automate debug.
   Debug failing Power Automate cloud flows using the FlowStudio MCP server.
   The Graph API only shows top-level status codes. This skill gives your agent
   action-level inputs and outputs to find the actual root cause.
@@ -9,6 +9,7 @@ description: >-
   fix a broken Power Automate flow, diagnose a timeout, trace a DynamicOperationRequestFailure,
   check connector auth errors, read error details from a run, or troubleshoot
   expression failures. Requires a FlowStudio MCP subscription — see https://mcp.flowstudio.app
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power Automate Debugging with FlowStudio MCP

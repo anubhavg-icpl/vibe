@@ -1,9 +1,11 @@
 ---
 name: screen-reader-testing
-description: "Practical guide to testing web applications with screen readers for comprehensive accessibility validation."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Practical guide to testing web applications with screen readers for comprehensive accessibility validation. Use when you need help with screen reader testing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Screen Reader Testing

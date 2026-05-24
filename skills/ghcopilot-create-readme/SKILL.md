@@ -1,6 +1,7 @@
 ---
 name: create-readme
-description: 'Create a README.md file for the project'
+description: Create a README.md file for the project. Use when you need help with create readme.
+license: CC-BY-NC-SA-4.0
 ---
 
 ## Role

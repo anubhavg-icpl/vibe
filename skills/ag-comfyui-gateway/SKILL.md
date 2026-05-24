@@ -1,21 +1,14 @@
 ---
 name: comfyui-gateway
-description: REST API gateway for ComfyUI servers. Workflow management, job queuing, webhooks, caching, auth, rate limiting, and image delivery (URL + base64).
-risk: safe
-source: community
-date_added: '2026-03-06'
+description: REST API gateway for ComfyUI servers. Workflow management, job queuing, webhooks, caching, auth, rate limiting, and image delivery (URL + base64). Use when you need help with comfyui gateway.
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- comfyui
-- api-gateway
-- image-generation
-- typescript
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-03-06'
+  tags:
 ---
 
 # ComfyUI Gateway

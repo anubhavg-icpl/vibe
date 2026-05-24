@@ -1,10 +1,12 @@
 ---
 name: ai-scientist-sandbox-review
-description: Two-gate review checklist for research-loop agent outputs before anything leaves the sandbox.
-version: 1.0.0
+description: Two-gate review checklist for research-loop agent outputs before anything leaves the sandbox. Use when you need help with ai scientist sandbox review.
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 5
-tags: [ai-scientist, research-agent, sandbox, peer-review, disclosure]
+metadata:
+  version: 1.0.0
+  tags: [ai-scientist, research-agent, sandbox, peer-review, disclosure]
 ---
 
 Given an autonomous research output (hypothesis, code, experiments, figures, paper draft) produced by an AI-Scientist-v2-style loop, produce a two-gate review: sandbox audit (does anything leave?) plus research audit (is the work sound?).

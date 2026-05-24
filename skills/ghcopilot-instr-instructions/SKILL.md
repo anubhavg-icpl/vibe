@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-instructions
-description: Use when the user needs guidance on instructions. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, instructions]
----
-
----
-description: 'Guidelines for creating high-quality custom instruction files for GitHub Copilot'
-applyTo: '**/*.instructions.md'
+description: "Use when the user needs guidance on instructions. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, instructions]
+  applyTo: "**/*.instructions.md"
+  source: "awesome-copilot"
 ---
 
 # Custom Instructions File Guidelines

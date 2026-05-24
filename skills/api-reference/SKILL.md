@@ -1,10 +1,12 @@
 ---
 name: api-reference
-description: Expert in writing clear, comprehensive API reference documentation
-risk: unknown
-source: community
-kind: mode
-category: documentation
+description: Expert in writing clear, comprehensive API reference documentation. Use when generating, improving, or structuring documentation with api reference.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: documentation
 ---
 
 # API Reference Writer Mode

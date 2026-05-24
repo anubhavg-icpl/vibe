@@ -1,11 +1,13 @@
 ---
 name: pci-dss-compliance
-description: Expert in PCI-DSS compliance for payment card security - cardholder data protection, network security, and audit controls
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [pci-dss, payments, security, compliance, encryption, cardholder-data, audit]
+description: Expert in PCI-DSS compliance for payment card security - cardholder data protection, network security, and audit controls. Use when performing security analysis, auditing, or hardening with pci dss compliance.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [pci-dss, payments, security, compliance, encryption, cardholder-data, audit]
 ---
 
 # PCI-DSS Compliance Expert Mode

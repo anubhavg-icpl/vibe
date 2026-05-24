@@ -1,8 +1,10 @@
 ---
 name: him-cmd-create-pull-request
 description: Use when the user asks to run the /create-pull-request slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, create-pull-request]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, create-pull-request]
 ---
 
 # How to Create a Pull Request Using GitHub CLI

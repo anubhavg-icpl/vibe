@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-tailwind-v4-vite
-description: Use when the user needs guidance on tailwind-v4-vite. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, tailwind-v4-vite]
----
-
----
-description: 'Tailwind CSS v4+ installation and configuration for Vite projects using the official @tailwindcss/vite plugin'
-applyTo: 'vite.config.ts, vite.config.js, **/*.css, **/*.tsx, **/*.ts, **/*.jsx, **/*.js'
+description: "Use when the user needs guidance on tailwind-v4-vite. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, tailwind-v4-vite]
+  applyTo: "vite.config.ts, vite.config.js, **/*.css, **/*.tsx, **/*.ts, **/*.jsx, **/*.js"
+  source: "awesome-copilot"
 ---
 
 # Tailwind CSS v4+ Installation with Vite

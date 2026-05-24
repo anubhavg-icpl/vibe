@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-debian-linux
-description: Use when the user needs guidance on debian-linux. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, debian-linux]
----
-
----
-description: 'Guidance for Debian-based Linux administration, apt workflows, and Debian policy conventions.'
-applyTo: '**'
+description: "Use when the user needs guidance on debian-linux. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, debian-linux]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Debian Linux Administration Guidelines

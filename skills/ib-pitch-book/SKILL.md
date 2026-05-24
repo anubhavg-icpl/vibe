@@ -1,6 +1,6 @@
 ---
 name: ib-pitch-book
-description: |
+description: |. Use when you need help with ib pitch book.
   Investment-banking pitch book for strategic alternatives — trading comps,
   precedent transactions, valuation football field, DCF sensitivity,
   strategic-options matrix, process recommendation. Built by adapting
@@ -8,7 +8,8 @@ description: |
   labels are preserved. Use for Board / sell-side discussion materials. Not a
   VC fundraising deck (see html-ppt-pitch-deck). Workflow adapted from
   Anthropic financial-services Pitch Agent (Apache-2.0).
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "ib pitch book"
   - "investment banking pitch"
   - "strategic alternatives"
@@ -20,7 +21,7 @@ triggers:
   - "投行 pitch"
   - "并购材料"
   - "战略选项"
-od:
+od: 
   mode: deck
   scenario: finance
   featured: 15

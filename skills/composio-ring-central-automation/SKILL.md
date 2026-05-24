@@ -1,7 +1,8 @@
 ---
 name: RingCentral Automation
-description: "RingCentral automation via Rube MCP -- toolkit not currently available in Composio; no RING_CENTRAL_ tools found"
-requires:
+description: RingCentral automation via Rube MCP -- toolkit not currently available in Composio; no RING_CENTRAL_ tools found. Use when you need help with RingCentral Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

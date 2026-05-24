@@ -1,10 +1,12 @@
 ---
 name: js-hoist-regexp
-description: Hoist RegExp Creation
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Hoist RegExp Creation. Use when you need help with js hoist regexp.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Hoist RegExp Creation

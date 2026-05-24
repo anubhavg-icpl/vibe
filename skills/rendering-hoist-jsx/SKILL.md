@@ -1,10 +1,12 @@
 ---
 name: rendering-hoist-jsx
-description: Hoist Static JSX Elements
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Hoist Static JSX Elements. Use when you need help with rendering hoist jsx.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Hoist Static JSX Elements

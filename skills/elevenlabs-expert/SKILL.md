@@ -1,11 +1,13 @@
 ---
 name: elevenlabs-expert
-description: ElevenLabs TTS, voice cloning, conversational AI, sound effects, music
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, audio, tts, voice-cloning, elevenlabs]
+description: ElevenLabs TTS, voice cloning, conversational AI, sound effects, music. Use when working with multimodal AI (images, audio, video) using elevenlabs.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, audio, tts, voice-cloning, elevenlabs]
 ---
 
 # ElevenLabs Expert Mode

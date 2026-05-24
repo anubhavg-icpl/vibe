@@ -1,6 +1,7 @@
 ---
 name: csharp-nunit
-description: 'Get best practices for NUnit unit testing, including data-driven tests'
+description: Get best practices for NUnit unit testing, including data-driven tests. Use when you need help with csharp nunit.
+license: CC-BY-NC-SA-4.0
 ---
 
 # NUnit Best Practices

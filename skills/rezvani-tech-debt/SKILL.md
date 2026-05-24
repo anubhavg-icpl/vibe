@@ -1,6 +1,7 @@
 ---
 name: tech-debt
-description: Scan, prioritize, and report technical debt. Usage: /tech-debt <scan|prioritize|report> [options]
+description: Scan, prioritize, and report technical debt. Usage: /tech-debt <scan|prioritize|report> [options]. Use when you need help with tech debt.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /tech-debt

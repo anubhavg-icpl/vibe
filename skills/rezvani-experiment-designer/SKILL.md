@@ -1,6 +1,7 @@
 ---
 name: experiment-designer
 description: Use when planning product experiments, writing testable hypotheses, estimating sample size, prioritizing tests, or interpreting A/B outcomes with practical statistical rigor.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Experiment Designer

@@ -1,11 +1,13 @@
 ---
 name: mastra-expert
-description: Build TypeScript AI agents and workflows with Mastra's modern stack from the Gatsby team
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [mastra, typescript, agents, workflows, ai-sdk, nodejs]
+description: "Build TypeScript AI agents and workflows with Mastra's modern stack from the Gatsby team. Use when building AI applications with mastra."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [mastra, typescript, agents, workflows, ai-sdk, nodejs]
 ---
 
 # Mastra Expert Mode

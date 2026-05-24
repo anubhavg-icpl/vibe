@@ -1,9 +1,11 @@
 ---
 name: deep-research
-description: "Run autonomous research tasks that plan, search, read, and synthesize information into comprehensive reports."
-risk: safe
-source: "https://github.com/sanjay3290/ai-skills/tree/main/skills/deep-research"
-date_added: "2026-02-27"
+description: Run autonomous research tasks that plan, search, read, and synthesize information into comprehensive reports. Use when you need help with deep research.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/sanjay3290/ai-skills/tree/main/skills/deep-research"
+  date_added: "2026-02-27"
 ---
 
 # Gemini Deep Research Skill

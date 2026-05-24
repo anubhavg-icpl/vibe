@@ -1,9 +1,11 @@
 ---
 name: ui-skills
-description: "Opinionated, evolving constraints to guide agents when building interfaces"
-risk: safe
-source: "https://github.com/ibelick/ui-skills"
-date_added: "2026-02-27"
+description: Opinionated, evolving constraints to guide agents when building interfaces. Use when you need help with ui skills.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/ibelick/ui-skills"
+  date_added: "2026-02-27"
 ---
 
 # Ui Skills

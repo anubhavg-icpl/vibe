@@ -1,11 +1,13 @@
 ---
 name: react-vite-project-architect
-description: Production-ready React project structure validation and scaffolding with Vite, featuring modern patterns, TypeScript, and comprehensive tooling
-risk: unknown
-source: community
-kind: mode
-category: project-structure
-tags: [react, vite, typescript, tailwindcss, tanstack, zustand]
+description: Production-ready React project structure validation and scaffolding with Vite, featuring modern patterns, TypeScript, and comprehensive tooling. Use when scaffolding, structuring, or architecting react vite projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
+  tags: [react, vite, typescript, tailwindcss, tanstack, zustand]
 ---
 
 # React Vite Project Architect Mode

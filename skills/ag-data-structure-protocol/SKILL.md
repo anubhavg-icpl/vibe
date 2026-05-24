@@ -1,9 +1,11 @@
 ---
 name: data-structure-protocol
-description: "Give agents persistent structural memory of a codebase — navigate dependencies, track public APIs, and understand why connections exist without re-reading the whole repo."
-risk: safe
-source: "https://github.com/k-kolomeitsev/data-structure-protocol"
-date_added: "2026-02-27"
+description: Give agents persistent structural memory of a codebase — navigate dependencies, track public APIs, and understand why connections exist without re-reading the whole repo. Use when you need help with data structure protocol.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/k-kolomeitsev/data-structure-protocol"
+  date_added: "2026-02-27"
 ---
 
 # Data Structure Protocol (DSP)

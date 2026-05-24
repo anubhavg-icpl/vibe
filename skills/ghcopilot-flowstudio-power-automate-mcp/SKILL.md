@@ -1,6 +1,6 @@
 ---
 name: flowstudio-power-automate-mcp
-description: >-
+description: >-. Use when you need help with flowstudio power automate mcp.
   Foundation skill for Power Automate via FlowStudio MCP — auth setup, the
   reusable MCP helper (Python + Node.js), tool discovery via `list_skills` /
   `tool_search`, and oversized-response handling. Load this skill first when
@@ -9,6 +9,7 @@ description: >-
   (Pro+), or `flowstudio-power-automate-governance` (Pro+) — each contains the workflow
   narrative, this skill provides the plumbing they all rely on. Requires a
   FlowStudio MCP subscription or compatible server — see https://mcp.flowstudio.app
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power Automate via FlowStudio MCP — Foundation

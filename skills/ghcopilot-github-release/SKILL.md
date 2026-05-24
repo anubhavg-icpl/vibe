@@ -1,8 +1,9 @@
 ---
 name: github-release
-description: >
+description: >. Use when you need help with github release.
   Guides IA through releasing a new version of a GitHub library end-to-end.
   Handles SemVer versioning and Keep a Changelog formatting automatically.
+license: CC-BY-NC-SA-4.0
 compatibility: "requires: gh CLI and git"
 ---
 

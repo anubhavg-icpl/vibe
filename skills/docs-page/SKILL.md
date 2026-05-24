@@ -1,17 +1,18 @@
 ---
 name: docs-page
-description: |
+description: |. Use when you need help with docs page.
   A documentation page — inline-start nav, scrollable article body,
   inline-end table of contents. Use when the brief mentions "docs",
   "documentation", "guide", "API reference", or "tutorial".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "docs"
   - "documentation"
   - "guide"
   - "tutorial"
   - "api reference"
   - "文档"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: engineering

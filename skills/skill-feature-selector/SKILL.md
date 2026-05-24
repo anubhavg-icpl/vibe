@@ -1,10 +1,12 @@
 ---
 name: skill-feature-selector
-description: Quick reference decision tree for choosing the right feature selection method
-version: 1.0.0
+description: Quick reference decision tree for choosing the right feature selection method. Use when you need help with skill feature selector.
+license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 18
-tags: [feature-selection, mutual-information, rfe, lasso, tree-importance]
+metadata:
+  version: 1.0.0
+  tags: [feature-selection, mutual-information, rfe, lasso, tree-importance]
 ---
 
 # Feature Selection Strategy

@@ -1,11 +1,13 @@
 ---
 name: vibrant-design
-description: Expert in the Vibrant design system - Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, bold]
+description: Expert in the Vibrant design system - Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy. Use when building UI components, applying design tokens, or implementing visual styles for vibrant.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, bold]
 ---
 
 # Vibrant Design System Mode

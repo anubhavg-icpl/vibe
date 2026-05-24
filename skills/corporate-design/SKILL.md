@@ -1,11 +1,13 @@
 ---
 name: corporate-design
-description: Expert in the Corporate design system - Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+description: Expert in the Corporate design system - Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns. Use when building UI components, applying design tokens, or implementing visual styles for corporate.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Corporate Design System Mode

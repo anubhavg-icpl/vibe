@@ -1,11 +1,13 @@
 ---
 name: dithered-design
-description: Expert in the Dithered design system - Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, retro]
+description: Expert in the Dithered design system - Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals. Use when building UI components, applying design tokens, or implementing visual styles for dithered.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, retro]
 ---
 
 # Dithered Design System Mode

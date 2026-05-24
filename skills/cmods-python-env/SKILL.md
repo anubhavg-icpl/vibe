@@ -1,6 +1,6 @@
 ---
 name: python-env
-description: "Fast Python environment management with uv (10-100x faster than pip). Triggers on: uv, venv, pip, pyproject, python environment, install package, dependencies."
+description: Fast Python environment management with uv (10-100x faster than pip). Triggers on: uv, venv, pip, pyproject, python environment, install package, dependencies. Use when you need help with python env.
 license: MIT
 compatibility: "Requires uv CLI tool. Install: curl -LsSf https://astral.sh/uv/install.sh | sh"
 allowed-tools: "Bash"

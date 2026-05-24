@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-dependent-libraries
-description: Use when the user needs guidance on pcf-dependent-libraries. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-dependent-libraries]
----
-
----
-description: 'Using dependent libraries in PCF components'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj}'
+description: "Use when the user needs guidance on pcf-dependent-libraries. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-dependent-libraries]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj}"
+  source: "awesome-copilot"
 ---
 
 # Dependent Libraries (Preview)

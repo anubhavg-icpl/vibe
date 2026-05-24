@@ -1,11 +1,13 @@
 ---
 name: rfc-compliance-agent
-description: Autonomous agent that searches RFC standards online and refactors codebases for compliance
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [agent, rfc, compliance, refactoring, web-search, standards, autonomous]
+description: Autonomous agent that searches RFC standards online and refactors codebases for compliance. Use when implementing or validating rfc compliance agent protocol compliance.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [agent, rfc, compliance, refactoring, web-search, standards, autonomous]
 ---
 
 # RFC Compliance Agent Mode

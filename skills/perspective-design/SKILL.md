@@ -1,11 +1,13 @@
 ---
 name: perspective-design
-description: Expert in the Perspective design system - Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, layout]
+description: Expert in the Perspective design system - Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism. Use when building UI components, applying design tokens, or implementing visual styles for perspective.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, layout]
 ---
 
 # Perspective Design System Mode

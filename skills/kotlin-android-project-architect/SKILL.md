@@ -1,10 +1,12 @@
 ---
 name: kotlin-android-project-architect
-description: Production-ready Kotlin Android project structure architect - validates and scaffolds enterprise-grade Android apps with Clean Architecture and multi-module patterns
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+description: Production-ready Kotlin Android project structure architect - validates and scaffolds enterprise-grade Android apps with Clean Architecture and multi-module patterns. Use when scaffolding, structuring, or architecting kotlin android projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # 🤖 Kotlin Android Project Architect Mode

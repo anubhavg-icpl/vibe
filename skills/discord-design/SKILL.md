@@ -1,11 +1,13 @@
 ---
 name: discord-design
-description: Expert in the Discord design system - Voice / chat platform. Deep blurple, dark-first surfaces, playful accent moments.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, productivity]
+description: Expert in the Discord design system - Voice / chat platform. Deep blurple, dark-first surfaces, playful accent moments. Use when building UI components, applying design tokens, or implementing visual styles for discord.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, productivity]
 ---
 
 # Discord Design System Mode

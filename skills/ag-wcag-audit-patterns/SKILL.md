@@ -1,9 +1,11 @@
 ---
 name: wcag-audit-patterns
-description: "Comprehensive guide to auditing web content against WCAG 2.2 guidelines with actionable remediation strategies."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Comprehensive guide to auditing web content against WCAG 2.2 guidelines with actionable remediation strategies. Use when you need help with wcag audit patterns.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # WCAG Audit Patterns

@@ -1,11 +1,13 @@
 ---
 name: tailwind-css-expert
-description: Expert in Tailwind CSS utility-first framework with custom configurations, component patterns, responsive design, and performance optimization
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [tailwind, css, frontend, design, utility-first, responsive]
+description: Expert in Tailwind CSS utility-first framework with custom configurations, component patterns, responsive design, and performance optimization. Use when building applications with the tailwind css framework.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [tailwind, css, frontend, design, utility-first, responsive]
 ---
 
 # Tailwind CSS Expert Mode

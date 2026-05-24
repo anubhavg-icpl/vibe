@@ -1,10 +1,12 @@
 ---
 name: agent-budget-audit
-description: Audit an agent deployment's cost-governor stack and flag missing layers before enabling unattended runs.
-version: 1.0.0
+description: "Audit an agent deployment's cost-governor stack and flag missing layers before enabling unattended runs. Use when you need help with agent budget audit."
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 13
-tags: [cost-governors, denial-of-wallet, budgets, claude-code-sdk, agent-governance]
+metadata:
+  version: 1.0.0
+  tags: [cost-governors, denial-of-wallet, budgets, claude-code-sdk, agent-governance]
 ---
 
 Given a proposed agent deployment, audit its cost-governor stack against the twelve-layer reference and flag which layers are missing, under-tuned, or over-tuned.

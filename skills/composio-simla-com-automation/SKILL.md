@@ -1,7 +1,8 @@
 ---
 name: simla-com-automation
-description: "Automate Simla Com tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Simla Com tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with simla com automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

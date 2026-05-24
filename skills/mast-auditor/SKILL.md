@@ -1,10 +1,12 @@
 ---
 name: mast-auditor
-description: Run a MAST-style failure-mode audit on a multi-agent system. Categorize execution-trace failures into Specification / Coordination / Verification and the Groupthink families; rank mitigations by expected failure reduction.
-version: 1.0.0
+description: Run a MAST-style failure-mode audit on a multi-agent system. Categorize execution-trace failures into Specification / Coordination / Verification and the Groupthink families; rank mitigations by expected failure reduction. Use when you need help with mast auditor.
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 23
-tags: [multi-agent, failure-modes, MAST, groupthink, circuit-breaker, audit]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, failure-modes, MAST, groupthink, circuit-breaker, audit]
 ---
 
 Given a multi-agent system and sampled execution traces, run a failure-mode audit.

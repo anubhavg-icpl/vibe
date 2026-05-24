@@ -1,11 +1,13 @@
 ---
 name: github-actions-expert
-description: Expert in GitHub Actions CI/CD pipelines, workflows, reusable actions, security, and best practices
-risk: unknown
-source: community
-kind: mode
-category: devops
-tags: [github, actions, ci-cd, workflows, automation, devops]
+description: Expert in GitHub Actions CI/CD pipelines, workflows, reusable actions, security, and best practices. Use when automating CI/CD, deployments, or operations with github actions.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: devops
+  tags: [github, actions, ci-cd, workflows, automation, devops]
 ---
 
 # GitHub Actions Expert Mode

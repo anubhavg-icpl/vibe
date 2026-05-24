@@ -1,6 +1,7 @@
 ---
 name: autonomous-loops
-description: "Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems."
+description: Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems. Use when you need help with autonomous loops.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

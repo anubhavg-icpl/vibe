@@ -1,10 +1,12 @@
 ---
 name: terraform-iac-expert
-description: terraform-iac-expert
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+description: terraform-iac-expert. Use when architecting or managing cloud infrastructure with terraform iac.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # Terraform Infrastructure as Code Expert Mode

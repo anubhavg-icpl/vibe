@@ -1,14 +1,15 @@
 ---
 name: html-ppt-tech-sharing
 description: Conference / internal tech-talk deck — GitHub-dark, JetBrains Mono, terminal code blocks, agenda + Q&A pages. Use for engineering presentations, internal sharing sessions, conference talks, and code-heavy walkthroughs.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "tech sharing"
   - "tech talk"
   - "技术分享"
   - "engineering talk"
   - "conference talk"
   - "dev talk"
-od:
+od: 
   mode: deck
   scenario: engineering
   featured: 22
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "帮我用 html-ppt-tech-sharing 模板做一份 8 页的技术分享 PPT。先确认：分享主题、目标听众（同事 / 社区 / 客户）、要不要包含代码片段和 benchmark。GitHub 暗色主题 + JetBrains Mono，agenda + Q&A 页备好。"
 ---
+
 # HTML PPT · Tech Sharing
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`tech-sharing`** full-deck template.

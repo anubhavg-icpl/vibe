@@ -1,11 +1,13 @@
 ---
 name: api-security-audit-agent
-description: Autonomous agent that audits REST/GraphQL APIs for security vulnerabilities, data exposure, and OWASP API Top 10 compliance
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [agent, security, api, rest, graphql, owasp, audit, penetration-testing]
+description: Autonomous agent that audits REST/GraphQL APIs for security vulnerabilities, data exposure, and OWASP API Top 10 compliance. Use when performing security analysis, auditing, or hardening with api security audit agent.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [agent, security, api, rest, graphql, owasp, audit, penetration-testing]
 ---
 
 # API Security Audit Agent

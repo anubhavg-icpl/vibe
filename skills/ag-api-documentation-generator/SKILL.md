@@ -1,9 +1,11 @@
 ---
 name: api-documentation-generator
-description: "Generate comprehensive, developer-friendly API documentation from code, including endpoints, parameters, examples, and best practices"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Generate comprehensive, developer-friendly API documentation from code, including endpoints, parameters, examples, and best practices. Use when you need help with api documentation generator.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # API Documentation Generator

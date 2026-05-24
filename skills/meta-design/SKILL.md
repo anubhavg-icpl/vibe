@@ -1,11 +1,13 @@
 ---
 name: meta-design
-description: Expert in the Meta (Store) design system - Tech retail store. Photography-first, binary light/dark surfaces, Meta Blue CTAs.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, e-commerce]
+description: Expert in the Meta (Store) design system - Tech retail store. Photography-first, binary light/dark surfaces, Meta Blue CTAs. Use when building UI components, applying design tokens, or implementing visual styles for meta.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, e-commerce]
 ---
 
 # Meta (Store) Design System Mode

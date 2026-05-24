@@ -1,6 +1,7 @@
 ---
 name: skill-naive-bayes-chooser
-description: Choose the right Naive Bayes variant for your classification task
+description: Choose the right Naive Bayes variant for your classification task. Use when you need help with skill naive bayes chooser.
+license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 14
 ---

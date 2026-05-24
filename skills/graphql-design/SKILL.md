@@ -1,6 +1,7 @@
 ---
 name: graphql-design
-description: GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling
+description: GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling. Use when building UI with graphql design language and visual style.
+license: CC-BY-NC-SA-4.0
 ---
 
 # GraphQL Design

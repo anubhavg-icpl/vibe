@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-daisy-days
-description: |
+description: |. Use when you need help with html ppt zhangzara daisy days.
   Daisy Days — Cheerful pastel deck with hand-drawn daisies, stars, and rainbows. Friendly, soft, and warm. Anything that should feel friendly, soft, and joyful: educational content, kids and family, wellness programs, community workshops, creator portfolios for craft / illustration.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "daisy-days"
   - "zhangzara-daisy-days"
   - "Daisy Days"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/daisy-days"

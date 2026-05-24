@@ -1,11 +1,12 @@
 ---
 name: sales-enablement
 description: "Create sales collateral such as decks, one-pagers, objection docs, demo scripts, playbooks, and proposal templates. Use when a sales team needs assets that help reps move deals forward and close."
-risk: unknown
-source: "https://github.com/coreyhaines31/marketingskills"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 metadata:
   version: 1.1.0
+  risk: unknown
+  source: "https://github.com/coreyhaines31/marketingskills"
+  date_added: "2026-03-21"
 ---
 
 # Sales Enablement

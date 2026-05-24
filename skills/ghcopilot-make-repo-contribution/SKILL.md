@@ -1,6 +1,7 @@
 ---
 name: make-repo-contribution
-description: 'All changes to code must follow the guidance documented in the repository. Before any issue is filed, branch is made, commits generated, or pull request (or PR) created, a search must be done to ensure the right steps are followed. Whenever asked to create an issue, commit messages, to push code, or create a PR, use this skill so everything is done correctly.'
+description: All changes to code must follow the guidance documented in the repository. Before any issue is filed, branch is made, commits generated, or pull request (or PR) created, a search must be done to ensure the right steps are followed. Whenever asked to create an issue, commit messages, to push code, or create a PR, use this skill so everything is done correctly. Use when you need help with make repo contribution.
+license: CC-BY-NC-SA-4.0
 allowed-tools: Read Edit Bash(git:*) Bash(gh issue:*) Bash(gh pr:*)
 ---
 

@@ -1,11 +1,13 @@
 ---
 name: mythos-algorithm-bug-hunter
-description: Find bugs that require understanding the underlying algorithm — LZW, parsers, crypto, consensus
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, algorithm, crypto, parsers, defensive]
+description: Find bugs that require understanding the underlying algorithm — LZW, parsers, crypto, consensus. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving algorithm bug hunter.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, algorithm, crypto, parsers, defensive]
 ---
 
 # Mythos Algorithm Bug Hunter Mode

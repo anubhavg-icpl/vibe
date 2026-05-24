@@ -1,10 +1,12 @@
 ---
 name: python-expert
-description: python-expert
-risk: unknown
-source: community
-kind: mode
-category: languages
+description: python-expert. Use when writing, reviewing, or refactoring python code.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
 ---
 
 # Python Expert Mode

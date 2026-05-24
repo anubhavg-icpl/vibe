@@ -1,10 +1,12 @@
 ---
 name: unreal-engine
-description: unreal-engine
-risk: unknown
-source: community
-kind: mode
-category: game-development
+description: unreal-engine. Use when developing games with unreal engine.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: game-development
 ---
 
 # Unreal Engine Developer Mode

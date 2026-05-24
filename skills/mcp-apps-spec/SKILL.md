@@ -1,10 +1,12 @@
 ---
 name: mcp-apps-spec
-description: Produce the full MCP Apps contract for a tool that needs an interactive UI resource.
-version: 1.0.0
+description: Produce the full MCP Apps contract for a tool that needs an interactive UI resource. Use when you need help with mcp apps spec.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 14
-tags: [mcp, apps, ui-resources, csp, iframe-sandbox]
+metadata:
+  version: 1.0.0
+  tags: [mcp, apps, ui-resources, csp, iframe-sandbox]
 ---
 
 Given a tool that would benefit from an interactive UI (timeline, form, dashboard, map, chart), produce the MCP Apps contract.

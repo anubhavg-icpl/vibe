@@ -1,10 +1,12 @@
 ---
 name: motion-design
-description: Expert in UI motion design, animations, and micro-interactions
-risk: unknown
-source: community
-kind: mode
-category: ui-ux
+description: Expert in UI motion design, animations, and micro-interactions. Use when building UI with motion design language and visual style.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ui-ux
 ---
 
 # Motion Design Expert Mode

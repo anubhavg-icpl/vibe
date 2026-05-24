@@ -1,10 +1,12 @@
 ---
 name: flutter-developer
-description: flutter-developer
-risk: unknown
-source: community
-kind: mode
-category: mobile
+description: flutter-developer. Use when developing mobile applications with flutter.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: mobile
 ---
 
 # Flutter Developer Mode

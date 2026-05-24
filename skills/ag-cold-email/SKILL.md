@@ -1,11 +1,12 @@
 ---
 name: cold-email
 description: "Write B2B cold emails and follow-up sequences that earn replies. Use when creating outbound prospecting emails, SDR outreach, personalized opening lines, subject lines, CTAs, and multi-touch follow-up sequences."
-risk: unknown
-source: "https://github.com/coreyhaines31/marketingskills"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 metadata:
   version: 1.1.0
+  risk: unknown
+  source: "https://github.com/coreyhaines31/marketingskills"
+  date_added: "2026-03-21"
 ---
 
 # Cold Email Writing

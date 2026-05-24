@@ -1,11 +1,13 @@
 ---
 name: mythos-active-defender-eval
-description: Add active defenders to cyber ranges — penalise alerts, integrate EDR + analyst response, score evasion-resistance
-risk: unknown
-source: community
-kind: mode
-category: eval-design
-tags: [mythos, ai-eval, eval-design, active-defender, edr, soc, evasion-resistance, defensive]
+description: Add active defenders to cyber ranges — penalise alerts, integrate EDR + analyst response, score evasion-resistance. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving active defender eval.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: eval-design
+  tags: [mythos, ai-eval, eval-design, active-defender, edr, soc, evasion-resistance, defensive]
 ---
 
 # Mythos Active Defender Eval Mode

@@ -1,14 +1,12 @@
 ---
 name: ghcopilot-instr-copilot-sdk-nodejs
-description: Use when the user needs guidance on copilot-sdk-nodejs. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, copilot-sdk-nodejs]
----
-
----
-applyTo: "**.ts, **.js, package.json"
-description: "This file provides guidance on building Node.js/TypeScript applications using GitHub Copilot SDK."
-name: "GitHub Copilot SDK Node.js Instructions"
+description: "Use when the user needs guidance on copilot-sdk-nodejs. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, copilot-sdk-nodejs]
+  applyTo: "**.ts, **.js, package.json"
+  source: "awesome-copilot"
 ---
 
 ## Core Principles

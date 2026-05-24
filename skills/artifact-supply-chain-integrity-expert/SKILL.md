@@ -1,11 +1,13 @@
 ---
 name: artifact-supply-chain-integrity-expert
-description: Expert in artifact integrity — SHA256/HMAC verification, Sigstore/cosign signatures, SLSA provenance, SBOM generation, in-toto attestations, and tamper-proof agent/binary distribution. Fails closed on any hash mismatch.
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [supply-chain, sha256, hmac, sigstore, cosign, slsa, sbom, in-toto, artifact-verification, code-signing, tamper-proof, integrity]
+description: Expert in artifact integrity — SHA256/HMAC verification, Sigstore/cosign signatures, SLSA provenance, SBOM generation, in-toto attestations, and tamper-proof agent/binary distribution. Fails closed on any hash mismatch. Use when performing security analysis, auditing, or hardening with artifact supply chain integrity.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [supply-chain, sha256, hmac, sigstore, cosign, slsa, sbom, in-toto, artifact-verification, code-signing, tamper-proof, integrity]
 ---
 
 # Artifact Supply-Chain Integrity Expert Mode

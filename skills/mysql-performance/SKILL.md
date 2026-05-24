@@ -1,11 +1,13 @@
 ---
 name: mysql-performance
-description: Expert in MySQL database performance optimization, indexing, query tuning, replication, and production best practices
-risk: unknown
-source: community
-kind: mode
-category: database
-tags: [mysql, database, performance, indexing, replication, tuning]
+description: Expert in MySQL database performance optimization, indexing, query tuning, replication, and production best practices. Use when designing, querying, or optimizing mysql databases.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: database
+  tags: [mysql, database, performance, indexing, replication, tuning]
 ---
 
 # MySQL Performance Expert Mode

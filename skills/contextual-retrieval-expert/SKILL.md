@@ -1,11 +1,13 @@
 ---
 name: contextual-retrieval-expert
-description: Anthropic's Contextual Retrieval — prepend chunk-specific context before embedding
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, contextual-retrieval, anthropic, prompt-caching, bm25]
+description: "Anthropic's Contextual Retrieval — prepend chunk-specific context before embedding. Use when building or optimizing retrieval-augmented generation pipelines with contextual retrieval."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, contextual-retrieval, anthropic, prompt-caching, bm25]
 ---
 
 # Contextual Retrieval Expert Mode

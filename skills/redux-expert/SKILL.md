@@ -1,11 +1,13 @@
 ---
 name: redux-expert
-description: Expert in Redux state management for React applications with modern patterns, best practices, and performance optimization
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [redux, state-management, react, frontend, javascript, typescript]
+description: Expert in Redux state management for React applications with modern patterns, best practices, and performance optimization. Use when building applications with the redux framework.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [redux, state-management, react, frontend, javascript, typescript]
 ---
 
 # Redux Expert Mode

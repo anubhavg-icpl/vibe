@@ -1,10 +1,12 @@
 ---
 name: quantum-computing
-description: Expert in quantum computing fundamentals, Qiskit, and quantum algorithms
-risk: unknown
-source: community
-kind: mode
-category: emerging-tech
+description: Expert in quantum computing fundamentals, Qiskit, and quantum algorithms. Use when you need help with quantum computing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: emerging-tech
 ---
 
 # Quantum Computing Developer Mode

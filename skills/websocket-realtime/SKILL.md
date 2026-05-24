@@ -1,6 +1,7 @@
 ---
 name: websocket-realtime
-description: Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies
+description: Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies. Use when you need help with websocket realtime.
+license: CC-BY-NC-SA-4.0
 ---
 
 # WebSocket & Real-Time

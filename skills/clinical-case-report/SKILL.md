@@ -1,12 +1,13 @@
 ---
 name: clinical-case-report
-description: |
+description: |. Use when you need help with clinical case report.
   Structured medical case presentation for clinical rounds, conferences,
   and documentation. Generates SOAP-format or narrative case reports
   with physiologically accurate vitals, labs, and evidence-based plans.
   Use when the brief mentions "case report", "case presentation", "SOAP note",
   "clinical case", "ward rounds", "case summary", or "patient presentation".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "case report"
   - "case presentation"
   - "soap note"
@@ -15,7 +16,7 @@ triggers:
   - "patient presentation"
   - "case summary"
   - "medical case"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: healthcare

@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-mat
-description: |
+description: |. Use when you need help with html ppt zhangzara mat.
   Mat — Dark sage canvas with bone paper and burnt-orange accent; mid-century modern with wood undertones. Anything that should feel mid-century, tactile, and intentional: design studio credentials, architecture / interior brands, ceramics / craft / furniture, advisory decks.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "mat"
   - "zhangzara-mat"
   - "warm-modern"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/mat"

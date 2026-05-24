@@ -1,10 +1,12 @@
 ---
 name: fp-either-ref
 description: Quick reference for Either type. Use when user needs error handling, validation, or operations that can fail with typed errors.
-risk: unknown
-source: community
-version: 1.0.0
-tags: [fp-ts, either, error-handling, validation, quick-reference]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  version: 1.0.0
+  tags: [fp-ts, either, error-handling, validation, quick-reference]
 ---
 
 # Either Quick Reference

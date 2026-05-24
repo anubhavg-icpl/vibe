@@ -1,10 +1,12 @@
 ---
 name: rerender-transitions
-description: Use Transitions for Non-Urgent Updates
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Use Transitions for Non-Urgent Updates. Use when you need help with rerender transitions.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Use Transitions for Non-Urgent Updates

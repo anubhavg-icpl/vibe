@@ -1,6 +1,7 @@
 ---
 name: benchmark
-description: Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives.
+description: Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives. Use when you need help with benchmark.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

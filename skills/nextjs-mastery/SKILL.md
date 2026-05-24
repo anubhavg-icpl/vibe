@@ -1,6 +1,7 @@
 ---
 name: nextjs-mastery
-description: Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching
+description: Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching. Use when you need help with nextjs mastery.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Next.js Mastery

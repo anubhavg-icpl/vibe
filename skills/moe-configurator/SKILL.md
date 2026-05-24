@@ -1,10 +1,12 @@
 ---
 name: moe-configurator
-description: Pick expert count, top-k, balancing strategy, and shared-expert layout for a new MoE transformer.
-version: 1.0.0
+description: Pick expert count, top-k, balancing strategy, and shared-expert layout for a new MoE transformer. Use when you need help with moe configurator.
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 11
-tags: [transformers, moe, mixture-of-experts, scaling]
+metadata:
+  version: 1.0.0
+  tags: [transformers, moe, mixture-of-experts, scaling]
 ---
 
 Given a transformer spec (total parameter budget, desired active params per token, training tokens available, inference hardware), output:

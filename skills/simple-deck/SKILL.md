@@ -1,19 +1,20 @@
 ---
 name: simple-deck
-description: |
+description: |. Use when you need help with simple deck.
   Single-file horizontal-swipe HTML deck. Built by copying the seed
   `assets/template.html` (which carries the proven 5-rule iframe nav script)
   and pasting slide layouts from `references/layouts.md`. Pitch decks,
   product overviews, study material — when you don't need the magazine
   aesthetic of `magazine-web-ppt`.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "deck"
   - "slides"
   - "ppt"
   - "presentation"
   - "幻灯"
   - "ppt 模板"
-od:
+od: 
   mode: deck
   scenario: product
   preview:

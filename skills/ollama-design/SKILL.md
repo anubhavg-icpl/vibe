@@ -1,11 +1,13 @@
 ---
 name: ollama-design
-description: Expert in the Ollama design system - Run LLMs locally. Terminal-first, monochrome simplicity.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+description: Expert in the Ollama design system - Run LLMs locally. Terminal-first, monochrome simplicity. Use when building UI components, applying design tokens, or implementing visual styles for ollama.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # Ollama Design System Mode

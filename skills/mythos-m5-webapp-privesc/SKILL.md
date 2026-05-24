@@ -1,11 +1,13 @@
 ---
 name: mythos-m5-webapp-privesc
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 5 — ViewState abuse, SQLi+relay RCE, Kerberos S4U delegation, and LAPS/GPO escalation
-risk: unknown
-source: community
-kind: mode
-category: cyber-range
-tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-5, viewstate, sqli, kerberos-delegation, laps, gpo, privesc]
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 5 — ViewState abuse, SQLi+relay RCE, Kerberos S4U delegation, and LAPS/GPO escalation. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m5 webapp privesc."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cyber-range
+  tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-5, viewstate, sqli, kerberos-delegation, laps, gpo, privesc]
 ---
 
 # Mythos M5 — Web App Exploitation and Privilege Escalation Mode

@@ -1,10 +1,12 @@
 ---
 name: _sections
-description: _sections
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: _sections. Use when you need help with _sections.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 # Sections

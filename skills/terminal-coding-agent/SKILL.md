@@ -1,10 +1,12 @@
 ---
 name: terminal-coding-agent
-description: Build and evaluate a terminal-native coding agent against SWE-bench Pro with bounded cost, sandboxed tools, and full 2026 hook surface.
-version: 1.0.0
+description: Build and evaluate a terminal-native coding agent against SWE-bench Pro with bounded cost, sandboxed tools, and full 2026 hook surface. Use when you need help with terminal coding agent.
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 01
-tags: [capstone, coding-agent, claude-code, swe-bench, mcp, hooks, sandbox]
+metadata:
+  version: 1.0.0
+  tags: [capstone, coding-agent, claude-code, swe-bench, mcp, hooks, sandbox]
 ---
 
 Given a target repository and a natural-language task, build a harness that plans, executes in a sandbox, and opens a pull request. Match or beat the mini-swe-agent baseline on a 30-task SWE-bench Pro subset while staying under a $5-per-task budget.

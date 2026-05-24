@@ -1,10 +1,12 @@
 ---
 name: AGENTS
-description: AGENTS
-risk: unknown
-source: community
-kind: mode
-category: react-best-practices
+description: AGENTS. Use when writing React components following AGENTS patterns.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: react-best-practices
 ---
 
 # React Best Practices

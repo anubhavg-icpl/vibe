@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-pink-script
-description: |
+description: |. Use when you need help with html ppt zhangzara pink script.
   Pink Script — After Hours — Black canvas, hot pink accent, pearl-cream paper, Instrument Serif headlines: late-night editorial luxury. Anything that should feel nocturnal, intentional, and a little luxe: fashion brand decks, creator personal brands, after-hours / nightlife / spirits launches, luxury product reveals, editorial features.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "pink-script"
   - "zhangzara-pink-script"
   - "Pink Script — After Hours"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/pink-script"

@@ -1,11 +1,13 @@
 ---
 name: milvus-expert
-description: Deep expertise in Milvus 2.5+ — index zoo (HNSW/DiskANN/IVF/SCANN/CAGRA), partitions, multi-vector hybrid search, GPU indexes, and Milvus Lite
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, milvus, diskann, hnsw, gpu-index, hybrid-search, partitions]
+description: Deep expertise in Milvus 2.5+ — index zoo (HNSW/DiskANN/IVF/SCANN/CAGRA), partitions, multi-vector hybrid search, GPU indexes, and Milvus Lite. Use when implementing vector search, embeddings storage, or similarity queries with milvus.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, milvus, diskann, hnsw, gpu-index, hybrid-search, partitions]
 ---
 
 # Milvus Expert Mode

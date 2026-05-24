@@ -1,9 +1,11 @@
 ---
 name: brand-guidelines-community
-description: "To access Anthropic's official brand identity and style resources, use this skill."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: "To access Anthropic's official brand identity and style resources, use this skill. Use when you need help with brand guidelines community."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Anthropic Brand Styling

@@ -1,11 +1,13 @@
 ---
 name: zustand-expert
-description: Expert in Zustand state management with TypeScript, middleware, devtools, and best practices for React applications
-risk: unknown
-source: community
-kind: mode
-category: frontend
-tags: [zustand, state-management, react, typescript, frontend]
+description: Expert in Zustand state management with TypeScript, middleware, devtools, and best practices for React applications. Use when you need deep expertise in zustand.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frontend
+  tags: [zustand, state-management, react, typescript, frontend]
 ---
 
 # Zustand Expert Mode

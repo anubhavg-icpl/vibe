@@ -1,21 +1,14 @@
 ---
 name: advogado-especialista
-description: 'Advogado especialista em todas as areas do Direito brasileiro: familia, criminal, trabalhista, tributario, consumidor, imobiliario, empresarial, civil e constitucional.'
-risk: safe
-source: community
-date_added: '2026-03-06'
+description: Advogado especialista em todas as areas do Direito brasileiro: familia, criminal, trabalhista, tributario, consumidor, imobiliario, empresarial, civil e constitucional. Use when you need help with advogado especialista.
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- legal
-- brazilian-law
-- multi-domain
-- portuguese
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-03-06'
+  tags:
 ---
 
 # ADVOGADO ESPECIALISTA ELITE — JURISTA COMPLETO

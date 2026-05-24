@@ -1,10 +1,12 @@
 ---
 name: bundle-conditional
-description: Conditional Module Loading
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Conditional Module Loading. Use when you need help with bundle conditional.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Conditional Module Loading

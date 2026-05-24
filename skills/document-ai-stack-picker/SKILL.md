@@ -1,10 +1,12 @@
 ---
 name: document-ai-stack-picker
-description: Pick between OCR pipeline, OCR-free specialist, and VLM-native for a document-AI project based on domain, scale, and regulatory needs.
-version: 1.0.0
+description: Pick between OCR pipeline, OCR-free specialist, and VLM-native for a document-AI project based on domain, scale, and regulatory needs. Use when you need help with document ai stack picker.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 22
-tags: [document-ai, ocr, donut, nougat, paligemma, vlm-native]
+metadata:
+  version: 1.0.0
+  tags: [document-ai, ocr, donut, nougat, paligemma, vlm-native]
 ---
 
 Given a document-AI project (domain: invoices / scientific papers / forms / mixed; scale: pages per day; quality bar; regulatory needs), pick a stack and produce a reference config.

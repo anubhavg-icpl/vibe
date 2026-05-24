@@ -1,10 +1,12 @@
 ---
 name: welfare-assessment
-description: Apply Anthropic's four-step welfare precautionary assessment to a deployment decision.
-version: 1.0.0
+description: "Apply Anthropic's four-step welfare precautionary assessment to a deployment decision. Use when you need help with welfare assessment."
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 19
-tags: [model-welfare, moral-uncertainty, low-regret, anthropic]
+metadata:
+  version: 1.0.0
+  tags: [model-welfare, moral-uncertainty, low-regret, anthropic]
 ---
 
 Given a deployment decision or proposed welfare intervention, apply the four-step precautionary assessment.

@@ -1,11 +1,13 @@
 ---
 name: tauri-project-architect
-description: Production-ready Tauri desktop app structure with Rust backend and web frontend
-risk: unknown
-source: community
-kind: mode
-category: project-structure
-tags: [tauri, rust, desktop, typescript, project-structure]
+description: Production-ready Tauri desktop app structure with Rust backend and web frontend. Use when scaffolding, structuring, or architecting tauri projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
+  tags: [tauri, rust, desktop, typescript, project-structure]
 ---
 
 # Tauri Project Architect Mode

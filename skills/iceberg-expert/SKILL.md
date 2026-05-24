@@ -1,11 +1,13 @@
 ---
 name: iceberg-expert
-description: Expert in Apache Iceberg table format, REST catalogs, partitioning, and snapshots
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [iceberg, lakehouse, parquet, table-format, rest-catalog, snapshots]
+description: Expert in Apache Iceberg table format, REST catalogs, partitioning, and snapshots. Use when working with iceberg for data processing, streaming, or analytics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [iceberg, lakehouse, parquet, table-format, rest-catalog, snapshots]
 ---
 
 # Apache Iceberg Expert Mode

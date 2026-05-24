@@ -1,9 +1,11 @@
 ---
 name: database-design
-description: "Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases. Use when building UI with database design language and visual style.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Database Design

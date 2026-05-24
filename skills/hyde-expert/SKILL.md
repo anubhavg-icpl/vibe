@@ -1,11 +1,13 @@
 ---
 name: hyde-expert
-description: Hypothetical Document Embeddings — generate a fake answer, embed that, then retrieve
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, retrieval, hyde, query-transformation, embeddings]
+description: Hypothetical Document Embeddings — generate a fake answer, embed that, then retrieve. Use when building or optimizing retrieval-augmented generation pipelines with hyde.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, retrieval, hyde, query-transformation, embeddings]
 ---
 
 # HyDE Expert Mode

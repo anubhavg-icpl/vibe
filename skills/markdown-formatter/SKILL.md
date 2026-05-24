@@ -1,10 +1,12 @@
 ---
 name: markdown-formatter
-description: markdown-formatter
-risk: unknown
-source: community
-kind: mode
-category: output-formats
+description: markdown-formatter. Use when you need help with markdown formatter.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: output-formats
 ---
 
 # Markdown Formatter Mode

@@ -1,9 +1,11 @@
 ---
 name: ffuf-claude-skill
-description: "Web fuzzing with ffuf"
-risk: safe
-source: "https://github.com/jthack/ffuf_claude_skill"
-date_added: "2026-02-27"
+description: Web fuzzing with ffuf. Use when you need help with ffuf claude skill.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/jthack/ffuf_claude_skill"
+  date_added: "2026-02-27"
 ---
 
 # Ffuf Claude Skill

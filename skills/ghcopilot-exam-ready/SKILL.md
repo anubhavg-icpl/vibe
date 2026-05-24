@@ -1,10 +1,11 @@
 ---
 name: exam-ready
-description: >
+description: >. Use when you need help with exam ready.
   Activate this skill when a student provides study material (PDF or pasted notes)
   and a syllabus, and wants to prepare for an exam. Extracts key definitions,
   points, keywords, diagrams, exam-ready sentences, and practice questions
   strictly from the provided material.
+license: CC-BY-NC-SA-4.0
 ---
 
 # exam-ready

@@ -1,11 +1,13 @@
 ---
 name: pinecone-expert
-description: Deep expertise in Pinecone serverless — namespaces, sparse-dense indexes, integrated inference (embed + rerank), and dedicated read nodes
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, pinecone, serverless, hybrid-search, integrated-inference, namespaces]
+description: Deep expertise in Pinecone serverless — namespaces, sparse-dense indexes, integrated inference (embed + rerank), and dedicated read nodes. Use when implementing vector search, embeddings storage, or similarity queries with pinecone.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, pinecone, serverless, hybrid-search, integrated-inference, namespaces]
 ---
 
 # Pinecone Expert Mode

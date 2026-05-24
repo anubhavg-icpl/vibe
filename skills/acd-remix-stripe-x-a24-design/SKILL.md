@@ -1,11 +1,13 @@
 ---
 name: acd-remix-stripe-x-a24-design
-description: Remix. Stripe's grid + A24's poster boldness. For pitch decks, investor sites, premium fintech that needs to feel less corporate.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, remix, claude-design]
+description: "Remix. Stripe's grid + A24's poster boldness. For pitch decks, investor sites, premium fintech that needs to feel less corporate. Use when building UI components, applying design tokens, or implementing visual styles for remix stripe x a24."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, remix, claude-design]
 ---
 
 # Stripe × A24 — Fintech Pitch With Personality Design Mode

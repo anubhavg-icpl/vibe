@@ -1,7 +1,8 @@
 ---
 name: leadoku-automation
-description: "Automate Leadoku tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Leadoku tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with leadoku automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

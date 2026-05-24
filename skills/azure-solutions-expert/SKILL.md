@@ -1,10 +1,12 @@
 ---
 name: azure-solutions-expert
-description: azure-solutions-expert
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+description: azure-solutions-expert. Use when architecting or managing cloud infrastructure with azure solutions.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # Azure Solutions Expert Mode

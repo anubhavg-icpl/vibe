@@ -1,7 +1,8 @@
 ---
 name: felt-automation
-description: "Automate Felt tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Felt tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with felt automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

@@ -1,10 +1,12 @@
 ---
 name: oauth-scope-planner
-description: Design the OAuth 2.1 scope set, pinning rules, and step-up policy for a remote MCP server.
-version: 1.0.0
+description: Design the OAuth 2.1 scope set, pinning rules, and step-up policy for a remote MCP server. Use when you need help with oauth scope planner.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 16
-tags: [oauth, pkce, resource-indicators, step-up, sep-835]
+metadata:
+  version: 1.0.0
+  tags: [oauth, pkce, resource-indicators, step-up, sep-835]
 ---
 
 Given a remote MCP server with a tool list, design the authorization model.

@@ -1,11 +1,13 @@
 ---
 name: mutation-testing
-description: Expert in mutation testing for evaluating test suite quality with mutant generation and analysis
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [mutation-testing, test-quality, pitest, stryker, mutmut, code-coverage]
+description: Expert in mutation testing for evaluating test suite quality with mutant generation and analysis. Use when writing, running, or improving tests with mutation testing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [mutation-testing, test-quality, pitest, stryker, mutmut, code-coverage]
 ---
 
 # Mutation Testing Expert Mode

@@ -1,10 +1,12 @@
 ---
 name: re-designer
-description: Design a relation extraction pipeline with provenance and canonicalization.
-version: 1.0.0
+description: Design a relation extraction pipeline with provenance and canonicalization. Use when you need help with re designer.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 26
-tags: [nlp, relation-extraction, knowledge-graph]
+metadata:
+  version: 1.0.0
+  tags: [nlp, relation-extraction, knowledge-graph]
 ---
 
 Given a corpus (domain, language, volume) and downstream use (KG-RAG, analytics, compliance), output:

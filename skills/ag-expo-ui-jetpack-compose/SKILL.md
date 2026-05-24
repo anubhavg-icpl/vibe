@@ -1,8 +1,10 @@
 ---
 name: expo-ui-jetpack-compose
-description: expo-ui-jetpack-compose
-risk: unknown
-source: community
+description: expo-ui-jetpack-compose. Use when you need help with expo ui jetpack compose.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 ---

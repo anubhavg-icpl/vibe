@@ -1,6 +1,7 @@
 ---
 name: what-context-needed
-description: 'Ask Copilot what files it needs to see before answering a question'
+description: Ask Copilot what files it needs to see before answering a question. Use when you need help with what context needed.
+license: CC-BY-NC-SA-4.0
 ---
 
 # What Context Do You Need?

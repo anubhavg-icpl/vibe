@@ -1,11 +1,13 @@
 ---
 name: pydantic-ai-expert
-description: Build type-safe, validated LLM agents with Pydantic AI's RunContext, structured outputs, and dependency injection
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [pydantic-ai, agents, structured-outputs, type-safety, python, validation]
+description: "Build type-safe, validated LLM agents with Pydantic AI's RunContext, structured outputs, and dependency injection. Use when building AI applications with pydantic ai."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [pydantic-ai, agents, structured-outputs, type-safety, python, validation]
 ---
 
 # Pydantic AI Expert Mode

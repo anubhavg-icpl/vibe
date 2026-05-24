@@ -1,10 +1,12 @@
 ---
 name: supervisor-designer
-description: Design a supervisor/orchestrator-worker system for a given research-style query, specifying lead prompt, worker roles, decomposition rules, and synthesis template.
-version: 1.0.0
+description: Design a supervisor/orchestrator-worker system for a given research-style query, specifying lead prompt, worker roles, decomposition rules, and synthesis template. Use when you need help with supervisor designer.
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 05
-tags: [multi-agent, supervisor, orchestrator, anthropic-research, langgraph]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, supervisor, orchestrator, anthropic-research, langgraph]
 ---
 
 Given a user query that benefits from parallel subagent research, produce a supervisor-pattern design ready to wire into any framework (LangGraph, OpenAI Agents SDK, CrewAI Hierarchical).

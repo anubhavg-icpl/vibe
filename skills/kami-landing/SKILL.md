@@ -1,12 +1,13 @@
 ---
 name: kami-landing
-description: >
+description: >. Use when you need help with kami landing.
   Produce a print-grade single-page kami (紙 / 纸) document — warm
   parchment canvas, ink-blue accent, serif at one weight, no italic,
   no cool grays. The output reads like a professional white paper or
   studio one-pager, not an app UI. Multilingual by design (EN ·
   zh-CN · ja). One self-contained HTML file, zero dependencies.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - kami
   - 紙
   - 纸
@@ -17,7 +18,7 @@ triggers:
   - editorial document
   - print-grade page
   - kami landing
-od:
+od: 
   category: brand-page
   surface: web
   mode: prototype
@@ -37,7 +38,7 @@ od:
     requires:
       - typographic-rhythm
       - pixel-discipline
-inputs:
+inputs: 
   - id: brand
     label: Brand identity
     description: Name, tagline, location, edition / version, primary URL.
@@ -52,7 +53,7 @@ inputs:
     label: 3-5 numbered chapters (title + lede + body)
   - id: footer
     label: License · year · contact + 3-column site index
-parameters:
+parameters: 
   output_format:
     type: enum
     values: [standalone-html]
@@ -66,10 +67,10 @@ parameters:
       zh-CN uses TsangerJinKai02 / Source Han Serif, ja uses
       YuMincho. Mixed-script content is allowed inline; the browser
       resolves per-glyph fallback automatically.
-outputs:
+outputs: 
   - path: <out>/index.html
     description: Self-contained HTML, kami CSS inlined, zero JS, zero external dependencies beyond Google Fonts.
-capabilities_required:
+capabilities_required: 
   - file-write
 example_prompt: |
   Build me a kami-style one-pager for "Lumen Field", an indie studio

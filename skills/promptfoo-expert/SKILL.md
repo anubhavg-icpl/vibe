@@ -1,11 +1,13 @@
 ---
 name: promptfoo-expert
-description: Promptfoo CLI for systematic prompt testing, model comparison, and red-team plugins
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, promptfoo, prompt-testing, red-team, ci]
+description: Promptfoo CLI for systematic prompt testing, model comparison, and red-team plugins. Use when evaluating, monitoring, or observing LLM performance with promptfoo.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, promptfoo, prompt-testing, red-team, ci]
 ---
 
 # Promptfoo Expert Mode

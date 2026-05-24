@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-playwright-typescript
-description: Use when the user needs guidance on playwright-typescript. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, playwright-typescript]
----
-
----
-description: 'Playwright test generation instructions'
-applyTo: '**'
+description: "Use when the user needs guidance on playwright-typescript. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, playwright-typescript]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 ## Test Writing Guidelines

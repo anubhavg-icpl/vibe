@@ -1,11 +1,13 @@
 ---
 name: zig-expert
-description: Expert Zig development for systems programming with safety and performance
-risk: unknown
-source: community
-kind: mode
-category: languages
-tags: [zig, systems, performance, memory-safety, comptime]
+description: Expert Zig development for systems programming with safety and performance. Use when writing, reviewing, or refactoring zig code.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
+  tags: [zig, systems, performance, memory-safety, comptime]
 ---
 
 # Zig Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: paper-design
-description: Expert in the Paper design system - Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, retro]
+description: Expert in the Paper design system - Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities. Use when building UI components, applying design tokens, or implementing visual styles for paper.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, retro]
 ---
 
 # Paper Design System Mode

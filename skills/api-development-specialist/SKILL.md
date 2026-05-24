@@ -1,10 +1,12 @@
 ---
 name: api-development-specialist
-description: API development specialist mode - Design, implement, and document RESTful and GraphQL APIs with best practices for authentication, validation, error handling, and performance optimization.
-risk: unknown
-source: community
-kind: mode
-category: development
+description: API development specialist mode - Design, implement, and document RESTful and GraphQL APIs with best practices for authentication, validation, error handling, and performance optimization. Use when you need specialized api development knowledge.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: development
 ---
 
 # API Development Specialist Mode

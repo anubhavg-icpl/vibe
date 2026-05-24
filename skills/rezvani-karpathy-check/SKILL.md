@@ -1,6 +1,7 @@
 ---
 name: karpathy-check
-description: Run Karpathy's 4-principle review on staged changes or the last commit. Checks complexity, diff noise, hidden assumptions, and goal verification. Usage /karpathy-check [--last-commit]
+description: "Run Karpathy's 4-principle review on staged changes or the last commit. Checks complexity, diff noise, hidden assumptions, and goal verification. Usage /karpathy-check [--last-commit]. Use when you need help with karpathy check."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /karpathy-check

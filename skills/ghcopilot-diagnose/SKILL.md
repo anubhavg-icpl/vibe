@@ -1,6 +1,7 @@
 ---
 name: diagnose
-description: "Perform a systematic diagnostic scan of an AI workflow across 5 quality dimensions — prompt quality, context efficiency, tool health, architecture fitness, and safety — producing a scored report with prioritized remediation actions."
+description: Perform a systematic diagnostic scan of an AI workflow across 5 quality dimensions — prompt quality, context efficiency, tool health, architecture fitness, and safety — producing a scored report with prioritized remediation actions. Use when you need help with diagnose.
+license: CC-BY-NC-SA-4.0
 ---
 
 # AI Workflow Diagnostics

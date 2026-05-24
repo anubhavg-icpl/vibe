@@ -1,6 +1,7 @@
 ---
 name: creating-oracle-to-postgres-migration-integration-tests
 description: 'Creates integration test cases for .NET data access artifacts during Oracle-to-PostgreSQL database migrations. Generates DB-agnostic xUnit tests with deterministic seed data that validate behavior consistency across both database systems. Use when creating integration tests for a migrated project, generating test coverage for data access layers, or writing Oracle-to-PostgreSQL migration validation tests.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Creating Integration Tests for Oracle-to-PostgreSQL Migration

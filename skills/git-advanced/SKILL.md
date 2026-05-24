@@ -1,6 +1,7 @@
 ---
 name: git-advanced
-description: Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques
+description: Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques. Use when you need help with git advanced.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Git Advanced

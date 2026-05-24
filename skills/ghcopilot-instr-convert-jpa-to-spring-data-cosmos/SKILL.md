@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-convert-jpa-to-spring-data-cosmos
-description: Use when the user needs guidance on convert-jpa-to-spring-data-cosmos. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, convert-jpa-to-spring-data-cosmos]
----
-
----
-description: 'Step-by-step guide for converting Spring Boot JPA applications to use Azure Cosmos DB with Spring Data Cosmos'
-applyTo: '**/*.java,**/pom.xml,**/build.gradle,**/application*.properties'
+description: "Use when the user needs guidance on convert-jpa-to-spring-data-cosmos. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, convert-jpa-to-spring-data-cosmos]
+  applyTo: "**/*.java,**/pom.xml,**/build.gradle,**/application*.properties"
+  source: "awesome-copilot"
 ---
 
 # Convert Spring JPA project to Spring Data Cosmos

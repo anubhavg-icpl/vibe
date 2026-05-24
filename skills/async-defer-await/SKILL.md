@@ -1,10 +1,12 @@
 ---
 name: async-defer-await
-description: Defer Await Until Needed
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Defer Await Until Needed. Use when you need help with async defer await.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Defer Await Until Needed

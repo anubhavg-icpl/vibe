@@ -1,19 +1,20 @@
 ---
 name: swiss-creative-mode-template
-description: |
+description: |. Use when you need help with swiss creative mode template.
   Swiss-inspired creative-mode presentation template skill with bold editorial
   typography, high-contrast geometric cards, interactive slide navigation,
   theme switching, hotspot overlays, and palette choreography in a single-file
   HTML artifact. Use when users ask for a premium presentation-style landing,
   a Swiss/brutalist deck look, or a creative launch page with rich interactions.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "swiss creative mode template"
   - "editorial presentation template"
   - "brutalist deck style html"
   - "creative mode deck"
   - "瑞士风演示模板"
   - "高级设计语言模板"
-od:
+od: 
   mode: template
   surface: video
   type: hyperframes

@@ -1,10 +1,12 @@
 ---
 name: documentation-generator
-description: documentation-generator
-risk: unknown
-source: community
-kind: mode
-category: output-formats
+description: documentation-generator. Use when you need help with documentation generator.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: output-formats
 ---
 
 # Documentation Generator Mode

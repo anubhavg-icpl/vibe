@@ -1,11 +1,13 @@
 ---
 name: webflow-design
-description: Expert in the Webflow design system - Visual web builder. Blue-accented, polished marketing site aesthetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, design]
+description: Expert in the Webflow design system - Visual web builder. Blue-accented, polished marketing site aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for webflow.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, design]
 ---
 
 # Webflow Design System Mode

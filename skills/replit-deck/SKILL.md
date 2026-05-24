@@ -1,13 +1,14 @@
 ---
 name: replit-deck
-description: |
+description: |. Use when you need help with replit deck.
   Single-file horizontal-swipe HTML deck in the style of Replit Slides's
   landing-page template gallery. Eight distinct themes (helix, holm, vance,
   bevel, world-dark, world-mint, atlas, bluehouse) — each a complete visual
   system (palette + type + accent) captured from replit.com/slides. Pick one
   theme, do not mix. For pitch decks, board reports, brand memos, campaign
   reveals — when the user explicitly wants "Replit Slides style".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "replit deck"
   - "replit slides"
   - "replit 风格 ppt"
@@ -17,7 +18,7 @@ triggers:
   - "atlas chapter"
   - "bluehouse"
   - "bevel campaign"
-od:
+od: 
   mode: deck
   scenario: product
   preview:

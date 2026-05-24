@@ -1,7 +1,8 @@
 ---
 name: better-stack-automation
-description: "Automate Better Stack tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Better Stack tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with better stack automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

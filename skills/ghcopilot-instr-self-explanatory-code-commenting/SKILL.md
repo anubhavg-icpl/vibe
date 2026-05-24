@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-self-explanatory-code-commenting
-description: Use when the user needs guidance on self-explanatory-code-commenting. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, self-explanatory-code-commenting]
----
-
----
-description: 'Guidelines for GitHub Copilot to write comments to achieve self-explanatory code with less comments. Examples are in JavaScript but it should work on any language that has comments.'
-applyTo: '**'
+description: Guidelines for GitHub Copilot to write comments to achieve self-explanatory code with less comments. Examples are in JavaScript but it should work on any language that has comments. Use when writing or reviewing self explanatory code commenting code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, self-explanatory-code-commenting]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Self-explanatory Code Commenting Instructions

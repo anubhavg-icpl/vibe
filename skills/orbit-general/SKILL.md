@@ -1,6 +1,6 @@
 ---
 name: orbit-general
-description: |
+description: |. Use when you need help with orbit general.
   Open Orbit briefing skill — selected by the Orbit pipeline when the
   user has two or more connectors connected. Pulls the past 24 hours of
   activity from every authenticated connector (GitHub, Linear, Notion,
@@ -12,14 +12,15 @@ description: |
   This skill should not be triggered manually — it is invoked by
   Orbit's daily-digest scheduler against the user's live connector
   data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "orbit"
   - "daily digest"
   - "morning briefing"
   - "早安简报"
   - "每日简报"
   - "跨工具汇总"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

@@ -1,13 +1,11 @@
 ---
 name: startup-business-analyst-business-case
-description: 'Generate comprehensive investor-ready business case document with
-
-  market, solution, financials, and strategy
-
-  '
-risk: unknown
-source: community
-date_added: '2026-02-27'
+description: "'Generate comprehensive investor-ready business case document with. Use when you need help with startup business analyst business case."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Business Case Generator

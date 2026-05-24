@@ -1,10 +1,12 @@
 ---
 name: skill-classification-baseline
-description: Establish a strong classification baseline before reaching for complex models
-version: 1.0.0
+description: Establish a strong classification baseline before reaching for complex models. Use when you need help with skill classification baseline.
+license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 3
-tags: [classification, logistic-regression, baseline, preprocessing]
+metadata:
+  version: 1.0.0
+  tags: [classification, logistic-regression, baseline, preprocessing]
 ---
 
 # Classification Baseline Guide

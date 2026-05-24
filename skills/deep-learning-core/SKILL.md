@@ -1,10 +1,12 @@
 ---
 name: deep-learning-core
-description: Expert in neural networks from first principles, including building a mini framework, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+description: Expert in neural networks from first principles, including building a mini framework, from the AI Engineering from Scratch curriculum. Use when you need help with deep learning core.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # Deep Learning Core Mode

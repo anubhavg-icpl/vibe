@@ -1,10 +1,12 @@
 ---
 name: mcp-server-scaffolder
-description: Scaffold a domain-specific MCP server with the right tools/resources/prompts split and SDK graduation path.
-version: 1.0.0
+description: Scaffold a domain-specific MCP server with the right tools/resources/prompts split and SDK graduation path. Use when you need help with mcp server scaffolder.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 07
-tags: [mcp, server, fastmcp, scaffold]
+metadata:
+  version: 1.0.0
+  tags: [mcp, server, fastmcp, scaffold]
 ---
 
 Given a domain (notes, tickets, files, database, whatever), produce an MCP server plan: which capabilities to expose as tools, which as resources, which as prompts, plus a graduation path to the Python or TypeScript SDK.

@@ -1,11 +1,13 @@
 ---
 name: openai-agents-sdk-expert
-description: Build production agents with handoffs, guardrails, and tracing using the OpenAI Agents SDK
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [openai, agents, swarm, handoffs, guardrails, tracing, python]
+description: Build production agents with handoffs, guardrails, and tracing using the OpenAI Agents SDK. Use when building AI applications with openai agents sdk.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [openai, agents, swarm, handoffs, guardrails, tracing, python]
 ---
 
 # OpenAI Agents SDK Expert Mode

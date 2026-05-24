@@ -1,5 +1,6 @@
 ---
 description: Frontend engineering review — walks the 7 Matt Pocock forcing questions (device, LCP target, rendering, bundle budget, SEO vs auth, design system, WCAG), picks the framework + rendering profile, forks into specialists (a11y-audit, performance-profiler, epic-design). Invokes the cs-frontend-engineer agent with context fork.
+license: CC-BY-NC-SA-4.0
 argument-hint: "<problem or surface to review>"
 ---
 

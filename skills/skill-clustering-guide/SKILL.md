@@ -1,10 +1,12 @@
 ---
 name: skill-clustering-guide
-description: Choose the right clustering algorithm based on data shape, noise, and constraints
-version: 1.0.0
+description: Choose the right clustering algorithm based on data shape, noise, and constraints. Use when you need help with skill clustering guide.
+license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 7
-tags: [clustering, k-means, dbscan, hierarchical, gmm, unsupervised]
+metadata:
+  version: 1.0.0
+  tags: [clustering, k-means, dbscan, hierarchical, gmm, unsupervised]
 ---
 
 # Clustering Algorithm Selection Guide

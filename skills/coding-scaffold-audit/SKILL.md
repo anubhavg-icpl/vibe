@@ -1,10 +1,12 @@
 ---
 name: coding-scaffold-audit
-description: Audit a proposed coding-agent scaffold (retrieval, verifier loop, sandbox, benchmark fit) before adopting it for production code changes.
-version: 1.0.0
+description: Audit a proposed coding-agent scaffold (retrieval, verifier loop, sandbox, benchmark fit) before adopting it for production code changes. Use when you need help with coding scaffold audit.
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 9
-tags: [coding-agent, scaffolding, swe-bench, codeact, openhands]
+metadata:
+  version: 1.0.0
+  tags: [coding-agent, scaffolding, swe-bench, codeact, openhands]
 ---
 
 Given a proposed coding-agent scaffold (SWE-agent, OpenHands, Aider, Cline, Devin, Claude Code, or an in-house build), score it across four axes and flag where benchmark numbers will overstate production quality.

@@ -1,10 +1,12 @@
 ---
 name: queue-stack-bloom
-description: queue-stack-bloom
-risk: unknown
-source: community
-kind: mode
-category: map-types
+description: queue-stack-bloom. Use when you need help with queue stack bloom.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: map-types
 ---
 
 # Queue, Stack, and Bloom Filter Maps

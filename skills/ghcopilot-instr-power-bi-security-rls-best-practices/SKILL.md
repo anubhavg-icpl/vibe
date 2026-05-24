@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-bi-security-rls-best-practices
-description: Use when the user needs guidance on power-bi-security-rls-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-bi-security-rls-best-practices]
----
-
----
-description: 'Comprehensive Power BI Row-Level Security (RLS) and advanced security patterns implementation guide with dynamic security, best practices, and governance strategies.'
-applyTo: '**/*.{pbix,dax,md,txt,json,csharp,powershell}'
+description: Comprehensive Power BI Row-Level Security (RLS) and advanced security patterns implementation guide with dynamic security, best practices, and governance strategies. Use when writing or reviewing power bi security rls best practices code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-bi-security-rls-best-practices]
+  applyTo: "**/*.{pbix,dax,md,txt,json,csharp,powershell}"
+  source: "awesome-copilot"
 ---
 
 # Power BI Security and Row-Level Security Best Practices

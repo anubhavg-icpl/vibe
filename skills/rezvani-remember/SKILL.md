@@ -1,6 +1,7 @@
 ---
 name: "remember"
 description: "Explicitly save important knowledge to auto-memory with timestamp and context. Use when a discovery is too important to rely on auto-capture."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /si:remember — Save Knowledge Explicitly

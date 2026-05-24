@@ -1,14 +1,15 @@
 ---
 name: favicon
 argument-hint: [path to source image]
-description: Generate favicons from a source image
+description: Generate favicons from a source image. Use when you need help with favicon.
+license: CC-BY-NC-SA-4.0
 allowed-tools: Bash(magick *), Bash(which *), Bash(cp *), Bash(mkdir *)
 context: fork
-risk: unknown
-source: community
 metadata:
   author: Shpigford
   version: "1.0"
+  risk: unknown
+  source: community
 ---
 
 Generate a complete set of favicons from the source image at `$1` and update the project's HTML with the appropriate link tags.

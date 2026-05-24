@@ -1,9 +1,11 @@
 ---
 name: executing-plans
 description: "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Executing Plans

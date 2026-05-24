@@ -1,13 +1,15 @@
 ---
 name: sveltekit
-description: "Build full-stack web applications with SvelteKit — file-based routing, SSR, SSG, API routes, and form actions in one framework."
-category: frontend
-risk: safe
-source: community
-date_added: "2026-03-18"
+description: Build full-stack web applications with SvelteKit — file-based routing, SSR, SSG, API routes, and form actions in one framework. Use when you need help with sveltekit.
+license: CC-BY-NC-SA-4.0
 author: suhaibjanjua
-tags: [svelte, sveltekit, fullstack, ssr, ssg, typescript]
 tools: [claude, cursor, gemini]
+metadata:
+  category: frontend
+  risk: safe
+  source: community
+  date_added: "2026-03-18"
+  tags: [svelte, sveltekit, fullstack, ssr, ssg, typescript]
 ---
 
 # SvelteKit Full-Stack Development

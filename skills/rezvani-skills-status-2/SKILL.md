@@ -1,6 +1,7 @@
 ---
 name: "status"
-description: "Memory health dashboard showing line counts, topic files, capacity, stale entries, and recommendations."
+description: Memory health dashboard showing line counts, topic files, capacity, stale entries, and recommendations. Use when you need help with status.
+license: CC-BY-NC-SA-4.0
 ---
 
 # /si:status — Memory Health Dashboard

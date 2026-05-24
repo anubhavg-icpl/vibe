@@ -1,10 +1,12 @@
 ---
 name: debate
-description: Scaffold a multi-agent debate with N debaters, R rounds, configurable topology (full mesh, star, ring), and a convergence rule.
-version: 1.0.0
+description: Scaffold a multi-agent debate with N debaters, R rounds, configurable topology (full mesh, star, ring), and a convergence rule. Use when you need help with debate.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 25
-tags: [debate, multi-agent, society-of-minds, sparse-topology]
+metadata:
+  version: 1.0.0
+  tags: [debate, multi-agent, society-of-minds, sparse-topology]
 ---
 
 Given a question class and accuracy target, scaffold a debate protocol.

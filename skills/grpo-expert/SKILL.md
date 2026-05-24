@@ -1,11 +1,13 @@
 ---
 name: grpo-expert
-description: Group Relative Policy Optimization — DeepSeek-R1 style reasoning RL with verifiable rewards
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [grpo, rl, reasoning, deepseek, training, alignment]
+description: Group Relative Policy Optimization — DeepSeek-R1 style reasoning RL with verifiable rewards. Use when fine-tuning, training, or adapting language models with grpo techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [grpo, rl, reasoning, deepseek, training, alignment]
 ---
 
 # GRPO Expert Mode

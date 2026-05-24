@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-a11y
-description: Use when the user needs guidance on a11y. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, a11y]
----
-
----
-applyTo: '**'
-description: 'Comprehensive web accessibility standards based on WCAG 2.2 AA, with 38+ anti-patterns, legal enforcement context (EAA, ADA Title II), WAI-ARIA patterns, and framework-specific fixes for modern web frameworks and libraries.'
+description: Comprehensive web accessibility standards based on WCAG 2.2 AA, with 38+ anti-patterns, legal enforcement context (EAA, ADA Title II), WAI-ARIA patterns, and framework-specific fixes for modern web frameworks and libraries. Use when writing or reviewing a11y code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, a11y]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Accessibility Standards

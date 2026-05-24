@@ -1,6 +1,7 @@
 ---
 name: add-educational-comments
-description: 'Add educational comments to the file specified, or prompt asking for file to comment if one is not provided.'
+description: Add educational comments to the file specified, or prompt asking for file to comment if one is not provided. Use when you need help with add educational comments.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Add Educational Comments

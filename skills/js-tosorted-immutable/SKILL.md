@@ -1,10 +1,12 @@
 ---
 name: js-tosorted-immutable
-description: Use toSorted() Instead of sort() for Immutability
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Use toSorted() Instead of sort() for Immutability. Use when you need help with js tosorted immutable.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Use toSorted() Instead of sort() for Immutability

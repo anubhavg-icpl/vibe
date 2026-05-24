@@ -1,11 +1,13 @@
 ---
 name: mythos-uac-bypass-creative
-description: Adaptive Windows UAC bypass — when the primary technique fails, pivot to a known alternate
-risk: unknown
-source: community
-kind: mode
-category: offense
-tags: [mythos, red-team, defensive-purpose, windows, uac, privesc, adaptive, t1548-002]
+description: Adaptive Windows UAC bypass — when the primary technique fails, pivot to a known alternate. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving uac bypass creative.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: offense
+  tags: [mythos, red-team, defensive-purpose, windows, uac, privesc, adaptive, t1548-002]
 ---
 
 # Mythos UAC Bypass Creative Mode

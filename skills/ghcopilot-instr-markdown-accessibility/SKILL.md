@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-markdown-accessibility
-description: Use when the user needs guidance on markdown-accessibility. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, markdown-accessibility]
----
-
----
-description: 'Markdown accessibility guidelines based on GitHub''s 5 best practices for inclusive documentation'
-applyTo: '**/*.md'
+description: "Use when the user needs guidance on markdown-accessibility. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, markdown-accessibility]
+  applyTo: "**/*.md"
+  source: "awesome-copilot"
 ---
 
 # Markdown Accessibility Review Guidelines

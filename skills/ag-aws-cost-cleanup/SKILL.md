@@ -1,9 +1,11 @@
 ---
 name: aws-cost-cleanup
-description: "Automated cleanup of unused AWS resources to reduce costs"
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Automated cleanup of unused AWS resources to reduce costs. Use when you need help with aws cost cleanup.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # AWS Cost Cleanup

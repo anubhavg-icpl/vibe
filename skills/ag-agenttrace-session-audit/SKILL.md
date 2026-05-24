@@ -1,17 +1,18 @@
 ---
 name: agenttrace-session-audit
-description: "Audit local AI coding-agent sessions with agenttrace for cost, tool failures, latency, anomalies, health, diffs, and CI gates."
-category: development
-risk: safe
-source: community
+description: Audit local AI coding-agent sessions with agenttrace for cost, tool failures, latency, anomalies, health, diffs, and CI gates. Use when you need help with agenttrace session audit.
 source_repo: luoyuctl/agenttrace
 source_type: community
-date_added: "2026-05-10"
 author: luoyuctl
-tags: [ai-coding, observability, cost-tracking, session-analysis]
 tools: [claude, cursor, gemini, codex-cli]
 license: "MIT"
 license_source: "https://github.com/luoyuctl/agenttrace/blob/master/LICENSE"
+metadata:
+  category: development
+  risk: safe
+  source: community
+  date_added: "2026-05-10"
+  tags: [ai-coding, observability, cost-tracking, session-analysis]
 ---
 
 # agenttrace Session Audit

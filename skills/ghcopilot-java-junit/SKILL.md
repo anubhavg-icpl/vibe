@@ -1,6 +1,7 @@
 ---
 name: java-junit
-description: 'Get best practices for JUnit 5 unit testing, including data-driven tests'
+description: Get best practices for JUnit 5 unit testing, including data-driven tests. Use when you need help with java junit.
+license: CC-BY-NC-SA-4.0
 ---
 
 # JUnit 5+ Best Practices

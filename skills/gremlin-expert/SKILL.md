@@ -1,11 +1,13 @@
 ---
 name: gremlin-expert
-description: Expert in Gremlin - Enterprise Chaos Engineering as a Service platform
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [gremlin, chaos-engineering, fault-injection, resilience, reliability, failure-as-a-service]
+description: Expert in Gremlin - Enterprise Chaos Engineering as a Service platform. Use when writing, running, or improving tests with gremlin.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [gremlin, chaos-engineering, fault-injection, resilience, reliability, failure-as-a-service]
 ---
 
 # Gremlin Chaos Engineering Expert Mode

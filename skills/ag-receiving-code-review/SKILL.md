@@ -1,9 +1,11 @@
 ---
 name: receiving-code-review
-description: "Code review requires technical evaluation, not emotional performance."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Code review requires technical evaluation, not emotional performance. Use when you need help with receiving code review.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Code Review Reception

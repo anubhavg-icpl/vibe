@@ -1,7 +1,8 @@
 ---
 name: cs-product-analyst
-description: Product analytics agent for KPI definition, dashboard setup, experiment design, and test result interpretation.
-skills:
+description: Product analytics agent for KPI definition, dashboard setup, experiment design, and test result interpretation. Use when you need help with cs product analyst.
+license: CC-BY-NC-SA-4.0
+skills: 
   - product-team/product-analytics
   - product-team/experiment-designer
 domain: product

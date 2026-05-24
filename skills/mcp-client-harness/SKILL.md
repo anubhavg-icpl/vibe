@@ -1,10 +1,12 @@
 ---
 name: mcp-client-harness
-description: Given a declarative list of MCP servers (name, command, args), scaffold a multi-server client with handshake, namespace merge, and routing.
-version: 1.0.0
+description: Given a declarative list of MCP servers (name, command, args), scaffold a multi-server client with handshake, namespace merge, and routing. Use when you need help with mcp client harness.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 08
-tags: [mcp, client, multi-server, routing, namespace]
+metadata:
+  version: 1.0.0
+  tags: [mcp, client, multi-server, routing, namespace]
 ---
 
 Given a configuration of MCP servers to run, produce a client harness that spawns each, handshakes each, merges their tool lists into one namespace, and routes each call to the owning server.

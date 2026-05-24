@@ -1,10 +1,12 @@
 ---
 name: htmx-hypermedia
-description: Expert in HTMX, hypermedia-driven applications, and modern server-rendered UI patterns
-risk: unknown
-source: community
-kind: mode
-category: frontend
+description: Expert in HTMX, hypermedia-driven applications, and modern server-rendered UI patterns. Use when you need help with htmx hypermedia.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frontend
 ---
 
 # HTMX & Hypermedia Expert Mode

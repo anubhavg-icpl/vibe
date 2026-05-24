@@ -1,11 +1,13 @@
 ---
 name: suno-udio-music-expert
-description: AI music gen patterns - Suno, Udio, Stable Audio, MusicGen, ACE-Step, YuE
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, audio, music, suno, udio, musicgen, stable-audio]
+description: AI music gen patterns - Suno, Udio, Stable Audio, MusicGen, ACE-Step, YuE. Use when working with multimodal AI (images, audio, video) using suno udio music.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, audio, music, suno, udio, musicgen, stable-audio]
 ---
 
 # AI Music Generation Expert Mode

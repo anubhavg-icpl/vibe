@@ -1,10 +1,12 @@
 ---
 name: codec-picker
-description: Pick a neural audio codec (EnCodec / DAC / SNAC / Mimi) for a given generative or compression task.
-version: 1.0.0
+description: Pick a neural audio codec (EnCodec / DAC / SNAC / Mimi) for a given generative or compression task. Use when you need help with codec picker.
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 13
-tags: [codec, encodec, dac, snac, mimi, rvq, semantic-tokens]
+metadata:
+  version: 1.0.0
+  tags: [codec, encodec, dac, snac, mimi, rvq, semantic-tokens]
 ---
 
 Given the task (generative LM, compression, full-duplex dialogue, music editing, fidelity target), output:

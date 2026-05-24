@@ -1,22 +1,24 @@
 ---
 name: seo-plan
-description: >
+description: >. Use when you need help with seo plan.
   Strategic SEO planning for new or existing websites. Industry-specific
   templates, competitive analysis, content strategy, and implementation
   roadmap. Use when user says "SEO plan", "SEO strategy", "content strategy",
   "site architecture", or "SEO roadmap".
-risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 user-invokable: true
 argument-hint: "[business-type]"
-allowed-tools:
+allowed-tools: 
   - Read
   - Grep
   - Glob
   - Bash
   - WebFetch
   - Write
+metadata:
+  risk: unknown
+  source: "https://github.com/AgriciDaniel/claude-seo"
+  date_added: "2026-03-21"
 ---
 
 # Strategic SEO Planning

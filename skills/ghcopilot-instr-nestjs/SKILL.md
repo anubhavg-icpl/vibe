@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-nestjs
-description: Use when the user needs guidance on nestjs. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, nestjs]
----
-
----
-applyTo: '**/*.ts, **/*.js, **/*.json, **/*.spec.ts, **/*.e2e-spec.ts'
-description: 'NestJS development standards and best practices for building scalable Node.js server-side applications'
+description: "Use when the user needs guidance on nestjs. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, nestjs]
+  applyTo: "**/*.ts, **/*.js, **/*.json, **/*.spec.ts, **/*.e2e-spec.ts"
+  source: "awesome-copilot"
 ---
 
 # NestJS Development Best Practices

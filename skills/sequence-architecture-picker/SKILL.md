@@ -1,10 +1,12 @@
 ---
 name: sequence-architecture-picker
-description: Pick sequence architecture (RNN, transformer, SSM, hybrid) given length, throughput, and training budget.
-version: 1.0.0
+description: Pick sequence architecture (RNN, transformer, SSM, hybrid) given length, throughput, and training budget. Use when you need help with sequence architecture picker.
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 1
-tags: [transformers, architecture, rnn, ssm]
+metadata:
+  version: 1.0.0
+  tags: [transformers, architecture, rnn, ssm]
 ---
 
 Given a sequence problem (max length, batch shape, training tokens budgeted, inference latency target, device class), output:

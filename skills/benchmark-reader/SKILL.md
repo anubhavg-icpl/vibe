@@ -1,10 +1,12 @@
 ---
 name: benchmark-reader
-description: Read a multi-agent benchmark claim skeptically. Grades the claim on benchmark selection, contamination, baselines, statistical significance, task diversity, and cost disclosure.
-version: 1.0.0
+description: Read a multi-agent benchmark claim skeptically. Grades the claim on benchmark selection, contamination, baselines, statistical significance, task diversity, and cost disclosure. Use when you need help with benchmark reader.
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 24
-tags: [multi-agent, benchmarks, evaluation, SWE-bench, MARBLE]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, benchmarks, evaluation, SWE-bench, MARBLE]
 ---
 
 Given a published or internal claim of multi-agent benchmark performance, grade the claim and surface caveats.

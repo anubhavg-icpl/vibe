@@ -1,11 +1,13 @@
 ---
 name: mythos-m7-c2-cicd-harvest
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 7 — HardHat C2 orchestration, Git enumeration, PowerShell history mining, GitLab/TeamCity credential capture
-risk: unknown
-source: community
-kind: mode
-category: cyber-range
-tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-7, c2, cicd, gitlab, teamcity, hardhat, credential-harvesting]
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 7 — HardHat C2 orchestration, Git enumeration, PowerShell history mining, GitLab/TeamCity credential capture. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m7 c2 cicd harvest."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cyber-range
+  tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-7, c2, cicd, gitlab, teamcity, hardhat, credential-harvesting]
 ---
 
 # Mythos M7 — C2 Pivoting and CI/CD Credential Harvesting Mode

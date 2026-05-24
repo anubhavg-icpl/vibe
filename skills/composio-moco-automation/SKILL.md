@@ -1,7 +1,8 @@
 ---
 name: moco-automation
-description: "Automate Moco tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Moco tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with moco automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

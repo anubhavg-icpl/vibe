@@ -1,10 +1,12 @@
 ---
 name: skill-rag-pipeline
-description: Build and debug RAG pipelines from first principles
-version: 1.0.0
+description: Build and debug RAG pipelines from first principles. Use when you need help with skill rag pipeline.
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 6
-tags: [rag, retrieval, embeddings, vector-search, llm-engineering]
+metadata:
+  version: 1.0.0
+  tags: [rag, retrieval, embeddings, vector-search, llm-engineering]
 ---
 
 # RAG Pipeline Pattern

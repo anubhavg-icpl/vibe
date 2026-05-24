@@ -1,10 +1,12 @@
 ---
 name: accessibility-testing
-description: accessibility-testing
-risk: unknown
-source: community
-kind: mode
-category: testing
+description: accessibility-testing. Use when writing, running, or improving tests with accessibility testing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
 ---
 
 # Accessibility Testing Mode

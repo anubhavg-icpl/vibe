@@ -1,11 +1,13 @@
 ---
 name: identity-governance-connector-validator
-description: RFC compliance validator for Identity Governance Connector implementations - OAuth 2.0, JWT, Token Exchange
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [validator, identity-governance, connector, oauth, jwt, token-exchange, multi-tenancy]
+description: RFC compliance validator for Identity Governance Connector implementations - OAuth 2.0, JWT, Token Exchange. Use when you need help with identity governance connector validator.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [validator, identity-governance, connector, oauth, jwt, token-exchange, multi-tenancy]
 ---
 
 # Identity Governance Connector Validator Mode

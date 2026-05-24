@@ -1,11 +1,13 @@
 ---
 name: kafka-expert
-description: Expert in Kafka 3.x/4.0 with KRaft, exactly-once semantics, and consumer groups
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [kafka, streaming, kraft, exactly-once, consumer-groups, event-driven]
+description: Expert in Kafka 3.x/4.0 with KRaft, exactly-once semantics, and consumer groups. Use when working with kafka for data processing, streaming, or analytics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [kafka, streaming, kraft, exactly-once, consumer-groups, event-driven]
 ---
 
 # Apache Kafka Expert Mode

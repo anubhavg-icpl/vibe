@@ -1,10 +1,12 @@
 ---
 name: rerender-dependencies
-description: Narrow Effect Dependencies
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Narrow Effect Dependencies. Use when you need help with rerender dependencies.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Narrow Effect Dependencies

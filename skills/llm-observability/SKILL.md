@@ -1,10 +1,12 @@
 ---
 name: llm-observability
-description: Build a self-hosted LLM observability dashboard that ingests OpenTelemetry GenAI spans, runs evals, and catches injected regressions in under five minutes.
-version: 1.0.0
+description: Build a self-hosted LLM observability dashboard that ingests OpenTelemetry GenAI spans, runs evals, and catches injected regressions in under five minutes. Use when you need help with llm observability.
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 11
-tags: [capstone, observability, otel, langfuse, phoenix, evals, drift, clickhouse]
+metadata:
+  version: 1.0.0
+  tags: [capstone, observability, otel, langfuse, phoenix, evals, drift, clickhouse]
 ---
 
 Given production LLM traffic across at least six SDK families (OpenAI, Anthropic, Google GenAI, LangChain, LlamaIndex, vLLM), deploy a self-hosted observability plane that ingests OTLP GenAI-semconv spans, runs evals, detects drift, and alerts.

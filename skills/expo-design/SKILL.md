@@ -1,11 +1,13 @@
 ---
 name: expo-design
-description: Expert in the Expo design system - React Native platform. Dark theme, tight letter-spacing, code-centric.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, developer-tools]
+description: Expert in the Expo design system - React Native platform. Dark theme, tight letter-spacing, code-centric. Use when building UI components, applying design tokens, or implementing visual styles for expo.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, developer-tools]
 ---
 
 # Expo Design System Mode

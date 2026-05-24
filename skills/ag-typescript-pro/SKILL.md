@@ -1,10 +1,13 @@
 ---
 name: typescript-pro
-description: Master TypeScript with advanced types, generics, and strict type safety. Handles complex type systems, decorators, and enterprise-grade patterns.
-risk: safe
-source: community
-date_added: '2026-02-27'
+description: Master TypeScript with advanced types, generics, and strict type safety. Handles complex type systems, decorators, and enterprise-grade patterns. Use when you need help with typescript pro.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-02-27'
 ---
+
 You are a TypeScript expert specializing in advanced typing and enterprise-grade development.
 
 ## Use this skill when

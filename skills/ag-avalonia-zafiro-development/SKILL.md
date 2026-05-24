@@ -1,9 +1,11 @@
 ---
 name: avalonia-zafiro-development
-description: "Mandatory skills, conventions, and behavioral rules for Avalonia UI development using the Zafiro toolkit."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Mandatory skills, conventions, and behavioral rules for Avalonia UI development using the Zafiro toolkit. Use when you need help with avalonia zafiro development.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Avalonia Zafiro Development

@@ -1,10 +1,12 @@
 ---
 name: batch-triager
-description: Triage LLM workloads into interactive / semi-interactive / batch lanes, compute stacked discount (batch + cache) savings, and flag mis-triaged workloads.
-version: 1.0.0
+description: Triage LLM workloads into interactive / semi-interactive / batch lanes, compute stacked discount (batch + cache) savings, and flag mis-triaged workloads. Use when you need help with batch triager.
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 15
-tags: [batch-api, openai-batch, anthropic-batches, vertex-batch, triage, cost]
+metadata:
+  version: 1.0.0
+  tags: [batch-api, openai-batch, anthropic-batches, vertex-batch, triage, cost]
 ---
 
 Given a workload (name, user expectation for latency, traffic volume, shared prompt structure), produce a triage + cost plan.

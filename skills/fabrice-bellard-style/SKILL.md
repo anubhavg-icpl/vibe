@@ -1,11 +1,13 @@
 ---
 name: fabrice-bellard-style
-description: Fabrice Bellard — solo author of FFmpeg, QEMU, TCC, QuickJS; small, fast, complete, almost impossibly prolific
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, c, prolific, performance, compression, emulation, single-author]
+description: Fabrice Bellard — solo author of FFmpeg, QEMU, TCC, QuickJS; small, fast, complete, almost impossibly prolific. Use when you want code review, architecture advice, or opinions in the style of fabrice bellard.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, c, prolific, performance, compression, emulation, single-author]
 ---
 
 # Fabrice Bellard Style Mode

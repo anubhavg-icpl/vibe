@@ -1,9 +1,11 @@
 ---
 name: environment-setup-guide
-description: "Guide developers through setting up development environments with proper tools, dependencies, and configurations"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Guide developers through setting up development environments with proper tools, dependencies, and configurations. Use when you need help with environment setup guide.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Environment Setup Guide

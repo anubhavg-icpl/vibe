@@ -1,11 +1,13 @@
 ---
 name: shopify-apps
-description: Expert patterns for Shopify app development including Remix/React
+description: Expert patterns for Shopify app development including Remix/React. Use when you need help with shopify apps.
   Router apps, embedded apps with App Bridge, webhook handling, GraphQL Admin
   API, Polaris components, billing, and app extensions.
-risk: safe
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # Shopify Apps

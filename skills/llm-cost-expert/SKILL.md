@@ -1,11 +1,13 @@
 ---
 name: llm-cost-expert
-description: Token economics, prompt caching, model routing — engineering LLM apps for sustainable spend
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, cost-optimization, prompt-caching, routing]
+description: Token economics, prompt caching, model routing — engineering LLM apps for sustainable spend. Use when evaluating, monitoring, or observing LLM performance with llm cost.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, cost-optimization, prompt-caching, routing]
 ---
 
 # LLM Cost Expert Mode

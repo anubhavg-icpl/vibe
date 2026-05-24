@@ -1,11 +1,13 @@
 ---
 name: revolut-design
-description: Expert in the Revolut design system - Digital banking. Sleek dark interface, gradient cards, fintech precision.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, fintech]
+description: Expert in the Revolut design system - Digital banking. Sleek dark interface, gradient cards, fintech precision. Use when building UI components, applying design tokens, or implementing visual styles for revolut.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, fintech]
 ---
 
 # Revolut Design System Mode

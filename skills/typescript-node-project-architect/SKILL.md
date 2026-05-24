@@ -1,10 +1,12 @@
 ---
 name: typescript-node-project-architect
-description: Production-ready TypeScript Node.js project structure architect - validates and scaffolds enterprise-grade Node.js/Bun applications with monorepo patterns
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+description: Production-ready TypeScript Node.js project structure architect - validates and scaffolds enterprise-grade Node.js/Bun applications with monorepo patterns. Use when scaffolding, structuring, or architecting typescript node projects.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # 📦 TypeScript Node.js Project Architect Mode

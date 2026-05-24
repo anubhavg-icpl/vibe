@@ -1,6 +1,6 @@
 ---
 name: agent-owasp-compliance
-description: |
+description: |. Use when you need help with agent owasp compliance.
   Check any AI agent codebase against the OWASP Agentic Security Initiative (ASI) Top 10 risks.
   Use this skill when:
   - Evaluating an agent system's security posture before production deployment
@@ -9,6 +9,7 @@ description: |
   - Generating a compliance report for security review or audit
   - Comparing agent framework security features against the standard
   - Any request like "is my agent OWASP compliant?", "check ASI compliance", or "agentic security audit"
+license: CC-BY-NC-SA-4.0
 ---
 
 # Agent OWASP ASI Compliance Check

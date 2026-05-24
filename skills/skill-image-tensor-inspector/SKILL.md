@@ -1,10 +1,12 @@
 ---
 name: skill-image-tensor-inspector
-description: Inspect any image-shaped tensor or array and report dtype, layout, range, and whether it looks raw, normalized, or standardized
-version: 1.0.0
+description: Inspect any image-shaped tensor or array and report dtype, layout, range, and whether it looks raw, normalized, or standardized. Use when you need help with skill image tensor inspector.
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 1
-tags: [computer-vision, debugging, preprocessing, tensors]
+metadata:
+  version: 1.0.0
+  tags: [computer-vision, debugging, preprocessing, tensors]
 ---
 
 # Image Tensor Inspector

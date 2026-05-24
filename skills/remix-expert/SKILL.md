@@ -1,11 +1,13 @@
 ---
 name: remix-expert
-description: Expert in Remix framework for full-stack React applications
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [remix, react, typescript, fullstack, ssr, web-standards]
+description: Expert in Remix framework for full-stack React applications. Use when building applications with the remix framework.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [remix, react, typescript, fullstack, ssr, web-standards]
 ---
 
 # Remix Expert Mode

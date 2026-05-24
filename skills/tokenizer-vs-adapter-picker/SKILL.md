@@ -1,10 +1,12 @@
 ---
 name: tokenizer-vs-adapter-picker
-description: Pick between Chameleon-style early fusion (shared-vocab tokenizer) and LLaVA-style late fusion (adapter on frozen LLM) for a VLM project.
-version: 1.0.0
+description: Pick between Chameleon-style early fusion (shared-vocab tokenizer) and LLaVA-style late fusion (adapter on frozen LLM) for a VLM project. Use when you need help with tokenizer vs adapter picker.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 11
-tags: [chameleon, early-fusion, vq-vae, late-fusion, adapter]
+metadata:
+  version: 1.0.0
+  tags: [chameleon, early-fusion, vq-vae, late-fusion, adapter]
 ---
 
 Given a product specification (understanding-only or understanding+generation), target image quality (social-post / magazine / print / broadcast), and cost budget (training + inference), recommend Chameleon-family or LLaVA-family with a concrete architecture outline.

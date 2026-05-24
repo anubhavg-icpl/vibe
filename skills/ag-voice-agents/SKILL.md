@@ -1,10 +1,12 @@
 ---
 name: voice-agents
-description: Voice agents represent the frontier of AI interaction - humans
+description: Voice agents represent the frontier of AI interaction - humans. Use when you need help with voice agents.
   speaking naturally with AI systems.
-risk: safe
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # Voice Agents

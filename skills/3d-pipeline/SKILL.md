@@ -1,10 +1,12 @@
 ---
 name: 3d-pipeline
-description: Choose a 3D generation or reconstruction pipeline given input type, output format, and use case.
-version: 1.0.0
+description: Choose a 3D generation or reconstruction pipeline given input type, output format, and use case. Use when you need help with 3d pipeline.
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 12
-tags: [3d, gaussian-splatting, nerf, mesh]
+metadata:
+  version: 1.0.0
+  tags: [3d, gaussian-splatting, nerf, mesh]
 ---
 
 Given inputs (text prompt / one image / few images / photo capture / video), target output (mesh / Gaussian splat / NeRF / point cloud), and use case (real-time render, game engine, AR / VR, cinematic), output:

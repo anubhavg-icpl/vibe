@@ -1,7 +1,8 @@
 ---
 name: GroqCloud Automation
-description: "Automate AI inference, chat completions, audio translation, and TTS voice management through GroqCloud's high-performance API via Composio"
-requires:
+description: "Automate AI inference, chat completions, audio translation, and TTS voice management through GroqCloud's high-performance API via Composio. Use when you need help with GroqCloud Automation."
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

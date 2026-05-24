@@ -1,11 +1,13 @@
 ---
 name: cypress-expert
-description: Expert in Cypress for end-to-end testing, component testing, and modern web application testing
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [cypress, testing, e2e, automation, javascript, typescript]
+description: Expert in Cypress for end-to-end testing, component testing, and modern web application testing. Use when writing, running, or improving tests with cypress.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [cypress, testing, e2e, automation, javascript, typescript]
 ---
 
 # Cypress Expert Mode

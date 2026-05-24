@@ -1,14 +1,17 @@
 ---
 name: openclaw-github-repo-commander
-description: "7-stage super workflow for GitHub repo audit, cleanup, PR review, and competitor analysis"
-category: development-and-testing
-risk: safe
-source: community
-date_added: "2026-03-18"
+description: 7-stage super workflow for GitHub repo audit, cleanup, PR review, and competitor analysis. Use when you need help with openclaw github repo commander.
+license: CC-BY-NC-SA-4.0
 author: wd041216-bit
-tags: [github, git, repository, audit, cleanup, workflow, devtools, automation, code-review, security]
 tools: [claude, cursor]
+metadata:
+  category: development-and-testing
+  risk: safe
+  source: community
+  date_added: "2026-03-18"
+  tags: [github, git, repository, audit, cleanup, workflow, devtools, automation, code-review, security]
 ---
+
 # OpenClaw GitHub Repo Commander
 
 ## Overview

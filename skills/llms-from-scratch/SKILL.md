@@ -1,10 +1,12 @@
 ---
 name: llms-from-scratch
-description: Expert in building, training, and understanding large language models end-to-end, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+description: Expert in building, training, and understanding large language models end-to-end, from the AI Engineering from Scratch curriculum. Use when you need help with llms from scratch.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # LLMs from Scratch Mode

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-bi-custom-visuals-development
-description: Use when the user needs guidance on power-bi-custom-visuals-development. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-bi-custom-visuals-development]
----
-
----
-description: 'Comprehensive Power BI custom visuals development guide covering React, D3.js integration, TypeScript patterns, testing frameworks, and advanced visualization techniques.'
-applyTo: '**/*.{ts,tsx,js,jsx,json,less,css}'
+description: Comprehensive Power BI custom visuals development guide covering React, D3.js integration, TypeScript patterns, testing frameworks, and advanced visualization techniques. Use when writing or reviewing power bi custom visuals development code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-bi-custom-visuals-development]
+  applyTo: "**/*.{ts,tsx,js,jsx,json,less,css}"
+  source: "awesome-copilot"
 ---
 
 # Power BI Custom Visuals Development Best Practices

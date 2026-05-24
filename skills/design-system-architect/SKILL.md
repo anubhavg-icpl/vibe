@@ -1,10 +1,12 @@
 ---
 name: design-system-architect
-description: design-system-architect
-risk: unknown
-source: community
-kind: mode
-category: design-ux
+description: design-system-architect. Use when you need help with design system architect.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-ux
 ---
 
 # Design System Architect Mode

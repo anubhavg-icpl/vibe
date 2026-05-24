@@ -1,6 +1,7 @@
 ---
 name: create-technical-spike
-description: 'Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.'
+description: Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation. Use when you need help with create technical spike.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create Technical Spike Document

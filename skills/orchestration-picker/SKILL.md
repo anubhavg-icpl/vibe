@@ -1,10 +1,12 @@
 ---
 name: orchestration-picker
-description: Pick an orchestration topology (supervisor, swarm, hierarchical, debate, or none) for a given problem and implement it minimally.
-version: 1.0.0
+description: Pick an orchestration topology (supervisor, swarm, hierarchical, debate, or none) for a given problem and implement it minimally. Use when you need help with orchestration picker.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 28
-tags: [orchestration, supervisor, swarm, hierarchical, debate]
+metadata:
+  version: 1.0.0
+  tags: [orchestration, supervisor, swarm, hierarchical, debate]
 ---
 
 Given a product domain and a task class, pick the minimal topology.

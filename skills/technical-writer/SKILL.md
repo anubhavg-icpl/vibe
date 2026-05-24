@@ -1,10 +1,12 @@
 ---
 name: technical-writer
-description: technical-writer
-risk: unknown
-source: community
-kind: mode
-category: creative
+description: technical-writer. Use when you need help with technical writer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: creative
 ---
 
 # Technical Writer Mode

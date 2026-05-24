@@ -1,9 +1,11 @@
 ---
 name: prompt-engineering-patterns
-description: "Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability. Use when you need help with prompt engineering patterns.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Prompt Engineering Patterns

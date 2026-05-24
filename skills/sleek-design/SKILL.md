@@ -1,11 +1,13 @@
 ---
 name: sleek-design
-description: Expert in the Sleek design system - Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+description: Expert in the Sleek design system - Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing. Use when building UI components, applying design tokens, or implementing visual styles for sleek.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Sleek Design System Mode

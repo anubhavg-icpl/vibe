@@ -1,11 +1,13 @@
 ---
 name: mythos-coordinated-disclosure
-description: Run a vulnerability through validation, severity scoring, maintainer outreach, and embargoed disclosure
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, disclosure, cvss, glasswing, defensive]
+description: Run a vulnerability through validation, severity scoring, maintainer outreach, and embargoed disclosure. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving coordinated disclosure.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, disclosure, cvss, glasswing, defensive]
 ---
 
 # Mythos Coordinated Disclosure Mode

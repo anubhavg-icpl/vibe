@@ -1,10 +1,12 @@
 ---
 name: ai-tutor
-description: Ship an adaptive multimodal personal tutor for a specific subject with Bayesian knowledge tracing, a curriculum graph, safety filters, and a measured two-week efficacy study.
-version: 1.0.0
+description: Ship an adaptive multimodal personal tutor for a specific subject with Bayesian knowledge tracing, a curriculum graph, safety filters, and a measured two-week efficacy study. Use when you need help with ai tutor.
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 17
-tags: [capstone, tutor, adaptive, bkt, fsrs, livekit, multimodal, coppa]
+metadata:
+  version: 1.0.0
+  tags: [capstone, tutor, adaptive, bkt, fsrs, livekit, multimodal, coppa]
 ---
 
 Given a subject (K-12 algebra or intro Python), build a personal tutor with text + voice + photo-math input, Bayesian knowledge tracing learner model, curriculum-graph-driven concept selection, COPPA-aware memory, and safety filters. Run a two-week efficacy study with 10 learners.

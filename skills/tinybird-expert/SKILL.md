@@ -1,11 +1,13 @@
 ---
 name: tinybird-expert
-description: Expert in Tinybird real-time analytics APIs on managed ClickHouse
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [tinybird, clickhouse, real-time, analytics, api, datasources, pipes]
+description: Expert in Tinybird real-time analytics APIs on managed ClickHouse. Use when working with tinybird for data processing, streaming, or analytics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [tinybird, clickhouse, real-time, analytics, api, datasources, pipes]
 ---
 
 # Tinybird Expert Mode

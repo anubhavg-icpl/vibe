@@ -1,6 +1,7 @@
 ---
 name: kotlin-coroutines-flows
-description: Kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency, Flow operators, StateFlow, error handling, and testing.
+description: Kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency, Flow operators, StateFlow, error handling, and testing. Use when you need help with kotlin coroutines flows.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

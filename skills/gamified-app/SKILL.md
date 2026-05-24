@@ -1,13 +1,14 @@
 ---
 name: gamified-app
-description: |
+description: |. Use when you need help with gamified app.
   A multi-frame gamified mobile-app prototype — three phone frames on a dark
   showcase stage. Frame 1: cover / poster, Frame 2: today's quests with XP
   ribbons and a level bar, Frame 3: quest detail. Vivid quest tiles, level
   ribbon, bottom tab bar. Use when the brief asks for a "gamified app",
   "habit tracker", "RPG-style life app", "level-up app", "daily quests",
   "XP / streak app", or "ELI5-style explainer app".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "gamified app"
   - "habit tracker"
   - "rpg app"
@@ -18,7 +19,7 @@ triggers:
   - "life management app"
   - "游戏化"
   - "习惯打卡"
-od:
+od: 
   mode: prototype
   platform: mobile
   scenario: personal

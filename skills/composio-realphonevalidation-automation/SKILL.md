@@ -1,7 +1,8 @@
 ---
 name: realphonevalidation-automation
-description: "Automate Realphonevalidation tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Realphonevalidation tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with realphonevalidation automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

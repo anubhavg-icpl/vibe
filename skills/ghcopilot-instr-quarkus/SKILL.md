@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-quarkus
-description: Use when the user needs guidance on quarkus. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, quarkus]
----
-
----
-applyTo: '*'
-description: 'Quarkus development standards and instructions'
+description: "Use when the user needs guidance on quarkus. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, quarkus]
+  applyTo: "*"
+  source: "awesome-copilot"
 ---
 
 - Instructions for high-quality Quarkus applications with Java 17 or later.

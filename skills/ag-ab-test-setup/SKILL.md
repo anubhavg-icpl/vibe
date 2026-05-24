@@ -1,9 +1,11 @@
 ---
 name: ab-test-setup
-description: "Structured guide for setting up A/B tests with mandatory gates for hypothesis, metrics, and execution readiness."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: Structured guide for setting up A/B tests with mandatory gates for hypothesis, metrics, and execution readiness. Use when you need help with ab test setup.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # A/B Test Setup

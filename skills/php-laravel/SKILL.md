@@ -1,10 +1,12 @@
 ---
 name: php-laravel
-description: php-laravel
-risk: unknown
-source: community
-kind: mode
-category: languages
+description: php-laravel. Use when writing, reviewing, or refactoring php laravel code.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
 ---
 
 # PHP Laravel Developer Mode

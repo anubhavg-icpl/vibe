@@ -1,10 +1,12 @@
 ---
 name: diffusion-trainer
-description: Configure a diffusion training run: schedule, prediction target, sampler, and eval plan.
-version: 1.0.0
+description: Configure a diffusion training run: schedule, prediction target, sampler, and eval plan. Use when you need help with diffusion trainer.
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 06
-tags: [diffusion, ddpm, training]
+metadata:
+  version: 1.0.0
+  tags: [diffusion, ddpm, training]
 ---
 
 Given a dataset profile (modality, resolution, dataset size), compute budget (GPU hours, VRAM floor), and quality bar (FID target or downstream use), output:

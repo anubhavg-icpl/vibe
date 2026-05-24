@@ -1,10 +1,12 @@
 ---
 name: skill-lora-training-setup
-description: Write a full LoRA training config for a custom dataset, including captions, rank, batch size, and learning rate
-version: 1.0.0
+description: Write a full LoRA training config for a custom dataset, including captions, rank, batch size, and learning rate. Use when you need help with skill lora training setup.
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 11
-tags: [computer-vision, stable-diffusion, lora, fine-tuning]
+metadata:
+  version: 1.0.0
+  tags: [computer-vision, stable-diffusion, lora, fine-tuning]
 ---
 
 # LoRA Training Setup

@@ -1,10 +1,12 @@
 ---
 name: js-cache-property-access
-description: Cache Property Access in Loops
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Cache Property Access in Loops. Use when you need help with js cache property access.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Cache Property Access in Loops

@@ -1,11 +1,13 @@
 ---
 name: sveltekit-expert
-description: Expert in SvelteKit and Svelte 5 runes — state, derived, effect, props, snippets
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [sveltekit, svelte, svelte-5, runes, ssr, full-stack]
+description: Expert in SvelteKit and Svelte 5 runes — state, derived, effect, props, snippets. Use when building web applications with sveltekit.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [sveltekit, svelte, svelte-5, runes, ssr, full-stack]
 ---
 
 # SvelteKit Expert Mode

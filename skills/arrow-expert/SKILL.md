@@ -1,11 +1,13 @@
 ---
 name: arrow-expert
-description: Expert in Apache Arrow columnar format, Flight, Flight SQL, and ADBC
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [arrow, columnar, flight, adbc, flight-sql, parquet, interop]
+description: Expert in Apache Arrow columnar format, Flight, Flight SQL, and ADBC. Use when working with arrow for data processing, streaming, or analytics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [arrow, columnar, flight, adbc, flight-sql, parquet, interop]
 ---
 
 # Apache Arrow Expert Mode

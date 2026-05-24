@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-security-and-owasp
-description: Use when the user needs guidance on security-and-owasp. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, security-and-owasp]
----
-
----
-applyTo: '**'
-description: 'Comprehensive secure coding standards based on OWASP Top 10 2025, with 55+ anti-patterns, detection regex, framework-specific fixes for modern web and backend frameworks, and AI/LLM security guidance.'
+description: Comprehensive secure coding standards based on OWASP Top 10 2025, with 55+ anti-patterns, detection regex, framework-specific fixes for modern web and backend frameworks, and AI/LLM security guidance. Use when writing or reviewing security and owasp code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, security-and-owasp]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Security Standards

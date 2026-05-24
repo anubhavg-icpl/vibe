@@ -1,8 +1,10 @@
 ---
 name: him-cmd-load-llms-txt
 description: Use when the user asks to run the /load-llms-txt slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, load-llms-txt]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, load-llms-txt]
 ---
 
 # Load Xatu Data Context

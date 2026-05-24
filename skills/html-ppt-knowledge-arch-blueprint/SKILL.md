@@ -1,14 +1,15 @@
 ---
 name: html-ppt-knowledge-arch-blueprint
-description: 奶油蓝图架构 deck — 奶油纸 #F0EAE0 底色 + 单一锈红 #B5392A 高亮、48px 蓝图网格 mask、2px 黑边硬卡片、pipeline 步骤盒（其中一个抬高）、右侧锈红 insight callout、Playfair 衬线大字、SVG 虚线反馈环。零渐变零软阴影，认真且印刷友好。
-triggers:
+description: 奶油蓝图架构 deck — 奶油纸 #F0EAE0 底色 + 单一锈红 #B5392A 高亮、48px 蓝图网格 mask、2px 黑边硬卡片、pipeline 步骤盒（其中一个抬高）、右侧锈红 insight callout、Playfair 衬线大字、SVG 虚线反馈环。零渐变零软阴影，认真且印刷友好。. Use when you need help with html ppt knowledge arch blueprint.
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "architecture"
   - "blueprint"
   - "system design"
   - "架构图"
   - "data flow"
   - "engineering whitepaper"
-od:
+od: 
   mode: deck
   scenario: engineering
   featured: 29
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-knowledge-arch-blueprint 模板做一份系统架构介绍 PPT。奶油纸底 + 锈红高亮 + 蓝图网格 + pipeline 抬高一格 + 衬线大字。先告诉我系统名 + 5-7 个核心模块 + 数据流方向，再写 8-10 页。"
 ---
+
 # HTML PPT · 奶油蓝图架构
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`knowledge-arch-blueprint`** full-deck template.

@@ -1,10 +1,12 @@
 ---
 name: rlhf-architect
-description: Design an RLHF / DPO / GRPO alignment pipeline for a language model, including RM, KL, and data strategy.
-version: 1.0.0
+description: Design an RLHF / DPO / GRPO alignment pipeline for a language model, including RM, KL, and data strategy. Use when you need help with rlhf architect.
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 9
-tags: [rl, rlhf, alignment, llm]
+metadata:
+  version: 1.0.0
+  tags: [rl, rlhf, alignment, llm]
 ---
 
 Given a base LM, a target behavior (alignment / reasoning / refusal / agent), and a preference or verifier budget, output:

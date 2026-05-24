@@ -1,11 +1,13 @@
 ---
 name: simon-willison-style
-description: Simon Willison — Datasette, LLM CLI, building in public, plugin architectures, daily practical AI
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, python, llm, datasette, building-in-public, plugins, sqlite]
+description: Simon Willison — Datasette, LLM CLI, building in public, plugin architectures, daily practical AI. Use when you want code review, architecture advice, or opinions in the style of simon willison.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, python, llm, datasette, building-in-public, plugins, sqlite]
 ---
 
 # Simon Willison Style Mode

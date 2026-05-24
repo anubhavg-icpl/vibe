@@ -1,9 +1,11 @@
 ---
 name: gdpr-data-handling
-description: "Practical implementation guide for GDPR-compliant data processing, consent management, and privacy controls."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Practical implementation guide for GDPR-compliant data processing, consent management, and privacy controls. Use when you need help with gdpr data handling.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # GDPR Data Handling

@@ -1,9 +1,11 @@
 ---
 name: schema-markup
-description: Design, validate, and optimize schema.org structured data for eligibility, correctness, and measurable SEO impact.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+description: Design, validate, and optimize schema.org structured data for eligibility, correctness, and measurable SEO impact. Use when you need help with schema markup.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Schema Markup & Structured Data

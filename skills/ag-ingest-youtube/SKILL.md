@@ -1,19 +1,20 @@
 ---
 name: ingest-youtube
-description: "Pull a YouTube video transcript into a queryable markdown vault with yt-dlp subtitle discovery, VTT cleanup, metadata frontmatter, and capture-seed stubs."
-risk: safe
-source: community
+description: Pull a YouTube video transcript into a queryable markdown vault with yt-dlp subtitle discovery, VTT cleanup, metadata frontmatter, and capture-seed stubs. Use when you need help with ingest youtube.
 source_repo: adelaidasofia/ai-brain-starter
 source_type: community
-date_added: "2026-05-09"
 license: MIT
 license_source: "https://github.com/adelaidasofia/ai-brain-starter/blob/main/LICENSE"
 upstream: "https://github.com/adelaidasofia/ai-brain-starter/tree/main/skills/ingest-youtube"
-plugin:
+plugin: 
   setup:
     type: manual
     summary: "Install yt-dlp locally before running ingest.py; the script only accepts http(s) YouTube video URLs and writes markdown into the selected vault."
     docs: "SKILL.md"
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-05-09"
 ---
 
 # ingest-youtube — YouTube-to-vault connector

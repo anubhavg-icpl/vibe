@@ -1,8 +1,10 @@
 ---
 name: differential-review
-description: "Security-focused code review for PRs, commits, and diffs."
-risk: unknown
-source: community
+description: Security-focused code review for PRs, commits, and diffs. Use when you need help with differential review.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # Differential Security Review

@@ -1,11 +1,13 @@
 ---
 name: android-create-template-expert
-description: Expert in `android create` — scaffolding new Android projects from official templates with `--dry-run`, `--name`, `--output`
-risk: unknown
-source: community
-kind: mode
-category: android-cli
-tags: [android, android-cli, create, template, scaffolding, agp-9, 2026]
+description: Expert in `android create` — scaffolding new Android projects from official templates with `--dry-run`, `--name`, `--output`. Use when using Android CLI tools for android create template.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-cli
+  tags: [android, android-cli, create, template, scaffolding, agp-9, 2026]
 ---
 
 # Android Create Template Expert Mode

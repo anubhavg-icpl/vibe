@@ -1,6 +1,6 @@
 ---
 name: git-ops
-description: "Full git + worktree orchestrator. Rich status survey, per-worktree triage (prunable/WIP/ghost/orphan), commits, PRs, branches, releases, rebases — reads run inline, writes dispatch to a background Sonnet agent. Triggers on: status, state, where are we, git status, anything to commit, anything to push, commit, push, pull request, create PR, git diff, rebase, stash, branch, merge, release, tag, changelog, semver, cherry-pick, bisect, worktree, worktree survey, prunable worktrees, land worktree."
+description: Full git + worktree orchestrator. Rich status survey, per-worktree triage (prunable/WIP/ghost/orphan), commits, PRs, branches, releases, rebases — reads run inline, writes dispatch to a background Sonnet agent. Triggers on: status, state, where are we, git status, anything to commit, anything to push, commit, push, pull request, create PR, git diff, rebase, stash, branch, merge, release, tag, changelog, semver, cherry-pick, bisect, worktree, worktree survey, prunable worktrees, land worktree. Use when you need help with git ops.
 license: MIT
 allowed-tools: "Read Bash Glob Grep Agent TaskCreate TaskUpdate"
 metadata:

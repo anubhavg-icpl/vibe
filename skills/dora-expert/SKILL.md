@@ -1,11 +1,13 @@
 ---
 name: dora-expert
-description: Weight-Decomposed Low-Rank Adaptation — magnitude + direction split for better LoRA quality
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, dora, lora, peft]
+description: Weight-Decomposed Low-Rank Adaptation — magnitude + direction split for better LoRA quality. Use when fine-tuning, training, or adapting language models with dora techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, dora, lora, peft]
 ---
 
 # DoRA Expert Mode

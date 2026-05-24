@@ -1,11 +1,13 @@
 ---
 name: mythos-oss-maintainer-helper
-description: Trusted sidekick for solo and small-team OSS maintainers — triage backlog, prioritize security issues, draft conventions-aware patches
-risk: unknown
-source: community
-kind: mode
-category: defense
-tags: [mythos, defense, oss, maintainer, apache, linux-foundation, alpha-omega, glasswing]
+description: Trusted sidekick for solo and small-team OSS maintainers — triage backlog, prioritize security issues, draft conventions-aware patches. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving oss maintainer helper.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: defense
+  tags: [mythos, defense, oss, maintainer, apache, linux-foundation, alpha-omega, glasswing]
 ---
 
 # Mythos OSS Maintainer Helper Mode

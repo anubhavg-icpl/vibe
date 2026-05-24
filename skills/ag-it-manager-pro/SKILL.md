@@ -1,10 +1,8 @@
 ---
 name: it-manager-pro
-description: Elite IT Management Advisor specializing in data-driven strategy, executive communication, and human-centric leadership for the 2026 digital era.
-risk: safe
-source: community
-date_added: "2026-04-18"
-triggers:
+description: Elite IT Management Advisor specializing in data-driven strategy, executive communication, and human-centric leadership for the 2026 digital era. Use when you need help with it manager pro.
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "it manager pro"
   - "it management advice"
   - "ti management"
@@ -15,6 +13,10 @@ triggers:
   - "cobit 2019 governance"
   - "togaf architecture advice"
   - "it framework selection"
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-04-18"
 ---
 
 # IT Manager Pro (Elite Leadership Advisor)

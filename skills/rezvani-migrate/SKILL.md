@@ -1,9 +1,10 @@
 ---
 name: "migrate"
-description: >-
+description: >-. Use when you need help with migrate.
   Migrate from Cypress or Selenium to Playwright. Use when user mentions
   "cypress", "selenium", "migrate tests", "convert tests", "switch to
   playwright", "move from cypress", or "replace selenium".
+license: CC-BY-NC-SA-4.0
 ---
 
 # Migrate to Playwright

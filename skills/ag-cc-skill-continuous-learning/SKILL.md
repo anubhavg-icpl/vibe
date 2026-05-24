@@ -1,9 +1,11 @@
 ---
 name: cc-skill-continuous-learning
-description: "Development skill from everything-claude-code"
-risk: none
-source: community
-date_added: "2026-02-27"
+description: Development skill from everything-claude-code. Use when you need help with cc skill continuous learning.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: none
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # cc-skill-continuous-learning

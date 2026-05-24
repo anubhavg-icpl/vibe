@@ -1,15 +1,17 @@
 ---
 name: monte-carlo-prevent
-description: "Surfaces Monte Carlo data observability context (table health, alerts, lineage, blast radius) before SQL/dbt edits."
-category: data
-risk: safe
-source: community
+description: Surfaces Monte Carlo data observability context (table health, alerts, lineage, blast radius) before SQL/dbt edits. Use when you need help with monte carlo prevent.
+license: CC-BY-NC-SA-4.0
 source_repo: monte-carlo-data/mc-agent-toolkit
 source_type: community
-date_added: "2026-04-08"
 author: monte-carlo-data
-tags: [data-observability, dbt, schema, monte-carlo, lineage]
 tools: [claude, cursor, codex]
+metadata:
+  category: data
+  risk: safe
+  source: community
+  date_added: "2026-04-08"
+  tags: [data-observability, dbt, schema, monte-carlo, lineage]
 ---
 
 # Monte Carlo Prevent Skill

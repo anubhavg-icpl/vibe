@@ -1,11 +1,13 @@
 ---
 name: elevenlabs-design
-description: Expert in the ElevenLabs design system - AI voice platform. Dark cinematic UI, audio-waveform aesthetics.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+description: Expert in the ElevenLabs design system - AI voice platform. Dark cinematic UI, audio-waveform aesthetics. Use when building UI components, applying design tokens, or implementing visual styles for elevenlabs.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # ElevenLabs Design System Mode

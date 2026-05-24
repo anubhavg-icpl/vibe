@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-java-17-to-java-21-upgrade
-description: Use when the user needs guidance on java-17-to-java-21-upgrade. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, java-17-to-java-21-upgrade]
----
-
----
-applyTo: ['*']
-description: "Comprehensive best practices for adopting new Java 21 features since the release of Java 17."
+description: "Use when the user needs guidance on java-17-to-java-21-upgrade. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, java-17-to-java-21-upgrade]
+  applyTo: "['*']"
+  source: "awesome-copilot"
 ---
 
 # Java 17 to Java 21 Upgrade Guide

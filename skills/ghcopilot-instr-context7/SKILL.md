@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-context7
-description: Use when the user needs guidance on context7. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, context7]
----
-
----
-description: 'Use Context7 for authoritative external docs and API references when local context is insufficient'
-applyTo: '**'
+description: "Use when the user needs guidance on context7. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, context7]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Context7-aware development

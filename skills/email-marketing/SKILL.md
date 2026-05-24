@@ -1,12 +1,13 @@
 ---
 name: email-marketing
-description: |
+description: |. Use when you need help with email marketing.
   A brand product-launch email — masthead with wordmark, hero image block,
   headline lockup with skewed-italic accent, body copy, primary CTA, and a
   specifications grid. Pure HTML email layout (centered single column, table
   fallback). Use when the brief asks for an "email", "newsletter blast",
   "MJML", "product launch email", or "email template".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "email"
   - "email template"
   - "newsletter"
@@ -15,7 +16,7 @@ triggers:
   - "mjml"
   - "邮件营销"
   - "邮件模板"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

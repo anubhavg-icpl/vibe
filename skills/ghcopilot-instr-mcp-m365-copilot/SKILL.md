@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-mcp-m365-copilot
-description: Use when the user needs guidance on mcp-m365-copilot. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, mcp-m365-copilot]
----
-
----
-description: 'Best practices for building MCP-based declarative agents and API plugins for Microsoft 365 Copilot with Model Context Protocol integration'
-applyTo: '**/{*mcp*,*agent*,*plugin*,declarativeAgent.json,ai-plugin.json,mcp.json,manifest.json}'
+description: Best practices for building MCP-based declarative agents and API plugins for Microsoft 365 Copilot with Model Context Protocol integration. Use when writing or reviewing mcp m365 copilot code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, mcp-m365-copilot]
+  applyTo: "**/{*mcp*,*agent*,*plugin*,declarativeAgent.json,ai-plugin.json,mcp.json,manifest.json}"
+  source: "awesome-copilot"
 ---
 
 # MCP-based M365 Copilot Development Guidelines

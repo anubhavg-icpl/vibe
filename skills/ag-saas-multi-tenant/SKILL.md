@@ -1,11 +1,13 @@
 ---
 name: saas-multi-tenant
-description: "Design and implement multi-tenant SaaS architectures with row-level security, tenant-scoped queries, shared-schema isolation, and safe cross-tenant admin patterns in PostgreSQL and TypeScript."
-risk: safe
-source: community
-date_added: "2026-03-28"
-tags: [multi-tenancy, saas, row-level-security, postgresql, tenant-isolation]
+description: Design and implement multi-tenant SaaS architectures with row-level security, tenant-scoped queries, shared-schema isolation, and safe cross-tenant admin patterns in PostgreSQL and TypeScript. Use when you need help with saas multi tenant.
+license: CC-BY-NC-SA-4.0
 tools: [claude, cursor, gemini]
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-03-28"
+  tags: [multi-tenancy, saas, row-level-security, postgresql, tenant-isolation]
 ---
 
 # SaaS Multi-Tenant Architecture

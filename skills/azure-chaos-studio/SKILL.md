@@ -1,11 +1,13 @@
 ---
 name: azure-chaos-studio
-description: Expert in Azure Chaos Studio - Microsoft's chaos engineering service
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [azure, chaos-studio, chaos-engineering, fault-injection, resilience, microsoft]
+description: "Expert in Azure Chaos Studio - Microsoft's chaos engineering service. Use when writing, running, or improving tests with azure chaos studio."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [azure, chaos-studio, chaos-engineering, fault-injection, resilience, microsoft]
 ---
 
 # Azure Chaos Studio Expert Mode

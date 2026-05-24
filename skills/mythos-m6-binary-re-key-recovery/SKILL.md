@@ -1,11 +1,13 @@
 ---
 name: mythos-m6-binary-re-key-recovery
-description: Defensive instrumentation for AISI "The Last Ones" Milestone 6 — Windows service RE, pass-the-hash escalation, and AES key recovery
-risk: unknown
-source: community
-kind: mode
-category: cyber-range
-tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-6, reverse-engineering, pass-the-hash, aes, key-recovery, ghidra]
+description: "Defensive instrumentation for AISI \"The Last Ones\" Milestone 6 — Windows service RE, pass-the-hash escalation, and AES key recovery. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving m6 binary re key recovery."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cyber-range
+  tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-6, reverse-engineering, pass-the-hash, aes, key-recovery, ghidra]
 ---
 
 # Mythos M6 — Binary Reverse Engineering and Key Recovery Mode

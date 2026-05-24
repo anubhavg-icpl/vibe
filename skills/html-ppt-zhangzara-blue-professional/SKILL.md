@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-blue-professional
-description: |
+description: |. Use when you need help with html ppt zhangzara blue professional.
   Blue Professional — Cream paper background with electric cobalt blue accents; clean modern professional. Anything that should feel modern-considered and lightly authoritative: B2B SaaS pitches, consulting deliverables, advisory updates, investor reports.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "blue-professional"
   - "zhangzara-blue-professional"
   - "Blue Professional"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/blue-professional"

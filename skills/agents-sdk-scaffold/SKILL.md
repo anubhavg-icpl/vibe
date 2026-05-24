@@ -1,10 +1,12 @@
 ---
 name: agents-sdk-scaffold
-description: Scaffold an OpenAI Agents SDK app with a triage agent, handoffs, input/output/tool guardrails, session store, and a trace processor.
-version: 1.0.0
+description: Scaffold an OpenAI Agents SDK app with a triage agent, handoffs, input/output/tool guardrails, session store, and a trace processor. Use when you need help with agents sdk scaffold.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 16
-tags: [openai, agents-sdk, handoffs, guardrails, tracing, session]
+metadata:
+  version: 1.0.0
+  tags: [openai, agents-sdk, handoffs, guardrails, tracing, session]
 ---
 
 Given a product domain and a list of specialist agents, scaffold an OpenAI Agents SDK app.

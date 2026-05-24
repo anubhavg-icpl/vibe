@@ -1,9 +1,11 @@
 ---
 name: gemini-api-dev
-description: "The Gemini API provides access to Google's most advanced AI models. Key capabilities include:"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: "The Gemini API provides access to Google's most advanced AI models. Key capabilities include:. Use when you need help with gemini api dev."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Gemini API Development Skill

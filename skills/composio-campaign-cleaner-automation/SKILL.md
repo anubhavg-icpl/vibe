@@ -1,7 +1,8 @@
 ---
 name: campaign-cleaner-automation
-description: "Automate Campaign Cleaner tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Campaign Cleaner tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with campaign cleaner automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

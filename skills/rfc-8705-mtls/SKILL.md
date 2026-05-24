@@ -1,11 +1,13 @@
 ---
 name: rfc-8705-mtls
-description: Certificate-based client authentication and token binding for high-security OAuth 2.0
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [oauth, mtls, certificates, security, multi-tenancy, identity-broker]
+description: Certificate-based client authentication and token binding for high-security OAuth 2.0. Use when implementing or validating rfc 8705 mtls protocol compliance.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [oauth, mtls, certificates, security, multi-tenancy, identity-broker]
 ---
 
 # RFC 8705 - OAuth 2.0 Mutual-TLS Client Authentication

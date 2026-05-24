@@ -1,10 +1,12 @@
 ---
 name: ipi-audit
-description: Audit an agentic deployment for indirect prompt injection exposure and information-flow-control coverage.
-version: 1.0.0
+description: Audit an agentic deployment for indirect prompt injection exposure and information-flow-control coverage. Use when you need help with ipi audit.
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 15
-tags: [ipi, indirect-prompt-injection, ifc, agent-security, owasp-llm01]
+metadata:
+  version: 1.0.0
+  tags: [ipi, indirect-prompt-injection, ifc, agent-security, owasp-llm01]
 ---
 
 Given an agentic deployment description, audit the deployment for indirect prompt injection exposure.

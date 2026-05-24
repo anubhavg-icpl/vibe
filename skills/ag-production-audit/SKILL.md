@@ -1,17 +1,18 @@
 ---
 name: production-audit
-description: "Audit a shipped repo for production-readiness gaps across RLS, webhooks, secrets, grants, Stripe idempotency, mobile UX, and deployment health."
-category: security
-risk: critical
-source: community
+description: Audit a shipped repo for production-readiness gaps across RLS, webhooks, secrets, grants, Stripe idempotency, mobile UX, and deployment health. Use when performing security analysis, auditing, or hardening with production audit.
 source_repo: commitshow/production-audit
 source_type: community
-date_added: "2026-05-04"
 author: commitshow
-tags: [security, audit, production, vibe-coding, rls, webhook, stripe, supabase, mobile]
 tools: [claude, cursor, gemini, codex, antigravity]
 license: "MIT"
 license_source: "https://github.com/commitshow/production-audit/blob/main/LICENSE"
+metadata:
+  category: security
+  risk: critical
+  source: community
+  date_added: "2026-05-04"
+  tags: [security, audit, production, vibe-coding, rls, webhook, stripe, supabase, mobile]
 ---
 
 # Production Audit

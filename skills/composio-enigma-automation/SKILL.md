@@ -1,7 +1,8 @@
 ---
 name: enigma-automation
-description: "Automate Enigma tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Enigma tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with enigma automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

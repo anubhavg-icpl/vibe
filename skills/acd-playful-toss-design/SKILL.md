@@ -1,11 +1,13 @@
 ---
 name: acd-playful-toss-design
-description: Reference DESIGN.md for Korean-fintech playful: Toss Blue against bright white, Toss Product Sans paired with Noto Sans KR, generous radii, friendly mood, mobile-first density.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, playful, claude-design]
+description: Reference DESIGN.md for Korean-fintech playful: Toss Blue against bright white, Toss Product Sans paired with Noto Sans KR, generous radii, friendly mood, mobile-first density. Use when building UI components, applying design tokens, or implementing visual styles for playful toss.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, playful, claude-design]
 ---
 
 # Toss — Playful Fintech Design Mode

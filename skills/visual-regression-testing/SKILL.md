@@ -1,11 +1,13 @@
 ---
 name: visual-regression-testing
-description: Expert in visual regression testing with Playwright, Chromatic, Percy, BackstopJS, and Storybook visual tests
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [testing, visual-regression, screenshots, playwright, chromatic, percy, backstopjs, storybook]
+description: Expert in visual regression testing with Playwright, Chromatic, Percy, BackstopJS, and Storybook visual tests. Use when writing, running, or improving tests with visual regression testing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [testing, visual-regression, screenshots, playwright, chromatic, percy, backstopjs, storybook]
 ---
 
 # Visual Regression Testing Mode

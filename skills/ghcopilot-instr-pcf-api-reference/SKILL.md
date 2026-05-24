@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-api-reference
-description: Use when the user needs guidance on pcf-api-reference. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-api-reference]
----
-
----
-description: 'Complete PCF API reference with all interfaces and their availability in model-driven and canvas apps'
-applyTo: '**/*.{ts,tsx,js}'
+description: "Use when the user needs guidance on pcf-api-reference. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-api-reference]
+  applyTo: "**/*.{ts,tsx,js}"
+  source: "awesome-copilot"
 ---
 
 # Power Apps Component Framework API Reference

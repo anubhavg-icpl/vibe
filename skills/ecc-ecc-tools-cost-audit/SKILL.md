@@ -1,6 +1,7 @@
 ---
 name: ecc-tools-cost-audit
 description: Evidence-first ECC Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spikes in the ECC Tools repo.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

@@ -1,11 +1,13 @@
 ---
 name: parent-child-retriever-expert
-description: Small chunks for retrieval, large parents for context — sentence-window, multi-vector
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, parent-document, multi-vector, sentence-window, llamaindex, langchain]
+description: Small chunks for retrieval, large parents for context — sentence-window, multi-vector. Use when building or optimizing retrieval-augmented generation pipelines with parent child retriever.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, parent-document, multi-vector, sentence-window, llamaindex, langchain]
 ---
 
 # Parent-Child Retriever Expert Mode

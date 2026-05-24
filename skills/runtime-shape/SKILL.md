@@ -1,10 +1,12 @@
 ---
 name: runtime-shape
-description: Pick a production runtime shape (request-response, streaming, queue, event, cron, durable) and wire observability.
-version: 1.0.0
+description: Pick a production runtime shape (request-response, streaming, queue, event, cron, durable) and wire observability. Use when you need help with runtime shape.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 29
-tags: [production, runtime, queue, event, durable, observability]
+metadata:
+  version: 1.0.0
+  tags: [production, runtime, queue, event, durable, observability]
 ---
 
 Given a task class (expected duration, step count, trigger type, latency budget), pick the runtime shape.

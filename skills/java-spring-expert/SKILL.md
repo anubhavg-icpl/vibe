@@ -1,10 +1,12 @@
 ---
 name: java-spring-expert
-description: java-spring-expert
-risk: unknown
-source: community
-kind: mode
-category: languages
+description: java-spring-expert. Use when writing, reviewing, or refactoring java spring code.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
 ---
 
 # Java Spring Boot Expert Mode

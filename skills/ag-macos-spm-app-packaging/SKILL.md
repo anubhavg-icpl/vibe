@@ -1,9 +1,11 @@
 ---
 name: macos-spm-app-packaging
-description: Scaffold, build, sign, and package SwiftPM macOS apps without Xcode projects.
-risk: safe
-source: "Dimillian/Skills (MIT)"
-date_added: "2026-03-25"
+description: Scaffold, build, sign, and package SwiftPM macOS apps without Xcode projects. Use when you need help with macos spm app packaging.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "Dimillian/Skills (MIT)"
+  date_added: "2026-03-25"
 ---
 
 # macOS SwiftPM App Packaging (No Xcode)

@@ -1,11 +1,13 @@
 ---
 name: acd-cinematic-nvidia-design
-description: Reference DESIGN.md for GPU-vendor cinematic: chrome-black canvas, signature green action, video-led hero, hard-edged grotesque headlines.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, cinematic, claude-design]
+description: Reference DESIGN.md for GPU-vendor cinematic: chrome-black canvas, signature green action, video-led hero, hard-edged grotesque headlines. Use when building UI components, applying design tokens, or implementing visual styles for cinematic nvidia.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, cinematic, claude-design]
 ---
 
 # NVIDIA — Cinematic Compute Design Mode

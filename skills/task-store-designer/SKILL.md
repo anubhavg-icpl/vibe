@@ -1,10 +1,12 @@
 ---
 name: task-store-designer
-description: Design the task store for a long-running MCP tool: state shape, ttl, durability, cancellation, crash recovery.
-version: 1.0.0
+description: Design the task store for a long-running MCP tool: state shape, ttl, durability, cancellation, crash recovery. Use when you need help with task store designer.
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 13
-tags: [mcp, tasks, durable-store, long-running, sep-1686]
+metadata:
+  version: 1.0.0
+  tags: [mcp, tasks, durable-store, long-running, sep-1686]
 ---
 
 Given a long-running tool (research, build, export, report generation), design the task store that backs SEP-1686 task augmentation.

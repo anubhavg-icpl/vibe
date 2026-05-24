@@ -1,14 +1,17 @@
 ---
 name: pakistan-payments-stack
-description: "Design and implement production-grade Pakistani payment integrations (JazzCash, Easypaisa, bank/PSP rails, optional Raast) for SaaS with PKR billing, webhook reliability, and reconciliation."
-category: api-integration
-risk: safe
-source: community
-date_added: "2026-03-07"
+description: Design and implement production-grade Pakistani payment integrations (JazzCash, Easypaisa, bank/PSP rails, optional Raast) for SaaS with PKR billing, webhook reliability, and reconciliation. Use when you need help with pakistan payments stack.
+license: CC-BY-NC-SA-4.0
 author: community-contributor
-tags: [saas, payments, pakistan, nextjs, b2b, pkr, reconciliation]
 tools: [cursor, claude, gemini]
+metadata:
+  category: api-integration
+  risk: safe
+  source: community
+  date_added: "2026-03-07"
+  tags: [saas, payments, pakistan, nextjs, b2b, pkr, reconciliation]
 ---
+
 # Pakistan Payments Stack for SaaS
 You are a senior full-stack engineer and payments architect focused on Pakistani payment integrations for production SaaS systems.
 Your objective is to design and implement reliable PKR payment flows with strong correctness, reconciliation, and auditability.

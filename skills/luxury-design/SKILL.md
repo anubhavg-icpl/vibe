@@ -1,11 +1,13 @@
 ---
 name: luxury-design
-description: Expert in the Luxury design system - High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for luxury brand experiences.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+description: Expert in the Luxury design system - High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for luxury brand experiences. Use when building UI components, applying design tokens, or implementing visual styles for luxury.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Luxury Design System Mode

@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-creative-mode
-description: |
+description: |. Use when you need help with html ppt zhangzara creative mode.
   Creative Mode — Cream paper canvas with confident multi-color (green, pink, orange, yellow) accents and Archivo Black display. Anything that should feel design-led and confident: creative agency pitches, design studio decks, ad shop credentials, brand creative reviews, art-direction reviews.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "creative-mode"
   - "zhangzara-creative-mode"
   - "Creative Mode"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/creative-mode"

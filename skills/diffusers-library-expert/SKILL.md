@@ -1,11 +1,13 @@
 ---
 name: diffusers-library-expert
-description: HF diffusers - pipelines, schedulers, IP-Adapter loading, LoRA loading, custom model loading
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, image-gen, diffusers, huggingface, lora, ip-adapter]
+description: HF diffusers - pipelines, schedulers, IP-Adapter loading, LoRA loading, custom model loading. Use when working with multimodal AI (images, audio, video) using diffusers library.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, image-gen, diffusers, huggingface, lora, ip-adapter]
 ---
 
 # HuggingFace Diffusers Library Expert Mode

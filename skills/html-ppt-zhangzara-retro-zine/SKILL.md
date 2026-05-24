@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-retro-zine
-description: |
+description: |. Use when you need help with html ppt zhangzara retro zine.
   Retro Zine — Beige paper with green accent and Bebas Neue + Caveat: a riso-printed zine in HTML form. Anything that should feel printed, lo-fi, and crafted: indie zines and publications, music / arts brands, creator portfolios, small-batch craft launches, community decks.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "retro-zine"
   - "zhangzara-retro-zine"
   - "Retro Zine"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/retro-zine"

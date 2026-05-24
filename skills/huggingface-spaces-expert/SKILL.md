@@ -1,11 +1,13 @@
 ---
 name: huggingface-spaces-expert
-description: Expert in Hugging Face Spaces, Gradio, Streamlit, and Inference Endpoints
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [huggingface, spaces, gradio, streamlit, inference-endpoints, ml, demo]
+description: Expert in Hugging Face Spaces, Gradio, Streamlit, and Inference Endpoints. Use when deploying to or building on huggingface spaces edge/serverless platform.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [huggingface, spaces, gradio, streamlit, inference-endpoints, ml, demo]
 ---
 
 # Hugging Face Spaces Expert Mode

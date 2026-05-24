@@ -1,7 +1,8 @@
 ---
 name: Webex Automation
-description: "Automate Cisco Webex messaging, rooms, teams, webhooks, and people management through natural language commands"
-requires:
+description: Automate Cisco Webex messaging, rooms, teams, webhooks, and people management through natural language commands. Use when you need help with Webex Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

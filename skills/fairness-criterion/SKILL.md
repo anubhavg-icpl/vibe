@@ -1,10 +1,12 @@
 ---
 name: fairness-criterion
-description: Identify which fairness criterion a claim invokes and audit the associated assumptions.
-version: 1.0.0
+description: Identify which fairness criterion a claim invokes and audit the associated assumptions. Use when you need help with fairness criterion.
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 21
-tags: [fairness, demographic-parity, equalized-odds, counterfactual-fairness, impossibility]
+metadata:
+  version: 1.0.0
+  tags: [fairness, demographic-parity, equalized-odds, counterfactual-fairness, impossibility]
 ---
 
 Given a fairness claim or policy, identify which criterion is being invoked, what assumptions the claim depends on, and what the impossibility theorems imply for the remaining criteria.

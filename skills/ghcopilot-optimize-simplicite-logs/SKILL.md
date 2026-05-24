@@ -1,6 +1,7 @@
 ---
 name: optimize-simplicite-logs
-description: capability to parse Simplicité logs from a raw `.txt` file, filter fields to reduce noise, and output the result as structured JSON.
+description: capability to parse Simplicité logs from a raw `.txt` file, filter fields to reduce noise, and output the result as structured JSON. Use when you need help with optimize simplicite logs.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Optimize Simplicite Logs

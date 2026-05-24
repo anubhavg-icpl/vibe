@@ -1,11 +1,13 @@
 ---
 name: mythos-cyber-eval-disclosure
-description: Responsible disclosure norms for cyber-eval results — methodology without exploit recipes, hash-then-reveal pattern, coordinating with developers and governments
-risk: unknown
-source: community
-kind: mode
-category: agent-eval
-tags: [mythos, ai-eval, frontier-model, ai-safety, disclosure, glasswing, defensive]
+description: Responsible disclosure norms for cyber-eval results — methodology without exploit recipes, hash-then-reveal pattern, coordinating with developers and governments. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving cyber eval disclosure.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: agent-eval
+  tags: [mythos, ai-eval, frontier-model, ai-safety, disclosure, glasswing, defensive]
 ---
 
 # Mythos Cyber Eval Disclosure Mode

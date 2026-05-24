@@ -1,7 +1,8 @@
 ---
 name: shipengine-automation
-description: "Automate Shipengine tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Shipengine tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with shipengine automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

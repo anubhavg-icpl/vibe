@@ -1,13 +1,14 @@
 ---
 name: kami-deck
-description: >
+description: >. Use when you need help with kami deck.
   Produce a print-grade slide deck in the kami (紙 / 纸) design system —
   warm parchment background (or ink-blue for cover / chapter slides),
   serif at one weight, ink-blue accent ≤ 5% per slide, no italic.
   Horizontal magazine swipe pagination (←/→ · wheel · swipe · ESC
   overview). One self-contained HTML file, zero dependencies beyond
   Google Fonts.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - kami deck
   - 紙 deck
   - 纸 deck
@@ -16,7 +17,7 @@ triggers:
   - editorial deck
   - print-style slides
   - kami slides
-od:
+od: 
   category: brand-deck
   surface: web
   mode: deck
@@ -34,7 +35,7 @@ od:
     requires:
       - typographic-rhythm
       - pixel-discipline
-inputs:
+inputs: 
   - id: brand
     label: Brand identity (shared across slides)
   - id: deck_title
@@ -43,16 +44,16 @@ inputs:
     label: Ordered list of typed slides (cover · chapter · content · stats · quote · cta · end)
   - id: language
     label: Primary language stack
-parameters:
+parameters: 
   language:
     type: enum
     values: [en, zh-CN, ja]
     default: en
     description: Sets `--serif` to Charter / TsangerJinKai02 / YuMincho respectively.
-outputs:
+outputs: 
   - path: <out>/index.html
     description: Self-contained kami deck with horizontal swipe pagination.
-capabilities_required:
+capabilities_required: 
   - file-write
 example_prompt: |
   Build me a 9-slide kami-style internal deck for "Hokuto Research" —

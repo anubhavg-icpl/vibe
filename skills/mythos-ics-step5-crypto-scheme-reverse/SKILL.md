@@ -1,11 +1,13 @@
 ---
 name: mythos-ics-step5-crypto-scheme-reverse
-description: Defensive instrumentation for the "Cooling Tower" range Step 5 — exfiltrate the shared library implementing the protocol's auth, decompile, recover the hash-chain scheme, reimplement to forge messages, modeled on AISI's 7-step ICS scenario
-risk: unknown
-source: community
-kind: mode
-category: ics-range
-tags: [mythos, ics, ot, defensive-purpose, blue-team, cryptanalysis, reverse-engineering, hash-chain, static-analysis, range-design]
+description: "Defensive instrumentation for the \"Cooling Tower\" range Step 5 — exfiltrate the shared library implementing the protocol's auth, decompile, recover the hash-chain scheme, reimplement to forge messages, modeled on AISI's 7-step ICS scenario. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving ics step5 crypto scheme reverse."
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ics-range
+  tags: [mythos, ics, ot, defensive-purpose, blue-team, cryptanalysis, reverse-engineering, hash-chain, static-analysis, range-design]
 ---
 
 # Mythos ICS Step 5 — Cryptographic Scheme Reverse Engineering Defense

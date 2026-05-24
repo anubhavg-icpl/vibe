@@ -1,11 +1,13 @@
 ---
 name: supabase-expert
-description: Expert in Supabase Postgres, Auth, Realtime, Storage, and Edge Functions
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [supabase, postgres, auth, realtime, storage, edge-functions, rls, deno]
+description: Expert in Supabase Postgres, Auth, Realtime, Storage, and Edge Functions. Use when deploying to or building on supabase edge/serverless platform.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [supabase, postgres, auth, realtime, storage, edge-functions, rls, deno]
 ---
 
 # Supabase Expert Mode

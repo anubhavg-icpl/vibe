@@ -1,11 +1,13 @@
 ---
 name: dpo-expert
-description: Direct Preference Optimization — preference alignment without an explicit reward model
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, dpo, preference-optimization, alignment, rlhf]
+description: Direct Preference Optimization — preference alignment without an explicit reward model. Use when fine-tuning, training, or adapting language models with dpo techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, dpo, preference-optimization, alignment, rlhf]
 ---
 
 # DPO Expert Mode

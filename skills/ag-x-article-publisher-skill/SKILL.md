@@ -1,9 +1,11 @@
 ---
 name: x-article-publisher-skill
-description: "Publish articles to X/Twitter"
-risk: safe
-source: "https://github.com/wshuyi/x-article-publisher-skill"
-date_added: "2026-02-27"
+description: Publish articles to X/Twitter. Use when you need help with x article publisher skill.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/wshuyi/x-article-publisher-skill"
+  date_added: "2026-02-27"
 ---
 
 # X Article Publisher Skill

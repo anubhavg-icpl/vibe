@@ -1,7 +1,8 @@
 ---
 name: Braintree Automation
-description: "Braintree Automation: manage payment processing via Stripe-compatible tools for customers, subscriptions, payment methods, and transactions"
-requires:
+description: Braintree Automation: manage payment processing via Stripe-compatible tools for customers, subscriptions, payment methods, and transactions. Use when you need help with Braintree Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

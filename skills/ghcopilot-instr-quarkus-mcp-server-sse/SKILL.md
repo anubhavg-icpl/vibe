@@ -1,14 +1,14 @@
 ---
 name: ghcopilot-instr-quarkus-mcp-server-sse
-description: Use when the user needs guidance on quarkus-mcp-server-sse. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, quarkus-mcp-server-sse]
+description: "Use when the user needs guidance on quarkus-mcp-server-sse. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, quarkus-mcp-server-sse]
+  applyTo: "*"
+  source: "awesome-copilot"
 ---
 
----
-applyTo: '*'
-description: 'Quarkus and MCP Server with HTTP SSE transport development standards and instructions'
----
 # Quarkus MCP Server
 
 Build MCP servers with Java 21, Quarkus, and HTTP SSE transport.

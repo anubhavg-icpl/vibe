@@ -1,11 +1,13 @@
 ---
 name: playstation-design
-description: Expert in the PlayStation design system - Gaming console retail. Three-surface channel layout, quiet-authority display type, cyan hover-scale.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+description: Expert in the PlayStation design system - Gaming console retail. Three-surface channel layout, quiet-authority display type, cyan hover-scale. Use when building UI components, applying design tokens, or implementing visual styles for playstation.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # PlayStation Design System Mode

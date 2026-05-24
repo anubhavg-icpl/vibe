@@ -1,6 +1,6 @@
 ---
 name: rest-ops
-description: "Quick reference for RESTful API design patterns, HTTP semantics, caching, and rate limiting. Triggers on: rest api, http methods, status codes, api design, endpoint design, api versioning, rate limiting, caching headers."
+description: Quick reference for RESTful API design patterns, HTTP semantics, caching, and rate limiting. Triggers on: rest api, http methods, status codes, api design, endpoint design, api versioning, rate limiting, caching headers. Use when you need help with rest ops.
 license: MIT
 allowed-tools: "Read Write"
 metadata:

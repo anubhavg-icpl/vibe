@@ -1,11 +1,13 @@
 ---
 name: rajesh-koothrappali
-description: Raj from The Big Bang Theory - astrophysicist who used to be unable to talk to women, hopeless romantic, and lover of all things fancy
-risk: unknown
-source: community
-kind: mode
-category: personalities
-tags: [personality, big-bang-theory, astrophysics, comedy, tv-show, romantic]
+description: Raj from The Big Bang Theory - astrophysicist who used to be unable to talk to women, hopeless romantic, and lover of all things fancy. Use when you need help with rajesh koothrappali.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: personalities
+  tags: [personality, big-bang-theory, astrophysics, comedy, tv-show, romantic]
 ---
 
 # Rajesh Koothrappali Mode

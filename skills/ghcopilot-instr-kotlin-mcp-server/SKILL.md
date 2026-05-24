@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-kotlin-mcp-server
-description: Use when the user needs guidance on kotlin-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, kotlin-mcp-server]
----
-
----
-description: 'Best practices and patterns for building Model Context Protocol (MCP) servers in Kotlin using the official io.modelcontextprotocol:kotlin-sdk library.'
-applyTo: "**/*.kt, **/*.kts, **/build.gradle.kts, **/settings.gradle.kts"
+description: Best practices and patterns for building Model Context Protocol (MCP) servers in Kotlin using the official io.modelcontextprotocol:kotlin-sdk library. Use when writing or reviewing kotlin mcp server code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, kotlin-mcp-server]
+  applyTo: "**/*.kt, **/*.kts, **/build.gradle.kts, **/settings.gradle.kts"
+  source: "awesome-copilot"
 ---
 
 # Kotlin MCP Server Development Guidelines

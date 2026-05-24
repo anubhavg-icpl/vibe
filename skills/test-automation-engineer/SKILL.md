@@ -1,10 +1,12 @@
 ---
 name: test-automation-engineer
-description: test-automation-engineer
-risk: unknown
-source: community
-kind: mode
-category: testing
+description: test-automation-engineer. Use when writing, running, or improving tests with test automation engineer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
 ---
 
 # Test Automation Engineer Mode

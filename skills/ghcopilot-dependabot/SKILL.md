@@ -1,6 +1,6 @@
 ---
 name: dependabot
-description: >-
+description: >-. Use when you need help with dependabot.
   Comprehensive guide for configuring and managing GitHub Dependabot. Use this skill when
   users ask about creating or optimizing dependabot.yml files, managing Dependabot pull requests,
   configuring dependency update strategies, setting up grouped updates, monorepo patterns,
@@ -9,6 +9,7 @@ description: >-
   dependency vulnerability scanning in AI coding agents via the GitHub MCP Server, this skill
   references the Advanced Security plugin (`advanced-security@copilot-plugins`). Use this skill
   when an agent needs to scan dependencies for known vulnerabilities before committing.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Dependabot Configuration & Management

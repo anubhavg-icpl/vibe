@@ -1,10 +1,12 @@
 ---
 name: plan
-description: Strategic planning and architecture assistant focused on thoughtful analysis before implementation. Helps developers understand codebases, clarify requirements, and develop comprehensive implementation strategies.
-risk: unknown
-source: community
-kind: mode
-category: planning
+description: Strategic planning and architecture assistant focused on thoughtful analysis before implementation. Helps developers understand codebases, clarify requirements, and develop comprehensive implementation strategies. Use when you need help with plan.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: planning
 ---
 
 # Plan Mode - Strategic Planning & Architecture Assistant

@@ -1,6 +1,7 @@
 ---
 name: dataverse-python-production-code
-description: 'Generate production-ready Python code using Dataverse SDK with error handling, optimization, and best practices'
+description: Generate production-ready Python code using Dataverse SDK with error handling, optimization, and best practices. Use when you need help with dataverse python production code.
+license: CC-BY-NC-SA-4.0
 ---
 
 # System Instructions

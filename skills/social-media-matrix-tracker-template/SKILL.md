@@ -1,11 +1,12 @@
 ---
 name: social-media-matrix-tracker-template
-description: |
+description: |. Use when you need help with social media matrix tracker template.
   社媒矩阵数据追踪面板模板（Social Media Matrix Tracker）。
   Use when users ask for a cinematic, data-dense social media analytics dashboard
   with multi-platform metrics, interactive charts, hover insights, range compare,
   and dark/light theme switching in a single HTML artifact.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "social media matrix tracker"
   - "social media dashboard template"
   - "creator analytics template"
@@ -24,7 +25,7 @@ triggers:
   - "内容运营数据看板"
   - "抖音数据看板"
   - "小红书数据看板"
-od:
+od: 
   mode: template
   platform: desktop
   scenario: live-artifacts

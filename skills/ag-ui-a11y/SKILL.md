@@ -1,15 +1,17 @@
 ---
 name: ui-a11y
-description: "Audit a StyleSeed-based component or page for WCAG 2.2 AA issues and apply practical accessibility fixes where the code makes them safe."
-category: design
-risk: safe
-source: community
+description: Audit a StyleSeed-based component or page for WCAG 2.2 AA issues and apply practical accessibility fixes where the code makes them safe. Use when you need help with ui a11y.
+license: CC-BY-NC-SA-4.0
 source_repo: bitjaru/styleseed
 source_type: community
-date_added: "2026-04-08"
 author: bitjaru
-tags: [ui, accessibility, wcag, audit, styleseed]
 tools: [claude, cursor, codex, gemini]
+metadata:
+  category: design
+  risk: safe
+  source: community
+  date_added: "2026-04-08"
+  tags: [ui, accessibility, wcag, audit, styleseed]
 ---
 
 # UI Accessibility Audit

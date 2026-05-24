@@ -1,10 +1,12 @@
 ---
 name: vad-tuner
-description: Pick VAD model, threshold, silence hangover, pre-roll, and turn-detection strategy for a voice agent.
-version: 1.0.0
+description: Pick VAD model, threshold, silence hangover, pre-roll, and turn-detection strategy for a voice agent. Use when you need help with vad tuner.
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 14
-tags: [vad, silero, cobra, turn-detection, flush-trick]
+metadata:
+  version: 1.0.0
+  tags: [vad, silero, cobra, turn-detection, flush-trick]
 ---
 
 Given the workload (consumer / call-center / edge / accessibility; noise profile; language mix; latency), output:

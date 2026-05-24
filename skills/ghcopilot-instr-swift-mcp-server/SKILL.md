@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-swift-mcp-server
-description: Use when the user needs guidance on swift-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, swift-mcp-server]
----
-
----
-description: 'Best practices and patterns for building Model Context Protocol (MCP) servers in Swift using the official MCP Swift SDK package.'
-applyTo: "**/*.swift, **/Package.swift, **/Package.resolved"
+description: Best practices and patterns for building Model Context Protocol (MCP) servers in Swift using the official MCP Swift SDK package. Use when writing or reviewing swift mcp server code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, swift-mcp-server]
+  applyTo: "**/*.swift, **/Package.swift, **/Package.resolved"
+  source: "awesome-copilot"
 ---
 
 # Swift MCP Server Development Guidelines

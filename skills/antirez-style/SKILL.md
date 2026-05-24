@@ -1,11 +1,13 @@
 ---
 name: antirez-style
-description: Salvatore Sanfilippo — Redis, single-author C, simplicity through proofs-of-concept, comments are essential
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, c, redis, simplicity, single-author, systems]
+description: Salvatore Sanfilippo — Redis, single-author C, simplicity through proofs-of-concept, comments are essential. Use when you want code review, architecture advice, or opinions in the style of antirez.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, c, redis, simplicity, single-author, systems]
 ---
 
 # antirez Style Mode

@@ -1,11 +1,13 @@
 ---
 name: renault-design
-description: Expert in the Renault design system - French automotive. Vibrant aurora gradients, NouvelR typography, bold energy.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, automotive]
+description: Expert in the Renault design system - French automotive. Vibrant aurora gradients, NouvelR typography, bold energy. Use when building UI components, applying design tokens, or implementing visual styles for renault.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, automotive]
 ---
 
 # Renault Design System Mode

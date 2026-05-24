@@ -1,10 +1,12 @@
 ---
 name: devops-agent
-description: Build a Kubernetes troubleshooting agent that walks a cluster knowledge graph, ranks root causes, and gates every remediation through Slack.
-version: 1.0.0
+description: Build a Kubernetes troubleshooting agent that walks a cluster knowledge graph, ranks root causes, and gates every remediation through Slack. Use when you need help with devops agent.
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 06
-tags: [capstone, devops, sre, kubernetes, langgraph, fastmcp, aiops]
+metadata:
+  version: 1.0.0
+  tags: [capstone, devops, sre, kubernetes, langgraph, fastmcp, aiops]
 ---
 
 Given a K8s cluster and an alert source (PagerDuty or Alertmanager), build an agent that produces ranked root-cause hypotheses in under five minutes and gates every remediation through a Slack approval card.

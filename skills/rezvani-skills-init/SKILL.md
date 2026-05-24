@@ -1,9 +1,10 @@
 ---
 name: "init"
-description: >-
+description: >-. Use when you need help with init.
   Set up Playwright in a project. Use when user says "set up playwright",
   "add e2e tests", "configure playwright", "testing setup", "init playwright",
   or "add test infrastructure".
+license: CC-BY-NC-SA-4.0
 ---
 
 # Initialize Playwright Project

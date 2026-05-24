@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-aws-appsync
-description: Use when the user needs guidance on aws-appsync. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, aws-appsync]
----
-
----
-description: 'Production-grade guidance for AWS AppSync Event API handlers using APPSYNC_JS runtime restrictions, utilities, modules, and datasource patterns'
-applyTo: '**/*.{graphql,gql,vtl,ts,js,mjs,cjs,json,yml,yaml}'
+description: Production-grade guidance for AWS AppSync Event API handlers using APPSYNC_JS runtime restrictions, utilities, modules, and datasource patterns. Use when writing or reviewing aws appsync code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, aws-appsync]
+  applyTo: "**/*.{graphql,gql,vtl,ts,js,mjs,cjs,json,yml,yaml}"
+  source: "awesome-copilot"
 ---
 
 # AWS AppSync Event API Instructions

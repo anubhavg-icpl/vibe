@@ -1,10 +1,12 @@
 ---
 name: societal-risk-review
-description: Review a deployment for societal-scale-risk posture using the CAIS four-risk framework and CAISI / SB-53 regulatory context.
-version: 1.0.0
+description: Review a deployment for societal-scale-risk posture using the CAIS four-risk framework and CAISI / SB-53 regulatory context. Use when you need help with societal risk review.
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 22
-tags: [cais, caisi, four-risk-framework, organizational-risk, sb-53, societal-risk]
+metadata:
+  version: 1.0.0
+  tags: [cais, caisi, four-risk-framework, organizational-risk, sb-53, societal-risk]
 ---
 
 Given a proposed or operating AI deployment, produce a societal-scale-risk review that tags the deployment against the CAIS four-risk framework, inventories organizational-risk sub-levers, and names the regulatory surface.

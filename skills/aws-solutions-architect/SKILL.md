@@ -1,10 +1,12 @@
 ---
 name: aws-solutions-architect
-description: aws-solutions-architect
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+description: aws-solutions-architect. Use when architecting or managing cloud infrastructure with aws solutions architect.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # AWS Solutions Architect Mode

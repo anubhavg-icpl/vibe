@@ -1,11 +1,13 @@
 ---
 name: cosmic-design
-description: Expert in the Cosmic design system - Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+description: Expert in the Cosmic design system - Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements. Use when building UI components, applying design tokens, or implementing visual styles for cosmic.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Cosmic Design System Mode

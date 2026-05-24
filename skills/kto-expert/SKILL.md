@@ -1,11 +1,13 @@
 ---
 name: kto-expert
-description: Kahneman-Tversky Optimization — preference alignment from binary feedback instead of paired comparisons
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, kto, preference-optimization, alignment]
+description: Kahneman-Tversky Optimization — preference alignment from binary feedback instead of paired comparisons. Use when fine-tuning, training, or adapting language models with kto techniques.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, kto, preference-optimization, alignment]
 ---
 
 # KTO Expert Mode

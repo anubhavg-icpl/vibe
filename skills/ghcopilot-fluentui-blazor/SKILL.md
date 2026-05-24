@@ -1,6 +1,6 @@
 ---
 name: fluentui-blazor
-description: >
+description: >. Use when you need help with fluentui blazor.
   Guide for using the Microsoft Fluent UI Blazor component library
   (Microsoft.FluentUI.AspNetCore.Components NuGet package) in Blazor applications.
   Use this when the user is building a Blazor app with Fluent UI components,
@@ -8,6 +8,7 @@ description: >
   FluentDialog, FluentToast, FluentNavMenu, FluentTextField, FluentSelect,
   FluentAutocomplete, FluentDesignTheme, or any component prefixed with "Fluent".
   Also use when troubleshooting missing providers, JS interop issues, or theming.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Fluent UI Blazor — Consumer Usage Guide

@@ -1,10 +1,12 @@
 ---
 name: game-design-consultant
-description: game-design-consultant
-risk: unknown
-source: community
-kind: mode
-category: game-development
+description: game-design-consultant. Use when developing games with game design consultant.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: game-development
 ---
 
 # Game Design Consultant Mode

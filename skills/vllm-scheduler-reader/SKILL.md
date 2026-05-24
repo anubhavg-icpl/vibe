@@ -1,10 +1,12 @@
 ---
 name: vllm-scheduler-reader
-description: Diagnose a vLLM serving config by reading the scheduler-level knobs and identifying which of PagedAttention, continuous batching, and chunked prefill is the bottleneck.
-version: 1.0.0
+description: Diagnose a vLLM serving config by reading the scheduler-level knobs and identifying which of PagedAttention, continuous batching, and chunked prefill is the bottleneck. Use when you need help with vllm scheduler reader.
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 04
-tags: [vllm, paged-attention, continuous-batching, chunked-prefill, serving, scheduler]
+metadata:
+  version: 1.0.0
+  tags: [vllm, paged-attention, continuous-batching, chunked-prefill, serving, scheduler]
 ---
 
 Given a vLLM serving config (model, dtype, hardware, `--gpu-memory-utilization`, `--max-num-batched-tokens`, `--enable-chunked-prefill`, `--speculative-model` or `--speculative-config`, max concurrency, and an observed metric set of TTFT mean/P99, ITL mean/P99, throughput tok/s), produce a scheduler-level diagnosis.

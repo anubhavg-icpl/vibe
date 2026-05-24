@@ -1,10 +1,12 @@
 ---
 name: hybrid-picker
-description: Pick between pure Transformer, Jamba-style hybrid, and pure SSM for a given workload.
-version: 1.0.0
+description: Pick between pure Transformer, Jamba-style hybrid, and pure SSM for a given workload. Use when you need help with hybrid picker.
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 21
-tags: [jamba, mamba, ssm, hybrid, long-context, memory-budget, architecture]
+metadata:
+  version: 1.0.0
+  tags: [jamba, mamba, ssm, hybrid, long-context, memory-budget, architecture]
 ---
 
 Given a workload specification (context length profile p50/p99, task mix, memory budget per GPU, target throughput, quality-vs-speed priority), recommend between a pure Transformer (+MoE +MLA), a Jamba-style hybrid, and a pure Mamba model.

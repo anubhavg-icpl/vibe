@@ -1,11 +1,13 @@
 ---
 name: dart-coding-standards
-description: Production-ready Dart and Flutter coding standards
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [dart, flutter, standards, mobile, cross-platform]
+description: Production-ready Dart and Flutter coding standards. Use when enforcing dart coding conventions and style rules.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [dart, flutter, standards, mobile, cross-platform]
 ---
 
 # Dart Coding Standards

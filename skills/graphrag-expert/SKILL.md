@@ -1,11 +1,13 @@
 ---
 name: graphrag-expert
-description: Microsoft GraphRAG — entity/community extraction, hierarchical summarization, local vs global queries
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, graphrag, knowledge-graph, microsoft, hierarchical]
+description: Microsoft GraphRAG — entity/community extraction, hierarchical summarization, local vs global queries. Use when building or optimizing retrieval-augmented generation pipelines with graphrag.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, graphrag, knowledge-graph, microsoft, hierarchical]
 ---
 
 # GraphRAG Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: acd-data-dense-datadog-design
-description: Reference DESIGN.md for monitoring dashboards: deep navy chrome, royal-purple brand, warm-cool categorical chart palette tuned for stacked time series at 1px tick precision.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, data-dense, claude-design]
+description: Reference DESIGN.md for monitoring dashboards: deep navy chrome, royal-purple brand, warm-cool categorical chart palette tuned for stacked time series at 1px tick precision. Use when building UI components, applying design tokens, or implementing visual styles for data dense datadog.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, data-dense, claude-design]
 ---
 
 # Datadog — Observability Density Design Mode

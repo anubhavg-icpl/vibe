@@ -1,9 +1,11 @@
 ---
 name: android-jetpack-compose-expert
-description: "Expert guidance for building modern Android UIs with Jetpack Compose, covering state management, navigation, performance, and Material Design 3."
-risk: safe
-source: community
-date_added: "2026-02-27"
+description: Expert guidance for building modern Android UIs with Jetpack Compose, covering state management, navigation, performance, and Material Design 3. Use when you need deep expertise in android jetpack compose.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Android Jetpack Compose Expert

@@ -1,10 +1,11 @@
 ---
 name: login-flow
-description: Mobile login and authentication flow screens
-od:
+description: Mobile login and authentication flow screens. Use when you need help with login flow.
+license: CC-BY-NC-SA-4.0
+od: 
   mode: prototype
   platform: mobile
-triggers:
+triggers: 
   - login
   - sign in
   - 注册登录

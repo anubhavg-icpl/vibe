@@ -1,6 +1,7 @@
 ---
 name: skill-autodiff
-description: Build, debug, and reason about automatic differentiation systems
+description: Build, debug, and reason about automatic differentiation systems. Use when you need help with skill autodiff.
+license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 5
 ---

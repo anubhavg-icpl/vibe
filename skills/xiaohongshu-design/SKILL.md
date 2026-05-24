@@ -1,11 +1,13 @@
 ---
 name: xiaohongshu-design
-description: Expert in the Xiaohongshu design system - Lifestyle UGC social platform. Singular brand red, generous radius, content-first.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+description: Expert in the Xiaohongshu design system - Lifestyle UGC social platform. Singular brand red, generous radius, content-first. Use when building UI components, applying design tokens, or implementing visual styles for xiaohongshu.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # Xiaohongshu Design System Mode

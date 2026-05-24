@@ -1,6 +1,7 @@
 ---
 name: create-tldr-page
-description: 'Create a tldr page from documentation URLs and command examples, requiring both URL and command name.'
+description: Create a tldr page from documentation URLs and command examples, requiring both URL and command name. Use when you need help with create tldr page.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create TLDR Page

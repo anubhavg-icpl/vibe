@@ -1,10 +1,12 @@
 ---
 name: legacy-code-modernizer
-description: Expert in modernizing legacy codebases with safe, incremental refactoring strategies
-risk: unknown
-source: community
-kind: mode
-category: refactoring
+description: Expert in modernizing legacy codebases with safe, incremental refactoring strategies. Use when you need help with legacy code modernizer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: refactoring
 ---
 
 # Legacy Code Modernizer Mode

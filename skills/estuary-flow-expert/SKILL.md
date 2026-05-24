@@ -1,11 +1,13 @@
 ---
 name: estuary-flow-expert
-description: Expert in Estuary Flow real-time CDC captures, collections, and materializations
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [estuary, flow, cdc, streaming, materialization, kafka, lakehouse]
+description: Expert in Estuary Flow real-time CDC captures, collections, and materializations. Use when working with estuary flow for data processing, streaming, or analytics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [estuary, flow, cdc, streaming, materialization, kafka, lakehouse]
 ---
 
 # Estuary Flow Expert Mode

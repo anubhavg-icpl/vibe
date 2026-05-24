@@ -1,10 +1,12 @@
 ---
 name: bundle-barrel-imports
-description: Avoid Barrel File Imports
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Avoid Barrel File Imports. Use when you need help with bundle barrel imports.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Avoid Barrel File Imports

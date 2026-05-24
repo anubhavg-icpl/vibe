@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-overview
-description: Use when the user needs guidance on pcf-overview. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-overview]
----
-
----
-description: 'Power Apps Component Framework overview and fundamentals'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj}'
+description: "Use when the user needs guidance on pcf-overview. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-overview]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj}"
+  source: "awesome-copilot"
 ---
 
 # Power Apps Component Framework Overview

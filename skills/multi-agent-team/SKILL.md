@@ -1,10 +1,12 @@
 ---
 name: multi-agent-team
-description: Build a multi-agent software team with architect, parallel coders, reviewer, and tester; measure against SWE-bench Pro and produce a handoff post-mortem.
-version: 1.0.0
+description: Build a multi-agent software team with architect, parallel coders, reviewer, and tester; measure against SWE-bench Pro and produce a handoff post-mortem. Use when you need help with multi agent team.
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 10
-tags: [capstone, multi-agent, swe-bench, langgraph, a2a, worktree, roles]
+metadata:
+  version: 1.0.0
+  tags: [capstone, multi-agent, swe-bench, langgraph, a2a, worktree, roles]
 ---
 
 Given a GitHub issue URL and a parallelism level, deploy a multi-agent software team that produces a merge-ready PR. Evaluate on 50 SWE-bench Pro issues and publish a handoff-failure histogram.

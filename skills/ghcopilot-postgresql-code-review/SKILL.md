@@ -1,6 +1,7 @@
 ---
 name: postgresql-code-review
-description: 'PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).'
+description: PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS). Use when you need help with postgresql code review.
+license: CC-BY-NC-SA-4.0
 ---
 
 # PostgreSQL Code Review Assistant

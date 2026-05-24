@@ -1,11 +1,13 @@
 ---
 name: mem0-expert
-description: Build long-term, scalable memory layers for AI agents with Mem0
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [mem0, memory, agents, vector-db, graph-memory, python]
+description: Build long-term, scalable memory layers for AI agents with Mem0. Use when building AI applications with mem0.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [mem0, memory, agents, vector-db, graph-memory, python]
 ---
 
 # Mem0 Expert Mode

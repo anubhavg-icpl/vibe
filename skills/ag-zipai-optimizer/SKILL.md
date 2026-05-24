@@ -1,11 +1,13 @@
 ---
 id: zipai-optimizer
 name: zipai-optimizer
-version: "12.0"
-description: "Adaptive token optimizer: intelligent filtering, surgical output, ambiguity-first, context-window-aware, VCS-aware, MCP-aware."
-category: agent-behavior
-risk: safe
-source: community
+description: Adaptive token optimizer: intelligent filtering, surgical output, ambiguity-first, context-window-aware, VCS-aware, MCP-aware. Use when you need help with zipai optimizer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "12.0"
+  category: agent-behavior
+  risk: safe
+  source: community
 ---
 
 # ZipAI: Context & Token Optimizer

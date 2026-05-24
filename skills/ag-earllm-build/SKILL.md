@@ -1,22 +1,14 @@
 ---
 name: earllm-build
-description: "Build, maintain, and extend the EarLLM One Android project — a Kotlin/Compose app that connects Bluetooth earbuds to an LLM via voice pipeline."
-risk: safe
-source: community
-date_added: '2026-03-06'
+description: Build, maintain, and extend the EarLLM One Android project — a Kotlin/Compose app that connects Bluetooth earbuds to an LLM via voice pipeline. Use when you need help with earllm build.
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- android
-- kotlin
-- bluetooth
-- llm
-- voice
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-03-06'
+  tags:
 ---
 
 # EarLLM One — Build & Maintain

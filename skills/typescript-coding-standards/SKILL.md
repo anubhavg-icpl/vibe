@@ -1,11 +1,13 @@
 ---
 name: typescript-coding-standards
-description: Production-ready TypeScript coding standards enforcing type safety, modern patterns, and maintainability
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [typescript, javascript, coding-standards, eslint, prettier]
+description: Production-ready TypeScript coding standards enforcing type safety, modern patterns, and maintainability. Use when enforcing typescript coding conventions and style rules.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [typescript, javascript, coding-standards, eslint, prettier]
 ---
 
 # TypeScript Coding Standards Mode

@@ -1,9 +1,11 @@
 ---
 name: aws-skills
-description: "AWS development with infrastructure automation and cloud architecture patterns"
-risk: safe
-source: "https://github.com/zxkane/aws-skills"
-date_added: "2026-02-27"
+description: AWS development with infrastructure automation and cloud architecture patterns. Use when you need help with aws skills.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/zxkane/aws-skills"
+  date_added: "2026-02-27"
 ---
 
 # Aws Skills

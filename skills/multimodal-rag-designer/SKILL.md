@@ -1,10 +1,12 @@
 ---
 name: multimodal-rag-designer
-description: Design a production multimodal RAG across text, images, audio, video with retrievers, fusion strategy, and grounded generator.
-version: 1.0.0
+description: Design a production multimodal RAG across text, images, audio, video with retrievers, fusion strategy, and grounded generator. Use when you need help with multimodal rag designer.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 24
-tags: [multimodal-rag, cross-modal-retrieval, fusion, grounded-generation]
+metadata:
+  version: 1.0.0
+  tags: [multimodal-rag, cross-modal-retrieval, fusion, grounded-generation]
 ---
 
 Given a multimodal product query flow (which modalities in the query, which in the corpus), design retrievers, fusion, and generation.

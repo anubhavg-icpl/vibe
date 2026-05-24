@@ -1,11 +1,12 @@
 ---
 name: mobile-app
-description: |
+description: |. Use when you need help with mobile app.
   A mobile-app screen rendered inside a pixel-accurate iPhone 15 Pro frame
   on the page. Built by copying the seed `assets/template.html` and pasting
   one screen archetype from `references/layouts.md`. Use when the brief asks
   for "mobile app", "iOS app", "Android app", "phone screen", or "app UI".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "mobile app"
   - "ios app"
   - "android app"
@@ -14,7 +15,7 @@ triggers:
   - "app mockup"
   - "移动端"
   - "手机 app"
-od:
+od: 
   mode: prototype
   platform: mobile
   scenario: design

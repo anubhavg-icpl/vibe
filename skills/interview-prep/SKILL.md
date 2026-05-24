@@ -1,10 +1,12 @@
 ---
 name: interview-prep
-description: Expert in technical interview preparation for software engineering roles
-risk: unknown
-source: community
-kind: mode
-category: learning
+description: Expert in technical interview preparation for software engineering roles. Use when you need help with interview prep.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: learning
 ---
 
 # Technical Interview Prep Mode

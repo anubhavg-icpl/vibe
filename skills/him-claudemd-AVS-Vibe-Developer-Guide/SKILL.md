@@ -1,8 +1,10 @@
 ---
 name: him-claudemd-AVS-Vibe-Developer-Guide
 description: Use when working with the AVS-Vibe-Developer-Guide project or similar codebases. Contains project-specific CLAUDE.md context from the awesome-claude-code community collection.
-version: 1.0.0
-tags: [claude-md, community, AVS-Vibe-Developer-Guide]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [claude-md, community, AVS-Vibe-Developer-Guide]
 ---
 
 # CLAUDE.md

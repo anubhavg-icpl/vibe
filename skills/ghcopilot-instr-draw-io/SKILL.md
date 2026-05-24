@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-draw-io
-description: Use when the user needs guidance on draw-io. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, draw-io]
----
-
----
 description: "Use when creating, editing, or reviewing draw.io diagrams and mxGraph XML in .drawio, .drawio.svg, or .drawio.png files."
-applyTo: "**/*.drawio,**/*.drawio.svg,**/*.drawio.png"
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, draw-io]
+  applyTo: "**/*.drawio,**/*.drawio.svg,**/*.drawio.png"
+  source: "awesome-copilot"
 ---
 
 # draw.io Diagram Standards

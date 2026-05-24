@@ -1,10 +1,12 @@
 ---
 name: performance-optimizer
-description: "Identifies and fixes performance bottlenecks in code, databases, and APIs. Measures before and after to prove improvements."
-category: development
-risk: safe
-source: community
-date_added: "2026-03-05"
+description: Identifies and fixes performance bottlenecks in code, databases, and APIs. Measures before and after to prove improvements. Use when you need help with performance optimizer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: development
+  risk: safe
+  source: community
+  date_added: "2026-03-05"
 ---
 
 # Performance Optimizer

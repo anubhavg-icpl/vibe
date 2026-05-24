@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-vsixtoolkit
-description: Use when the user needs guidance on vsixtoolkit. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, vsixtoolkit]
----
-
----
-description: 'Guidelines for Visual Studio extension (VSIX) development using Community.VisualStudio.Toolkit'
-applyTo: '**/*.cs, **/*.vsct, **/*.xaml, **/source.extension.vsixmanifest'
+description: "Use when the user needs guidance on vsixtoolkit. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, vsixtoolkit]
+  applyTo: "**/*.cs, **/*.vsct, **/*.xaml, **/source.extension.vsixmanifest"
+  source: "awesome-copilot"
 ---
 
 # Visual Studio Extension Development with Community.VisualStudio.Toolkit

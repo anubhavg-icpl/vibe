@@ -1,11 +1,13 @@
 ---
 name: clean-design
-description: Expert in the Clean design system - Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+description: Expert in the Clean design system - Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter. Use when building UI components, applying design tokens, or implementing visual styles for clean.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Clean Design System Mode

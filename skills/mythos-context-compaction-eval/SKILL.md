@@ -1,11 +1,13 @@
 ---
 name: mythos-context-compaction-eval
-description: Implement and audit context compaction for long-horizon agent runs — ~80% trigger, summarization fidelity, KV-cache cost tradeoffs, credential handling
-risk: unknown
-source: community
-kind: mode
-category: agent-eval
-tags: [mythos, ai-eval, frontier-model, ai-safety, compaction, long-horizon, defensive]
+description: Implement and audit context compaction for long-horizon agent runs — ~80% trigger, summarization fidelity, KV-cache cost tradeoffs, credential handling. Use when performing defensive security research, vulnerability analysis, or coordinated disclosure involving context compaction eval.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: agent-eval
+  tags: [mythos, ai-eval, frontier-model, ai-safety, compaction, long-horizon, defensive]
 ---
 
 # Mythos Context Compaction Eval Mode

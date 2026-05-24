@@ -1,6 +1,6 @@
 ---
 name: sprite-animation
-description: |
+description: |. Use when you need help with sprite animation.
   A pixel / sprite-style animated explainer slide — full-bleed cream stage,
   bold display year, animated pixel-art mascot (e.g. Hanafuda card, mushroom,
   or 8-bit console), kinetic Japanese display type, ticking timeline ribbon.
@@ -9,7 +9,8 @@ description: |
   Use when the brief asks for a "sprite animation", "pixel-art video",
   "8-bit explainer", "history of X explainer", "kinetic typography history",
   "Nintendo-style", "精灵图动画", "像素动画", or "复古动画".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "sprite animation"
   - "pixel art animation"
   - "8-bit explainer"
@@ -20,7 +21,7 @@ triggers:
   - "精灵图"
   - "像素动画"
   - "复古动画"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing
@@ -33,6 +34,7 @@ od:
     sections: [color, typography, layout, components]
   example_prompt: "Create a sprite-based animation introducing trivia about Nintendo's history. Combine pixel mascots, animated text, and a Hanafuda accent. Use color and type that feel like the Nintendo brand."
 ---
+
 # Sprite Animation Skill
 
 Produce a single animated frame of an educational explainer — the kind you

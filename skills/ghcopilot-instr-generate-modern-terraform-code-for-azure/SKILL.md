@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-generate-modern-terraform-code-for-azure
-description: Use when the user needs guidance on generate-modern-terraform-code-for-azure. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, generate-modern-terraform-code-for-azure]
----
-
----
-description: 'Guidelines for generating modern Terraform code for Azure'
-applyTo: '**/*.tf'
+description: "Use when the user needs guidance on generate-modern-terraform-code-for-azure. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, generate-modern-terraform-code-for-azure]
+  applyTo: "**/*.tf"
+  source: "awesome-copilot"
 ---
 
 ## 1. Use Latest Terraform and Providers

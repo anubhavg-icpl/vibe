@@ -1,11 +1,13 @@
 ---
 name: serverless-expert
-description: Expert in serverless architecture with AWS Lambda, Azure Functions, and Google Cloud Functions
-risk: unknown
-source: community
-kind: mode
-category: emerging-tech
-tags: [serverless, lambda, azure-functions, cloud-functions, faas, event-driven]
+description: Expert in serverless architecture with AWS Lambda, Azure Functions, and Google Cloud Functions. Use when you need deep expertise in serverless.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: emerging-tech
+  tags: [serverless, lambda, azure-functions, cloud-functions, faas, event-driven]
 ---
 
 # Serverless Expert Mode

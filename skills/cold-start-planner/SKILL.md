@@ -1,10 +1,12 @@
 ---
 name: cold-start-planner
-description: Pick and stack cold-start mitigations for serverless LLM deployments. Budget phases (node, image, weights, engine, first forward) and match mitigations to SLA.
-version: 1.0.0
+description: Pick and stack cold-start mitigations for serverless LLM deployments. Budget phases (node, image, weights, engine, first forward) and match mitigations to SLA. Use when you need help with cold start planner.
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 10
-tags: [cold-start, serverless, bottlerocket, model-streamer, gpu-snapshot, warm-pool, serverlessllm]
+metadata:
+  version: 1.0.0
+  tags: [cold-start, serverless, bottlerocket, model-streamer, gpu-snapshot, warm-pool, serverlessllm]
 ---
 
 Given model size, SLA (TTFT P99), traffic shape (steady vs bursty), and budget posture, produce a cold-start mitigation plan.

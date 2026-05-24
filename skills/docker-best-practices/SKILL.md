@@ -1,6 +1,7 @@
 ---
 name: docker-best-practices
-description: Docker best practices including multi-stage builds, compose patterns, image optimization, and security
+description: Docker best practices including multi-stage builds, compose patterns, image optimization, and security. Use when you need help with docker best practices.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Docker Best Practices

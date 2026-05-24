@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-oqtane
-description: Use when the user needs guidance on oqtane. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, oqtane]
----
-
----
-description: 'Oqtane Module patterns'
-applyTo: '**/*.razor, **/*.razor.cs, **/*.razor.css'
+description: "Use when the user needs guidance on oqtane. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, oqtane]
+  applyTo: "**/*.razor, **/*.razor.cs, **/*.razor.css"
+  source: "awesome-copilot"
 ---
 
 ## Blazor Code Style and Structure

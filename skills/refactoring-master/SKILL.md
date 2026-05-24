@@ -1,10 +1,12 @@
 ---
 name: refactoring-master
-description: refactoring-master
-risk: unknown
-source: community
-kind: mode
-category: refactoring
+description: refactoring-master. Use when you need help with refactoring master.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: refactoring
 ---
 
 # Refactoring Master Mode

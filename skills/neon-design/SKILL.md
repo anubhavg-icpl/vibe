@@ -1,11 +1,13 @@
 ---
 name: neon-design
-description: Expert in the Neon design system - Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, morphism]
+description: Expert in the Neon design system - Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces. Use when building UI components, applying design tokens, or implementing visual styles for neon.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, morphism]
 ---
 
 # Neon Design System Mode

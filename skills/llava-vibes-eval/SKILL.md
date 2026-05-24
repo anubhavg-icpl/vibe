@@ -1,10 +1,12 @@
 ---
 name: llava-vibes-eval
-description: Run a 10-prompt vibes-eval on a LLaVA-family VLM and produce a human-readable scorecard.
-version: 1.0.0
+description: Run a 10-prompt vibes-eval on a LLaVA-family VLM and produce a human-readable scorecard. Use when you need help with llava vibes eval.
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 05
-tags: [llava, vlm, vibes-eval, instruction-tuning]
+metadata:
+  version: 1.0.0
+  tags: [llava, vlm, vibes-eval, instruction-tuning]
 ---
 
 Given a LLaVA-family VLM (LLaVA-1.5, LLaVA-NeXT, LLaVA-OneVision, or a community fork) and a test image set, run a 10-prompt smoke test covering captioning, VQA, reasoning, refusal, and format compliance. Produce a scorecard that confirms the projector and LLM are connecting correctly.

@@ -1,7 +1,8 @@
 ---
 name: apitemplate-io-automation
-description: "Automate Apitemplate IO tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Apitemplate IO tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with apitemplate io automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

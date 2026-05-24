@@ -1,7 +1,8 @@
 ---
 name: discordbot-automation
-description: "Automate Discordbot tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+description: Automate Discordbot tasks via Rube MCP (Composio). Always search tools first for current schemas. Use when you need help with discordbot automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

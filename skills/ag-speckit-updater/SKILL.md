@@ -1,8 +1,10 @@
 ---
 name: speckit-updater
-description: SpecKit Safe Update
-risk: unknown
-source: community
+description: SpecKit Safe Update. Use when you need help with speckit updater.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # SpecKit Safe Update

@@ -1,11 +1,13 @@
 ---
 name: trigger-dev-expert
-description: Run durable AI background jobs and agents with Trigger.dev v3 — no timeouts, full observability
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [trigger-dev, background-jobs, ai-agents, durable, typescript, workflows]
+description: Run durable AI background jobs and agents with Trigger.dev v3 — no timeouts, full observability. Use when building AI applications with trigger dev.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [trigger-dev, background-jobs, ai-agents, durable, typescript, workflows]
 ---
 
 # Trigger.dev Expert Mode

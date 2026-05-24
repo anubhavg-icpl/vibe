@@ -1,11 +1,13 @@
 ---
 name: crag-expert
-description: Retrieval evaluator + web search fallback when knowledge base is insufficient
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, crag, corrective-rag, retrieval-evaluator, web-search-fallback]
+description: Retrieval evaluator + web search fallback when knowledge base is insufficient. Use when building or optimizing retrieval-augmented generation pipelines with crag.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, crag, corrective-rag, retrieval-evaluator, web-search-fallback]
 ---
 
 # Corrective RAG (CRAG) Expert Mode

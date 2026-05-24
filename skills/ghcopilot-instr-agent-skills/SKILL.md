@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-agent-skills
-description: Use when the user needs guidance on agent-skills. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, agent-skills]
----
-
----
-description: 'Guidelines for creating high-quality Agent Skills for GitHub Copilot'
-applyTo: '**/skills/**/SKILL.md'
+description: "Use when the user needs guidance on agent-skills. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, agent-skills]
+  applyTo: "**/skills/**/SKILL.md"
+  source: "awesome-copilot"
 ---
 
 # Agent Skills File Guidelines

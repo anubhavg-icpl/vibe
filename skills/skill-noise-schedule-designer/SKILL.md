@@ -1,10 +1,12 @@
 ---
 name: skill-noise-schedule-designer
-description: Produce a linear, cosine, or sigmoid beta schedule given T and target corruption level, plus SNR plot
-version: 1.0.0
+description: Produce a linear, cosine, or sigmoid beta schedule given T and target corruption level, plus SNR plot. Use when you need help with skill noise schedule designer.
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 10
-tags: [computer-vision, diffusion, noise-schedule, training]
+metadata:
+  version: 1.0.0
+  tags: [computer-vision, diffusion, noise-schedule, training]
 ---
 
 # Noise Schedule Designer

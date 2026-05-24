@@ -1,11 +1,13 @@
 ---
 name: pinterest-design
-description: Expert in the Pinterest design system - Visual discovery. Red accent, masonry grid, image-first.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+description: Expert in the Pinterest design system - Visual discovery. Red accent, masonry grid, image-first. Use when building UI components, applying design tokens, or implementing visual styles for pinterest.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # Pinterest Design System Mode

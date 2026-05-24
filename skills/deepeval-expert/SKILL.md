@@ -1,11 +1,13 @@
 ---
 name: deepeval-expert
-description: DeepEval (Confident AI) — pytest-native LLM evals with G-Eval, Hallucination, Toxicity, Bias
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, deepeval, confident-ai, pytest, g-eval, regression]
+description: DeepEval (Confident AI) — pytest-native LLM evals with G-Eval, Hallucination, Toxicity, Bias. Use when evaluating, monitoring, or observing LLM performance with deepeval.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, deepeval, confident-ai, pytest, g-eval, regression]
 ---
 
 # DeepEval Expert Mode

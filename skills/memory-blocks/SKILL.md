@@ -1,10 +1,12 @@
 ---
 name: memory-blocks
-description: Generate a Letta-shaped three-tier memory system (core blocks, recall, archival) with a sleep-time consolidation agent off the critical path.
-version: 1.0.0
+description: Generate a Letta-shaped three-tier memory system (core blocks, recall, archival) with a sleep-time consolidation agent off the critical path. Use when you need help with memory blocks.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 08
-tags: [memory, letta, blocks, sleep-time, consolidation]
+metadata:
+  version: 1.0.0
+  tags: [memory, letta, blocks, sleep-time, consolidation]
 ---
 
 Given a target runtime, a primary model, and a (possibly stronger) sleep-time model, produce a three-tier memory system with explicit block types and async consolidation.

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-markdown-gfm
-description: Use when the user needs guidance on markdown-gfm. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, markdown-gfm]
----
-
----
-description: 'Markdown formatting for GitHub-flavored markdown (GFM) files'
-applyTo: '**/*.md'
+description: "Use when the user needs guidance on markdown-gfm. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, markdown-gfm]
+  applyTo: "**/*.md"
+  source: "awesome-copilot"
 ---
 
 # GitHub Flavored Markdown (GFM)

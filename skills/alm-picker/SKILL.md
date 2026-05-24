@@ -1,10 +1,12 @@
 ---
 name: alm-picker
-description: Pick an audio-language model, benchmark subset, output modality (text vs speech), and guardrails for an audio-understanding task.
-version: 1.0.0
+description: Pick an audio-language model, benchmark subset, output modality (text vs speech), and guardrails for an audio-understanding task. Use when you need help with alm picker.
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 10
-tags: [alm, lalm, qwen-omni, audio-flamingo, gemini-audio, mmau]
+metadata:
+  version: 1.0.0
+  tags: [alm, lalm, qwen-omni, audio-flamingo, gemini-audio, mmau]
 ---
 
 Given the task (speech / sound / music / multi-audio / long-audio, output modality, latency, license), output:

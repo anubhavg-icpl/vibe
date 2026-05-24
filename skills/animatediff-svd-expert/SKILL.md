@@ -1,11 +1,13 @@
 ---
 name: animatediff-svd-expert
-description: AnimateDiff motion modules + SVD image-to-video, frame interpolation, video LoRAs
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, video-gen, animatediff, svd, motion, diffusion]
+description: AnimateDiff motion modules + SVD image-to-video, frame interpolation, video LoRAs. Use when working with multimodal AI (images, audio, video) using animatediff svd.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, video-gen, animatediff, svd, motion, diffusion]
 ---
 
 # AnimateDiff & Stable Video Diffusion Expert Mode

@@ -1,6 +1,7 @@
 ---
 name: kotlin-ktor-patterns
-description: Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.serialization, WebSockets, and testApplication testing.
+description: Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.serialization, WebSockets, and testApplication testing. Use when you need help with kotlin ktor patterns.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

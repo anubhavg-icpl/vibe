@@ -1,10 +1,12 @@
 ---
 name: rerender-memo
-description: Extract to Memoized Components
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: Extract to Memoized Components. Use when you need help with rerender memo.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Extract to Memoized Components

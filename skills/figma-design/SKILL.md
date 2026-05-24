@@ -1,11 +1,13 @@
 ---
 name: figma-design
-description: Expert in the Figma design system - Collaborative design tool. Vibrant multi-color, playful yet professional.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, design]
+description: Expert in the Figma design system - Collaborative design tool. Vibrant multi-color, playful yet professional. Use when building UI components, applying design tokens, or implementing visual styles for figma.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, design]
 ---
 
 # Figma Design System Mode

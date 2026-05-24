@@ -1,10 +1,12 @@
 ---
 name: skill-sampling-strategy
-description: Choose the right sampling method for generation, estimation, or inference
-version: 1.0.0
+description: Choose the right sampling method for generation, estimation, or inference. Use when you need help with skill sampling strategy.
+license: CC-BY-NC-SA-4.0
 phase: 1
 lesson: 16
-tags: [sampling, mcmc, generation]
+metadata:
+  version: 1.0.0
+  tags: [sampling, mcmc, generation]
 ---
 
 # Sampling Strategy Selection

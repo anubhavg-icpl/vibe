@@ -1,8 +1,9 @@
 ---
 name: html-ppt-zhangzara-scatterbrain
-description: |
+description: |. Use when you need help with html ppt zhangzara scatterbrain.
   Scatterbrain — Post-it inspired: pastel sticky notes, Caveat handwriting, Shrikhand and Zilla Slab type stack. Anything that should feel like a designer's whiteboard: brainstorms, workshops, creative-agency credentials, design-thinking sessions, ideation pitches, art-direction reviews.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "scatterbrain"
   - "zhangzara-scatterbrain"
   - "playful"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/scatterbrain"

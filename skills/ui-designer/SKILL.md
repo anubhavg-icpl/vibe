@@ -1,10 +1,12 @@
 ---
 name: ui-designer
-description: ui-designer
-risk: unknown
-source: community
-kind: mode
-category: design-ux
+description: ui-designer. Use when you need help with ui designer.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-ux
 ---
 
 # UI Designer Mode

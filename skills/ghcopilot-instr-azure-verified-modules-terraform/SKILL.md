@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-verified-modules-terraform
-description: Use when the user needs guidance on azure-verified-modules-terraform. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-verified-modules-terraform]
----
-
----
-description: ' Azure Verified Modules (AVM) and Terraform'
-applyTo: '**/*.terraform, **/*.tf, **/*.tfvars, **/*.tfstate, **/*.tflint.hcl, **/*.tf.json, **/*.tfvars.json'
+description: "Use when the user needs guidance on azure-verified-modules-terraform. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-verified-modules-terraform]
+  applyTo: "**/*.terraform, **/*.tf, **/*.tfvars, **/*.tfstate, **/*.tflint.hcl, **/*.tf.json, **/*.tfvars.json"
+  source: "awesome-copilot"
 ---
 
 # Azure Verified Modules (AVM) Terraform

@@ -1,11 +1,13 @@
 ---
 name: go-coding-standards
-description: Production-ready Go coding standards enforcing idiomatic patterns, simplicity, and maintainability
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [go, golang, coding-standards, gofmt, golangci-lint]
+description: Production-ready Go coding standards enforcing idiomatic patterns, simplicity, and maintainability. Use when enforcing go coding conventions and style rules.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [go, golang, coding-standards, gofmt, golangci-lint]
 ---
 
 # Go Coding Standards Mode

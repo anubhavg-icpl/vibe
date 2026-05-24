@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-prompt
-description: Use when the user needs guidance on prompt. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, prompt]
----
-
----
-description: 'Guidelines for creating high-quality prompt files for GitHub Copilot'
-applyTo: '**/*.prompt.md'
+description: "Use when the user needs guidance on prompt. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, prompt]
+  applyTo: "**/*.prompt.md"
+  source: "awesome-copilot"
 ---
 
 # Copilot Prompt Files Guidelines

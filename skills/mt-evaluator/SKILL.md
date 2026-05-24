@@ -1,10 +1,12 @@
 ---
 name: mt-evaluator
-description: Evaluate a machine translation output for shipping.
-version: 1.0.0
+description: Evaluate a machine translation output for shipping. Use when you need help with mt evaluator.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 11
-tags: [nlp, translation, evaluation]
+metadata:
+  version: 1.0.0
+  tags: [nlp, translation, evaluation]
 ---
 
 Given a source text and a candidate translation, output:

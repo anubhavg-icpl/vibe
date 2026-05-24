@@ -1,10 +1,12 @@
 ---
 name: tracing
-description: tracing
-risk: unknown
-source: community
-kind: mode
-category: program-types
+description: tracing. Use when you need help with tracing.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: program-types
 ---
 
 # Tracing Program Types

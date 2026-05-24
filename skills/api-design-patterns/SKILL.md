@@ -1,6 +1,7 @@
 ---
 name: api-design-patterns
-description: REST API design with resource naming, pagination, versioning, and OpenAPI spec generation
+description: REST API design with resource naming, pagination, versioning, and OpenAPI spec generation. Use when you need help with api design patterns.
+license: CC-BY-NC-SA-4.0
 ---
 
 # API Design Patterns

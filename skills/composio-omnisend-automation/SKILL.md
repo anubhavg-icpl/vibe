@@ -1,7 +1,8 @@
 ---
 name: Omnisend Automation
-description: "Automate ecommerce marketing workflows including contact management, bulk operations, and subscriber segmentation through Omnisend via Composio"
-requires:
+description: Automate ecommerce marketing workflows including contact management, bulk operations, and subscriber segmentation through Omnisend via Composio. Use when you need help with Omnisend Automation.
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-terraform-sap-btp
-description: Use when the user needs guidance on terraform-sap-btp. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, terraform-sap-btp]
----
-
----
-description: 'Terraform conventions and guidelines for SAP Business Technology Platform (SAP BTP).'
-applyTo: '**/*.tf, **/*.tfvars, **/*.tflint.hcl, **/*.tf.json, **/*.tfvars.json'
+description: "Use when the user needs guidance on terraform-sap-btp. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, terraform-sap-btp]
+  applyTo: "**/*.tf, **/*.tfvars, **/*.tflint.hcl, **/*.tf.json, **/*.tfvars.json"
+  source: "awesome-copilot"
 ---
 
 # Terraform on SAP BTP – Best Practices & Conventions

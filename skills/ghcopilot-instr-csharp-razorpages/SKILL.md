@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-csharp-razorpages
-description: Use when the user needs guidance on csharp-razorpages. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, csharp-razorpages]
----
-
----
-description: 'Razor Pages component and application patterns'
-applyTo: '**/*.cshtml, **/*.cshtml.cs'
+description: "Use when the user needs guidance on csharp-razorpages. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, csharp-razorpages]
+  applyTo: "**/*.cshtml, **/*.cshtml.cs"
+  source: "awesome-copilot"
 ---
 
 ## Razor Pages Code Style and Structure

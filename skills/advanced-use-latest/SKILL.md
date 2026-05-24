@@ -1,10 +1,12 @@
 ---
 name: advanced-use-latest
-description: useLatest for Stable Callback Refs
-risk: unknown
-source: community
-kind: mode
-category: rules
+description: useLatest for Stable Callback Refs. Use when you need help with advanced use latest.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## useLatest for Stable Callback Refs

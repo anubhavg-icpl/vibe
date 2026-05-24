@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-svelte
-description: Use when the user needs guidance on svelte. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, svelte]
----
-
----
-description: 'Svelte 5 and SvelteKit development standards and best practices for component-based user interfaces and full-stack applications'
-applyTo: '**/*.svelte, **/*.ts, **/*.js, **/*.css, **/*.scss, **/*.json'
+description: Svelte 5 and SvelteKit development standards and best practices for component-based user interfaces and full-stack applications. Use when writing or reviewing svelte code and need idiomatic conventions and best practices.
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, svelte]
+  applyTo: "**/*.svelte, **/*.ts, **/*.js, **/*.css, **/*.scss, **/*.json"
+  source: "awesome-copilot"
 ---
 
 # Svelte 5 and SvelteKit Development Instructions

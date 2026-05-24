@@ -1,6 +1,7 @@
 ---
 name: "database-schema-designer"
 description: "Use when the user asks to create ERD diagrams, normalize database schemas, design table relationships, or plan schema migrations."
+license: CC-BY-NC-SA-4.0
 ---
 
 # Database Schema Designer

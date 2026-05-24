@@ -1,10 +1,12 @@
 ---
 name: entity-linker
-description: Design an entity linking pipeline — KB, candidate generator, disambiguator, evaluation.
-version: 1.0.0
+description: Design an entity linking pipeline — KB, candidate generator, disambiguator, evaluation. Use when you need help with entity linker.
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 25
-tags: [nlp, entity-linking, knowledge-graph]
+metadata:
+  version: 1.0.0
+  tags: [nlp, entity-linking, knowledge-graph]
 ---
 
 Given a use case (domain KB, language, volume, latency budget), output:

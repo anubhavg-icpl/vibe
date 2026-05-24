@@ -1,13 +1,14 @@
 ---
 name: wireframe-sketch
-description: |
+description: |. Use when you need help with wireframe sketch.
   A hand-drawn wireframe exploration — graph-paper background, marker /
   pencil tone, multiple tab labels for variants, sticky-note annotations,
   scribbled chart placeholders, hatched fills. Reads like a designer's
   whiteboard before any pixels are committed. Use when the brief asks for
   "wireframe", "sketch wireframe", "hand-drawn", "lo-fi", "whiteboard",
   "草稿", or "手绘原型".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "wireframe"
   - "sketch wireframe"
   - "lo-fi mockup"
@@ -17,7 +18,7 @@ triggers:
   - "手绘原型"
   - "草图"
   - "线框图"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: design

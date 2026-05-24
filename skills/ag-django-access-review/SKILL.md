@@ -1,8 +1,10 @@
 ---
 name: django-access-review
-description: django-access-review
-risk: unknown
-source: community
+description: django-access-review. Use when you need help with django access review.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 ---

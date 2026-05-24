@@ -1,11 +1,13 @@
 ---
 name: makepad-splash
-description: |
+description: |. Use when you need help with makepad splash.
   CRITICAL: Use for Makepad Splash scripting language. Triggers on:
   splash language, makepad script, makepad scripting, script!, cx.eval,
   makepad dynamic, makepad AI, splash 语言, makepad 脚本
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # Makepad Splash Skill

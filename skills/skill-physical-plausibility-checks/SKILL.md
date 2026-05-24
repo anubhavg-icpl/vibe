@@ -1,10 +1,12 @@
 ---
 name: skill-physical-plausibility-checks
-description: Automated checks for object permanence, gravity, and continuity on any generated video before shipping
-version: 1.0.0
+description: Automated checks for object permanence, gravity, and continuity on any generated video before shipping. Use when you need help with skill physical plausibility checks.
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 28
-tags: [video-generation, quality, physics, evaluation]
+metadata:
+  version: 1.0.0
+  tags: [video-generation, quality, physics, evaluation]
 ---
 
 # Physical Plausibility Checks

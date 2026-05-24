@@ -1,9 +1,11 @@
 ---
 name: c4-container
-description: Expert C4 Container-level documentation specialist.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+description: Expert C4 Container-level documentation specialist. Use when you need help with c4 container.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # C4 Container Level: System Deployment

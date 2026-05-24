@@ -1,10 +1,12 @@
 ---
 name: data-science-ml
-description: Data science and machine learning specialist - Feature engineering, model development, hyperparameter tuning, MLOps, and production deployment best practices.
-risk: unknown
-source: community
-kind: mode
-category: specialized
+description: Data science and machine learning specialist - Feature engineering, model development, hyperparameter tuning, MLOps, and production deployment best practices. Use when you need help with data science ml.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: specialized
 ---
 
 # Data Science & Machine Learning Mode

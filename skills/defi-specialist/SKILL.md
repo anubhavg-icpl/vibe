@@ -1,10 +1,12 @@
 ---
 name: defi-specialist
-description: defi-specialist
-risk: unknown
-source: community
-kind: mode
-category: blockchain
+description: defi-specialist. Use when building blockchain, DeFi, or Web3 applications with defi.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: blockchain
 ---
 
 # DeFi Specialist Mode

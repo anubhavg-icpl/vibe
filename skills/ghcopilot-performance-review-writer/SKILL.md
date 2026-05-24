@@ -1,6 +1,7 @@
 ---
 name: performance-review-writer
 description: 'Draft performance reviews, self-assessments, peer reviews, and upward feedback in your own voice. Analyzes your contributions, emails, and meeting history via WorkIQ, then produces honest, impact-focused drafts using the STAR format. USE FOR: write my performance review, draft self-assessment, peer review, 360 feedback, annual review, mid-year review, upward feedback, write review for colleague, performance appraisal.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Performance Review Writer

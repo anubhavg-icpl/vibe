@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-php-symfony
-description: Use when the user needs guidance on php-symfony. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, php-symfony]
----
-
----
-description: "Symfony development standards aligned with official Symfony Best Practices"
-applyTo: "**/*.php, **/*.yaml, **/*.yml, **/*.xml, **/*.twig"
+description: "Use when the user needs guidance on php-symfony. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, php-symfony]
+  applyTo: "**/*.php, **/*.yaml, **/*.yml, **/*.xml, **/*.twig"
+  source: "awesome-copilot"
 ---
 
 # Symfony Development Instructions

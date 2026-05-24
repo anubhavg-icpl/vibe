@@ -2,11 +2,12 @@
 name: knowledge-ops
 description: Use when a Head of Ops, Knowledge Manager, or TPM-Internal needs to author, validate, or clean up company SOPs and internal runbooks (procurement intake, vendor offboarding, incident-comms cascade, employee onboarding, expense reimbursement, system-access provisioning, customer-escalation playbook) — including 5W2H completeness checks (Who-What-When-Where-Why-How-HowMuch), cross-link and orphan-page validation across a sprawling Notion/Confluence/Obsidian wiki, KB ingestion + hygiene reporting, ops onboarding doc generation, and runbook step verification (named owner, expected duration, observable success signal, rollback path, escalation contact). Pairs Kaoru Ishikawa's 5W2H method, Atul Gawande's *The Checklist Manifesto*, ISO 9001, ITIL v4 Service Operation, FDA 21 CFR Part 211, and Google SRE Workbook runbook discipline with deterministic stdlib-only Python tools that score completeness, detect anti-patterns, and emit prioritized cleanup lists. Distinct from `engineering/llm-wiki` (Karpathy-style personal PKM second brain), `engineering-team/runbook-generator` (system-ops production debugging runbook), `project-management/*` (Jira/Confluence delivery + ticket tracking), and sibling `business-operations/process-mapper` (BPMN process *design*, while knowledge-ops is process *documentation*).
 context: fork
-version: 2.8.0
 author: claude-code-skills
 license: MIT
-tags: [bizops, sop, runbook, knowledge-management, kb, 5w2h, wiki, ops-documentation]
 compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini-cli]
+metadata:
+  version: 2.8.0
+  tags: [bizops, sop, runbook, knowledge-management, kb, 5w2h, wiki, ops-documentation]
 ---
 
 # knowledge-ops

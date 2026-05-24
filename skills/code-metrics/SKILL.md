@@ -1,10 +1,12 @@
 ---
 name: code-metrics
-description: Expert in code quality metrics, static analysis, and codebase health assessment
-risk: unknown
-source: community
-kind: mode
-category: analysis
+description: Expert in code quality metrics, static analysis, and codebase health assessment. Use when you need help with code metrics.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: analysis
 ---
 
 # Code Metrics Analyst Mode

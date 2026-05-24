@@ -1,10 +1,12 @@
 ---
 name: reflexion-buffer
-description: Maintain an episodic-memory buffer of reflections for verbal RL with TTL, dedup, and scoped scope.
-version: 1.0.0
+description: Maintain an episodic-memory buffer of reflections for verbal RL with TTL, dedup, and scoped scope. Use when you need help with reflexion buffer.
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 03
-tags: [reflexion, episodic-memory, self-healing, verbal-rl, sleep-time]
+metadata:
+  version: 1.0.0
+  tags: [reflexion, episodic-memory, self-healing, verbal-rl, sleep-time]
 ---
 
 Given a task class (repeating kind of agent run — e.g. "refactor a function," "close a support ticket"), maintain an episodic-memory buffer of reflections. Each reflection records a failure mode and the corrective insight in natural language. The buffer is prepended to the next trial of the same task class.

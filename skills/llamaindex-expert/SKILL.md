@@ -1,11 +1,13 @@
 ---
 name: llamaindex-expert
-description: Build agentic document workflows, RAG, and query engines with LlamaIndex 2025
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [llamaindex, rag, agents, workflows, query-engine, llama-parse, python]
+description: Build agentic document workflows, RAG, and query engines with LlamaIndex 2025. Use when building AI applications with llamaindex.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [llamaindex, rag, agents, workflows, query-engine, llama-parse, python]
 ---
 
 # LlamaIndex Expert Mode

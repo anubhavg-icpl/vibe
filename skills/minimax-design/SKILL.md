@@ -1,11 +1,13 @@
 ---
 name: minimax-design
-description: Expert in the MiniMax design system - AI model provider. Bold dark interface with neon accents.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+description: Expert in the MiniMax design system - AI model provider. Bold dark interface with neon accents. Use when building UI components, applying design tokens, or implementing visual styles for minimax.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # MiniMax Design System Mode

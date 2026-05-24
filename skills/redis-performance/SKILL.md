@@ -1,11 +1,13 @@
 ---
 name: redis-performance
-description: Expert in Redis caching, data structures, pub/sub messaging, persistence, clustering, performance tuning, and production best practices
-risk: unknown
-source: community
-kind: mode
-category: database
-tags: [redis, cache, pub-sub, database, performance, nosql]
+description: Expert in Redis caching, data structures, pub/sub messaging, persistence, clustering, performance tuning, and production best practices. Use when designing, querying, or optimizing redis databases.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: database
+  tags: [redis, cache, pub-sub, database, performance, nosql]
 ---
 
 # Redis Performance Expert Mode

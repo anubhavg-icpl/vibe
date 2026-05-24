@@ -1,11 +1,13 @@
 ---
 name: token-administration-console-validator
-description: RFC compliance validator for Token Administration Console implementations - OAuth 2.0, Bearer Token, Token Introspection
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [validator, token-administration, console, oauth, bearer-token, introspection, multi-tenancy]
+description: RFC compliance validator for Token Administration Console implementations - OAuth 2.0, Bearer Token, Token Introspection. Use when you need help with token administration console validator.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [validator, token-administration, console, oauth, bearer-token, introspection, multi-tenancy]
 ---
 
 # Token Administration Console Validator Mode

@@ -1,11 +1,13 @@
 ---
 name: self-rag-expert
-description: Self-RAG — model decides when to retrieve and critiques evidence with reflection tokens
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, self-rag, reflection-tokens, adaptive-retrieval, asai]
+description: Self-RAG — model decides when to retrieve and critiques evidence with reflection tokens. Use when building or optimizing retrieval-augmented generation pipelines with self rag.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, self-rag, reflection-tokens, adaptive-retrieval, asai]
 ---
 
 # Self-RAG Expert Mode

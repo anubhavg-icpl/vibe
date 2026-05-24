@@ -1,11 +1,13 @@
 ---
 name: mono-design
-description: Expert in the Mono design system - Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+description: Expert in the Mono design system - Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic. Use when building UI components, applying design tokens, or implementing visual styles for mono.
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Mono Design System Mode

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-html-css-style-color-guide
-description: Use when the user needs guidance on html-css-style-color-guide. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, html-css-style-color-guide]
----
-
----
-description: 'Color usage guidelines and styling rules for HTML elements to ensure accessible, professional designs.'
-applyTo: '**/*.html, **/*.css, **/*.js'
+description: "Use when the user needs guidance on html-css-style-color-guide. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, html-css-style-color-guide]
+  applyTo: "**/*.html, **/*.css, **/*.js"
+  source: "awesome-copilot"
 ---
 
 # HTML CSS Style Color Guide

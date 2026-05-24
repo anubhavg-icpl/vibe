@@ -1,17 +1,18 @@
 ---
 name: unslop
-description: "Post-process AI-generated text through the unslop CLI to strip AI writing patterns before publishing"
-category: writing
-risk: safe
-source: community
+description: Post-process AI-generated text through the unslop CLI to strip AI writing patterns before publishing. Use when you need help with unslop.
 source_repo: MohamedAbdallah-14/unslop
 source_type: community
-date_added: "2026-04-25"
 author: MohamedAbdallah-14
-tags: [writing, content-quality, ai-writing, text-processing, cli, publishing]
 tools: [claude-code, cursor, gemini-cli, codex-cli, antigravity]
 license: "MIT"
 license_source: "https://github.com/MohamedAbdallah-14/unslop/blob/main/LICENSE"
+metadata:
+  category: writing
+  risk: safe
+  source: community
+  date_added: "2026-04-25"
+  tags: [writing, content-quality, ai-writing, text-processing, cli, publishing]
 ---
 
 # unslop — Strip AI Writing Patterns via CLI
