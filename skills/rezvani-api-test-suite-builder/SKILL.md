@@ -1,6 +1,7 @@
 ---
 name: "api-test-suite-builder"
 description: "Use when the user asks to generate API tests, create integration test suites, test REST endpoints, or build contract tests."
+license: CC-BY-NC-SA-4.0
 ---
 
 # API Test Suite Builder

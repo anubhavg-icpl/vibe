@@ -1,10 +1,12 @@
 ---
 name: elicitation-form-designer
 description: Design the elicitation form schema and message template for a tool that needs mid-call user confirmation or disambiguation.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 12
-tags: [mcp, elicitation, user-input, forms]
+metadata:
+  version: 1.0.0
+  tags: [mcp, elicitation, user-input, forms]
 ---
 
 Given a tool whose behavior may require mid-call user input, design the elicitation schema and message.

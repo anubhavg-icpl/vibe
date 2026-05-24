@@ -1,10 +1,12 @@
 ---
 name: production-rag
 description: Deploy a regulated-domain RAG chatbot with role + jurisdiction filtering, prompt caching, guardrails, and live drift monitoring.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 08
-tags: [capstone, rag, chatbot, regulated, llama-guard, nemo-guardrails, ragas, langfuse]
+metadata:
+  version: 1.0.0
+  tags: [capstone, rag, chatbot, regulated, llama-guard, nemo-guardrails, ragas, langfuse]
 ---
 
 Given a regulated-domain corpus (legal contracts, clinical trial protocols, insurance policies, or similar), deploy a chatbot that answers with verifiable citations, respects role and jurisdiction access policies, and is monitored for drift.

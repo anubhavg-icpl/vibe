@@ -1,14 +1,12 @@
 ---
 name: ghcopilot-instr-no-heredoc
-description: Use when the user needs guidance on no-heredoc. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, no-heredoc]
----
-
----
-name: 'No Heredoc File Operations'
-description: 'Prevents terminal heredoc file corruption in VS Code Copilot by enforcing use of file editing tools instead of shell redirections'
-applyTo: '**'
+description: "Prevents terminal heredoc file corruption in VS Code Copilot by enforcing use of file editing tools instead of shell redirections"
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, no-heredoc]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # MANDATORY: File Operation Override

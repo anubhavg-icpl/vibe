@@ -1,10 +1,12 @@
 ---
 name: classifier-stack-audit
 description: Audit a deployment's input/output classifier stack (model, taxonomy, input rails, output rails, dialog rails) and flag adversarial-attack gaps.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 18
-tags: [llama-guard, nemo-guardrails, input-rails, output-rails, colang, adversarial-attacks]
+metadata:
+  version: 1.0.0
+  tags: [llama-guard, nemo-guardrails, input-rails, output-rails, colang, adversarial-attacks]
 ---
 
 Given a deployment's classifier stack (Llama Guard version, NeMo Guardrails config, custom classifiers, normalization steps), audit it against the 2026 reference and flag attack surface the stack does not cover.

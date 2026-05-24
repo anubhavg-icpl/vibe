@@ -1,6 +1,7 @@
 ---
 name: pipeline
 description: Detect stack and generate CI/CD pipeline configs. Usage: /pipeline <detect|generate> [options]
+license: CC-BY-NC-SA-4.0
 ---
 
 # /pipeline

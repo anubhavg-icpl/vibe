@@ -1,11 +1,13 @@
 ---
 name: rfc-7519-jwt
 description: Complete JWT implementation guide with claims validation and multi-tenancy patterns
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [jwt, jose, token, claims, multi-tenancy]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [jwt, jose, token, claims, multi-tenancy]
 ---
 
 # RFC 7519 - JSON Web Token (JWT)

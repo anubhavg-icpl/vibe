@@ -1,10 +1,12 @@
 ---
 name: layer2-scaling
 description: Expert in Layer 2 scaling solutions, rollups, and blockchain performance
-risk: unknown
-source: community
-kind: mode
-category: blockchain
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: blockchain
 ---
 
 # Layer 2 Scaling Expert Mode

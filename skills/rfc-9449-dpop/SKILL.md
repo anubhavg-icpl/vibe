@@ -1,11 +1,13 @@
 ---
 name: rfc-9449-dpop
 description: Sender-constrained access tokens using DPoP for enhanced OAuth 2.0 security
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [oauth, dpop, proof-of-possession, security, multi-tenancy]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [oauth, dpop, proof-of-possession, security, multi-tenancy]
 ---
 
 # RFC 9449 - Demonstrating Proof-of-Possession (DPoP)

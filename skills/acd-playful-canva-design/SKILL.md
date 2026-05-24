@@ -1,11 +1,13 @@
 ---
 name: acd-playful-canva-design
 description: Reference DESIGN.md for design tools that need to feel friendly and full-spectrum without sliding into kitsch. Canva-purple action, periwinkle and sky support tones, generous radii, gradient surfaces used as backdrops not buttons.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, playful, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, playful, claude-design]
 ---
 
 # Canva — Design Platform Playful Design Mode

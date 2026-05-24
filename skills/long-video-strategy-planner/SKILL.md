@@ -1,10 +1,12 @@
 ---
 name: long-video-strategy-planner
 description: Pick brute-context, ring-attention, token-compression, or agentic-retrieval for a long-video understanding task and compute latency + recall expectations.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 18
-tags: [long-video, gemini, ring-attention, videoagent, retrieval]
+metadata:
+  version: 1.0.0
+  tags: [long-video, gemini, ring-attention, videoagent, retrieval]
 ---
 
 Given a video duration, query complexity (single event vs holistic summary), and open vs closed constraints, pick a long-video strategy and emit a config.

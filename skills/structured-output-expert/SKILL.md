@@ -1,11 +1,13 @@
 ---
 name: structured-output-expert
 description: Constrained generation across stacks — Outlines, lm-format-enforcer, llama.cpp GBNF, OpenAI json_schema, vLLM guided_json, Instructor — with a decision matrix
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, structured-output, json-schema, gbnf, outlines, vllm, instructor, function-calling]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, structured-output, json-schema, gbnf, outlines, vllm, instructor, function-calling]
 ---
 
 # Structured Output Expert Mode

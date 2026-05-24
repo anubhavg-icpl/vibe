@@ -1,9 +1,11 @@
 ---
 name: box-automation
 description: "Automate Box operations including file upload/download, content search, folder management, collaboration, metadata queries, and sign requests through Composio's Box toolkit."
-risk: critical
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: critical
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Box Automation via Rube MCP

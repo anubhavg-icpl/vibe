@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-centos-linux
-description: Use when the user needs guidance on centos-linux. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, centos-linux]
----
-
----
-description: 'Guidance for CentOS administration, RHEL-compatible tooling, and SELinux-aware operations.'
-applyTo: '**'
+description: "Use when the user needs guidance on centos-linux. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, centos-linux]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # CentOS Administration Guidelines

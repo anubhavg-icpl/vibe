@@ -1,8 +1,10 @@
 ---
 name: expo-ui-swift-ui
 description: expo-ui-swift-ui
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 ---

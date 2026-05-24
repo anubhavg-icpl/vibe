@@ -1,7 +1,8 @@
 ---
 name: html-ppt-course-module
 description: Online-course / workshop module deck — warm paper background + Playfair serif, persistent left sidebar of learning objectives, MCQ self-check page. Use for teaching modules, training materials, workshop slides.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "course module"
   - "course slides"
   - "workshop"
@@ -9,7 +10,7 @@ triggers:
   - "lesson"
   - "教学"
   - "课件"
-od:
+od: 
   mode: deck
   scenario: education
   featured: 25
@@ -23,6 +24,7 @@ od:
   animations: true
   example_prompt: "Use the html-ppt-course-module template to build a 7-slide module deck. Confirm: module title, 3-5 learning objectives (these stick on the left rail), and the MCQ self-check question. Then assemble the deck with serif headings on warm paper."
 ---
+
 # HTML PPT · Course Module
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`course-module`** full-deck template.

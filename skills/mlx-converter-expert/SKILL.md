@@ -1,11 +1,13 @@
 ---
 name: mlx-converter-expert
 description: Convert HF safetensors models to MLX format, quantize to 4-bit / 8-bit, publish to mlx-community on HF Hub for Apple Silicon serving
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, mlx, apple-silicon, quantization, mlx-community, conversion]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, mlx, apple-silicon, quantization, mlx-community, conversion]
 ---
 
 # MLX Converter Expert Mode

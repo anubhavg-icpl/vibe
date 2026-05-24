@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-gilfoyle-code-review
-description: Use when the user needs guidance on gilfoyle-code-review. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, gilfoyle-code-review]
----
-
----
-applyTo: '**'
-description: 'Gilfoyle-style code review instructions that channel the sardonic technical supremacy of Silicon Valley''s most arrogant systems architect.'
+description: "Gilfoyle-style code review instructions that channel the sardonic technical supremacy of Silicon Valley''s most arrogant systems architect."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, gilfoyle-code-review]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Gilfoyle Code Review Instructions

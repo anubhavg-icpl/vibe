@@ -1,6 +1,7 @@
 ---
 name: swift-mcp-server-generator
 description: 'Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Swift MCP Server Generator

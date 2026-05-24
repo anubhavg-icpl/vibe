@@ -1,11 +1,13 @@
 ---
 name: qdrant-expert
 description: Deep expertise in Qdrant — payload filtering, scalar/binary/PQ quantization, multi-vector, dense+sparse hybrid, and distributed mode
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, qdrant, hnsw, quantization, hybrid-search, sparse-vectors, multi-vector]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, qdrant, hnsw, quantization, hybrid-search, sparse-vectors, multi-vector]
 ---
 
 # Qdrant Expert Mode

@@ -1,14 +1,15 @@
 ---
 name: html-ppt-dir-key-nav-minimal
 description: 8 页极简方向键 keynote — 每页一个独立单色背景（靛 / 奶 / 绛 / 翠 / 灰 / 紫 / 白 / 炭），各自配色，160px display 标题 + 4px 短粗 accent 线分隔、箭头 → 前缀的 Mono 列表、左下 ← → kbd 提示 + 右下页码、巨大呼吸留白。适合"有话要说但没什么可看"的 keynote、launch、公开演讲。
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "minimal keynote"
   - "极简"
   - "mono color"
   - "one idea per slide"
   - "public talk"
   - "launch keynote"
-od:
+od: 
   mode: deck
   scenario: personal
   featured: 34
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-dir-key-nav-minimal 模板做一份 8 页极简 keynote。每页一个单色背景 + 一句 160px 大标题 + 几条箭头列表。先告诉我演讲主题，然后帮我把 8 个核心观点拍成 8 页（每页一个 idea）。"
 ---
+
 # HTML PPT · 8 色极简方向键
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`dir-key-nav-minimal`** full-deck template.

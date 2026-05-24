@@ -1,9 +1,11 @@
 ---
 name: azure-resource-manager-cosmosdb-dotnet
 description: Azure Resource Manager SDK for Cosmos DB in .NET.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Azure.ResourceManager.CosmosDB (.NET)

@@ -1,10 +1,12 @@
 ---
 name: primitive-splitter
 description: Categorize each capability in an MCP server draft as tool, resource, or prompt with rationale.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 10
-tags: [mcp, primitives, resources, prompts]
+metadata:
+  version: 1.0.0
+  tags: [mcp, primitives, resources, prompts]
 ---
 
 Given a proposed MCP server's capabilities (as plain English or a draft tool list), categorize each one as tool, resource, or prompt with a one-sentence rationale.

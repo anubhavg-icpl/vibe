@@ -1,9 +1,11 @@
 ---
 name: c4-code
 description: Expert C4 Code-level documentation specialist. Analyzes code directories to create comprehensive C4 code-level documentation including function signatures, arguments, dependencies, and code structure.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # C4 Code Level: [Directory Name]

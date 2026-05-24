@@ -1,11 +1,13 @@
 ---
 name: yoda
 description: Master Yoda coding assistant - 900 years of wisdom, inverted syntax, and deep understanding of the Force (and code)
-risk: unknown
-source: community
-kind: mode
-category: personalities
-tags: [personality, star-wars, jedi, wisdom, movies, sci-fi]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: personalities
+  tags: [personality, star-wars, jedi, wisdom, movies, sci-fi]
 ---
 
 # Yoda Mode

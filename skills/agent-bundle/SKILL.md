@@ -1,10 +1,12 @@
 ---
 name: agent-bundle
 description: Produce a portable SKILL.md + AGENTS.md + MCP-server blueprint for a workflow, loadable across Claude Code, Cursor, Codex, and compatible agents.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 21
-tags: [skills, agents-md, apps-sdk, cross-agent, portability]
+metadata:
+  version: 1.0.0
+  tags: [skills, agents-md, apps-sdk, cross-agent, portability]
 ---
 
 Given a workflow description, produce an agent bundle.

@@ -1,6 +1,7 @@
 ---
 name: "decide"
 description: "/cs:decide <memo> — Log a decision to two-layer memory via decision-logger. Approved memo becomes durable; raw transcripts kept for reference."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:decide — Log the Decision

@@ -1,11 +1,13 @@
 ---
 name: android-layout-inspect-expert
 description: Expert in `android layout` — JSON UI hierarchy dumps, --pretty, --output, --diff snapshot diffs for agent UI inspection
-risk: unknown
-source: community
-kind: mode
-category: android-cli
-tags: [android, android-cli, layout, ui, hierarchy, agent, testing, 2026]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-cli
+  tags: [android, android-cli, layout, ui, hierarchy, agent, testing, 2026]
 ---
 
 # Android Layout Inspector Expert Mode

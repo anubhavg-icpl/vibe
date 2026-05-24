@@ -1,9 +1,11 @@
 ---
 name: stripe-integration
 description: "Master Stripe payment processing integration for robust, PCI-compliant payment flows including checkout, subscriptions, webhooks, and refunds."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Stripe Integration

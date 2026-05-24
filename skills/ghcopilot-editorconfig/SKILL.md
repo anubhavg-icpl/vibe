@@ -1,6 +1,7 @@
 ---
 name: editorconfig
 description: 'Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.'
+license: CC-BY-NC-SA-4.0
 ---
 
 ## 📜 MISSION

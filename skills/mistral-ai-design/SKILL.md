@@ -1,11 +1,13 @@
 ---
 name: mistral-ai-design
 description: Expert in the Mistral AI design system - Open-weight LLM provider. French-engineered minimalism, purple-toned.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # Mistral AI Design System Mode

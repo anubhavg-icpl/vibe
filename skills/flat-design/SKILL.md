@@ -1,11 +1,13 @@
 ---
 name: flat-design
 description: Expert in the Flat design system - Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Flat Design System Mode

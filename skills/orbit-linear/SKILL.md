@@ -9,13 +9,14 @@ description: |
   the digest in Linear's native Inbox + cycle-progress visual language.
   This skill should not be triggered manually — it is invoked by
   Orbit's daily-digest scheduler against live Linear data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "linear briefing"
   - "linear digest"
   - "issue digest"
   - "linear 简报"
   - "issue 汇总"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

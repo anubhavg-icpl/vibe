@@ -5,14 +5,15 @@ description: |
   by copying the seed `assets/template.html` and pasting section layouts from
   `references/layouts.md`. Default for any landing / marketing / docs / SaaS
   page when no more specific skill matches.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "prototype"
   - "mockup"
   - "landing"
   - "single page"
   - "marketing page"
   - "homepage"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: design

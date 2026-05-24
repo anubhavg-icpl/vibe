@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-localization
-description: Use when the user needs guidance on localization. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, localization]
----
-
----
-description: 'Guidelines for localizing markdown documents'
-applyTo: '**/*.md'
+description: "Use when the user needs guidance on localization. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, localization]
+  applyTo: "**/*.md"
+  source: "awesome-copilot"
 ---
 
 # Guidance for Localization

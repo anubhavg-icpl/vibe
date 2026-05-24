@@ -1,9 +1,11 @@
 ---
 name: simplify-code
 description: "Review a diff for clarity and safe simplifications, then optionally apply low-risk fixes."
-risk: safe
-source: "Dimillian/Skills (MIT)"
-date_added: "2026-03-25"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "Dimillian/Skills (MIT)"
+  date_added: "2026-03-25"
 ---
 
 # Simplify Code

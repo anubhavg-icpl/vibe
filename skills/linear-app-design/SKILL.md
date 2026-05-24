@@ -1,11 +1,13 @@
 ---
 name: linear-app-design
 description: Expert in the Linear design system - Project management. Ultra-minimal, precise, purple accent.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, productivity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, productivity]
 ---
 
 # Linear Design System Mode

@@ -1,10 +1,12 @@
 ---
 name: nlp-foundations-to-advanced
 description: Expert in natural language processing from text processing through transformers, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # NLP Foundations to Advanced Mode

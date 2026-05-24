@@ -1,11 +1,13 @@
 ---
 name: artistic-design
 description: Expert in the Artistic design system - High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Artistic Design System Mode

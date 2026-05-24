@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-fedora-linux
-description: Use when the user needs guidance on fedora-linux. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, fedora-linux]
----
-
----
-description: 'Guidance for Fedora (Red Hat family) systems, dnf workflows, SELinux, and modern systemd practices.'
-applyTo: '**'
+description: "Use when the user needs guidance on fedora-linux. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, fedora-linux]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Fedora Administration Guidelines

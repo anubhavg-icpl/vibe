@@ -1,6 +1,7 @@
 ---
 name: monitoring-observability
 description: Monitoring and observability with OpenTelemetry, Prometheus, Grafana dashboards, and structured logging
+license: CC-BY-NC-SA-4.0
 ---
 
 # Monitoring & Observability

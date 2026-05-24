@@ -1,17 +1,18 @@
 ---
 name: skill-audit
 description: "Pre-install security scanner for AI agent skills. 7.5% of 14,706 skills are malicious. Audit before you trust."
-category: security
-risk: safe
-source: community
 source_repo: aptratcn/skill-audit
 source_type: community
-date_added: "2026-05-01"
 author: aptratcn
-tags: [security, audit, pre-install, malicious-detection, supply-chain]
 tools: [claude, cursor, codex, gemini, copilot]
 license: "MIT"
 license_source: "https://github.com/aptratcn/skill-audit/blob/main/LICENSE"
+metadata:
+  category: security
+  risk: safe
+  source: community
+  date_added: "2026-05-01"
+  tags: [security, audit, pre-install, malicious-detection, supply-chain]
 ---
 
 # Skill Audit — Pre-Install Security Scanner

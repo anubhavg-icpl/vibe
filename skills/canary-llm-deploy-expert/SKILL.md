@@ -1,11 +1,13 @@
 ---
 name: canary-llm-deploy-expert
 description: Safe LLM deploys — canary, shadow traffic, rollback triggers, eval-gated promotion
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, canary, shadow-traffic, rollback, deploy]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, canary, shadow-traffic, rollback, deploy]
 ---
 
 # Canary LLM Deploy Expert Mode

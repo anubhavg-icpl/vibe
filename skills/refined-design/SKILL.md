@@ -1,11 +1,13 @@
 ---
 name: refined-design
 description: Expert in the Refined design system - Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Refined Design System Mode

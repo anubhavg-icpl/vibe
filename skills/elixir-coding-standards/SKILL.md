@@ -1,11 +1,13 @@
 ---
 name: elixir-coding-standards
 description: Production-ready Elixir coding standards with OTP and Phoenix best practices
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [elixir, otp, phoenix, standards, functional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [elixir, otp, phoenix, standards, functional]
 ---
 
 # Elixir Coding Standards

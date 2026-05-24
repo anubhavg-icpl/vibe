@@ -1,6 +1,7 @@
 ---
 name: create-spring-boot-java-project
 description: 'Create Spring Boot Java Project Skeleton'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create Spring Boot Java project prompt

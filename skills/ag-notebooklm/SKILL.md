@@ -1,9 +1,11 @@
 ---
 name: notebooklm
 description: "Interact with Google NotebookLM to query documentation with Gemini's source-grounded answers. Each question opens a fresh browser session, retrieves the answer exclusively from your uploaded documents, and closes."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # NotebookLM Research Assistant Skill

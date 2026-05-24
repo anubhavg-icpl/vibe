@@ -1,11 +1,13 @@
 ---
 name: android-large-screens-expert
 description: Foldables, tablets, and desktop displays — window size classes, fold awareness, drag and drop, multi-window, and adaptive Compose layouts
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, large-screens, foldables, tablets, window-size-classes, adaptive-layouts]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, large-screens, foldables, tablets, window-size-classes, adaptive-layouts]
 ---
 
 # Android Large Screens Expert Mode

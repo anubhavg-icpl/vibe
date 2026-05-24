@@ -1,6 +1,7 @@
 ---
 name: cs-senior-engineer
 description: Senior Engineer agent for architecture decisions, code review, DevOps, and API design. Orchestrates engineering and engineering-team skills for technical implementation work. Spawn when users need system design, code quality review, CI/CD pipeline setup, or infrastructure decisions.
+license: CC-BY-NC-SA-4.0
 skills: engineering
 domain: engineering
 model: sonnet

@@ -1,11 +1,13 @@
 ---
 name: rag-eval-expert
 description: RAGAS metrics, needle-in-haystack, RULER, golden sets, faithfulness and context precision/recall
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, evaluation, ragas, faithfulness, needle-in-haystack, ruler]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, evaluation, ragas, faithfulness, needle-in-haystack, ruler]
 ---
 
 # RAG Evaluation Expert Mode

@@ -4,11 +4,12 @@ description: |
   Single-page SaaS landing with hero, features, social proof, pricing, and CTA.
   Respects the active DESIGN.md color/typography/layout tokens.
   Trigger keywords: "saas landing", "marketing page", "product landing".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "saas landing"
   - "marketing page"
   - "product landing"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

@@ -1,11 +1,12 @@
 ---
 name: internal-comms
 description: Use when a Head of People Ops, BizOps lead, or Internal Communications owner needs to draft and sequence an internal-only change-management communication — a re-org announcement, a tool rollout, a policy change, a benefit change, a leadership transition, a layoff, an acquisition close, or an internal product launch — and the audience is employees (not customers). Triggers on "all-hands announcement", "town-hall script", "change comms", "internal newsletter", "rollout comms", "policy change announcement", "re-org announcement", "internal FAQ", "manager talking points", "Prosci ADKAR", "Kotter 8-step", "layoff comms", "RIF comms", "internal memo". Pairs Prosci ADKAR (Awareness / Desire / Knowledge / Ability / Reinforcement) and Kotter's 8-step change model with deterministic stdlib-only Python tools to produce a sequenced touchpoint calendar, a Kotter-compliant primary announcement, an audience-segmented FAQ, and manager cascade talking points. Industry-tuned via --profile {tech-startup, scaleup, enterprise, public-company, non-profit}. Distinct from marketing-skill/* (external/customer-facing), c-level-advisor/internal-narrative (strategic framing, not tactical drafts), and c-level-advisor/change-management (executive change strategy, not the comms package itself).
-version: 2.8.0
 author: claude-code-skills
 license: MIT
-tags: [bizops, internal-comms, change-management, adkar, kotter, all-hands, town-hall, prosci]
 compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini-cli]
+metadata:
+  version: 2.8.0
+  tags: [bizops, internal-comms, change-management, adkar, kotter, all-hands, town-hall, prosci]
 ---
 
 # internal-comms — Tactical Internal Change-Management Authoring

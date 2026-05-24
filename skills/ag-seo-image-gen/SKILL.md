@@ -1,18 +1,20 @@
 ---
 name: seo-image-gen
 description: "Generate SEO-focused images such as OG cards, hero images, schema assets, product visuals, and infographics. Use when image generation is part of an SEO workflow or content publishing task."
-risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 argument-hint: "[og|hero|product|infographic|custom|batch] <description>"
 user-invokable: true
-allowed-tools:
+allowed-tools: 
   - Read
   - Grep
   - Glob
   - Bash
   - WebFetch
   - Write
+metadata:
+  risk: unknown
+  source: "https://github.com/AgriciDaniel/claude-seo"
+  date_added: "2026-03-21"
 ---
 
 # SEO Image Gen: AI Image Generation for SEO Assets (Extension)

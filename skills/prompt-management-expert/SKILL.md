@@ -1,11 +1,13 @@
 ---
 name: prompt-management-expert
 description: Versioned prompt registries, A/B rollouts, env-aware config across Langfuse, LangSmith, Promptfoo
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, prompt-management, versioning, ab-testing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, prompt-management, versioning, ab-testing]
 ---
 
 # Prompt Management Expert Mode

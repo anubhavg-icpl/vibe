@@ -1,7 +1,8 @@
 ---
 name: Excel Automation
 description: "Excel Automation: create workbooks, manage worksheets, read/write cell data, and format spreadsheets via Microsoft Excel and Google Sheets integration"
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

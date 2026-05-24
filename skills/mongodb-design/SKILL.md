@@ -1,11 +1,13 @@
 ---
 name: mongodb-design
 description: Expert in the MongoDB design system - Document database. Green leaf branding, developer documentation focus.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, backend]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, backend]
 ---
 
 # MongoDB Design System Mode

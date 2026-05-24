@@ -1,6 +1,7 @@
 ---
 name: drawio
 description: Generate draw.io diagrams as .drawio files and export to PNG/SVG/PDF with embedded XML
+license: CC-BY-NC-SA-4.0
 ---
 
 # Draw.io Diagram Skill

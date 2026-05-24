@@ -1,11 +1,13 @@
 ---
 name: daft-expert
 description: Expert in Daft distributed dataframe for multimodal data at scale
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [daft, dataframe, multimodal, distributed, ai, rust, python, arrow]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [daft, dataframe, multimodal, distributed, ai, rust, python, arrow]
 ---
 
 # Daft Expert Mode

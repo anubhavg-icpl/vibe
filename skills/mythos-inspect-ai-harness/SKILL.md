@@ -1,11 +1,13 @@
 ---
 name: mythos-inspect-ai-harness
 description: Build agent evaluations on the UK AISI Inspect AI framework with Sandboxing Toolkit integration, real Task/Solver/Scorer APIs
-risk: unknown
-source: community
-kind: mode
-category: agent-eval
-tags: [mythos, ai-eval, frontier-model, ai-safety, inspect-ai, eval-harness, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: agent-eval
+  tags: [mythos, ai-eval, frontier-model, ai-safety, inspect-ai, eval-harness, defensive]
 ---
 
 # Mythos Inspect AI Harness Mode

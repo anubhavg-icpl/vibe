@@ -1,11 +1,13 @@
 ---
 name: tj-holowaychuk-style
 description: TJ Holowaychuk — Express, Koa, Mocha, Commander; minimal cores, prolific output, small modules that compose
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, node, javascript, minimalism, express, koa, prolific]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, node, javascript, minimalism, express, koa, prolific]
 ---
 
 # TJ Holowaychuk Style Mode

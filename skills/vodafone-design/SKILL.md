@@ -1,11 +1,13 @@
 ---
 name: vodafone-design
 description: Expert in the Vodafone design system - Global telecom brand. Monumental uppercase display, Vodafone Red chapter bands.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # Vodafone Design System Mode

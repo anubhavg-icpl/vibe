@@ -1,11 +1,13 @@
 ---
 name: query-rewriting-expert
 description: Query expansion, decomposition, multi-query retrieval, step-back prompting
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, query-rewriting, query-expansion, multi-query, step-back, decomposition]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, query-rewriting, query-expansion, multi-query, step-back, decomposition]
 ---
 
 # Query Rewriting Expert Mode

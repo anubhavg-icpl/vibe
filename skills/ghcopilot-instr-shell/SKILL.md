@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-shell
-description: Use when the user needs guidance on shell. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, shell]
----
-
----
-description: 'Shell scripting best practices and conventions for bash, sh, zsh, and other shells'
-applyTo: '**/*.sh'
+description: "Use when the user needs guidance on shell. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, shell]
+  applyTo: "**/*.sh"
+  source: "awesome-copilot"
 ---
 
 # Shell Scripting Guidelines

@@ -1,11 +1,13 @@
 ---
 name: application-design
 description: Expert in the Application design system - App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Application Design System Mode

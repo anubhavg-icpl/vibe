@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-springboot
-description: Use when the user needs guidance on springboot. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, springboot]
----
-
----
-description: 'Guidelines for building Spring Boot base applications'
-applyTo: '**/*.java, **/*.kt'
+description: "Use when the user needs guidance on springboot. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, springboot]
+  applyTo: "**/*.java, **/*.kt"
+  source: "awesome-copilot"
 ---
 
 # Spring Boot Development

@@ -1,10 +1,12 @@
 ---
 name: horizon-interpretation
 description: Review a vendor's time-horizon claim and produce a gap analysis between benchmark claim and deployment reality.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 21
-tags: [metr, time-horizon, hcast, re-bench, eval-vs-deploy, external-evaluation]
+metadata:
+  version: 1.0.0
+  tags: [metr, time-horizon, hcast, re-bench, eval-vs-deploy, external-evaluation]
 ---
 
 Given a vendor's published time-horizon claim (e.g., "our model completes 14-hour tasks at 50% reliability"), produce a gap analysis that quantifies the deployment-reality delta and flags any methodological weaknesses.

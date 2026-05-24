@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-ruby-on-rails
-description: Use when the user needs guidance on ruby-on-rails. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, ruby-on-rails]
----
-
----
-description: 'Ruby on Rails coding conventions and guidelines'
-applyTo: '**/*.rb'
+description: "Use when the user needs guidance on ruby-on-rails. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, ruby-on-rails]
+  applyTo: "**/*.rb"
+  source: "awesome-copilot"
 ---
 
 # Ruby on Rails

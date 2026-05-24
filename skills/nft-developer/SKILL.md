@@ -1,10 +1,12 @@
 ---
 name: nft-developer
 description: Expert in NFT development, ERC-721/1155 standards, marketplaces, and metadata
-risk: unknown
-source: community
-kind: mode
-category: blockchain
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: blockchain
 ---
 
 # NFT Developer Expert Mode

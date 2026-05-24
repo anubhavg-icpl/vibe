@@ -1,11 +1,13 @@
 ---
 name: lora-expert
 description: Low-Rank Adaptation for parameter-efficient fine-tuning of LLMs
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, peft, lora, training, adapters]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, peft, lora, training, adapters]
 ---
 
 # LoRA Expert Mode

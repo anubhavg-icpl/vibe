@@ -1,11 +1,13 @@
 ---
 name: sveltekit-project-architect
 description: Production-ready SvelteKit project structure with load functions, form actions, and server routes
-risk: unknown
-source: community
-kind: mode
-category: project-structure
-tags: [sveltekit, svelte, typescript, fullstack, project-structure]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
+  tags: [sveltekit, svelte, typescript, fullstack, project-structure]
 ---
 
 # SvelteKit Project Architect Mode

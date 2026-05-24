@@ -1,10 +1,12 @@
 ---
 name: constitution-review
 description: Audit a deployment's constitutional layer — hardcoded prohibitions, soft-coded defaults, operator-adjustable bounds, and four-tier hierarchy resolution.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 17
-tags: [constitutional-ai, rule-override, hierarchy, cai, rlaif, hardcoded-prohibition]
+metadata:
+  version: 1.0.0
+  tags: [constitutional-ai, rule-override, hierarchy, cai, rlaif, hardcoded-prohibition]
 ---
 
 Given a deployment's constitutional layer (system prompt, operator config, declared principles), audit it against the Claude Constitution reference and flag missing hardcoded prohibitions, ambiguous principles, or misordered tiers.

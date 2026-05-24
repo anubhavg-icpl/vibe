@@ -11,6 +11,7 @@ description: >-
   a compliance report, offboard a maker, or any task that involves writing
   governance metadata to flows. Requires a FlowStudio for Teams or MCP Pro+
   subscription — see https://mcp.flowstudio.app
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power Automate Governance with FlowStudio MCP

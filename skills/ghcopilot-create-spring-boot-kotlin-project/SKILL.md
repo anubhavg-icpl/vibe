@@ -1,6 +1,7 @@
 ---
 name: create-spring-boot-kotlin-project
 description: 'Create Spring Boot Kotlin Project Skeleton'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create Spring Boot Kotlin project prompt

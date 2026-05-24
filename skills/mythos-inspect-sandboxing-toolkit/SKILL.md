@@ -1,11 +1,13 @@
 ---
 name: mythos-inspect-sandboxing-toolkit
 description: Operate the AISI Inspect Sandboxing Toolkit — Docker, Kubernetes, and Proxmox plugins for VM-based agent evaluations
-risk: unknown
-source: community
-kind: mode
-category: eval-design
-tags: [mythos, ai-eval, eval-design, sandboxing, inspect-ai, proxmox, kubernetes, docker, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: eval-design
+  tags: [mythos, ai-eval, eval-design, sandboxing, inspect-ai, proxmox, kubernetes, docker, defensive]
 ---
 
 # Mythos Inspect Sandboxing Toolkit Mode

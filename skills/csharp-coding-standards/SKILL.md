@@ -1,11 +1,13 @@
 ---
 name: csharp-coding-standards
 description: Production-ready C# coding standards enforcing modern patterns, type safety, and maintainability for .NET
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [csharp, dotnet, coding-standards, clean-code, best-practices]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [csharp, dotnet, coding-standards, clean-code, best-practices]
 ---
 
 # C# Coding Standards Mode

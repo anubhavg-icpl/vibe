@@ -1,6 +1,7 @@
 ---
 name: golang-idioms
 description: Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management
+license: CC-BY-NC-SA-4.0
 ---
 
 # Go Idioms

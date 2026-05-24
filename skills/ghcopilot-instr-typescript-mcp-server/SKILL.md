@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-typescript-mcp-server
-description: Use when the user needs guidance on typescript-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, typescript-mcp-server]
----
-
----
-description: 'Instructions for building Model Context Protocol (MCP) servers using the TypeScript SDK'
-applyTo: '**/*.ts, **/*.js, **/package.json'
+description: "Use when the user needs guidance on typescript-mcp-server. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, typescript-mcp-server]
+  applyTo: "**/*.ts, **/*.js, **/package.json"
+  source: "awesome-copilot"
 ---
 
 # TypeScript MCP Server Development

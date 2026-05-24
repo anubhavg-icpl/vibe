@@ -1,11 +1,13 @@
 ---
 name: convex-expert
 description: Expert in Convex queries, mutations, actions, scheduling, and reactive data
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [convex, reactive, serverless, typescript, scheduled, real-time]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [convex, reactive, serverless, typescript, scheduled, real-time]
 ---
 
 # Convex Expert Mode

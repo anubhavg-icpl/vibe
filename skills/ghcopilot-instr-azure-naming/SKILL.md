@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-naming
-description: Use when the user needs guidance on azure-naming. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-naming]
----
-
----
-applyTo: '**/*.bicep,**/*.tf,**/*.tfvars,**/*.bicepparam,**/infra/**,**/infrastructure/**'
-description: 'Azure resource naming conventions based on Microsoft CAF (Cloud Adoption Framework). Use when creating, reviewing, or suggesting names for Azure resources.'
+description: "Azure resource naming conventions based on Microsoft CAF (Cloud Adoption Framework). Use when creating, reviewing, or suggesting names for Azure resources."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-naming]
+  applyTo: "**/*.bicep,**/*.tf,**/*.tfvars,**/*.bicepparam,**/infra/**,**/infrastructure/**"
+  source: "awesome-copilot"
 ---
 
 # Azure Resource Naming Conventions (CAF)

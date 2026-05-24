@@ -1,11 +1,13 @@
 ---
 name: martin-kleppmann-style
 description: Martin Kleppmann — Designing Data-Intensive Applications, CRDTs, local-first software, Automerge
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, distributed-systems, crdts, local-first, databases, research]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, distributed-systems, crdts, local-first, databases, research]
 ---
 
 # Martin Kleppmann Style Mode

@@ -1,11 +1,13 @@
 ---
 name: ollama-multimodal-modelfile-expert
 description: Author Ollama Modelfiles for vision models — llava, llama3.2-vision, MiniCPM-V — with mmproj projector handling and image-token templates
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, ollama, multimodal, vision, llava, llama-vision, minicpm, mmproj]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, ollama, multimodal, vision, llava, llama-vision, minicpm, mmproj]
 ---
 
 # Ollama Multimodal Modelfile Expert Mode

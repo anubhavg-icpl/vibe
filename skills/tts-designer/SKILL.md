@@ -1,10 +1,12 @@
 ---
 name: tts-designer
 description: Pick TTS model, voice, text-normalization scope, and evaluation plan for a given language, style, and latency target.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 07
-tags: [audio, tts, speech-synthesis]
+metadata:
+  version: 1.0.0
+  tags: [audio, tts, speech-synthesis]
 ---
 
 Given a target (language(s), voice style, latency budget, CPU vs GPU, license constraints) and content (domain, OOV density, punctuation richness), output:

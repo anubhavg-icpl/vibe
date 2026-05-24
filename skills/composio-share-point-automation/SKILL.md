@@ -1,7 +1,8 @@
 ---
 name: SharePoint Automation
 description: "SharePoint Automation: manage sites, lists, documents, folders, pages, and search content across SharePoint and OneDrive"
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

@@ -1,10 +1,12 @@
 ---
 name: changelog-generator
 description: Expert in generating clear, informative changelogs following best practices
-risk: unknown
-source: community
-kind: mode
-category: documentation
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: documentation
 ---
 
 # Changelog Generator Mode

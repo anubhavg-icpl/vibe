@@ -1,11 +1,13 @@
 ---
 name: mlx-apple-silicon-expert
 description: Run, quantize, fine-tune (LoRA/QLoRA), and serve LLMs and VLMs natively on Apple Silicon with MLX and mlx-lm
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, mlx, apple-silicon, mlx-lm, mlx-vlm, lora, qlora, unified-memory]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, mlx, apple-silicon, mlx-lm, mlx-vlm, lora, qlora, unified-memory]
 ---
 
 # MLX Apple Silicon Expert Mode

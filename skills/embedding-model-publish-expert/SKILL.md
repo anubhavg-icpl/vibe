@@ -1,11 +1,13 @@
 ---
 name: embedding-model-publish-expert
 description: Publish embedding models — sentence-transformers config, modules.json, 1_Pooling, MTEB submission, Matryoshka dims, embedding-specific model card
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, embeddings, sentence-transformers, mteb, matryoshka, retrieval, publishing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, embeddings, sentence-transformers, mteb, matryoshka, retrieval, publishing]
 ---
 
 # Embedding Model Publish Expert Mode

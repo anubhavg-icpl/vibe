@@ -1,11 +1,13 @@
 ---
 name: mythos-crypto-protocol-auditor
 description: Audit cryptographic protocols for design and implementation flaws across TLS, JOSE, OAuth, OIDC, and post-quantum migration paths
-risk: unknown
-source: community
-kind: mode
-category: specialty
-tags: [mythos, security, cryptography, tls, jwt, oauth, post-quantum, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: specialty
+  tags: [mythos, security, cryptography, tls, jwt, oauth, post-quantum, defensive]
 ---
 
 # Mythos Crypto Protocol Auditor Mode

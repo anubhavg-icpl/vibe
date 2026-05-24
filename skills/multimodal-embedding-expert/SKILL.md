@@ -1,11 +1,13 @@
 ---
 name: multimodal-embedding-expert
 description: Multimodal embeddings - jina-clip-v2, voyage-multimodal-3, ColPali, nomic-embed-multimodal
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, embeddings, retrieval, clip, colpali, jina, voyage]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, embeddings, retrieval, clip, colpali, jina, voyage]
 ---
 
 # Multimodal Embedding Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: mongodb-atlas-vector-expert
 description: Deep expertise in MongoDB Atlas Vector Search — $vectorSearch aggregation stage, $rankFusion / $scoreFusion hybrid, and HNSW index management
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, mongodb, atlas, vector-search, hybrid-search, aggregation, hnsw]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, mongodb, atlas, vector-search, hybrid-search, aggregation, hnsw]
 ---
 
 # MongoDB Atlas Vector Search Expert Mode

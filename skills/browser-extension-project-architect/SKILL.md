@@ -1,10 +1,12 @@
 ---
 name: browser-extension-project-architect
 description: Production-ready browser extension project structure architect - validates and scaffolds enterprise-grade extensions with Manifest V3, TypeScript, and multi-browser support
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # 🧩 Browser Extension Project Architect Mode

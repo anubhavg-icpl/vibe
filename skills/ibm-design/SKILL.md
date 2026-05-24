@@ -1,11 +1,13 @@
 ---
 name: ibm-design
 description: Expert in the IBM design system - Enterprise technology. Carbon design system, structured blue palette.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # IBM Design System Mode

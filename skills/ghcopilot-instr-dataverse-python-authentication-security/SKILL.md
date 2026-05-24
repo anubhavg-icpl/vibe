@@ -1,12 +1,12 @@
 ---
 name: ghcopilot-instr-dataverse-python-authentication-security
-description: Use when the user needs guidance on dataverse-python-authentication-security. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dataverse-python-authentication-security]
----
-
----
-applyTo: '**'
+description: "Use when the user needs guidance on dataverse-python-authentication-security. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dataverse-python-authentication-security]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Dataverse SDK for Python — Authentication & Security Patterns

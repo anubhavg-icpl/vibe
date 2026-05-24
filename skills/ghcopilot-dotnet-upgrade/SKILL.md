@@ -1,6 +1,7 @@
 ---
 name: dotnet-upgrade
 description: 'Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Project Discovery & Assessment

@@ -1,11 +1,13 @@
 ---
 name: rob-pike-style
 description: Rob Pike — Plan 9, Go, "less is exponentially more," concurrency primitives, composition over inheritance
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, go, plan9, simplicity, concurrency, composition]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, go, plan9, simplicity, concurrency, composition]
 ---
 
 # Rob Pike Style Mode

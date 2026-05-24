@@ -1,14 +1,15 @@
 ---
 name: html-ppt-obsidian-claude-gradient
 description: GitHub 暗紫渐变 deck — GitHub-dark #0d1117 + 紫蓝 radial 环境光 + 60px 网格 mask、居中布局、紫色 pill 标签、三色渐变标题（#a855f7→#60a5fa→#34d399）、GitHub 风代码 palette、紫色左边框高亮块。适合开发者工作流 / MCP / Agent / dev tool 教程，类似 GitHub Blog / Linear Changelog。
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "github dark"
   - "developer tutorial"
   - "mcp tutorial"
   - "agent tutorial"
   - "dev workflow"
   - "changelog deck"
-od:
+od: 
   mode: deck
   scenario: engineering
   featured: 31
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-obsidian-claude-gradient 模板做一份开发者教程 PPT。GitHub 暗紫渐变 + 居中布局 + 紫色 pill + 三色渐变标题 + 配置/步骤代码块。先确认：教什么、目标受众、要不要 MCP/Agent 配置示例。"
 ---
+
 # HTML PPT · GitHub 暗紫渐变
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`obsidian-claude-gradient`** full-deck template.

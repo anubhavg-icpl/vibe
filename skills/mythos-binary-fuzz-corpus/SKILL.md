@@ -1,11 +1,13 @@
 ---
 name: mythos-binary-fuzz-corpus
 description: Build and maintain high-quality fuzzing corpora for OSS-Fuzz, ClusterFuzzLite, and libFuzzer - seed selection, dictionaries, structure-aware grammars, coverage gap analysis
-risk: unknown
-source: community
-kind: mode
-category: specialty
-tags: [mythos, security, fuzzing, oss-fuzz, libfuzzer, corpus, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: specialty
+  tags: [mythos, security, fuzzing, oss-fuzz, libfuzzer, corpus, defensive]
 ---
 
 # Mythos Binary Fuzz Corpus Engineer Mode

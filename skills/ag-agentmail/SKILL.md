@@ -1,8 +1,10 @@
 ---
 name: agentmail
 description: Email infrastructure for AI agents. Create accounts, send/receive emails, manage webhooks, and check karma balance via the AgentMail API.
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
 ---
 
 # AgentMail — Email for AI Agents

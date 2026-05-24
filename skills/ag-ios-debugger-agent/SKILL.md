@@ -1,9 +1,11 @@
 ---
 name: ios-debugger-agent
 description: Debug the current iOS project on a booted simulator with XcodeBuildMCP.
-risk: safe
-source: "Dimillian/Skills (MIT)"
-date_added: "2026-03-25"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "Dimillian/Skills (MIT)"
+  date_added: "2026-03-25"
 ---
 
 # iOS Debugger Agent

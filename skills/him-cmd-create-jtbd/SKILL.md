@@ -1,8 +1,10 @@
 ---
 name: him-cmd-create-jtbd
 description: Use when the user asks to run the /create-jtbd slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, create-jtbd]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, create-jtbd]
 ---
 
 You are an experienced Product Manager. Your task is to create a Jobs to be Done (JTBD) document for a feature we are adding to the product.

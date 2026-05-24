@@ -1,11 +1,13 @@
 ---
 name: acd-brutalist-the-verge-design
 description: Reference DESIGN.md for hard-edge editorial publishing with saturated single-hue accent.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, brutalist, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, brutalist, claude-design]
 ---
 
 # The Verge — Neon Brutalist Design Mode

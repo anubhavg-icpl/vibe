@@ -1,14 +1,12 @@
 ---
 name: ghcopilot-instr-copilot-sdk-go
-description: Use when the user needs guidance on copilot-sdk-go. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, copilot-sdk-go]
----
-
----
-applyTo: "**.go, go.mod"
-description: "This file provides guidance on building Go applications using GitHub Copilot SDK."
-name: "GitHub Copilot SDK Go Instructions"
+description: "Use when the user needs guidance on copilot-sdk-go. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, copilot-sdk-go]
+  applyTo: "**.go, go.mod"
+  source: "awesome-copilot"
 ---
 
 ## Core Principles

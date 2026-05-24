@@ -1,11 +1,13 @@
 ---
 name: airbyte-expert
 description: Expert in Airbyte connectors, the Connector Development Kit, and sync modes
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [airbyte, ingestion, elt, connectors, cdk, incremental-sync, cdc]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [airbyte, ingestion, elt, connectors, cdk, incremental-sync, cdc]
 ---
 
 # Airbyte Expert Mode

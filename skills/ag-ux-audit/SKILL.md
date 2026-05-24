@@ -1,15 +1,17 @@
 ---
 name: ux-audit
 description: "Audit screens against Nielsen's heuristics and mobile UX best practices using the StyleSeed Toss design language as the implementation context."
-category: design
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
 source_repo: bitjaru/styleseed
 source_type: community
-date_added: "2026-04-08"
 author: bitjaru
-tags: [ux, audit, usability, mobile, styleseed]
 tools: [claude, cursor, codex, gemini]
+metadata:
+  category: design
+  risk: safe
+  source: community
+  date_added: "2026-04-08"
+  tags: [ux, audit, usability, mobile, styleseed]
 ---
 
 # UX Audit

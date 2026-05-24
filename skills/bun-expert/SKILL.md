@@ -1,11 +1,13 @@
 ---
 name: bun-expert
 description: Expert in Bun runtime, package manager, test runner, and bundler for JavaScript/TypeScript
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [bun, runtime, javascript, typescript, package-manager, test-runner, bundler]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [bun, runtime, javascript, typescript, package-manager, test-runner, bundler]
 ---
 
 # Bun Expert Mode

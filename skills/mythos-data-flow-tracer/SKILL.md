@@ -1,11 +1,13 @@
 ---
 name: mythos-data-flow-tracer
 description: Cross-file taint tracking from sources to sinks, with sanitizer-gap analysis
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, taint-analysis, sast, codeql, semgrep, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, taint-analysis, sast, codeql, semgrep, defensive]
 ---
 
 # Mythos Data Flow Tracer Mode

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-fluent-modern-theming
-description: Use when the user needs guidance on pcf-fluent-modern-theming. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-fluent-modern-theming]
----
-
----
-description: 'Style components with modern theming using Fluent UI'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj}'
+description: "Use when the user needs guidance on pcf-fluent-modern-theming. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-fluent-modern-theming]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj}"
+  source: "awesome-copilot"
 ---
 
 # Style Components with Modern Theming (Preview)

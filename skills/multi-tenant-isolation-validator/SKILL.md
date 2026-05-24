@@ -1,11 +1,13 @@
 ---
 name: multi-tenant-isolation-validator
 description: Autonomous agent that validates multi-tenant isolation, database switching, and cross-tenant data leakage prevention
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [agent, security, multi-tenant, isolation, saas, database, validator]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [agent, security, multi-tenant, isolation, saas, database, validator]
 ---
 
 # Multi-Tenant Isolation Validator Agent

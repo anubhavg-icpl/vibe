@@ -1,6 +1,7 @@
 ---
 name: microsoft-docs
 description: 'Query official Microsoft documentation to find concepts, tutorials, and code examples across Azure, .NET, Agent Framework, Aspire, VS Code, GitHub, and more. Uses Microsoft Learn MCP as the default, with Context7 and Aspire MCP for content that lives outside learn.microsoft.com.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Microsoft Docs

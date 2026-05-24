@@ -1,10 +1,12 @@
 ---
 name: verifier
 description: verifier
-risk: unknown
-source: community
-kind: mode
-category: workflows
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: workflows
 ---
 
 # Verifier Guide

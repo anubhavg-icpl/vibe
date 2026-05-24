@@ -1,6 +1,7 @@
 ---
 name: msgraph-sdk
 description: 'Integrate Microsoft Graph SDK into any project — .NET, TypeScript/JavaScript, or Python. Covers auth patterns (client credentials, OBO, managed identity), SDK setup, calling Graph APIs, batching, delta queries, change notifications, throttling, and permission scopes. Use when accessing Microsoft 365 data (users, mail, calendar, Teams, files, SharePoint) from any application type.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Microsoft Graph SDK

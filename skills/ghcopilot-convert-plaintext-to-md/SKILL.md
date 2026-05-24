@@ -1,6 +1,7 @@
 ---
 name: convert-plaintext-to-md
 description: 'Convert a text-based document to markdown following instructions from prompt, or if a documented option is passed, follow the instructions for that option.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Convert Plaintext Documentation to Markdown

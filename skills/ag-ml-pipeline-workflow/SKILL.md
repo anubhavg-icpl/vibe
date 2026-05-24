@@ -1,9 +1,11 @@
 ---
 name: ml-pipeline-workflow
 description: "Complete end-to-end MLOps pipeline orchestration from data preparation through model deployment."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # ML Pipeline Workflow

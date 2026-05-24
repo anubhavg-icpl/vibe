@@ -1,9 +1,11 @@
 ---
 name: internal-comms-community
 description: "To write internal communications, use this skill for:"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 ## When to use this skill

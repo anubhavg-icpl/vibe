@@ -1,6 +1,7 @@
 ---
 name: persona
 description: Generate data-driven user personas for UX research and product design. Usage: /persona generate [options]
+license: CC-BY-NC-SA-4.0
 ---
 
 # /persona

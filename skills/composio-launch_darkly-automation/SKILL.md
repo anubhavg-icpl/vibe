@@ -1,7 +1,8 @@
 ---
 name: launch_darkly-automation
 description: "Automate LaunchDarkly tasks via Rube MCP (Composio): feature flags, environments, segments, and rollout management. Always search tools first for current schemas."
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

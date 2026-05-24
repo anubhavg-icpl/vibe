@@ -1,11 +1,13 @@
 ---
 name: rfc-8693-token-exchange
 description: Token exchange for delegation, impersonation, and cross-domain identity federation
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [oauth, token-exchange, delegation, impersonation, multi-tenancy, iga-connect]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [oauth, token-exchange, delegation, impersonation, multi-tenancy, iga-connect]
 ---
 
 # RFC 8693 - OAuth 2.0 Token Exchange

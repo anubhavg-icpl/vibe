@@ -1,8 +1,10 @@
 ---
 name: pr-writer
 description: "Create pull requests following Sentry's engineering practices."
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # PR Writer

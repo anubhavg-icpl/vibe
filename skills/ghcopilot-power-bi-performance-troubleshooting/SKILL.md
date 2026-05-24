@@ -1,6 +1,7 @@
 ---
 name: power-bi-performance-troubleshooting
 description: 'Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving performance issues in Power BI models, reports, and queries.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power BI Performance Troubleshooting Guide

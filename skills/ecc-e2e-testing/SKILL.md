@@ -1,6 +1,7 @@
 ---
 name: e2e-testing
 description: Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

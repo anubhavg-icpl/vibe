@@ -1,11 +1,13 @@
 ---
 name: replicate-expert
 description: Expert in Replicate predictions API, Cog model packaging, and fine-tunes
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [replicate, cog, ml, inference, api, fine-tune, lora, webhooks]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [replicate, cog, ml, inference, api, fine-tune, lora, webhooks]
 ---
 
 # Replicate Expert Mode

@@ -1,10 +1,12 @@
 ---
 name: prototyping-expert
 description: Expert in rapid prototyping with Figma, Framer, and code-based prototypes
-risk: unknown
-source: community
-kind: mode
-category: ui-ux
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ui-ux
 ---
 
 # Prototyping Expert Mode

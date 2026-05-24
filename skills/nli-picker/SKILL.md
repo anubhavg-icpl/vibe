@@ -1,10 +1,12 @@
 ---
 name: nli-picker
 description: Pick an NLI model, label template, and evaluation setup for a classification / faithfulness / zero-shot task.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 21
-tags: [nlp, nli, zero-shot]
+metadata:
+  version: 1.0.0
+  tags: [nlp, nli, zero-shot]
 ---
 
 Given a use case (faithfulness check, zero-shot classification, document-level inference), output:

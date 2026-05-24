@@ -1,6 +1,7 @@
 ---
 name: fabric-lakehouse
 description: 'Use this skill to get context about Fabric Lakehouse and its features for software systems and AI-powered functions. It offers descriptions of Lakehouse data components, organization with schemas and shortcuts, access control, and code examples. This skill supports users in designing, building, and optimizing Lakehouse solutions using best practices.'
+license: CC-BY-NC-SA-4.0
 metadata:
   author: tedvilutis
   version: "1.0"

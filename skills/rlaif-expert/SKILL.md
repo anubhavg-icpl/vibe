@@ -1,11 +1,13 @@
 ---
 name: rlaif-expert
 description: RL from AI Feedback — principle-driven critique, AI judges, scaling preference labeling without humans
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [rlaif, constitutional-ai, alignment, ai-feedback, llm-judge]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [rlaif, constitutional-ai, alignment, ai-feedback, llm-judge]
 ---
 
 # RLAIF / Constitutional AI Expert Mode

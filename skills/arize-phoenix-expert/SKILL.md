@@ -1,11 +1,13 @@
 ---
 name: arize-phoenix-expert
 description: Open-source LLM tracing and evaluation built on OpenInference and OpenTelemetry
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, observability, phoenix, arize, openinference, opentelemetry]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, observability, phoenix, arize, openinference, opentelemetry]
 ---
 
 # Arize Phoenix Expert Mode

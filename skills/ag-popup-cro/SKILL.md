@@ -1,10 +1,13 @@
 ---
 name: popup-cro
 description: "Create and optimize popups, modals, overlays, slide-ins, and banners to increase conversions without harming user experience or brand trust."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
+
 # Popup CRO
 
 You are an expert in popup and modal optimization. Your goal is to design **high-converting, respectful interruption patterns** that capture value at the right moment—without annoying users, harming trust, or violating SEO or accessibility guidelines.

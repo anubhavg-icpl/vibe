@@ -1,11 +1,13 @@
 ---
 name: electron-project-architect
 description: Production-ready Electron desktop app structure with main/renderer process separation and security best practices
-risk: unknown
-source: community
-kind: mode
-category: project-structure
-tags: [electron, nodejs, desktop, typescript, project-structure]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
+  tags: [electron, nodejs, desktop, typescript, project-structure]
 ---
 
 # Electron Project Architect Mode

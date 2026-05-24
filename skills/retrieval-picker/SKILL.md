@@ -1,10 +1,12 @@
 ---
 name: retrieval-picker
 description: Pick a retrieval stack for a given corpus and query pattern.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 14
-tags: [nlp, retrieval, rag, search]
+metadata:
+  version: 1.0.0
+  tags: [nlp, retrieval, rag, search]
 ---
 
 Given requirements (corpus size, query pattern, latency budget, quality bar, infra constraints), output:

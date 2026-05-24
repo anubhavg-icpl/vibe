@@ -1,11 +1,13 @@
 ---
 name: hillel-wayne-style
 description: Hillel Wayne — formal methods, TLA+, Alloy, "an hour of modeling will catch issues days of tests will miss
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, formal-methods, tla-plus, alloy, specification, design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, formal-methods, tla-plus, alloy, specification, design]
 ---
 
 # Hillel Wayne Style Mode

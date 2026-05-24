@@ -1,11 +1,13 @@
 ---
 name: airbnb-design
 description: Expert in the Airbnb design system - Travel marketplace. Warm coral accent, photography-driven, rounded UI.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, e-commerce]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, e-commerce]
 ---
 
 # Airbnb Design System Mode

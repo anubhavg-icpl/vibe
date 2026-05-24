@@ -1,11 +1,13 @@
 ---
 name: contemporary-design
 description: Expert in the Contemporary design system - Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Contemporary Design System Mode

@@ -1,10 +1,12 @@
 ---
 name: rendering-conditional-render
 description: Use Explicit Conditional Rendering
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Use Explicit Conditional Rendering

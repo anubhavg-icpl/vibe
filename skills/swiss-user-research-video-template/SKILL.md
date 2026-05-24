@@ -5,7 +5,8 @@ description: |
   Use when users ask for a premium research deck or story-first live artifact with
   minimalist typography, high-clarity layout, subtle motion, donut breakdowns,
   and keyboard/click navigation across slides in a single HTML file.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "swiss user research template"
   - "editorial research deck template"
   - "minimal user research slides"
@@ -13,7 +14,7 @@ triggers:
   - "research synthesis template"
   - "瑞士风用户研究模板"
   - "高级调性研究汇报"
-od:
+od: 
   mode: template
   surface: video
   type: hyperframes

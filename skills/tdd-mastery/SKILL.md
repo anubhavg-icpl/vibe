@@ -1,6 +1,7 @@
 ---
 name: tdd-mastery
 description: Test-driven development workflow with Red-Green-Refactor cycle across languages
+license: CC-BY-NC-SA-4.0
 ---
 
 # TDD Mastery

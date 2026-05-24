@@ -1,21 +1,14 @@
 ---
 name: auri-core
 description: "Auri: assistente de voz inteligente (Alexa + Claude claude-opus-4-20250805). Visao do produto, persona Vitoria Neural, stack AWS, modelo Free/Pro/Business/Enterprise, roadmap 4 fases, GTM, north star WAC e analise competitiva."
-risk: none
-source: community
-date_added: '2026-03-06'
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- voice-assistant
-- product-vision
-- alexa
-- aws
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: none
+  source: community
+  date_added: '2026-03-06'
+  tags: 
 ---
 
 # Auri - Core Product Skill

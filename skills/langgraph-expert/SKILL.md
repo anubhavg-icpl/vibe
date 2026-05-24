@@ -1,11 +1,13 @@
 ---
 name: langgraph-expert
 description: Build stateful, durable agent graphs with checkpointing, human-in-the-loop, and time-travel debugging
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [langgraph, langchain, agents, state-machines, checkpointing, postgres, python]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [langgraph, langchain, agents, state-machines, checkpointing, postgres, python]
 ---
 
 # LangGraph Expert Mode

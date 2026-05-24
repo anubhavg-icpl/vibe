@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-best-practices
-description: Use when the user needs guidance on pcf-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-best-practices]
----
-
----
-description: 'Best practices and guidance for developing PCF code components'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj,css,html}'
+description: "Use when the user needs guidance on pcf-best-practices. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-best-practices]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj,css,html}"
+  source: "awesome-copilot"
 ---
 
 # Best Practices and Guidance for Code Components

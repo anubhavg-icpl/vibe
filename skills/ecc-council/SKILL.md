@@ -1,6 +1,7 @@
 ---
 name: council
 description: Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

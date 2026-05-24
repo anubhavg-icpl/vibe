@@ -1,10 +1,12 @@
 ---
 name: design-tokens
 description: Expert in design tokens, design systems, and cross-platform design consistency
-risk: unknown
-source: community
-kind: mode
-category: design-ux
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-ux
 ---
 
 # Design Tokens Expert Mode

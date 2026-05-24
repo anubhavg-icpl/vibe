@@ -1,10 +1,12 @@
 ---
 name: skill-depth-to-pointcloud
 description: Build point clouds from depth maps with correct intrinsics handling and export to .ply
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 26
-tags: [depth, point-cloud, 3d, intrinsics]
+metadata:
+  version: 1.0.0
+  tags: [depth, point-cloud, 3d, intrinsics]
 ---
 
 # Depth to Point Cloud

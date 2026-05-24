@@ -1,15 +1,17 @@
 ---
 name: monte-carlo-monitor-creation
 description: "Guides creation of Monte Carlo monitors via MCP tools, producing monitors-as-code YAML for CI/CD deployment."
-category: data
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
 source_repo: monte-carlo-data/mc-agent-toolkit
 source_type: community
-date_added: "2026-04-08"
 author: monte-carlo-data
-tags: [data-observability, monitoring, monte-carlo, monitors-as-code]
 tools: [claude, cursor, codex]
+metadata:
+  category: data
+  risk: safe
+  source: community
+  date_added: "2026-04-08"
+  tags: [data-observability, monitoring, monte-carlo, monitors-as-code]
 ---
 
 # Monte Carlo Monitor Creation Skill

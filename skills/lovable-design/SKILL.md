@@ -1,11 +1,13 @@
 ---
 name: lovable-design
 description: Expert in the Lovable design system - AI full-stack builder. Playful gradients, friendly dev aesthetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, developer-tools]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, developer-tools]
 ---
 
 # Lovable Design System Mode

@@ -1,6 +1,7 @@
 ---
 name: declarative-agents
 description: 'Complete development kit for Microsoft 365 Copilot declarative agents with three comprehensive workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Microsoft 365 Declarative Agents Development Kit

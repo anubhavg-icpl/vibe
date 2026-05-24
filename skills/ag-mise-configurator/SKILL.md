@@ -1,15 +1,18 @@
 ---
 name: mise-configurator
 description: "Generate production-ready mise.toml setups for local development, CI/CD pipelines, and toolchain standardization."
-category: devops
-risk: safe
-source: self
+license: CC-BY-NC-SA-4.0
 source_type: self
-date_added: "2026-04-16"
 author: community
-tags: [mise, devops, ci-cd, toolchain, runtimes, automation]
 tools: [claude, cursor, gemini]
+metadata:
+  category: devops
+  risk: safe
+  source: self
+  date_added: "2026-04-16"
+  tags: [mise, devops, ci-cd, toolchain, runtimes, automation]
 ---
+
 # Mise Configurator
 
 ## Overview

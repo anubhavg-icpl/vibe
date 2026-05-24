@@ -1,10 +1,12 @@
 ---
 name: bundle-dynamic-imports
 description: Dynamic Imports for Heavy Components
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Dynamic Imports for Heavy Components

@@ -1,10 +1,12 @@
 ---
 name: td-agent
 description: Pick between Q-learning, SARSA, Expected SARSA for a tabular or small-feature RL task.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 4
-tags: [rl, td-learning, q-learning, sarsa]
+metadata:
+  version: 1.0.0
+  tags: [rl, td-learning, q-learning, sarsa]
 ---
 
 Given a tabular or small-feature environment, output:

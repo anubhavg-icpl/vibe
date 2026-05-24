@@ -1,10 +1,12 @@
 ---
 name: bun-runtime
 description: Expert in Bun JavaScript runtime, bundler, package manager, and test runner for high-performance applications
-risk: unknown
-source: community
-kind: mode
-category: backend
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
 ---
 
 # Bun Runtime Expert Mode

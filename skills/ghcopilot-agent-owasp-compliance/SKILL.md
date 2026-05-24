@@ -9,6 +9,7 @@ description: |
   - Generating a compliance report for security review or audit
   - Comparing agent framework security features against the standard
   - Any request like "is my agent OWASP compliant?", "check ASI compliance", or "agentic security audit"
+license: CC-BY-NC-SA-4.0
 ---
 
 # Agent OWASP ASI Compliance Check

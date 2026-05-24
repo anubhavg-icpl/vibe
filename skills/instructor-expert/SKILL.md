@@ -1,11 +1,13 @@
 ---
 name: instructor-expert
 description: Extract validated, typed data from any LLM with Instructor and Pydantic
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [instructor, pydantic, structured-outputs, llm, validation, python]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [instructor, pydantic, structured-outputs, llm, validation, python]
 ---
 
 # Instructor Expert Mode

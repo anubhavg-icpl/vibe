@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-python-mcp-server
-description: Use when the user needs guidance on python-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, python-mcp-server]
----
-
----
-description: 'Instructions for building Model Context Protocol (MCP) servers using the Python SDK'
-applyTo: '**/*.py, **/pyproject.toml, **/requirements.txt'
+description: "Use when the user needs guidance on python-mcp-server. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, python-mcp-server]
+  applyTo: "**/*.py, **/pyproject.toml, **/requirements.txt"
+  source: "awesome-copilot"
 ---
 
 # Python MCP Server Development

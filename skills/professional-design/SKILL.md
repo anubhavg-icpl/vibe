@@ -1,11 +1,13 @@
 ---
 name: professional-design
 description: Expert in the Professional design system - Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Professional Design System Mode

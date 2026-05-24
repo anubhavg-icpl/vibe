@@ -4,9 +4,11 @@ description: Specialized skill for building production-ready serverless
   applications on GCP. Covers Cloud Run services (containerized), Cloud Run
   Functions (event-driven), cold start optimization, and event-driven
   architecture with Pub/Sub.
-risk: unknown
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # GCP Cloud Run

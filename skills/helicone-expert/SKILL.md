@@ -1,11 +1,13 @@
 ---
 name: helicone-expert
 description: Helicone proxy/observability — cost tracking, semantic caching, rate limits, prompt versioning
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, observability, helicone, proxy, caching]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, observability, helicone, proxy, caching]
 ---
 
 # Helicone Expert Mode

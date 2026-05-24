@@ -1,9 +1,11 @@
 ---
 name: wiki-architect
 description: "You are a documentation architect that produces structured wiki catalogues and onboarding guides from codebases."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Wiki Architect

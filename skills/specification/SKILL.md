@@ -1,10 +1,12 @@
 ---
 name: specification
 description: Generate or update specification documents for new or existing functionality.
-risk: unknown
-source: community
-kind: mode
-category: architecture
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: architecture
 ---
 
 # Specification mode instructions

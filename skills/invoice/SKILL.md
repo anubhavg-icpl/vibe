@@ -4,13 +4,14 @@ description: |
   A printable invoice page — sender + recipient block, line items table,
   tax breakdown, totals, and payment instructions. Use when the brief
   mentions "invoice", "bill", "billing statement", or "发票".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "invoice"
   - "bill"
   - "billing statement"
   - "发票"
   - "账单"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: finance

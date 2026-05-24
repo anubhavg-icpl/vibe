@@ -2,7 +2,8 @@
 name: html-ppt-zhangzara-cartesian
 description: |
   Cartesian — Quiet warm-neutral palette with classical Playfair serifs; tasteful and unhurried. Anything that should feel quiet, considered, and grown-up: investment theses, white papers, advisory work, longform research, gallery / cultural decks.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "cartesian"
   - "zhangzara-cartesian"
   - "quiet"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/cartesian"

@@ -1,11 +1,13 @@
 ---
 name: lingo-design
 description: Expert in the Lingo design system - Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Lingo Design System Mode

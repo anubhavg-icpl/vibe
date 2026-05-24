@@ -1,11 +1,13 @@
 ---
 name: dan-abramov-style
 description: Dan Abramov — React, Redux, RSC; thoughtful API design, mental models over rules, "Just JavaScript
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, react, javascript, mental-models, api-design, server-components]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, react, javascript, mental-models, api-design, server-components]
 ---
 
 # Dan Abramov Style Mode

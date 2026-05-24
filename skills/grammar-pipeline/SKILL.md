@@ -1,10 +1,12 @@
 ---
 name: grammar-pipeline
 description: Design a classical POS + dependency pipeline for a downstream NLP task.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 07
-tags: [nlp, pos, parsing]
+metadata:
+  version: 1.0.0
+  tags: [nlp, pos, parsing]
 ---
 
 Given a downstream task (information extraction, rewrite validation, query decomposition, lemmatization), you output:

@@ -1,6 +1,7 @@
 ---
 name: "postmortem"
 description: "/em -postmortem — Honest Analysis of What Went Wrong"
+license: CC-BY-NC-SA-4.0
 ---
 
 # /em:postmortem — Honest Analysis of What Went Wrong

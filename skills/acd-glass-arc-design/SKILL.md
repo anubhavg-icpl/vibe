@@ -1,11 +1,13 @@
 ---
 name: acd-glass-arc-design
 description: Reference DESIGN.md for frosted translucency, pastel gradients, soft geometry.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, glass, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, glass, claude-design]
 ---
 
 # Arc Browser — Glass / Soft-Futurism Design Mode

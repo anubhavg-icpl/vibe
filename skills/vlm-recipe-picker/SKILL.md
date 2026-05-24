@@ -1,10 +1,12 @@
 ---
 name: vlm-recipe-picker
 description: Pick an open-weight VLM recipe (encoder, connector, LLM, data mix, resolution schedule) with ablation-table citations for every choice.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 07
-tags: [vlm, mm1, idefics2, molmo, cambrian, prismatic, ablation]
+metadata:
+  version: 1.0.0
+  tags: [vlm, mm1, idefics2, molmo, cambrian, prismatic, ablation]
 ---
 
 Given a task mix (OCR, chart, UI agent, reasoning, grounding), a compute budget (LLM params, training GPU hours, or inference latency target), and a deployment constraint (edge, cloud, on-device), emit a full open-weight VLM recipe with citations.

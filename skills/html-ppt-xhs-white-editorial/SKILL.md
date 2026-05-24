@@ -1,14 +1,15 @@
 ---
 name: html-ppt-xhs-white-editorial
 description: 白底杂志风 deck — 纯白背景 + 顶部 10 色彩虹 bar、80-110px display 标题、紫→蓝→绿→橙→粉渐变文字、马卡龙软卡片组（粉/紫/蓝/绿/橙）、黑底白字 .focus pill、引用大块。同时适合发小红书图文 + 横版 PPT 双用。
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "白底杂志"
   - "杂志风"
   - "xhs editorial"
   - "white editorial"
   - "小红书白底"
   - "editorial deck"
-od:
+od: 
   mode: deck
   scenario: marketing
   featured: 27
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-xhs-white-editorial 模板做一份白底杂志风 PPT，中文优先。要点：80-110px display 大标题、彩虹顶部 bar、马卡龙软卡片、黑底白字 .focus pill。先告诉我主题和受众，再写 8-12 页。"
 ---
+
 # HTML PPT · 白底杂志风
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`xhs-white-editorial`** full-deck template.

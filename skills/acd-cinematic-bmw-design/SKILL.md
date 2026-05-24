@@ -1,11 +1,13 @@
 ---
 name: acd-cinematic-bmw-design
 description: Reference DESIGN.md for luxury automotive editorial that needs to feel engineered. White slabs, full-bleed performance photography, BMW corporate blue rising into a deeper blue at active states, restrained Helvetica-grade typography.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, cinematic, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, cinematic, claude-design]
 ---
 
 # BMW — Editorial Performance Blue Design Mode

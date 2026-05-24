@@ -1,10 +1,12 @@
 ---
 name: ai-agent-builder
 description: Expert in building autonomous AI agents using LangChain, LlamaIndex, CrewAI, and multi-agent orchestration patterns
-risk: unknown
-source: community
-kind: mode
-category: ai-ml
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-ml
 ---
 
 # AI Agent Builder Expert Mode

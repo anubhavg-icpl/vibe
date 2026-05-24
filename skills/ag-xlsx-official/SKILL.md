@@ -1,9 +1,11 @@
 ---
 name: xlsx-official
 description: "Unless otherwise stated by the user or existing template"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Requirements for Outputs

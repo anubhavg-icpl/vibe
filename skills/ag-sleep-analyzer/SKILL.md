@@ -1,9 +1,11 @@
 ---
 name: sleep-analyzer
 description: 分析睡眠数据、识别睡眠模式、评估睡眠质量，并提供个性化睡眠改善建议。支持与其他健康数据的关联分析。
+license: CC-BY-NC-SA-4.0
 allowed-tools: Read, Grep, Glob, Write
-risk: unknown
-source: community
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # 睡眠分析器技能

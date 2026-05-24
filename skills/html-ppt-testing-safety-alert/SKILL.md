@@ -1,7 +1,8 @@
 ---
 name: html-ppt-testing-safety-alert
 description: 红琥珀警示 deck — 顶/底 45° 红黑 hazard 条纹、红色删除线否定标题、L1/L2/L3 绿/琥珀/红 tier 卡片、圆点状态 alert box、policy-yaml 代码块（红左边框 + bad 关键词高亮）、红绿 checklist、Q1 事故堆叠柱状图。适合安全 / 风险 / 事故复盘 / 红队 / 上线前 AI 评审 / policy-as-code。
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "safety alert"
   - "incident"
   - "red team"
@@ -9,7 +10,7 @@ triggers:
   - "事故复盘"
   - "安全评审"
   - "policy as code"
-od:
+od: 
   mode: deck
   scenario: engineering
   featured: 32
@@ -23,6 +24,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-testing-safety-alert 模板做一份事故复盘 / 安全评审 PPT。红黑 hazard 条 + 红色删除线 + L1/L2/L3 tier 卡片 + policy-yaml 代码块。先告诉我事件时间线、根因、影响范围。"
 ---
+
 # HTML PPT · 红琥珀警示
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`testing-safety-alert`** full-deck template.

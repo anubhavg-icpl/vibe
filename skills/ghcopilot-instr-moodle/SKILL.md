@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-moodle
-description: Use when the user needs guidance on moodle. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, moodle]
----
-
----
-applyTo: '**/*.php, **/*.js, **/*.mustache, **/*.xml, **/*.css, **/*.scss'
-description: 'Instructions for GitHub Copilot to generate code in a Moodle project context.'
+description: "Use when the user needs guidance on moodle. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, moodle]
+  applyTo: "**/*.php, **/*.js, **/*.mustache, **/*.xml, **/*.css, **/*.scss"
+  source: "awesome-copilot"
 ---
 
 # Project Context

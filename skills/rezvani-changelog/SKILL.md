@@ -1,6 +1,7 @@
 ---
 name: changelog
 description: Generate changelogs from git history and validate conventional commits. Usage: /changelog <generate|lint> [options]
+license: CC-BY-NC-SA-4.0
 ---
 
 # /changelog

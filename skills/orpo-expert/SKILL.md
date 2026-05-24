@@ -1,11 +1,13 @@
 ---
 name: orpo-expert
 description: Odds-Ratio Preference Optimization — single-stage SFT + preference alignment without a reference model
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, orpo, preference-optimization, alignment]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, orpo, preference-optimization, alignment]
 ---
 
 # ORPO Expert Mode

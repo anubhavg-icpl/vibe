@@ -4,9 +4,11 @@ description: Expert in launching small, focused SaaS products fast - the indie
   hacker approach to building profitable software. Covers idea validation, MVP
   development, pricing, launch strategies, and growing to sustainable revenue.
   Ship in weeks, not months.
-risk: unknown
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # Micro-SaaS Launcher

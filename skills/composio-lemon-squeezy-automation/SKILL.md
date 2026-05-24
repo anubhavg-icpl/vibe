@@ -1,10 +1,12 @@
 ---
 name: Lemon Squeezy Automation
 description: "Automate Lemon Squeezy store management -- products, orders, subscriptions, customers, discounts, and checkout tracking -- using natural language through the Composio MCP integration."
-category: e-commerce
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
+metadata:
+  category: e-commerce
 ---
 
 # Lemon Squeezy Automation

@@ -1,10 +1,12 @@
 ---
 name: speed
 description: Launch RSVP speed reader for text
+license: CC-BY-NC-SA-4.0
 trigger: command
-risk: unknown
-source: community
 tools: Write, Bash, Read
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # Speed Reader

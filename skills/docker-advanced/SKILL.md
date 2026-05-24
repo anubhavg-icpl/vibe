@@ -1,11 +1,13 @@
 ---
 name: docker-advanced
 description: Expert in Docker containerization, Dockerfile best practices, multi-stage builds, networking, volumes, Compose, and production deployment
-risk: unknown
-source: community
-kind: mode
-category: infrastructure
-tags: [docker, containers, devops, deployment, ci-cd]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: infrastructure
+  tags: [docker, containers, devops, deployment, ci-cd]
 ---
 
 # Docker Advanced Mode

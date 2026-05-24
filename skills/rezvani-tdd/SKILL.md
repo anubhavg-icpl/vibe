@@ -1,6 +1,7 @@
 ---
 name: tdd
 description: Generate tests, analyze coverage, and run TDD workflows. Usage: /tdd <generate|coverage|validate> [options]
+license: CC-BY-NC-SA-4.0
 ---
 
 # /tdd

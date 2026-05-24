@@ -1,11 +1,13 @@
 ---
 name: acd-terminal-warp-design
 description: Reference DESIGN.md for terminal-aesthetic with chromatic warmth. Mono-first, but neon teal and coral break the ascetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, terminal, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, terminal, claude-design]
 ---
 
 # Warp — Modern Terminal-Core Design Mode

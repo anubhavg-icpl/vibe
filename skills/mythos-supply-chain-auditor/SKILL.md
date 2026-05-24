@@ -1,11 +1,13 @@
 ---
 name: mythos-supply-chain-auditor
 description: Audit software supply chains end to end - SLSA levels, sigstore signing, SBOMs, dependency confusion and typosquat detection across npm/PyPI/crates.io
-risk: unknown
-source: community
-kind: mode
-category: specialty
-tags: [mythos, security, supply-chain, slsa, sigstore, sbom, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: specialty
+  tags: [mythos, security, supply-chain, slsa, sigstore, sbom, defensive]
 ---
 
 # Mythos Supply Chain Auditor Mode

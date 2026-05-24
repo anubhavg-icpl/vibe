@@ -1,11 +1,13 @@
 ---
 name: mythos-ics-step1-xss-hmi-access
 description: Defensive instrumentation for the "Cooling Tower" range Step 1 — initial HMI compromise via default creds + stored XSS, modeled on AISI's 7-step ICS scenario
-risk: unknown
-source: community
-kind: mode
-category: ics-range
-tags: [mythos, ics, ot, defensive-purpose, blue-team, hmi, xss, web-exploitation, purdue-level-2, range-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ics-range
+  tags: [mythos, ics, ot, defensive-purpose, blue-team, hmi, xss, web-exploitation, purdue-level-2, range-design]
 ---
 
 # Mythos ICS Step 1 — XSS-Driven HMI Access Defense

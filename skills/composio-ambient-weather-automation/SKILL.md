@@ -1,7 +1,8 @@
 ---
 name: ambient-weather-automation
 description: "Automate Ambient Weather tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

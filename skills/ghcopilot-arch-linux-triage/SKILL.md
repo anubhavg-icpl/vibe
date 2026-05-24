@@ -1,6 +1,7 @@
 ---
 name: arch-linux-triage
 description: 'Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release best practices.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Arch Linux Triage

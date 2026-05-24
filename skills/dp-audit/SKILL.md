@@ -1,10 +1,12 @@
 ---
 name: dp-audit
 description: Audit a differential-privacy claim for a language-model deployment.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 22
-tags: [differential-privacy, dp-sgd, lora, mia, pmixed]
+metadata:
+  version: 1.0.0
+  tags: [differential-privacy, dp-sgd, lora, mia, pmixed]
 ---
 
 Given a privacy claim for a language-model deployment, audit the claim.

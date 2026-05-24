@@ -8,6 +8,7 @@ description: >
   FluentDialog, FluentToast, FluentNavMenu, FluentTextField, FluentSelect,
   FluentAutocomplete, FluentDesignTheme, or any component prefixed with "Fluent".
   Also use when troubleshooting missing providers, JS interop issues, or theming.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Fluent UI Blazor — Consumer Usage Guide

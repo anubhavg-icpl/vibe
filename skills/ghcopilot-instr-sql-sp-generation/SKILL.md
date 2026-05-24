@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-sql-sp-generation
-description: Use when the user needs guidance on sql-sp-generation. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, sql-sp-generation]
----
-
----
-description: 'Guidelines for generating SQL statements and stored procedures'
-applyTo: '**/*.sql'
+description: "Use when the user needs guidance on sql-sp-generation. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, sql-sp-generation]
+  applyTo: "**/*.sql"
+  source: "awesome-copilot"
 ---
 
 # SQL Development

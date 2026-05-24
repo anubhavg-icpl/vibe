@@ -8,6 +8,7 @@ description: |
   - Auditing dependency pinning and version policies for agent components
   - Building provenance chains for agent plugin promotion (dev → staging → production)
   - Any request like "verify plugin integrity", "generate manifest", "check supply chain", or "sign this plugin"
+license: CC-BY-NC-SA-4.0
 ---
 
 # Agent Supply Chain Integrity

@@ -1,6 +1,7 @@
 ---
 name: rust-patterns
 description: Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

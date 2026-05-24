@@ -1,9 +1,11 @@
 ---
 name: idea-darwin
 description: "Darwinian idea evolution engine — toss rough ideas onto an evolution island, let them compete, crossbreed, and mutate through structured rounds to surface your strongest concepts."
-risk: safe
-source: community
-date_added: "2026-04-07"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-04-07"
 ---
 
 # Idea Darwin Engine

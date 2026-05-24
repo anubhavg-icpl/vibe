@@ -1,12 +1,13 @@
 ---
 name: daily
 description: Documentation and capabilities reference for Daily
+license: CC-BY-NC-SA-4.0
 metadata:
   mintlify-proj: daily
   version: "1.0"
-risk: safe
-source: community
-date_added: "2026-03-07"
+  risk: safe
+  source: community
+  date_added: "2026-03-07"
 ---
 
 ## When to Use

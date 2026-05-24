@@ -2,7 +2,8 @@
 name: html-ppt-zhangzara-signal
 description: |
   Signal — Deep navy canvas with bone paper and a single muted-gold accent; institutional with quiet weight. Anything that should feel weighty, considered, and credibly institutional: investor decks, board presentations, consulting deliverables, legal / policy briefs, advisory pitches.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "signal"
   - "zhangzara-signal"
   - "institutional"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/signal"

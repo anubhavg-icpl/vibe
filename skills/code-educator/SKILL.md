@@ -1,10 +1,12 @@
 ---
 name: code-educator
 description: code-educator
-risk: unknown
-source: community
-kind: mode
-category: learning
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: learning
 ---
 
 # Code Educator Mode

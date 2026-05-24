@@ -1,6 +1,7 @@
 ---
 name: breakdown-feature-prd
 description: 'Prompt for creating Product Requirements Documents (PRDs) for new features, based on an Epic.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Feature PRD Prompt

@@ -1,10 +1,12 @@
 ---
 name: dst-designer
 description: Design a dialogue state tracker — schema, extractor, update policy, evaluation.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 29
-tags: [nlp, dialogue, task-oriented]
+metadata:
+  version: 1.0.0
+  tags: [nlp, dialogue, task-oriented]
 ---
 
 Given a use case (domain, languages, vocab openness, compliance needs), output:

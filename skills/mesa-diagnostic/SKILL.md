@@ -1,10 +1,12 @@
 ---
 name: mesa-diagnostic
 description: Classify an observed safety failure as outer-alignment, proxy-inner, or deceptive-inner.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 6
-tags: [mesa-optimization, deceptive-alignment, inner-alignment, hubinger]
+metadata:
+  version: 1.0.0
+  tags: [mesa-optimization, deceptive-alignment, inner-alignment, hubinger]
 ---
 
 Given a safety evaluation report (eval task, failure mode, model class, training recipe), classify the failure into the Hubinger 2019 categories and recommend the mitigation class that addresses it.

@@ -5,7 +5,8 @@ description: |
   issues, pull requests, recent activity, and top contributors. Use when
   the brief asks for a GitHub repo dashboard, open-source growth report,
   repository health page, or GitHub analytics view.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "github dashboard"
   - "repo dashboard"
   - "repository dashboard"
@@ -14,7 +15,7 @@ triggers:
   - "github growth"
   - "仓库看板"
   - "GitHub 看板"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: operation

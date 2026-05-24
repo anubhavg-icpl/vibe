@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-apps-code-apps
-description: Use when the user needs guidance on power-apps-code-apps. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-apps-code-apps]
----
-
----
-description: 'Power Apps Code Apps development standards and best practices for TypeScript, React, and Power Platform integration'
-applyTo: '**/*.{ts,tsx,js,jsx}, **/vite.config.*, **/package.json, **/tsconfig.json, **/power.config.json'
+description: "Use when the user needs guidance on power-apps-code-apps. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-apps-code-apps]
+  applyTo: "**/*.{ts,tsx,js,jsx}, **/vite.config.*, **/package.json, **/tsconfig.json, **/power.config.json"
+  source: "awesome-copilot"
 ---
 
 # Power Apps Code Apps Development Instructions

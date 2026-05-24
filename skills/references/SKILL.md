@@ -1,10 +1,12 @@
 ---
 name: references
 description: references
-risk: unknown
-source: community
-kind: mode
-category: ebpf
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ebpf
 ---
 
 ## External References

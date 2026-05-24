@@ -1,14 +1,15 @@
 ---
 name: html-ppt-weekly-report
 description: Team weekly / status-update deck — corporate clarity, 8-cell KPI grid, shipped list, 8-week bar chart, next-week table. Use for 周报, business reviews, team status updates, and exec dashboards.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "weekly report"
   - "周报"
   - "status update"
   - "team report"
   - "business review"
   - "wbr"
-od:
+od: 
   mode: deck
   scenario: operations
   featured: 23
@@ -22,6 +23,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-weekly-report 模板生成一份周报（7 页）。先问我四件事：本周时间范围、3-5 个核心 KPI 数字、本周已发布 / 已完成的事项、下周计划与风险。然后用模板填好 8 周柱状图和下周表格。"
 ---
+
 # HTML PPT · Weekly Report
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`weekly-report`** full-deck template.

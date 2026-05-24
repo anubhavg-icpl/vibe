@@ -1,11 +1,13 @@
 ---
 name: letta-expert
 description: Build stateful agents with persistent memory blocks and self-editing context using Letta (formerly MemGPT)
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [letta, memgpt, stateful-agents, memory-blocks, agent-os, python, typescript]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [letta, memgpt, stateful-agents, memory-blocks, agent-os, python, typescript]
 ---
 
 # Letta Expert Mode

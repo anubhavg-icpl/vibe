@@ -1,6 +1,7 @@
 ---
 name: "pr-review-expert"
 description: "Use when the user asks to review pull requests, analyze code changes, check for security issues in PRs, or assess code quality of diffs."
+license: CC-BY-NC-SA-4.0
 ---
 
 # PR Review Expert

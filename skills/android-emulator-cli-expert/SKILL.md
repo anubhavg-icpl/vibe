@@ -1,11 +1,13 @@
 ---
 name: android-emulator-cli-expert
 description: Expert in `android emulator create/list/start/stop` — profiles, scripted emulator pools, Windows caveat
-risk: unknown
-source: community
-kind: mode
-category: android-cli
-tags: [android, android-cli, emulator, avd, ci, testing, 2026]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-cli
+  tags: [android, android-cli, emulator, avd, ci, testing, 2026]
 ---
 
 # Android Emulator CLI Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: render-expert
 description: Expert in Render web services, background workers, cron jobs, and Blueprints
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [render, paas, blueprint, background-worker, cron, postgres, key-value]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [render, paas, blueprint, background-worker, cron, postgres, key-value]
 ---
 
 # Render Expert Mode

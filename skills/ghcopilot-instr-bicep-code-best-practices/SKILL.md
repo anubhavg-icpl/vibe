@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-bicep-code-best-practices
-description: Use when the user needs guidance on bicep-code-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, bicep-code-best-practices]
----
-
----
-description: 'Infrastructure as Code with Bicep'
-applyTo: '**/*.bicep'
+description: "Use when the user needs guidance on bicep-code-best-practices. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, bicep-code-best-practices]
+  applyTo: "**/*.bicep"
+  source: "awesome-copilot"
 ---
 
 ## Naming Conventions

@@ -1,10 +1,12 @@
 ---
 name: tokenizer-picker
 description: Pick tokenizer algorithm, vocab size, library for a given corpus and deployment target.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 19
-tags: [nlp, tokenization]
+metadata:
+  version: 1.0.0
+  tags: [nlp, tokenization]
 ---
 
 Given a corpus (size, languages, domain) and deployment target (training from scratch / fine-tuning / API-compatible inference), output:

@@ -1,11 +1,13 @@
 ---
 name: acd-playful-figma-design
 description: Reference DESIGN.md for multi-color, rounded, illustration-friendly SaaS.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, playful, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, playful, claude-design]
 ---
 
 # Figma — Playful Color Design Mode

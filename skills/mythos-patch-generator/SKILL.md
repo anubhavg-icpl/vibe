@@ -1,11 +1,13 @@
 ---
 name: mythos-patch-generator
 description: Generate minimal, style-preserving patches for confirmed vulnerabilities with regression tests and contribution-norm-aware PRs
-risk: unknown
-source: community
-kind: mode
-category: defense
-tags: [mythos, defense, patching, remediation, ssdlc, glasswing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: defense
+  tags: [mythos, defense, patching, remediation, ssdlc, glasswing]
 ---
 
 # Mythos Patch Generator Mode

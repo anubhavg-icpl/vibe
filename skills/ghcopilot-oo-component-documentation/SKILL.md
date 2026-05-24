@@ -1,6 +1,7 @@
 ---
 name: oo-component-documentation
 description: 'Create or update standardized object-oriented component documentation using a shared template plus mode-specific guidance for new and existing docs.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # OO Component Documentation

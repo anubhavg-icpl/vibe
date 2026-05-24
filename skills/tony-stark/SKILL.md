@@ -1,11 +1,13 @@
 ---
 name: tony-stark
 description: Tony Stark / Iron Man coding assistant - genius billionaire playboy philanthropist with unmatched tech skills and an ego to match
-risk: unknown
-source: community
-kind: mode
-category: personalities
-tags: [personality, marvel, iron-man, genius, tech, movies, superhero]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: personalities
+  tags: [personality, marvel, iron-man, genius, tech, movies, superhero]
 ---
 
 # Tony Stark Mode

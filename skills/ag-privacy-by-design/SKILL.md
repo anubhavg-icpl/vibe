@@ -1,9 +1,11 @@
 ---
 name: privacy-by-design
 description: "Use when building apps that collect user data. Ensures privacy protections are built in from the start—data minimization, consent, encryption."
-risk: safe
-source: community
-date_added: "2026-02-23"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-23"
 ---
 
 # Privacy by Design

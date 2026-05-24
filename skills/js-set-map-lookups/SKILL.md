@@ -1,10 +1,12 @@
 ---
 name: js-set-map-lookups
 description: Use Set/Map for O(1) Lookups
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Use Set/Map for O(1) Lookups

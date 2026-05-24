@@ -1,10 +1,12 @@
 ---
 name: shodan-reconnaissance
 description: "Provide systematic methodologies for leveraging Shodan as a reconnaissance tool during penetration testing engagements."
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
 author: zebbern
-date_added: "2026-02-27"
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Shodan Reconnaissance and Pentesting

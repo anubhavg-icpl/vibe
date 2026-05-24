@@ -1,6 +1,7 @@
 ---
 name: "changelog-generator"
 description: "Produce consistent, auditable release notes from Conventional Commits. Separates commit parsing, semantic-bump logic, and changelog rendering for automated releases with editorial control. Use when cutting a release, generating CHANGELOG.md from git history, or automating release notes in CI."
+license: CC-BY-NC-SA-4.0
 ---
 
 # Changelog Generator

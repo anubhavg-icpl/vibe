@@ -1,11 +1,13 @@
 ---
 name: clojure-expert
 description: Expert Clojure development with immutable data, REPL-driven development, and JVM interop
-risk: unknown
-source: community
-kind: mode
-category: languages
-tags: [clojure, lisp, functional, jvm, immutable, repl]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
+  tags: [clojure, lisp, functional, jvm, immutable, repl]
 ---
 
 # Clojure Expert Mode

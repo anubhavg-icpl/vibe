@@ -1,11 +1,13 @@
 ---
 name: marqo-expert
 description: Deep expertise in Marqo — end-to-end vector search with embedding inference baked in, ONNX/GPU acceleration, and ecommerce-specialized models
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, marqo, embeddings, onnx, multimodal, ecommerce-search]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, marqo, embeddings, onnx, multimodal, ecommerce-search]
 ---
 
 # Marqo Expert Mode

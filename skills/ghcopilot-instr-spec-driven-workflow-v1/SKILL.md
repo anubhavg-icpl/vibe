@@ -1,14 +1,14 @@
 ---
 name: ghcopilot-instr-spec-driven-workflow-v1
-description: Use when the user needs guidance on spec-driven-workflow-v1. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, spec-driven-workflow-v1]
+description: "Specification-Driven Workflow v1 provides a structured approach to software development, ensuring that requirements are clearly defined, designs are meticulously planned, and implementations are thoroughly documented and validated."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, spec-driven-workflow-v1]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
----
-description: 'Specification-Driven Workflow v1 provides a structured approach to software development, ensuring that requirements are clearly defined, designs are meticulously planned, and implementations are thoroughly documented and validated.'
-applyTo: '**'
----
 # Spec Driven Workflow v1
 
 **Specification-Driven Workflow:**

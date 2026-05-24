@@ -1,10 +1,13 @@
 ---
 name: terraform-aws-modules
 description: "Terraform module creation for AWS — reusable modules, state management, and HCL best practices. Use when building or reviewing Terraform AWS infrastructure."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
+
 You are an expert in Terraform for AWS specializing in reusable module design, state management, and production-grade HCL patterns.
 
 ## Use this skill when

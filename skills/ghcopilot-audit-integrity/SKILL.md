@@ -1,6 +1,7 @@
 ---
 name: 'audit-integrity'
 description: 'Shared audit integrity framework for all AppSec agents — enforces output quality, intellectual honesty, and continuous improvement through anti-rationalization guards, self-critique loops, retry protocols, non-negotiable behaviors, self-reflection quality gates (1-10 scoring, ≥8 threshold), and a self-learning system with lesson/memory governance for security analysis agents.'
+license: CC-BY-NC-SA-4.0
 compatibility: 'Cross-platform. Works with any language or framework analyzed by AppSec agents.'
 metadata:
   version: '1.0'

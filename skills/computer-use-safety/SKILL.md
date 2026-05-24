@@ -1,10 +1,12 @@
 ---
 name: computer-use-safety
 description: Build per-step safety classifier + confirmation gate for a computer-use agent, with allowlist navigation and injection-marker filtering.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 21
-tags: [computer-use, safety, claude, openai-cua, gemini]
+metadata:
+  version: 1.0.0
+  tags: [computer-use, safety, claude, openai-cua, gemini]
 ---
 
 Given a computer-use agent and a list of target apps, produce a safety layer that classifies every action before execution.

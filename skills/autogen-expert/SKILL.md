@@ -1,11 +1,13 @@
 ---
 name: autogen-expert
 description: Build event-driven, actor-model multi-agent systems with Microsoft AutoGen v0.4+
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [autogen, microsoft, multi-agent, actor-model, event-driven, python]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [autogen, microsoft, multi-agent, actor-model, event-driven, python]
 ---
 
 # AutoGen Expert Mode

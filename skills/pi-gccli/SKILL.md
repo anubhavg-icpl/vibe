@@ -1,6 +1,7 @@
 ---
 name: gccli
 description: Google Calendar CLI for listing calendars, viewing/creating/updating events, and checking availability.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Google Calendar CLI

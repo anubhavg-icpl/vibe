@@ -1,10 +1,12 @@
 ---
 name: ui-designer
 description: ui-designer
-risk: unknown
-source: community
-kind: mode
-category: design-ux
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-ux
 ---
 
 # UI Designer Mode

@@ -1,6 +1,7 @@
 ---
 name: react19-concurrent-patterns
 description: 'Preserve React 18 concurrent patterns and adopt React 19 APIs (useTransition, useDeferredValue, Suspense, use(), useOptimistic, Actions) during migration.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # React 19 Concurrent Patterns

@@ -1,8 +1,10 @@
 ---
 name: odoo-security-rules
 description: "Expert in Odoo access control: ir.model.access.csv, record rules (ir.rule), groups, and multi-company security patterns."
-risk: safe
-source: "self"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "self"
 ---
 
 # Odoo Security Rules

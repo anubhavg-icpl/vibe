@@ -7,7 +7,8 @@ description: |
   Reads like a Sunday-paper full-page essay or a thoughtful launch poster.
   Use when the brief asks for "magazine poster", "editorial poster",
   "newsprint", "essay layout", or "manifesto".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "magazine poster"
   - "editorial poster"
   - "newsprint"
@@ -17,7 +18,7 @@ triggers:
   - "long-form poster"
   - "杂志海报"
   - "报纸版式"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

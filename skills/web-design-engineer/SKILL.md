@@ -12,6 +12,7 @@ description: |
   - Design system / UI Kit exploration
   Even if the user doesn't explicitly say "HTML" or "web page," this skill applies whenever the intent is to produce something visual, interactive, or presentational.
   Not applicable: pure back-end logic, CLI tools, data-processing scripts, non-visual code tasks, command-line debugging.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Web Design Engineer

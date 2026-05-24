@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-typespec-m365-copilot
-description: Use when the user needs guidance on typespec-m365-copilot. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, typespec-m365-copilot]
----
-
----
-description: 'Guidelines and best practices for building TypeSpec-based declarative agents and API plugins for Microsoft 365 Copilot'
-applyTo: '**/*.tsp'
+description: "Use when the user needs guidance on typespec-m365-copilot. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, typespec-m365-copilot]
+  applyTo: "**/*.tsp"
+  source: "awesome-copilot"
 ---
 
 # TypeSpec for Microsoft 365 Copilot Development Guidelines

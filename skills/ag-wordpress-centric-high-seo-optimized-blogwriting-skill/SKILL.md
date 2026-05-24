@@ -1,15 +1,17 @@
 ---
 name: wordpress-centric-high-seo-optimized-blogwriting-skill
 description: "Create long-form, high-quality, SEO-optimized blog posts ready for WordPress with truth boxes and FAQ schema."
-category: content
-risk: safe
-source: self
+license: CC-BY-NC-SA-4.0
 source_type: self
-date_added: "2026-04-12"
 author: Whoisabhishekadhikari
-tags: [writing, blog, seo, content, wordpress]
 tools: [claude, cursor, gemini]
-version: 1.0.3
+metadata:
+  category: content
+  risk: safe
+  source: self
+  date_added: "2026-04-12"
+  tags: [writing, blog, seo, content, wordpress]
+  version: 1.0.3
 ---
 
 # WordPress Centric High SEO Optimized Blog Writing Skill

@@ -1,7 +1,8 @@
 ---
 name: html-ppt-pitch-deck
 description: Investor-ready 10-slide HTML pitch deck — white + blue→purple gradient hero, big numbers, traction bar chart, $4.5M-style ask page. Use when the user wants a fundraising deck, seed-round pitch, or VC meeting slides.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "pitch deck"
   - "pitch"
   - "fundraising"
@@ -9,7 +10,7 @@ triggers:
   - "investor deck"
   - "vc deck"
   - "pitch slides"
-od:
+od: 
   mode: deck
   scenario: finance
   featured: 20
@@ -23,6 +24,7 @@ od:
   animations: true
   example_prompt: "Build a 10-slide pitch deck in HTML for my seed round. Use the html-ppt-pitch-deck full-deck template (white + blue→purple gradient, traction bars, $X.XM ask). Confirm three things first: (1) name + one-line pitch, (2) key traction numbers, (3) ask + use of funds."
 ---
+
 # HTML PPT · Pitch Deck
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`pitch-deck`** full-deck template.

@@ -1,11 +1,13 @@
 ---
 name: nx-monorepo-expert
 description: Expert in Nx workspaces, generators, executors, project graph, and affected commands
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [nx, monorepo, build-tools, generators, executors, ci]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [nx, monorepo, build-tools, generators, executors, ci]
 ---
 
 # Nx Monorepo Expert Mode

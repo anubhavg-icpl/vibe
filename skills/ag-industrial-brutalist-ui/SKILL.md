@@ -1,16 +1,19 @@
 ---
 name: industrial-brutalist-ui
 description: "Use when creating raw industrial or tactical telemetry UIs with rigid grids, stark typography, CRT effects, and high-density data."
-category: frontend
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
 source_repo: Leonxlnx/taste-skill
 source_type: community
-date_added: "2026-04-17"
 author: Leonxlnx
-tags: [frontend, design, brutalism, ui]
 tools: [claude, cursor, codex, antigravity]
+metadata:
+  category: frontend
+  risk: safe
+  source: community
+  date_added: "2026-04-17"
+  tags: [frontend, design, brutalism, ui]
 ---
+
 # SKILL: Industrial Brutalism & Tactical Telemetry UI
 
 ## When to Use

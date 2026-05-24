@@ -10,6 +10,7 @@ description: >
   or decision flowchart.
   Triggers: "which command to use", "which agent", "command selection", "how to use /plan",
   "when to use /compact", "agent selection guide", "command cheat sheet", "skill recommendation".
+license: CC-BY-NC-SA-4.0
 ---
 
 # Claude Code Command Selection Guide

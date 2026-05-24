@@ -5,14 +5,15 @@ description: |
   typography, rounded pastel insight cards, and a retention chart panel.
   Use when users ask for a premium magazine-style business report, board memo
   one-pager, or elegant data storytelling layout.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "field notes editorial template"
   - "editorial report template"
   - "magazine style business report"
   - "pastel insight dashboard"
   - "高级编辑风报告模板"
   - "奶油底粉彩卡片数据报告"
-od:
+od: 
   mode: template
   surface: video
   type: hyperframes

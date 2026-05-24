@@ -1,11 +1,13 @@
 ---
 name: raptor-expert
 description: RAPTOR — recursive abstractive summarization tree for long-document RAG
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, raptor, hierarchical, summarization, long-document]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, raptor, hierarchical, summarization, long-document]
 ---
 
 # RAPTOR Expert Mode

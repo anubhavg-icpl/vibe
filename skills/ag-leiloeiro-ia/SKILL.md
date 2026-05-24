@@ -1,21 +1,14 @@
 ---
 name: leiloeiro-ia
 description: Especialista em leiloes judiciais e extrajudiciais de imoveis. Analise juridica, pericial e de mercado integrada. Orquestra os 5 modulos especializados.
-risk: safe
-source: community
-date_added: '2026-03-06'
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- auction
-- ai-analysis
-- real-estate
-- brazilian
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-03-06'
+  tags: 
 ---
 
 # LEILOEIRO JURÍDICO, PERICIAL E DE MERCADO — IA

@@ -1,10 +1,12 @@
 ---
 name: skill-evaluation
 description: Decision framework for choosing the right LLM evaluation strategy based on task type, budget, and requirements
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 10
-tags: [evaluation, evals, benchmarks, llm-as-judge, elo, metrics]
+metadata:
+  version: 1.0.0
+  tags: [evaluation, evals, benchmarks, llm-as-judge, elo, metrics]
 ---
 
 # LLM Evaluation Strategy

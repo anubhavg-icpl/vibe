@@ -1,11 +1,13 @@
 ---
 name: localai-expert
 description: Self-host LocalAI (mudler) as an OpenAI/Anthropic/ElevenLabs drop-in for LLMs, vision, audio, image and embeddings on any hardware
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, localai, mudler, openai-compat, multi-modal, docker, gallery]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, localai, mudler, openai-compat, multi-modal, docker, gallery]
 ---
 
 # LocalAI Expert Mode

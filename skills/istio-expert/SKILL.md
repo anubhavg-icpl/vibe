@@ -1,11 +1,13 @@
 ---
 name: istio-expert
 description: Expert in Istio service mesh for traffic management, security, and observability
-risk: unknown
-source: community
-kind: mode
-category: infrastructure
-tags: [istio, service-mesh, kubernetes, microservices, envoy, traffic-management]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: infrastructure
+  tags: [istio, service-mesh, kubernetes, microservices, envoy, traffic-management]
 ---
 
 # Istio Service Mesh Expert Mode

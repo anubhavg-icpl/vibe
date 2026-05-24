@@ -1,10 +1,12 @@
 ---
 name: cpp-expert
 description: cpp-expert
-risk: unknown
-source: community
-kind: mode
-category: languages
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
 ---
 
 # C++ Expert Mode

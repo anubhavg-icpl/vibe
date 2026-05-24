@@ -1,6 +1,7 @@
 ---
 name: wiki-ingest
 description: Ingest a source file from raw/ into the LLM Wiki — read, discuss, write summary page, update cross-references across 5-15 pages, regenerate index, append to log. Usage /wiki-ingest <path-to-source>
+license: CC-BY-NC-SA-4.0
 ---
 
 # /wiki-ingest

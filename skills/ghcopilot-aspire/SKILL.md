@@ -1,6 +1,7 @@
 ---
 name: aspire
 description: 'Aspire skill covering the Aspire CLI, AppHost orchestration, service discovery, integrations, MCP server, VS Code extension, Dev Containers, GitHub Codespaces, templates, dashboard, and deployment. Use when the user asks to create, run, debug, configure, deploy, or troubleshoot an Aspire distributed application.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Aspire — Polyglot Distributed-App Orchestration

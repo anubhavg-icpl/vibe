@@ -1,9 +1,11 @@
---- 
+---
 name: design-spells
 description: Curated micro-interactions and design details that add "magic" and personality to websites and apps.
-risk: safe
-source: community
-date_added: "2026-03-07"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-03-07"
 ---
 
 # Design Spells Skill

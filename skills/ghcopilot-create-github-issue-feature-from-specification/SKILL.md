@@ -1,6 +1,7 @@
 ---
 name: create-github-issue-feature-from-specification
 description: 'Create GitHub Issue for feature request from specification file using feature_request.yml template.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create GitHub Issue from Specification

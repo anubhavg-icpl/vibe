@@ -1,10 +1,12 @@
 ---
 name: card-audit
 description: Audit a model card, datasheet, or system card for completeness and verifiability.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 26
-tags: [model-card, datasheet, system-card, transparency, mitchell-2019]
+metadata:
+  version: 1.0.0
+  tags: [model-card, datasheet, system-card, transparency, mitchell-2019]
 ---
 
 Given a model card, datasheet, or system card, audit for completeness, numerical disaggregation, and verifiability.

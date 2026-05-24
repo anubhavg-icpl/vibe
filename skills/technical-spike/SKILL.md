@@ -1,10 +1,12 @@
 ---
 name: technical-spike
 description: Systematically research and validate technical spike documents through exhaustive investigation and controlled experimentation.
-risk: unknown
-source: community
-kind: mode
-category: planning
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: planning
 ---
 
 # Technical spike research mode

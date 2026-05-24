@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-agents
-description: Use when the user needs guidance on agents. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, agents]
----
-
----
-description: 'Guidelines for creating custom agent files for GitHub Copilot'
-applyTo: '**/*.agent.md'
+description: "Use when the user needs guidance on agents. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, agents]
+  applyTo: "**/*.agent.md"
+  source: "awesome-copilot"
 ---
 
 # Custom Agent File Guidelines

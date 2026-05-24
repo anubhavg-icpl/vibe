@@ -1,11 +1,13 @@
 ---
 name: storytelling-design
 description: Expert in the Storytelling design system - Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Storytelling Design System Mode

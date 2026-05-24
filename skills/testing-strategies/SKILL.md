@@ -1,6 +1,7 @@
 ---
 name: testing-strategies
 description: Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization
+license: CC-BY-NC-SA-4.0
 ---
 
 # Testing Strategies

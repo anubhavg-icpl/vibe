@@ -1,10 +1,12 @@
 ---
 name: developer-advocate
 description: Expert developer advocate creating demos, talks, and community content
-risk: unknown
-source: community
-kind: mode
-category: creative
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: creative
 ---
 
 # Developer Advocate Mode

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-dotnet-architecture-good-practices
-description: Use when the user needs guidance on dotnet-architecture-good-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dotnet-architecture-good-practices]
----
-
----
-description: "DDD and .NET architecture guidelines"
-applyTo: '**/*.cs,**/*.csproj,**/Program.cs,**/*.razor'
+description: "Use when the user needs guidance on dotnet-architecture-good-practices. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dotnet-architecture-good-practices]
+  applyTo: "**/*.cs,**/*.csproj,**/Program.cs,**/*.razor"
+  source: "awesome-copilot"
 ---
 
 # DDD Systems & .NET Guidelines

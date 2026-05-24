@@ -1,6 +1,7 @@
 ---
 name: mcp-deploy-manage-agents
 description: 'Skill converted from mcp-deploy-manage-agents.prompt.md'
+license: CC-BY-NC-SA-4.0
 ---
 
 ````prompt

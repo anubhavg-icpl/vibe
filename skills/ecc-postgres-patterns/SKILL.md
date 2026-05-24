@@ -1,6 +1,7 @@
 ---
 name: postgres-patterns
 description: PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

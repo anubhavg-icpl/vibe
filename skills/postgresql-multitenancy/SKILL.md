@@ -1,10 +1,12 @@
 ---
 name: postgresql-multitenancy
 description: Expert in PostgreSQL multi-tenant patterns including Row Level Security, schema isolation, and tenant data management
-risk: unknown
-source: community
-kind: mode
-category: database
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: database
 ---
 
 # PostgreSQL Multi-Tenancy Expert Mode

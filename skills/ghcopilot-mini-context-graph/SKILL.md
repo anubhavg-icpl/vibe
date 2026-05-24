@@ -6,6 +6,7 @@ description: |
   pages, extracts entities/relations into the graph, and stores raw content for
   evidence retrieval. Knowledge accumulates and cross-references; it is never
   re-derived from scratch.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Mini Context Graph Skill

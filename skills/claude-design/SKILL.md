@@ -1,11 +1,13 @@
 ---
 name: claude-design
 description: Expert in the Claude (Anthropic) design system - Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # Claude (Anthropic) Design System Mode

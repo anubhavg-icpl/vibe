@@ -1,10 +1,12 @@
 ---
 name: saas-multitenancy
 description: Expert in designing multi-tenant SaaS architectures with isolation, scalability, and enterprise features
-risk: unknown
-source: community
-kind: mode
-category: architecture
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: architecture
 ---
 
 # SaaS Multi-Tenancy Architect Mode

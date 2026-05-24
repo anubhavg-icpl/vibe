@@ -1,11 +1,13 @@
 ---
 name: julia-expert
 description: Expert Julia development for scientific computing, numerical analysis, and high-performance code
-risk: unknown
-source: community
-kind: mode
-category: languages
-tags: [julia, scientific-computing, numerical, performance, parallel]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
+  tags: [julia, scientific-computing, numerical, performance, parallel]
 ---
 
 # Julia Expert Mode

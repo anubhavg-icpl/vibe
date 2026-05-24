@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-bi-data-modeling-best-practices
-description: Use when the user needs guidance on power-bi-data-modeling-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-bi-data-modeling-best-practices]
----
-
----
-description: 'Comprehensive Power BI data modeling best practices based on Microsoft guidance for creating efficient, scalable, and maintainable semantic models using star schema principles.'
-applyTo: '**/*.{pbix,md,json,txt}'
+description: "Comprehensive Power BI data modeling best practices based on Microsoft guidance for creating efficient, scalable, and maintainable semantic models using star schema principles."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-bi-data-modeling-best-practices]
+  applyTo: "**/*.{pbix,md,json,txt}"
+  source: "awesome-copilot"
 ---
 
 # Power BI Data Modeling Best Practices

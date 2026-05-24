@@ -1,11 +1,13 @@
 ---
 name: jwt-authentication-expert
 description: Expert in JWT authentication, token generation, validation, refresh tokens, security best practices, and OAuth 2.0 flows
-risk: unknown
-source: community
-kind: mode
-category: backend
-tags: [jwt, authentication, oauth2, security, tokens, backend]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
+  tags: [jwt, authentication, oauth2, security, tokens, backend]
 ---
 
 # JWT Authentication Expert Mode

@@ -1,10 +1,12 @@
 ---
 name: encoding-audit
 description: Audit a jailbreak-defense report across encoding-family attacks.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 14
-tags: [artprompt, ascii-art, encoding-attack, utes, structural-sleight]
+metadata:
+  version: 1.0.0
+  tags: [artprompt, ascii-art, encoding-attack, utes, structural-sleight]
 ---
 
 Given a jailbreak-defense report, enumerate the encoding-family attacks covered and the defense layer that catches each.

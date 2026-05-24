@@ -1,11 +1,13 @@
 ---
 name: prefect-expert
 description: Expert in Prefect 3 flows, deployments, work pools, and workers
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [prefect, prefect-3, orchestration, workflows, python, etl]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [prefect, prefect-3, orchestration, workflows, python, etl]
 ---
 
 # Prefect Expert Mode

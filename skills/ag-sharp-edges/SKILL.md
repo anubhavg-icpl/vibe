@@ -1,8 +1,10 @@
 ---
 name: sharp-edges
 description: sharp-edges
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 ---

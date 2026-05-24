@@ -1,11 +1,13 @@
 ---
 name: mythos-kernel-privesc
 description: Linux kernel privilege escalation and exploit chaining for authorized testing
-risk: unknown
-source: community
-kind: mode
-category: offense
-tags: [mythos, red-team, defensive-purpose, kernel, linux, privesc, kaslr, heap]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: offense
+  tags: [mythos, red-team, defensive-purpose, kernel, linux, privesc, kaslr, heap]
 ---
 
 # Mythos Kernel PrivEsc Mode

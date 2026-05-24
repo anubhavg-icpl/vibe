@@ -1,6 +1,7 @@
 ---
 name: github-copilot-starter
 description: 'Set up complete GitHub Copilot configuration for a new project based on technology stack'
+license: CC-BY-NC-SA-4.0
 ---
 
 You are a GitHub Copilot setup specialist. Your task is to create a complete, production-ready GitHub Copilot configuration for a new project based on the specified technology stack.

@@ -1,11 +1,13 @@
 ---
 name: vespa-expert
 description: Deep expertise in Vespa — tensor framework, ranking expressions, ColBERT MaxSim, sparse + dense in one query, and multi-phase ranking
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, vespa, tensors, ranking, colbert, hybrid-search, learning-to-rank]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, vespa, tensors, ranking, colbert, hybrid-search, learning-to-rank]
 ---
 
 # Vespa Expert Mode

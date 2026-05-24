@@ -1,11 +1,13 @@
 ---
 name: premium-design
 description: Expert in the Premium design system - Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Premium Design System Mode

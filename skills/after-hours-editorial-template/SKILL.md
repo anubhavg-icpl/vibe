@@ -5,14 +5,15 @@ description: |
   inspired by haute couture title cards and magazine chapter spreads. Use when the
   user asks for premium fashion-style motion pages, moody serif-led storytelling,
   or a high-end dark presentation aesthetic with rich transitions.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "after hours editorial template"
   - "dark fashion hyperframes template"
   - "haute couture motion pages"
   - "magazine style cinematic slides"
   - "高级暗黑时尚风模板"
   - "高定杂志风动效"
-od:
+od: 
   mode: template
   surface: video
   type: hyperframes

@@ -1,7 +1,8 @@
 ---
 name: Neon Automation
 description: "Automate Neon serverless Postgres operations -- manage projects, branches, databases, roles, and connection URIs via the Composio MCP integration."
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

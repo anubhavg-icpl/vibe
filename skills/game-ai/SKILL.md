@@ -1,10 +1,12 @@
 ---
 name: game-ai
 description: Expert in game AI, behavior trees, pathfinding, and NPC intelligence
-risk: unknown
-source: community
-kind: mode
-category: game-development
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: game-development
 ---
 
 # Game AI Developer Mode

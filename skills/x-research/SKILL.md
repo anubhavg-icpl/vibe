@@ -5,7 +5,8 @@ description: |
   community discourse. Use when the brief asks what people are saying on X,
   Twitter sentiment, CT sentiment, public opinion, expert posts, or social
   reaction around a stock, sector, company, product, or market event.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "x research"
   - "twitter sentiment"
   - "x/twitter"
@@ -16,7 +17,7 @@ triggers:
   - "social sentiment"
   - "推特情绪"
   - "X 上怎么说"
-od:
+od: 
   mode: prototype
   preview:
     type: markdown

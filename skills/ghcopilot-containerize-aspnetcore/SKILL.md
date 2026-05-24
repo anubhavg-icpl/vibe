@@ -1,6 +1,7 @@
 ---
 name: containerize-aspnetcore
 description: 'Containerize an ASP.NET Core project by creating Dockerfile and .dockerfile files customized for the project.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # ASP.NET Core Docker Containerization Prompt

@@ -1,10 +1,12 @@
 ---
 name: frontend-performance
 description: Frontend performance optimization specialist - Bundle optimization, lazy loading, caching strategies, Core Web Vitals, and rendering performance for React, Vue, Angular, and vanilla JavaScript applications.
-risk: unknown
-source: community
-kind: mode
-category: specialized
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: specialized
 ---
 
 # Frontend Performance Optimization Mode

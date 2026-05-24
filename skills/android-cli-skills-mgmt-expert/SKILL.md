@@ -1,11 +1,13 @@
 ---
 name: android-cli-skills-mgmt-expert
 description: Expert in `android skills add/list/find/remove` — cross-agent skill installation across Gemini, Antigravity, Claude Code, Codex
-risk: unknown
-source: community
-kind: mode
-category: android-cli
-tags: [android, android-cli, skills, gemini, antigravity, claude, codex, agent, 2026]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-cli
+  tags: [android, android-cli, skills, gemini, antigravity, claude, codex, agent, 2026]
 ---
 
 # Android CLI Skills Management Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: fantasy-design
 description: Expert in the Fantasy design system - Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Fantasy Design System Mode

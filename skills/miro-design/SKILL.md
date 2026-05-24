@@ -1,11 +1,13 @@
 ---
 name: miro-design
 description: Expert in the Miro design system - Visual collaboration. Bright yellow accent, infinite canvas aesthetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, design]
 ---
 
 # Miro Design System Mode

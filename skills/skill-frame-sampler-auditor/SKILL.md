@@ -1,10 +1,12 @@
 ---
 name: skill-frame-sampler-auditor
 description: Audit a video pipeline's frame sampler for off-by-one, short-clip handling, and crop consistency
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 12
-tags: [computer-vision, video, sampling, debugging]
+metadata:
+  version: 1.0.0
+  tags: [computer-vision, video, sampling, debugging]
 ---
 
 # Frame Sampler Auditor

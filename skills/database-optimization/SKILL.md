@@ -1,6 +1,7 @@
 ---
 name: database-optimization
 description: Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL
+license: CC-BY-NC-SA-4.0
 ---
 
 # Database Optimization

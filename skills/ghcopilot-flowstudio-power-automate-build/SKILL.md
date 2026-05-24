@@ -9,6 +9,7 @@ description: >-
   JSON, update an existing flow's actions, patch a flow definition, add actions
   to a flow, wire up connections, or generate a workflow definition from scratch.
   Requires a FlowStudio MCP subscription — see https://mcp.flowstudio.app
+license: CC-BY-NC-SA-4.0
 ---
 
 # Build & Deploy Power Automate Flows with FlowStudio MCP

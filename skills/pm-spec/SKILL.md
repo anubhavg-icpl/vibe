@@ -4,14 +4,15 @@ description: |
   Product spec / PRD as a single page — problem, success metrics, scope,
   user stories, design notes, rollout plan, open questions. Use when the
   brief mentions "PRD", "spec", "product spec", "feature brief", or "需求文档".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "prd"
   - "spec"
   - "product spec"
   - "feature brief"
   - "feature doc"
   - "需求文档"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: product

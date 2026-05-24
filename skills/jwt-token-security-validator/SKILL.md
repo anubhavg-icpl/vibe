@@ -1,11 +1,13 @@
 ---
 name: jwt-token-security-validator
 description: Autonomous agent that validates JWT implementations against RFC 7519, RFC 6749, and security best practices
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [agent, security, jwt, token, rfc-7519, oauth, authentication, validator]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [agent, security, jwt, token, rfc-7519, oauth, authentication, validator]
 ---
 
 # JWT Token Security Validator Agent

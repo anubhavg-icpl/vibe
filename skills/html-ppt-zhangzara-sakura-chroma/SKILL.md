@@ -2,7 +2,8 @@
 name: html-ppt-zhangzara-sakura-chroma
 description: |
   Sakura Chroma — Vintage Japanese cassette-package aesthetic: cream paper, diagonal rainbow ribbons, condensed bold type, JIS-style spec checkboxes. Anything that should feel like a vintage Japanese cassette package or a TDK / Sony / Sakura Color product catalogue: indie hardware brand decks, music-label release schedules, analog studio retrospectives, zine and magazine pitches, kawaii-tech product launches, creative-studio annual reports.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "sakura-chroma"
   - "zhangzara-sakura-chroma"
   - "Sakura Chroma"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/sakura-chroma"

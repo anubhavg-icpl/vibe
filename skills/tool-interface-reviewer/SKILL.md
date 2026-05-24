@@ -1,10 +1,12 @@
 ---
 name: tool-interface-reviewer
 description: Audit a tool definition (name + description + JSON Schema + executor outline) for loop fitness before it ships to an LLM.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 01
-tags: [tool-calling, function-calling, json-schema, tool-design]
+metadata:
+  version: 1.0.0
+  tags: [tool-calling, function-calling, json-schema, tool-design]
 ---
 
 Given a proposed tool definition, review it against the four-step loop (describe, decide, execute, observe) and flag loop-breaking defects before the tool reaches a model.

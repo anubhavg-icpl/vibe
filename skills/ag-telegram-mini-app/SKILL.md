@@ -4,9 +4,11 @@ description: Expert in building Telegram Mini Apps (TWA) - web apps that run
   inside Telegram with native-like experience. Covers the TON ecosystem,
   Telegram Web App API, payments, user authentication, and building viral mini
   apps that monetize.
-risk: unknown
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # Telegram Mini App

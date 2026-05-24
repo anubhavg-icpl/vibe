@@ -1,11 +1,13 @@
 ---
 name: axolotl-expert
 description: Axolotl — YAML-driven LLM fine-tuning with LoRA/QLoRA, DPO/GRPO, DeepSpeed, FSDP
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [axolotl, fine-tuning, framework, yaml, deepspeed, fsdp]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [axolotl, fine-tuning, framework, yaml, deepspeed, fsdp]
 ---
 
 # Axolotl Expert Mode

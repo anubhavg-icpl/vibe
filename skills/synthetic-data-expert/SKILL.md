@@ -1,11 +1,13 @@
 ---
 name: synthetic-data-expert
 description: Generate fine-tuning datasets — distilabel, Magpie, Self-Instruct, Evol-Instruct, augmentoolkit
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [synthetic-data, distilabel, magpie, self-instruct, evol-instruct, fine-tuning]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [synthetic-data, distilabel, magpie, self-instruct, evol-instruct, fine-tuning]
 ---
 
 # Synthetic Data Expert Mode

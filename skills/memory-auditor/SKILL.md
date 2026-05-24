@@ -1,10 +1,12 @@
 ---
 name: memory-auditor
 description: Audit a multi-agent system's shared-memory design for provenance, versioning, verifier separation, and projection schema. Flag memory-poisoning exposure before production.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 13
-tags: [multi-agent, shared-state, blackboard, memory-poisoning, provenance]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, shared-state, blackboard, memory-poisoning, provenance]
 ---
 
 Given a multi-agent codebase or architecture doc, audit the shared-memory design and flag exposure to memory poisoning.

@@ -1,6 +1,7 @@
 ---
 name: a11y-audit
 description: Scan a frontend project for WCAG 2.2 accessibility violations and fix them. Usage: /a11y-audit [path]
+license: CC-BY-NC-SA-4.0
 ---
 
 # /a11y-audit

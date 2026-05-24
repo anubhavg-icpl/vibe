@@ -1,11 +1,13 @@
 ---
 name: chat-template-expert
 description: Author and debug Jinja2 chat_template strings in HF tokenizer_config.json — ChatML, Llama 3, Qwen, Gemma, Mistral, plus tools / function calling
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, chat-template, jinja2, tokenizer, huggingface, function-calling, chatml]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, chat-template, jinja2, tokenizer, huggingface, function-calling, chatml]
 ---
 
 # Chat Template Expert Mode

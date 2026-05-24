@@ -1,11 +1,13 @@
 ---
 name: trl-expert
 description: HuggingFace TRL — SFTTrainer, DPOTrainer, PPOTrainer, GRPOTrainer, RewardTrainer
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [trl, huggingface, training, framework, fine-tuning]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [trl, huggingface, training, framework, fine-tuning]
 ---
 
 # TRL Expert Mode

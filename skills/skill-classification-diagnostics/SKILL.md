@@ -1,10 +1,12 @@
 ---
 name: skill-classification-diagnostics
 description: Given a confusion matrix and class names, surface per-class failures and propose the single most impactful fix
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 4
-tags: [computer-vision, classification, evaluation, debugging]
+metadata:
+  version: 1.0.0
+  tags: [computer-vision, classification, evaluation, debugging]
 ---
 
 # Classification Diagnostics

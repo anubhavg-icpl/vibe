@@ -1,11 +1,13 @@
 ---
 name: android-baseline-profiles-expert
 description: Baseline + startup profiles, Macrobenchmark, profileinstaller, AGP plugin, and R8 — the full Android startup-and-runtime perf pipeline
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, baseline-profiles, startup-profiles, macrobenchmark, r8, profileinstaller, app-startup]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, baseline-profiles, startup-profiles, macrobenchmark, r8, profileinstaller, app-startup]
 ---
 
 # Android Baseline Profiles Expert Mode

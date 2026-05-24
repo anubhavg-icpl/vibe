@@ -1,7 +1,8 @@
 ---
 name: mistral_ai-automation
 description: "Automate Mistral AI tasks via Rube MCP (Composio): completions, embeddings, fine-tuning, and model management. Always search tools first for current schemas."
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

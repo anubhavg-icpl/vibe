@@ -1,11 +1,13 @@
 ---
 name: spacex-design
 description: Expert in the SpaceX design system - Space technology. Stark black and white, full-bleed imagery, futuristic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # SpaceX Design System Mode

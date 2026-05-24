@@ -1,6 +1,7 @@
 ---
 name: azure-pricing
 description: 'Fetches real-time Azure retail pricing using the Azure Retail Prices API (prices.azure.com) and estimates Copilot Studio agent credit consumption. Use when the user asks about the cost of any Azure service, wants to compare SKU prices, needs pricing data for a cost estimate, mentions Azure pricing, Azure costs, Azure billing, or asks about Copilot Studio pricing, Copilot Credits, or agent usage estimation. Covers compute, storage, networking, databases, AI, Copilot Studio, and all other Azure service families.'
+license: CC-BY-NC-SA-4.0
 compatibility: Requires internet access to prices.azure.com and learn.microsoft.com. No authentication needed.
 metadata:
   author: anthonychu

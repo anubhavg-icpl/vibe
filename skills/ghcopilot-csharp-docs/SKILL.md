@@ -1,6 +1,7 @@
 ---
 name: csharp-docs
 description: 'Ensure that C# types are documented with XML comments and follow best practices for documentation.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # C# Documentation Best Practices

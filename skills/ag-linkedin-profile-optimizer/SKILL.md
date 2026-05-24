@@ -1,14 +1,16 @@
 ---
 name: linkedin-profile-optimizer
 description: "High-intent expert for LinkedIn profile checks, authority building, and SEO optimization. Invoke to audit, rewrite, and enhance profiles for top 1% positioning."
-category: growth
-risk: safe
-source: self
+license: CC-BY-NC-SA-4.0
 source_type: self
-date_added: "2026-04-13"
 author: WHOISABHISHEKADHIKARI
-tags: [linkedin, branding, career, growth, personal-brand]
 tools: [claude, cursor, gemini, antigravity]
+metadata:
+  category: growth
+  risk: safe
+  source: self
+  date_added: "2026-04-13"
+  tags: [linkedin, branding, career, growth, personal-brand]
 ---
 
 # LinkedIn Profile Optimizer & Authority Builder

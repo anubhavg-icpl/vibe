@@ -1,11 +1,13 @@
 ---
 name: nestjs-expert
 description: Expert in NestJS framework for building scalable Node.js server-side applications
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [nestjs, nodejs, typescript, backend, api, microservices]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [nestjs, nodejs, typescript, backend, api, microservices]
 ---
 
 # NestJS Expert Mode

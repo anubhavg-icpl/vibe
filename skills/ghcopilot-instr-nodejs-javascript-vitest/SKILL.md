@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-nodejs-javascript-vitest
-description: Use when the user needs guidance on nodejs-javascript-vitest. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, nodejs-javascript-vitest]
----
-
----
-description: "Guidelines for writing Node.js and JavaScript code with Vitest testing"
-applyTo: '**/*.js, **/*.mjs, **/*.cjs'
+description: "Use when the user needs guidance on nodejs-javascript-vitest. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, nodejs-javascript-vitest]
+  applyTo: "**/*.js, **/*.mjs, **/*.cjs"
+  source: "awesome-copilot"
 ---
 
 # Code Generation Guidelines

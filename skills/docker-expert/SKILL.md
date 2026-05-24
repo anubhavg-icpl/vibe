@@ -1,10 +1,12 @@
 ---
 name: docker-expert
 description: Expert in Docker containerization, multi-stage builds, Docker Compose, and container optimization
-risk: unknown
-source: community
-kind: mode
-category: devops
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: devops
 ---
 
 # Docker Expert Mode

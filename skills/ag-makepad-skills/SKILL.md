@@ -1,9 +1,11 @@
 ---
 name: makepad-skills
 description: "Makepad UI development skills for Rust apps: setup, patterns, shaders, packaging, and troubleshooting."
-risk: safe
-source: "https://github.com/ZhangHanDong/makepad-skills"
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/ZhangHanDong/makepad-skills"
+  date_added: "2026-02-27"
 ---
 
 # Makepad Skills

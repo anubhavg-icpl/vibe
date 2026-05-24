@@ -1,6 +1,7 @@
 ---
 name: gdcli
 description: Google Drive CLI for listing, searching, uploading, downloading, and sharing files and folders.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Google Drive CLI

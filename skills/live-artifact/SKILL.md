@@ -3,7 +3,8 @@ name: live-artifact
 description: |
   Create refreshable, auditable Open Design artifacts backed by connector or local data.
   Trigger when the user asks for live dashboards, refreshable reports, synced views, or reusable data-backed artifacts.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "live artifact"
   - "live dashboard"
   - "refreshable dashboard"
@@ -12,7 +13,7 @@ triggers:
   - "synced view"
   - "可刷新"
   - "实时看板"
-od:
+od: 
   mode: prototype
   scenario: live
   preview:

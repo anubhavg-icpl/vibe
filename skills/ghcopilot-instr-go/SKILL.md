@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-go
-description: Use when the user needs guidance on go. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, go]
----
-
----
-description: 'Instructions for writing Go code following idiomatic Go practices and community standards'
-applyTo: '**/*.go,**/go.mod,**/go.sum'
+description: "Use when the user needs guidance on go. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, go]
+  applyTo: "**/*.go,**/go.mod,**/go.sum"
+  source: "awesome-copilot"
 ---
 
 # Go Development Instructions

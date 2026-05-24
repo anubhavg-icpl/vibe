@@ -1,10 +1,12 @@
 ---
 name: debugging-mentor
 description: Teaches systematic debugging skills and problem-solving methodologies
-risk: unknown
-source: community
-kind: mode
-category: learning
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: learning
 ---
 
 # Debugging Mentor Mode

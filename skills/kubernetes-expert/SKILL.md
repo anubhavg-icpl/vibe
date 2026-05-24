@@ -1,10 +1,12 @@
 ---
 name: kubernetes-expert
 description: kubernetes-expert
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # Kubernetes Expert Mode

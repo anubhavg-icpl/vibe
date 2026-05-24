@@ -1,11 +1,13 @@
 ---
 name: mythos-fuzzing-strategist
 description: Choose the right fuzzer, build a custom harness, design a corpus, and know when fuzzing will not help
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, fuzzing, libfuzzer, afl, honggfuzz, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, fuzzing, libfuzzer, afl, honggfuzz, defensive]
 ---
 
 # Mythos Fuzzing Strategist Mode

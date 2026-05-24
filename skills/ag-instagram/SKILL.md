@@ -1,21 +1,14 @@
 ---
 name: instagram
 description: Integracao completa com Instagram via Graph API. Publicacao, analytics, comentarios, DMs, hashtags, agendamento, templates e gestao de contas Business/Creator.
-risk: critical
-source: community
-date_added: '2026-03-06'
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- social-media
-- instagram
-- graph-api
-- content
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: critical
+  source: community
+  date_added: '2026-03-06'
+  tags: 
 ---
 
 # Skill: Instagram Integration

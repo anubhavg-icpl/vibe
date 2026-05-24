@@ -1,6 +1,7 @@
 ---
 name: api-design-patterns
 description: REST API design with resource naming, pagination, versioning, and OpenAPI spec generation
+license: CC-BY-NC-SA-4.0
 ---
 
 # API Design Patterns

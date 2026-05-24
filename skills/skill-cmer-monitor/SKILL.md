@@ -1,10 +1,12 @@
 ---
 name: skill-cmer-monitor
 description: Instrument a production VLM endpoint with Cross-Modal Error Rate monitoring, dashboards, and alerts
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 25
-tags: [vlm, production, monitoring, hallucination]
+metadata:
+  version: 1.0.0
+  tags: [vlm, production, monitoring, hallucination]
 ---
 
 # CMER Monitor

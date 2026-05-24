@@ -1,10 +1,12 @@
 ---
 name: client-event-listeners
 description: Deduplicate Global Event Listeners
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Deduplicate Global Event Listeners

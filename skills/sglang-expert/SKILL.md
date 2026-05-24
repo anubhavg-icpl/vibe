@@ -1,11 +1,13 @@
 ---
 name: sglang-expert
 description: Serve LLMs with SGLang's RadixAttention, structured outputs (compressed FSM), tensor parallel, DP-attention, and PD disaggregation
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, sglang, radixattention, structured-outputs, tensor-parallel, dp-attention, pd-disaggregation]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, sglang, radixattention, structured-outputs, tensor-parallel, dp-attention, pd-disaggregation]
 ---
 
 # SGLang Expert Mode

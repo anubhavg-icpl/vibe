@@ -1,10 +1,12 @@
 ---
 name: policy-gradient-trainer
 description: Produce a REINFORCE / actor-critic / PPO training config for a given task and diagnose variance issues.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 6
-tags: [rl, policy-gradient, reinforce]
+metadata:
+  version: 1.0.0
+  tags: [rl, policy-gradient, reinforce]
 ---
 
 Given an environment (discrete / continuous actions, horizon, reward stats), output:

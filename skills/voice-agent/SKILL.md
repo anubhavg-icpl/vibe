@@ -1,10 +1,12 @@
 ---
 name: voice-agent
 description: Build a real-time voice agent with sub-800ms first-audio-out, barge-in handling, and mid-conversation tool use.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 03
-tags: [capstone, voice, webrtc, livekit, pipecat, asr, tts, streaming]
+metadata:
+  version: 1.0.0
+  tags: [capstone, voice, webrtc, livekit, pipecat, asr, tts, streaming]
 ---
 
 Given a domain (customer support, scheduling, retail assistant), deploy a WebRTC voice agent that keeps end-to-end first-audio-out under 800ms while handling barge-in, tool calls, and packet loss.

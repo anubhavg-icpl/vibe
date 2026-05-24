@@ -1,10 +1,12 @@
 ---
 name: skill-latency-profiler
 description: Write a complete latency-benchmarking script with warmup, synchronisation, percentiles, and memory tracking
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 15
-tags: [edge, deployment, profiling, benchmarking]
+metadata:
+  version: 1.0.0
+  tags: [edge, deployment, profiling, benchmarking]
 ---
 
 # Latency Profiler

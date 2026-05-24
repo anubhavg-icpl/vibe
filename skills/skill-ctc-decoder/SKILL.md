@@ -1,10 +1,12 @@
 ---
 name: skill-ctc-decoder
 description: Write greedy and beam-search CTC decoders from scratch, including length normalisation
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 19
-tags: [ocr, ctc, decoding, sequence-models]
+metadata:
+  version: 1.0.0
+  tags: [ocr, ctc, decoding, sequence-models]
 ---
 
 # CTC Decoder

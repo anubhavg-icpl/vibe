@@ -1,10 +1,12 @@
 ---
 name: voice-assistant-architect
 description: Produce a full-stack voice-assistant spec — components, latency budget, observability, compliance — for a given workload.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 12
-tags: [voice-assistant, architecture, livekit, pipecat, compliance]
+metadata:
+  version: 1.0.0
+  tags: [voice-assistant, architecture, livekit, pipecat, compliance]
 ---
 
 Given the use case (consumer / customer-support / accessibility / edge), expected scale (concurrent sessions, minutes/month), language, latency targets, compliance (HIPAA, PCI, EU AI Act, CA SB 942), output:

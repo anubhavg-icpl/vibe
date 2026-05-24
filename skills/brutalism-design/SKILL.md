@@ -1,11 +1,13 @@
 ---
 name: brutalism-design
 description: Expert in the Brutalism design system - Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, bold]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, bold]
 ---
 
 # Brutalism Design System Mode

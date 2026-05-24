@@ -1,11 +1,13 @@
 ---
 name: risingwave-expert
 description: Expert in RisingWave streaming database with PostgreSQL-compatible materialized views
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [risingwave, streaming, sql, materialized-views, postgres, cdc, kafka]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [risingwave, streaming, sql, materialized-views, postgres, cdc, kafka]
 ---
 
 # RisingWave Expert Mode

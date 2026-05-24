@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-playwright-dotnet
-description: Use when the user needs guidance on playwright-dotnet. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, playwright-dotnet]
----
-
----
-description: 'Playwright .NET test generation instructions'
-applyTo: '**'
+description: "Use when the user needs guidance on playwright-dotnet. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, playwright-dotnet]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Playwright .NET Test Generation Instructions

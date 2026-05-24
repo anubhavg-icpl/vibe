@@ -1,11 +1,13 @@
 ---
 name: astro-expert
 description: Expert in Astro - The web framework for content-driven websites
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [astro, static-site, islands, performance, content, jamstack]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [astro, static-site, islands, performance, content, jamstack]
 ---
 
 # Astro Expert Mode

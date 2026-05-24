@@ -1,10 +1,12 @@
 ---
 name: inference-server
 description: Ship a speculative-decoding inference server with EAGLE-3 or P-EAGLE drafts, K8s autoscaling, and a full throughput/latency/cost report.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 14
-tags: [capstone, inference, vllm, sglang, eagle-3, p-eagle, speculative-decoding, quantization, hpa]
+metadata:
+  version: 1.0.0
+  tags: [capstone, inference, vllm, sglang, eagle-3, p-eagle, speculative-decoding, quantization, hpa]
 ---
 
 Given two open target models (Llama 3.3 70B and Qwen3-Coder-30B MoE or GPT-OSS-120B), ship a production serving stack with speculative decoding, quantization, and Kubernetes autoscaling. Publish measured speedups and tail-latency numbers.

@@ -1,11 +1,13 @@
 ---
 name: nike-design
 description: Expert in the Nike design system - Athletic retail. Monochrome UI, massive uppercase type, full-bleed photography.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, e-commerce]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, e-commerce]
 ---
 
 # Nike Design System Mode

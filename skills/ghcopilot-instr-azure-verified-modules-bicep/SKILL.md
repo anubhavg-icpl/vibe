@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-verified-modules-bicep
-description: Use when the user needs guidance on azure-verified-modules-bicep. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-verified-modules-bicep]
----
-
----
-description: 'Azure Verified Modules (AVM) and Bicep'
-applyTo: '**/*.bicep, **/*.bicepparam'
+description: "Use when the user needs guidance on azure-verified-modules-bicep. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-verified-modules-bicep]
+  applyTo: "**/*.bicep, **/*.bicepparam"
+  source: "awesome-copilot"
 ---
 
 # Azure Verified Modules (AVM) Bicep

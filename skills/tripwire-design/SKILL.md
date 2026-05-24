@@ -1,10 +1,12 @@
 ---
 name: tripwire-design
 description: Review a proposed agent detector stack (kill switch, circuit breakers, canary tokens) and flag missing tripwires before the first autonomous run.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 14
-tags: [kill-switch, circuit-breaker, canary, honeytoken, detection-and-response]
+metadata:
+  version: 1.0.0
+  tags: [kill-switch, circuit-breaker, canary, honeytoken, detection-and-response]
 ---
 
 Given a proposed detector stack for an agent deployment, audit it against the three-detector reference (kill switch, circuit breaker, canary) and flag what is missing, mis-tuned, or exposed to the agent.

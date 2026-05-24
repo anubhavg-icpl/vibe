@@ -1,10 +1,12 @@
 ---
 name: wordpress
 description: "Complete WordPress development workflow covering theme development, plugin creation, WooCommerce integration, performance optimization, and security hardening. Includes WordPress 7.0 features: Real-Time Collaboration, AI Connectors, Abilities API, DataViews, and PHP-only blocks."
-category: workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: workflow-bundle
+  risk: safe
+  source: personal
+  date_added: "2026-02-27"
 ---
 
 # WordPress Development Workflow Bundle

@@ -1,8 +1,10 @@
 ---
 name: healthcare-emr-patterns
 description: EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medical data entry.
+license: CC-BY-NC-SA-4.0
 origin: Health1 Super Speciality Hospitals — contributed by Dr. Keyur Patel
-version: "1.0.0"
+metadata:
+  version: "1.0.0"
 ---
 
 # Healthcare EMR Development Patterns

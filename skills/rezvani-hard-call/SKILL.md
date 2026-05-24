@@ -1,6 +1,7 @@
 ---
 name: "hard-call"
 description: "/em -hard-call — Framework for Decisions With No Good Options"
+license: CC-BY-NC-SA-4.0
 ---
 
 # /em:hard-call — Framework for Decisions With No Good Options

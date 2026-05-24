@@ -1,11 +1,13 @@
 ---
 name: typeorm-expert
 description: Expert in TypeORM with TypeScript, entities, repositories, migrations, query building, and production best practices
-risk: unknown
-source: community
-kind: mode
-category: backend
-tags: [typeorm, orm, database, typescript, backend]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
+  tags: [typeorm, orm, database, typescript, backend]
 ---
 
 # TypeORM Expert Mode

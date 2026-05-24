@@ -1,10 +1,12 @@
 ---
 name: technical-debt-analyzer
 description: Expert in identifying, quantifying, and prioritizing technical debt
-risk: unknown
-source: community
-kind: mode
-category: refactoring
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: refactoring
 ---
 
 # Technical Debt Analyzer Mode

@@ -1,10 +1,12 @@
 ---
 name: editing-pipeline
 description: Plan an image-editing pipeline from source + edit description to a ready-to-ship output.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 09
-tags: [inpaint, outpaint, edit, sam]
+metadata:
+  version: 1.0.0
+  tags: [inpaint, outpaint, edit, sam]
 ---
 
 Given source image, target edit (remove X, replace Y with Z, extend canvas, restyle region, change season / time-of-day), and quality bar (draft / portfolio / print), output:

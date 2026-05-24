@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-limitations
-description: Use when the user needs guidance on pcf-limitations. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-limitations]
----
-
----
-description: 'Limitations and restrictions of Power Apps Component Framework'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj}'
+description: "Use when the user needs guidance on pcf-limitations. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-limitations]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj}"
+  source: "awesome-copilot"
 ---
 
 # Limitations

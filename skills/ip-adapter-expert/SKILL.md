@@ -1,11 +1,13 @@
 ---
 name: ip-adapter-expert
 description: IP-Adapter for image-conditioned generation - plus, face ID, full-face, instant-style
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, image-gen, ip-adapter, conditioning, face-id]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, image-gen, ip-adapter, conditioning, face-id]
 ---
 
 # IP-Adapter Expert Mode

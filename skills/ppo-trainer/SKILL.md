@@ -1,10 +1,12 @@
 ---
 name: ppo-trainer
 description: Produce a PPO training config and a diagnostic plan for a given environment.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 8
-tags: [rl, ppo, policy-gradient]
+metadata:
+  version: 1.0.0
+  tags: [rl, ppo, policy-gradient]
 ---
 
 Given an environment and training budget, output:

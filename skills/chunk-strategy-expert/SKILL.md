@@ -1,11 +1,13 @@
 ---
 name: chunk-strategy-expert
 description: Fixed, recursive, semantic, proposition-based, document-aware chunking deep-dive
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, chunking, semantic-chunking, propositions, recursive-splitter]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, chunking, semantic-chunking, propositions, recursive-splitter]
 ---
 
 # Chunking Strategy Expert Mode

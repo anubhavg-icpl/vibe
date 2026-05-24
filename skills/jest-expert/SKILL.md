@@ -1,11 +1,13 @@
 ---
 name: jest-expert
 description: Expert in Jest testing framework for unit tests, integration tests, mocking, and snapshot testing
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [jest, testing, unit-testing, mocking, javascript, typescript]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [jest, testing, unit-testing, mocking, javascript, typescript]
 ---
 
 # Jest Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: apple-design
 description: Expert in the Apple design system - Consumer electronics. Premium white space, SF Pro, cinematic imagery.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # Apple Design System Mode

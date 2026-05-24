@@ -1,6 +1,7 @@
 ---
 name: "cpo-review"
 description: "/cs:cpo-review <plan> — JTBD-driven interrogation of product roadmap, PMF signal, and portfolio focus."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:cpo-review — CPO Forcing Questions

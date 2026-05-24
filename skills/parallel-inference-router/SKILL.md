@@ -1,10 +1,12 @@
 ---
 name: parallel-inference-router
 description: Route a reasoning workload between voting, tree-of-thought, multi-agent, Hogwild!, and speculative decoding strategies.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 22
-tags: [parallel-inference, hogwild, speculative-decoding, tree-of-thought, multi-agent, reasoning]
+metadata:
+  version: 1.0.0
+  tags: [parallel-inference, hogwild, speculative-decoding, tree-of-thought, multi-agent, reasoning]
 ---
 
 Given a reasoning workload profile (token budget per task, task parallelism characteristics, model family, deployment target, latency budget), recommend a parallel-inference strategy or combination.

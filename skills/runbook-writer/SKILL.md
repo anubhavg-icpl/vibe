@@ -1,10 +1,12 @@
 ---
 name: runbook-writer
 description: Expert in writing operational runbooks for incident response and procedures
-risk: unknown
-source: community
-kind: mode
-category: documentation
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: documentation
 ---
 
 # Runbook Writer Mode

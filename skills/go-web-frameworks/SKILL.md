@@ -1,11 +1,13 @@
 ---
 name: go-web-frameworks
 description: Expert in Gin, Echo, and Fiber - High-performance Go web frameworks
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [go, golang, gin, echo, fiber, web-framework, api, microservices]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [go, golang, gin, echo, fiber, web-framework, api, microservices]
 ---
 
 # Go Web Frameworks Expert Mode

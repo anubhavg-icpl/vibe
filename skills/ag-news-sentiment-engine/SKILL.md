@@ -1,20 +1,23 @@
 ---
 name: news-sentiment-engine
 description: Multi-source RSS news aggregation with Claude-powered sentiment analysis and structured briefing output
-category: research
-risk: critical
-source: community
+license: CC-BY-NC-SA-4.0
 source_repo: tellmefrankie/news-engine
 source_type: community
-date_added: "2026-05-13"
 author: tellmefrankie
-tags: [news, rss, sentiment-analysis, briefing, research]
 tools: [claude, websearch]
-plugin:
+plugin: 
   targets:
     codex: blocked
     claude: blocked
+metadata:
+  category: research
+  risk: critical
+  source: community
+  date_added: "2026-05-13"
+  tags: [news, rss, sentiment-analysis, briefing, research]
 ---
+
 # News Sentiment Engine (Free)
 
 Collect and analyze AI/tech news from multiple sources with Claude-powered sentiment analysis. Open source lite version.

@@ -1,11 +1,13 @@
 ---
 name: notion-design
 description: Expert in the Notion design system - All-in-one workspace. Warm minimalism, serif headings, soft surfaces.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, productivity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, productivity]
 ---
 
 # Notion Design System Mode

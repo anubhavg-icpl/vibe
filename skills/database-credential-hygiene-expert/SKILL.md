@@ -1,11 +1,13 @@
 ---
 name: database-credential-hygiene-expert
 description: Expert in separating DB config (host/port/db/user) from DB secret (password), runtime connection-string assembly via ISecretProvider, dynamic credentials, IAM/RDS auth, SCRAM/SSL, connection pooling under rotation, and zero password-in-catalog guarantees
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [database, postgresql, npgsql, connection-string, password-rotation, iam-auth, rds-auth, scram, ssl-mode, secret-provider, zero-trust-db]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [database, postgresql, npgsql, connection-string, password-rotation, iam-auth, rds-auth, scram, ssl-mode, secret-provider, zero-trust-db]
 ---
 
 # Database Credential Hygiene Expert Mode

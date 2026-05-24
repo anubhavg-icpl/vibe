@@ -1,11 +1,13 @@
 ---
 name: comfyui-expert
 description: ComfyUI graph design, custom nodes, workflow JSON, queue, API integration
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, image-gen, comfyui, workflow, diffusion]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, image-gen, comfyui, workflow, diffusion]
 ---
 
 # ComfyUI Expert Mode

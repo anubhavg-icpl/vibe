@@ -1,6 +1,7 @@
 ---
 name: canary-watch
 description: Use this skill to monitor a deployed URL for regressions after deploys, merges, or dependency upgrades.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

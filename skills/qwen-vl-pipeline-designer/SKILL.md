@@ -1,10 +1,12 @@
 ---
 name: qwen-vl-pipeline-designer
 description: Configure a Qwen2.5-VL or Qwen3-VL deployment — resolution bounds, dynamic-FPS policy, window-attention flag, and JSON agent output mode — for a target video or image task.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 09
-tags: [qwen-vl, m-rope, dynamic-fps, json-agent, video-understanding]
+metadata:
+  version: 1.0.0
+  tags: [qwen-vl, m-rope, dynamic-fps, json-agent, video-understanding]
 ---
 
 Given a task description (image QA, video action recognition, UI-agent workflow, OCR-heavy document, security-camera monitoring, streaming live feed) and a deployment constraint (context window, latency budget, GPU class), emit a runnable Qwen2.5-VL or Qwen3-VL configuration.

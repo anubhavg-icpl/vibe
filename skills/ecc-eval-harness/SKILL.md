@@ -1,6 +1,7 @@
 ---
 name: eval-harness
 description: Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles
+license: CC-BY-NC-SA-4.0
 origin: ECC
 tools: Read, Write, Edit, Bash, Grep, Glob
 ---

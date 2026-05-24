@@ -1,10 +1,12 @@
 ---
 name: economy-designer
 description: Design a minimal agent economy — identity, credit attribution, payment mechanism, reputation. Picks the smallest stack that solves the user's multi-agent incentive problem.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 21
-tags: [multi-agent, economy, Shapley, auctions, reputation, DePIN]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, economy, Shapley, auctions, reputation, DePIN]
 ---
 
 Given a multi-agent scenario that needs incentive alignment (open network, heterogeneous operators, tokenized rewards, or reputation-based routing), design the economy layer.

@@ -1,22 +1,14 @@
 ---
 name: analytics-product
 description: "Analytics de produto — PostHog, Mixpanel, eventos, funnels, cohorts, retencao, north star metric, OKRs e dashboards de produto."
-risk: none
-source: community
-date_added: '2026-03-06'
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- analytics
-- product
-- metrics
-- posthog
-- mixpanel
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: none
+  source: community
+  date_added: '2026-03-06'
+  tags: 
 ---
 
 # ANALYTICS-PRODUCT — Decida com Dados

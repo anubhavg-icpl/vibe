@@ -1,11 +1,13 @@
 ---
 name: turbopuffer-expert
 description: Deep expertise in Turbopuffer — object-storage-first vector + full-text search, three-tier caching, and ~$0.02/GB cold storage economics
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, turbopuffer, object-storage, s3, namespaces, cost-optimization]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, turbopuffer, object-storage, s3, namespaces, cost-optimization]
 ---
 
 # Turbopuffer Expert Mode

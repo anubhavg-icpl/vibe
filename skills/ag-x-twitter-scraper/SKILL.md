@@ -1,15 +1,17 @@
 ---
 name: x-twitter-scraper
 description: "X/Twitter automation skill for tweet search, follower export, posting, DMs, webhooks, MCP, SDKs, Hermes Tweet, and TweetClaw."
-category: data
-risk: critical
-source: community
-tags: "[twitter, x-api, tweet-search, twitter-api, twitter-scraper, follower-export, automation, mcp, sdk, webhooks, hermes-agent, hermes-tweet, openclaw, tweetclaw]"
-date_added: "2026-02-28"
-plugin:
+license: CC-BY-NC-SA-4.0
+plugin: 
   targets:
     codex: blocked
     claude: blocked
+metadata:
+  category: data
+  risk: critical
+  source: community
+  tags: "[twitter, x-api, tweet-search, twitter-api, twitter-scraper, follower-export, automation, mcp, sdk, webhooks, hermes-agent, hermes-tweet, openclaw, tweetclaw]"
+  date_added: "2026-02-28"
 ---
 
 # X (Twitter) Scraper - Xquik

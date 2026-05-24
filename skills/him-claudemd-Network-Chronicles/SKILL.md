@@ -1,8 +1,10 @@
 ---
 name: him-claudemd-Network-Chronicles
 description: Use when working with the Network-Chronicles project or similar codebases. Contains project-specific CLAUDE.md context from the awesome-claude-code community collection.
-version: 1.0.0
-tags: [claude-md, community, Network-Chronicles]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [claude-md, community, Network-Chronicles]
 ---
 
 # Network Chronicles Development Notes

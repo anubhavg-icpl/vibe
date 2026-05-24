@@ -1,10 +1,12 @@
 ---
 name: skill-advanced-rag
 description: Build production-grade RAG with hybrid search, reranking, and evaluation
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 11
 lesson: 7
-tags: [rag, hybrid-search, bm25, reranking, hyde, evaluation]
+metadata:
+  version: 1.0.0
+  tags: [rag, hybrid-search, bm25, reranking, hyde, evaluation]
 ---
 
 # Advanced RAG Pattern

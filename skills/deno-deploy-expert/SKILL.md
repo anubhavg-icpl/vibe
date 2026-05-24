@@ -1,11 +1,13 @@
 ---
 name: deno-deploy-expert
 description: Expert in Deno Deploy, Deno KV, queues, and globally distributed TypeScript
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [deno, deno-deploy, deno-kv, queues, edge, typescript, isolates]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [deno, deno-deploy, deno-kv, queues, edge, typescript, isolates]
 ---
 
 # Deno Deploy Expert Mode

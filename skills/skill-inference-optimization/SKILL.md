@@ -1,10 +1,12 @@
 ---
 name: skill-inference-optimization
 description: Diagnose and optimize LLM inference serving throughput, latency, and cost
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 12
-tags: [inference, kv-cache, batching, speculative-decoding, vllm, optimization]
+metadata:
+  version: 1.0.0
+  tags: [inference, kv-cache, batching, speculative-decoding, vllm, optimization]
 ---
 
 # LLM Inference Optimization Pattern

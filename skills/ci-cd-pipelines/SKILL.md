@@ -1,6 +1,7 @@
 ---
 name: ci-cd-pipelines
 description: CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation
+license: CC-BY-NC-SA-4.0
 ---
 
 # CI/CD Pipelines

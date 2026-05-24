@@ -1,10 +1,12 @@
 ---
 name: log-analysis
 description: Expert in log analysis, pattern recognition, and debugging through log investigation
-risk: unknown
-source: community
-kind: mode
-category: debugging
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: debugging
 ---
 
 # Log Analysis Expert Mode

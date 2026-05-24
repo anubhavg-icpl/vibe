@@ -1,10 +1,12 @@
 ---
 name: skill-vit-patch-and-pos-embed-inspector
 description: Verify a ViT's patch embedding and positional embedding shapes match the model's expected sequence length
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 4
 lesson: 14
-tags: [vision-transformer, debugging, pytorch]
+metadata:
+  version: 1.0.0
+  tags: [vision-transformer, debugging, pytorch]
 ---
 
 # ViT Patch and Positional Embedding Inspector

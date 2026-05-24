@@ -1,10 +1,12 @@
 ---
 name: server-serialization
 description: Minimize Serialization at RSC Boundaries
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Minimize Serialization at RSC Boundaries

@@ -1,11 +1,13 @@
 ---
 name: java-coding-standards
 description: Production-ready Java coding standards enforcing clean code, modern patterns, and maintainability
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [java, coding-standards, clean-code, spring, best-practices]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [java, coding-standards, clean-code, spring, best-practices]
 ---
 
 # Java Coding Standards Mode

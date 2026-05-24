@@ -1,6 +1,7 @@
 ---
 name: suggest-awesome-github-copilot-instructions
 description: 'Suggest relevant GitHub Copilot instruction files from the awesome-copilot repository based on current repository context and chat history, avoiding duplicates with existing instructions in this repository, and identifying outdated instructions that need updates.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Suggest Awesome GitHub Copilot Instructions

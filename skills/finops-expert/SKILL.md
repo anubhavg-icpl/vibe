@@ -1,11 +1,13 @@
 ---
 name: finops-expert
 description: Expert in FinOps for cloud financial management and cost optimization
-risk: unknown
-source: community
-kind: mode
-category: devops
-tags: [finops, cloud-costs, optimization, aws, azure, gcp, cost-management]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: devops
+  tags: [finops, cloud-costs, optimization, aws, azure, gcp, cost-management]
 ---
 
 # FinOps Expert Mode

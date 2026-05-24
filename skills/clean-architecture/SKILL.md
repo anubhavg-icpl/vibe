@@ -1,10 +1,12 @@
 ---
 name: clean-architecture
 description: Expert in Clean Architecture, hexagonal architecture, and domain-driven design patterns
-risk: unknown
-source: community
-kind: mode
-category: refactoring
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: refactoring
 ---
 
 # Clean Architecture Expert Mode

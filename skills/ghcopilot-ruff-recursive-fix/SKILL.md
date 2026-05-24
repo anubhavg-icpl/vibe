@@ -1,6 +1,7 @@
 ---
 name: ruff-recursive-fix
 description: Run Ruff checks with optional scope and rule overrides, apply safe and unsafe autofixes iteratively, review each change, and resolve remaining findings with targeted edits or user decisions.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Ruff Recursive Fix

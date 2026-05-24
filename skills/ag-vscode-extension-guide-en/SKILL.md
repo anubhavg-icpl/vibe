@@ -1,15 +1,17 @@
 ---
 name: vscode-extension-guide-en
 description: "Guide for VS Code extension development from scaffolding to Marketplace publication"
-category: core-dev
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
 source_repo: lewiswigmore/agent-skills
 source_type: community
-date_added: "2026-04-12"
 author: lewiswigmore
-tags: [vscode, extension, ide, typescript, marketplace]
 tools: [claude, cursor, copilot, codex, gemini]
+metadata:
+  category: core-dev
+  risk: safe
+  source: community
+  date_added: "2026-04-12"
+  tags: [vscode, extension, ide, typescript, marketplace]
 ---
 
 # VS Code Extension Guide (English)

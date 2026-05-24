@@ -1,6 +1,7 @@
 ---
 name: power-apps-code-app-scaffold
 description: 'Scaffold a complete Power Apps Code App project with PAC CLI setup, SDK integration, and connector configuration'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power Apps Code Apps Project Scaffolding

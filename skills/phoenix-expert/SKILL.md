@@ -1,11 +1,13 @@
 ---
 name: phoenix-expert
 description: Expert in Phoenix - Elixir's productive web framework for reliable, fast applications
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [phoenix, elixir, liveview, ecto, otp, functional, real-time]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [phoenix, elixir, liveview, ecto, otp, functional, real-time]
 ---
 
 # Phoenix Framework Expert Mode

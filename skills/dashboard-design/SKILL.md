@@ -1,11 +1,13 @@
 ---
 name: dashboard-design
 description: Expert in the Dashboard design system - Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Dashboard Design System Mode

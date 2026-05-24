@@ -1,6 +1,7 @@
 ---
 name: python-azure-iot-edge-modules
 description: 'Build and operate Python Azure IoT Edge modules with robust messaging, deployment manifests, observability, and production readiness checks.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Python Azure IoT Edge Modules

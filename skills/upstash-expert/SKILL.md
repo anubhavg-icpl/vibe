@@ -1,11 +1,13 @@
 ---
 name: upstash-expert
 description: Expert in Upstash Redis, QStash, Vector, and Workflow for serverless and edge
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [upstash, redis, qstash, vector, workflow, serverless, edge, rest-api]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [upstash, redis, qstash, vector, workflow, serverless, edge, rest-api]
 ---
 
 # Upstash Expert Mode

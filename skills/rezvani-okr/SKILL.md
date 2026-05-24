@@ -1,6 +1,7 @@
 ---
 name: okr
 description: Generate OKR cascades from company strategy to team objectives. Usage: /okr generate <strategy>
+license: CC-BY-NC-SA-4.0
 ---
 
 # /okr

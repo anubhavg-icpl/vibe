@@ -1,11 +1,13 @@
 ---
 name: pi-packages-expert
 description: Authoring, publishing, installing, and filtering pi-coding-agent packages (npm, git, local)
-risk: unknown
-source: community
-kind: mode
-category: pi-dev
-tags: [pi-dev, pi-coding-agent, packages, npm, distribution]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: pi-dev
+  tags: [pi-dev, pi-coding-agent, packages, npm, distribution]
 ---
 
 # Pi Packages Expert Mode

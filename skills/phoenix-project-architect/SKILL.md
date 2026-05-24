@@ -1,11 +1,13 @@
 ---
 name: phoenix-project-architect
 description: Production-ready Phoenix/Elixir project structure with contexts, LiveView, and OTP patterns
-risk: unknown
-source: community
-kind: mode
-category: project-structure
-tags: [phoenix, elixir, liveview, otp, project-structure, functional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
+  tags: [phoenix, elixir, liveview, otp, project-structure, functional]
 ---
 
 # Phoenix Project Architect Mode

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-csharp-mcp-server
-description: Use when the user needs guidance on csharp-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, csharp-mcp-server]
----
-
----
-description: 'Instructions for building Model Context Protocol (MCP) servers using the C# SDK'
-applyTo: '**/*.cs, **/*.csproj'
+description: "Use when the user needs guidance on csharp-mcp-server. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, csharp-mcp-server]
+  applyTo: "**/*.cs, **/*.csproj"
+  source: "awesome-copilot"
 ---
 
 # C# MCP Server Development

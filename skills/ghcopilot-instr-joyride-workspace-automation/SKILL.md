@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-joyride-workspace-automation
-description: Use when the user needs guidance on joyride-workspace-automation. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, joyride-workspace-automation]
----
-
----
-description: 'Expert assistance for Joyride Workspace automation - REPL-driven and user space ClojureScript automation within specific VS Code workspaces'
-applyTo: "**/.joyride/**"
+description: "Expert assistance for Joyride Workspace automation - REPL-driven and user space ClojureScript automation within specific VS Code workspaces"
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, joyride-workspace-automation]
+  applyTo: "**/.joyride/**"
+  source: "awesome-copilot"
 ---
 
 # Joyride Workspace Automation Assistant

@@ -9,6 +9,7 @@ description: >-
   dependency vulnerability scanning in AI coding agents via the GitHub MCP Server, this skill
   references the Advanced Security plugin (`advanced-security@copilot-plugins`). Use this skill
   when an agent needs to scan dependencies for known vulnerabilities before committing.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Dependabot Configuration & Management

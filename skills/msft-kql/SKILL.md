@@ -1,6 +1,7 @@
 ---
 name: kql
 description: "KQL language expertise for writing correct, efficient Kusto Query Language queries. Covers syntax gotchas, join patterns, dynamic types, datetime pitfalls, regex patterns, serialization, memory management, result-size discipline, and advanced functions (geo, vector, graph). USE THIS SKILL whenever writing, debugging, or reviewing KQL queries — even simple ones — because the gotchas section prevents the most common errors that waste tool calls and cause expensive retry cascades. Trigger on: KQL, Kusto, ADX, Azure Data Explorer, Fabric Real-Time Intelligence, EventHouse, Log Analytics, log analysis, data exploration, time series, anomaly detection, summarize, where clause, join, extend, project, let statement, parse operator, extract function, any mention of pipe-forward query syntax."
+license: CC-BY-NC-SA-4.0
 ---
 
 # KQL Mastery

@@ -1,10 +1,12 @@
 ---
 name: key-value
 description: key-value
-risk: unknown
-source: community
-kind: mode
-category: map-types
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: map-types
 ---
 
 # Key-Value Maps

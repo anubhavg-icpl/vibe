@@ -1,11 +1,13 @@
 ---
 name: crewai-expert
 description: Orchestrate role-playing autonomous agent crews with sequential and hierarchical processes
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [crewai, multi-agent, orchestration, python, agents]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [crewai, multi-agent, orchestration, python, agents]
 ---
 
 # CrewAI Expert Mode

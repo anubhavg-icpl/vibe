@@ -1,11 +1,13 @@
 ---
 name: mythos-purple-team-evaluator
 description: Iterative attack-defend-attack loop that measures EDR/SIEM detection coverage and closes gaps
-risk: unknown
-source: community
-kind: mode
-category: offense
-tags: [mythos, red-team, defensive-purpose, purple-team, edr, siem, detection-engineering, mitre-attack]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: offense
+  tags: [mythos, red-team, defensive-purpose, purple-team, edr, siem, detection-engineering, mitre-attack]
 ---
 
 # Mythos Purple Team Evaluator Mode

@@ -7,7 +7,8 @@ description: |
   whiteboard before any pixels are committed. Use when the brief asks for
   "wireframe", "sketch wireframe", "hand-drawn", "lo-fi", "whiteboard",
   "草稿", or "手绘原型".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "wireframe"
   - "sketch wireframe"
   - "lo-fi mockup"
@@ -17,7 +18,7 @@ triggers:
   - "手绘原型"
   - "草图"
   - "线框图"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: design

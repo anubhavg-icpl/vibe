@@ -1,6 +1,7 @@
 ---
 name: kotlin-springboot
 description: 'Get best practices for developing applications with Spring Boot and Kotlin.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Spring Boot with Kotlin Best Practices

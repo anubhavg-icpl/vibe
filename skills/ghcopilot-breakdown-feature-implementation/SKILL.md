@@ -1,6 +1,7 @@
 ---
 name: breakdown-feature-implementation
 description: 'Prompt for creating detailed feature implementation plans, following Epoch monorepo structure.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Feature Implementation Plan Prompt

@@ -4,13 +4,14 @@ description: |
   Minimal pre-launch landing with email capture, brand logo, and optional decorative layer.
   Reads DESIGN.md for colors, typography, and layout rules.
   Best for: product launches, beta signups, early access programs, indie projects.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "waitlist page"
   - "coming soon page"
   - "pre-launch landing page"
   - "email capture page"
   - "launch page"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

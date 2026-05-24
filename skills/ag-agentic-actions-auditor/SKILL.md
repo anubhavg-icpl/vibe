@@ -9,9 +9,11 @@ description: >
   Detects attack vectors where attacker-controlled 
   input reaches.
   AI agents running in CI/CD pipelines.
-risk: safe
-source: community
-date_added: 2026-03-18
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: 2026-03-18
 ---
 
 # Agentic Actions Auditor

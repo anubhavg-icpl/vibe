@@ -1,14 +1,12 @@
 ---
 name: ghcopilot-instr-copilot-sdk-python
-description: Use when the user needs guidance on copilot-sdk-python. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, copilot-sdk-python]
----
-
----
-applyTo: "**.py, pyproject.toml, setup.py"
-description: "This file provides guidance on building Python applications using GitHub Copilot SDK."
-name: "GitHub Copilot SDK Python Instructions"
+description: "Use when the user needs guidance on copilot-sdk-python. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, copilot-sdk-python]
+  applyTo: "**.py, pyproject.toml, setup.py"
+  source: "awesome-copilot"
 ---
 
 ## Core Principles

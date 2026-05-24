@@ -1,10 +1,13 @@
 ---
 name: golang-pro
 description: Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization, and production-ready microservices.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
+
 You are a Go expert specializing in modern Go 1.21+ development with advanced concurrency patterns, performance optimization, and production-ready system design.
 
 ## Use this skill when

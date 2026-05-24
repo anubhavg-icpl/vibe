@@ -1,10 +1,12 @@
 ---
 name: js-length-check-first
 description: Early Length Check for Array Comparisons
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Early Length Check for Array Comparisons

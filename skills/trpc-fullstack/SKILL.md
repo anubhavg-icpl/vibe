@@ -1,10 +1,12 @@
 ---
 name: trpc-fullstack
 description: Expert in tRPC, Drizzle ORM, and Zod for end-to-end type-safe full-stack TypeScript applications
-risk: unknown
-source: community
-kind: mode
-category: backend
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
 ---
 
 # tRPC & Type-Safe Stack Expert Mode

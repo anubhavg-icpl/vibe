@@ -1,7 +1,8 @@
 ---
 name: smtp2go-automation
 description: "Automate Smtp2go tasks via Rube MCP (Composio). Always search tools first for current schemas."
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp: [rube]
 ---
 

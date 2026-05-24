@@ -1,9 +1,11 @@
 ---
 name: swift-concurrency-expert
 description: Review and fix Swift concurrency issues such as actor isolation and Sendable violations.
-risk: safe
-source: "Dimillian/Skills (MIT)"
-date_added: "2026-03-25"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "Dimillian/Skills (MIT)"
+  date_added: "2026-03-25"
 ---
 
 # Swift Concurrency Expert

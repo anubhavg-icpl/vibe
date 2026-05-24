@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-langchain-python
-description: Use when the user needs guidance on langchain-python. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, langchain-python]
----
-
----
-description: 'Instructions for using LangChain with Python'
-applyTo: "**/*.py"
+description: "Use when the user needs guidance on langchain-python. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, langchain-python]
+  applyTo: "**/*.py"
+  source: "awesome-copilot"
 ---
 
 # LangChain Python Instructions

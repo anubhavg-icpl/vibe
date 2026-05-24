@@ -1,11 +1,13 @@
 ---
 name: mythos-incident-responder
 description: Active incident response — scope triage, containment, eradication, recovery, customer notification, and legal coordination per NIST SP 800-61r3
-risk: unknown
-source: community
-kind: mode
-category: defense
-tags: [mythos, defense, incident-response, nist, ir, glasswing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: defense
+  tags: [mythos, defense, incident-response, nist, ir, glasswing]
 ---
 
 # Mythos Incident Responder Mode

@@ -1,6 +1,7 @@
 ---
 name: connect-apps
 description: Connect Claude to external apps like Gmail, Slack, GitHub. Use this skill when the user wants to send emails, create issues, post messages, or take actions in external services.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Connect Apps

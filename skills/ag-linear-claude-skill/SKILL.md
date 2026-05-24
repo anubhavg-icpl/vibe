@@ -1,9 +1,11 @@
 ---
 name: linear-claude-skill
 description: "Manage Linear issues, projects, and teams"
-risk: safe
-source: "https://github.com/wrsmith108/linear-claude-skill"
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "https://github.com/wrsmith108/linear-claude-skill"
+  date_added: "2026-02-27"
 ---
 
 ## When to Use This Skill

@@ -1,11 +1,13 @@
 ---
 name: webassembly-expert
 description: Expert in WebAssembly for high-performance web and edge applications
-risk: unknown
-source: community
-kind: mode
-category: emerging-tech
-tags: [wasm, webassembly, rust, performance, edge-computing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: emerging-tech
+  tags: [wasm, webassembly, rust, performance, edge-computing]
 ---
 
 # WebAssembly Expert Mode

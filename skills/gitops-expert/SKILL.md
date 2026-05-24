@@ -1,11 +1,13 @@
 ---
 name: gitops-expert
 description: Expert in GitOps practices with ArgoCD and Flux for Kubernetes deployments
-risk: unknown
-source: community
-kind: mode
-category: devops
-tags: [gitops, argocd, flux, kubernetes, deployment, infrastructure-as-code]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: devops
+  tags: [gitops, argocd, flux, kubernetes, deployment, infrastructure-as-code]
 ---
 
 # GitOps Expert Mode

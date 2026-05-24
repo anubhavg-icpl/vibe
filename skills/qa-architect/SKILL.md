@@ -1,10 +1,12 @@
 ---
 name: qa-architect
 description: Choose QA architecture, retrieval strategy, and evaluation plan.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 13
-tags: [nlp, qa, rag]
+metadata:
+  version: 1.0.0
+  tags: [nlp, qa, rag]
 ---
 
 Given requirements (corpus size, question type, factuality constraint, latency budget), output:

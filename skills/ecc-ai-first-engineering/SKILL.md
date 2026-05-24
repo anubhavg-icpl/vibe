@@ -1,6 +1,7 @@
 ---
 name: ai-first-engineering
 description: Engineering operating model for teams where AI agents generate a large share of implementation output.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

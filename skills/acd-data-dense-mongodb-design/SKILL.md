@@ -1,11 +1,13 @@
 ---
 name: acd-data-dense-mongodb-design
 description: Reference DESIGN.md for developer database UIs: forest-green leaf brand, deep slate chrome, dashboard-first density with marketing surfaces in light editorial.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, data-dense, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, data-dense, claude-design]
 ---
 
 # MongoDB — Data-Dense Atlas Design Mode

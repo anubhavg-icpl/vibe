@@ -1,9 +1,11 @@
 ---
 name: red-team-tactics
 description: "Red team tactics principles based on MITRE ATT&CK. Attack phases, detection evasion, reporting."
-risk: offensive
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: offensive
+  source: community
+  date_added: "2026-02-27"
 ---
 
 > AUTHORIZED USE ONLY: Use this skill only for authorized security assessments, defensive validation, or controlled educational environments.

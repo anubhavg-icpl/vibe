@@ -1,9 +1,11 @@
 ---
 name: react-flow-node-ts
 description: "Create React Flow node components following established patterns with proper TypeScript types and store integration."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # React Flow Node

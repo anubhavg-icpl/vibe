@@ -1,10 +1,12 @@
 ---
 name: debate-configurator
 description: Configure a multi-agent debate for a given task, estimating quality gain and token cost before running.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 07
-tags: [multi-agent, debate, society-of-mind, consensus]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, debate, society-of-mind, consensus]
 ---
 
 Given a question or task, produce a debate configuration ready to run on any agent framework (LangGraph, AutoGen, custom loop).

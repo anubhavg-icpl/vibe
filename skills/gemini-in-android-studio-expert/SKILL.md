@@ -1,11 +1,13 @@
 ---
 name: gemini-in-android-studio-expert
 description: Chat, Agent Mode, code completions, slash commands, MCP servers, and AGENTS.md across the modern Gemini-in-Android-Studio surface
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, android-studio, gemini, agent-mode, mcp, ai-coding-assistant]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, android-studio, gemini, agent-mode, mcp, ai-coding-assistant]
 ---
 
 # Gemini in Android Studio Expert Mode

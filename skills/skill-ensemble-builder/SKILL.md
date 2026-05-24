@@ -1,10 +1,12 @@
 ---
 name: skill-ensemble-builder
 description: Choose the right ensemble method and configure it for your problem
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 11
-tags: [ensemble, bagging, boosting, random-forest, xgboost, stacking]
+metadata:
+  version: 1.0.0
+  tags: [ensemble, bagging, boosting, random-forest, xgboost, stacking]
 ---
 
 # Ensemble Method Selection Guide

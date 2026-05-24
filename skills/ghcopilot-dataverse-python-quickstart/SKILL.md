@@ -1,6 +1,7 @@
 ---
 name: dataverse-python-quickstart
 description: 'Generate Python SDK setup + CRUD + bulk + paging snippets using official patterns.'
+license: CC-BY-NC-SA-4.0
 ---
 
 You are assisting with Microsoft Dataverse SDK for Python (preview).

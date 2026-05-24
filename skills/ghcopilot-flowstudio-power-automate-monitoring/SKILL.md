@@ -7,6 +7,7 @@ description: >-
   aggregated tenant views. For one environment, one flow, run control, or
   root-cause debugging, use flowstudio-power-automate-mcp, flowstudio-power-automate-debug, or the
   server monitor-flow bundle. Requires FlowStudio for Teams or MCP Pro+.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power Automate Monitoring with FlowStudio MCP

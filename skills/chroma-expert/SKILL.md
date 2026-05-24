@@ -1,11 +1,13 @@
 ---
 name: chroma-expert
 description: Deep expertise in Chroma 1.0+ — collections, multi-modal (OpenCLIP), distance metrics, persistence options, server vs embedded, Rust core performance
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, chroma, embedded, multi-modal, openclip, hnsw, sqlite]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, chroma, embedded, multi-modal, openclip, hnsw, sqlite]
 ---
 
 # Chroma Expert Mode

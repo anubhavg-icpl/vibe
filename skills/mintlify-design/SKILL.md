@@ -1,11 +1,13 @@
 ---
 name: mintlify-design
 description: Expert in the Mintlify design system - Documentation platform. Clean, green-accented, reading-optimized.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, productivity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, productivity]
 ---
 
 # Mintlify Design System Mode

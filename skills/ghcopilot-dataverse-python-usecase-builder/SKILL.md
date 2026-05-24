@@ -1,6 +1,7 @@
 ---
 name: dataverse-python-usecase-builder
 description: 'Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations'
+license: CC-BY-NC-SA-4.0
 ---
 
 # System Instructions

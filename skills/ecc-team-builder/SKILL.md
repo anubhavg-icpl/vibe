@@ -1,6 +1,7 @@
 ---
 name: team-builder
 description: Interactive agent picker for composing and dispatching parallel teams
+license: CC-BY-NC-SA-4.0
 origin: community
 ---
 

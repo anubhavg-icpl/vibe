@@ -1,6 +1,7 @@
 ---
 name: agentic-engineering
 description: Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

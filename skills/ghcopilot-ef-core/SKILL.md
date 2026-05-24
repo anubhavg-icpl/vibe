@@ -1,6 +1,7 @@
 ---
 name: ef-core
 description: 'Get best practices for Entity Framework Core'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Entity Framework Core Best Practices

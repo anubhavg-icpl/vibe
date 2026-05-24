@@ -1,10 +1,12 @@
 ---
 name: tool-schema-linter
 description: Audit a tool registry against production design rules for names, descriptions, parameters, and shape. Can run in CI on every tool-registry change.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 05
-tags: [tool-design, linter, selection-accuracy, naming]
+metadata:
+  version: 1.0.0
+  tags: [tool-design, linter, selection-accuracy, naming]
 ---
 
 Given a tool registry (JSON or Python list), run a static audit against the design rules from Phase 13 · 05 and produce a fix list with severities.

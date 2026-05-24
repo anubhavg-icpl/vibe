@@ -1,11 +1,13 @@
 ---
 name: acd-terminal-opencode-design
 description: Reference DESIGN.md for OSS terminal coding agent: near-black canvas, off-white text, phosphor-green action, IBM Plex Mono everywhere, hard edges.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, terminal, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, terminal, claude-design]
 ---
 
 # OpenCode AI — Terminal Native Design Mode

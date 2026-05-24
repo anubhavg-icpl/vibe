@@ -1,11 +1,13 @@
 ---
 name: pi-coding-agent-expert
 description: Using pi-coding-agent and its cross-tool skill format with Claude Code, Codex CLI, Amp, and Droid
-risk: unknown
-source: community
-kind: mode
-category: pi-dev
-tags: [pi-dev, pi-coding-agent, claude-code, codex-cli, amp, droid, cross-tool]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: pi-dev
+  tags: [pi-dev, pi-coding-agent, claude-code, codex-cli, amp, droid, cross-tool]
 ---
 
 # Pi Coding Agent Expert Mode

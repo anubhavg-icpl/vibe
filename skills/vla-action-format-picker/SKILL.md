@@ -1,10 +1,12 @@
 ---
 name: vla-action-format-picker
 description: Pick an action format (discrete bin, FAST, flow-matching, dual-system) and VLA family (RT-2, OpenVLA, π0, GR00T) for a robot task.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 21
-tags: [vla, rt-2, openvla, pi0, groot, action-tokenization]
+metadata:
+  version: 1.0.0
+  tags: [vla, rt-2, openvla, pi0, groot, action-tokenization]
 ---
 
 Given a robot task (manipulation, navigation, whole-body humanoid), DOF count, control rate requirement, and compute constraint, pick an action format and a VLA family.

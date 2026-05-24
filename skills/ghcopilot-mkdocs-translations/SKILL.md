@@ -1,6 +1,7 @@
 ---
 name: mkdocs-translations
 description: 'Generate a language translation for a mkdocs documentation stack.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # MkDocs AI Translator

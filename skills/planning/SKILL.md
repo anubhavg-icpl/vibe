@@ -1,10 +1,12 @@
 ---
 name: planning
 description: Generate an implementation plan for new features or refactoring existing code.
-risk: unknown
-source: community
-kind: mode
-category: planning
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: planning
 ---
 
 # Planning mode instructions

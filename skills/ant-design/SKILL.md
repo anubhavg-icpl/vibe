@@ -1,11 +1,13 @@
 ---
 name: ant-design
 description: Expert in the Ant design system - Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Ant Design System Mode

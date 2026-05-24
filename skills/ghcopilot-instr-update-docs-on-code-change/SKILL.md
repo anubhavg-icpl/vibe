@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-update-docs-on-code-change
-description: Use when the user needs guidance on update-docs-on-code-change. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, update-docs-on-code-change]
----
-
----
-description: 'Automatically update README.md and documentation files when application code changes require documentation updates'
-applyTo: '**/*.{md,js,mjs,cjs,ts,tsx,jsx,py,java,cs,go,rb,php,rs,cpp,c,h,hpp}'
+description: "Use when the user needs guidance on update-docs-on-code-change. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, update-docs-on-code-change]
+  applyTo: "**/*.{md,js,mjs,cjs,ts,tsx,jsx,py,java,cs,go,rb,php,rs,cpp,c,h,hpp}"
+  source: "awesome-copilot"
 ---
 
 # Update Documentation on Code Change

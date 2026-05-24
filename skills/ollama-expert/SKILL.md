@@ -1,11 +1,13 @@
 ---
 name: ollama-expert
 description: Run, customize, and serve local LLMs with Ollama, Modelfiles, and GGUF quantization
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [ollama, local-llm, gguf, modelfile, llamacpp, quantization]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [ollama, local-llm, gguf, modelfile, llamacpp, quantization]
 ---
 
 # Ollama Expert Mode

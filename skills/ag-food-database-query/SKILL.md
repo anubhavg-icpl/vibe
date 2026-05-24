@@ -1,8 +1,10 @@
 ---
 name: food-database-query
 description: Food Database Query
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # 食物数据库查询技能

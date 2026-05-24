@@ -1,9 +1,11 @@
 ---
 name: react-flow-architect
 description: "Build production-ready ReactFlow applications with hierarchical navigation, performance optimization, and advanced state management."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # ReactFlow Architect

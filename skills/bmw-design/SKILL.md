@@ -1,11 +1,13 @@
 ---
 name: bmw-design
 description: Expert in the BMW design system - Luxury automotive. Dark premium surfaces, precise German engineering aesthetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, automotive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, automotive]
 ---
 
 # BMW Design System Mode

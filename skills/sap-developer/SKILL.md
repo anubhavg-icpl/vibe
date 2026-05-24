@@ -1,10 +1,12 @@
 ---
 name: sap-developer
 description: Expert in SAP development including ABAP, Fiori, S/4HANA, and integration
-risk: unknown
-source: community
-kind: mode
-category: enterprise
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: enterprise
 ---
 
 # SAP Developer Expert Mode

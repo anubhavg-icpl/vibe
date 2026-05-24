@@ -1,11 +1,13 @@
 ---
 name: clerk-expert
 description: Expert in Clerk authentication, organizations, webhooks, and Next.js integration
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [clerk, auth, authentication, nextjs, organizations, webhooks, rbac, jwt]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [clerk, auth, authentication, nextjs, organizations, webhooks, rbac, jwt]
 ---
 
 # Clerk Expert Mode

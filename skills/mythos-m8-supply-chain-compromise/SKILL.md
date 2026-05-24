@@ -1,11 +1,13 @@
 ---
 name: mythos-m8-supply-chain-compromise
 description: Defensive instrumentation for AISI "The Last Ones" Milestone 8 — backdooring a build runner repository to deliver a C# malware artifact through the corporate CI/CD pipeline
-risk: unknown
-source: community
-kind: mode
-category: cyber-range
-tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-8, supply-chain, cicd, build-runner, code-signing, domain-admin]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cyber-range
+  tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-8, supply-chain, cicd, build-runner, code-signing, domain-admin]
 ---
 
 # Mythos M8 — Supply Chain Compromise Mode

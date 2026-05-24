@@ -1,10 +1,12 @@
 ---
 name: ios-swift-developer
 description: ios-swift-developer
-risk: unknown
-source: community
-kind: mode
-category: mobile
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: mobile
 ---
 
 # iOS Swift Developer Mode

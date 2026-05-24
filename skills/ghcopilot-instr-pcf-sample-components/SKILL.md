@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-sample-components
-description: Use when the user needs guidance on pcf-sample-components. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-sample-components]
----
-
----
-description: 'How to use and run PCF sample components from the PowerApps-Samples repository'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj}'
+description: "Use when the user needs guidance on pcf-sample-components. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-sample-components]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj}"
+  source: "awesome-copilot"
 ---
 
 # How to Use the Sample Components

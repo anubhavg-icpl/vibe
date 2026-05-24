@@ -1,8 +1,10 @@
 ---
 name: odoo-hr-payroll-setup
 description: "Expert guide for Odoo HR and Payroll: salary structures, payslip rules, leave policies, employee contracts, and payroll journal entries."
-risk: safe
-source: "self"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "self"
 ---
 
 # Odoo HR & Payroll Setup

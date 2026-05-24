@@ -1,9 +1,11 @@
 ---
 name: avoid-ai-writing
 description: "Audit and rewrite content to remove 21 categories of AI writing patterns with a 43-entry replacement table"
-risk: none
-source: https://github.com/conorbronsdon/avoid-ai-writing
-date_added: "2026-03-06"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: none
+  source: https://github.com/conorbronsdon/avoid-ai-writing
+  date_added: "2026-03-06"
 ---
 
 # Avoid AI Writing — Audit & Rewrite

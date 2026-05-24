@@ -1,5 +1,6 @@
 ---
 description: Run the quarterly feature-flag cleanup workflow on the current repo
+license: CC-BY-NC-SA-4.0
 ---
 
 # /flag-cleanup

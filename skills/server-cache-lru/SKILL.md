@@ -1,10 +1,12 @@
 ---
 name: server-cache-lru
 description: Cross-Request LRU Caching
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Cross-Request LRU Caching

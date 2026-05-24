@@ -1,11 +1,13 @@
 ---
 name: mythos-finding-triage
 description: Sort raw scanner output by exploitability and blast radius using CVSS v4.0, attack-vector analysis, dedup, and chain grouping
-risk: unknown
-source: community
-kind: mode
-category: defense
-tags: [mythos, defense, triage, cvss, prioritization, glasswing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: defense
+  tags: [mythos, defense, triage, cvss, prioritization, glasswing]
 ---
 
 # Mythos Finding Triage Mode

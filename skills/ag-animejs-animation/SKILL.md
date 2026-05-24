@@ -1,9 +1,11 @@
---- 
+---
 name: animejs-animation
 description: Advanced JavaScript animation library skill for creating complex, high-performance web animations.
-risk: safe
-source: community
-date_added: "2026-03-07"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-03-07"
 ---
 
 # Anime.js Animation Skill

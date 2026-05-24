@@ -1,6 +1,7 @@
 ---
 name: mvvm-toolkit-messenger
 description: 'CommunityToolkit.Mvvm Messenger pub/sub for decoupled communication between ViewModels (or any objects). Covers WeakReferenceMessenger vs StrongReferenceMessenger, IRecipient<TMessage>, RequestMessage<T> / AsyncRequestMessage<T> / CollectionRequestMessage<T>, ValueChangedMessage<T>, channels (tokens), and the ObservableRecipient activation lifecycle. Use across WPF, WinUI 3, .NET MAUI, Uno, and Avalonia.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # CommunityToolkit.Mvvm Messenger

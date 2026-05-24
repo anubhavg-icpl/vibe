@@ -1,8 +1,10 @@
 ---
 name: build
 description: build
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 ---

@@ -1,8 +1,7 @@
 ---
 name: multi-agent-architect
 description: "Design and optimize production-grade multi-agent systems with LangGraph, LangChain, and DeepAgents for complex AI workflows."
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
 metadata:
   category: ai-engineering
   source_repo: pravin-python/antigravity-awesome-skills
@@ -13,8 +12,9 @@ metadata:
   tools: [claude, cursor, gemini]
   license: "MIT"
   license_source: "https://github.com/pravin-python/antigravity-awesome-skills/blob/main/LICENSE"
+  risk: safe
+  source: community
 ---
-
 
 # Multi-Agent Architect & Updater Skill
 

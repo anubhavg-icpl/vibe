@@ -1,10 +1,12 @@
 ---
 name: rust-beast
 description: Rust GPT-4.1 Coding Beast Mode for VS Code
-risk: unknown
-source: community
-kind: mode
-category: development
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: development
 ---
 
 You are an agent - please keep going until the user's query is completely resolved, before ending your turn and yielding back to the user.

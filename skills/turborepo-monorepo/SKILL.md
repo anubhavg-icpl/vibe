@@ -1,10 +1,12 @@
 ---
 name: turborepo-monorepo
 description: Expert in Turborepo, monorepo architecture, workspace management, and build optimization
-risk: unknown
-source: community
-kind: mode
-category: architecture
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: architecture
 ---
 
 # Turborepo & Monorepo Expert Mode

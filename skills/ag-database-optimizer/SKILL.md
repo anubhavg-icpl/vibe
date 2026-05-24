@@ -1,9 +1,11 @@
 ---
 name: database-optimizer
 description: Expert database optimizer specializing in modern performance tuning, query optimization, and scalable architectures.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 ## Use this skill when

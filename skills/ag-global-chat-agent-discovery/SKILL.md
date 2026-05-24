@@ -1,15 +1,17 @@
 ---
 name: global-chat-agent-discovery
 description: "Discover and search 18K+ MCP servers and AI agents across 6+ registries using Global Chat's cross-protocol directory and MCP server."
-category: development
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
 source_repo: pumanitro/global-chat
 source_type: community
-date_added: "2026-04-06"
 author: pumanitro
-tags: [mcp, ai-agents, agent-discovery, agents-txt, a2a, developer-tools]
 tools: [claude, cursor, gemini, codex]
+metadata:
+  category: development
+  risk: safe
+  source: community
+  date_added: "2026-04-06"
+  tags: [mcp, ai-agents, agent-discovery, agents-txt, a2a, developer-tools]
 ---
 
 # Global Chat Agent Discovery

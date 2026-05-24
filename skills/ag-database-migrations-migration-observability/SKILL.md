@@ -1,10 +1,12 @@
 ---
 name: database-migrations-migration-observability
 description: "Migration monitoring, CDC, and observability infrastructure"
-risk: unknown
-source: community
-tags: "database, cdc, debezium, kafka, prometheus, grafana, monitoring"
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  tags: "database, cdc, debezium, kafka, prometheus, grafana, monitoring"
+  date_added: "2026-02-27"
 ---
 
 # Migration Observability and Real-time Monitoring

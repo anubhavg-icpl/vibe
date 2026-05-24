@@ -1,6 +1,7 @@
 ---
 name: "status"
 description: "Show DAG state, agent progress, and branch status for an AgentHub session."
+license: CC-BY-NC-SA-4.0
 command: /hub:status
 ---
 

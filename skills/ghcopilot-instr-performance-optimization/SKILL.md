@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-performance-optimization
-description: Use when the user needs guidance on performance-optimization. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, performance-optimization]
----
-
----
-applyTo: '**'
-description: 'Comprehensive web performance standards based on Core Web Vitals (LCP, INP, CLS), with 50+ anti-patterns, detection regex, framework-specific fixes for modern web frameworks, and modern API guidance.'
+description: "Comprehensive web performance standards based on Core Web Vitals (LCP, INP, CLS), with 50+ anti-patterns, detection regex, framework-specific fixes for modern web frameworks, and modern API guidance."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, performance-optimization]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Performance Standards

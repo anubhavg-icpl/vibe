@@ -1,10 +1,12 @@
 ---
 name: dualpipe-planner
 description: Plan a pipeline parallelism strategy (1F1B, Zero Bubble, DualPipe, DualPipeV) for a training cluster.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 10
 lesson: 19
-tags: [pipeline-parallelism, dualpipe, dualpipev, zero-bubble, expert-parallelism, distributed-training]
+metadata:
+  version: 1.0.0
+  tags: [pipeline-parallelism, dualpipe, dualpipev, zero-bubble, expert-parallelism, distributed-training]
 ---
 
 Given a training cluster specification (total GPU count, interconnect topology, accelerator model, memory per GPU), a model shape (total params, active params, MoE or dense, expected layer count), and a target training-data volume, recommend a pipeline parallelism strategy and confirm the expected bubble fraction.

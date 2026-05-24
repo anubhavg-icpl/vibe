@@ -1,10 +1,12 @@
 ---
 name: rollback-rehearsal
 description: Design a rollback-rehearsal test for a proposed autonomous workflow and audit the checkpoint backend for audit-trail persistence.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 16
-tags: [checkpointing, rollback, idempotency, eu-ai-act-article-14, durable-execution]
+metadata:
+  version: 1.0.0
+  tags: [checkpointing, rollback, idempotency, eu-ai-act-article-14, durable-execution]
 ---
 
 Given a proposed long-horizon autonomous workflow, design a rollback-rehearsal test that proves the idempotency + precondition + verify + rollback stack actually works end-to-end, and audit the checkpoint backend for regulator-readiness.

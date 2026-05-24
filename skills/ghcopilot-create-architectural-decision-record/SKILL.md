@@ -1,6 +1,7 @@
 ---
 name: create-architectural-decision-record
 description: 'Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create Architectural Decision Record

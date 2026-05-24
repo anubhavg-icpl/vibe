@@ -1,8 +1,10 @@
 ---
 name: him-claudemd-SG-Cars-Trends-Backend
 description: Use when working with the SG-Cars-Trends-Backend project or similar codebases. Contains project-specific CLAUDE.md context from the awesome-claude-code community collection.
-version: 1.0.0
-tags: [claude-md, community, SG-Cars-Trends-Backend]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [claude-md, community, SG-Cars-Trends-Backend]
 ---
 
 # CLAUDE.md

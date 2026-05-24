@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-terraform-azure
-description: Use when the user needs guidance on terraform-azure. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, terraform-azure]
----
-
----
-description: 'Create or modify solutions built using Terraform on Azure.'
-applyTo: '**/*.terraform, **/*.tf, **/*.tfvars, **/*.tflint.hcl, **/*.tfstate, **/*.tf.json, **/*.tfvars.json'
+description: "Use when the user needs guidance on terraform-azure. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, terraform-azure]
+  applyTo: "**/*.terraform, **/*.tf, **/*.tfvars, **/*.tflint.hcl, **/*.tfstate, **/*.tf.json, **/*.tfvars.json"
+  source: "awesome-copilot"
 ---
 
 # Azure Terraform Best Practices

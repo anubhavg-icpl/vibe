@@ -1,6 +1,7 @@
 ---
 name: "stress-test"
 description: "/em -stress-test — Business Assumption Stress Testing"
+license: CC-BY-NC-SA-4.0
 ---
 
 # /em:stress-test — Business Assumption Stress Testing

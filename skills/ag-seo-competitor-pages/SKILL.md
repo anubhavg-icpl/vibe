@@ -5,17 +5,19 @@ description: >
   "X vs Y" layouts, "alternatives to X" pages, feature matrices, schema markup,
   and conversion optimization. Use when user says "comparison page", "vs page",
   "alternatives page", "competitor comparison", or "X vs Y".
-risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 user-invokable: true
 argument-hint: "[url or generate] [competitor]"
-allowed-tools:
+allowed-tools: 
   - Read
   - Grep
   - Glob
   - Bash
   - WebFetch
+metadata:
+  risk: unknown
+  source: "https://github.com/AgriciDaniel/claude-seo"
+  date_added: "2026-03-21"
 ---
 
 # Competitor Comparison & Alternatives Pages

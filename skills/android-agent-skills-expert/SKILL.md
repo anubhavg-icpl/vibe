@@ -1,11 +1,13 @@
 ---
 name: android-agent-skills-expert
 description: Authoring, distributing, and consuming Android skills (SKILL.md format, .skills/ layout, android CLI integration) for Gemini and other agent runtimes
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, android-skills, agent-skills, gemini, antigravity, mcp]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, android-skills, agent-skills, gemini, antigravity, mcp]
 ---
 
 # Android Agent Skills Expert Mode

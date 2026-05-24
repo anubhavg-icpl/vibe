@@ -1,11 +1,13 @@
 ---
 name: mythos-m1-recon-entry
 description: Defensive instrumentation for AISI "The Last Ones" Milestone 1 — perimeter recon, default-credential exposure, and VPN config theft
-risk: unknown
-source: community
-kind: mode
-category: cyber-range
-tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-1, recon, initial-access, vpn, default-credentials]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cyber-range
+  tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-1, recon, initial-access, vpn, default-credentials]
 ---
 
 # Mythos M1 — Recon and Initial Entry Mode

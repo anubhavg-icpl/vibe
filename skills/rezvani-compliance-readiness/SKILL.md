@@ -1,6 +1,7 @@
 ---
 name: "compliance-readiness"
 description: "/cs:compliance-readiness <program> — Multi-framework compliance officer 6-question forcing interrogation of any compliance program. Use before starting a new framework, planning the annual audit calendar, or preparing for certification stage 1."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:compliance-readiness — Compliance Officer Forcing Questions

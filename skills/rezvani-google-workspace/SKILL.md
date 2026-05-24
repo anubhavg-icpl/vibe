@@ -1,6 +1,7 @@
 ---
 name: google-workspace
 description: "Google Workspace CLI operations: setup diagnostics, security audit, recipe discovery, and output analysis. Usage: /google-workspace <setup|audit|recipe|analyze> [options]"
+license: CC-BY-NC-SA-4.0
 ---
 
 # /google-workspace

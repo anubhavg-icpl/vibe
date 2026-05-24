@@ -1,11 +1,13 @@
 ---
 name: lancedb-expert
 description: Deep expertise in LanceDB — Lance columnar format, embedded + serverless modes, S3-backed tables, full-text search, versioning, and multimodal lakehouse
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, lancedb, lance-format, embedded, full-text-search, versioning, multimodal]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, lancedb, lance-format, embedded, full-text-search, versioning, multimodal]
 ---
 
 # LanceDB Expert Mode

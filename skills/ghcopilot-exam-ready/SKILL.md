@@ -5,6 +5,7 @@ description: >
   and a syllabus, and wants to prepare for an exam. Extracts key definitions,
   points, keywords, diagrams, exam-ready sentences, and practice questions
   strictly from the provided material.
+license: CC-BY-NC-SA-4.0
 ---
 
 # exam-ready

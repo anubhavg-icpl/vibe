@@ -1,6 +1,7 @@
 ---
 name: security-hardening
 description: Application security covering input validation, auth, headers, secrets management, and dependency auditing
+license: CC-BY-NC-SA-4.0
 ---
 
 # Security Hardening

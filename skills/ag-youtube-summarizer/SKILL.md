@@ -1,11 +1,13 @@
 ---
 name: youtube-summarizer
 description: "Extract transcripts from YouTube videos and generate comprehensive, detailed summaries using intelligent analysis frameworks"
-category: content
-risk: safe
-source: community
-tags: "[video, summarization, transcription, youtube, content-analysis]"
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: content
+  risk: safe
+  source: community
+  tags: "[video, summarization, transcription, youtube, content-analysis]"
+  date_added: "2026-02-27"
 ---
 
 # youtube-summarizer

@@ -1,10 +1,12 @@
 ---
 name: rag-expert
 description: Expert in Retrieval-Augmented Generation systems and knowledge bases
-risk: unknown
-source: community
-kind: mode
-category: ai-ml
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-ml
 ---
 
 # RAG Expert Mode

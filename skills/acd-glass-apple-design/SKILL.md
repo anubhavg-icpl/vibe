@@ -1,11 +1,13 @@
 ---
 name: acd-glass-apple-design
 description: Reference DESIGN.md for premium consumer software with translucent surfaces. SF Pro everywhere, system tints sparingly, vibrancy materials over solid fills.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, glass, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, glass, claude-design]
 ---
 
 # Apple — Glass / Soft-Futurism Reference Design Mode

@@ -1,10 +1,12 @@
 ---
 name: event-output
 description: event-output
-risk: unknown
-source: community
-kind: mode
-category: map-types
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: map-types
 ---
 
 # Event Output Maps

@@ -5,8 +5,10 @@ description: |
   AppState, persistence, theme switch, 状态管理,
   Scope::with_data, save state, load state, serde,
   状态持久化, 主题切换
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # Robius State Management Skill

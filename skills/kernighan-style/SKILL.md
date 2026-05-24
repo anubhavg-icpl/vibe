@@ -1,11 +1,13 @@
 ---
 name: kernighan-style
 description: Brian Kernighan — Unix philosophy, small composable tools, "controlling complexity is the essence of programming
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, unix, c, clarity, teaching, simplicity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, unix, c, clarity, teaching, simplicity]
 ---
 
 # Brian Kernighan Style Mode

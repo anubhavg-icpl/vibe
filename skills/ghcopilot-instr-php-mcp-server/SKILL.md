@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-php-mcp-server
-description: Use when the user needs guidance on php-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, php-mcp-server]
----
-
----
-description: 'Best practices for building Model Context Protocol servers in PHP using the official PHP SDK with attribute-based discovery and multiple transport options'
-applyTo: '**/*.php'
+description: "Best practices for building Model Context Protocol servers in PHP using the official PHP SDK with attribute-based discovery and multiple transport options"
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, php-mcp-server]
+  applyTo: "**/*.php"
+  source: "awesome-copilot"
 ---
 
 # PHP MCP Server Development Best Practices

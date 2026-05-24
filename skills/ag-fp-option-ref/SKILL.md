@@ -1,10 +1,12 @@
 ---
 name: fp-option-ref
 description: Quick reference for Option type. Use when user needs to handle nullable values, optional data, or wants to avoid null checks.
-risk: unknown
-source: community
-version: 1.0.0
-tags: [fp-ts, option, nullable, maybe, quick-reference]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  version: 1.0.0
+  tags: [fp-ts, option, nullable, maybe, quick-reference]
 ---
 
 # Option Quick Reference

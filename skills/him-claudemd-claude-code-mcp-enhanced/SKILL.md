@@ -1,8 +1,10 @@
 ---
 name: him-claudemd-claude-code-mcp-enhanced
 description: Use when working with the claude-code-mcp-enhanced project or similar codebases. Contains project-specific CLAUDE.md context from the awesome-claude-code community collection.
-version: 1.0.0
-tags: [claude-md, community, claude-code-mcp-enhanced]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [claude-md, community, claude-code-mcp-enhanced]
 ---
 
 # GLOBAL CODING STANDARDS

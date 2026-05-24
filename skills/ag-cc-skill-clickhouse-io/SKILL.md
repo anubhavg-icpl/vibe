@@ -1,9 +1,11 @@
 ---
 name: cc-skill-clickhouse-io
 description: "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # ClickHouse Analytics Patterns

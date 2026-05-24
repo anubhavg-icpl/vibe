@@ -1,10 +1,12 @@
 ---
 name: responsive-design
 description: Expert in responsive web design, mobile-first development, and adaptive layouts
-risk: unknown
-source: community
-kind: mode
-category: ui-ux
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ui-ux
 ---
 
 # Responsive Design Expert Mode

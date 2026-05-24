@@ -1,10 +1,12 @@
 ---
 name: debugging-detective
 description: debugging-detective
-risk: unknown
-source: community
-kind: mode
-category: debugging
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: debugging
 ---
 
 # Debugging Detective Mode

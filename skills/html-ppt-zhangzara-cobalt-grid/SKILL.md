@@ -2,7 +2,8 @@
 name: html-ppt-zhangzara-cobalt-grid
 description: |
   Cobalt Grid — Electric cobalt italic serifs on a graph-paper canvas, anchored by stair-stepped pixel-glitch decorations and slim hairline rules. Anything that should feel like a quietly serious design / research bulletin, art publication, or curated trend report.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "cobalt-grid"
   - "zhangzara-cobalt-grid"
   - "Cobalt Grid"
@@ -15,7 +16,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/cobalt-grid"

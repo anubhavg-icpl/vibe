@@ -1,9 +1,11 @@
 ---
 name: on-call-handoff-patterns
 description: "Effective patterns for on-call shift transitions, ensuring continuity, context transfer, and reliable incident response across shifts."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # On-Call Handoff Patterns

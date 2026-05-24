@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-canvas-apps
-description: Use when the user needs guidance on pcf-canvas-apps. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-canvas-apps]
----
-
----
-description: 'Code components for canvas apps implementation, security, and configuration'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj}'
+description: "Use when the user needs guidance on pcf-canvas-apps. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-canvas-apps]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj}"
+  source: "awesome-copilot"
 ---
 
 # Code Components for Canvas Apps

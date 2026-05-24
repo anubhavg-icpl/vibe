@@ -1,6 +1,7 @@
 ---
 name: microsoft-agent-framework
 description: 'Create, update, refactor, explain, or review Microsoft Agent Framework solutions using shared guidance plus language-specific references for .NET and Python.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Microsoft Agent Framework

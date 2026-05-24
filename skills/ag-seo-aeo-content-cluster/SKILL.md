@@ -1,9 +1,11 @@
 ---
 name: seo-aeo-content-cluster
 description: "Builds a topical authority map with a pillar page, prioritised cluster articles, content types, internal link map, and content gap analysis. Activate when the user wants to build a content cluster, topic map, or content strategy."
-risk: safe
-source: community
-date_added: "2026-04-01"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-04-01"
 ---
 
 # SEO-AEO Content Cluster

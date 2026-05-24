@@ -1,11 +1,13 @@
 ---
 name: timescaledb-expert
 description: Expert in TimescaleDB hypertables, continuous aggregates, and compression
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [timescaledb, postgres, time-series, hypertables, compression, continuous-aggregates]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [timescaledb, postgres, time-series, hypertables, compression, continuous-aggregates]
 ---
 
 # TimescaleDB Expert Mode

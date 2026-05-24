@@ -1,11 +1,13 @@
 ---
 name: security-testing
 description: Expert in security testing methodologies and penetration testing
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [security, testing, penetration-testing, vulnerability, owasp, appsec]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [security, testing, penetration-testing, vulnerability, owasp, appsec]
 ---
 
 # Security Testing Expert Mode

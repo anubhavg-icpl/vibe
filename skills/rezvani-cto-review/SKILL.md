@@ -1,6 +1,7 @@
 ---
 name: "cto-review"
 description: "/cs:cto-review <plan> — Architecture and scaling interrogation. Tech debt, scaling cliffs, team scaling, build-vs-buy."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:cto-review — CTO Forcing Questions

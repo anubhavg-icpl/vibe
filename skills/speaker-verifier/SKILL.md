@@ -1,10 +1,12 @@
 ---
 name: speaker-verifier
 description: Design a speaker verification or diarization pipeline with model choice, enrollment protocol, and threshold tuning.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 06
-tags: [audio, speaker, verification, diarization]
+metadata:
+  version: 1.0.0
+  tags: [audio, speaker, verification, diarization]
 ---
 
 Given a target (verification vs identification vs diarization, domain, channel, threat model) and data (hours for threshold tuning, number of speakers, enrollment clip budget), output:

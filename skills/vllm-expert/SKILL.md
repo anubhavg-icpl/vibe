@@ -1,11 +1,13 @@
 ---
 name: vllm-expert
 description: Serve LLMs at scale with PagedAttention, continuous batching, and speculative decoding
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [vllm, llm-serving, paged-attention, speculative-decoding, gpu, inference, python]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [vllm, llm-serving, paged-attention, speculative-decoding, gpu, inference, python]
 ---
 
 # vLLM Expert Mode

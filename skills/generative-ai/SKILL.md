@@ -1,10 +1,12 @@
 ---
 name: generative-ai
 description: Expert in generative models for images, video, audio, and 3D from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # Generative AI Mode

@@ -1,11 +1,13 @@
 ---
 name: cal-design
 description: Expert in the Cal.com design system - Open-source scheduling. Clean neutral UI, developer-oriented simplicity.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, productivity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, productivity]
 ---
 
 # Cal.com Design System Mode

@@ -1,6 +1,7 @@
 ---
 name: finalize-agent-prompt
 description: 'Finalize prompt file using the role of an AI agent to polish the prompt for the end user.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Finalize Agent Prompt

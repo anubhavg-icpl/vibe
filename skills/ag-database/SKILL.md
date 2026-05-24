@@ -1,10 +1,12 @@
 ---
 name: database
 description: "Database development and operations workflow covering SQL, NoSQL, database design, migrations, optimization, and data engineering."
-category: workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: workflow-bundle
+  risk: safe
+  source: personal
+  date_added: "2026-02-27"
 ---
 
 # Database Workflow Bundle

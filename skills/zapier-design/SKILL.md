@@ -1,11 +1,13 @@
 ---
 name: zapier-design
 description: Expert in the Zapier design system - Automation platform. Warm orange, friendly illustration-driven.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, productivity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, productivity]
 ---
 
 # Zapier Design System Mode

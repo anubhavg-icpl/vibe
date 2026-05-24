@@ -8,7 +8,8 @@ description: |
   with light/dark theming, hoverable chart tooltips, click-to-zoom panels,
   and CSV export. Use when the brief asks for a team / workspace admin
   dashboard, an interactive admin dashboard with charts, or names FlowAI.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "flowai dashboard"
   - "team dashboard"
   - "team management dashboard"
@@ -16,7 +17,7 @@ triggers:
   - "workspace admin dashboard"
   - "团队管理后台"
   - "可交互后台"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: operations

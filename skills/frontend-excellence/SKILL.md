@@ -1,6 +1,7 @@
 ---
 name: frontend-excellence
 description: Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals
+license: CC-BY-NC-SA-4.0
 ---
 
 # Frontend Excellence

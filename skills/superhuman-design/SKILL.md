@@ -1,11 +1,13 @@
 ---
 name: superhuman-design
 description: Expert in the Superhuman design system - Fast email client. Premium dark UI, keyboard-first, purple glow.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, developer-tools]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, developer-tools]
 ---
 
 # Superhuman Design System Mode

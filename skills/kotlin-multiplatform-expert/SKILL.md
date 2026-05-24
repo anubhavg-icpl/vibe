@@ -1,11 +1,13 @@
 ---
 name: kotlin-multiplatform-expert
 description: KMP project setup, expect/actual, Compose Multiplatform, Ktor, SQLDelight, kotlinx coroutines/serialization, and iOS interop
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [kotlin, kotlin-multiplatform, kmp, compose-multiplatform, ktor, sqldelight, ios]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [kotlin, kotlin-multiplatform, kmp, compose-multiplatform, ktor, sqldelight, ios]
 ---
 
 # Kotlin Multiplatform Expert Mode

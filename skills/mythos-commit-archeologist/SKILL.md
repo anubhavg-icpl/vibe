@@ -1,11 +1,13 @@
 ---
 name: mythos-commit-archeologist
 description: Mine git history for security-relevant commits and find sibling call sites that never received the fix
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, git, patch-diffing, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, git, patch-diffing, defensive]
 ---
 
 # Mythos Commit Archeologist Mode

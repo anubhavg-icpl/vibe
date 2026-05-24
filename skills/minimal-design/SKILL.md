@@ -1,11 +1,13 @@
 ---
 name: minimal-design
 description: Expert in the Minimal design system - Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Minimal Design System Mode

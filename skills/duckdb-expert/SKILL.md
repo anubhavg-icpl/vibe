@@ -1,11 +1,13 @@
 ---
 name: duckdb-expert
 description: Expert in DuckDB embedded analytics, extensions, and persistent storage
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [duckdb, olap, sql, analytics, embedded, parquet, arrow]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [duckdb, olap, sql, analytics, embedded, parquet, arrow]
 ---
 
 # DuckDB Expert Mode

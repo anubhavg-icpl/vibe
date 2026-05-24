@@ -1,11 +1,13 @@
 ---
 name: nuxt-expert
 description: Expert in Nuxt 3 for building Vue.js applications with SSR/SSG
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [nuxt, vue, typescript, ssr, ssg, fullstack]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [nuxt, vue, typescript, ssr, ssg, fullstack]
 ---
 
 # Nuxt Expert Mode

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-csharp
-description: Use when the user needs guidance on csharp. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, csharp]
----
-
----
-description: 'Guidelines for building C# applications'
-applyTo: '**/*.cs'
+description: "Use when the user needs guidance on csharp. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, csharp]
+  applyTo: "**/*.cs"
+  source: "awesome-copilot"
 ---
 
 # C# Development

@@ -1,10 +1,12 @@
 ---
 name: mcp-server-platform
 description: Deploy a production MCP server with StreamableHTTP, OAuth 2.1 scopes, OPA policy, human-approval gate for destructive tools, and a registry for discovery.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 13
-tags: [capstone, mcp, fastmcp, streamablehttp, oauth, opa, registry, governance]
+metadata:
+  version: 1.0.0
+  tags: [capstone, mcp, fastmcp, streamablehttp, oauth, opa, registry, governance]
 ---
 
 Given an enterprise environment, ship an MCP server with 10 internal tools, a registry service for discovery, and a governance layer that gates destructive tools via Slack approval.

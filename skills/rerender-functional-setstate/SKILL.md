@@ -1,10 +1,12 @@
 ---
 name: rerender-functional-setstate
 description: Use Functional setState Updates
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Use Functional setState Updates

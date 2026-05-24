@@ -1,10 +1,12 @@
 ---
 name: cgroup
 description: cgroup
-risk: unknown
-source: community
-kind: mode
-category: program-types
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: program-types
 ---
 
 # Cgroup Program Types

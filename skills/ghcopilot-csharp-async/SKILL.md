@@ -1,6 +1,7 @@
 ---
 name: csharp-async
 description: 'Get best practices for C# async programming'
+license: CC-BY-NC-SA-4.0
 ---
 
 # C# Async Programming Best Practices

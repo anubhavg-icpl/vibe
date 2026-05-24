@@ -1,11 +1,13 @@
 ---
 name: flux-expert
 description: Black Forest Labs FLUX.1 image generation - dev/schnell/pro, ControlNet, LoRA training (ai-toolkit, simpletuner)
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, image-gen, flux, diffusion, lora, controlnet]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, image-gen, flux, diffusion, lora, controlnet]
 ---
 
 # Flux.1 Expert Mode

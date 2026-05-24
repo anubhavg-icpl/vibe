@@ -1,6 +1,7 @@
 ---
 name: cpp-testing
 description: Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or adding coverage/sanitizers.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

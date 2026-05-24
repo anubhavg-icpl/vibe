@@ -1,15 +1,13 @@
 ---
 name: ghcopilot-instr-oop-design-patterns
-description: Use when the user needs guidance on oop-design-patterns. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, oop-design-patterns]
+description: "Best practices for applying Object-Oriented Programming (OOP) design patterns, including Gang of Four (GoF) patterns and SOLID principles, to ensure clean, maintainable, and scalable code."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, oop-design-patterns]
+  applyTo: "**/*.py, **/*.java, **/*.ts, **/*.js, **/*.cs"
+  source: "awesome-copilot"
 ---
-
----
-description: 'Best practices for applying Object-Oriented Programming (OOP) design patterns, including Gang of Four (GoF) patterns and SOLID principles, to ensure clean, maintainable, and scalable code.'
-applyTo: '**/*.py, **/*.java, **/*.ts, **/*.js, **/*.cs'
----
-
 
 # Design Patterns for Object-Oriented Programming for Clean Code
 

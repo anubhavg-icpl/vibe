@@ -1,10 +1,12 @@
 ---
 name: rerender-defer-reads
 description: Defer State Reads to Usage Point
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Defer State Reads to Usage Point

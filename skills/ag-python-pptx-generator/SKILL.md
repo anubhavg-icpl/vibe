@@ -1,14 +1,16 @@
 ---
 name: python-pptx-generator
 description: "Generate complete Python scripts that build polished PowerPoint decks with python-pptx and real slide content."
-category: development
-risk: safe
-source: self
+license: CC-BY-NC-SA-4.0
 source_type: self
-date_added: "2026-04-06"
 author: spideyashith
-tags: [python, powerpoint, python-pptx, presentations, slide-decks]
 tools: [claude, cursor, gemini, codex]
+metadata:
+  category: development
+  risk: safe
+  source: self
+  date_added: "2026-04-06"
+  tags: [python, powerpoint, python-pptx, presentations, slide-decks]
 ---
 
 # Python PPTX Generator

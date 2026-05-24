@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-tasksync
-description: Use when the user needs guidance on tasksync. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, tasksync]
----
-
----
-applyTo: '**'
-description: 'TaskSync V5 - Allows you to give the agent new instructions or feedback after completing a task using terminal while agent is running.'
+description: "TaskSync V5 - Allows you to give the agent new instructions or feedback after completing a task using terminal while agent is running."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, tasksync]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # TaskSync V5 Protocol

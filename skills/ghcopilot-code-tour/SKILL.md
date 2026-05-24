@@ -10,6 +10,7 @@ description: >
   vibecoder, security reviewer, and more), all CodeTour step types (file/line, selection,
   pattern, uri, commands, view), and tour-level fields (ref, isPrimary, nextTour).
   Works with any repository in any language.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Code Tour Skill

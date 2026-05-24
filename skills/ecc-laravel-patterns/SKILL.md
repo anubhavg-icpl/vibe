@@ -1,6 +1,7 @@
 ---
 name: laravel-patterns
 description: Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

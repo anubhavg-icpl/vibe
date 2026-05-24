@@ -1,11 +1,13 @@
 ---
 name: wear-os-expert
 description: Wear OS 5/6 with Compose for Wear, tiles, complications, declarative Watch Face Format, and Health Services
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, wear-os, compose-for-wear, watch-face-format, tiles, complications]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, wear-os, compose-for-wear, watch-face-format, tiles, complications]
 ---
 
 # Wear OS Expert Mode

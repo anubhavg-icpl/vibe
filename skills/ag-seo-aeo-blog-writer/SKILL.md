@@ -1,9 +1,11 @@
 ---
 name: seo-aeo-blog-writer
 description: "Writes long-form blog posts with TL;DR block, definition sentence, comparison table, and 5-question FAQ for SEO ranking and AEO citation. Activate when the user wants to write a blog post, article, or long-form content piece."
-risk: safe
-source: community
-date_added: "2026-04-01"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-04-01"
 ---
 
 # SEO-AEO Blog Writer

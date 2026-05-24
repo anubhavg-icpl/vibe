@@ -1,11 +1,13 @@
 ---
 name: sanity-design
 description: Expert in the Sanity design system - Headless CMS. Red accent, content-first editorial layout.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, backend]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, backend]
 ---
 
 # Sanity Design System Mode

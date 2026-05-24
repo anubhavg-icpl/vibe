@@ -1,11 +1,13 @@
 ---
 name: rerank-expert
 description: Cross-encoder rerankers — Cohere Rerank, Jina, BGE, Voyage, ColBERT-as-reranker
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, retrieval, rerank, cross-encoder, cohere, jina, voyage]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, retrieval, rerank, cross-encoder, cohere, jina, voyage]
 ---
 
 # Reranker Expert Mode

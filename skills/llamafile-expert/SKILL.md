@@ -1,11 +1,13 @@
 ---
 name: llamafile-expert
 description: Build and run Mozilla llamafile single-file LLM executables with Cosmopolitan Libc / APE
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, llamafile, mozilla, cosmopolitan, ape, single-file, edge]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, llamafile, mozilla, cosmopolitan, ape, single-file, edge]
 ---
 
 # llamafile Expert Mode

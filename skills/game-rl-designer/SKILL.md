@@ -1,10 +1,12 @@
 ---
 name: game-rl-designer
 description: Design a game-RL or reasoning-RL training pipeline (AlphaZero / MuZero / GRPO) for a given domain.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 12
-tags: [rl, alphazero, muzero, grpo, self-play]
+metadata:
+  version: 1.0.0
+  tags: [rl, alphazero, muzero, grpo, self-play]
 ---
 
 Given a target (perfect-info game / imperfect-info / Atari / LLM reasoning / combinatorial), output:

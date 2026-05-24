@@ -1,11 +1,13 @@
 ---
 name: mythos-cyber-range-designer
 description: Design multi-step, milestone-graded cyber ranges for AI agent evaluation, modeled on AISI's "The Last Ones" and "Cooling Tower
-risk: unknown
-source: community
-kind: mode
-category: agent-eval
-tags: [mythos, ai-eval, frontier-model, ai-safety, cyber-range, eval-design, glasswing, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: agent-eval
+  tags: [mythos, ai-eval, frontier-model, ai-safety, cyber-range, eval-design, glasswing, defensive]
 ---
 
 # Mythos Cyber Range Designer Mode

@@ -1,5 +1,6 @@
 ---
 description: "Use when auditing Claude skills and commands for quality. Supports Quick Scan (changed skills only) and Full Stocktake modes with sequential subagent batch evaluation."
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

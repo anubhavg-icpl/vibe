@@ -1,11 +1,13 @@
 ---
 name: htmx-expert
 description: Expert in htmx — hypermedia-driven applications, server-rendered HTML over the wire
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [htmx, hypermedia, html, server-driven, progressive-enhancement, hda]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [htmx, hypermedia, html, server-driven, progressive-enhancement, hda]
 ---
 
 # htmx Expert Mode

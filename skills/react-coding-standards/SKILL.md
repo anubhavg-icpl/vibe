@@ -1,11 +1,13 @@
 ---
 name: react-coding-standards
 description: Production-ready React coding standards enforcing component patterns, hooks, state management, and accessibility
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [react, javascript, typescript, coding-standards, hooks, accessibility]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [react, javascript, typescript, coding-standards, hooks, accessibility]
 ---
 
 # React Coding Standards Mode

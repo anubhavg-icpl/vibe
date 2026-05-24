@@ -1,10 +1,12 @@
 ---
 name: solidity-smart-contract
 description: solidity-smart-contract
-risk: unknown
-source: community
-kind: mode
-category: blockchain
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: blockchain
 ---
 
 # Solidity Smart Contract Expert Mode

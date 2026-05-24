@@ -1,10 +1,12 @@
 ---
 name: speech-and-audio
 description: Expert in speech recognition, synthesis, and audio AI systems from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # Speech & Audio Mode

@@ -1,7 +1,8 @@
 ---
 name: Gorgias Automation
 description: "Automate e-commerce customer support workflows in Gorgias -- manage tickets, customers, tags, and teams through natural language commands."
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

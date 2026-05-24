@@ -1,8 +1,10 @@
 ---
 name: him-cmd-add-to-changelog
 description: Use when the user asks to run the /add-to-changelog slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, add-to-changelog]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, add-to-changelog]
 ---
 
 # Update Changelog

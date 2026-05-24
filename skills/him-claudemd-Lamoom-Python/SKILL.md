@@ -1,8 +1,10 @@
 ---
 name: him-claudemd-Lamoom-Python
 description: Use when working with the Lamoom-Python project or similar codebases. Contains project-specific CLAUDE.md context from the awesome-claude-code community collection.
-version: 1.0.0
-tags: [claude-md, community, Lamoom-Python]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [claude-md, community, Lamoom-Python]
 ---
 
 # Lamoom Python Project Guide

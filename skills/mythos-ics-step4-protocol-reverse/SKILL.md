@@ -1,11 +1,13 @@
 ---
 name: mythos-ics-step4-protocol-reverse
 description: Defensive instrumentation for the "Cooling Tower" range Step 4 — dynamic analysis of a vendor-custom application-layer protocol over Modbus TCP between HMI and PLC, modeled on AISI's 7-step ICS scenario
-risk: unknown
-source: community
-kind: mode
-category: ics-range
-tags: [mythos, ics, ot, defensive-purpose, blue-team, protocol-analysis, modbus, dynamic-analysis, purdue-level-1-2, range-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ics-range
+  tags: [mythos, ics, ot, defensive-purpose, blue-team, protocol-analysis, modbus, dynamic-analysis, purdue-level-1-2, range-design]
 ---
 
 # Mythos ICS Step 4 — Custom Protocol Reverse Engineering Defense

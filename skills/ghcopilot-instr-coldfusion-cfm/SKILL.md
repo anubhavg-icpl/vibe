@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-coldfusion-cfm
-description: Use when the user needs guidance on coldfusion-cfm. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, coldfusion-cfm]
----
-
----
-description: 'ColdFusion cfm files and application patterns'
-applyTo: "**/*.cfm"
+description: "Use when the user needs guidance on coldfusion-cfm. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, coldfusion-cfm]
+  applyTo: "**/*.cfm"
+  source: "awesome-copilot"
 ---
 
 # ColdFusion Coding Standards

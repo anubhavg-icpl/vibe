@@ -1,10 +1,12 @@
 ---
 name: cpp-cmake-project-architect
 description: Production-ready C/C++ project structure architect - validates and scaffolds enterprise-grade C/C++ applications with modern CMake best practices
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # ⚙️ C/C++ CMake Project Architect Mode

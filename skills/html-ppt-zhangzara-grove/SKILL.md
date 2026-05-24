@@ -2,7 +2,8 @@
 name: html-ppt-zhangzara-grove
 description: |
   Grove — Forest-green canvas with cream type, classical Playfair serifs, and a single rust accent. Anything that should feel organic, considered, and grown-up: sustainability and wellness brands, outdoor / nature products, wineries and restaurants, literary or arts decks, advisory deliverables, bilingual EN/CN reports.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "grove"
   - "zhangzara-grove"
   - "organic"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/grove"

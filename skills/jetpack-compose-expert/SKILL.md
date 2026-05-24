@@ -1,11 +1,13 @@
 ---
 name: jetpack-compose-expert
 description: Modern Compose UI for Android — composables, state, side effects, navigation, animations, lazy lists, and Compose Multiplatform considerations
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, jetpack-compose, ui, kotlin, declarative-ui]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, jetpack-compose, ui, kotlin, declarative-ui]
 ---
 
 # Jetpack Compose Expert Mode

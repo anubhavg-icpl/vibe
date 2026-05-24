@@ -1,11 +1,13 @@
 ---
 name: haskell-expert
 description: Expert Haskell development with pure functional programming, type system mastery, and category theory
-risk: unknown
-source: community
-kind: mode
-category: languages
-tags: [haskell, functional, types, monads, category-theory]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
+  tags: [haskell, functional, types, monads, category-theory]
 ---
 
 # Haskell Expert Mode

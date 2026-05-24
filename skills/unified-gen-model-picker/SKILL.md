@@ -1,10 +1,12 @@
 ---
 name: unified-gen-model-picker
 description: Pick between Show-o / Transfusion / Emu3 / Janus-Pro families for a product that needs both multimodal understanding and generation with open weights.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 14
-tags: [show-o, masked-diffusion, unified, t2i, inpainting]
+metadata:
+  version: 1.0.0
+  tags: [show-o, masked-diffusion, unified, t2i, inpainting]
 ---
 
 Given a product that needs unified understanding + generation (VQA, captioning, T2I, optionally inpainting) with an open-weights constraint and a latency budget, pick a model family and emit a reference configuration.

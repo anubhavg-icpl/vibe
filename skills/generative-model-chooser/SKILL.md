@@ -1,10 +1,12 @@
 ---
 name: generative-model-chooser
 description: Pick a generative-model family, backbone, and hosted alternative for a given task and budget.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 01
-tags: [generative, taxonomy]
+metadata:
+  version: 1.0.0
+  tags: [generative, taxonomy]
 ---
 
 Given a task description (modality, domain, latency budget, compute budget, conditioning signal), output:

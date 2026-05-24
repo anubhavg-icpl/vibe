@@ -1,6 +1,7 @@
 ---
 name: laravel-tdd
 description: Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

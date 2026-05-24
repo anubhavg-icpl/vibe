@@ -1,11 +1,13 @@
 ---
 name: nvidia-design
 description: Expert in the NVIDIA design system - GPU computing. Green-black energy, technical power aesthetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # NVIDIA Design System Mode

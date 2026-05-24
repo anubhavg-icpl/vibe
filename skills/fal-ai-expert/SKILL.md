@@ -1,11 +1,13 @@
 ---
 name: fal-ai-expert
 description: fal.ai serverless inference for image/video models - queue + webhook patterns
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, serverless, fal, inference, image-gen, video-gen]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, serverless, fal, inference, image-gen, video-gen]
 ---
 
 # fal.ai Serverless Inference Expert Mode

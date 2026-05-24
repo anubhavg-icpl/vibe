@@ -1,12 +1,11 @@
 ---
 name: ghcopilot-instr-codexer
-description: Use when the user needs guidance on codexer. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, codexer]
----
-
----
-description: 'Advanced Python research assistant with Context 7 MCP integration, focusing on speed, reliability, and 10+ years of software development expertise'
+description: "Advanced Python research assistant with Context 7 MCP integration, focusing on speed, reliability, and 10+ years of software development expertise"
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, codexer]
+  source: "awesome-copilot"
 ---
 
 # Codexer Instructions

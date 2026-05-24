@@ -1,11 +1,13 @@
 ---
 name: qlora-expert
 description: 4-bit quantized LoRA fine-tuning with NF4, double quantization, and paged optimizers
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, qlora, quantization, peft, bitsandbytes]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, qlora, quantization, peft, bitsandbytes]
 ---
 
 # QLoRA Expert Mode

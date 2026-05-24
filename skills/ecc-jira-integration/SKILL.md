@@ -1,6 +1,7 @@
 ---
 name: jira-integration
 description: Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

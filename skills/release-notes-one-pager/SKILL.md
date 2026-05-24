@@ -4,14 +4,15 @@ description: |
   Release notes one-page HTML with highlights, Added, Fixed, Breaking changes,
   Known issues, and Upgrade note. Writes explicit "None" style sections
   whenever the user does not provide details.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "release notes"
   - "changelog"
   - "what's new"
   - "version update"
   - "change log"
   - "release summary"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: engineering

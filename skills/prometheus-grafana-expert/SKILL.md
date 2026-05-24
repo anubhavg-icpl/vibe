@@ -1,11 +1,13 @@
 ---
 name: prometheus-grafana-expert
 description: Expert in Prometheus monitoring and Grafana visualization
-risk: unknown
-source: community
-kind: mode
-category: infrastructure
-tags: [prometheus, grafana, monitoring, metrics, alerting, observability]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: infrastructure
+  tags: [prometheus, grafana, monitoring, metrics, alerting, observability]
 ---
 
 # Prometheus & Grafana Expert Mode

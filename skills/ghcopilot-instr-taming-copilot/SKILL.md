@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-taming-copilot
-description: Use when the user needs guidance on taming-copilot. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, taming-copilot]
----
-
----
-applyTo: '**'
-description: 'Prevent Copilot from wreaking havoc across your codebase, keeping it under control.'
+description: "Use when the user needs guidance on taming-copilot. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, taming-copilot]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 ## Core Directives & Hierarchy

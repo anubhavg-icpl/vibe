@@ -12,6 +12,7 @@ description: >-
   "just do it" / "直接做". DO NOT TRIGGER when user says "优化代码",
   "优化性能", "optimize performance", "optimize this code" — those are
   refactoring/performance tasks, not prompt optimization.
+license: CC-BY-NC-SA-4.0
 origin: community
 metadata:
   author: YannJY02

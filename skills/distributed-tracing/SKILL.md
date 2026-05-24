@@ -1,11 +1,13 @@
 ---
 name: distributed-tracing
 description: Expert in distributed tracing with Jaeger, Zipkin, and OpenTelemetry for microservices observability
-risk: unknown
-source: community
-kind: mode
-category: infrastructure
-tags: [tracing, jaeger, zipkin, opentelemetry, observability, microservices, spans]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: infrastructure
+  tags: [tracing, jaeger, zipkin, opentelemetry, observability, microservices, spans]
 ---
 
 # Distributed Tracing Expert Mode

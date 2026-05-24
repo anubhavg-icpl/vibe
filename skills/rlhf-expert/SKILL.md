@@ -1,11 +1,13 @@
 ---
 name: rlhf-expert
 description: Reward-model + PPO RLHF pipeline — when it still beats DPO and how to run it correctly
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [rlhf, ppo, reward-model, alignment, training]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [rlhf, ppo, reward-model, alignment, training]
 ---
 
 # Classical RLHF Expert Mode

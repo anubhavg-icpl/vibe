@@ -10,6 +10,7 @@ description: |
   - Checking for environment variable usage vs. hardcoded credentials in MCP configs
   - Any request like "is my MCP config secure?", "audit my MCP servers", or "check .mcp.json"
   keywords: [mcp, security, audit, secrets, shell-injection, supply-chain, governance]
+license: CC-BY-NC-SA-4.0
 ---
 
 # MCP Security Audit

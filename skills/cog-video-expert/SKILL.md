@@ -1,11 +1,13 @@
 ---
 name: cog-video-expert
 description: CogVideoX, Mochi-1, Hunyuan, LTX video diffusion - training and inference patterns
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, video-gen, cogvideox, mochi, hunyuan, ltx, dit]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, video-gen, cogvideox, mochi, hunyuan, ltx, dit]
 ---
 
 # CogVideoX & Mochi Video Diffusion Expert Mode

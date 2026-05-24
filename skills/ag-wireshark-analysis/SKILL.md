@@ -1,10 +1,12 @@
 ---
 name: wireshark-analysis
 description: "Execute comprehensive network traffic analysis using Wireshark to capture, filter, and examine network packets for security investigations, performance optimization, and troubleshooting."
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
 author: zebbern
-date_added: "2026-02-27"
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Wireshark Network Traffic Analysis

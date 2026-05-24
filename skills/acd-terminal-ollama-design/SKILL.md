@@ -1,11 +1,13 @@
 ---
 name: acd-terminal-ollama-design
 description: Reference DESIGN.md for monochrome, mono-everywhere, CLI-first aesthetic.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, terminal, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, terminal, claude-design]
 ---
 
 # Ollama — Terminal-Core Design Mode

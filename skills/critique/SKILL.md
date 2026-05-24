@@ -8,7 +8,8 @@ description: |
   Keep / Fix / Quick-wins. Use when the brief asks for a "design
   review", "design critique", "5 维度评审", "design audit", or "what's
   wrong with my design".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "critique"
   - "design review"
   - "design audit"
@@ -19,7 +20,7 @@ triggers:
   - "review my landing page"
   - "评审"
   - "复盘"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: design

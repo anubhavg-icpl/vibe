@@ -1,6 +1,7 @@
 ---
 name: aws-cloud-patterns
 description: AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform
+license: CC-BY-NC-SA-4.0
 ---
 
 # AWS Cloud Patterns

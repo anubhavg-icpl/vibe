@@ -6,7 +6,8 @@ description: |
   specifications grid. Pure HTML email layout (centered single column, table
   fallback). Use when the brief asks for an "email", "newsletter blast",
   "MJML", "product launch email", or "email template".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "email"
   - "email template"
   - "newsletter"
@@ -15,7 +16,7 @@ triggers:
   - "mjml"
   - "邮件营销"
   - "邮件模板"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

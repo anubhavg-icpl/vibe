@@ -1,11 +1,13 @@
 ---
 name: creative-design
 description: Expert in the Creative design system - Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Creative Design System Mode

@@ -1,6 +1,7 @@
 ---
 name: deep-dive
 description: Claude-native deep research using DAG-based query planning, parallel subagent execution, and gap-driven iteration. No external API needed.
+license: CC-BY-NC-SA-4.0
 user-invocable: true
 argument: The research question or topic to investigate deeply
 ---

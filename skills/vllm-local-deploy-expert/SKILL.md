@@ -1,11 +1,13 @@
 ---
 name: vllm-local-deploy-expert
 description: Self-host vLLM in Docker for high-throughput local inference with tensor parallelism, prefix caching, and AWQ/GPTQ quantization
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, vllm, docker, deploy, tensor-parallel, prefix-caching, awq, gptq]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, vllm, docker, deploy, tensor-parallel, prefix-caching, awq, gptq]
 ---
 
 # vLLM Local Deploy Expert Mode

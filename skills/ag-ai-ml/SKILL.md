@@ -1,10 +1,12 @@
 ---
 name: ai-ml
 description: "AI and machine learning workflow covering LLM application development, RAG implementation, agent architecture, ML pipelines, and AI-powered features."
-category: workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: workflow-bundle
+  risk: safe
+  source: personal
+  date_added: "2026-02-27"
 ---
 
 # AI/ML Workflow Bundle

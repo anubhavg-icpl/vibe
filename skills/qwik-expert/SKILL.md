@@ -1,11 +1,13 @@
 ---
 name: qwik-expert
 description: Expert in Qwik resumability, lazy execution, server functions, and Qwik City routing
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [qwik, resumability, ssr, edge, performance, qwik-city]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [qwik, resumability, ssr, edge, performance, qwik-city]
 ---
 
 # Qwik Expert Mode

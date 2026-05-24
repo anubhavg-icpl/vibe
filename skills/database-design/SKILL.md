@@ -1,10 +1,12 @@
 ---
 name: database-design
 description: Expert in database design, schema modeling, and data architecture
-risk: unknown
-source: community
-kind: mode
-category: database
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: database
 ---
 
 # Database Design Expert Mode

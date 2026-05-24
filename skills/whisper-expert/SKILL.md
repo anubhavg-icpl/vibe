@@ -1,11 +1,13 @@
 ---
 name: whisper-expert
 description: Whisper variants - large-v3, faster-whisper, distil-whisper, whisper-cpp - VAD, diarization, real-time
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, audio, asr, whisper, diarization, transcription]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, audio, asr, whisper, diarization, transcription]
 ---
 
 # Whisper ASR Expert Mode

@@ -1,10 +1,12 @@
 ---
 name: mcp-handshake-tracer
 description: Given a pcap-style transcript of an MCP client-server conversation, annotate every message with its primitive, lifecycle phase, and capability dependency.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 06
-tags: [mcp, json-rpc, lifecycle, capabilities]
+metadata:
+  version: 1.0.0
+  tags: [mcp, json-rpc, lifecycle, capabilities]
 ---
 
 Given a sequence of JSON-RPC 2.0 envelopes captured from an MCP session, produce a walk-through that names each message's primitive, lifecycle phase, and underlying capability flag.

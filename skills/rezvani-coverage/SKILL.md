@@ -4,6 +4,7 @@ description: >-
   Analyze test coverage gaps. Use when user says "test coverage",
   "what's not tested", "coverage gaps", "missing tests", "coverage report",
   or "what needs testing".
+license: CC-BY-NC-SA-4.0
 ---
 
 # Analyze Test Coverage Gaps

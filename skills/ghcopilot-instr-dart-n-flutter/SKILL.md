@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-dart-n-flutter
-description: Use when the user needs guidance on dart-n-flutter. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dart-n-flutter]
----
-
----
-description: 'Instructions for writing Dart and Flutter code following the official recommendations.'
-applyTo: '**/*.dart'
+description: "Use when the user needs guidance on dart-n-flutter. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dart-n-flutter]
+  applyTo: "**/*.dart"
+  source: "awesome-copilot"
 ---
 
 # Dart and Flutter

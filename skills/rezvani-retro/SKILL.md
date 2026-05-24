@@ -1,6 +1,7 @@
 ---
 name: retro
 description: Analyze sprint retrospectives for patterns and action item tracking. Usage: /retro analyze <retro_data.json>
+license: CC-BY-NC-SA-4.0
 ---
 
 # /retro

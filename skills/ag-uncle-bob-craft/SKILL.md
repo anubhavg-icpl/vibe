@@ -1,13 +1,15 @@
 ---
 name: uncle-bob-craft
 description: "Use when performing code review, writing or refactoring code, or discussing architecture; complements clean-code and does not replace project linter/formatter."
-category: code-quality
-risk: safe
-source: community
-date_added: "2026-03-06"
+license: CC-BY-NC-SA-4.0
 author: antigravity-contributors
-tags: [clean-code, clean-architecture, solid, code-review, craftsmanship, uncle-bob]
 tools: [claude, cursor, gemini]
+metadata:
+  category: code-quality
+  risk: safe
+  source: community
+  date_added: "2026-03-06"
+  tags: [clean-code, clean-architecture, solid, code-review, craftsmanship, uncle-bob]
 ---
 
 # Uncle Bob Craft

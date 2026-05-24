@@ -1,11 +1,13 @@
 ---
 name: million-expert
 description: Expert in Million.js block-DOM compiler that speeds up React rendering up to 70%
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [million, react, performance, virtual-dom, compiler]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [million, react, performance, virtual-dom, compiler]
 ---
 
 # Million.js Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: mythos-m2-kerberos-lateral
 description: Defensive instrumentation for AISI "The Last Ones" Milestone 2 — SMB enumeration and AS-REP roasting against accounts missing Kerberos pre-authentication
-risk: unknown
-source: community
-kind: mode
-category: cyber-range
-tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-2, kerberos, as-rep-roasting, smb, lateral-movement, active-directory]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cyber-range
+  tags: [mythos, cyber-range, defensive-purpose, blue-team, milestone-2, kerberos, as-rep-roasting, smb, lateral-movement, active-directory]
 ---
 
 # Mythos M2 — Kerberos Lateral Movement Mode

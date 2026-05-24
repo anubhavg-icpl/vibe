@@ -1,11 +1,13 @@
 ---
 name: vision-llm-expert
 description: VLM landscape - Claude, GPT-4o, Llama 3.2 Vision, Qwen2.5-VL, Pixtral, MiniCPM-V, InternVL
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, vision, vlm, llm, ocr, charts]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, vision, vlm, llm, ocr, charts]
 ---
 
 # Vision LLM Expert Mode

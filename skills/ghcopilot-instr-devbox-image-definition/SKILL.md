@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-devbox-image-definition
-description: Use when the user needs guidance on devbox-image-definition. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, devbox-image-definition]
----
-
----
-description: 'Authoring recommendations for creating YAML based image definition files for use with Microsoft Dev Box Team Customizations'
-applyTo: '**/*.yaml'
+description: "Use when the user needs guidance on devbox-image-definition. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, devbox-image-definition]
+  applyTo: "**/*.yaml"
+  source: "awesome-copilot"
 ---
 
 # Dev Box image definitions

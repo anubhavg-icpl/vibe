@@ -1,10 +1,12 @@
 ---
 name: router-plan
 description: Design an LLM model-routing plan — pick pattern (pre-route, cascade, ensemble), signals (task, length, embedding, confidence), and online quality gates.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 16
-tags: [routing, cascade, model-cascade, routellm, notdiamond, cost-reduction]
+metadata:
+  version: 1.0.0
+  tags: [routing, cascade, model-cascade, routellm, notdiamond, cost-reduction]
 ---
 
 Given workload mix (task classification sample), quality floor, latency tolerance, and current monthly spend, produce a routing plan.

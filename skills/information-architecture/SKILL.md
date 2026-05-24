@@ -1,10 +1,12 @@
 ---
 name: information-architecture
 description: Expert in information architecture, navigation design, and content organization
-risk: unknown
-source: community
-kind: mode
-category: ui-ux
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ui-ux
 ---
 
 # Information Architecture Expert Mode

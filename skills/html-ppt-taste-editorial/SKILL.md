@@ -1,6 +1,7 @@
 ---
 name: html-ppt-taste-editorial
 description: 16:9 HTML deck in editorial-minimalist taste. Warm cream slides, serif display + grotesque body, hairline rules, monospace meta, generous macro-whitespace, one accent. Distilled from Leonxlnx/taste-skill `minimalist-skill`.
+license: CC-BY-NC-SA-4.0
 ---
 
 # HTML PPT — Editorial Minimalism

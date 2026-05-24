@@ -1,7 +1,8 @@
 ---
 name: qdrant-clients-sdk
 description: "Qdrant provides client SDKs for various programming languages, allowing easy integration with Qdrant deployments."
-allowed-tools:
+license: CC-BY-NC-SA-4.0
+allowed-tools: 
   - Read
   - Grep
   - Glob

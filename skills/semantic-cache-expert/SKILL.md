@@ -1,11 +1,13 @@
 ---
 name: semantic-cache-expert
 description: GPTCache, Helicone cache, LangChain semantic cache — embedding-based dedup for LLM apps
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, semantic-cache, gptcache, embeddings, ttl]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, semantic-cache, gptcache, embeddings, ttl]
 ---
 
 # Semantic Cache Expert Mode

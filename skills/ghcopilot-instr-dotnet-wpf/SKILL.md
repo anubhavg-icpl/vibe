@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-dotnet-wpf
-description: Use when the user needs guidance on dotnet-wpf. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dotnet-wpf]
----
-
----
-description: '.NET WPF component and application patterns'
-applyTo: '**/*.xaml, **/*.cs'
+description: "Use when the user needs guidance on dotnet-wpf. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dotnet-wpf]
+  applyTo: "**/*.xaml, **/*.cs"
+  source: "awesome-copilot"
 ---
 
 ## Summary

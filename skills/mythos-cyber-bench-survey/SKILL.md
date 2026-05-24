@@ -1,11 +1,13 @@
 ---
 name: mythos-cyber-bench-survey
 description: Survey of cyber-eval benchmarks (NYU CTF, InterCode-CTF, Cybench, CyberSecEval, AISI ranges) with saturation curves and a "what to use when" decision matrix
-risk: unknown
-source: community
-kind: mode
-category: eval-design
-tags: [mythos, ai-eval, eval-design, benchmarks, ctf, saturation, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: eval-design
+  tags: [mythos, ai-eval, eval-design, benchmarks, ctf, saturation, defensive]
 ---
 
 # Mythos Cyber Bench Survey Mode

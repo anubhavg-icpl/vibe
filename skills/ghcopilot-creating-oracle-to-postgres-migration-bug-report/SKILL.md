@@ -1,6 +1,7 @@
 ---
 name: creating-oracle-to-postgres-migration-bug-report
 description: 'Creates structured bug reports for defects found during Oracle-to-PostgreSQL migration. Use when documenting behavioral differences between Oracle and PostgreSQL as actionable bug reports with severity, root cause, and remediation steps.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Creating Bug Reports for Oracle-to-PostgreSQL Migration

@@ -1,6 +1,7 @@
 ---
 name: wiki-init
 description: Bootstrap a fresh LLM Wiki vault with the three-layer structure, schema files, and starter templates. Usage /wiki-init <path> --topic "<topic>" [--tool all|claude-code|codex|cursor|antigravity]
+license: CC-BY-NC-SA-4.0
 ---
 
 # /wiki-init

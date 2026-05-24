@@ -1,11 +1,13 @@
 ---
 name: clickhouse-expert
 description: Expert in ClickHouse MergeTree, materialized views, and projections
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [clickhouse, olap, mergetree, materialized-views, projections, analytics]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [clickhouse, olap, mergetree, materialized-views, projections, analytics]
 ---
 
 # ClickHouse Expert Mode

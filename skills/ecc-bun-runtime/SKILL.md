@@ -1,6 +1,7 @@
 ---
 name: bun-runtime
 description: Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

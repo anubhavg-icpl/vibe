@@ -1,7 +1,8 @@
 ---
 name: SurveyMonkey Automation
 description: "Automate SurveyMonkey survey creation, response collection, collector management, and survey discovery through natural language commands"
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

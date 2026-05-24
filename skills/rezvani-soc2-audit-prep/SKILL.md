@@ -1,6 +1,7 @@
 ---
 name: "soc2-audit-prep"
 description: "/cs:soc2-audit-prep <scope> — SOC 2 Type II readiness 6-question forcing interrogation. Observation-period focused. Use before Type II observation begins, mid-period checkpoint, or pre-field-test month-10 readiness."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:soc2-audit-prep — SOC 2 Type II Forcing Questions

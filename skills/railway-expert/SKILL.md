@@ -1,11 +1,13 @@
 ---
 name: railway-expert
 description: Expert in Railway services, environments, Postgres, and PR previews
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [railway, paas, postgres, environments, deploy, preview]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [railway, paas, postgres, environments, deploy, preview]
 ---
 
 # Railway Expert Mode

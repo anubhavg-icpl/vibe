@@ -1,6 +1,7 @@
 ---
 name: web-prototype-taste-editorial
 description: Editorial-minimalist web prototype. Warm monochrome canvas, serif display + grotesque body, 1px hairline borders, muted pastel chips, generous macro-whitespace, ambient micro-motion. Distilled from Leonxlnx/taste-skill `minimalist-skill`.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Web Prototype — Editorial Minimalism

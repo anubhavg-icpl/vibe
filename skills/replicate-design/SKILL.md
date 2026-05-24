@@ -1,11 +1,13 @@
 ---
 name: replicate-design
 description: Expert in the Replicate design system - Run ML models via API. Clean white canvas, code-forward.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # Replicate Design System Mode

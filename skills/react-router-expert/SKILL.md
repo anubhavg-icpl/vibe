@@ -1,11 +1,13 @@
 ---
 name: react-router-expert
 description: Expert in React Router 7 framework mode (formerly Remix) — loaders, actions, file routes
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [react-router, remix, ssr, react, full-stack, loaders, actions]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [react-router, remix, ssr, react, full-stack, loaders, actions]
 ---
 
 # React Router Expert Mode

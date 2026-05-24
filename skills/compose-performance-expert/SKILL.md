@@ -1,11 +1,13 @@
 ---
 name: compose-performance-expert
 description: Recomposition discipline, stability, Strong Skipping, derivedStateOf, baseline profiles, and Layout Inspector for production Compose apps
-risk: unknown
-source: community
-kind: mode
-category: android-platform
-tags: [android, jetpack-compose, performance, baseline-profiles, recomposition]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: android-platform
+  tags: [android, jetpack-compose, performance, baseline-profiles, recomposition]
 ---
 
 # Compose Performance Expert Mode

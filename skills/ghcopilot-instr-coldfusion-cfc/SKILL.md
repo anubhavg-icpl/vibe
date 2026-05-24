@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-coldfusion-cfc
-description: Use when the user needs guidance on coldfusion-cfc. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, coldfusion-cfc]
----
-
----
-description: 'ColdFusion Coding Standards for CFC component and application patterns'
-applyTo: "**/*.cfc"
+description: "Use when the user needs guidance on coldfusion-cfc. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, coldfusion-cfc]
+  applyTo: "**/*.cfc"
+  source: "awesome-copilot"
 ---
 
 # ColdFusion Coding Standards for CFC Files

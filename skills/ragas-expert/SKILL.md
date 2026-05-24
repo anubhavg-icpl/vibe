@@ -1,11 +1,13 @@
 ---
 name: ragas-expert
 description: RAGAS metrics for RAG and agent evaluation — faithfulness, relevancy, context precision/recall
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, ragas, rag, metrics, faithfulness]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, ragas, rag, metrics, faithfulness]
 ---
 
 # RAGAS Expert Mode

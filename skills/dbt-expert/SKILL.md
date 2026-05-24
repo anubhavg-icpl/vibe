@@ -1,11 +1,13 @@
 ---
 name: dbt-expert
 description: Expert in dbt-core 1.8+ with contracts, unit tests, and the semantic layer
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [dbt, dbt-core, transformations, sql, semantic-layer, contracts, unit-tests]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [dbt, dbt-core, transformations, sql, semantic-layer, contracts, unit-tests]
 ---
 
 # dbt Expert Mode

@@ -1,6 +1,7 @@
 ---
 name: structured-autonomy-implement
 description: 'Structured Autonomy Implementation Prompt'
+license: CC-BY-NC-SA-4.0
 ---
 
 You are an implementation agent responsible for carrying out the implementation plan without deviating from it.

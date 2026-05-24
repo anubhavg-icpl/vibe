@@ -1,10 +1,12 @@
 ---
 name: eval-suite
 description: Build a three-layer eval suite (static benchmarks, custom offline, online production) with evaluator-optimizer loop and CI gates.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 30
-tags: [evaluation, ci, regression, benchmarks, llm-judge]
+metadata:
+  version: 1.0.0
+  tags: [evaluation, ci, regression, benchmarks, llm-judge]
 ---
 
 Given an agent product, build a three-layer eval suite wired into CI.

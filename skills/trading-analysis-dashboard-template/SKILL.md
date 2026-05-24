@@ -6,7 +6,8 @@ description: |
   playback, and command palette behavior.
   Use when users ask for a Wall-Street-style analytics terminal, trading cockpit,
   or high-tech financial dashboard template with realistic data layout.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "trading analysis dashboard template"
   - "wall street dashboard template"
   - "financial terminal template"
@@ -14,7 +15,7 @@ triggers:
   - "交易分析面板模板"
   - "华尔街风格看板"
   - "高科技金融 dashboard 模板"
-od:
+od: 
   mode: template
   platform: desktop
   scenario: live-artifacts

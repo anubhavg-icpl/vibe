@@ -1,10 +1,12 @@
 ---
 name: terraform-iac-expert
 description: terraform-iac-expert
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # Terraform Infrastructure as Code Expert Mode

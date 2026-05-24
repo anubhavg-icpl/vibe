@@ -1,9 +1,11 @@
 ---
 name: webapp-testing
 description: "To test local web applications, write native Python Playwright scripts."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Web Application Testing

@@ -1,6 +1,7 @@
 ---
 name: "post-mortem"
 description: "/cs:post-mortem <decision> — Honest retrospective on an executed decision, scored against original assumptions and dissent. Closes the strategic sprint loop."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:post-mortem — Honest Retrospective

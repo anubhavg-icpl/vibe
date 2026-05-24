@@ -1,10 +1,12 @@
 ---
 name: skill-evaluation
 description: Evaluation strategy checklist for classification and regression models
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 9
-tags: [evaluation, metrics, cross-validation, model-selection]
+metadata:
+  version: 1.0.0
+  tags: [evaluation, metrics, cross-validation, model-selection]
 ---
 
 # Model Evaluation Strategy

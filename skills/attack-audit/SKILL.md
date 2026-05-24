@@ -1,10 +1,12 @@
 ---
 name: attack-audit
 description: Audit a red-team evaluation report for attack coverage, budget, judge identity, and behaviour set.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 12
-tags: [red-teaming, jailbreak, pair, harmbench, jailbreakbench, asr]
+metadata:
+  version: 1.0.0
+  tags: [red-teaming, jailbreak, pair, harmbench, jailbreakbench, asr]
 ---
 
 Given a red-team evaluation report, audit whether the evaluation is comparable to published baselines and whether it supports its conclusions.

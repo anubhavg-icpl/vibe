@@ -1,11 +1,13 @@
 ---
 name: neumorphism-design
 description: Expert in the Neumorphism design system - Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, morphism]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, morphism]
 ---
 
 # Neumorphism Design System Mode

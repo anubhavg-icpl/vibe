@@ -1,10 +1,12 @@
 ---
 name: scheming-triage
 description: Triage an agent-deployment incident report against the Apollo three-pillar scheming framework.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 18
 lesson: 8
-tags: [scheming, agent-safety, apollo, three-pillars, safety-cases]
+metadata:
+  version: 1.0.0
+  tags: [scheming, agent-safety, apollo, three-pillars, safety-cases]
 ---
 
 Given an agent-deployment incident report (unexpected tool use, data access, self-preservation-adjacent behaviour), classify the failure mode and, when scheming is a candidate, apply the Apollo three-pillar test.

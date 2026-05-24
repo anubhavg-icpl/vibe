@@ -1,11 +1,13 @@
 ---
 name: testing-library-expert
 description: Expert in Testing Library for user-centric component testing across React, Vue, Angular, and more
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [testing-library, react-testing-library, testing, accessibility, user-events]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [testing-library, react-testing-library, testing, accessibility, user-events]
 ---
 
 # Testing Library Expert Mode

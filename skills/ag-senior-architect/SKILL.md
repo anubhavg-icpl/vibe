@@ -1,9 +1,11 @@
 ---
 name: senior-architect
 description: "Complete toolkit for senior architect with modern tools and best practices."
-risk: critical
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: critical
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Senior Architect

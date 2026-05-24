@@ -5,8 +5,10 @@ description: >
   risk assessments, and test coverage summaries. Use when the user says
   "write a PR description", "improve this PR", "summarize my changes",
   "PR review", "pull request", or asks to document a diff for reviewers.
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # Pull Request Enhancement

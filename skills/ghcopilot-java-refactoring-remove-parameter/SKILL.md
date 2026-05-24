@@ -1,6 +1,7 @@
 ---
 name: java-refactoring-remove-parameter
 description: 'Refactoring using Remove Parameter in Java Language'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Refactoring Java Methods with Remove Parameter

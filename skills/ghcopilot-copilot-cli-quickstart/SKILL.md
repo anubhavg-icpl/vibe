@@ -6,6 +6,7 @@ description: >
   Non-Developer tracks, plus on-demand Q&A. Just say "start tutorial" or
   ask a question! Note: This skill targets GitHub Copilot CLI specifically
   and uses CLI-specific tools (ask_user, sql, fetch_copilot_cli_documentation).
+license: CC-BY-NC-SA-4.0
 allowed-tools: ask_user, sql, fetch_copilot_cli_documentation
 ---
 

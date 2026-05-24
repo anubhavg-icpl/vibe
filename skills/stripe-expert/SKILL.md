@@ -1,11 +1,13 @@
 ---
 name: stripe-expert
 description: Expert in Stripe Payments, Subscriptions, Invoicing, Connect, and webhooks
-risk: unknown
-source: community
-kind: mode
-category: edge-platforms
-tags: [stripe, payments, subscriptions, billing, connect, webhooks, payment-intents]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: edge-platforms
+  tags: [stripe, payments, subscriptions, billing, connect, webhooks, payment-intents]
 ---
 
 # Stripe Expert Mode

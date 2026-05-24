@@ -1,11 +1,13 @@
 ---
 name: mlops-expert
 description: Expert in MLOps practices, ML pipelines, model deployment, and monitoring
-risk: unknown
-source: community
-kind: mode
-category: ai-ml
-tags: [mlops, ml-pipeline, model-deployment, monitoring, feature-store, experiment-tracking]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-ml
+  tags: [mlops, ml-pipeline, model-deployment, monitoring, feature-store, experiment-tracking]
 ---
 
 # MLOps Expert Mode

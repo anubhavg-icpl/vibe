@@ -1,11 +1,13 @@
 ---
 name: editorial-design
 description: Expert in the Editorial design system - Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Editorial Design System Mode

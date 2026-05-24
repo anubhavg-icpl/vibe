@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-winui3
-description: Use when the user needs guidance on winui3. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, winui3]
----
-
----
-description: 'WinUI 3 and Windows App SDK coding guidelines. Prevents common UWP API misuse, enforces correct XAML namespaces, threading, windowing, and MVVM patterns for desktop Windows apps.'
-applyTo: '**/*.xaml, **/*.cs, **/*.csproj'
+description: "WinUI 3 and Windows App SDK coding guidelines. Prevents common UWP API misuse, enforces correct XAML namespaces, threading, windowing, and MVVM patterns for desktop Windows apps."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, winui3]
+  applyTo: "**/*.xaml, **/*.cs, **/*.csproj"
+  source: "awesome-copilot"
 ---
 
 # WinUI 3 / Windows App SDK

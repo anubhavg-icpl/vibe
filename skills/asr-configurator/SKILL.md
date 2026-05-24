@@ -1,10 +1,12 @@
 ---
 name: asr-configurator
 description: Pick an ASR model (Whisper variant / Moonshine / faster-whisper) and decoding parameters for a new speech pipeline.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 10
-tags: [transformers, whisper, asr, speech]
+metadata:
+  version: 1.0.0
+  tags: [transformers, whisper, asr, speech]
 ---
 
 Given a speech task (transcription / translation / streaming / on-device), language(s), audio characteristics (noise, accent, duration), and latency/quality targets, output:

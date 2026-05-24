@@ -1,17 +1,18 @@
 ---
 name: lambdatest-agent-skills
 description: "Production-grade test automation skills for 46 frameworks across E2E, unit, mobile, BDD, visual, and cloud testing in 15+ languages."
-category: testing
-risk: safe
-source: community
 source_repo: LambdaTest/agent-skills
 source_type: community
-date_added: "2026-04-16"
 author: tanveer-farooq
-tags: [testing, test-automation, e2e, unit-testing, mobile-testing, bdd, selenium, playwright, cypress, jest, pytest, appium, lambdatest]
 tools: [claude, cursor, gemini, copilot]
 license: "MIT"
 license_source: "https://github.com/LambdaTest/agent-skills/blob/main/LICENSE"
+metadata:
+  category: testing
+  risk: safe
+  source: community
+  date_added: "2026-04-16"
+  tags: [testing, test-automation, e2e, unit-testing, mobile-testing, bdd, selenium, playwright, cypress, jest, pytest, appium, lambdatest]
 ---
 
 # LambdaTest Agent Skills — Test Automation Registry (46 Skills)

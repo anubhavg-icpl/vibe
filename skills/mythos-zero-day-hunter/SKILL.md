@@ -1,11 +1,13 @@
 ---
 name: mythos-zero-day-hunter
 description: Out-of-the-box vulnerability discovery in mature, well-tested codebases, modeled on Claude Mythos Preview
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, zero-day, vulnerability-research, glasswing, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, zero-day, vulnerability-research, glasswing, defensive]
 ---
 
 # Mythos Zero-Day Hunter Mode

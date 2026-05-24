@@ -1,11 +1,13 @@
 ---
 name: chaosblade
 description: Expert in ChaosBlade - Alibaba's multi-platform chaos engineering tool
-risk: unknown
-source: community
-kind: mode
-category: testing
-tags: [chaosblade, alibaba, chaos-engineering, fault-injection, cncf, multi-platform]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
+  tags: [chaosblade, alibaba, chaos-engineering, fault-injection, cncf, multi-platform]
 ---
 
 # ChaosBlade Expert Mode

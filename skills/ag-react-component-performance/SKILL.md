@@ -1,9 +1,11 @@
 ---
 name: react-component-performance
 description: Diagnose slow React components and suggest targeted performance fixes.
-risk: safe
-source: "Dimillian/Skills (MIT)"
-date_added: "2026-03-25"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: "Dimillian/Skills (MIT)"
+  date_added: "2026-03-25"
 ---
 
 # React Component Performance

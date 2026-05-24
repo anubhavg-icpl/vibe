@@ -1,10 +1,12 @@
 ---
 name: dynamics-365
 description: Expert in Microsoft Dynamics 365 development, Power Platform, and Dataverse
-risk: unknown
-source: community
-kind: mode
-category: enterprise
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: enterprise
 ---
 
 # Dynamics 365 Developer Mode

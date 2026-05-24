@@ -1,11 +1,13 @@
 ---
 name: incident-management
 description: Expert in incident response, on-call management, postmortems, and operational excellence
-risk: unknown
-source: community
-kind: mode
-category: devops
-tags: [incident-response, on-call, postmortem, pagerduty, opsgenie, runbooks, sre]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: devops
+  tags: [incident-response, on-call, postmortem, pagerduty, opsgenie, runbooks, sre]
 ---
 
 # Incident Management Expert Mode

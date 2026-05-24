@@ -1,10 +1,12 @@
 ---
 name: rerender-lazy-state-init
 description: Use Lazy State Initialization
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Use Lazy State Initialization

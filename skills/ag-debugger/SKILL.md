@@ -1,13 +1,11 @@
 ---
 name: debugger
 description: 'Debugging specialist for errors, test failures, and unexpected
-
-  behavior. Use proactively when encountering any issues.
-
-  '
-risk: safe
-source: community
-date_added: '2026-02-27'
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-02-27'
 ---
 
 ## Use this skill when

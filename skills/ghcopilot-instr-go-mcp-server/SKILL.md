@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-go-mcp-server
-description: Use when the user needs guidance on go-mcp-server. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, go-mcp-server]
----
-
----
-description: 'Best practices and patterns for building Model Context Protocol (MCP) servers in Go using the official github.com/modelcontextprotocol/go-sdk package.'
-applyTo: "**/*.go, **/go.mod, **/go.sum"
+description: "Best practices and patterns for building Model Context Protocol (MCP) servers in Go using the official github.com/modelcontextprotocol/go-sdk package."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, go-mcp-server]
+  applyTo: "**/*.go, **/go.mod, **/go.sum"
+  source: "awesome-copilot"
 ---
 
 # Go MCP Server Development Guidelines

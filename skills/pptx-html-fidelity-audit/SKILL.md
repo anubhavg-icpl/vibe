@@ -1,7 +1,8 @@
 ---
 name: pptx-html-fidelity-audit
 description: Audit a python-pptx export against its source HTML deck, identify layout/content drift (footer overflow, cropped content, missing italic/em, lost styling, off-rhythm spacing), and re-export with strict footer-rail + cursor-flow layout discipline. Use this skill whenever the user has a .pptx that was generated from an HTML slide deck and asks to compare/audit/verify/fix the export — including phrases like "compare ppt with html", "fidelity audit", "fix the pptx", "ppt is cut off", "footer overlap", "italic missing in pptx", "re-export the deck", "pptx-html-fidelity-audit", or any case where a python-pptx → HTML round-trip needs verification or repair. Also trigger when the user shows you a deck.html and a deck.pptx side by side and is debugging visual differences.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "pptx fidelity"
   - "pptx audit"
   - "ppt 跑掉"
@@ -9,7 +10,7 @@ triggers:
   - "footer overlap"
   - "verify pptx"
   - "html to pptx"
-od:
+od: 
   mode: utility
   scenario: engineering
 ---

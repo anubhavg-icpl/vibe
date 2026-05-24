@@ -1,10 +1,12 @@
 ---
 name: js-cache-function-results
 description: Cache Repeated Function Calls
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Cache Repeated Function Calls

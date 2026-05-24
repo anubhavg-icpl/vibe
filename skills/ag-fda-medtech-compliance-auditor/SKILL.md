@@ -1,8 +1,10 @@
 ---
 name: fda-medtech-compliance-auditor
 description: "Expert AI auditor for Medical Device (SaMD) compliance, IEC 62304, and 21 CFR Part 820. Reviews DHFs, technical files, and software validation."
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # FDA MedTech Compliance Auditor

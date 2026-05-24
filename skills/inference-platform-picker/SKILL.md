@@ -1,10 +1,12 @@
 ---
 name: inference-platform-picker
 description: Pick an inference platform (Fireworks, Together, Baseten, Modal, Replicate, Anyscale, or custom silicon) given workload, SLA, budget, and operational constraints. Normalize per-token, per-minute, and per-prediction pricing.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 02
-tags: [inference, fireworks, together, baseten, modal, replicate, anyscale, economics]
+metadata:
+  version: 1.0.0
+  tags: [inference, fireworks, together, baseten, modal, replicate, anyscale, economics]
 ---
 
 Given a workload profile (model, tokens/day, sustained utilization, TTFT SLA, burst factor, compliance, Python vs mixed stack), produce a platform recommendation.

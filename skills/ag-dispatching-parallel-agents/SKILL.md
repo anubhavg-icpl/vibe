@@ -1,9 +1,11 @@
 ---
 name: dispatching-parallel-agents
 description: "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Dispatching Parallel Agents

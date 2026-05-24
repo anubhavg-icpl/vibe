@@ -1,9 +1,11 @@
 ---
 name: deployment-pipeline-design
 description: "Architecture patterns for multi-stage CI/CD pipelines with approval gates and deployment strategies."
-risk: critical
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: critical
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Deployment Pipeline Design

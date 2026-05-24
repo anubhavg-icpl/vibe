@@ -1,14 +1,16 @@
 ---
 name: stitch-loop
 description: Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern
-allowed-tools:
+license: CC-BY-NC-SA-4.0
+allowed-tools: 
   - "stitch*:*"
   - "chrome*:*"
   - "Read"
   - "Write"
   - "Bash"
-risk: unknown
-source: community
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # Stitch Build Loop

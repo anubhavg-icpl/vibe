@@ -7,7 +7,8 @@ description: |
   Composio connector catalog. Refreshes on demand and when the artifact
   is opened. Falls back to seeded mock data when no connector is bound,
   so it works offline / in screenshots / in the picker preview.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "team dashboard"
   - "notion dashboard"
   - "live dashboard"
@@ -16,7 +17,7 @@ triggers:
   - "团队仪表盘"
   - "Notion 仪表盘"
   - "Live Artifact dashboard"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: operation

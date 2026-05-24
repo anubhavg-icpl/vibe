@@ -1,11 +1,13 @@
 ---
 name: scala-coding-standards
 description: Production-ready Scala coding standards enforcing functional patterns, type safety, and maintainability
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [scala, functional-programming, coding-standards, cats, zio]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [scala, functional-programming, coding-standards, cats, zio]
 ---
 
 # Scala Coding Standards Mode

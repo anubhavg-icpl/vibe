@@ -1,11 +1,13 @@
 ---
 name: starbucks-design
 description: Expert in the Starbucks design system - Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, e-commerce]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, e-commerce]
 ---
 
 # Starbucks Design System Mode

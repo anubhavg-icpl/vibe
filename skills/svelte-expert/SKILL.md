@@ -1,11 +1,13 @@
 ---
 name: svelte-expert
 description: Expert in Svelte and SvelteKit for building reactive web applications
-risk: unknown
-source: community
-kind: mode
-category: frameworks
-tags: [svelte, sveltekit, javascript, frontend, reactive, ssr]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: frameworks
+  tags: [svelte, sveltekit, javascript, frontend, reactive, ssr]
 ---
 
 # Svelte Expert Mode

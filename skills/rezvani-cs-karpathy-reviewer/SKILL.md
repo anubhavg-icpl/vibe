@@ -1,6 +1,7 @@
 ---
 name: cs-karpathy-reviewer
 description: Reviews staged git changes against Karpathy's 4 coding principles. Runs complexity_checker on changed files, diff_surgeon on the diff, and produces a verdict with specific fix recommendations. Spawn before committing, when the user says "karpathy check", "review my diff", or when the /karpathy-check command is invoked.
+license: CC-BY-NC-SA-4.0
 skills: engineering/karpathy-coder
 domain: engineering
 model: sonnet

@@ -1,6 +1,7 @@
 ---
 name: safety-guard
 description: Use this skill to prevent destructive operations when working on production systems or running agents autonomously.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

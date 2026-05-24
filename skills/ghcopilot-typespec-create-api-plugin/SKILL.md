@@ -1,6 +1,7 @@
 ---
 name: typespec-create-api-plugin
 description: 'Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Create TypeSpec API Plugin

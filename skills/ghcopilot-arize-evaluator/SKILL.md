@@ -1,10 +1,11 @@
 ---
 name: arize-evaluator
 description: Handles LLM-as-judge evaluation workflows on Arize including creating/updating evaluators, running evaluations on spans or experiments, managing tasks, trigger-run operations, column mapping, and continuous monitoring. Use when the user mentions create evaluator, LLM judge, hallucination, faithfulness, correctness, relevance, run eval, score spans, score experiment, trigger-run, column mapping, continuous monitoring, or improve evaluator prompt.
+license: CC-BY-NC-SA-4.0
+compatibility: Requires the ax CLI and a configured Arize profile with an AI integration.
 metadata:
   author: arize
   version: "1.0"
-compatibility: Requires the ax CLI and a configured Arize profile with an AI integration.
 ---
 
 # Arize Evaluator Skill

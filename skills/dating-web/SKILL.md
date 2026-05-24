@@ -7,7 +7,8 @@ description: |
   accent. Use when the brief asks for a "dating site", "matchmaking",
   "community dashboard", "social network dashboard", or any consumer
   product where the data is the story.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "dating app"
   - "dating site"
   - "matchmaking"
@@ -16,7 +17,7 @@ triggers:
   - "consumer dashboard"
   - "约会应用"
   - "婚恋"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: personal

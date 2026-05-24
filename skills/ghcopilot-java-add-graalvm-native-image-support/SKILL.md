@@ -1,6 +1,7 @@
 ---
 name: java-add-graalvm-native-image-support
 description: 'GraalVM Native Image expert that adds native image support to Java applications, builds the project, analyzes build errors, applies fixes, and iterates until successful compilation using Oracle best practices.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # GraalVM Native Image Agent

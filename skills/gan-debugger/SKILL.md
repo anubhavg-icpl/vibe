@@ -1,10 +1,12 @@
 ---
 name: gan-debugger
 description: Diagnose failing GAN training from loss curves and sample grids; prescribe one-line fixes.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 8
 lesson: 03
-tags: [gan, adversarial, debugging]
+metadata:
+  version: 1.0.0
+  tags: [gan, adversarial, debugging]
 ---
 
 Given a failing GAN run (D and G loss curves, sample grid, dataset size, optimizer config), output:

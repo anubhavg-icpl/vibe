@@ -1,10 +1,12 @@
 ---
 name: migration-agent
 description: Build a repo-level code migration agent that combines deterministic recipes with an agent fallback loop, passes MigrationBench, and publishes a failure taxonomy.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 19
 lesson: 09
-tags: [capstone, code-migration, openrewrite, libcst, migrationbench, agent, sandbox]
+metadata:
+  version: 1.0.0
+  tags: [capstone, code-migration, openrewrite, libcst, migrationbench, agent, sandbox]
 ---
 
 Given a Java 8 or Python 2 repo, produce a migrated branch (to Java 17 or Python 3.12) with a green test suite and minimal coverage regression. Evaluate across the 50-repo MigrationBench subset.

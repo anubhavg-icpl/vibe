@@ -7,6 +7,7 @@ description: >
   UI code review, component reviews, responsive design checks, theme testing, and creating memorable UI.
   DO NOT USE FOR: Backend API reviews, database schema reviews, infrastructure or DevOps work, pure business logic
   without UI, or non-frontend code.
+license: CC-BY-NC-SA-4.0
 acknowledgments: |
   Design review principles and quality pillar framework created by @Quirinevwm (https://github.com/Quirinevwm).
   Creative frontend guidance inspired by Anthropic's frontend-design skill

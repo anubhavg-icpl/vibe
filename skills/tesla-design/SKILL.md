@@ -1,11 +1,13 @@
 ---
 name: tesla-design
 description: Expert in the Tesla design system - Electric automotive. Radical subtraction, full-viewport photography, near-zero UI.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, automotive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, automotive]
 ---
 
 # Tesla Design System Mode

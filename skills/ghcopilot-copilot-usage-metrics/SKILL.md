@@ -1,6 +1,7 @@
 ---
 name: copilot-usage-metrics
 description: Retrieve and display GitHub Copilot usage metrics for organizations and enterprises using the GitHub CLI and REST API.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Copilot Usage Metrics

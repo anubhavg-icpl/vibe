@@ -1,8 +1,10 @@
 ---
 name: him-cmd-fix-github-issue
 description: Use when the user asks to run the /fix-github-issue slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, fix-github-issue]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, fix-github-issue]
 ---
 
 Please analyze and fix the GitHub issue: $ARGUMENTS.

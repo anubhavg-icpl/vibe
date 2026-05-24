@@ -10,13 +10,14 @@ description: |
   inside Gmail's reading view. This skill should not be triggered
   manually — it is invoked by Orbit's daily-digest scheduler against
   live Gmail data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "gmail briefing"
   - "inbox digest"
   - "email summary"
   - "gmail 简报"
   - "邮件摘要"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

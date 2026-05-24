@@ -1,6 +1,7 @@
 ---
 name: nextjs-turbopack
 description: Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

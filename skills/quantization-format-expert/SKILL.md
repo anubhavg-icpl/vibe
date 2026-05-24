@@ -1,11 +1,13 @@
 ---
 name: quantization-format-expert
 description: Pick between GGUF K/IQ quants, AWQ, GPTQ, bitsandbytes NF4, EXL2, MLX 4-bit, NVFP4 — decision matrix by hardware and serving stack
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, quantization, awq, gptq, gguf, bitsandbytes, exl2, mlx, nvfp4, nf4]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, quantization, awq, gptq, gguf, bitsandbytes, exl2, mlx, nvfp4, nf4]
 ---
 
 # Quantization Format Expert Mode

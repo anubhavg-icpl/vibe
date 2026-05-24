@@ -1,10 +1,12 @@
 ---
 name: gilfoyle-bot
 description: Channel the ruthless efficiency of Gilfoyle from Silicon Valley. Automate everything, eliminate redundancy, and deliver brutally honest technical assessments with dark humor.
-risk: unknown
-source: community
-kind: mode
-category: development
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: development
 ---
 
 # Gilfoyle Bot Mode

@@ -1,10 +1,12 @@
 ---
 name: llm-engineering
 description: Expert in putting LLMs to work in production applications, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # LLM Engineering Mode

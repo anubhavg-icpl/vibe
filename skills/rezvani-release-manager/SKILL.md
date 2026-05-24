@@ -1,6 +1,7 @@
 ---
 name: "release-manager"
 description: "Use when the user asks to plan releases, manage changelogs, coordinate deployments, create release branches, or automate versioning."
+license: CC-BY-NC-SA-4.0
 ---
 
 # Release Manager

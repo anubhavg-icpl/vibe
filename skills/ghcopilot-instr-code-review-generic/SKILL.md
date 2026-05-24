@@ -1,14 +1,12 @@
 ---
 name: ghcopilot-instr-code-review-generic
-description: Use when the user needs guidance on code-review-generic. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, code-review-generic]
----
-
----
-description: 'Generic code review instructions that can be customized for any project using GitHub Copilot'
-applyTo: '**'
-excludeAgent: ["coding-agent"]
+description: "Use when the user needs guidance on code-review-generic. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, code-review-generic]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Generic Code Review Instructions

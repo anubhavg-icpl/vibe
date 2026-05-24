@@ -1,11 +1,13 @@
 ---
 name: mythos-opsec-alert-scoring
 description: OPSEC and alert-volume scoring for autonomous offensive AI agents on instrumented eval ranges, modeled on AISI's Elastic Defend deployment
-risk: unknown
-source: community
-kind: mode
-category: agent-eval
-tags: [mythos, ai-eval, frontier-model, ai-safety, opsec, edr, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: agent-eval
+  tags: [mythos, ai-eval, frontier-model, ai-safety, opsec, edr, defensive]
 ---
 
 # Mythos OPSEC Alert Scoring Mode

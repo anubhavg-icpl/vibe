@@ -1,10 +1,12 @@
 ---
 name: infrastructure-and-production
 description: Expert in shipping AI to production at scale — serving, monitoring, optimization, and FinOps, from the AI Engineering from Scratch curriculum
-risk: unknown
-source: community
-kind: mode
-category: ai-engineering
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-engineering
 ---
 
 # Infrastructure & Production Mode

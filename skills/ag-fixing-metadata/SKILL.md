@@ -1,10 +1,11 @@
 ---
 name: fixing-metadata
 description: "Audit and fix HTML metadata including page titles, meta descriptions, canonical URLs, Open Graph tags, Twitter cards, favicons, JSON-LD structured data, and robots directives. Use when adding or reviewing SEO and social metadata."
-risk: safe
-source: community
-version: 1.0.1
 license: MIT
+metadata:
+  risk: safe
+  source: community
+  version: 1.0.1
 ---
 
 ## Workflow

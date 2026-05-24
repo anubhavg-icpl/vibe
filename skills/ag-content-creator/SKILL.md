@@ -1,10 +1,12 @@
 ---
 name: content-creator
 description: "Professional-grade brand voice analysis, SEO optimization, and platform-specific content frameworks."
-category: marketing
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  category: marketing
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Content Creator

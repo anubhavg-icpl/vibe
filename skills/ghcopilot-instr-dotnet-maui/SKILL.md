@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-dotnet-maui
-description: Use when the user needs guidance on dotnet-maui. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, dotnet-maui]
----
-
----
-description: '.NET MAUI component and application patterns'
-applyTo: '**/*.xaml, **/*.cs'
+description: "Use when the user needs guidance on dotnet-maui. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, dotnet-maui]
+  applyTo: "**/*.xaml, **/*.cs"
+  source: "awesome-copilot"
 ---
 
 # .NET MAUI

@@ -1,6 +1,7 @@
 ---
 name: refactor-method-complexity-reduce
 description: 'Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Refactor Method to Reduce Cognitive Complexity

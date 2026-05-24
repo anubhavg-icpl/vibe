@@ -6,7 +6,8 @@ description: |
   same workflow drives Flux, Imagen, or Midjourney via the active
   upstream tooling. Output is one or more PNG/JPEG files saved to the
   project folder.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "poster"
   - "key art"
   - "illustration"
@@ -14,7 +15,7 @@ triggers:
   - "cover art"
   - "海报"
   - "插画"
-od:
+od: 
   mode: image
   surface: image
   scenario: design

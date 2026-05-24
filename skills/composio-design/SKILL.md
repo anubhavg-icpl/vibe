@@ -1,11 +1,13 @@
 ---
 name: composio-design
 description: Expert in the Composio design system - Tool integration platform. Modern dark with colorful integration icons.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, backend]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, backend]
 ---
 
 # Composio Design System Mode

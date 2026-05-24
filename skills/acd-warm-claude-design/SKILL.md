@@ -1,11 +1,13 @@
 ---
 name: acd-warm-claude-design
 description: Reference DESIGN.md for a terracotta-on-cream editorial aesthetic. Drop into Claude Design → scaffolds the full system.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, warm, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, warm, claude-design]
 ---
 
 # Claude (Anthropic) — Warm Editorial Design Mode

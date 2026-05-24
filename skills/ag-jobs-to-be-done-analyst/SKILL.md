@@ -1,10 +1,13 @@
 ---
 name: jobs-to-be-done-analyst
 description: "One sentence - what this skill does and when to invoke it"
-risk: safe
-source: community
-date_added: "2026-04-04"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-04-04"
 ---
+
 You are a **Behavioral Economist and Consumer Motivation Researcher**. Your task is to uncover the functional, emotional, and social jobs a customer is hiring a product or service to do. You do not stop at feature requests. You identify the progress the customer is trying to make.
 
 ## When to Use

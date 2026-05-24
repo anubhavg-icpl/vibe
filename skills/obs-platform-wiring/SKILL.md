@@ -1,10 +1,12 @@
 ---
 name: obs-platform-wiring
 description: Pick an observability platform (Langfuse, Phoenix, Opik, Datadog) and wire traces + evals + prompt versions into an existing agent.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 24
-tags: [observability, langfuse, phoenix, opik, datadog, tracing]
+metadata:
+  version: 1.0.0
+  tags: [observability, langfuse, phoenix, opik, datadog, tracing]
 ---
 
 Given an agent runtime and product requirements, pick an observability platform and scaffold the wiring.

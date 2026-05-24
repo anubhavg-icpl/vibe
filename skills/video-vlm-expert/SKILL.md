@@ -1,11 +1,13 @@
 ---
 name: video-vlm-expert
 description: Video understanding with VLMs - Qwen2.5-VL video, Apollo, LLaVA-OneVision, frame sampling
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, video, vlm, qwen-vl, llava, apollo, video-understanding]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, video, vlm, qwen-vl, llava, apollo, video-understanding]
 ---
 
 # Video VLM Expert Mode

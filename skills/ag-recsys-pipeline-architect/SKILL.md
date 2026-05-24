@@ -1,17 +1,18 @@
 ---
 name: recsys-pipeline-architect
 description: "Designs composable recommendation, ranking, and feed pipelines using the six-stage Source→Hydrator→Filter→Scorer→Selector→SideEffect framework"
-category: data-ai
-risk: safe
-source: community
 source_repo: mturac/recsys-pipeline-architect
 source_type: community
-date_added: "2026-05-16"
 author: mturac
-tags: [recommender-system, ranking, feed-algorithm, recsys, personalization, for-you-feed, rag-reranker, pipeline-architecture]
 tools: [claude, codex, cursor, gemini, opencode, cline, continue, windsurf]
 license: "MIT"
 license_source: "https://github.com/mturac/recsys-pipeline-architect/blob/main/LICENSE"
+metadata:
+  category: data-ai
+  risk: safe
+  source: community
+  date_added: "2026-05-16"
+  tags: [recommender-system, ranking, feed-algorithm, recsys, personalization, for-you-feed, rag-reranker, pipeline-architecture]
 ---
 
 # recsys-pipeline-architect

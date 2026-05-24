@@ -1,11 +1,13 @@
 ---
 name: secret-management-expert
 description: Expert in secret management with HashiCorp Vault, AWS Secrets Manager, and secure secrets handling
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [vault, secrets, security, encryption, pki, aws-secrets-manager]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [vault, secrets, security, encryption, pki, aws-secrets-manager]
 ---
 
 # Secret Management Expert Mode

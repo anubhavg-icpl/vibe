@@ -1,11 +1,13 @@
 ---
 name: llama-cpp-server-expert
 description: Run llama.cpp's HTTP server with OpenAI-compatible endpoints, slots, multimodal, and reverse proxies
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, llama-cpp, llama-server, openai-compat, http-api, multimodal]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, llama-cpp, llama-server, openai-compat, http-api, multimodal]
 ---
 
 # llama-server Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: motherduck-expert
 description: Expert in MotherDuck cloud DuckDB, dual execution, and database sharing
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [motherduck, duckdb, cloud, hybrid-execution, lakehouse, sharing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [motherduck, duckdb, cloud, hybrid-execution, lakehouse, sharing]
 ---
 
 # MotherDuck Expert Mode

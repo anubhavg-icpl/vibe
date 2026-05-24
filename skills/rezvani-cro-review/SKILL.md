@@ -1,6 +1,7 @@
 ---
 name: "cro-review"
 description: "/cs:cro-review <plan> — Pipeline-paranoid interrogation of revenue, win rate, NRR, and ramp time."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:cro-review — CRO Forcing Questions

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-java-21-to-java-25-upgrade
-description: Use when the user needs guidance on java-21-to-java-25-upgrade. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, java-21-to-java-25-upgrade]
----
-
----
-applyTo: ['*']
-description: "Comprehensive best practices for adopting new Java 25 features since the release of Java 21."
+description: "Use when the user needs guidance on java-21-to-java-25-upgrade. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, java-21-to-java-25-upgrade]
+  applyTo: "['*']"
+  source: "awesome-copilot"
 ---
 
 # Java 21 to Java 25 Upgrade Guide

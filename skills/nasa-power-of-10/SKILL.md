@@ -1,8 +1,10 @@
 ---
 name: nasa-power-of-10
 description: Use when writing safety-critical, mission-critical, or high-reliability code that must be statically verifiable. Use when the brief mentions "Power of 10", "NASA coding rules", "JPL rules", "safety-critical C", "mission-critical embedded", or "Holzmann rules".
-version: 1.0.0
-tags: [safety-critical, embedded, c, static-analysis, misra, power-of-10, nasa, jpl]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [safety-critical, embedded, c, static-analysis, misra, power-of-10, nasa, jpl]
 ---
 
 # NASA Power of 10 Rules

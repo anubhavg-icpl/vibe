@@ -1,8 +1,10 @@
 ---
 name: expo-ui-jetpack-compose
 description: expo-ui-jetpack-compose
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 ---

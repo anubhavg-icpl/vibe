@@ -1,5 +1,6 @@
 ---
 description: Interactive wizard to design and validate a chaos engineering experiment
+license: CC-BY-NC-SA-4.0
 ---
 
 # /chaos-experiment

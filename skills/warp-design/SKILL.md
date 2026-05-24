@@ -1,11 +1,13 @@
 ---
 name: warp-design
 description: Expert in the Warp design system - Modern terminal. Dark IDE-like interface, block-based command UI.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, developer-tools]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, developer-tools]
 ---
 
 # Warp Design System Mode

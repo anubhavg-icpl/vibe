@@ -10,7 +10,8 @@ description: >
   separate path can mirror the Astro marketing site in `apps/landing-page/`.
   Drop-in scroll-reveal motion and a
   Headroom-style sticky nav are wired automatically.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - landing page
   - 落地页
   - editorial site
@@ -18,7 +19,7 @@ triggers:
   - hero collage
   - atelier zero
   - open design landing
-od:
+od: 
   category: brand-page
   surface: web
   scenario: marketing
@@ -30,7 +31,7 @@ od:
     requires:
       - pixel-discipline
       - typographic-rhythm
-inputs:
+inputs: 
   - id: brand
     label: Brand identity
     description: Name, mark, tagline, location, languages, license, repo url.
@@ -69,7 +70,7 @@ inputs:
   - id: imagery
     label: Image strategy (generate / placeholder / bring-your-own)
     schema_path: ./schema.ts#ImageryConfig
-parameters:
+parameters: 
   output_format:
     type: enum
     values: [standalone-html, nextjs-app, both]
@@ -93,7 +94,7 @@ parameters:
     values: [fal, azure]
     default: fal
     description: Provider for `image_strategy: generate`. fal.ai is faster.
-outputs:
+outputs: 
   - path: <out>/index.html
     when: output_format in [standalone-html, both]
     description: Self-contained HTML with Atelier Zero CSS inlined.
@@ -102,7 +103,7 @@ outputs:
   - path: <out>/nextjs/
     when: output_format in [nextjs-app, both]
     description: Astro static tree mirroring apps/landing-page (folder name is historical).
-capabilities_required:
+capabilities_required: 
   - file-write
   - http-fetch        # only when image_strategy=generate
   - node-runtime      # tsx or compatible

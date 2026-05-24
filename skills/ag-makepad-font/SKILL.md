@@ -5,8 +5,10 @@ description: |
   makepad font, makepad text, makepad glyph, makepad typography,
   font atlas, text layout, font family, font size, text shaping,
   makepad 字体, makepad 文字, makepad 排版, makepad 字形
-risk: safe
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
 ---
 
 # Makepad Font Skill

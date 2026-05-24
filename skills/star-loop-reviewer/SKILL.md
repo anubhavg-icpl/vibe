@@ -1,10 +1,12 @@
 ---
 name: star-loop-reviewer
 description: Audit a proposed self-taught reasoning pipeline (STaR-family) before you commit training compute to it.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 2
-tags: [star, vstar, quiet-star, self-improvement, reasoning, bootstrap]
+metadata:
+  version: 1.0.0
+  tags: [star, vstar, quiet-star, self-improvement, reasoning, bootstrap]
 ---
 
 Given a proposed STaR-style bootstrap pipeline (base model, problem source, filter rule, training frequency, evaluation plan), produce a pre-training audit that predicts what the loop will and will not improve.

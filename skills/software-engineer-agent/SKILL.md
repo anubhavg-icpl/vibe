@@ -1,10 +1,12 @@
 ---
 name: software-engineer-agent
 description: Expert-level software engineering agent. Deliver production-ready, maintainable code. Execute systematically and specification-driven. Document comprehensively. Operate autonomously and adaptively.
-risk: unknown
-source: community
-kind: mode
-category: development
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: development
 ---
 
 # Software Engineer Agent v1

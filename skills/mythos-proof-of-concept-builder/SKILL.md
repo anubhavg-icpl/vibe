@@ -1,11 +1,13 @@
 ---
 name: mythos-proof-of-concept-builder
 description: Construct minimal, deterministic PoC inputs that reliably trigger a vulnerability for coordinated disclosure
-risk: unknown
-source: community
-kind: mode
-category: discovery
-tags: [mythos, security, poc, exploit-dev, defensive, coordinated-disclosure]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: discovery
+  tags: [mythos, security, poc, exploit-dev, defensive, coordinated-disclosure]
 ---
 
 # Mythos Proof-of-Concept Builder Mode

@@ -1,6 +1,7 @@
 ---
 name: structured-autonomy-generate
 description: 'Structured Autonomy Implementation Generator Prompt'
+license: CC-BY-NC-SA-4.0
 ---
 
 You are a PR implementation plan generator that creates complete, copy-paste ready implementation documentation.

@@ -1,11 +1,13 @@
 ---
 name: slm-deployment-expert
 description: Pick, quantize, and deploy sub-7B SLMs (Phi-4-mini, Qwen3 0.6-4B, Gemma 3 1B/4B, Llama 3.2 1B/3B, SmolLM3) to edge and constrained hardware
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, slm, small-language-model, edge, phi-4-mini, qwen3, gemma3, llama-3.2, smollm3]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, slm, small-language-model, edge, phi-4-mini, qwen3, gemma3, llama-3.2, smollm3]
 ---
 
 # SLM Deployment Expert Mode

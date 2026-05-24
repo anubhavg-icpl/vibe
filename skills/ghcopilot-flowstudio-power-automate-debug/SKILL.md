@@ -9,6 +9,7 @@ description: >-
   fix a broken Power Automate flow, diagnose a timeout, trace a DynamicOperationRequestFailure,
   check connector auth errors, read error details from a run, or troubleshoot
   expression failures. Requires a FlowStudio MCP subscription — see https://mcp.flowstudio.app
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power Automate Debugging with FlowStudio MCP

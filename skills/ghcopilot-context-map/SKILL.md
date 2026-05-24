@@ -1,6 +1,7 @@
 ---
 name: context-map
 description: 'Generate a map of all files relevant to a task before making changes'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Context Map

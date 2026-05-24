@@ -4,18 +4,20 @@ description: >
   Detect, validate, and generate Schema.org structured data. JSON-LD format
   preferred. Use when user says "schema", "structured data", "rich results",
   "JSON-LD", or "markup".
-risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
-date_added: "2026-03-21"
+license: CC-BY-NC-SA-4.0
 user-invokable: true
 argument-hint: "[url]"
-allowed-tools:
+allowed-tools: 
   - Read
   - Grep
   - Glob
   - Bash
   - WebFetch
   - Write
+metadata:
+  risk: unknown
+  source: "https://github.com/AgriciDaniel/claude-seo"
+  date_added: "2026-03-21"
 ---
 
 # Schema Markup Analysis & Generation

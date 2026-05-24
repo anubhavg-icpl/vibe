@@ -1,10 +1,12 @@
 ---
 name: tail-calls-and-map-in-map
 description: tail-calls-and-map-in-map
-risk: unknown
-source: community
-kind: mode
-category: map-types
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: map-types
 ---
 
 # Tail Calls and Map-in-Map

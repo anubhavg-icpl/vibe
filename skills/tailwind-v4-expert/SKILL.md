@@ -1,11 +1,13 @@
 ---
 name: tailwind-v4-expert
 description: Expert in Tailwind CSS v4, the Oxide engine, CSS-first config, and modern utilities
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [tailwind, css, oxide, postcss, design-tokens]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [tailwind, css, oxide, postcss, design-tokens]
 ---
 
 # Tailwind v4 Expert Mode

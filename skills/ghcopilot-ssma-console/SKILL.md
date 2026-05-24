@@ -1,6 +1,7 @@
 ---
 name: ssma-console
 description: "Use when: SSMA console operations — create project, generate assessment report, convert schema, migrate data, Oracle to SQL Server migration, schema conversion, data migration"
+license: CC-BY-NC-SA-4.0
 ---
 
 # SSMA Console — Oracle to SQL Server Migration

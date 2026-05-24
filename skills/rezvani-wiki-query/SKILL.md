@@ -1,6 +1,7 @@
 ---
 name: wiki-query
 description: Query the LLM Wiki — reads index.md first, drills into 3-10 relevant pages, synthesizes an answer with inline [[wikilink]] citations, and offers to file the answer back as a new comparison or synthesis page. Usage /wiki-query "<question>"
+license: CC-BY-NC-SA-4.0
 ---
 
 # /wiki-query

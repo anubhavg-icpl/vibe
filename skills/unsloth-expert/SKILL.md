@@ -1,11 +1,13 @@
 ---
 name: unsloth-expert
 description: Unsloth — 2x faster LLM fine-tuning with 70% less VRAM via fused Triton kernels
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [unsloth, fine-tuning, performance, lora, qlora]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [unsloth, fine-tuning, performance, lora, qlora]
 ---
 
 # Unsloth Expert Mode

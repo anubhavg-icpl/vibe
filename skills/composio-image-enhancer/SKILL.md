@@ -1,6 +1,7 @@
 ---
 name: image-enhancer
 description: Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Image Enhancer

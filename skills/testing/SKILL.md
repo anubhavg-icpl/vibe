@@ -1,10 +1,12 @@
 ---
 name: testing
 description: testing
-risk: unknown
-source: community
-kind: mode
-category: workflows
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: workflows
 ---
 
 # Cross-Kernel Testing

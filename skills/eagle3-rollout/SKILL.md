@@ -1,10 +1,12 @@
 ---
 name: eagle3-rollout
 description: Produce a staged EAGLE-3 speculative-decoding rollout plan that measures acceptance rate alpha on real traffic before shipping.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 05
-tags: [speculative-decoding, eagle-3, vllm, alpha, production-rollout]
+metadata:
+  version: 1.0.0
+  tags: [speculative-decoding, eagle-3, vllm, alpha, production-rollout]
 ---
 
 Given a target model, hardware (GPU type and count), traffic description (general chat / code / specialized), concurrency target, and current baseline metrics (TTFT, ITL, throughput), produce a staged EAGLE-3 rollout plan.

@@ -1,6 +1,7 @@
 ---
 name: suggest-awesome-github-copilot-agents
 description: 'Suggest relevant GitHub Copilot Custom Agents files from the awesome-copilot repository based on current repository context and chat history, avoiding duplicates with existing custom agents in this repository, and identifying outdated agents that need updates.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Suggest Awesome GitHub Copilot Custom Agents

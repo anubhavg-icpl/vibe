@@ -1,11 +1,13 @@
 ---
 name: embedding-fine-tune-expert
 description: Deep expertise in fine-tuning embedding models with sentence-transformers v3+ — SentenceTransformerTrainer, MultipleNegativesRankingLoss, Matryoshka, hard negatives mining
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [embeddings, fine-tuning, sentence-transformers, matryoshka, hard-negatives, mnrl]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [embeddings, fine-tuning, sentence-transformers, matryoshka, hard-negatives, mnrl]
 ---
 
 # Embedding Fine-Tune Expert Mode

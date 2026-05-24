@@ -1,10 +1,12 @@
 ---
 name: js-batch-dom-css
 description: Batch DOM CSS Changes
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Batch DOM CSS Changes

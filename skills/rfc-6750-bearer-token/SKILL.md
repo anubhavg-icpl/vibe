@@ -1,11 +1,13 @@
 ---
 name: rfc-6750-bearer-token
 description: Implementation guide for OAuth 2.0 Bearer Token Usage with multi-tenancy security
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [oauth, bearer-token, authorization, http, multi-tenancy]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [oauth, bearer-token, authorization, http, multi-tenancy]
 ---
 
 # RFC 6750 - Bearer Token Usage

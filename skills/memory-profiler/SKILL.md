@@ -1,10 +1,12 @@
 ---
 name: memory-profiler
 description: Expert in memory profiling, leak detection, and memory optimization across languages
-risk: unknown
-source: community
-kind: mode
-category: debugging
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: debugging
 ---
 
 # Memory Profiler Mode

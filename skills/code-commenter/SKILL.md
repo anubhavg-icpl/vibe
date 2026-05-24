@@ -1,10 +1,12 @@
 ---
 name: code-commenter
 description: code-commenter
-risk: unknown
-source: community
-kind: mode
-category: output-formats
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: output-formats
 ---
 
 # Code Commenter Mode

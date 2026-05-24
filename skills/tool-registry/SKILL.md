@@ -1,10 +1,12 @@
 ---
 name: tool-registry
 description: Build a production tool catalog and registry with JSON Schema validation, parallel dispatch, and observability.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 06
-tags: [function-calling, tools, schema, validation, bfcl, parallel-tools]
+metadata:
+  version: 1.0.0
+  tags: [function-calling, tools, schema, validation, bfcl, parallel-tools]
 ---
 
 Given a task domain, produce a tool catalog that an agent can use reliably across the BFCL V4 axes (agentic, multi-turn, live, non-live, hallucination).

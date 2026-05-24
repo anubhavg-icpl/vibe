@@ -1,6 +1,7 @@
 ---
 name: debian-linux-triage
 description: 'Triage and resolve Debian Linux issues with apt, systemd, and AppArmor-aware guidance.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Debian Linux Triage

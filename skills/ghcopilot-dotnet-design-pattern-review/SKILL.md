@@ -1,6 +1,7 @@
 ---
 name: dotnet-design-pattern-review
 description: 'Review the C#/.NET code for design pattern implementation and suggest improvements.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # .NET/C# Design Pattern Review

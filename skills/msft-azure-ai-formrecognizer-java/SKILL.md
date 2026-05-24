@@ -5,6 +5,7 @@ description: |
   Use for extracting text, tables, key-value pairs from documents, receipts, invoices, IDs, or building custom document models.
   Triggers: "document intelligence java", "form recognizer java", "extract text from PDF java", "OCR document java",
   "analyze invoice receipt java", "custom document model java", "document classification java".
+license: CC-BY-NC-SA-4.0
 ---
 
 # Azure AI Document Intelligence SDK for Java

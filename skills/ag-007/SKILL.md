@@ -1,23 +1,14 @@
 ---
 name: '007'
 description: Security audit, hardening, threat modeling (STRIDE/PASTA), Red/Blue Team, OWASP checks, code review, incident response, and infrastructure security for any project.
-risk: critical
-source: community
-date_added: '2026-03-06'
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- security
-- audit
-- owasp
-- threat-modeling
-- hardening
-- pentest
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: critical
+  source: community
+  date_added: '2026-03-06'
+  tags: 
 ---
 
 # 007 — Licenca para Auditar

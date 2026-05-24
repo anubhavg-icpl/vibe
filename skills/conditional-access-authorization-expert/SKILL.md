@@ -1,11 +1,13 @@
 ---
 name: conditional-access-authorization-expert
 description: Expert in conditional access policies, policy-based authorization, IP/device/role/time-based gates, risk-based access, and deny-by-default middleware across ASP.NET Core, Microsoft Entra, Okta, and OPA
-risk: unknown
-source: community
-kind: mode
-category: security
-tags: [authorization, conditional-access, aspnet-core, entra, okta, opa, rbac, abac, deny-by-default, zero-trust, policy-engine]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: security
+  tags: [authorization, conditional-access, aspnet-core, entra, okta, opa, rbac, abac, deny-by-default, zero-trust, policy-engine]
 ---
 
 # Conditional Access & Authorization Expert Mode

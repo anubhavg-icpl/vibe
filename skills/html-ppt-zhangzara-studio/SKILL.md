@@ -2,7 +2,8 @@
 name: html-ppt-zhangzara-studio
 description: |
   Studio — Black canvas with electric-yellow type; high-voltage design studio aesthetic. Anything that should feel electric and design-led: studio credentials, creative agency pitches, brand showcases, art-direction reviews, fashion / sneaker brand work.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "studio"
   - "zhangzara-studio"
   - "electric"
@@ -14,7 +15,7 @@ triggers:
   - "html deck"
   - "html slides"
   - "zhangzara"
-od:
+od: 
   mode: deck
   scenario: marketing
   upstream: "https://github.com/zarazhangrui/beautiful-html-templates/tree/main/templates/studio"

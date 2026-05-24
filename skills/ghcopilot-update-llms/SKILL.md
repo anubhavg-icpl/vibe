@@ -1,6 +1,7 @@
 ---
 name: update-llms
 description: 'Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at https://llmstxt.org/'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Update LLMs.txt File

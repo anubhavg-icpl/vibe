@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-github-actions-ci-cd-best-practices
-description: Use when the user needs guidance on github-actions-ci-cd-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, github-actions-ci-cd-best-practices]
----
-
----
-applyTo: '.github/workflows/*.yml,.github/workflows/*.yaml'
-description: 'Comprehensive guide for building robust, secure, and efficient CI/CD pipelines using GitHub Actions. Covers workflow structure, jobs, steps, environment variables, secret management, caching, matrix strategies, testing, and deployment strategies.'
+description: "Comprehensive guide for building robust, secure, and efficient CI/CD pipelines using GitHub Actions. Covers workflow structure, jobs, steps, environment variables, secret management, caching, matrix strategies, testing, and deployment strategies."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, github-actions-ci-cd-best-practices]
+  applyTo: ".github/workflows/*.yml,.github/workflows/*.yaml"
+  source: "awesome-copilot"
 ---
 
 # GitHub Actions CI/CD Best Practices

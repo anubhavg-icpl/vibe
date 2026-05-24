@@ -1,10 +1,12 @@
 ---
 name: asr-picker
 description: Pick ASR model, decoding strategy, chunking, and LM fusion for a given deployment target.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 04
-tags: [audio, asr, speech-recognition]
+metadata:
+  version: 1.0.0
+  tags: [audio, asr, speech-recognition]
 ---
 
 Given a deployment target (language list, domain, latency budget, hardware, offline / streaming, clip duration), output:

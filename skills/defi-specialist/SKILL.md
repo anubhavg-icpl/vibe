@@ -1,10 +1,12 @@
 ---
 name: defi-specialist
 description: defi-specialist
-risk: unknown
-source: community
-kind: mode
-category: blockchain
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: blockchain
 ---
 
 # DeFi Specialist Mode

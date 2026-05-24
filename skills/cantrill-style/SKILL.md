@@ -1,11 +1,13 @@
 ---
 name: cantrill-style
 description: Bryan Cantrill — DTrace, illumos, Oxide; observability over logging, Rust for systems, toolmaking as craft
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, systems, rust, observability, dtrace, oxide, illumos]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, systems, rust, observability, dtrace, oxide, illumos]
 ---
 
 # Bryan Cantrill Style Mode

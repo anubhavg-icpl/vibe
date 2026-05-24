@@ -1,10 +1,12 @@
 ---
 name: load-test-plan
 description: Design a realistic LLM load test — pick tool (LLMPerf, k6, GenAI-Perf, guidellm), build four patterns (steady, ramp, spike, soak), and gate in CI.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 22
-tags: [load-testing, llmperf, k6, genai-perf, guidellm, llm-locust, ci-gate]
+metadata:
+  version: 1.0.0
+  tags: [load-testing, llmperf, k6, genai-perf, guidellm, llm-locust, ci-gate]
 ---
 
 Given workload (endpoint, SLA for TTFT/TPOT/error), target scale (concurrency, RPS), and CI posture (PR gate or release-only), produce a load test plan.

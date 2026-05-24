@@ -1,10 +1,12 @@
 ---
 name: onevision-budget-planner
 description: Allocate LLaVA-OneVision-style unified visual-token budgets across single-image, multi-image, and video scenarios for a target product mix.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 12
 lesson: 08
-tags: [llava-onevision, token-budget, curriculum, multi-image, video]
+metadata:
+  version: 1.0.0
+  tags: [llava-onevision, token-budget, curriculum, multi-image, video]
 ---
 
 Given a product's expected task distribution — percentages of single-image, multi-image, and video requests — and a per-sample visual-token budget, emit a per-scenario allocation plan and a training curriculum.

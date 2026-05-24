@@ -1,22 +1,23 @@
 ---
 name: kubestellar-console
 description: "Multi-cluster Kubernetes dashboard with AI-powered operations via MCP server and 10+ built-in agent skills"
-category: devops
-risk: critical
-source: community
 source_repo: kubestellar/console
 source_type: community
-date_added: "2026-04-27"
 author: kubestellar
-tags: [kubernetes, multi-cluster, mcp, dashboard, cncf, devops, observability]
 tools: [claude, cursor, gemini, codex]
 license: "Apache-2.0"
 license_source: "https://github.com/kubestellar/console/blob/main/LICENSE"
-plugin:
+plugin: 
   setup:
     type: manual
     summary: "Requires kc-agent binary (brew tap kubestellar/tap && brew install kc-agent)"
     docs: "https://github.com/kubestellar/console#quick-start"
+metadata:
+  category: devops
+  risk: critical
+  source: community
+  date_added: "2026-04-27"
+  tags: [kubernetes, multi-cluster, mcp, dashboard, cncf, devops, observability]
 ---
 
 # KubeStellar Console

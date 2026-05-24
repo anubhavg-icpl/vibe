@@ -9,6 +9,7 @@ description: >-
   (Pro+), or `flowstudio-power-automate-governance` (Pro+) — each contains the workflow
   narrative, this skill provides the plumbing they all rely on. Requires a
   FlowStudio MCP subscription or compatible server — see https://mcp.flowstudio.app
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power Automate via FlowStudio MCP — Foundation

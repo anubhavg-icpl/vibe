@@ -1,11 +1,13 @@
 ---
 name: expressive-design
 description: Expert in the Expressive design system - Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, bold]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, bold]
 ---
 
 # Expressive Design System Mode

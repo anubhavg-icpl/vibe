@@ -1,6 +1,7 @@
 ---
 name: react19-source-patterns
 description: 'Reference for React 19 source-file migration patterns, including API changes, ref handling, and context updates.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # React 19 Source Migration Patterns

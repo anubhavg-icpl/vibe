@@ -1,10 +1,12 @@
 ---
 name: diagram-generator
 description: Expert in generating technical diagrams with Mermaid, PlantUML, and D2
-risk: unknown
-source: community
-kind: mode
-category: output-formats
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: output-formats
 ---
 
 # Diagram Generator Mode

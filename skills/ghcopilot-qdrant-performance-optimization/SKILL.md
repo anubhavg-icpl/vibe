@@ -1,12 +1,12 @@
 ---
 name: qdrant-performance-optimization
 description: "Different techniques to optimize the performance of Qdrant, including indexing strategies, query optimization, and hardware considerations. Use when you want to improve the speed and efficiency of your Qdrant deployment."
-allowed-tools:
+license: CC-BY-NC-SA-4.0
+allowed-tools: 
   - Read
   - Grep
   - Glob
 ---
-
 
 # Qdrant Performance Optimization
 

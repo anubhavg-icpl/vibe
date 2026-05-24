@@ -1,11 +1,13 @@
 ---
 name: llama-cpp-expert
 description: Build, run, and tune llama.cpp for local LLM inference across CUDA, ROCm, Metal, Vulkan, and SYCL
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, llama-cpp, ggml, gguf, quantization, inference]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, llama-cpp, ggml, gguf, quantization, inference]
 ---
 
 # llama.cpp Expert Mode

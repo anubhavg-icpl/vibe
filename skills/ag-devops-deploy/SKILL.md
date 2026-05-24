@@ -1,23 +1,14 @@
 ---
 name: devops-deploy
 description: "DevOps e deploy de aplicacoes — Docker, CI/CD com GitHub Actions, AWS Lambda, SAM, Terraform, infraestrutura como codigo e monitoramento."
-risk: critical
-source: community
-date_added: '2026-03-06'
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- devops
-- docker
-- ci-cd
-- aws
-- terraform
-- github-actions
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: critical
+  source: community
+  date_added: '2026-03-06'
+  tags: 
 ---
 
 # DEVOPS-DEPLOY — Da Ideia para Producao

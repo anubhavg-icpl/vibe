@@ -1,11 +1,13 @@
 ---
 name: rfc-7662-introspection
 description: Token validation endpoint for resource servers and admin panels
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [oauth, introspection, token-validation, admin-panel, multi-tenancy]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [oauth, introspection, token-validation, admin-panel, multi-tenancy]
 ---
 
 # RFC 7662 - OAuth 2.0 Token Introspection

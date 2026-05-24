@@ -1,6 +1,7 @@
 ---
 name: power-bi-report-design-consultation
 description: 'Power BI report visualization design prompt for creating effective, user-friendly, and accessible reports with optimal chart selection and layout design.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Power BI Report Visualization Designer

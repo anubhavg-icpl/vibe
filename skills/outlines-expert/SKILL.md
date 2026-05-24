@@ -1,11 +1,13 @@
 ---
 name: outlines-expert
 description: Guarantee structured LLM outputs with regex, JSON schema, and grammar-constrained generation
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [outlines, constrained-generation, json-schema, regex, grammar, fsm, python]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [outlines, constrained-generation, json-schema, regex, grammar, fsm, python]
 ---
 
 # Outlines Expert Mode

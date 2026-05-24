@@ -4,7 +4,8 @@ description: |
   A standalone pricing page — header, plan tiers, feature comparison table,
   and an FAQ. Use when the brief asks for "pricing", "plans",
   "subscription tiers", or a "compare plans" page.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "pricing"
   - "pricing page"
   - "plans"
@@ -12,7 +13,7 @@ triggers:
   - "compare plans"
   - "定价"
   - "套餐"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: sales

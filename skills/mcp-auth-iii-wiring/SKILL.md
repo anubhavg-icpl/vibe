@@ -1,10 +1,12 @@
 ---
 name: mcp-auth-iii-wiring
 description: Wire production MCP authorization (RFC 8414, 7591, 8707, 7636 PKCE, 9728) onto iii primitives — registerTrigger for HTTP/cron, registerFunction for validation, state::* for JWKS cache.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 13
 lesson: 18
-tags: [mcp, oauth, dcr, jwks, iii, rfc8414, rfc7591, rfc8707, rfc7636, rfc9728]
+metadata:
+  version: 1.0.0
+  tags: [mcp, oauth, dcr, jwks, iii, rfc8414, rfc7591, rfc8707, rfc7636, rfc9728]
 ---
 
 Given an MCP server config and an IdP capability set, emit the iii primitives and refusal rules that constitute the production auth surface.

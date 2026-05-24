@@ -1,21 +1,14 @@
 ---
 name: leiloeiro-risco
 description: Analise de risco em leiloes de imoveis. Score 36 pontos, riscos juridicos/financeiros/operacionais, stress test 4 cenarios e ROI ponderado por risco.
-risk: safe
-source: community
-date_added: '2026-03-06'
+license: CC-BY-NC-SA-4.0
 author: renat
-tags:
-- risk-analysis
-- scoring
-- stress-test
-- brazilian
-tools:
-- claude-code
-- antigravity
-- cursor
-- gemini-cli
-- codex-cli
+tools: 
+metadata:
+  risk: safe
+  source: community
+  date_added: '2026-03-06'
+  tags: 
 ---
 
 # SKILL DE RISCO — AUDITOR DE RISCO EM LEILÕES

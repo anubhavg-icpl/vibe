@@ -1,11 +1,13 @@
 ---
 name: simpo-expert
 description: Simple Preference Optimization — reference-free, length-normalized preference alignment
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, simpo, preference-optimization, alignment]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, simpo, preference-optimization, alignment]
 ---
 
 # SimPO Expert Mode

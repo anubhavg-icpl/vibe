@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-joyride-user-project
-description: Use when the user needs guidance on joyride-user-project. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, joyride-user-project]
----
-
----
-description: 'Expert assistance for Joyride User Script projects - REPL-driven ClojureScript and user space automation of VS Code'
-applyTo: '**'
+description: "Use when the user needs guidance on joyride-user-project. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, joyride-user-project]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Joyride User Scripts Project Assistant

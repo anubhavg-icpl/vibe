@@ -1,11 +1,13 @@
 ---
 name: mythos-ctf-vs-range-framing
 description: Decide when CTFs measure the right thing vs when chained-autonomy ranges do — failure-mode taxonomy and capability-portfolio guidance
-risk: unknown
-source: community
-kind: mode
-category: eval-design
-tags: [mythos, ai-eval, eval-design, ctf, range, capability-portfolio, defensive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: eval-design
+  tags: [mythos, ai-eval, eval-design, ctf, range, capability-portfolio, defensive]
 ---
 
 # Mythos CTF vs Range Framing Mode

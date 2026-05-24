@@ -1,6 +1,7 @@
 ---
 name: "prompt-optimizer"
 description: Turn any rough prompt, half-formed idea, or task description into a finished, ready-to-send prompt optimized for any LLM model inside a chat interface — NOT the API. Use this skill whenever the user wants to write, rewrite, optimize, improve, sharpen, or polish a prompt for chat. Trigger phrases include "rewrite this prompt", "make this a better prompt", "optimize this prompt", "turn this into a prompt", "help me prompt this", "draft a prompt that...", "I want to ask...", or whenever the user pastes a draft prompt and asks for improvements. Also trigger when the user describes a task they plan to send to an LLM model and clearly wants a reusable, well-structured prompt rather than a direct answer. The output is always a single, copy-pasteable prompt in a code block that the user sends as-is — never a template with placeholders.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Prompt Optimizer

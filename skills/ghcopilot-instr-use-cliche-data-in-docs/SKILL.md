@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-use-cliche-data-in-docs
-description: Use when the user needs guidance on use-cliche-data-in-docs. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, use-cliche-data-in-docs]
----
-
----
-description: 'Ensure documentation and examples use only generic, cliche placeholder data — never real or sensitive data sourced from local scripts, configuration, task files, or prompt context.'
-applyTo: '**/*.{md,js,mjs,cjs,ts,tsx,jsx,py,json}'
+description: "Ensure documentation and examples use only generic, cliche placeholder data — never real or sensitive data sourced from local scripts, configuration, task files, or prompt context."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, use-cliche-data-in-docs]
+  applyTo: "**/*.{md,js,mjs,cjs,ts,tsx,jsx,py,json}"
+  source: "awesome-copilot"
 ---
 
 # Use Cliche Data in Documentation

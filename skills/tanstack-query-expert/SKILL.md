@@ -1,11 +1,13 @@
 ---
 name: tanstack-query-expert
 description: Expert in TanStack Query v5 (React Query) — server state, mutations, suspense, infinite queries
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [tanstack-query, react-query, data-fetching, caching, react, server-state]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [tanstack-query, react-query, data-fetching, caching, react, server-state]
 ---
 
 # TanStack Query Expert Mode

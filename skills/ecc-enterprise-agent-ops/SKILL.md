@@ -1,6 +1,7 @@
 ---
 name: enterprise-agent-ops
 description: Operate long-lived agent workloads with observability, security boundaries, and lifecycle management.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

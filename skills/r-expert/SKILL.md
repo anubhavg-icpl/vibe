@@ -1,11 +1,13 @@
 ---
 name: r-expert
 description: Expert R development for statistical computing, data science, and visualization
-risk: unknown
-source: community
-kind: mode
-category: languages
-tags: [r, statistics, data-science, tidyverse, visualization, ggplot2]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
+  tags: [r, statistics, data-science, tidyverse, visualization, ggplot2]
 ---
 
 # R Expert Mode

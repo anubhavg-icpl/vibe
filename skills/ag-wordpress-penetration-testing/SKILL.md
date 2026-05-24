@@ -1,10 +1,12 @@
 ---
 name: wordpress-penetration-testing
 description: "Assess WordPress installations for common vulnerabilities and WordPress 7.0 attack surfaces."
-risk: offensive
-source: community
+license: CC-BY-NC-SA-4.0
 author: zebbern
-date_added: "2026-02-27"
+metadata:
+  risk: offensive
+  source: community
+  date_added: "2026-02-27"
 ---
 
 > AUTHORIZED USE ONLY: Use this skill only for authorized security assessments, defensive validation, or controlled educational environments.

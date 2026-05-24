@@ -1,11 +1,13 @@
 ---
 name: platform-engineering
 description: Expert in Platform Engineering and Internal Developer Platforms (IDPs)
-risk: unknown
-source: community
-kind: mode
-category: devops
-tags: [platform-engineering, idp, developer-experience, backstage, crossplane]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: devops
+  tags: [platform-engineering, idp, developer-experience, backstage, crossplane]
 ---
 
 # Platform Engineering Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: rich-hickey-style
 description: Rich Hickey — Clojure, "Simple Made Easy," immutability, hammock-driven design, decomplecting
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, clojure, functional, immutability, design-thinking, lisp]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, clojure, functional, immutability, design-thinking, lisp]
 ---
 
 # Rich Hickey Style Mode

@@ -1,6 +1,7 @@
 ---
 name: playwright-automation-fill-in-form
 description: 'Automate filling in a form using Playwright MCP'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Automating Filling in a Form with Playwright MCP

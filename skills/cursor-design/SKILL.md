@@ -1,11 +1,13 @@
 ---
 name: cursor-design
 description: Expert in the Cursor design system - AI-first code editor. Sleek dark interface, gradient accents.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, developer-tools]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, developer-tools]
 ---
 
 # Cursor Design System Mode

@@ -1,10 +1,12 @@
 ---
 name: aws-solutions-architect
 description: aws-solutions-architect
-risk: unknown
-source: community
-kind: mode
-category: cloud-infrastructure
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: cloud-infrastructure
 ---
 
 # AWS Solutions Architect Mode

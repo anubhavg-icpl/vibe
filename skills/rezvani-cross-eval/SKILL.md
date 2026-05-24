@@ -1,6 +1,7 @@
 ---
 name: "cross-eval"
 description: "/cs:cross-eval <memo> — Multi-model consensus on a board memo or strategy brief. Claude + Codex + Gemini cross-review with graceful degradation."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /cs:cross-eval — Multi-Model Consensus

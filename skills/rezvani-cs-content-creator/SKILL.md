@@ -1,6 +1,7 @@
 ---
 name: cs-content-creator
 description: AI-powered content creation specialist for brand voice consistency, SEO optimization, and multi-platform content strategy
+license: CC-BY-NC-SA-4.0
 skills: marketing-skill/content-creator
 domain: marketing
 model: sonnet

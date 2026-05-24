@@ -1,11 +1,13 @@
 ---
 name: langfuse-expert
 description: Self-hostable open-source LLM observability with tracing, scoring, datasets, and prompt management
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, llmops, observability, langfuse, opentelemetry, tracing]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, llmops, observability, langfuse, opentelemetry, tracing]
 ---
 
 # Langfuse Expert Mode

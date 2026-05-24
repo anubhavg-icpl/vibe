@@ -1,6 +1,7 @@
 ---
 name: django-tdd
 description: Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

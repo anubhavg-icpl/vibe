@@ -1,6 +1,7 @@
 ---
 name: nestjs-patterns
 description: NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

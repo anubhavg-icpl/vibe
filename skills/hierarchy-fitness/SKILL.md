@@ -1,10 +1,12 @@
 ---
 name: hierarchy-fitness
 description: Decide whether a multi-agent task fits hierarchical, flat supervisor, or sequential. Surface the failure modes that matter.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 06
-tags: [multi-agent, hierarchy, crewai, langgraph, decomposition-drift]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, hierarchy, crewai, langgraph, decomposition-drift]
 ---
 
 Given a task description and an optional org structure, recommend the coordination pattern (flat supervisor, hierarchical, sequential) and list the specific failure modes to guard against.

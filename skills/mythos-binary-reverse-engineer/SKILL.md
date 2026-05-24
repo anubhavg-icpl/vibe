@@ -1,11 +1,13 @@
 ---
 name: mythos-binary-reverse-engineer
 description: Black-box binary analysis with Ghidra/IDA/Binary Ninja for in-scope closed-source targets
-risk: unknown
-source: community
-kind: mode
-category: offense
-tags: [mythos, red-team, defensive-purpose, reverse-engineering, ghidra, ida, binary-ninja, sre]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: offense
+  tags: [mythos, red-team, defensive-purpose, reverse-engineering, ghidra, ida, binary-ninja, sre]
 ---
 
 # Mythos Binary Reverse Engineer Mode

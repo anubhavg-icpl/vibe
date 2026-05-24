@@ -1,7 +1,8 @@
 ---
 name: Docker Hub Automation
 description: "Automate Docker Hub operations -- manage organizations, repositories, teams, members, and webhooks via the Composio MCP integration."
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

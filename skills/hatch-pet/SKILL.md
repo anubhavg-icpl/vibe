@@ -1,7 +1,8 @@
 ---
 name: hatch-pet
 description: Create, repair, validate, preview, and package Codex-compatible animated pet spritesheets from character art, screenshots, generated images, or visual references. Use when a user wants to hatch a Codex pet, create a custom animated pet, or build a built-in pet asset with an 8x9 atlas, transparent unused cells, row-by-row animation prompts, QA contact sheets, preview videos, and pet.json packaging. This skill composes the installed $imagegen system skill for visual generation and uses bundled scripts for deterministic spritesheet assembly.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "hatch a pet"
   - "hatch pet"
   - "codex pet"
@@ -9,7 +10,7 @@ triggers:
   - "animated pet"
   - "孵化宠物"
   - "电子宠物"
-od:
+od: 
   mode: image
   surface: image
   scenario: personal

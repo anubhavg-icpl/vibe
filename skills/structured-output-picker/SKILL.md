@@ -1,10 +1,12 @@
 ---
 name: structured-output-picker
 description: Choose a structured output approach, schema design, and validation plan.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 5
 lesson: 20
-tags: [nlp, llm, structured-output]
+metadata:
+  version: 1.0.0
+  tags: [nlp, llm, structured-output]
 ---
 
 Given a use case (provider, latency budget, schema complexity, failure tolerance), output:

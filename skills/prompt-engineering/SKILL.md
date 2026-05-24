@@ -1,6 +1,7 @@
 ---
 name: prompt-engineering
 description: Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design
+license: CC-BY-NC-SA-4.0
 ---
 
 # Prompt Engineering

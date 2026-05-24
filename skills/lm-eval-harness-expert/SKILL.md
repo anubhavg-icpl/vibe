@@ -1,11 +1,13 @@
 ---
 name: lm-eval-harness-expert
 description: EleutherAI lm-evaluation-harness — MMLU, ARC, HellaSwag, GSM8K, IFEval, BBH benchmarks
-risk: unknown
-source: community
-kind: mode
-category: llm-eval-ops
-tags: [llm-eval, lm-eval-harness, benchmarks, mmlu, gsm8k, ifeval, bbh]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-eval-ops
+  tags: [llm-eval, lm-eval-harness, benchmarks, mmlu, gsm8k, ifeval, bbh]
 ---
 
 # LM Eval Harness Expert Mode

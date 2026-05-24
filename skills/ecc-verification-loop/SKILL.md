@@ -1,6 +1,7 @@
 ---
 name: verification-loop
 description: "A comprehensive verification system for Claude Code sessions."
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

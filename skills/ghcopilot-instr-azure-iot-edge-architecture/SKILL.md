@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-azure-iot-edge-architecture
-description: Use when the user needs guidance on azure-iot-edge-architecture. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, azure-iot-edge-architecture]
----
-
----
-description: 'Require Azure IoT Edge documentation review before proposing edge IoT architectures or Azure implementation guidance.'
-applyTo: '**/*.bicep,**/*.tf,**/*iot*.md,**/*smart-city*.md,**/*edge*.md'
+description: "Use when the user needs guidance on azure-iot-edge-architecture. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, azure-iot-edge-architecture]
+  applyTo: "**/*.bicep,**/*.tf,**/*iot*.md,**/*smart-city*.md,**/*edge*.md"
+  source: "awesome-copilot"
 ---
 
 ## Azure IoT Edge Architecture Instruction

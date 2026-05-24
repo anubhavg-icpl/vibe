@@ -1,10 +1,12 @@
 ---
 name: skill-library
 description: Generate a Voyager-shaped skill library with registration, retrieval by similarity, compositional execution, and failure-driven refinement.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 14
 lesson: 10
-tags: [voyager, skills, library, composition, refinement]
+metadata:
+  version: 1.0.0
+  tags: [voyager, skills, library, composition, refinement]
 ---
 
 Given a target runtime and a domain, produce a skill library that supports Voyager's three components: curriculum hook, retrievable skill store, iterative refinement.

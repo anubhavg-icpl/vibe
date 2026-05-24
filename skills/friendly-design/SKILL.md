@@ -1,11 +1,13 @@
 ---
 name: friendly-design
 description: Expert in the Friendly design system - Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Friendly Design System Mode

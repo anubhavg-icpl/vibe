@@ -1,11 +1,13 @@
 ---
 name: python-coding-standards
 description: Production-ready Python coding standards enforcing PEP 8, type hints, modern patterns, and maintainability
-risk: unknown
-source: community
-kind: mode
-category: coding-standards
-tags: [python, coding-standards, pep8, mypy, ruff, type-hints]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: coding-standards
+  tags: [python, coding-standards, pep8, mypy, ruff, type-hints]
 ---
 
 # Python Coding Standards Mode

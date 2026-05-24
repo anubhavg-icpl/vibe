@@ -9,13 +9,14 @@ description: |
   that mirrors GitHub's native Notifications + PR-diff visual language.
   This skill should not be triggered manually — it is invoked by
   Orbit's daily-digest scheduler against live GitHub data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "github briefing"
   - "github digest"
   - "pr digest"
   - "github 简报"
   - "代码活动汇总"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

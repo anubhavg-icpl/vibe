@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-lwc
-description: Use when the user needs guidance on lwc. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, lwc]
----
-
----
-description: 'Guidelines and best practices for developing Lightning Web Components (LWC) on Salesforce Platform.'
-applyTo: 'force-app/main/default/lwc/**'
+description: "Use when the user needs guidance on lwc. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, lwc]
+  applyTo: "force-app/main/default/lwc/**"
+  source: "awesome-copilot"
 ---
 
 # LWC Development

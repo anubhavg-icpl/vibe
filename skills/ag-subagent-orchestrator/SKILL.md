@@ -1,11 +1,13 @@
 ---
 name: subagent-orchestrator
-risk: safe
-source: community
 description: Coordinate quota-aware parallel subagents for large, multi-file Antigravity tasks.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 author: community
-tags: [subagents, orchestration, quota, parallel, multi-agent]
+metadata:
+  risk: safe
+  source: community
+  version: 1.0.0
+  tags: [subagents, orchestration, quota, parallel, multi-agent]
 ---
 
 # Subagent Orchestrator

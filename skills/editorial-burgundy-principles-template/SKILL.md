@@ -4,13 +4,14 @@ description: |
   Editorial studio deck template in burgundy / blush / muted-gold palette.
   Use when users ask for premium manifesto or culture slides with pill tags,
   large typographic statements, principle cards, and guided keyboard/click navigation.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "editorial burgundy template"
   - "studio salon deck"
   - "principles manifesto slides"
   - "pink burgundy premium presentation"
   - "酒红粉金编辑风模板"
-od:
+od: 
   mode: template
   surface: video
   type: hyperframes

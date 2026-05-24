@@ -1,11 +1,13 @@
 ---
 name: torvalds-style
 description: Linus Torvalds — taste, no special cases, brutal directness, "talk is cheap, show me the code
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, kernel, c, taste, blunt, systems]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, kernel, c, taste, blunt, systems]
 ---
 
 # Linus Torvalds Style Mode

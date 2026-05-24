@@ -1,6 +1,7 @@
 ---
 name: saas-health
 description: Calculate SaaS health metrics (ARR, MRR, churn, CAC, LTV, NRR) and benchmark against industry standards. Usage: /saas-health <metrics|quick-ratio|simulate> [options]
+license: CC-BY-NC-SA-4.0
 ---
 
 # /saas-health

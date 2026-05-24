@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-context-engineering
-description: Use when the user needs guidance on context-engineering. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, context-engineering]
----
-
----
-description: 'Guidelines for structuring code and projects to maximize GitHub Copilot effectiveness through better context management'
-applyTo: '**'
+description: "Use when the user needs guidance on context-engineering. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, context-engineering]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Context Engineering

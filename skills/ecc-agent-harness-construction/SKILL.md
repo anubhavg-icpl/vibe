@@ -1,6 +1,7 @@
 ---
 name: agent-harness-construction
 description: Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

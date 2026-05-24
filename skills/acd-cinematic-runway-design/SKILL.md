@@ -1,11 +1,13 @@
 ---
 name: acd-cinematic-runway-design
 description: Reference DESIGN.md for film-grade dark UI, oversized type, motion-forward hero sections.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, cinematic, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, cinematic, claude-design]
 ---
 
 # RunwayML — Cinematic Dark Design Mode

@@ -1,11 +1,13 @@
 ---
 name: sft-expert
 description: Supervised fine-tuning fundamentals — chat templates, packing, completion-only loss, NEFTune
-risk: unknown
-source: community
-kind: mode
-category: llm-training
-tags: [fine-tuning, sft, training, instruction-tuning]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: llm-training
+  tags: [fine-tuning, sft, training, instruction-tuning]
 ---
 
 # SFT Expert Mode

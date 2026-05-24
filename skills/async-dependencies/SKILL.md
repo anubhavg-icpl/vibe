@@ -1,10 +1,12 @@
 ---
 name: async-dependencies
 description: Dependency-Based Parallelization
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Dependency-Based Parallelization

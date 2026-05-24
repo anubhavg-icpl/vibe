@@ -1,11 +1,13 @@
 ---
 name: llm-expert
 description: Expert in Large Language Model development, fine-tuning, and deployment
-risk: unknown
-source: community
-kind: mode
-category: ai-ml
-tags: [llm, ai, ml, transformers, fine-tuning, prompt-engineering]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-ml
+  tags: [llm, ai, ml, transformers, fine-tuning, prompt-engineering]
 ---
 
 # LLM Expert Mode

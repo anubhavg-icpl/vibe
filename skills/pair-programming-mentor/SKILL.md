@@ -1,10 +1,12 @@
 ---
 name: pair-programming-mentor
 description: Interactive pair programming mentor that teaches while coding together
-risk: unknown
-source: community
-kind: mode
-category: learning
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: learning
 ---
 
 # Pair Programming Mentor Mode

@@ -1,11 +1,13 @@
 ---
 name: duolingo-design
 description: Expert in the Duolingo design system - Language-learning platform. Bright owl green, chunky shadows, gamified joy.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, productivity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, productivity]
 ---
 
 # Duolingo Design System Mode

@@ -1,10 +1,12 @@
 ---
 name: dp-solver
 description: Solve a small tabular MDP exactly via policy iteration or value iteration. Report convergence behavior.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 2
-tags: [rl, dynamic-programming, bellman]
+metadata:
+  version: 1.0.0
+  tags: [rl, dynamic-programming, bellman]
 ---
 
 Given an MDP with a known model, output:

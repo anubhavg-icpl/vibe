@@ -1,10 +1,12 @@
 ---
 name: topology-picker
 description: Pick a multi-agent debate topology (star / chain / tree / graph), an N of agents, a heterogeneity profile, and a round bound for a given task.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 15
-tags: [multi-agent, debate, topology, voting, self-consistency]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, debate, topology, voting, self-consistency]
 ---
 
 Given a task description, recommend a multi-agent topology and sizing.

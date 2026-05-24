@@ -1,11 +1,13 @@
 ---
 name: inngest-agent-kit-expert
 description: Build durable, observable multi-agent networks in TypeScript with Inngest AgentKit
-risk: unknown
-source: community
-kind: mode
-category: ai-frameworks
-tags: [inngest, agent-kit, durable, multi-agent, typescript, networks, mcp]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-frameworks
+  tags: [inngest, agent-kit, durable, multi-agent, typescript, networks, mcp]
 ---
 
 # Inngest Agent Kit Expert Mode

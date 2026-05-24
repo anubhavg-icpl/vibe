@@ -1,10 +1,12 @@
 ---
 name: network
 description: network
-risk: unknown
-source: community
-kind: mode
-category: program-types
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: program-types
 ---
 
 # Network Program Types

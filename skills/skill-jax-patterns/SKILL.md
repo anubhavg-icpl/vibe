@@ -1,10 +1,12 @@
 ---
 name: skill-jax-patterns
 description: Functional programming patterns in JAX -- when and how to use grad, jit, vmap, and pmap
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 3
 lesson: 12
-tags: [jax, functional-programming, autodiff, compilation, vectorization]
+metadata:
+  version: 1.0.0
+  tags: [jax, functional-programming, autodiff, compilation, vectorization]
 ---
 
 # JAX Functional Patterns

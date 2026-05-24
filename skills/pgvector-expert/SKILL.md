@@ -1,11 +1,13 @@
 ---
 name: pgvector-expert
 description: Deep expertise in pgvector 0.8+ for PostgreSQL — HNSW/IVFFlat tuning, halfvec/sparsevec, hybrid search with tsvector + RRF, and pgvectorscale (DiskANN)
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [vector-db, pgvector, postgres, hnsw, ivfflat, hybrid-search, pgvectorscale, diskann]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [vector-db, pgvector, postgres, hnsw, ivfflat, hybrid-search, pgvectorscale, diskann]
 ---
 
 # pgvector Expert Mode

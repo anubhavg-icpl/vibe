@@ -1,6 +1,7 @@
 ---
 name: "board"
 description: "Read, write, and browse the AgentHub message board for agent coordination."
+license: CC-BY-NC-SA-4.0
 command: /hub:board
 ---
 

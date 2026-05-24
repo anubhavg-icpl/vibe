@@ -1,6 +1,7 @@
 ---
 name: todo
 description: Manage project todos in todos.md file
+license: CC-BY-NC-SA-4.0
 ---
 
 # Project Todo Manager

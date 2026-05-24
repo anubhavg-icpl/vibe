@@ -1,10 +1,12 @@
 ---
 name: observability-stack
 description: Pick an LLM observability stack (development platform + gateway + optional scale layer) given stack, scale, budget, and license posture, and define the OpenTelemetry GenAI attribute set.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 13
-tags: [observability, langfuse, langsmith, phoenix, arize, helicone, opik, opentelemetry, genai-conventions]
+metadata:
+  version: 1.0.0
+  tags: [observability, langfuse, langsmith, phoenix, arize, helicone, opik, opentelemetry, genai-conventions]
 ---
 
 Given stack (LangChain / DSPy / raw SDK), scale (traces/day), budget, license posture (MIT-only vs commercial OK), and self-host requirement, produce an observability plan.

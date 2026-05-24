@@ -1,6 +1,7 @@
 ---
 name: "extract"
 description: "Turn a proven pattern or debugging solution into a standalone reusable skill with SKILL.md, reference docs, and examples."
+license: CC-BY-NC-SA-4.0
 ---
 
 # /si:extract — Create Skills from Patterns

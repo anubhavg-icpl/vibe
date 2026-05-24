@@ -1,11 +1,13 @@
 ---
 name: glassmorphism-design
 description: Expert in the Glassmorphism design system - Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, morphism]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, morphism]
 ---
 
 # Glassmorphism Design System Mode

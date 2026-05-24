@@ -1,10 +1,12 @@
 ---
 name: training-budget-estimator
 description: Estimate (N, D, hours, GPU count) for a new transformer training run given compute budget and deployment constraints.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 13
-tags: [scaling-laws, training, chinchilla]
+metadata:
+  version: 1.0.0
+  tags: [scaling-laws, training, chinchilla]
 ---
 
 Given a training objective (target loss / target MMLU / target downstream metric), compute budget (dollars or FLOPs), inference volume (tokens/month), and constraints (target device, memory, latency), output:

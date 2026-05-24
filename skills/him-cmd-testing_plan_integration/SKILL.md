@@ -1,8 +1,10 @@
 ---
 name: him-cmd-testing_plan_integration
 description: Use when the user asks to run the /testing_plan_integration slash command. Community-contributed Claude Code command from the awesome-claude-code collection.
-version: 1.0.0
-tags: [slash-command, community, testing_plan_integration]
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: 1.0.0
+  tags: [slash-command, community, testing_plan_integration]
 ---
 
 I need you to create an integration testing plan for $ARGUMENTS

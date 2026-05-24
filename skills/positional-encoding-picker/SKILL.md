@@ -1,10 +1,12 @@
 ---
 name: positional-encoding-picker
 description: Pick positional encoding (RoPE, ALiBi, sinusoidal) + scaling strategy given context length and training budget.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 7
 lesson: 4
-tags: [transformers, positional-encoding, rope, alibi]
+metadata:
+  version: 1.0.0
+  tags: [transformers, positional-encoding, rope, alibi]
 ---
 
 Given a transformer spec (target context length at inference, trained context length, extrapolation requirement, fine-tune budget in tokens), output:

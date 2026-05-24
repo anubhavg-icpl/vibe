@@ -1,11 +1,13 @@
 ---
 name: muratori-style
 description: Casey Muratori — Handmade Hero, anti-OOP-by-default, data-oriented design, "clean code, horrible performance
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, performance, data-oriented-design, c, anti-oop, game-development]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, performance, data-oriented-design, c, anti-oop, game-development]
 ---
 
 # Casey Muratori Style Mode

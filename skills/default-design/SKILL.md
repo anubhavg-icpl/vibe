@@ -1,11 +1,13 @@
 ---
 name: default-design
 description: Expert in the Neutral Modern design system - A clean, product-oriented default. Use when the brief doesn't call for a
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, starter]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, starter]
 ---
 
 # Neutral Modern Design System Mode

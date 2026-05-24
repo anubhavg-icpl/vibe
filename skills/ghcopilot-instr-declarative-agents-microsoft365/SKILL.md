@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-declarative-agents-microsoft365
-description: Use when the user needs guidance on declarative-agents-microsoft365. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, declarative-agents-microsoft365]
----
-
----
-description: Comprehensive development guidelines for Microsoft 365 Copilot declarative agents with schema v1.5, TypeSpec integration, and Microsoft 365 Agents Toolkit workflows
-applyTo: "**.json, **.ts, **.tsp, **manifest.json, **agent.json, **declarative-agent.json"
+description: "Comprehensive development guidelines for Microsoft 365 Copilot declarative agents with schema v1.5, TypeSpec integration, and Microsoft 365 Agents Toolkit workflows"
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, declarative-agents-microsoft365]
+  applyTo: "**.json, **.ts, **.tsp, **manifest.json, **agent.json, **declarative-agent.json"
+  source: "awesome-copilot"
 ---
 
 # Microsoft 365 Declarative Agents Development Guidelines

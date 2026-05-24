@@ -6,12 +6,13 @@ description: |
   "make it professional" by requiring explicit dimensions: palette, typography,
   layout, mood, density, and constraints.
   Trigger keywords: "design brief", "create a design brief", "ilang brief", "structured brief".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "design brief"
   - "create a design brief"
   - "ilang brief"
   - "structured brief"
-od:
+od: 
   mode: design-system
   platform: desktop
   scenario: planning

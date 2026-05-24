@@ -12,14 +12,15 @@ description: |
   This skill should not be triggered manually — it is invoked by
   Orbit's daily-digest scheduler against the user's live connector
   data.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "orbit"
   - "daily digest"
   - "morning briefing"
   - "早安简报"
   - "每日简报"
   - "跨工具汇总"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: orbit

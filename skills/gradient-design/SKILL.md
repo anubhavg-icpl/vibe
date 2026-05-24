@@ -1,11 +1,13 @@
 ---
 name: gradient-design
 description: Expert in the Gradient design system - Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, morphism]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, morphism]
 ---
 
 # Gradient Design System Mode

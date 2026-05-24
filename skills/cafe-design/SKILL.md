@@ -1,11 +1,13 @@
 ---
 name: cafe-design
 description: Expert in the Cafe design system - Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, creative]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, creative]
 ---
 
 # Cafe Design System Mode

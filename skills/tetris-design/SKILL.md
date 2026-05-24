@@ -1,11 +1,13 @@
 ---
 name: tetris-design
 description: Expert in the Tetris design system - Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, themed]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, themed]
 ---
 
 # Tetris Design System Mode

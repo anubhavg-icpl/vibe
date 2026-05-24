@@ -1,9 +1,11 @@
 ---
 name: error-debugging-multi-agent-review
 description: "Use when working with error debugging multi agent review"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Multi-Agent Code Review Orchestration Tool

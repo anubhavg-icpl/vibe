@@ -7,7 +7,8 @@ description: |
   ribbon, bottom tab bar. Use when the brief asks for a "gamified app",
   "habit tracker", "RPG-style life app", "level-up app", "daily quests",
   "XP / streak app", or "ELI5-style explainer app".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "gamified app"
   - "habit tracker"
   - "rpg app"
@@ -18,7 +19,7 @@ triggers:
   - "life management app"
   - "游戏化"
   - "习惯打卡"
-od:
+od: 
   mode: prototype
   platform: mobile
   scenario: personal

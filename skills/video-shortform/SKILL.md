@@ -7,14 +7,15 @@ description: |
   saved to the project folder. When the workspace also ships an
   interactive-video / hyperframes skill, prefer composing several short
   shots into a single timeline rather than one long monolithic clip.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "video"
   - "clip"
   - "shortform"
   - "reel"
   - "短视频"
   - "动效"
-od:
+od: 
   mode: video
   surface: video
   scenario: marketing

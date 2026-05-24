@@ -1,11 +1,13 @@
 ---
 name: dramatic-design
 description: Expert in the Dramatic design system - High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, bold]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, bold]
 ---
 
 # Dramatic Design System Mode

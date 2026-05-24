@@ -1,11 +1,13 @@
 ---
 name: polars-expert
 description: Expert in Polars lazy frames, expressions, and the streaming engine
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [polars, dataframe, rust, python, lazy, streaming, arrow]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [polars, dataframe, rust, python, lazy, streaming, arrow]
 ---
 
 # Polars Expert Mode

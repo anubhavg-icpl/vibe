@@ -1,6 +1,7 @@
 ---
 name: az-cost-optimize
 description: 'Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations.'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Azure Cost Optimize

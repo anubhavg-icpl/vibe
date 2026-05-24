@@ -1,10 +1,12 @@
 ---
 name: flutter-developer
 description: flutter-developer
-risk: unknown
-source: community
-kind: mode
-category: mobile
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: mobile
 ---
 
 # Flutter Developer Mode

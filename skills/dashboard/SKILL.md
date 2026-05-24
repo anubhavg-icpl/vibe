@@ -5,14 +5,15 @@ description: |
   top bar with user/search, main grid of KPI cards and one or two charts.
   Use when the brief asks for a "dashboard", "admin", "analytics", or
   "control panel" screen.
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "dashboard"
   - "admin panel"
   - "analytics"
   - "control panel"
   - "后台"
   - "管理后台"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: operations

@@ -1,11 +1,13 @@
 ---
 name: simple-design
 description: Expert in the Simple design system - Straightforward, no-frills design with clean typography, neutral colors, and intuitive layouts that stay out of the way.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, modern]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, modern]
 ---
 
 # Simple Design System Mode

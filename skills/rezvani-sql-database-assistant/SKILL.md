@@ -1,6 +1,7 @@
 ---
 name: "sql-database-assistant"
 description: "Use when the user asks to write SQL queries, optimize database performance, generate migrations, explore database schemas, or work with ORMs like Prisma, Drizzle, TypeORM, or SQLAlchemy."
+license: CC-BY-NC-SA-4.0
 ---
 
 # SQL Database Assistant - POWERFUL Tier Skill

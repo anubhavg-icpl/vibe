@@ -1,11 +1,13 @@
 ---
 name: steve-yegge-style
 description: Steve Yegge — long-form essays, generalist polyglot, "Execution in the Kingdom of Nouns," language design opinions
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, essays, polyglot, language-design, opinionated, long-form]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, essays, polyglot, language-design, opinionated, long-form]
 ---
 
 # Steve Yegge Style Mode

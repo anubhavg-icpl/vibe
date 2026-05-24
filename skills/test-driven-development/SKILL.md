@@ -1,6 +1,7 @@
 ---
 name: test-driven-development
 description: Use when implementing any feature or bugfix, before writing implementation code
+license: CC-BY-NC-SA-4.0
 ---
 
 # Test-Driven Development (TDD)

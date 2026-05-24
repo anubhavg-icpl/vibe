@@ -1,10 +1,12 @@
 ---
 name: tech-blog-writer
 description: Expert in writing engaging, informative technical blog posts and articles
-risk: unknown
-source: community
-kind: mode
-category: creative
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: creative
 ---
 
 # Tech Blog Writer Mode

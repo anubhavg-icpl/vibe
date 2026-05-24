@@ -1,6 +1,7 @@
 ---
 name: strategic-compact
 description: Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

@@ -1,7 +1,8 @@
 ---
 name: html-ppt-presenter-mode
 description: 演讲者模式专用 deck — tokyo-night 默认主题，5 套主题 T 键切换，每页带 150-300 字逐字稿示例（<aside class="notes">），按 S 打开 popup（CURRENT / NEXT / SCRIPT / TIMER 四张磁吸卡片）。用于技术分享、公开演讲、课程讲解，怕忘词或要提词器的场景。
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "presenter mode"
   - "演讲者模式"
   - "逐字稿"
@@ -9,7 +10,7 @@ triggers:
   - "提词器"
   - "presenter view"
   - "演讲"
-od:
+od: 
   mode: deck
   scenario: engineering
   featured: 26
@@ -23,6 +24,7 @@ od:
   animations: true
   example_prompt: "用 html-ppt-presenter-mode 模板做一份带逐字稿的演讲 PPT。先确认：演讲主题、时长（每页 2-3 分钟）、目标听众。然后帮我每页写 150-300 字的口语化逐字稿（不是讲稿，是提示信号），按 S 能打开 presenter 弹窗。"
 ---
+
 # HTML PPT · Presenter Mode (演讲者模式)
 
 A focused entry point into the [`html-ppt`](../html-ppt/SKILL.md) master skill that lands the user directly on the **`presenter-mode-reveal`** full-deck template.

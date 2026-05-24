@@ -1,9 +1,11 @@
 ---
 name: billing-automation
 description: "Master automated billing systems including recurring billing, invoice generation, dunning management, proration, and tax calculation."
-risk: safe
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: safe
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Billing Automation

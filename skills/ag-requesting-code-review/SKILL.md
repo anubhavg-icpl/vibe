@@ -1,9 +1,11 @@
 ---
 name: requesting-code-review
 description: "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
-risk: unknown
-source: community
-date_added: "2026-02-27"
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: "2026-02-27"
 ---
 
 # Requesting Code Review

@@ -1,6 +1,7 @@
 ---
 name: data-engineering
 description: Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation
+license: CC-BY-NC-SA-4.0
 ---
 
 # Data Engineering

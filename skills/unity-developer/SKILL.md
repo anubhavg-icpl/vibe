@@ -1,10 +1,12 @@
 ---
 name: unity-developer
 description: unity-developer
-risk: unknown
-source: community
-kind: mode
-category: game-development
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: game-development
 ---
 
 # Unity Developer Mode

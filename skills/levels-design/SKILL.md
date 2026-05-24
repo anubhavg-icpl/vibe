@@ -1,11 +1,13 @@
 ---
 name: levels-design
 description: Expert in the Levels design system - Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, layout]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, layout]
 ---
 
 # Levels Design System Mode

@@ -4,6 +4,7 @@ description: >-
   Sync tests with TestRail. Use when user mentions "testrail", "test management",
   "test cases", "test run", "sync test cases", "push results to testrail",
   or "import from testrail".
+license: CC-BY-NC-SA-4.0
 ---
 
 # TestRail Integration

@@ -1,10 +1,12 @@
 ---
 name: skill-regression
 description: Choose the right regression approach based on data characteristics and problem constraints
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 2
 lesson: 2
-tags: [regression, linear-regression, polynomial-regression, ridge, regularization]
+metadata:
+  version: 1.0.0
+  tags: [regression, linear-regression, polynomial-regression, ridge, regularization]
 ---
 
 # Regression Strategy Guide

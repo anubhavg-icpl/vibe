@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-pcf-tooling
-description: Use when the user needs guidance on pcf-tooling. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, pcf-tooling]
----
-
----
-description: 'Get Microsoft Power Platform CLI tooling for Power Apps Component Framework'
-applyTo: '**/*.{ts,tsx,js,json,xml,pcfproj,csproj}'
+description: "Use when the user needs guidance on pcf-tooling. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, pcf-tooling]
+  applyTo: "**/*.{ts,tsx,js,json,xml,pcfproj,csproj}"
+  source: "awesome-copilot"
 ---
 
 # Get Tooling for Power Apps Component Framework

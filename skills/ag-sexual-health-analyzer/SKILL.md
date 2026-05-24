@@ -1,8 +1,10 @@
 ---
 name: sexual-health-analyzer
 description: Sexual Health Analyzer
-risk: unknown
-source: community
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
 ---
 
 # 性健康分析技能

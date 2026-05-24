@@ -1,10 +1,12 @@
 ---
 name: rendering-content-visibility
 description: CSS content-visibility for Long Lists
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## CSS content-visibility for Long Lists

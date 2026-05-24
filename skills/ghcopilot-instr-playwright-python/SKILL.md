@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-playwright-python
-description: Use when the user needs guidance on playwright-python. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, playwright-python]
----
-
----
-description: 'Playwright Python AI test generation instructions based on official documentation.'
-applyTo: '**'
+description: "Use when the user needs guidance on playwright-python. GitHub Copilot instruction from the awesome-copilot collection."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, playwright-python]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Playwright Python Test Generation Instructions

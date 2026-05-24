@@ -1,11 +1,13 @@
 ---
 name: api-gateway-expert
 description: Expert in API Gateway design and implementation with Kong, AWS API Gateway, and Apigee
-risk: unknown
-source: community
-kind: mode
-category: infrastructure
-tags: [api-gateway, kong, aws, apigee, rate-limiting, authentication, microservices]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: infrastructure
+  tags: [api-gateway, kong, aws, apigee, rate-limiting, authentication, microservices]
 ---
 
 # API Gateway Expert Mode

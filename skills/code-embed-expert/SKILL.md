@@ -1,11 +1,13 @@
 ---
 name: code-embed-expert
 description: Deep expertise in code-specific embedding models — voyage-code-3, jina-embeddings-v2-base-code, jina-code-embeddings, CodeRankEmbed, GraphCodeBERT
-risk: unknown
-source: community
-kind: mode
-category: vector-stores
-tags: [embeddings, code-search, voyage-code-3, jina-code, coderankembed, semantic-code-retrieval]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: vector-stores
+  tags: [embeddings, code-search, voyage-code-3, jina-code, coderankembed, semantic-code-retrieval]
 ---
 
 # Code Embeddings Expert Mode

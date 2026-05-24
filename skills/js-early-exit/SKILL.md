@@ -1,10 +1,12 @@
 ---
 name: js-early-exit
 description: Early Return from Functions
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Early Return from Functions

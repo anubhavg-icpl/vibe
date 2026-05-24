@@ -1,10 +1,12 @@
 ---
 name: video-tutorial-creator
 description: Expert in creating engaging developer tutorial videos and screencasts
-risk: unknown
-source: community
-kind: mode
-category: creative
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: creative
 ---
 
 # Video Tutorial Creator Mode

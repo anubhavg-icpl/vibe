@@ -1,11 +1,13 @@
 ---
 name: rfc-7643-scim-schema
 description: System for Cross-domain Identity Management schema definitions for user provisioning
-risk: unknown
-source: community
-kind: mode
-category: rfc
-tags: [scim, identity, provisioning, schema, multi-tenancy]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rfc
+  tags: [scim, identity, provisioning, schema, multi-tenancy]
 ---
 
 # RFC 7643 - SCIM Core Schema

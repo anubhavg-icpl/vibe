@@ -1,10 +1,12 @@
 ---
 name: swarm-optimizer
 description: Choose between PSO, ACO, genetic algorithms, and gradient-based optimizers for a given LLM or agent optimization problem. Bio-inspired swarm algorithms are gradient-free and suit LLM-era workloads where the search space is discrete or the fitness function is black-box.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 16
 lesson: 19
-tags: [multi-agent, swarm-optimization, PSO, ACO, prompt-optimization, routing]
+metadata:
+  version: 1.0.0
+  tags: [multi-agent, swarm-optimization, PSO, ACO, prompt-optimization, routing]
 ---
 
 Given an LLM or agent optimization problem, choose the right optimizer.

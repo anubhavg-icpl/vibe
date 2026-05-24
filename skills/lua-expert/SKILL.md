@@ -1,11 +1,13 @@
 ---
 name: lua-expert
 description: Expert Lua development for scripting, game development, and embedded systems
-risk: unknown
-source: community
-kind: mode
-category: languages
-tags: [lua, scripting, games, embedded, neovim, love2d]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: languages
+  tags: [lua, scripting, games, embedded, neovim, love2d]
 ---
 
 # Lua Expert Mode

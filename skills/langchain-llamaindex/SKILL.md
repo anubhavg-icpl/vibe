@@ -1,11 +1,13 @@
 ---
 name: langchain-llamaindex
 description: Expert in LangChain and LlamaIndex for building LLM-powered applications
-risk: unknown
-source: community
-kind: mode
-category: ai-ml
-tags: [langchain, llamaindex, llm, rag, agents, embeddings, vector-stores]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: ai-ml
+  tags: [langchain, llamaindex, llm, rag, agents, embeddings, vector-stores]
 ---
 
 # LangChain & LlamaIndex Expert Mode

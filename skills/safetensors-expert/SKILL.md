@@ -1,11 +1,13 @@
 ---
 name: safetensors-expert
 description: Author and inspect safetensors files — header layout, sharding via model.safetensors.index.json, mmap loading, and PEFT adapter format
-risk: unknown
-source: community
-kind: mode
-category: model-authoring
-tags: [model-authoring, safetensors, sharding, peft, mmap, security, huggingface]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: model-authoring
+  tags: [model-authoring, safetensors, sharding, peft, mmap, security, huggingface]
 ---
 
 # Safetensors Expert Mode

@@ -1,11 +1,13 @@
 ---
 name: structured-rag-expert
 description: RAG over structured data — text-to-SQL with retrieval, semantic layer, table-augmented generation
-risk: unknown
-source: community
-kind: mode
-category: rag-advanced
-tags: [rag, structured-data, text-to-sql, vanna, semantic-layer, llamaindex]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rag-advanced
+  tags: [rag, structured-data, text-to-sql, vanna, semantic-layer, llamaindex]
 ---
 
 # Structured RAG Expert Mode

@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-caveman-mode
-description: Use when the user needs guidance on caveman-mode. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, caveman-mode]
----
-
----
-applyTo: '**'
-description: 'Terse, low-token responses. Minimal words, no fluff. Full capabilities preserved. Use when: optimize token usage, low-token mode, concise output, caveman mode, reduce verbosity, token-efficient, brief responses.'
+description: "Terse, low-token responses. Minimal words, no fluff. Full capabilities preserved. Use when: optimize token usage, low-token mode, concise output, caveman mode, reduce verbosity, token-efficient, brief responses."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, caveman-mode]
+  applyTo: "**"
+  source: "awesome-copilot"
 ---
 
 # Caveman Mode

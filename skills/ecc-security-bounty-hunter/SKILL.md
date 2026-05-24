@@ -1,8 +1,10 @@
 ---
 name: security-bounty-hunter
 description: Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings.
+license: CC-BY-NC-SA-4.0
 origin: ECC direct-port adaptation
-version: "1.0.0"
+metadata:
+  version: "1.0.0"
 ---
 
 # Security Bounty Hunter

@@ -1,11 +1,13 @@
 ---
 name: coinbase-design
 description: Expert in the Coinbase design system - Crypto exchange. Clean blue identity, trust-focused, institutional feel.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, fintech]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, fintech]
 ---
 
 # Coinbase Design System Mode

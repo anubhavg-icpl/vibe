@@ -1,11 +1,13 @@
 ---
 name: elegant-design
 description: Expert in the Elegant design system - Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, professional]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, professional]
 ---
 
 # Elegant Design System Mode

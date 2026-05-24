@@ -1,10 +1,12 @@
 ---
 name: performance-testing
 description: performance-testing
-risk: unknown
-source: community
-kind: mode
-category: testing
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: testing
 ---
 
 # Performance Testing Mode

@@ -1,6 +1,7 @@
 ---
 name: typescript-mcp-server-generator
 description: 'Generate a complete MCP server project in TypeScript with tools, resources, and proper configuration'
+license: CC-BY-NC-SA-4.0
 ---
 
 # Generate TypeScript MCP Server

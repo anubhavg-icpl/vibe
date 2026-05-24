@@ -1,11 +1,13 @@
 ---
 name: runwayml-design
 description: Expert in the Runway design system - AI video generation. Cinematic dark UI, media-rich layout.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, ai]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, ai]
 ---
 
 # Runway Design System Mode

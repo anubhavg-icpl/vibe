@@ -1,6 +1,7 @@
 ---
 name: continuous-agent-loop
 description: Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.
+license: CC-BY-NC-SA-4.0
 origin: ECC
 ---
 

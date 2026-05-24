@@ -1,11 +1,13 @@
 ---
 name: acd-editorial-linear-design
 description: Reference DESIGN.md for calm-neutral SaaS with one surgical purple accent.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, editorial, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, editorial, claude-design]
 ---
 
 # Linear — Editorial Minimalism Design Mode

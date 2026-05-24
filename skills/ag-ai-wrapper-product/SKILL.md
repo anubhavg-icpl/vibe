@@ -3,9 +3,11 @@ name: ai-wrapper-product
 description: Expert in building products that wrap AI APIs (OpenAI, Anthropic,
   etc. ) into focused tools people will pay for. Not just "ChatGPT but
   different" - products that solve specific problems with AI.
-risk: unknown
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: vibeship-spawner-skills (Apache 2.0)
+  date_added: 2026-02-27
 ---
 
 # AI Wrapper Product

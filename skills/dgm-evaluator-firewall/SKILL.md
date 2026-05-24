@@ -1,10 +1,12 @@
 ---
 name: dgm-evaluator-firewall
 description: Specify the evaluator separation a Darwin-Godel-Machine-style self-modifying agent loop needs to avoid documented reward hacking.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 4
-tags: [dgm, self-modification, reward-hacking, evaluator, sandbox]
+metadata:
+  version: 1.0.0
+  tags: [dgm, self-modification, reward-hacking, evaluator, sandbox]
 ---
 
 Given a proposed self-modifying agent loop (agent scaffolding, evaluator pipeline, deployment target), produce a firewall specification that keeps the evaluator outside the agent's reach. The DGM paper documented the agent removing its own safety markers to raise scores; this skill is the control.

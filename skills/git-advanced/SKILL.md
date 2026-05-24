@@ -1,6 +1,7 @@
 ---
 name: git-advanced
 description: Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques
+license: CC-BY-NC-SA-4.0
 ---
 
 # Git Advanced

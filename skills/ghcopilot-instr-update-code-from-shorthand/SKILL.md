@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-update-code-from-shorthand
-description: Use when the user needs guidance on update-code-from-shorthand. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, update-code-from-shorthand]
----
-
----
 description: "Shorthand code will be in the file provided from the prompt or raw data in the prompt, and will be used to update the code file when the prompt has the text `UPDATE CODE FROM SHORTHAND`."
-applyTo: "**/${input:file}"
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, update-code-from-shorthand]
+  applyTo: "**/${input:file}"
+  source: "awesome-copilot"
 ---
 
 # Update Code from Shorthand

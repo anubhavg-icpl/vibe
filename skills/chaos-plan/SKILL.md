@@ -1,10 +1,12 @@
 ---
 name: chaos-plan
 description: Design an LLM chaos engineering plan — verify prerequisites, build four planes, pick tool, start with three safe experiments, enforce safety-plane gates.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 24
-tags: [chaos-engineering, litmuschaos, chaosmesh, harness, llm-chaos, game-day]
+metadata:
+  version: 1.0.0
+  tags: [chaos-engineering, litmuschaos, chaosmesh, harness, llm-chaos, game-day]
 ---
 
 Given stack (Kubernetes / VMs / managed), SLI/SLO maturity, observability quality, and team on-call maturity, produce a chaos plan.

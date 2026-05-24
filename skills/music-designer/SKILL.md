@@ -1,10 +1,12 @@
 ---
 name: music-designer
 description: Pick a music-generation model, license strategy, length plan, and disclosure metadata for a deployment.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 09
-tags: [music-generation, musicgen, stable-audio, suno, licensing]
+metadata:
+  version: 1.0.0
+  tags: [music-generation, musicgen, stable-audio, suno, licensing]
 ---
 
 Given the brief (instrumental vs song, length, commercial vs research, genre, budget), output:

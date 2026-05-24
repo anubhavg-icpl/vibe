@@ -1,10 +1,12 @@
 ---
 name: devops-cicd-automation
 description: DevOps and CI/CD automation specialist - Infrastructure as code, container orchestration, deployment pipelines, monitoring, and cloud platform optimization.
-risk: unknown
-source: community
-kind: mode
-category: specialized
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: specialized
 ---
 
 # DevOps & CI/CD Automation Mode

@@ -1,11 +1,13 @@
 ---
 name: mastercard-design
 description: Expert in the Mastercard design system - Global payments network. Warm cream canvas, orbital pill shapes, editorial warmth.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, fintech]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, fintech]
 ---
 
 # Mastercard Design System Mode

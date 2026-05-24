@@ -1,11 +1,13 @@
 ---
 name: carmack-style
 description: John Carmack — performance-first, inline what's called once, minimize "area under ifs," pure functions where possible
-risk: unknown
-source: community
-kind: mode
-category: engineer-personas
-tags: [persona, performance, low-level, c, game-engine, simplicity]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: engineer-personas
+  tags: [persona, performance, low-level, c, game-engine, simplicity]
 ---
 
 # John Carmack Style Mode

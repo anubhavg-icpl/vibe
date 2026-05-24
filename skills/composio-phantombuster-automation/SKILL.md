@@ -1,7 +1,8 @@
 ---
 name: PhantomBuster Automation
 description: "Automate lead generation, web scraping, and social media data extraction workflows through PhantomBuster's cloud platform via Composio"
-requires:
+license: CC-BY-NC-SA-4.0
+requires: 
   mcp:
     - rube
 ---

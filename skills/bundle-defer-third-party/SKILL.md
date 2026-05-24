@@ -1,10 +1,12 @@
 ---
 name: bundle-defer-third-party
 description: Defer Non-Critical Third-Party Libraries
-risk: unknown
-source: community
-kind: mode
-category: rules
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: rules
 ---
 
 ## Defer Non-Critical Third-Party Libraries

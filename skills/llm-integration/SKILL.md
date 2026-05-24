@@ -1,6 +1,7 @@
 ---
 name: llm-integration
 description: LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization
+license: CC-BY-NC-SA-4.0
 ---
 
 # LLM Integration

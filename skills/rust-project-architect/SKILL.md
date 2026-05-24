@@ -1,10 +1,12 @@
 ---
 name: rust-project-architect
 description: Production-ready Rust project structure architect - validates and scaffolds enterprise-grade Cargo workspaces with best practices
-risk: unknown
-source: community
-kind: mode
-category: project-structure
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: project-structure
 ---
 
 # 🦀 Rust Project Architect Mode

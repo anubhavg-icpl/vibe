@@ -1,9 +1,11 @@
 ---
 name: azure-resource-manager-sql-dotnet
 description: Azure Resource Manager SDK for Azure SQL in .NET.
-risk: unknown
-source: community
-date_added: '2026-02-27'
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  date_added: '2026-02-27'
 ---
 
 # Azure.ResourceManager.Sql (.NET)

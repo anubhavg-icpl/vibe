@@ -1,11 +1,13 @@
 ---
 name: local-rag-stack-expert
 description: Build end-to-end local RAG with Chroma/LanceDB/Qdrant + nomic-embed/bge-m3/FastEmbed + llama-cpp-server or Ollama, all in Docker Compose
-risk: unknown
-source: community
-kind: mode
-category: local-llm
-tags: [local-llm, rag, chroma, lancedb, qdrant, fastembed, nomic-embed, bge-m3, docker-compose]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: local-llm
+  tags: [local-llm, rag, chroma, lancedb, qdrant, fastembed, nomic-embed, bge-m3, docker-compose]
 ---
 
 # Local RAG Stack Expert Mode

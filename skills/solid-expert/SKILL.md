@@ -1,11 +1,13 @@
 ---
 name: solid-expert
 description: Expert in SolidJS signals, fine-grained reactivity, stores, and SolidStart
-risk: unknown
-source: community
-kind: mode
-category: modern-web
-tags: [solidjs, signals, reactivity, frontend, jsx]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: modern-web
+  tags: [solidjs, signals, reactivity, frontend, jsx]
 ---
 
 # SolidJS Expert Mode

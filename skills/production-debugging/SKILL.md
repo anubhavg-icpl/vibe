@@ -1,10 +1,12 @@
 ---
 name: production-debugging
 description: Expert in debugging production issues with minimal impact
-risk: unknown
-source: community
-kind: mode
-category: debugging
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: debugging
 ---
 
 # Production Debugging Expert Mode

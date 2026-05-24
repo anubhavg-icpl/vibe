@@ -1,11 +1,13 @@
 ---
 name: graphql-expert
 description: Expert in GraphQL API design, schema definition, resolvers, performance optimization, and best practices
-risk: unknown
-source: community
-kind: mode
-category: backend
-tags: [graphql, api, backend, schema, resolvers, apollo]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: backend
+  tags: [graphql, api, backend, schema, resolvers, apollo]
 ---
 
 # GraphQL Expert Mode

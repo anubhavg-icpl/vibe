@@ -1,6 +1,7 @@
 ---
 name: lead-research-assistant
 description: Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business development, and marketing professionals.
+license: CC-BY-NC-SA-4.0
 ---
 
 # Lead Research Assistant

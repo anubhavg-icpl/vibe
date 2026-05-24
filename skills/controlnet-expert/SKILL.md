@@ -1,11 +1,13 @@
 ---
 name: controlnet-expert
 description: ControlNet variants - canny, depth, openpose, lineart, tile, inpaint - and multi-controlnet stacking
-risk: unknown
-source: community
-kind: mode
-category: multimodal-ai
-tags: [multimodal, image-gen, controlnet, conditioning, diffusion]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: multimodal-ai
+  tags: [multimodal, image-gen, controlnet, conditioning, diffusion]
 ---
 
 # ControlNet Expert Mode

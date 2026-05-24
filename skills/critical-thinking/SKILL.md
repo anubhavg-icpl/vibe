@@ -1,10 +1,12 @@
 ---
 name: critical-thinking
 description: Challenge assumptions and encourage critical thinking to ensure the best possible solution and outcomes.
-risk: unknown
-source: community
-kind: mode
-category: analysis
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: analysis
 ---
 
 # Critical thinking mode instructions

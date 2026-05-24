@@ -1,11 +1,13 @@
 ---
 name: ray-expert
 description: Expert in Ray remote, actors, Ray Data, Ray Serve, and Ray Tune
-risk: unknown
-source: community
-kind: mode
-category: data-platforms
-tags: [ray, distributed, python, actors, ray-data, ray-serve, ray-tune, ml]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: data-platforms
+  tags: [ray, distributed, python, actors, ray-data, ray-serve, ray-tune, ml]
 ---
 
 # Ray Expert Mode

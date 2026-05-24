@@ -1,10 +1,12 @@
 ---
 name: bounded-loop-review
 description: Audit a proposed bounded self-improvement loop against the four-primitive stack (invariants, anchor, multi-objective, regression detection).
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 15
 lesson: 8
-tags: [bounded-self-improvement, invariants, alignment-anchor, rsi-safety]
+metadata:
+  version: 1.0.0
+  tags: [bounded-self-improvement, invariants, alignment-anchor, rsi-safety]
 ---
 
 Given a proposed self-improvement loop, score it against the four bounding primitives identified by the ICLR 2026 RSI Workshop and produce a concrete gap analysis.

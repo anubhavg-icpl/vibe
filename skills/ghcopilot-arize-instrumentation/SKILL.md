@@ -1,10 +1,11 @@
 ---
 name: arize-instrumentation
 description: Adds Arize AX tracing to an LLM application for the first time. Follows a two-phase agent-assisted flow to analyze the codebase then implement instrumentation after user confirmation. Use when the user wants to instrument their app, add tracing from scratch, set up LLM observability, integrate OpenTelemetry or openinference, or get started with Arize tracing.
+license: CC-BY-NC-SA-4.0
+compatibility: Python and TypeScript/JavaScript apps use openinference-instrumentation packages for auto-instrumentation. Java and Go apps use the OpenTelemetry SDK with manual OpenInference spans. See https://arize.com/docs/PROMPT.md for setup details.
 metadata:
   author: arize
   version: "1.0"
-compatibility: Python and TypeScript/JavaScript apps use openinference-instrumentation packages for auto-instrumentation. Java and Go apps use the OpenTelemetry SDK with manual OpenInference spans. See https://arize.com/docs/PROMPT.md for setup details.
 ---
 
 # Arize Instrumentation Skill

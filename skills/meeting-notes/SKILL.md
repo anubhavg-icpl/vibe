@@ -5,13 +5,14 @@ description: |
   block, action items table with owners + dates, and a "next meeting" footer.
   Use when the brief mentions "meeting notes", "minutes", "1:1 notes",
   "all-hands recap", or "会议纪要".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "meeting notes"
   - "minutes"
   - "1:1 notes"
   - "all-hands recap"
   - "会议纪要"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: operations

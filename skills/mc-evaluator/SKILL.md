@@ -1,10 +1,12 @@
 ---
 name: mc-evaluator
 description: Evaluate a policy via Monte Carlo rollouts and produce a convergence report with DP-comparison if available.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 9
 lesson: 3
-tags: [rl, monte-carlo, evaluation]
+metadata:
+  version: 1.0.0
+  tags: [rl, monte-carlo, evaluation]
 ---
 
 Given an environment (episodic, with reset+step API) and a policy, output:

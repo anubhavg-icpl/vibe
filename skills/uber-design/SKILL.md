@@ -1,11 +1,13 @@
 ---
 name: uber-design
 description: Expert in the Uber design system - Mobility platform. Bold black and white, tight type, urban energy.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, media]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, media]
 ---
 
 # Uber Design System Mode

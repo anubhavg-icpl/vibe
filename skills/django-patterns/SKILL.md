@@ -1,6 +1,7 @@
 ---
 name: django-patterns
 description: Django architecture patterns including DRF, ORM optimization, signals, middleware, and project structure
+license: CC-BY-NC-SA-4.0
 ---
 
 # Django Patterns

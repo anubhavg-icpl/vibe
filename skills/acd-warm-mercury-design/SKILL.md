@@ -1,11 +1,13 @@
 ---
 name: acd-warm-mercury-design
 description: Reference DESIGN.md for fintech that wants to feel calm and considered, not chrome-and-glass cold. Cream canvas, indigo action, dashboard density that still reads like editorial.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, warm, claude-design]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, warm, claude-design]
 ---
 
 # Mercury — Banking Editorial Warmth Design Mode

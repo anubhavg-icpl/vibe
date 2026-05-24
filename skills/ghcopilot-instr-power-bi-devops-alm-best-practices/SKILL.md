@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-power-bi-devops-alm-best-practices
-description: Use when the user needs guidance on power-bi-devops-alm-best-practices. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, power-bi-devops-alm-best-practices]
----
-
----
-description: 'Comprehensive guide for Power BI DevOps, Application Lifecycle Management (ALM), CI/CD pipelines, deployment automation, and version control best practices.'
-applyTo: '**/*.{yml,yaml,ps1,json,pbix,pbir}'
+description: "Comprehensive guide for Power BI DevOps, Application Lifecycle Management (ALM), CI/CD pipelines, deployment automation, and version control best practices."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, power-bi-devops-alm-best-practices]
+  applyTo: "**/*.{yml,yaml,ps1,json,pbix,pbir}"
+  source: "awesome-copilot"
 ---
 
 # Power BI DevOps and Application Lifecycle Management Best Practices

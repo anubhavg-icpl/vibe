@@ -7,7 +7,8 @@ description: |
   brand tone. Use when the brief asks for an "e-guide", "digital guide",
   "lookbook", "lead magnet", "creator guide", "playbook", "PDF guide",
   or "电子指南".
-triggers:
+license: CC-BY-NC-SA-4.0
+triggers: 
   - "e-guide"
   - "digital guide"
   - "lead magnet"
@@ -18,7 +19,7 @@ triggers:
   - "ebook"
   - "电子指南"
   - "电子书"
-od:
+od: 
   mode: prototype
   platform: desktop
   scenario: marketing

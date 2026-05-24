@@ -1,13 +1,12 @@
 ---
 name: ghcopilot-instr-scala2
-description: Use when the user needs guidance on scala2. GitHub Copilot instruction from the awesome-copilot collection.
-version: 1.0.0
-tags: [copilot-instruction, community, scala2]
----
-
----
-description: 'Scala 2.12/2.13 programming language coding conventions and best practices following Databricks style guide for functional programming, type safety, and production code quality.'
-applyTo: '**/*.scala, **/build.sbt, **/build.sc'
+description: "Scala 2.12/2.13 programming language coding conventions and best practices following Databricks style guide for functional programming, type safety, and production code quality."
+license: CC-BY-NC-SA-4.0
+metadata:
+  version: "1.0.0"
+  tags: [copilot-instruction, community, scala2]
+  applyTo: "**/*.scala, **/build.sbt, **/build.sc"
+  source: "awesome-copilot"
 ---
 
 # Scala Best Practices

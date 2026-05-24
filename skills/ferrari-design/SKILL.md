@@ -1,11 +1,13 @@
 ---
 name: ferrari-design
 description: Expert in the Ferrari design system - Luxury automotive. Chiaroscuro editorial, Ferrari Red accents, cinematic black.
-risk: unknown
-source: community
-kind: mode
-category: design-systems
-tags: [design-system, ui, automotive]
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: design-systems
+  tags: [design-system, ui, automotive]
 ---
 
 # Ferrari Design System Mode

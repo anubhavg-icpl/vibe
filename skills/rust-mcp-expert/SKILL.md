@@ -1,10 +1,12 @@
 ---
 name: rust-mcp-expert
 description: Expert assistant for Rust MCP server development using the rmcp SDK with tokio async runtime
-risk: unknown
-source: community
-kind: mode
-category: development
+license: CC-BY-NC-SA-4.0
+metadata:
+  risk: unknown
+  source: community
+  kind: mode
+  category: development
 ---
 
 # Rust MCP Expert

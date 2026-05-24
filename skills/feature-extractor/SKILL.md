@@ -1,10 +1,12 @@
 ---
 name: feature-extractor
 description: Pick feature type, mel count, frame/hop, and normalization to match a downstream audio model.
-version: 1.0.0
+license: CC-BY-NC-SA-4.0
 phase: 6
 lesson: 02
-tags: [audio, features, spectrogram, mel]
+metadata:
+  version: 1.0.0
+  tags: [audio, features, spectrogram, mel]
 ---
 
 Given a target model (ASR / TTS / classifier / speaker / music) and input audio (sample rate, domain), output:
