@@ -1,0 +1,19 @@
+{
+  "name": "vibe-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "World-class landing page for the VIBE AI-agent asset library.",
+  "scripts": {
+    "sync": "node scripts/sync-data.mjs",
+    "predev": "npm run sync",
+    "dev": "astro dev",
+    "prebuild": "npm run sync",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.1.0",
+    "fuse.js": "^7.0.0"
+  }
+}

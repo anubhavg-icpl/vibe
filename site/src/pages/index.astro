@@ -1,0 +1,230 @@
+---
+import Base from '../layouts/Base.astro';
+import { counts, categories, categoryCount, KIND_META, type Kind } from '../lib/data';
+import { withBase } from '../lib/url';
+
+const fmt = (n: number) => n.toLocaleString('en-US');
+
+const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
+const sparkColors: Record<Kind, string> = {
+  skill: 'var(--violet-deep)',
+  mode: 'var(--blue)',
+  agent: 'var(--cyan)',
+  command: 'var(--green)',
+};
+
+const topCategories = categories.slice(0, 24);
+const chipColors = [
+  '#7c3aed', '#6366f1', '#3b82f6', '#0ea5e9', '#06b6d4', '#14b8a6',
+  '#22c55e', '#a78bfa', '#c084fc', '#8b5cf6', '#0891b2', '#2563eb',
+];
+const monogram = (label: string) =>
+  label.split(' ').slice(0, 2).map((w) => w[0]).join('').toUpperCase();
+
+const marquee = [
+  'LangGraph', 'CrewAI', 'Pydantic AI', 'vLLM', 'Ollama', 'RAG', 'pgvector',
+  'Qdrant', 'LoRA', 'QLoRA', 'DPO', 'Flux', 'SDXL', 'ComfyUI', 'Whisper',
+  'Kubernetes', 'Terraform', 'Rust', 'Go', 'TypeScript', 'React', 'Astro',
+  'eBPF', 'Mythos Security', 'DHH', 'Carmack', 'Torvalds', 'Design Systems',
+];
+
+// Bento showcase — every media asset put to work, each tile a real value prop.
+type Tile = { cls: string; media: string; video?: boolean; tag: string; title: string; blurb: string };
+const bento: Tile[] = [
+  { cls: 'b-lg', media: 'ui-card-morphs-6-designs.webm', video: true, tag: '174 design systems', title: 'Pick an aesthetic', blurb: 'Airbnb · Apple · Brutalist · Cinematic · Glass — production-ready design tokens & components.' },
+  { cls: 'b-wide', media: 'five-holographic-busts-row.webp', tag: 'Engineer personas', title: 'Reviewed by legends', blurb: 'Code review in the voice of DHH, Carmack, Torvalds, antirez & Kleppmann — every claim cited.' },
+  { cls: 'b-sm', media: 'digital-shield-repaired-by-code.webp', tag: '33 Mythos modes', title: 'Defensive security', blurb: 'Vuln-discovery, red-team, patching & disclosure.' },
+  { cls: 'b-sm', media: 'three-concentric-rings-floating.webp', tag: `${fmt(counts.agent)} agents`, title: 'Orchestration', blurb: 'Specialized sub-agents for QA, infra & data.' },
+  { cls: 'b-wide', media: 'seven-glass-cards-coding-tools.webp', tag: '7 coding CLIs', title: 'Install everywhere', blurb: 'Claude Code · Codex · Cursor · OpenCode · Gemini · Copilot · Factory Droid.' },
+  { cls: 'b-sm', media: 'terminal-output-and-skill-cards.webp', tag: `${fmt(counts.skill)} skills`, title: 'Drop-in bundles', blurb: 'No copy-paste prompt archaeology.' },
+  { cls: 'b-sm', media: 'holographic-terminal-with-orbiti.webm', video: true, tag: 'Instant search', title: 'Find any asset', blurb: `Fuzzy-search ${fmt(counts.total)} in-browser.` },
+  { cls: 'b-wide', media: 'honeycomb-grid-with-icons.webp', tag: `${categoryCount} categories`, title: 'Organized chaos', blurb: 'Frameworks, RAG, training, vector stores, eBPF & more — grounded in real docs.' },
+  { cls: 'b-sm', media: 'abstract-data-visualization-lumi.webp', tag: 'Production-grounded', title: 'Real sources', blurb: 'No invented APIs. No fake CVEs.' },
+  { cls: 'b-sm', media: 'developer-terminal-with-orbiting.webp', tag: `${fmt(counts.command)} commands`, title: 'Slash workflows', blurb: '/architecture · /security · /testing.' },
+  { cls: 'b-wide', media: '12-ui-cards-design-aesthetics.webp', tag: 'Output styles', title: 'Ship beautiful UI', blurb: '12+ ready aesthetics, components & layouts you can drop into any project.' },
+];
+---
+<Base>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <img class="hero-mark" src={withBase('assets/minimal-geometric-logo-mark.webp')} alt="" aria-hidden="true" />
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">◆ {fmt(counts.total)} assets · {categoryCount} categories</span>
+        <h1>Your AI assistant,<br /><span class="grad-text">finally an expert.</span></h1>
+        <p class="lead">
+          A massive open library of skills, sub-agents, slash commands and expert
+          chat modes — production-grounded, cited, and ready for every major coding
+          agent CLI.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href={withBase('browse')}>🔎 Search the library</a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/anubhavg-icpl/vibe" target="_blank" rel="noopener">★ Star on GitHub</a>
+        </div>
+        <div class="hero-meta">
+          <div class="m"><b>{fmt(counts.skill)}</b><small>Skills</small></div>
+          <div class="m"><b>{fmt(counts.mode)}</b><small>Modes</small></div>
+          <div class="m"><b>{fmt(counts.agent)}</b><small>Agents</small></div>
+          <div class="m"><b>{fmt(counts.command)}</b><small>Commands</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img class="orb" src={withBase('assets/glowing-crystal-orb-floating-abo.webp')} alt="" aria-hidden="true" />
+        <div class="showcase-frame" style="z-index:1">
+          <div class="showcase-bar"><i></i><i></i><i></i><span>~ npx vibe-modes@latest</span></div>
+          <video
+            src={withBase('assets/command-line-types-npx-vibe.webm')}
+            poster={withBase('assets/command-line-showing-npx-vibe.webp')}
+            autoplay muted loop playsinline
+          ></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      {[...marquee, ...marquee].map((m) => <span>{m}</span>)}
+    </div>
+  </div>
+
+  <!-- ===================== KINDS ===================== -->
+  <section id="kinds">
+    <div class="accent-bg" aria-hidden="true"><img src={withBase('assets/circuit-board-pattern-fading-min.webp')} alt="" loading="lazy" /></div>
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">◆ The library</span>
+        <h2>Four kinds of building blocks.</h2>
+        <p>Everything is open, versioned, and installable. Pick a kind to browse and search the full set.</p>
+      </div>
+      <div class="kind-grid">
+        {kindOrder.map((k) => (
+          <a class="kind-card" href={withBase(`browse?kind=${k}`)} data-reveal>
+            <span class="spark" style={`background:${sparkColors[k]}`}></span>
+            <div class="num grad-text">{fmt(counts[k])}</div>
+            <div class="lbl">{KIND_META[k].plural}</div>
+            <div class="desc">{KIND_META[k].blurb}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHOWCASE (bento) ===================== -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">◆ Why VIBE</span>
+        <h2>Less hallucination. More shipping.</h2>
+        <p>Was 200 modes when this started. Then we kept going. And going. And going.</p>
+      </div>
+      <div class="bento">
+        {bento.map((t) => (
+          <a class={`btile ${t.cls}`} href={withBase('browse')} data-reveal>
+            {t.video ? (
+              <video src={withBase(`assets/${t.media}`)} autoplay muted loop playsinline></video>
+            ) : (
+              <img src={withBase(`assets/${t.media}`)} alt={t.title} loading="lazy" />
+            )}
+            <span class="cap">
+              <small>{t.tag}</small>
+              <b>{t.title}</b>
+              <span>{t.blurb}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CATEGORIES ===================== -->
+  <section id="categories">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">◆ {categoryCount} categories</span>
+        <h2>Pick an aesthetic. Or a stack. Or a threat model.</h2>
+        <p>From design systems and the modern web to LLM training, RAG, vector stores and defensive security.</p>
+      </div>
+      <div class="cat-grid">
+        {topCategories.map((c, i) => (
+          <a class="cat-card" href={withBase(`browse?cat=${encodeURIComponent(c.slug)}`)} data-reveal>
+            <span class="cat-chip" style={`background:linear-gradient(135deg, ${chipColors[i % chipColors.length]}, ${chipColors[(i + 4) % chipColors.length]})`}>
+              {monogram(c.label)}
+            </span>
+            <span class="meta">
+              <b>{c.label}</b>
+              <small>{fmt(c.count)} {c.count === 1 ? 'asset' : 'assets'}</small>
+            </span>
+          </a>
+        ))}
+      </div>
+      <div style="margin-top:28px" data-reveal>
+        <a class="btn btn-ghost" href={withBase('browse')}>Browse all {categoryCount} categories →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLI ===================== -->
+  <section id="cli">
+    <div class="wrap cli-grid">
+      <div data-reveal>
+        <span class="eyebrow">◆ VIBE CLI</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4.4vw,46px);letter-spacing:-0.02em;line-height:1.08;margin:18px 0 14px">
+          One command. Every agent.
+        </h2>
+        <p style="color:var(--muted);font-size:17px;max-width:480px">
+          Install modes as skills into your favourite coding agent. Interactive picker,
+          or target a specific tool — no config, no lock-in.
+        </p>
+        <div class="cli-targets">
+          <span>Claude Code</span><span>Codex</span><span>Cursor</span>
+          <span>OpenCode</span><span>Gemini CLI</span><span>Copilot CLI</span><span>Factory Droid</span>
+        </div>
+        <div class="hero-actions" style="margin-top:26px">
+          <a class="btn btn-primary" href="https://www.npmjs.com/package/vibe-modes" target="_blank" rel="noopener">View on npm</a>
+          <button class="btn btn-ghost" id="copy-cli" type="button" data-cmd="npx vibe-modes@latest">⧉ Copy install command</button>
+        </div>
+      </div>
+      <div class="showcase-frame" data-reveal>
+        <div class="showcase-bar"><i></i><i></i><i></i><span>~ ask · install · ship</span></div>
+        <video
+          src={withBase('assets/user-types-question-into-terminal.webm')}
+          poster={withBase('assets/terminal-output-and-skill-cards.webp')}
+          autoplay muted loop playsinline
+        ></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section>
+    <div class="wrap">
+      <div class="cta" data-reveal>
+        <img class="cta-bg" src={withBase('assets/seven-light-beams-rising.webp')} alt="" aria-hidden="true" loading="lazy" />
+        <h2>Stop re-explaining your stack<br />to your AI.</h2>
+        <p>Search {fmt(counts.total)} grounded, cited assets and install the ones you need in seconds.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href={withBase('browse')}>🔎 Open the search</a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/anubhavg-icpl/vibe" target="_blank" rel="noopener">★ Star on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const btn = document.getElementById('copy-cli');
+    btn?.addEventListener('click', async () => {
+      const cmd = btn.getAttribute('data-cmd') || '';
+      try {
+        await navigator.clipboard.writeText(cmd);
+        const old = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => (btn.textContent = old), 1600);
+      } catch {
+        /* clipboard unavailable */
+      }
+    });
+  </script>
+</Base>

@@ -94,7 +94,8 @@ ENV/
 vendor/bundle
 
 # Documentation build outputs
-site/
+# NOTE: `site/` is the Astro landing-page SOURCE (tracked). Its build output
+# (`site/dist/`) and synced data are ignored via site/.gitignore.
 _site/
 .docusaurus/
 

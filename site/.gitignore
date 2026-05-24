@@ -1,0 +1,14 @@
+# build output
+dist/
+# generated/synced data (rebuilt from repo root on every build)
+public/assets-index.json
+public/assets/
+src/data/assets-index.json
+# astro
+.astro/
+# deps
+node_modules/
+# os / editor
+.DS_Store
+# stray tooling artifacts
+.claude-flow/

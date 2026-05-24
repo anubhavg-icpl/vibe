@@ -1,0 +1,26 @@
+---
+import { BASE, withBase } from '../lib/url';
+---
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href={BASE}>
+      <img src={withBase('assets/vibe-logo-icon.webp')} alt="VIBE" width="30" height="30" />
+      <span>VIBE</span>
+    </a>
+    <nav class="nav-links">
+      <a href={withBase('#kinds')}>Library</a>
+      <a href={withBase('#categories')}>Categories</a>
+      <a href={withBase('#cli')}>CLI</a>
+      <a href={withBase('browse')}>Search</a>
+      <a class="nav-cta btn btn-ghost" href="https://github.com/anubhavg-icpl/vibe" target="_blank" rel="noopener">
+        ★ GitHub
+      </a>
+    </nav>
+  </div>
+</header>
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav?.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>

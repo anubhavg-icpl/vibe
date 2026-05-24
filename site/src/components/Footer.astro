@@ -1,0 +1,38 @@
+---
+import { counts, categoryCount } from '../lib/data';
+import { BASE, withBase } from '../lib/url';
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href={BASE}>
+          <img src={withBase('assets/vibe-logo-icon.webp')} alt="VIBE" width="30" height="30" />
+          <span>VIBE</span>
+        </a>
+        <p>An open library of {counts.total?.toLocaleString()} AI-agent skills, agents, commands &amp; modes across {categoryCount} categories — for Claude Code, Codex, Cursor, OpenCode &amp; more.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href={withBase('#kinds')}>Library</a>
+          <a href={withBase('#categories')}>Categories</a>
+          <a href={withBase('browse')}>Search</a>
+          <a href={withBase('#cli')}>CLI</a>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <a href="https://github.com/anubhavg-icpl/vibe" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/anubhavg-icpl/vibe/issues" target="_blank" rel="noopener">Issues</a>
+          <a href="https://www.npmjs.com/package/vibe-modes" target="_blank" rel="noopener">npm</a>
+          <a href="https://github.com/anubhavg-icpl/vibe/blob/master/README.md" target="_blank" rel="noopener">README</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} Anubhav Gain · CC BY-NC-SA 4.0</span>
+      <span>Built with Astro · Deployed via GitHub Actions</span>
+    </div>
+  </div>
+</footer>

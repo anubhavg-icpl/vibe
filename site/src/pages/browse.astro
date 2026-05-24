@@ -1,0 +1,257 @@
+---
+import Base from '../layouts/Base.astro';
+import { counts, categories, categoryCount, KIND_META, type Kind } from '../lib/data';
+
+const fmt = (n: number) => n.toLocaleString('en-US');
+const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
+---
+<Base
+  title="Search the VIBE library — 5,900+ AI-agent assets"
+  description="Fuzzy-search every VIBE skill, agent, command and mode. Filter by kind and category, jump straight to the source on GitHub."
+>
+  <section class="browse-hero">
+    <div class="wrap">
+      <span class="eyebrow">◆ Search · {fmt(counts.total)} assets · {categoryCount} categories</span>
+      <h1 style="font-family:var(--font-display);font-size:clamp(30px,5vw,52px);letter-spacing:-0.02em;line-height:1.05;margin:16px 0 22px">
+        Find the right <span class="grad-text">building block</span>.
+      </h1>
+
+      <div class="search-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path>
+        </svg>
+        <input
+          id="q"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search skills, agents, commands, modes…"
+          aria-label="Search the library"
+        />
+        <kbd>/</kbd>
+      </div>
+
+      <div class="filters" id="kind-filters" role="group" aria-label="Filter by kind">
+        <button class="chip" data-kind="" aria-pressed="true">All<span class="ct">{fmt(counts.total)}</span></button>
+        {kindOrder.map((k) => (
+          <button class="chip" data-kind={k} aria-pressed="false">
+            {KIND_META[k].plural}<span class="ct">{fmt(counts[k])}</span>
+          </button>
+        ))}
+        <select class="cat-select" id="cat" aria-label="Filter by category">
+          <option value="">All categories</option>
+          {categories.map((c) => (
+            <option value={c.slug}>{c.label} ({fmt(c.count)})</option>
+          ))}
+        </select>
+      </div>
+
+      <p class="result-meta" id="meta">Loading library…</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="results" id="results">
+        <p class="skeleton-note">Fetching {fmt(counts.total)} assets…</p>
+      </div>
+      <div class="load-more-wrap">
+        <button class="btn btn-ghost btn-lg" id="more" type="button" hidden>Load more</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import Fuse from 'fuse.js';
+
+    type Kind = 'skill' | 'agent' | 'command' | 'mode';
+    interface Asset {
+      kind: Kind;
+      name: string;
+      description: string;
+      category: string;
+      path: string;
+      modeFile?: string;
+    }
+
+    const PAGE = 60;
+    const REPO = 'https://github.com/anubhavg-icpl/vibe';
+    const rawBase = import.meta.env.BASE_URL || '/';
+    const base = rawBase.endsWith('/') ? rawBase : rawBase + '/';
+
+    const $q = document.getElementById('q') as HTMLInputElement;
+    const $cat = document.getElementById('cat') as HTMLSelectElement;
+    const $results = document.getElementById('results')!;
+    const $meta = document.getElementById('meta')!;
+    const $more = document.getElementById('more') as HTMLButtonElement;
+    const $chips = Array.from(document.querySelectorAll<HTMLButtonElement>('#kind-filters .chip'));
+
+    let assets: Asset[] = [];
+    let fuse: Fuse<Asset>;
+    let kind = '';
+    let cat = '';
+    let query = '';
+    let view: { item: Asset }[] = [];
+    let shown = 0;
+
+    const esc = (s: string) =>
+      s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
+    const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    // Highlight the actual query terms (substring, case-insensitive) — clean and
+    // predictable, instead of Fuse's scattered fuzzy character indices.
+    function highlight(str: string) {
+      const text = str || '';
+      const terms = query.trim().split(/\s+/).filter((t) => t.length >= 2);
+      if (!terms.length) return esc(text);
+      const re = new RegExp('(' + terms.map(escapeRe).join('|') + ')', 'gi');
+      let out = '';
+      let last = 0;
+      let m: RegExpExecArray | null;
+      while ((m = re.exec(text)) !== null) {
+        out += esc(text.slice(last, m.index)) + '<mark>' + esc(m[0]) + '</mark>';
+        last = m.index + m[0].length;
+        if (m.index === re.lastIndex) re.lastIndex++;
+      }
+      return out + esc(text.slice(last));
+    }
+
+    function sourceUrl(a: Asset) {
+      return `${REPO}/tree/master/${a.modeFile ?? a.path}`;
+    }
+
+    function prettyCat(slug: string) {
+      if (!slug || ['skill', 'agent', 'command', 'mode'].includes(slug) || slug.endsWith('.md')) return '';
+      return slug.replace(/[-_]/g, ' ');
+    }
+
+    function matchFilters(a: Asset) {
+      return (!kind || a.kind === kind) && (!cat || a.category === cat);
+    }
+
+    function compute() {
+      if (query.trim().length >= 2) {
+        view = fuse
+          .search(query.trim())
+          .filter((r) => matchFilters(r.item))
+          .map((r) => ({ item: r.item }));
+      } else {
+        view = assets.filter(matchFilters).map((item) => ({ item }));
+      }
+      shown = 0;
+      renderMore(true);
+      syncUrl();
+    }
+
+    function cardHtml({ item }: { item: Asset }) {
+      const cat = prettyCat(item.category);
+      return `<a class="acard" href="${sourceUrl(item)}" target="_blank" rel="noopener">
+        <span class="top">
+          <span class="badge ${item.kind}">${item.kind}</span>
+          ${cat ? `<span class="cat">${esc(cat)}</span>` : ''}
+        </span>
+        <h3>${highlight(item.name)}</h3>
+        <p>${highlight(item.description || '')}</p>
+        <span class="arrow">View source ↗</span>
+      </a>`;
+    }
+
+    function renderMore(reset: boolean) {
+      if (reset) $results.innerHTML = '';
+      if (view.length === 0) {
+        $results.innerHTML = `<div class="empty" style="grid-column:1/-1">
+          <div class="big">🔍</div>No assets match your filters.<br /><span class="skeleton-note">Try a broader term or clear the category.</span>
+        </div>`;
+        $more.hidden = true;
+        $meta.textContent = '0 results';
+        return;
+      }
+      const next = view.slice(shown, shown + PAGE);
+      $results.insertAdjacentHTML('beforeend', next.map(cardHtml).join(''));
+      shown += next.length;
+      $more.hidden = shown >= view.length;
+      $more.textContent = `Load more (${(view.length - shown).toLocaleString()} left)`;
+      const scope = kind ? ` ${kind}s` : '';
+      const inCat = cat ? ` in “${prettyCat(cat)}”` : '';
+      $meta.textContent = `${view.length.toLocaleString()}${scope} result${view.length === 1 ? '' : 's'}${inCat}${query.trim().length >= 2 ? ` for “${query.trim()}”` : ''} · showing ${shown.toLocaleString()}`;
+    }
+
+    function syncUrl() {
+      const p = new URLSearchParams();
+      if (kind) p.set('kind', kind);
+      if (cat) p.set('cat', cat);
+      if (query.trim()) p.set('q', query.trim());
+      const qs = p.toString();
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+    }
+
+    function setKind(k: string) {
+      kind = k;
+      $chips.forEach((c) => c.setAttribute('aria-pressed', String((c.dataset.kind || '') === k)));
+    }
+
+    // wire events
+    $chips.forEach((c) =>
+      c.addEventListener('click', () => {
+        setKind(c.dataset.kind || '');
+        compute();
+      })
+    );
+    $cat.addEventListener('change', () => {
+      cat = $cat.value;
+      compute();
+    });
+    let t: number | undefined;
+    $q.addEventListener('input', () => {
+      window.clearTimeout(t);
+      t = window.setTimeout(() => {
+        query = $q.value;
+        compute();
+      }, 110);
+    });
+    $more.addEventListener('click', () => renderMore(false));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== $q) {
+        e.preventDefault();
+        $q.focus();
+      }
+    });
+
+    // load data + init
+    fetch(`${base}assets-index.json`)
+      .then((r) => r.json())
+      .then((data) => {
+        assets = data.assets as Asset[];
+        fuse = new Fuse(assets, {
+          keys: [
+            { name: 'name', weight: 0.6 },
+            { name: 'description', weight: 0.3 },
+            { name: 'category', weight: 0.1 },
+          ],
+          threshold: 0.34,
+          ignoreLocation: true,
+          minMatchCharLength: 2,
+        });
+
+        // hydrate from URL
+        const p = new URLSearchParams(location.search);
+        const k = p.get('kind') || '';
+        if (['skill', 'agent', 'command', 'mode'].includes(k)) setKind(k);
+        const c = p.get('cat') || '';
+        if (c && [...$cat.options].some((o) => o.value === c)) {
+          cat = c;
+          $cat.value = c;
+        }
+        const qq = p.get('q') || '';
+        if (qq) {
+          query = qq;
+          $q.value = qq;
+        }
+        compute();
+      })
+      .catch(() => {
+        $results.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="big">⚠️</div>Couldn't load the asset index.</div>`;
+        $meta.textContent = '';
+      });
+  </script>
+</Base>
