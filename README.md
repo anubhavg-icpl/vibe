@@ -1,7 +1,7 @@
 # VIBE — AI Chat Modes, Skills, Agents & Plugins
 
 <p align="center">
-  <img src="assets/vibe-logo.svg" alt="VIBE Logo" width="500"/>
+  <img src="assets/vibe-logo-icon.webp" alt="VIBE Logo" width="200"/>
 </p>
 
 <p align="center">
@@ -207,6 +207,10 @@ Copy mode content into your AI assistant. Done.
 ---
 
 ## VIBE CLI — One Command, Zero Install
+
+<p align="center">
+  <img src="assets/vibe-cli-showcase.webp" alt="VIBE CLI in action" width="700"/>
+</p>
 
 Vibe ships a `vibe` CLI that installs the **entire library** (skills, agents, commands, modes) into any of **7 coding-agent CLIs** in one shot. No `npm install -g`, no clone — just `npx`.
 
