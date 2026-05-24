@@ -43,6 +43,17 @@ const bento: Tile[] = [
   { cls: 'b-sm', media: 'developer-terminal-with-orbiting.webp', tag: `${fmt(counts.command)} commands`, title: 'Slash workflows', blurb: '/architecture · /security · /testing.' },
   { cls: 'b-wide', media: '12-ui-cards-design-aesthetics.webp', tag: 'Output styles', title: 'Ship beautiful UI', blurb: '12+ ready aesthetics, components & layouts you can drop into any project.' },
 ];
+
+// Per-CLI install — one command each, straight from the README plugin matrix.
+const installs = [
+  { name: 'Claude Code', dot: 'var(--violet)', tag: 'marketplace', lines: ['/plugin marketplace add anubhavg-icpl/vibe', '/plugin install vibe@vibe'] },
+  { name: 'GitHub Copilot CLI', dot: 'var(--green)', tag: 'marketplace', lines: ['copilot plugin marketplace add anubhavg-icpl/vibe', 'copilot plugin install vibe@vibe'] },
+  { name: 'Factory Droid', dot: 'var(--cyan)', tag: 'marketplace', lines: ['droid plugin marketplace add https://github.com/anubhavg-icpl/vibe', 'droid plugin install vibe@vibe'] },
+  { name: 'Gemini CLI', dot: 'var(--blue)', tag: 'extension', lines: ['gemini extensions install https://github.com/anubhavg-icpl/vibe'] },
+  { name: 'OpenCode', dot: 'var(--sky)', tag: 'config', lines: ['// ~/.config/opencode/opencode.json', '"plugin": ["github:anubhavg-icpl/vibe"]'] },
+  { name: 'Cursor', dot: 'var(--violet-bright)', tag: 'marketplace', lines: ['/add-plugin vibe'] },
+  { name: 'Codex CLI / App', dot: 'var(--teal)', tag: 'ui flow', lines: ['/plugins  →  search "vibe"  →  Install'] },
+];
 ---
 <Base>
   <!-- ===================== HERO ===================== -->
@@ -166,6 +177,36 @@ const bento: Tile[] = [
     </div>
   </section>
 
+  <!-- ===================== INSTALL (per-CLI) ===================== -->
+  <section id="install">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">◆ Install · 7 CLIs</span>
+        <h2>Any agent. One command.</h2>
+        <p>Native plugin manifests ship for every major coding-agent CLI — install the whole library with a single command. No clone, no copy-paste.</p>
+      </div>
+      <div class="install-grid">
+        {installs.map((i) => (
+          <div class="install-card" data-reveal>
+            <div class="ic-head">
+              <span class="ic-dot" style={`background:${i.dot}`}></span>
+              <span class="ic-name">{i.name}</span>
+              <span class="ic-tag">{i.tag}</span>
+            </div>
+            <div class="codeblock">
+              <code>{i.lines.join('\n')}</code>
+              <button class="copy-btn" type="button" data-copy={i.lines.join('\n')} aria-label="Copy command">⧉</button>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="install-note">
+        Once installed, all {fmt(counts.skill)} skills auto-load on relevance — no further config.
+        Prefer zero-install? Run <code>npx -y github:anubhavg-icpl/vibe</code> for the interactive picker, or install the {fmt(counts.mode)} chat modes as skills with the CLI below.
+      </p>
+    </div>
+  </section>
+
   <!-- ===================== CLI ===================== -->
   <section id="cli">
     <div class="wrap cli-grid">
@@ -184,7 +225,7 @@ const bento: Tile[] = [
         </div>
         <div class="hero-actions" style="margin-top:26px">
           <a class="btn btn-primary" href="https://www.npmjs.com/package/vibe-modes" target="_blank" rel="noopener">View on npm</a>
-          <button class="btn btn-ghost" id="copy-cli" type="button" data-cmd="npx vibe-modes@latest">⧉ Copy install command</button>
+          <button class="btn btn-ghost" type="button" data-copy="npx -y github:anubhavg-icpl/vibe">⧉ Copy install command</button>
         </div>
       </div>
       <div class="showcase-frame" data-reveal>
@@ -214,17 +255,26 @@ const bento: Tile[] = [
   </section>
 
   <script>
-    const btn = document.getElementById('copy-cli');
-    btn?.addEventListener('click', async () => {
-      const cmd = btn.getAttribute('data-cmd') || '';
-      try {
-        await navigator.clipboard.writeText(cmd);
-        const old = btn.textContent;
-        btn.textContent = '✓ Copied!';
-        setTimeout(() => (btn.textContent = old), 1600);
-      } catch {
-        /* clipboard unavailable */
-      }
+    document.querySelectorAll('[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(btn.getAttribute('data-copy') || '');
+          if (btn.classList.contains('copy-btn')) {
+            btn.classList.add('done');
+            btn.textContent = '✓';
+            setTimeout(() => {
+              btn.classList.remove('done');
+              btn.textContent = '⧉';
+            }, 1500);
+          } else {
+            const old = btn.textContent;
+            btn.textContent = '✓ Copied!';
+            setTimeout(() => (btn.textContent = old), 1600);
+          }
+        } catch {
+          /* clipboard unavailable */
+        }
+      });
     });
   </script>
 </Base>

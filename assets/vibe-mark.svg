@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="VIBE">
+  <defs>
+    <linearGradient id="vibeMark" x1="20" y1="28" x2="80" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0.45" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <path d="M25 29 L50 73 L75 29" stroke="url(#vibeMark)" stroke-width="15"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
