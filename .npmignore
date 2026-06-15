@@ -1,0 +1,68 @@
+# Dev sources — not needed at runtime
+src/
+scripts/
+tests/
+docs/
+config/
+
+# Reference-only collection — kept in git, excluded from npm package
+system-prompts/
+
+# Tooling configs
+.eslintrc*
+.prettierrc*
+markdownlint*
+tsconfig*
+*.config.ts
+*.config.js
+*.config.mjs
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Logs / cache / tmp
+*.log
+.cache/
+.turbo/
+.next/
+tmp/
+temp/
+
+# Python tooling
+__pycache__/
+*.py
+*.pyc
+
+# CI / dev
+.github/
+.husky/
+.changeset/
+CHANGELOG.md
+CONTRIBUTING.md
+
+# Build artifacts that aren't the output
+*.tsbuildinfo
+pnpm-lock.yaml
+yarn.lock
+
+# Keep in package (explicit allowlist via package.json "files"):
+# dist/
+# assets-index.json
+# skills/
+# agents/
+# commands/
+# modes/
+# rules/
+# prompts/
+# README.md
+# LICENSE

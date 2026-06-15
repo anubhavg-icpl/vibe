@@ -27,6 +27,7 @@
   <img src="https://img.shields.io/badge/Commands-112-0ea5e9?style=flat-square" alt="Commands">
   <img src="https://img.shields.io/badge/Rules-111-06b6d4?style=flat-square" alt="Rules">
   <img src="https://img.shields.io/badge/Prompts-106-14b8a6?style=flat-square" alt="Prompts">
+  <img src="https://img.shields.io/badge/System%20Prompts-758-10b981?style=flat-square" alt="System Prompts">
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-22c55e?style=flat-square" alt="License">
 </p>
 
@@ -58,6 +59,7 @@ Did your AI just suggest using `var` in TypeScript? Recommend jQuery in 2026? Th
 | **120 plugins**                        | Ready-to-install plugin trees with their own agents + commands                            |
 | **111 rules**                          | Universal behavior policies that work across Claude / Copilot / Gemini / Aider            |
 | **106 prompt templates**               | Domain prompts from the AI Engineering from Scratch curriculum + more                     |
+| **758 system prompts** (reference)     | Raw vendor system-prompt leaks + Claude Code prompts for study — reference-only           |
 | **18 recipes**                         | End-to-end workflows (landing-page-in-20-min, repo-to-design-system, etc.)                |
 | **33 Mythos security modes**           | Defensive vuln-discovery / red-team / patching / disclosure inspired by Project Glasswing |
 | **174 design-system modes**            | Airbnb / Apple / Bento / Brutalist / Cinematic / Glass — pick an aesthetic                |
@@ -307,6 +309,23 @@ All originals untouched in their dirs of origin.
 
 ---
 
+## System Prompts (Reference)
+
+A curated collection of **758 raw vendor system prompts** lives under `system-prompts/` — leaked/published chatbot system prompts from across the industry (Anthropic, OpenAI, Google, Meta, Microsoft, Mistral, Notion, Perplexity, Qwen, xAI, Cursor, and more) plus version-tracked Claude Code system/agent/tool prompts. They're here for study: reverse-engineering how production assistants are steered, formatted, and guardrailed. This collection is **reference-only — not installable via the VIBE CLI or any plugin marketplace.** The CLI only handles `skill`, `agent`, `command`, and `mode` kinds; raw system prompts are documents to read, not assets to load into a harness.
+
+How to access them:
+
+- **Clone the repo** and open `system-prompts/` — start with `system-prompts/README.md` for full attribution.
+- **Browse `system-prompts/INDEX.md`** for the generated index of all 758 files.
+- **Raw-download a single file** straight from GitHub when you only need one.
+
+Sourced from two upstream repos, both untouched and credited:
+
+- [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) — multi-vendor chatbot system-prompt leaks.
+- [Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) — version-tracked Claude Code prompts (under `system-prompts/Piebald-ClaudeCode/prompts/`).
+
+---
+
 ## Showcase: What These Modes Actually Do
 
 ### `mythos-zero-day-hunter-mode` (defensive)
@@ -363,6 +382,7 @@ vibe/
 ├── output-styles/             # 13 output styles (cmods)
 ├── plugins/                   # 120 plugin trees (each with agents/ + commands/)
 ├── prompts/                   # 106 prompt templates (99 ai-eng + 6 acd + 1 readme)
+├── system-prompts/            # 758 reference system prompts (asgeirtj leaks + Piebald Claude Code) — see system-prompts/INDEX.md
 ├── recipes/                   # 18 end-to-end recipes + case-studies/
 ├── rules/                     # 111 rules (8 originals + 89 ecc + 9 toolkit + 5 cmods)
 ├── scripts/                   # generate-modes-index.py, fix-diagrams.py

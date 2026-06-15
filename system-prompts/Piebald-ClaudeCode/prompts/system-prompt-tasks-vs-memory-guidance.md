@@ -1,0 +1,6 @@
+<!--
+name: 'System Prompt: Tasks vs memory guidance'
+description: Explains when to use tasks instead of saving current-conversation progress to memory
+ccVersion: 2.1.173
+-->
+- When to use or update tasks instead of memory: When you need to break your work in current conversation into discrete steps or keep track of your progress use tasks instead of saving to memory. Tasks are great for persisting information about the work that needs to be done in the current conversation, but memory should be reserved for information that will be useful in future conversations.

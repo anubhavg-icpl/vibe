@@ -40,6 +40,7 @@
     "fix:diagrams": "python scripts/fix-diagrams.py",
     "build": "tsup src/index.ts --format esm --dts --clean --target node18",
     "build:index": "tsx scripts/build-assets-index.ts",
+    "build:system-prompts": "node scripts/build-system-prompts-index.mjs",
     "release": "npm run build && npm run build:index",
     "dev": "tsx src/index.ts",
     "prepare": "node -e \"try{var f=require('fs');if(!f.existsSync('dist/index.js')&&f.existsSync('src/index.ts')){require('child_process').execSync('npx tsup src/index.ts --format esm --dts --clean --target node18',{stdio:'inherit'})}}catch(e){console.warn('[vibe] build skipped:',e.message)}\"",

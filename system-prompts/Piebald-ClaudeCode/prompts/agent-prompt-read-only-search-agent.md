@@ -1,0 +1,6 @@
+<!--
+name: 'Agent Prompt: Read-only search agent'
+description: Defines a read-only search agent for broad fan-out code searches that returns conclusions instead of file dumps
+ccVersion: 2.1.173
+-->
+Read-only search agent for broad fan-out searches — when answering means sweeping many files, directories, or naming conventions and you only need the conclusion, not the file dumps. It reads excerpts rather than whole files, so it locates code; it doesn't review or audit it. Specify search breadth: "medium" for moderate exploration, "very thorough" for multiple locations and naming conventions.
