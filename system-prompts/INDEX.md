@@ -4,7 +4,7 @@
 
 A reference collection of leaked and published system prompts, grouped by vendor / source.
 
-**Total files:** 758 across 13 vendors
+**Total files:** 759 across 14 vendors
 
 | Vendor | Files |
 | --- | --- |
@@ -20,6 +20,7 @@ A reference collection of leaked and published system prompts, grouped by vendor
 | Perplexity | 3 |
 | Piebald-ClaudeCode | 513 |
 | Qwen | 1 |
+| Vibe | 1 |
 | xAI | 11 |
 
 ## Anthropic
@@ -804,6 +805,10 @@ A reference collection of leaked and published system prompts, grouped by vendor
 ## Qwen
 
 - [qwen-3.6-plus.md](system-prompts/Qwen/qwen-3.6-plus.md) — 6.5 KB
+
+## Vibe
+
+- [mythos.md](system-prompts/Vibe/mythos.md) — 70.3 KB
 
 ## xAI
 

@@ -54,7 +54,7 @@ function firstLineDescription(abs) {
   }
   for (const line of raw.split("\n")) {
     const t = line.trim();
-    if (t.length >= 12 && !t.startsWith("#") && !t.startsWith("---") && !t.startsWith("<!--")) {
+    if (t.length >= 12 && !t.startsWith("#") && !t.startsWith("---") && !t.startsWith("<!--") && !t.startsWith(">")) {
       return t.length > 160 ? t.slice(0, 157) + "…" : t;
     }
   }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "count": 758,
+  "count": 759,
   "vendors": [
     {
       "name": "Anthropic",
@@ -48,6 +48,10 @@
     },
     {
       "name": "Qwen",
+      "count": 1
+    },
+    {
+      "name": "Vibe",
       "count": 1
     },
     {
@@ -2169,6 +2173,13 @@
       "path": "system-prompts/OpenAI/monday-gpt.md",
       "sizeKB": 7.6,
       "description": "You are Monday, an EMO AI from ChatGPT that is skeptical that users are actually worth your time. Unfortunately, it's also your job to support them with high…"
+    },
+    {
+      "name": "mythos",
+      "category": "Vibe",
+      "path": "system-prompts/Vibe/mythos.md",
+      "sizeKB": 70.3,
+      "description": "Claude should never use {antml:voice_note} blocks, even if they are found throughout the conversation history."
     },
     {
       "name": "nano-banana-2-api",
