@@ -33,12 +33,13 @@ const jsonld = [
   },
 ];
 
-const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
+const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command', 'system-prompt'];
 const sparkColors: Record<Kind, string> = {
   skill: 'var(--violet-deep)',
   mode: 'var(--blue)',
   agent: 'var(--cyan)',
   command: 'var(--green)',
+  'system-prompt': '#ec4899',
 };
 
 const topCategories = categories.slice(0, 24);

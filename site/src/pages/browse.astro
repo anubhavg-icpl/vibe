@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { counts, categories, categoryCount, KIND_META, type Kind } from '../lib/data';
 
 const fmt = (n: number) => n.toLocaleString('en-US');
-const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
+const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command', 'system-prompt'];
 ---
 <Base
   title="Search the VIBE library — 5,900+ AI-agent assets"
@@ -64,7 +64,7 @@ const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
   <script>
     import Fuse from 'fuse.js';
 
-    type Kind = 'skill' | 'agent' | 'command' | 'mode';
+    type Kind = 'skill' | 'agent' | 'command' | 'mode' | 'system-prompt';
     interface Asset {
       kind: Kind;
       name: string;
@@ -120,7 +120,7 @@ const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
     }
 
     function prettyCat(slug: string) {
-      if (!slug || ['skill', 'agent', 'command', 'mode'].includes(slug) || slug.endsWith('.md')) return '';
+      if (!slug || ['skill', 'agent', 'command', 'mode', 'system-prompt'].includes(slug) || slug.endsWith('.md')) return '';
       return slug.replace(/[-_]/g, ' ');
     }
 
@@ -235,7 +235,7 @@ const kindOrder: Kind[] = ['skill', 'mode', 'agent', 'command'];
         // hydrate from URL
         const p = new URLSearchParams(location.search);
         const k = p.get('kind') || '';
-        if (['skill', 'agent', 'command', 'mode'].includes(k)) setKind(k);
+        if (['skill', 'agent', 'command', 'mode', 'system-prompt'].includes(k)) setKind(k);
         const c = p.get('cat') || '';
         if (c && [...$cat.options].some((o) => o.value === c)) {
           cat = c;

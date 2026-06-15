@@ -67,6 +67,7 @@ export const kindColors = {
   agent:   chalk.hex("#8855CC").bold,   // chart-2 purple
   command: chalk.hex("#4BAF78").bold,   // complementary green
   mode:    chalk.hex("#4888D0").bold,   // soft blue
+  "system-prompt": chalk.hex("#D2588A").bold, // rose
 } as const;
 
 export const kindBadge = {
@@ -74,6 +75,7 @@ export const kindBadge = {
   agent:   chalk.bgHex("#1E0D3A").hex("#AA80E8"),
   command: chalk.bgHex("#0A2818").hex("#6ACA94"),
   mode:    chalk.bgHex("#0A1C3A").hex("#70A8E8"),
+  "system-prompt": chalk.bgHex("#3A0A1E").hex("#E88AB0"),
 } as const;
 
 export const symbols = {

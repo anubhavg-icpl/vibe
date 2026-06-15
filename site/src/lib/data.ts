@@ -1,6 +1,6 @@
 import indexData from '../data/assets-index.json';
 
-export type Kind = 'skill' | 'agent' | 'command' | 'mode';
+export type Kind = 'skill' | 'agent' | 'command' | 'mode' | 'system-prompt';
 
 export interface AssetEntry {
   kind: Kind;
@@ -128,6 +128,7 @@ export const KIND_META: Record<Kind, { label: string; plural: string; blurb: str
   agent: { label: 'Agent', plural: 'Agents', blurb: 'Specialized sub-agents for orchestration & QA' },
   command: { label: 'Command', plural: 'Commands', blurb: 'Slash commands for everyday workflows' },
   mode: { label: 'Mode', plural: 'Modes', blurb: 'Expert chat modes across 850+ domains' },
+  'system-prompt': { label: 'System Prompt', plural: 'System Prompts', blurb: 'Real vendor system-prompt leaks & house prompts' },
 };
 
 export const npmInstall = `npx ${NPM}@latest`;

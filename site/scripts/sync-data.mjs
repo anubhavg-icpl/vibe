@@ -1,8 +1,9 @@
 // Sync build inputs from the repo root into the Astro site.
-//   - assets-index.json  -> public/ (runtime fetch for search) + src/data/ (build-time stats)
+//   - assets-index.json (+ system-prompts/index.json merged in) -> public/ (runtime
+//     fetch for search) + src/data/ (build-time stats)
 //   - assets/*           -> public/assets/ (logos, WebP/WebM showcases)
 // Runs automatically via predev / prebuild, and in CI before `astro build`.
-import { existsSync, mkdirSync, cpSync, copyFileSync, statSync } from 'node:fs';
+import { existsSync, mkdirSync, cpSync, copyFileSync, statSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -11,6 +12,7 @@ const siteDir = resolve(here, '..');
 const rootDir = resolve(siteDir, '..');
 
 const indexSrc = resolve(rootDir, 'assets-index.json');
+const sysPromptsSrc = resolve(rootDir, 'system-prompts', 'index.json');
 const assetsSrc = resolve(rootDir, 'assets');
 
 const publicDir = resolve(siteDir, 'public');
@@ -20,16 +22,43 @@ function ensure(dir) {
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
 }
 
+/**
+ * Fold the system-prompts manifest into the assets index so the website's
+ * browse/search/category surfaces treat system prompts like any other asset.
+ */
+function mergeSystemPrompts(index) {
+  if (!existsSync(sysPromptsSrc)) {
+    console.warn(`[sync] WARNING: ${sysPromptsSrc} not found — site will omit system prompts.`);
+    return index;
+  }
+  const manifest = JSON.parse(readFileSync(sysPromptsSrc, 'utf-8'));
+  const entries = (manifest.prompts ?? []).map((p) => ({
+    kind: 'system-prompt',
+    name: p.name,
+    description: p.description || 'Reference system prompt.',
+    category: p.category,
+    path: p.path,
+  }));
+  const assets = [...(index.assets ?? []), ...entries];
+  const counts = { ...(index.counts ?? {}) };
+  counts['system-prompt'] = entries.length;
+  counts.total = (counts.total ?? (index.assets?.length ?? 0)) + entries.length;
+  console.log(`[sync] merged ${entries.length} system prompts into the site index`);
+  return { ...index, counts, assets };
+}
+
 let ok = true;
 
-// 1) assets-index.json
+// 1) assets-index.json (+ system prompts merged)
 if (existsSync(indexSrc)) {
   ensure(publicDir);
   ensure(dataDir);
-  copyFileSync(indexSrc, resolve(publicDir, 'assets-index.json'));
-  copyFileSync(indexSrc, resolve(dataDir, 'assets-index.json'));
-  const kb = (statSync(indexSrc).size / 1024).toFixed(0);
-  console.log(`[sync] assets-index.json (${kb} KB) -> public/ + src/data/`);
+  const merged = mergeSystemPrompts(JSON.parse(readFileSync(indexSrc, 'utf-8')));
+  const json = JSON.stringify(merged);
+  writeFileSync(resolve(publicDir, 'assets-index.json'), json);
+  writeFileSync(resolve(dataDir, 'assets-index.json'), json);
+  const kb = (json.length / 1024).toFixed(0);
+  console.log(`[sync] assets-index.json (${kb} KB, ${merged.counts.total} assets) -> public/ + src/data/`);
 } else {
   console.warn(`[sync] WARNING: ${indexSrc} not found.`);
   ok = false;

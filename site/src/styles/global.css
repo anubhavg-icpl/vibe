@@ -443,6 +443,7 @@ section { position: relative; padding-block: clamp(56px, 9vw, 120px); }
 .badge.agent { background: rgba(6, 182, 212, 0.16); color: #67e8f9; }
 .badge.command { background: rgba(34, 197, 94, 0.16); color: #86efac; }
 .badge.mode { background: rgba(59, 130, 246, 0.16); color: #93c5fd; }
+.badge.system-prompt { background: rgba(236, 72, 153, 0.16); color: #f9a8d4; }
 .acard .top .cat { margin-left: auto; font-size: 11.5px; color: var(--faint); font-family: var(--mono); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }
 .acard h3 { font-size: 15.5px; letter-spacing: -0.01em; word-break: break-word; }
 .acard p { color: var(--muted); font-size: 13px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
