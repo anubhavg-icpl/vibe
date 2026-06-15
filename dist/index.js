@@ -38,6 +38,29 @@ async function loadIndexAssets(root) {
     return null;
   }
 }
+var _spCache = void 0;
+async function discoverSystemPrompts(root) {
+  if (_spCache !== void 0) return _spCache ?? [];
+  try {
+    const raw = await readFile(
+      join(root, "system-prompts", "index.json"),
+      "utf-8"
+    );
+    const m = JSON.parse(raw);
+    _spCache = m.prompts.map((e) => ({
+      kind: "system-prompt",
+      name: e.name,
+      description: e.description || "Reference system prompt.",
+      path: join(root, e.path.split("/").join(sep)),
+      category: e.category,
+      metadata: { sizeKB: e.sizeKB, source: "system-prompts" }
+    }));
+    return _spCache;
+  } catch {
+    _spCache = null;
+    return [];
+  }
+}
 var SKIP_DIRS = /* @__PURE__ */ new Set([
   "node_modules",
   ".git",
@@ -190,8 +213,12 @@ async function discoverModesAsset(root) {
 }
 async function discoverAssets(root, options = {}) {
   const wanted = new Set(
-    options.kinds && options.kinds.length > 0 ? options.kinds : ["skill", "agent", "command", "mode"]
+    options.kinds && options.kinds.length > 0 ? options.kinds : ["skill", "agent", "command", "mode", "system-prompt"]
   );
+  const systemPrompts = wanted.has("system-prompt") ? await discoverSystemPrompts(root) : [];
+  if (wanted.has("system-prompt")) {
+    options.onKindFound?.("system-prompt", systemPrompts.length);
+  }
   const indexed = await loadIndexAssets(root);
   if (indexed !== null) {
     const filtered = indexed.filter((a) => wanted.has(a.kind));
@@ -200,7 +227,7 @@ async function discoverAssets(root, options = {}) {
         if (wanted.has(k)) options.onKindFound(k, filtered.filter((a) => a.kind === k).length);
       }
     }
-    return filtered;
+    return [...filtered, ...systemPrompts];
   }
   const tasks = [];
   const taskKinds = [];
@@ -224,14 +251,15 @@ async function discoverAssets(root, options = {}) {
   for (let i = 0; i < buckets.length; i++) {
     options.onKindFound?.(taskKinds[i], buckets[i].length);
   }
-  return buckets.flat();
+  return [...buckets.flat(), ...systemPrompts];
 }
 function summariseCounts(assets) {
   const c = {
     skill: 0,
     agent: 0,
     command: 0,
-    mode: 0
+    mode: 0,
+    "system-prompt": 0
   };
   for (const a of assets) c[a.kind]++;
   return c;
@@ -269,6 +297,10 @@ var agents = {
       mode: {
         project: ".opencode/skill",
         global: join2(home, ".config/opencode/skill")
+      },
+      "system-prompt": {
+        project: ".opencode/system-prompts",
+        global: join2(home, ".config/opencode/system-prompts")
       }
     }
   },
@@ -283,7 +315,11 @@ var agents = {
         project: ".claude/commands",
         global: join2(home, ".claude/commands")
       },
-      mode: { project: ".claude/skills", global: join2(home, ".claude/skills") }
+      mode: { project: ".claude/skills", global: join2(home, ".claude/skills") },
+      "system-prompt": {
+        project: ".claude/system-prompts",
+        global: join2(home, ".claude/system-prompts")
+      }
     }
   },
   codex: {
@@ -297,7 +333,11 @@ var agents = {
         project: ".codex/commands",
         global: join2(home, ".codex/commands")
       },
-      mode: { project: ".codex/skills", global: join2(home, ".codex/skills") }
+      mode: { project: ".codex/skills", global: join2(home, ".codex/skills") },
+      "system-prompt": {
+        project: ".codex/system-prompts",
+        global: join2(home, ".codex/system-prompts")
+      }
     }
   },
   cursor: {
@@ -311,7 +351,11 @@ var agents = {
         project: ".cursor/commands",
         global: join2(home, ".cursor/commands")
       },
-      mode: { project: ".cursor/skills", global: join2(home, ".cursor/skills") }
+      mode: { project: ".cursor/skills", global: join2(home, ".cursor/skills") },
+      "system-prompt": {
+        project: ".cursor/system-prompts",
+        global: join2(home, ".cursor/system-prompts")
+      }
     }
   },
   "gemini-cli": {
@@ -328,7 +372,11 @@ var agents = {
         project: ".gemini/commands",
         global: join2(home, ".gemini/commands")
       },
-      mode: { project: ".gemini/skills", global: join2(home, ".gemini/skills") }
+      mode: { project: ".gemini/skills", global: join2(home, ".gemini/skills") },
+      "system-prompt": {
+        project: ".gemini/system-prompts",
+        global: join2(home, ".gemini/system-prompts")
+      }
     }
   },
   "copilot-cli": {
@@ -353,6 +401,10 @@ var agents = {
       mode: {
         project: ".copilot/skills",
         global: join2(home, ".copilot/skills")
+      },
+      "system-prompt": {
+        project: ".copilot/system-prompts",
+        global: join2(home, ".copilot/system-prompts")
       }
     }
   },
@@ -377,6 +429,10 @@ var agents = {
       mode: {
         project: ".factory/skills",
         global: join2(home, ".factory/skills")
+      },
+      "system-prompt": {
+        project: ".factory/system-prompts",
+        global: join2(home, ".factory/system-prompts")
       }
     }
   }
@@ -417,6 +473,16 @@ async function installAsset(asset, agentType, options = {}) {
       }
       await mkdir(dest, { recursive: true });
       await cp(asset.path, dest, { recursive: true });
+      return { success: true, path: dest };
+    }
+    if (asset.kind === "system-prompt") {
+      const dir = join3(destBase, asset.category);
+      await mkdir(dir, { recursive: true });
+      const dest = join3(dir, `${asset.name}.md`);
+      if (existsSync2(dest)) {
+        await rm(dest, { force: true });
+      }
+      await cp(asset.path, dest);
       return { success: true, path: dest };
     }
     if (asset.kind === "agent" || asset.kind === "command") {
@@ -512,7 +578,7 @@ function sourceDirOf(filePath) {
 async function isAssetInstalled(asset, agentType, options = {}) {
   const destBase = getKindDir(agentType, asset.kind, options);
   if (!destBase) return false;
-  const target = asset.kind === "skill" || asset.kind === "mode" ? join3(destBase, asset.name) : join3(
+  const target = asset.kind === "skill" || asset.kind === "mode" ? join3(destBase, asset.name) : asset.kind === "system-prompt" ? join3(destBase, asset.category, asset.name + ".md") : join3(
     destBase,
     asset.name + (agentType === "copilot-cli" && asset.kind === "agent" ? ".agent.md" : ".md")
   );
@@ -528,6 +594,8 @@ function getInstallTarget(asset, agentType, options = {}) {
   if (!destBase) return null;
   if (asset.kind === "skill" || asset.kind === "mode")
     return join3(destBase, asset.name);
+  if (asset.kind === "system-prompt")
+    return join3(destBase, asset.category, asset.name + ".md");
   const ext = agentType === "copilot-cli" && asset.kind === "agent" ? ".agent.md" : ".md";
   return join3(destBase, asset.name + ext);
 }
@@ -719,7 +787,7 @@ _vibe_completions() {
     agents="opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
 
     # Asset kinds
-    kinds="skill agent command mode"
+    kinds="skill agent command mode system-prompt"
 
     # Common categories
     categories="development languages testing documentation security devops ai-ml web mobile general"
@@ -782,8 +850,8 @@ _vibe() {
         '--agent[Specify target CLIs]:agent:(opencode claude-code codex cursor gemini-cli copilot-cli factory-droid)'
         '-s[Specify asset names]:asset:'
         '--asset[Specify asset names]:asset:'
-        '-k[Filter by kind]:kind:(skill agent command mode)'
-        '--kind[Filter by kind]:kind:(skill agent command mode)'
+        '-k[Filter by kind]:kind:(skill agent command mode system-prompt)'
+        '--kind[Filter by kind]:kind:(skill agent command mode system-prompt)'
         '-c[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
         '--category[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
         '-l[List available assets]'
@@ -823,7 +891,7 @@ complete -c vibe -l dry-run -d "Show what would be installed without installing"
 complete -c vibe -s a -l agent -d "Specify target CLI" -xa "opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
 
 # Asset kind option
-complete -c vibe -s k -l kind -d "Filter by asset kind" -xa "skill agent command mode"
+complete -c vibe -s k -l kind -d "Filter by asset kind" -xa "skill agent command mode system-prompt"
 
 # Category option
 complete -c vibe -s c -l category -d "Filter by category" -xa "development languages testing documentation security devops ai-ml web mobile general"
@@ -1677,6 +1745,8 @@ Examples:
   vibe list                      Show all available assets
   vibe list --installed          Show what's already installed
   vibe list -k skill -c devops   List skills in the devops category
+  vibe list -k system-prompt     List the 758 vendor system prompts
+  vibe add claude-opus-4.8       Install a leaked system prompt as reference
   vibe info tony-stark-mode      Preview an asset before installing
   vibe search "react"            Fuzzy-search the asset library
   vibe uninstall tony-stark      Remove an installed asset
@@ -1687,7 +1757,7 @@ Examples:
   vibe targets                   Show supported target CLIs
   vibe completions zsh           Generate shell completions`;
 program.name("vibe").description(
-  "Install Vibe AI-agent assets (skills/agents/commands/modes) onto coding-agent CLIs." + EXAMPLES
+  "Install Vibe AI-agent assets (skills/agents/commands/modes/system-prompts) onto coding-agent CLIs." + EXAMPLES
 ).version(VERSION).argument("[source]", "Path to Vibe repo root (default: bundled or ./)", "").option(
   "-g, --global",
   "Install globally (user-level) instead of per-project"
@@ -1699,7 +1769,7 @@ program.name("vibe").description(
   "Specific asset names to install (skips picker)"
 ).option(
   "-k, --kind <kinds...>",
-  "Filter by kind: skill | agent | command | mode"
+  "Filter by kind: skill | agent | command | mode | system-prompt"
 ).option("-c, --category <category>", "Filter by category").option("-l, --list", "List available assets without installing").option("-y, --yes", "Skip confirmation prompts (auto-accept)").option("--json", "JSON output for scripting/CI").option("--preview <name>", "Preview a single asset and exit").option("--no-animation", "Skip startup animation (for slow terminals or scripts)").option("--dry-run", "Show what would be installed without actually installing").action(async (source, options) => {
   await main(source || defaultSource(), options);
 });
@@ -1864,10 +1934,39 @@ program.command("update [names...]").description("Re-install assets to get the l
 program.parse();
 function parseKinds(input) {
   if (!input || input.length === 0) return void 0;
-  const valid = ["skill", "agent", "command", "mode"];
+  const valid = ["skill", "agent", "command", "mode", "system-prompt"];
   return input.filter(
     (k) => valid.includes(k)
   );
+}
+var ALL_KINDS = ["skill", "agent", "command", "mode", "system-prompt"];
+async function listInstalledEntries(dir) {
+  const fs = await import("fs/promises");
+  const out = [];
+  let entries;
+  try {
+    entries = await fs.readdir(dir, { withFileTypes: true });
+  } catch {
+    return out;
+  }
+  for (const entry of entries) {
+    const full = join5(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...await listInstalledEntries(full));
+    } else if (entry.isFile()) {
+      const name = entry.name.replace(/\.(agent\.md|md)$/, "");
+      if (name.toUpperCase() === "README") continue;
+      out.push({ name, path: full });
+    }
+  }
+  return out;
+}
+async function flushAndExit(code) {
+  await new Promise((res) => {
+    if (process.stdout.write("")) res();
+    else process.stdout.once("drain", () => res());
+  });
+  process.exit(code);
 }
 async function main(source, options) {
   const config = await loadConfig();
@@ -1902,7 +2001,7 @@ async function main(source, options) {
     process.exit(1);
   }
   const counts = summariseCounts(assets);
-  const countMsg = `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"} ${colors.muted(`(${counts.skill} skills \xB7 ${counts.agent} agents \xB7 ${counts.command} commands \xB7 ${counts.mode} modes)`)}`;
+  const countMsg = `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"} ${colors.muted(`(${counts.skill} skills \xB7 ${counts.agent} agents \xB7 ${counts.command} commands \xB7 ${counts.mode} modes \xB7 ${counts["system-prompt"]} system-prompts)`)}`;
   if (animCtrl) {
     p.log.step(countMsg);
   } else {
@@ -1928,7 +2027,7 @@ async function main(source, options) {
     }
     if (json) console.log(formatAssetPreviewAsJson(target, VERSION));
     else printAssetPreview(target);
-    process.exit(0);
+    await flushAndExit(0);
   }
   if (options.list) {
     if (json) {
@@ -1936,7 +2035,7 @@ async function main(source, options) {
     } else {
       printGroupedList(assets);
     }
-    process.exit(0);
+    await flushAndExit(0);
   }
   let selected;
   if (options.asset && options.asset.length > 0) {
@@ -2175,7 +2274,7 @@ async function main(source, options) {
       failed.length === 0 ? colors.success("Done!") : colors.warning("Completed with errors")
     );
   }
-  process.exit(failed.length > 0 ? 1 : 0);
+  await flushAndExit(failed.length > 0 ? 1 : 0);
 }
 function formatBytes(bytes) {
   if (bytes < 1024) return `${bytes} B`;
@@ -2326,28 +2425,20 @@ async function runListInstalled(opts) {
   const assetMap = new Map(allAssets.map((a) => [a.name.toLowerCase(), a]));
   const installed = [];
   for (const agentType of targetAgents) {
-    for (const kind of ["skill", "agent", "command", "mode"]) {
+    for (const kind of ALL_KINDS) {
       if (opts.kind && !opts.kind.includes(kind)) continue;
       const dir = getKindDir(agentType, kind, { global });
       if (!dir) continue;
-      try {
-        const entries = await import("fs/promises").then(
-          (fs) => fs.readdir(dir, { withFileTypes: true })
-        );
-        for (const entry of entries) {
-          const name = entry.name.replace(/\.(md|agent\.md)$/, "");
-          if (name.toUpperCase() === "README") continue;
-          const fullPath = join5(dir, entry.name);
-          const bundled = assetMap.get(name.toLowerCase());
-          installed.push({
-            name,
-            kind,
-            agent: agents[agentType].displayName,
-            path: fullPath,
-            category: bundled?.category ?? "unknown"
-          });
-        }
-      } catch {
+      const entries = await listInstalledEntries(dir);
+      for (const entry of entries) {
+        const bundled = assetMap.get(entry.name.toLowerCase());
+        installed.push({
+          name: entry.name,
+          kind,
+          agent: agents[agentType].displayName,
+          path: entry.path,
+          category: bundled?.category ?? "unknown"
+        });
       }
     }
   }
@@ -2409,7 +2500,8 @@ async function runUninstall(names, opts) {
       continue;
     }
     for (const agentType of targetAgents) {
-      for (const kind of ["skill", "agent", "command", "mode"]) {
+      for (const kind of ALL_KINDS) {
+        if (asset.kind !== kind) continue;
         const targetPath = getInstallTarget(asset, agentType, { global });
         if (!targetPath) continue;
         try {
@@ -2493,19 +2585,11 @@ async function runUpdate(names, opts) {
     const allAssets = await discoverAssets(root);
     const installedNames = /* @__PURE__ */ new Set();
     for (const agentType of targetAgents) {
-      for (const kind of ["skill", "agent", "command", "mode"]) {
+      for (const kind of ALL_KINDS) {
         const dir = getKindDir(agentType, kind, { global });
         if (!dir) continue;
-        try {
-          const entries = await import("fs/promises").then(
-            (fs) => fs.readdir(dir, { withFileTypes: true })
-          );
-          for (const entry of entries) {
-            const name = entry.name.replace(/\.(md|agent\.md)$/, "");
-            if (name.toUpperCase() === "README") continue;
-            installedNames.add(name);
-          }
-        } catch {
+        for (const entry of await listInstalledEntries(dir)) {
+          installedNames.add(entry.name);
         }
       }
     }

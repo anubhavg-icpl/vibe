@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 /**
- * Generates system-prompts/INDEX.md — a deterministic, grouped index of every
- * system-prompt reference file under system-prompts/, grouped by vendor folder.
+ * Generates two artifacts for the system-prompts/ reference collection:
+ *   1. system-prompts/INDEX.md   — human-readable index, grouped by vendor.
+ *   2. system-prompts/index.json — machine manifest the VIBE CLI reads so the
+ *      758-file collection is installable/searchable without walking the tree.
  *
  * No external dependencies (node:fs + node:path only).
  *
  * Run:  npm run build:system-prompts
  */
 
-import { readdirSync, statSync, writeFileSync } from "node:fs";
+import { readdirSync, statSync, writeFileSync, readFileSync } from "node:fs";
 import { join, basename, relative, sep, posix, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -42,6 +44,23 @@ function walk(dir, out) {
 /** URL-encode spaces in a forward-slash path so GitHub links resolve. */
 const encodeLink = (relPath) => relPath.replace(/ /g, "%20");
 
+/** First meaningful line of a prompt → a short, one-line description. */
+function firstLineDescription(abs) {
+  let raw;
+  try {
+    raw = readFileSync(abs, "utf-8");
+  } catch {
+    return "Reference system prompt.";
+  }
+  for (const line of raw.split("\n")) {
+    const t = line.trim();
+    if (t.length >= 12 && !t.startsWith("#") && !t.startsWith("---") && !t.startsWith("<!--")) {
+      return t.length > 160 ? t.slice(0, 157) + "…" : t;
+    }
+  }
+  return "Reference system prompt.";
+}
+
 function main() {
   const files = walk(PROMPTS_DIR, []);
 
@@ -65,6 +84,40 @@ function main() {
   }
 
   const totalFiles = files.length;
+
+  // ── Machine manifest (system-prompts/index.json) ──────────────────────────
+  // Stable, unique `name` per prompt (basename; vendor-prefixed on collision)
+  // so `vibe add <name>` is deterministic. `category` is the vendor folder.
+  const seenNames = new Set();
+  const manifestPrompts = [];
+  for (const v of vendors) {
+    for (const f of byVendor.get(v)) {
+      const base = f.name.replace(/\.md$/, "");
+      let name = base;
+      if (seenNames.has(name.toLowerCase())) {
+        name = `${v.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${base}`;
+      }
+      seenNames.add(name.toLowerCase());
+      manifestPrompts.push({
+        name,
+        category: v,
+        path: f.rel,
+        sizeKB: Number(f.sizeKB.toFixed(1)),
+        description: firstLineDescription(join(ROOT, f.rel.split("/").join(sep))),
+      });
+    }
+  }
+  manifestPrompts.sort((a, b) => a.name.localeCompare(b.name));
+  const manifest = {
+    version: 1,
+    count: manifestPrompts.length,
+    vendors: vendors.map((v) => ({ name: v, count: byVendor.get(v).length })),
+    prompts: manifestPrompts,
+  };
+  writeFileSync(
+    join(PROMPTS_DIR, "index.json"),
+    JSON.stringify(manifest, null, 2) + "\n",
+  );
 
   // Build the markdown.
   const lines = [];
@@ -101,7 +154,7 @@ function main() {
   writeFileSync(join(PROMPTS_DIR, "INDEX.md"), lines.join("\n"));
 
   console.log(
-    `Wrote system-prompts/INDEX.md — ${totalFiles} files across ${vendors.length} vendors.`,
+    `Wrote system-prompts/INDEX.md + index.json — ${totalFiles} files across ${vendors.length} vendors.`,
   );
 }
 

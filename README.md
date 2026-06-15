@@ -59,7 +59,7 @@ Did your AI just suggest using `var` in TypeScript? Recommend jQuery in 2026? Th
 | **120 plugins**                        | Ready-to-install plugin trees with their own agents + commands                            |
 | **111 rules**                          | Universal behavior policies that work across Claude / Copilot / Gemini / Aider            |
 | **106 prompt templates**               | Domain prompts from the AI Engineering from Scratch curriculum + more                     |
-| **758 system prompts** (reference)     | Raw vendor system-prompt leaks + Claude Code prompts for study — reference-only           |
+| **758 system prompts**                 | Raw vendor system-prompt leaks + Claude Code prompts — installable via `-k system-prompt` |
 | **18 recipes**                         | End-to-end workflows (landing-page-in-20-min, repo-to-design-system, etc.)                |
 | **33 Mythos security modes**           | Defensive vuln-discovery / red-team / patching / disclosure inspired by Project Glasswing |
 | **174 design-system modes**            | Airbnb / Apple / Bento / Brutalist / Cinematic / Glass — pick an aesthetic                |
@@ -222,7 +222,7 @@ Copy mode content into your AI assistant. Done.
   <img src="assets/command-line-showing-npx-vibe.webp" alt="VIBE CLI in action" width="700"/>
 </p>
 
-Vibe ships a `vibe` CLI that installs the **entire library** (skills, agents, commands, modes) into any of **7 coding-agent CLIs** in one shot. No `npm install -g`, no clone — just `npx`.
+Vibe ships a `vibe` CLI that installs the **entire library** (skills, agents, commands, modes, system-prompts) into any of **7 coding-agent CLIs** in one shot. No `npm install -g`, no clone — just `npx`.
 
 ```bash
 # Interactive — splash, fuzzy picker, target detection, multi-select
@@ -285,7 +285,7 @@ Pin to a specific revision: `npx -y github:anubhavg-icpl/vibe#master`. Or alias 
 ### How it works
 
 1. `npx github:anubhavg-icpl/vibe` clones this repo to a temp cache and runs the bundled `dist/index.js`.
-2. The CLI discovers all 1,965 assets across `skills/`, `agents/`, `commands/`, `modes/` in the cloned repo.
+2. The CLI discovers every asset across `skills/`, `agents/`, `commands/`, `modes/`, and `system-prompts/` in the cloned repo.
 3. Skills are copied as-is (already in `SKILL.md` format). Modes are converted to `SKILL.md` skills with frontmatter. Agents and commands are dropped as `.md` files (with `.agent.md` extension for Copilot).
 4. Detection auto-selects targets that exist on your machine. Use `--agent` to override.
 
@@ -311,12 +311,29 @@ All originals untouched in their dirs of origin.
 
 ## System Prompts (Reference)
 
-A curated collection of **758 raw vendor system prompts** lives under `system-prompts/` — leaked/published chatbot system prompts from across the industry (Anthropic, OpenAI, Google, Meta, Microsoft, Mistral, Notion, Perplexity, Qwen, xAI, Cursor, and more) plus version-tracked Claude Code system/agent/tool prompts. They're here for study: reverse-engineering how production assistants are steered, formatted, and guardrailed. This collection is **reference-only — not installable via the VIBE CLI or any plugin marketplace.** The CLI only handles `skill`, `agent`, `command`, and `mode` kinds; raw system prompts are documents to read, not assets to load into a harness.
+A curated collection of **758 raw vendor system prompts** lives under `system-prompts/` — leaked/published chatbot system prompts from across the industry (Anthropic, OpenAI, Google, Meta, Microsoft, Mistral, Notion, Perplexity, Qwen, xAI, Cursor, and more) plus version-tracked Claude Code system/agent/tool prompts. They're here for study: reverse-engineering how production assistants are steered, formatted, and guardrailed.
 
-How to access them:
+These are a first-class **`system-prompt` asset kind** in the VIBE CLI — browse, search, and install them like any other asset. Installed prompts land as reference docs under `<cli>/system-prompts/<vendor>/<name>.md` (e.g. `.claude/system-prompts/Anthropic/claude-opus-4.8.md`); they are kept as documents to read, not auto-loaded as skills.
+
+Install with the CLI:
+
+```bash
+# List / search the collection
+npx -y github:anubhavg-icpl/vibe list -k system-prompt
+npx -y github:anubhavg-icpl/vibe search grok -k system-prompt
+
+# Preview one, then install it (alone or with others)
+npx -y github:anubhavg-icpl/vibe info claude-opus-4.8
+npx -y github:anubhavg-icpl/vibe add claude-opus-4.8 grok-4 -a claude-code
+
+# Install globally instead of per-project
+npx -y github:anubhavg-icpl/vibe add gpt-5-thinking -g
+```
+
+Or read them in place without installing:
 
 - **Clone the repo** and open `system-prompts/` — start with `system-prompts/README.md` for full attribution.
-- **Browse `system-prompts/INDEX.md`** for the generated index of all 758 files.
+- **Browse `system-prompts/INDEX.md`** for the generated index of all 758 files (`system-prompts/index.json` is the machine manifest the CLI reads).
 - **Raw-download a single file** straight from GitHub when you only need one.
 
 Sourced from two upstream repos, both untouched and credited:
@@ -413,29 +430,29 @@ rules/
 
 ## Stats
 
-| Metric                        | Value   |
-| ----------------------------- | ------- |
-| **Total Modes**               | **853** |
-| **Categories**                | **52**  |
-| Mythos security modes (4 sub) | 33      |
-| Design-system modes           | 174     |
-| Engineer-persona modes        | 19      |
-| AI / RAG / training / eval    | 109     |
-| Modern-stack (web/edge/data)  | 53      |
-| Local LLM + model-authoring   | 36      |
-| Android (CLI + platform)      | 30      |
+| Metric                        | Value    |
+| ----------------------------- | -------- |
+| **Total Modes**               | **853**  |
+| **Categories**                | **52**   |
+| Mythos security modes (4 sub) | 33       |
+| Design-system modes           | 174      |
+| Engineer-persona modes        | 19       |
+| AI / RAG / training / eval    | 109      |
+| Modern-stack (web/edge/data)  | 53       |
+| Local LLM + model-authoring   | 36       |
+| Android (CLI + platform)      | 30       |
 | **Total Skills**              | **5340** |
-| **Total Subagents**           | **200** |
-| **Total Commands**            | **112** |
-| **Total Plugins**             | **120** |
-| **Total Rules**               | **111** |
-| **Total Prompts**             | **106** |
-| **Total Recipes**             | **18**  |
-| **Output Styles**             | **13**  |
-| **Templates**                 | **13**  |
-| Languages covered             | 14+     |
-| Project templates             | 22+     |
-| **Bundled external sources**  | **7**   |
+| **Total Subagents**           | **200**  |
+| **Total Commands**            | **112**  |
+| **Total Plugins**             | **120**  |
+| **Total Rules**               | **111**  |
+| **Total Prompts**             | **106**  |
+| **Total Recipes**             | **18**   |
+| **Output Styles**             | **13**   |
+| **Templates**                 | **13**   |
+| Languages covered             | 14+      |
+| Project templates             | 22+      |
+| **Bundled external sources**  | **7**    |
 
 ---
 

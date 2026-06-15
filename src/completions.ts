@@ -13,7 +13,7 @@ _vibe_completions() {
     agents="opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
 
     # Asset kinds
-    kinds="skill agent command mode"
+    kinds="skill agent command mode system-prompt"
 
     # Common categories
     categories="development languages testing documentation security devops ai-ml web mobile general"
@@ -77,8 +77,8 @@ _vibe() {
         '--agent[Specify target CLIs]:agent:(opencode claude-code codex cursor gemini-cli copilot-cli factory-droid)'
         '-s[Specify asset names]:asset:'
         '--asset[Specify asset names]:asset:'
-        '-k[Filter by kind]:kind:(skill agent command mode)'
-        '--kind[Filter by kind]:kind:(skill agent command mode)'
+        '-k[Filter by kind]:kind:(skill agent command mode system-prompt)'
+        '--kind[Filter by kind]:kind:(skill agent command mode system-prompt)'
         '-c[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
         '--category[Filter by category]:category:(development languages testing documentation security devops ai-ml web mobile general)'
         '-l[List available assets]'
@@ -119,7 +119,7 @@ complete -c vibe -l dry-run -d "Show what would be installed without installing"
 complete -c vibe -s a -l agent -d "Specify target CLI" -xa "opencode claude-code codex cursor gemini-cli copilot-cli factory-droid"
 
 # Asset kind option
-complete -c vibe -s k -l kind -d "Filter by asset kind" -xa "skill agent command mode"
+complete -c vibe -s k -l kind -d "Filter by asset kind" -xa "skill agent command mode system-prompt"
 
 # Category option
 complete -c vibe -s c -l category -d "Filter by category" -xa "development languages testing documentation security devops ai-ml web mobile general"

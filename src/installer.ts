@@ -52,6 +52,19 @@ export async function installAsset(
       return { success: true, path: dest };
     }
 
+    if (asset.kind === "system-prompt") {
+      // Reference docs: copy the raw .md into a vendor subfolder so the 758
+      // files never collide and stay browsable under <cli>/system-prompts/.
+      const dir = join(destBase, asset.category);
+      await mkdir(dir, { recursive: true });
+      const dest = join(dir, `${asset.name}.md`);
+      if (existsSync(dest)) {
+        await rm(dest, { force: true });
+      }
+      await cp(asset.path, dest);
+      return { success: true, path: dest };
+    }
+
     if (asset.kind === "agent" || asset.kind === "command") {
       await mkdir(destBase, { recursive: true });
       const ext = agentType === "copilot-cli" && asset.kind === "agent"
@@ -169,13 +182,15 @@ export async function isAssetInstalled(
   const target =
     asset.kind === "skill" || asset.kind === "mode"
       ? join(destBase, asset.name)
-      : join(
-          destBase,
-          asset.name +
-            (agentType === "copilot-cli" && asset.kind === "agent"
-              ? ".agent.md"
-              : ".md"),
-        );
+      : asset.kind === "system-prompt"
+        ? join(destBase, asset.category, asset.name + ".md")
+        : join(
+            destBase,
+            asset.name +
+              (agentType === "copilot-cli" && asset.kind === "agent"
+                ? ".agent.md"
+                : ".md"),
+          );
   try {
     await access(target);
     return true;
@@ -193,6 +208,8 @@ export function getInstallTarget(
   if (!destBase) return null;
   if (asset.kind === "skill" || asset.kind === "mode")
     return join(destBase, asset.name);
+  if (asset.kind === "system-prompt")
+    return join(destBase, asset.category, asset.name + ".md");
   const ext =
     agentType === "copilot-cli" && asset.kind === "agent" ? ".agent.md" : ".md";
   return join(destBase, asset.name + ext);

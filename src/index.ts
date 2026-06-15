@@ -269,6 +269,8 @@ Examples:
   vibe list                      Show all available assets
   vibe list --installed          Show what's already installed
   vibe list -k skill -c devops   List skills in the devops category
+  vibe list -k system-prompt     List the 758 vendor system prompts
+  vibe add claude-opus-4.8       Install a leaked system prompt as reference
   vibe info tony-stark-mode      Preview an asset before installing
   vibe search "react"            Fuzzy-search the asset library
   vibe uninstall tony-stark      Remove an installed asset
@@ -282,7 +284,7 @@ Examples:
 program
   .name("vibe")
   .description(
-    "Install Vibe AI-agent assets (skills/agents/commands/modes) onto coding-agent CLIs." +
+    "Install Vibe AI-agent assets (skills/agents/commands/modes/system-prompts) onto coding-agent CLIs." +
     EXAMPLES,
   )
   .version(VERSION)
@@ -301,7 +303,7 @@ program
   )
   .option(
     "-k, --kind <kinds...>",
-    "Filter by kind: skill | agent | command | mode",
+    "Filter by kind: skill | agent | command | mode | system-prompt",
   )
   .option("-c, --category <category>", "Filter by category")
   .option("-l, --list", "List available assets without installing")
@@ -548,10 +550,51 @@ program.parse();
 
 function parseKinds(input?: string[]): AssetKind[] | undefined {
   if (!input || input.length === 0) return undefined;
-  const valid: AssetKind[] = ["skill", "agent", "command", "mode"];
+  const valid: AssetKind[] = ["skill", "agent", "command", "mode", "system-prompt"];
   return input.filter((k): k is AssetKind =>
     valid.includes(k as AssetKind),
   ) as AssetKind[];
+}
+
+/** Every installable kind, used when scanning on-disk install directories. */
+const ALL_KINDS: AssetKind[] = ["skill", "agent", "command", "mode", "system-prompt"];
+
+/** Recursively collect file basenames (no extension) under a directory. */
+async function listInstalledEntries(
+  dir: string,
+): Promise<Array<{ name: string; path: string }>> {
+  const fs = await import("fs/promises");
+  const out: Array<{ name: string; path: string }> = [];
+  let entries;
+  try {
+    entries = await fs.readdir(dir, { withFileTypes: true });
+  } catch {
+    return out;
+  }
+  for (const entry of entries) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...(await listInstalledEntries(full)));
+    } else if (entry.isFile()) {
+      const name = entry.name.replace(/\.(agent\.md|md)$/, "");
+      if (name.toUpperCase() === "README") continue;
+      out.push({ name, path: full });
+    }
+  }
+  return out;
+}
+
+/**
+ * Exit only after stdout has fully drained. `process.exit()` can truncate large
+ * buffered output when piped (e.g. `vibe list --json | jq`); this waits for the
+ * write buffer to flush first.
+ */
+async function flushAndExit(code: number): Promise<never> {
+  await new Promise<void>((res) => {
+    if (process.stdout.write("")) res();
+    else process.stdout.once("drain", () => res());
+  });
+  process.exit(code);
 }
 
 async function main(source: string, options: CliOptions): Promise<void> {
@@ -599,7 +642,7 @@ async function main(source: string, options: CliOptions): Promise<void> {
   const counts = summariseCounts(assets);
   const countMsg =
     `Found ${colors.success(String(assets.length))} item${assets.length === 1 ? "" : "s"}` +
-    ` ${colors.muted(`(${counts.skill} skills · ${counts.agent} agents · ${counts.command} commands · ${counts.mode} modes)`)}`;
+    ` ${colors.muted(`(${counts.skill} skills · ${counts.agent} agents · ${counts.command} commands · ${counts.mode} modes · ${counts["system-prompt"]} system-prompts)`)}`;
   if (animCtrl) {
     p.log.step(countMsg);
   } else {
@@ -628,7 +671,7 @@ async function main(source: string, options: CliOptions): Promise<void> {
     }
     if (json) console.log(formatAssetPreviewAsJson(target, VERSION));
     else printAssetPreview(target);
-    process.exit(0);
+    await flushAndExit(0);
   }
 
   // List mode
@@ -638,7 +681,7 @@ async function main(source: string, options: CliOptions): Promise<void> {
     } else {
       printGroupedList(assets);
     }
-    process.exit(0);
+    await flushAndExit(0);
   }
 
   // Selection
@@ -899,7 +942,7 @@ async function main(source: string, options: CliOptions): Promise<void> {
       failed.length === 0 ? colors.success("Done!") : colors.warning("Completed with errors"),
     );
   }
-  process.exit(failed.length > 0 ? 1 : 0);
+  await flushAndExit(failed.length > 0 ? 1 : 0);
 }
 
 /* ───────────────────────── Helpers ─────────────────────────────────────── */
@@ -1084,29 +1127,21 @@ async function runListInstalled(
   }> = [];
 
   for (const agentType of targetAgents) {
-    for (const kind of ["skill", "agent", "command", "mode"] as AssetKind[]) {
+    for (const kind of ALL_KINDS) {
       if (opts.kind && !opts.kind.includes(kind)) continue;
       const dir = getKindDir(agentType, kind, { global });
       if (!dir) continue;
-      try {
-        const entries = await import("fs/promises").then((fs) =>
-          fs.readdir(dir, { withFileTypes: true }),
-        );
-        for (const entry of entries) {
-          const name = entry.name.replace(/\.(md|agent\.md)$/, "");
-          if (name.toUpperCase() === "README") continue;
-          const fullPath = join(dir, entry.name);
-          const bundled = assetMap.get(name.toLowerCase());
-          installed.push({
-            name,
-            kind,
-            agent: agents[agentType].displayName,
-            path: fullPath,
-            category: bundled?.category ?? "unknown",
-          });
-        }
-      } catch {
-        // Directory doesn't exist — skip
+      // Recursive walk handles flat kinds and vendor-nested system-prompts.
+      const entries = await listInstalledEntries(dir);
+      for (const entry of entries) {
+        const bundled = assetMap.get(entry.name.toLowerCase());
+        installed.push({
+          name: entry.name,
+          kind,
+          agent: agents[agentType].displayName,
+          path: entry.path,
+          category: bundled?.category ?? "unknown",
+        });
       }
     }
   }
@@ -1180,7 +1215,8 @@ async function runUninstall(names: string[], opts: CliOptions): Promise<void> {
     }
 
     for (const agentType of targetAgents) {
-      for (const kind of ["skill", "agent", "command", "mode"] as AssetKind[]) {
+      for (const kind of ALL_KINDS) {
+        if (asset.kind !== kind) continue;
         const targetPath = getInstallTarget(asset, agentType, { global });
         if (!targetPath) continue;
 
@@ -1280,20 +1316,11 @@ async function runUpdate(names: string[], opts: CliOptions): Promise<void> {
     const installedNames = new Set<string>();
 
     for (const agentType of targetAgents) {
-      for (const kind of ["skill", "agent", "command", "mode"] as AssetKind[]) {
+      for (const kind of ALL_KINDS) {
         const dir = getKindDir(agentType, kind, { global });
         if (!dir) continue;
-        try {
-          const entries = await import("fs/promises").then((fs) =>
-            fs.readdir(dir, { withFileTypes: true }),
-          );
-          for (const entry of entries) {
-            const name = entry.name.replace(/\.(md|agent\.md)$/, "");
-            if (name.toUpperCase() === "README") continue;
-            installedNames.add(name);
-          }
-        } catch {
-          // skip
+        for (const entry of await listInstalledEntries(dir)) {
+          installedNames.add(entry.name);
         }
       }
     }

@@ -5,9 +5,6 @@ tests/
 docs/
 config/
 
-# Reference-only collection — kept in git, excluded from npm package
-system-prompts/
-
 # Tooling configs
 .eslintrc*
 .prettierrc*

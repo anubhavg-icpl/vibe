@@ -40,6 +40,10 @@ export const agents: Record<AgentType, AgentConfig> = {
         project: ".opencode/skill",
         global: join(home, ".config/opencode/skill"),
       },
+      "system-prompt": {
+        project: ".opencode/system-prompts",
+        global: join(home, ".config/opencode/system-prompts"),
+      },
     },
   },
   "claude-code": {
@@ -54,6 +58,10 @@ export const agents: Record<AgentType, AgentConfig> = {
         global: join(home, ".claude/commands"),
       },
       mode: { project: ".claude/skills", global: join(home, ".claude/skills") },
+      "system-prompt": {
+        project: ".claude/system-prompts",
+        global: join(home, ".claude/system-prompts"),
+      },
     },
   },
   codex: {
@@ -68,6 +76,10 @@ export const agents: Record<AgentType, AgentConfig> = {
         global: join(home, ".codex/commands"),
       },
       mode: { project: ".codex/skills", global: join(home, ".codex/skills") },
+      "system-prompt": {
+        project: ".codex/system-prompts",
+        global: join(home, ".codex/system-prompts"),
+      },
     },
   },
   cursor: {
@@ -82,6 +94,10 @@ export const agents: Record<AgentType, AgentConfig> = {
         global: join(home, ".cursor/commands"),
       },
       mode: { project: ".cursor/skills", global: join(home, ".cursor/skills") },
+      "system-prompt": {
+        project: ".cursor/system-prompts",
+        global: join(home, ".cursor/system-prompts"),
+      },
     },
   },
   "gemini-cli": {
@@ -101,6 +117,10 @@ export const agents: Record<AgentType, AgentConfig> = {
         global: join(home, ".gemini/commands"),
       },
       mode: { project: ".gemini/skills", global: join(home, ".gemini/skills") },
+      "system-prompt": {
+        project: ".gemini/system-prompts",
+        global: join(home, ".gemini/system-prompts"),
+      },
     },
   },
   "copilot-cli": {
@@ -126,6 +146,10 @@ export const agents: Record<AgentType, AgentConfig> = {
         project: ".copilot/skills",
         global: join(home, ".copilot/skills"),
       },
+      "system-prompt": {
+        project: ".copilot/system-prompts",
+        global: join(home, ".copilot/system-prompts"),
+      },
     },
   },
   "factory-droid": {
@@ -149,6 +173,10 @@ export const agents: Record<AgentType, AgentConfig> = {
       mode: {
         project: ".factory/skills",
         global: join(home, ".factory/skills"),
+      },
+      "system-prompt": {
+        project: ".factory/system-prompts",
+        global: join(home, ".factory/system-prompts"),
       },
     },
   },

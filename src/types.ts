@@ -18,7 +18,7 @@ export type AgentType =
  * Vibe's bundled asset taxonomy. A single asset is one self-contained item
  * the user can install — a skill folder, an agent .md, a mode prompt, etc.
  */
-export type AssetKind = "skill" | "agent" | "command" | "mode";
+export type AssetKind = "skill" | "agent" | "command" | "mode" | "system-prompt";
 
 export interface Asset {
   kind: AssetKind;

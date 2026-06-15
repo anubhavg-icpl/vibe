@@ -59,6 +59,7 @@
     "modes",
     "rules",
     "prompts",
+    "system-prompts",
     "README.md",
     "LICENSE"
   ],
