@@ -29,12 +29,9 @@ async function guarded(action: () => Promise<void>): Promise<void> {
 }
 
 function mergeRunProfile(base: ModelProfile | undefined, opts: RunOptions): ModelProfile {
-  if (!base && !opts.target) {
-    throw new Error("No model profile selected. Use --profile, --target, or set a default with vibe profile use.");
-  }
   const profile: ModelProfile = {
     ...base,
-    target: opts.target ? parseModelTarget(opts.target) : base!.target,
+    target: opts.target ? parseModelTarget(opts.target) : (base?.target ?? "codex"),
     model: opts.model ?? base?.model,
     effort: opts.effort ?? base?.effort,
     approvalMode: opts.approvalMode ?? base?.approvalMode,

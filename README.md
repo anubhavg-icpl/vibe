@@ -272,6 +272,9 @@ target CLI's native secure storage; Vibe never copies API keys or OAuth tokens.
 vibe models
 vibe models claude --json
 
+# No setup required: Vibe falls back to Codex when no profile is selected
+vibe run "Explain this repository"
+
 # Save reusable profiles in .vibeconfig.yaml
 vibe profile set codex-deep -t codex -m gpt-5.6-sol --effort high --sandbox workspace-write --default
 vibe profile set claude-plan -t claude -m opus --effort high --approval-mode plan

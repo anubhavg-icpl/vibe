@@ -77,3 +77,15 @@ test("model CLI commands work together in an isolated project", async () => {
     await rm(cwd, { recursive: true, force: true });
   }
 });
+
+test("run defaults to Codex when no profile is configured", async () => {
+  const cwd = await mkdtemp(join(tmpdir(), "vibe-model-cli-default-"));
+  try {
+    const invocation = JSON.parse(run(cwd, ["run", "--dry-run", "--json", "explain this repository"]));
+    assert.equal(invocation.target, "codex");
+    assert.equal(invocation.command, "codex");
+    assert.deepEqual(invocation.args, ["explain this repository"]);
+  } finally {
+    await rm(cwd, { recursive: true, force: true });
+  }
+});
