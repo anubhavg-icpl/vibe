@@ -39,6 +39,7 @@
     "generate:index": "python scripts/generate-modes-index.py",
     "fix:diagrams": "python scripts/fix-diagrams.py",
     "build": "tsup src/index.ts --format esm --dts --clean --target node18",
+    "test": "pnpm run build && tsx --test tests/*.test.ts",
     "build:index": "tsx scripts/build-assets-index.ts",
     "build:system-prompts": "node scripts/build-system-prompts-index.mjs",
     "release": "npm run build && npm run build:index",
@@ -80,7 +81,8 @@
     "figures": "^6.1.0",
     "fuse.js": "^7.1.0",
     "gray-matter": "^4.0.3",
-    "yaml": "^2.6.0"
+    "smol-toml": "^1.7.0",
+    "yaml": "^2.9.0"
   },
   "engines": {
     "node": ">=18.0.0"

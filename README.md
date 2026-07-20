@@ -245,17 +245,50 @@ Pin to a specific revision: `npx -y github:anubhavg-icpl/vibe#master`. Or alias 
 
 ### Subcommands
 
-| Command                    | What it does                                                                |
-| -------------------------- | --------------------------------------------------------------------------- |
-| `vibe`                     | Interactive: splash → fuzzy picker → multi-select → target picker → install |
-| `vibe add <names...>`      | Install one or more named assets (fuzzy match)                              |
-| `vibe list [--kind ...]`   | List bundled assets, optionally filtered by kind                            |
-| `vibe info <name>`         | Rich preview of one asset + per-target install paths                        |
-| `vibe search <query>`      | Fuzzy search the library                                                    |
-| `vibe targets`             | Show the 7 target CLIs and which ones are detected on this machine          |
-| `vibe doctor`              | Diagnose env: node version, asset count, target detection                   |
-| `vibe init`                | Create `.vibeconfig.yaml` in cwd                                            |
-| `vibe completions [shell]` | Generate bash/zsh/fish completion script                                    |
+| Command                     | What it does                                                                |
+| --------------------------- | --------------------------------------------------------------------------- |
+| `vibe`                      | Interactive: splash → fuzzy picker → multi-select → target picker → install |
+| `vibe add <names...>`       | Install one or more named assets (fuzzy match)                              |
+| `vibe list [--kind ...]`    | List bundled assets, optionally filtered by kind                            |
+| `vibe info <name>`          | Rich preview of one asset + per-target install paths                        |
+| `vibe search <query>`       | Fuzzy search the library                                                    |
+| `vibe targets`              | Show the 7 target CLIs and which ones are detected on this machine          |
+| `vibe doctor`               | Diagnose env: node version, asset count, target detection                   |
+| `vibe models [target]`      | Discover configured models for Codex, Claude Code, and Gemini CLI           |
+| `vibe profile ...`          | Create, inspect, select, and remove reusable model profiles                 |
+| `vibe config ...`           | Show the active config path and validate model profiles                     |
+| `vibe run [prompt...]`      | Launch a model CLI through a profile or one-off overrides                   |
+| `vibe exec <target> ...`    | Pass native arguments directly to Codex, Claude Code, or Gemini CLI         |
+| `vibe init`                 | Create `.vibeconfig.yaml` in cwd                                            |
+| `vibe completions [shell]`  | Generate bash/zsh/fish completion script                                    |
+
+### Model profiles (Codex + Claude + Gemini)
+
+Vibe profiles contain model and runtime choices only. Authentication remains in each
+target CLI's native secure storage; Vibe never copies API keys or OAuth tokens.
+
+```bash
+# Discover native config and known models
+vibe models
+vibe models claude --json
+
+# Save reusable profiles in .vibeconfig.yaml
+vibe profile set codex-deep -t codex -m gpt-5.6-sol --effort high --sandbox workspace-write --default
+vibe profile set claude-plan -t claude -m opus --effort high --approval-mode plan
+vibe profile set gemini-plan -t gemini -m auto --approval-mode plan --sandbox on
+
+# Launch interactively or print a one-shot response
+vibe run --profile claude-plan "Review this architecture"
+vibe run --profile gemini-plan --print "Summarize the repository"
+
+# Preview the exact native invocation or use native CLI options directly
+vibe run --profile codex-deep --dry-run
+vibe exec codex --help
+```
+
+Profiles accept arbitrary model IDs so newly released models can be used without a
+Vibe update. `vibe models` combines stable aliases with models found in native target
+configuration and Vibe profiles.
 
 ### Supported Targets (7 CLIs)
 

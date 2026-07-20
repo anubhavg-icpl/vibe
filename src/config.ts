@@ -3,6 +3,7 @@ import { join } from "path";
 import { homedir } from "os";
 import YAML from "yaml";
 import type { AgentType } from "./types.js";
+import type { ModelProfile } from "./models/types.js";
 
 export interface VibeConfig {
   version?: string;
@@ -14,6 +15,10 @@ export interface VibeConfig {
   favorites?: string[];
   theme?: "dark" | "light" | "auto";
   parallelInstalls?: number;
+  modelProfiles?: {
+    default?: string;
+    profiles?: Record<string, ModelProfile>;
+  };
 }
 
 const CONFIG_FILENAME = ".vibeconfig.yaml";
@@ -28,7 +33,22 @@ const DEFAULT_CONFIG: VibeConfig = {
   favorites: [],
   theme: "dark",
   parallelInstalls: 4,
+  modelProfiles: {
+    profiles: {},
+  },
 };
+
+function defaultConfig(): VibeConfig {
+  return {
+    ...DEFAULT_CONFIG,
+    defaults: { ...DEFAULT_CONFIG.defaults },
+    favorites: [...(DEFAULT_CONFIG.favorites ?? [])],
+    modelProfiles: {
+      ...DEFAULT_CONFIG.modelProfiles,
+      profiles: { ...DEFAULT_CONFIG.modelProfiles?.profiles },
+    },
+  };
+}
 
 export async function findConfigFile(cwd?: string): Promise<string | null> {
   const searchPaths = [
@@ -54,7 +74,7 @@ export async function loadConfig(cwd?: string): Promise<VibeConfig> {
   const configPath = await findConfigFile(cwd);
 
   if (!configPath) {
-    return { ...DEFAULT_CONFIG };
+    return defaultConfig();
   }
 
   try {
@@ -68,13 +88,21 @@ export async function loadConfig(cwd?: string): Promise<VibeConfig> {
         ...DEFAULT_CONFIG.defaults,
         ...parsed.defaults,
       },
+      modelProfiles: {
+        ...DEFAULT_CONFIG.modelProfiles,
+        ...parsed.modelProfiles,
+        profiles: {
+          ...DEFAULT_CONFIG.modelProfiles?.profiles,
+          ...parsed.modelProfiles?.profiles,
+        },
+      },
     };
   } catch (error) {
     const msg = error instanceof Error ? error.message : String(error);
     console.warn(
       `[vibe] Warning: Failed to parse config at ${configPath}: ${msg}. Using defaults.`,
     );
-    return { ...DEFAULT_CONFIG };
+    return defaultConfig();
   }
 }
 
@@ -108,6 +136,9 @@ export async function initConfig(cwd?: string): Promise<string> {
     ],
     theme: "dark",
     parallelInstalls: 4,
+    modelProfiles: {
+      profiles: {},
+    },
   };
 
   await saveConfig(exampleConfig, targetPath);

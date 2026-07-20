@@ -1,0 +1,23 @@
+version: 1.0.0
+modelProfiles:
+  default: codex-deep
+  profiles:
+    codex-deep:
+      target: codex
+      description: Deep Codex work with strong reasoning and workspace edits
+      model: gpt-5.6-sol
+      effort: high
+      approvalMode: on-request
+      sandbox: workspace-write
+    claude-plan:
+      target: claude
+      description: Claude architecture and planning profile
+      model: opus
+      effort: high
+      approvalMode: plan
+    gemini-plan:
+      target: gemini
+      description: Gemini planning profile with sandboxing enabled
+      model: auto
+      approvalMode: plan
+      sandbox: on
