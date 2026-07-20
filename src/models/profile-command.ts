@@ -1,5 +1,6 @@
 import type { Command } from "commander";
 import { colors, symbols } from "../ui/index.js";
+import { guardedAction } from "./command-helpers.js";
 import { loadModelProfileState, removeModelProfile, saveModelProfile, setDefaultModelProfile } from "./profiles.js";
 import { parseModelTarget, type ModelProfile } from "./types.js";
 
@@ -15,15 +16,6 @@ interface ProfileOptions {
   default?: boolean;
 }
 
-async function runProfileAction(action: () => Promise<void>): Promise<void> {
-  try {
-    await action();
-  } catch (error) {
-    console.error(colors.error(error instanceof Error ? error.message : String(error)));
-    process.exitCode = 1;
-  }
-}
-
 export function registerProfileCommand(program: Command): void {
   const profile = program.command("profile").description("Manage reusable model profiles");
 
@@ -31,39 +23,44 @@ export function registerProfileCommand(program: Command): void {
     .command("list")
     .description("List configured model profiles")
     .option("--json", "JSON output")
-    .action(async (opts: { json?: boolean }) => {
-      const json = opts.json ?? program.opts().json;
-      const state = await loadModelProfileState();
-      if (json) {
-        console.log(JSON.stringify({ default: state.defaultProfile, profiles: state.profiles }, null, 2));
-        return;
-      }
-      console.log();
-      console.log(colors.primaryBold("Model profiles"));
-      const entries = Object.entries(state.profiles);
-      if (entries.length === 0) console.log(colors.muted("  No profiles configured."));
-      for (const [name, value] of entries) {
-        const mark = state.defaultProfile === name ? colors.success(symbols.star) : " ";
-        console.log(
-          `  ${mark} ${colors.secondaryBold(name)} ${colors.dim(`(${value.target})`)} ${value.model ?? "default"}`,
-        );
-      }
-      console.log(colors.dim(`\nConfig: ${state.configPath}`));
-      console.log();
-    });
+    .action(async (opts: { json?: boolean }) =>
+      guardedAction(async () => {
+        const json = opts.json ?? program.opts().json;
+        const state = await loadModelProfileState();
+        if (json) {
+          console.log(JSON.stringify({ default: state.defaultProfile, profiles: state.profiles }, null, 2));
+          return;
+        }
+        console.log();
+        console.log(colors.primaryBold("Model profiles"));
+        const entries = Object.entries(state.profiles);
+        if (entries.length === 0) console.log(colors.muted("  No profiles configured."));
+        for (const [name, value] of entries) {
+          const mark = state.defaultProfile === name ? colors.success(symbols.star) : " ";
+          console.log(
+            `  ${mark} ${colors.secondaryBold(name)} ${colors.dim(`(${value.target})`)} ${value.model ?? "default"}`,
+          );
+        }
+        console.log(colors.dim(`\nConfig: ${state.configPath}`));
+        console.log();
+      }),
+    );
 
   profile
     .command("show <name>")
     .description("Show one model profile")
     .option("--json", "JSON output")
     .action(async (name: string, opts: { json?: boolean }) =>
-      runProfileAction(async () => {
+      guardedAction(async () => {
         const json = opts.json ?? program.opts().json;
         const state = await loadModelProfileState();
         const value = state.profiles[name];
         if (!value) throw new Error(`Model profile not found: ${name}`);
         if (json) console.log(JSON.stringify({ name, default: state.defaultProfile === name, ...value }, null, 2));
-        else console.log(`\n${colors.secondaryBold(name)}\n${JSON.stringify(value, null, 2)}\n`);
+        else {
+          const marker = state.defaultProfile === name ? colors.success(" (default)") : "";
+          console.log(`\n${colors.secondaryBold(name)}${marker}\n${JSON.stringify(value, null, 2)}\n`);
+        }
       }),
     );
 
@@ -77,10 +74,10 @@ export function registerProfileCommand(program: Command): void {
     .option("--approval-mode <mode>", "Native target approval mode")
     .option("--sandbox <mode>", "Native target sandbox mode")
     .option("--native-profile <name>", "Codex config profile selected with --profile")
-    .option("--arg <args...>", "Additional native CLI arguments")
+    .option("--arg <args...>", "Additional native CLI arguments; persisted in plain text, never include secrets")
     .option("--default", "Make this the default model profile")
     .action(async (name: string, opts: ProfileOptions) =>
-      runProfileAction(async () => {
+      guardedAction(async () => {
         const value: ModelProfile = {
           target: parseModelTarget(opts.target),
           description: opts.description,
@@ -101,7 +98,7 @@ export function registerProfileCommand(program: Command): void {
     .command("use <name>")
     .description("Set the default model profile")
     .action(async (name: string) =>
-      runProfileAction(async () => {
+      guardedAction(async () => {
         const state = await setDefaultModelProfile(name);
         console.log(colors.success(`${symbols.check} Default profile: ${name}`));
         console.log(colors.dim(state.configPath));
@@ -113,7 +110,7 @@ export function registerProfileCommand(program: Command): void {
     .alias("rm")
     .description("Remove a model profile")
     .action(async (name: string) =>
-      runProfileAction(async () => {
+      guardedAction(async () => {
         const state = await removeModelProfile(name);
         console.log(colors.success(`${symbols.check} Removed ${name}`));
         console.log(colors.dim(state.configPath));

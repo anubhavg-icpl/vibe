@@ -26,6 +26,13 @@ test("validates target-specific profile fields", () => {
   assert.deepEqual(validateModelProfile({ target: "gemini", model: "auto", approvalMode: "plan", sandbox: "on" }), []);
   assert.match(validateModelProfile({ target: "gemini", effort: "high" })[0], /does not support effort/);
   assert.match(validateModelProfile({ target: "claude", nativeProfile: "work" })[0], /only supported by Codex/);
+  assert.match(validateModelProfile({ target: "codex", effort: "ultra" })[0], /does not support effort/);
+  assert.match(validateModelProfile({ target: "claude", effort: "auto" })[0], /does not support effort/);
+  assert.deepEqual(validateModelProfile({ target: "claude", effort: "max" }), []);
+  assert.match(
+    validateModelProfile({ target: "claude", extraArgs: ["--api-key=do-not-store"] })[0],
+    /secret-bearing flags/,
+  );
 });
 
 test("builds native invocations without a shell", () => {
@@ -101,6 +108,47 @@ test("reports malformed YAML during configuration validation", async () => {
     await writeFile(join(cwd, ".vibeconfig.yaml"), "modelProfiles: [\n", "utf8");
     const result = await validateModelProfileState(cwd);
     assert.equal(result.errors.length, 1);
+  } finally {
+    await rm(cwd, { recursive: true, force: true });
+  }
+});
+
+test("rejects invalid profiles at the configuration boundary", async () => {
+  const cwd = await mkdtemp(join(tmpdir(), "vibe-invalid-profile-config-"));
+  const originalWarn = console.warn;
+  const warnings: string[] = [];
+  console.warn = (...values: unknown[]) => warnings.push(values.map(String).join(" "));
+  try {
+    await writeFile(
+      join(cwd, ".vibeconfig.yaml"),
+      "modelProfiles:\n  default: broken\n  profiles:\n    broken:\n      target: codex\n      effort: ultra\n",
+      "utf8",
+    );
+    const state = await loadModelProfileState(cwd);
+    assert.deepEqual(state.profiles, {});
+    assert.match(warnings.join("\n"), /Invalid model profiles/);
+
+    const result = await validateModelProfileState(cwd);
+    assert.match(result.errors.join("\n"), /does not support effort/);
+  } finally {
+    console.warn = originalWarn;
+    await rm(cwd, { recursive: true, force: true });
+  }
+});
+
+test("skips malformed native model configuration files", async () => {
+  const cwd = await mkdtemp(join(tmpdir(), "vibe-malformed-native-config-"));
+  try {
+    await mkdir(join(cwd, ".codex"));
+    await writeFile(join(cwd, ".codex", "config.toml"), 'model = "unterminated\n', "utf8");
+    await mkdir(join(cwd, ".claude"));
+    await writeFile(join(cwd, ".claude", "settings.json"), "{", "utf8");
+    await mkdir(join(cwd, ".gemini"));
+    await writeFile(join(cwd, ".gemini", "settings.json"), "{", "utf8");
+
+    await assert.doesNotReject(() => getModelTargetStatus("codex", {}, cwd));
+    await assert.doesNotReject(() => getModelTargetStatus("claude", {}, cwd));
+    await assert.doesNotReject(() => getModelTargetStatus("gemini", {}, cwd));
   } finally {
     await rm(cwd, { recursive: true, force: true });
   }

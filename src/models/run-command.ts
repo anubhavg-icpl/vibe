@@ -1,5 +1,5 @@
 import type { Command } from "commander";
-import { colors } from "../ui/index.js";
+import { guardedAction } from "./command-helpers.js";
 import { buildModelInvocation, runModelInvocation } from "./invocation.js";
 import { loadModelProfileState } from "./profiles.js";
 import { parseModelTarget, type ModelProfile } from "./types.js";
@@ -19,25 +19,18 @@ interface RunOptions {
   json?: boolean;
 }
 
-async function guarded(action: () => Promise<void>): Promise<void> {
-  try {
-    await action();
-  } catch (error) {
-    console.error(colors.error(error instanceof Error ? error.message : String(error)));
-    process.exitCode = 1;
-  }
-}
-
 function mergeRunProfile(base: ModelProfile | undefined, opts: RunOptions): ModelProfile {
+  const target = opts.target ? parseModelTarget(opts.target) : (base?.target ?? "codex");
+  const inherited = base?.target === target ? base : undefined;
   const profile: ModelProfile = {
-    ...base,
-    target: opts.target ? parseModelTarget(opts.target) : (base?.target ?? "codex"),
-    model: opts.model ?? base?.model,
-    effort: opts.effort ?? base?.effort,
-    approvalMode: opts.approvalMode ?? base?.approvalMode,
-    sandbox: opts.sandbox ?? base?.sandbox,
-    nativeProfile: opts.nativeProfile ?? base?.nativeProfile,
-    extraArgs: opts.arg ?? base?.extraArgs,
+    ...inherited,
+    target,
+    model: opts.model ?? inherited?.model,
+    effort: opts.effort ?? inherited?.effort,
+    approvalMode: opts.approvalMode ?? inherited?.approvalMode,
+    sandbox: opts.sandbox ?? inherited?.sandbox,
+    nativeProfile: opts.nativeProfile ?? inherited?.nativeProfile,
+    extraArgs: opts.arg ?? inherited?.extraArgs,
   };
   const errors = validateModelProfile(profile);
   if (errors.length > 0) throw new Error(errors.join("\n"));
@@ -55,12 +48,12 @@ export function registerRunCommand(program: Command): void {
     .option("--approval-mode <mode>", "Override the native approval mode")
     .option("--sandbox <mode>", "Override the native sandbox mode")
     .option("--native-profile <name>", "Codex config profile selected with --profile")
-    .option("--arg <args...>", "Additional native CLI arguments")
+    .option("--arg <args...>", "Additional native CLI arguments; never include secrets")
     .option("--print", "Run non-interactively and print the response")
     .option("--dry-run", "Print the native invocation without launching it")
     .option("--json", "JSON output for --dry-run")
     .action(async (promptParts: string[], opts: RunOptions) =>
-      guarded(async () => {
+      guardedAction(async () => {
         const json = opts.json ?? program.opts().json;
         const dryRun = opts.dryRun ?? program.opts().dryRun;
         const state = await loadModelProfileState();
@@ -88,7 +81,7 @@ export function registerRunCommand(program: Command): void {
     .allowUnknownOption(true)
     .passThroughOptions()
     .action(async (targetValue: string, args: string[]) =>
-      guarded(async () => {
+      guardedAction(async () => {
         const target = parseModelTarget(targetValue);
         const base = buildModelInvocation({ target });
         process.exitCode = await runModelInvocation({ ...base, args });

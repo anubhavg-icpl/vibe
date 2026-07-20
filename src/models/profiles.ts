@@ -3,7 +3,12 @@ import { readFile } from "fs/promises";
 import YAML from "yaml";
 import { findConfigFile, loadConfig, saveConfig, type VibeConfig } from "../config.js";
 import type { ModelProfile } from "./types.js";
-import { validateModelProfile, validateProfileName, validateProfiles } from "./validation.js";
+import {
+  validateModelProfile,
+  validateModelProfilesConfig,
+  validateProfileName,
+  validateProfiles,
+} from "./validation.js";
 
 export interface ModelProfileState {
   config: VibeConfig;
@@ -70,6 +75,8 @@ export async function validateModelProfileState(cwd = process.cwd()): Promise<{ 
       if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
         throw new Error("The configuration root must be a YAML object.");
       }
+      const errors = validateModelProfilesConfig(parsed.modelProfiles);
+      if (errors.length > 0) return { path: sourcePath, errors };
     } catch (error) {
       return {
         path: sourcePath,

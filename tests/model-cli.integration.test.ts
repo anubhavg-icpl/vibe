@@ -66,13 +66,25 @@ test("model CLI commands work together in an isolated project", async () => {
     const validation = JSON.parse(run(cwd, ["config", "validate", "--json"]));
     assert.equal(validation.valid, true);
 
-    for (const name of ["codex-deep", "claude-plan", "gemini-plan"]) {
+    for (const [name, expectedTarget] of [
+      ["codex-deep", "codex"],
+      ["claude-plan", "claude"],
+      ["gemini-plan", "gemini"],
+    ]) {
       const invocation = JSON.parse(
         run(cwd, ["run", "--profile", name, "--dry-run", "--json", "review this repository"]),
       );
-      assert.ok(["codex", "claude", "gemini"].includes(invocation.target));
+      assert.equal(invocation.target, expectedTarget);
       assert.ok(invocation.args.includes("review this repository"));
     }
+
+    const override = JSON.parse(
+      run(cwd, ["run", "--target", "claude", "--model", "sonnet", "--dry-run", "--json", "review this"]),
+    );
+    assert.equal(override.target, "claude");
+    assert.deepEqual(override.args, ["--model", "sonnet", "review this"]);
+
+    assert.match(run(cwd, ["profile", "show", "codex-deep"]), /\(default\)/);
   } finally {
     await rm(cwd, { recursive: true, force: true });
   }

@@ -4,6 +4,7 @@ import { homedir } from "os";
 import YAML from "yaml";
 import type { AgentType } from "./types.js";
 import type { ModelProfile } from "./models/types.js";
+import { validateModelProfilesConfig } from "./models/validation.js";
 
 export interface VibeConfig {
   version?: string;
@@ -79,7 +80,15 @@ export async function loadConfig(cwd?: string): Promise<VibeConfig> {
 
   try {
     const content = await readFile(configPath, "utf-8");
-    const parsed = YAML.parse(content) as Partial<VibeConfig>;
+    const parsedValue = YAML.parse(content) as unknown;
+    if (!parsedValue || typeof parsedValue !== "object" || Array.isArray(parsedValue)) {
+      throw new Error("The configuration root must be a YAML object.");
+    }
+    const parsed = parsedValue as Partial<VibeConfig>;
+    const profileErrors = validateModelProfilesConfig(parsed.modelProfiles);
+    if (profileErrors.length > 0) {
+      throw new Error(`Invalid model profiles:\n- ${profileErrors.join("\n- ")}`);
+    }
 
     return {
       ...DEFAULT_CONFIG,

@@ -265,7 +265,9 @@ Pin to a specific revision: `npx -y github:anubhavg-icpl/vibe#master`. Or alias 
 ### Model profiles (Codex + Claude + Gemini)
 
 Vibe profiles contain model and runtime choices only. Authentication remains in each
-target CLI's native secure storage; Vibe never copies API keys or OAuth tokens.
+target CLI's native secure storage; Vibe does not read or copy its credentials. Extra
+arguments are stored as plain text, so Vibe rejects common secret-bearing flags such as
+`--api-key` and `--token`. Authenticate with the native CLI instead.
 
 ```bash
 # Discover native config and known models

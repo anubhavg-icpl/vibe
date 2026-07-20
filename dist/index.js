@@ -669,6 +669,117 @@ import { readFile as readFile3, writeFile as writeFile2, access as access2 } fro
 import { join as join4 } from "path";
 import { homedir as homedir2 } from "os";
 import YAML from "yaml";
+
+// src/models/types.ts
+var MODEL_TARGETS = ["codex", "claude", "gemini"];
+function parseModelTarget(value) {
+  const normalized = value.trim().toLowerCase();
+  if (normalized === "claude-code") return "claude";
+  if (normalized === "gemini-cli") return "gemini";
+  if (MODEL_TARGETS.includes(normalized)) {
+    return normalized;
+  }
+  throw new Error(`Unsupported model target: ${value}. Use codex, claude, or gemini.`);
+}
+
+// src/models/validation.ts
+var PROFILE_NAME = /^[a-z0-9][a-z0-9._-]*$/i;
+var EFFORTS = {
+  codex: /* @__PURE__ */ new Set(["minimal", "low", "medium", "high", "xhigh"]),
+  claude: /* @__PURE__ */ new Set(["low", "medium", "high", "xhigh", "max"])
+};
+var SECRET_ARG = /^--?(?:api[-_]?key|access[-_]?token|auth[-_]?token|token|password|secret)(?:=|$)/i;
+var APPROVAL_MODES = {
+  codex: /* @__PURE__ */ new Set(["untrusted", "on-request", "never"]),
+  claude: /* @__PURE__ */ new Set(["default", "acceptEdits", "plan", "dontAsk", "bypassPermissions", "delegate"]),
+  gemini: /* @__PURE__ */ new Set(["default", "auto_edit", "yolo", "plan"])
+};
+var SANDBOX_MODES = {
+  codex: /* @__PURE__ */ new Set(["read-only", "workspace-write", "danger-full-access"]),
+  gemini: /* @__PURE__ */ new Set(["on", "off"])
+};
+function validateProfileName(name) {
+  if (PROFILE_NAME.test(name)) return [];
+  return [`Invalid profile name "${name}". Use letters, numbers, dots, underscores, and hyphens.`];
+}
+function validateModelProfile(profile) {
+  const errors = [];
+  if (!profile || typeof profile !== "object" || Array.isArray(profile)) {
+    return ["Profile must be an object."];
+  }
+  if (!MODEL_TARGETS.includes(profile.target)) {
+    return [`Unsupported model target: ${String(profile.target)}. Use codex, claude, or gemini.`];
+  }
+  const efforts = EFFORTS[profile.target];
+  const approvals = APPROVAL_MODES[profile.target];
+  const sandboxes = SANDBOX_MODES[profile.target];
+  for (const field of ["description", "model", "effort", "approvalMode", "sandbox", "nativeProfile"]) {
+    if (profile[field] !== void 0 && typeof profile[field] !== "string") {
+      errors.push(`${field} must be a string.`);
+    }
+  }
+  if (typeof profile.effort === "string" && !efforts?.has(profile.effort)) {
+    errors.push(`${profile.target} does not support effort "${profile.effort}".`);
+  }
+  if (typeof profile.approvalMode === "string" && !approvals.has(profile.approvalMode)) {
+    errors.push(`${profile.target} does not support approval mode "${profile.approvalMode}".`);
+  }
+  if (typeof profile.sandbox === "string" && !sandboxes?.has(profile.sandbox)) {
+    errors.push(`${profile.target} does not support sandbox mode "${profile.sandbox}".`);
+  }
+  if (profile.nativeProfile && profile.target !== "codex") {
+    errors.push("nativeProfile is only supported by Codex.");
+  }
+  if (profile.extraArgs !== void 0 && !Array.isArray(profile.extraArgs)) {
+    errors.push("extraArgs must be an array of strings.");
+  } else if (profile.extraArgs) {
+    if (profile.extraArgs.some((arg) => typeof arg !== "string")) {
+      errors.push("extraArgs must be an array of strings.");
+    } else {
+      if (profile.extraArgs.some((arg) => arg.includes("\0"))) {
+        errors.push("Extra arguments cannot contain null bytes.");
+      }
+      if (profile.extraArgs.some((arg) => SECRET_ARG.test(arg))) {
+        errors.push("Extra arguments cannot contain secret-bearing flags; authenticate with the native CLI instead.");
+      }
+    }
+  }
+  return errors;
+}
+function validateModelProfilesConfig(value) {
+  if (value === void 0) return [];
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return ["modelProfiles must be an object."];
+  }
+  const modelProfiles = value;
+  const errors = [];
+  if (modelProfiles.default !== void 0 && typeof modelProfiles.default !== "string") {
+    errors.push("modelProfiles.default must be a string.");
+  }
+  if (modelProfiles.profiles !== void 0 && (!modelProfiles.profiles || typeof modelProfiles.profiles !== "object" || Array.isArray(modelProfiles.profiles))) {
+    errors.push("modelProfiles.profiles must be an object.");
+    return errors;
+  }
+  return [
+    ...errors,
+    ...validateProfiles(
+      modelProfiles.profiles ?? {},
+      typeof modelProfiles.default === "string" ? modelProfiles.default : void 0
+    )
+  ];
+}
+function validateProfiles(profiles, defaultProfile) {
+  const errors = Object.entries(profiles).flatMap(([name, profile]) => [
+    ...validateProfileName(name),
+    ...validateModelProfile(profile).map((error) => `${name}: ${error}`)
+  ]);
+  if (defaultProfile && !profiles[defaultProfile]) {
+    errors.push(`Default model profile "${defaultProfile}" does not exist.`);
+  }
+  return errors;
+}
+
+// src/config.ts
 var CONFIG_FILENAME = ".vibeconfig.yaml";
 var CONFIG_FILENAME_ALT = ".vibeconfig.yml";
 var DEFAULT_CONFIG = {
@@ -718,7 +829,16 @@ async function loadConfig(cwd) {
   }
   try {
     const content = await readFile3(configPath, "utf-8");
-    const parsed = YAML.parse(content);
+    const parsedValue = YAML.parse(content);
+    if (!parsedValue || typeof parsedValue !== "object" || Array.isArray(parsedValue)) {
+      throw new Error("The configuration root must be a YAML object.");
+    }
+    const parsed = parsedValue;
+    const profileErrors = validateModelProfilesConfig(parsed.modelProfiles);
+    if (profileErrors.length > 0) {
+      throw new Error(`Invalid model profiles:
+- ${profileErrors.join("\n- ")}`);
+    }
     return {
       ...DEFAULT_CONFIG,
       ...parsed,
@@ -1642,64 +1762,20 @@ function startAnimation(version) {
   };
 }
 
+// src/models/command-helpers.ts
+async function guardedAction(action) {
+  try {
+    await action();
+  } catch (error) {
+    console.error(colors.error(error instanceof Error ? error.message : String(error)));
+    process.exitCode = 1;
+  }
+}
+
 // src/models/profiles.ts
 import { resolve } from "path";
 import { readFile as readFile4 } from "fs/promises";
 import YAML2 from "yaml";
-
-// src/models/validation.ts
-var PROFILE_NAME = /^[a-z0-9][a-z0-9._-]*$/i;
-var EFFORTS = {
-  codex: /* @__PURE__ */ new Set(["none", "minimal", "low", "medium", "high", "xhigh", "max", "ultra"]),
-  claude: /* @__PURE__ */ new Set(["auto", "low", "medium", "high", "xhigh", "max"])
-};
-var APPROVAL_MODES = {
-  codex: /* @__PURE__ */ new Set(["untrusted", "on-request", "never"]),
-  claude: /* @__PURE__ */ new Set(["default", "acceptEdits", "plan", "dontAsk", "bypassPermissions", "delegate"]),
-  gemini: /* @__PURE__ */ new Set(["default", "auto_edit", "yolo", "plan"])
-};
-var SANDBOX_MODES = {
-  codex: /* @__PURE__ */ new Set(["read-only", "workspace-write", "danger-full-access"]),
-  gemini: /* @__PURE__ */ new Set(["on", "off"])
-};
-function validateProfileName(name) {
-  if (PROFILE_NAME.test(name)) return [];
-  return [`Invalid profile name "${name}". Use letters, numbers, dots, underscores, and hyphens.`];
-}
-function validateModelProfile(profile) {
-  const errors = [];
-  const efforts = EFFORTS[profile.target];
-  const approvals = APPROVAL_MODES[profile.target];
-  const sandboxes = SANDBOX_MODES[profile.target];
-  if (profile.effort && !efforts?.has(profile.effort)) {
-    errors.push(`${profile.target} does not support effort "${profile.effort}".`);
-  }
-  if (profile.approvalMode && !approvals.has(profile.approvalMode)) {
-    errors.push(`${profile.target} does not support approval mode "${profile.approvalMode}".`);
-  }
-  if (profile.sandbox && !sandboxes?.has(profile.sandbox)) {
-    errors.push(`${profile.target} does not support sandbox mode "${profile.sandbox}".`);
-  }
-  if (profile.nativeProfile && profile.target !== "codex") {
-    errors.push("nativeProfile is only supported by Codex.");
-  }
-  if (profile.extraArgs?.some((arg) => arg.includes("\0"))) {
-    errors.push("Extra arguments cannot contain null bytes.");
-  }
-  return errors;
-}
-function validateProfiles(profiles, defaultProfile) {
-  const errors = Object.entries(profiles).flatMap(([name, profile]) => [
-    ...validateProfileName(name),
-    ...validateModelProfile(profile).map((error) => `${name}: ${error}`)
-  ]);
-  if (defaultProfile && !profiles[defaultProfile]) {
-    errors.push(`Default model profile "${defaultProfile}" does not exist.`);
-  }
-  return errors;
-}
-
-// src/models/profiles.ts
 async function loadModelProfileState(cwd = process.cwd()) {
   const config = await loadConfig(cwd);
   const configPath = await findConfigFile(cwd) ?? resolve(cwd, ".vibeconfig.yaml");
@@ -1748,6 +1824,8 @@ async function validateModelProfileState(cwd = process.cwd()) {
       if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
         throw new Error("The configuration root must be a YAML object.");
       }
+      const errors = validateModelProfilesConfig(parsed.modelProfiles);
+      if (errors.length > 0) return { path: sourcePath, errors };
     } catch (error) {
       return {
         path: sourcePath,
@@ -1765,31 +1843,35 @@ async function validateModelProfileState(cwd = process.cwd()) {
 // src/models/config-command.ts
 function registerConfigCommand(program2) {
   const config = program2.command("config").description("Inspect and validate Vibe configuration");
-  config.command("show").description("Print the merged Vibe configuration").option("--json", "JSON output").action(async (opts) => {
-    const json = opts.json ?? program2.opts().json;
-    const state = await loadModelProfileState();
-    const value = { path: state.configPath, config: state.config };
-    console.log(
-      json ? JSON.stringify(value, null, 2) : `
+  config.command("show").description("Print the merged Vibe configuration").option("--json", "JSON output").action(
+    async (opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const state = await loadModelProfileState();
+      const value = { path: state.configPath, config: state.config };
+      console.log(
+        json ? JSON.stringify(value, null, 2) : `
 ${state.configPath}
 ${JSON.stringify(state.config, null, 2)}
 `
-    );
-  });
-  config.command("path").description("Print the active Vibe configuration path").action(async () => console.log((await loadModelProfileState()).configPath));
-  config.command("validate").description("Validate model profiles and the default selection").option("--json", "JSON output").action(async (opts) => {
-    const json = opts.json ?? program2.opts().json;
-    const result = await validateModelProfileState();
-    if (json) {
-      console.log(JSON.stringify({ ...result, valid: result.errors.length === 0 }, null, 2));
-    } else if (result.errors.length === 0) {
-      console.log(colors.success(`${symbols.check} Valid configuration: ${result.path}`));
-    } else {
-      console.error(colors.error(`${symbols.cross} Invalid configuration: ${result.path}`));
-      for (const error of result.errors) console.error(`  ${symbols.bullet} ${error}`);
-    }
-    if (result.errors.length > 0) process.exitCode = 1;
-  });
+      );
+    })
+  );
+  config.command("path").description("Print the active Vibe configuration path").action(async () => guardedAction(async () => console.log((await loadModelProfileState()).configPath)));
+  config.command("validate").description("Validate model profiles and the default selection").option("--json", "JSON output").action(
+    async (opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const result = await validateModelProfileState();
+      if (json) {
+        console.log(JSON.stringify({ ...result, valid: result.errors.length === 0 }, null, 2));
+      } else if (result.errors.length === 0) {
+        console.log(colors.success(`${symbols.check} Valid configuration: ${result.path}`));
+      } else {
+        console.error(colors.error(`${symbols.cross} Invalid configuration: ${result.path}`));
+        for (const error of result.errors) console.error(`  ${symbols.bullet} ${error}`);
+      }
+      if (result.errors.length > 0) process.exitCode = 1;
+    })
+  );
 }
 
 // src/models/targets.ts
@@ -1835,12 +1917,22 @@ function addModel(models, id, source, detail) {
 }
 async function readJson(path) {
   if (!existsSync3(path)) return {};
-  return objectValue(JSON.parse(await readFile5(path, "utf8")));
+  try {
+    return objectValue(JSON.parse(await readFile5(path, "utf8")));
+  } catch {
+    return {};
+  }
+}
+async function readToml(path) {
+  if (!existsSync3(path)) return {};
+  try {
+    return objectValue(parseToml(await readFile5(path, "utf8")));
+  } catch {
+    return {};
+  }
 }
 async function codexStatus(models, paths) {
-  const configs = await Promise.all(
-    paths.filter(existsSync3).map(async (path) => objectValue(parseToml(await readFile5(path, "utf8"))))
-  );
+  const configs = await Promise.all(paths.filter(existsSync3).map(readToml));
   let activeModel;
   let provider;
   for (const [index, config] of configs.entries()) {
@@ -1921,99 +2013,86 @@ function executableExtension(path) {
   return extname(path).toLowerCase();
 }
 
-// src/models/types.ts
-var MODEL_TARGETS = ["codex", "claude", "gemini"];
-function parseModelTarget(value) {
-  const normalized = value.trim().toLowerCase();
-  if (normalized === "claude-code") return "claude";
-  if (normalized === "gemini-cli") return "gemini";
-  if (MODEL_TARGETS.includes(normalized)) {
-    return normalized;
-  }
-  throw new Error(`Unsupported model target: ${value}. Use codex, claude, or gemini.`);
-}
-
 // src/models/model-command.ts
 function registerModelsCommand(program2, version) {
-  program2.command("models [target]").description("List models discovered for Codex, Claude Code, and Gemini CLI").option("--json", "JSON output").action(async (targetValue, opts) => {
-    const json = opts.json ?? program2.opts().json;
-    const state = await loadModelProfileState();
-    const targets = targetValue ? [parseModelTarget(targetValue)] : [...MODEL_TARGETS];
-    const statuses = await Promise.all(targets.map((target) => getModelTargetStatus(target, state.profiles)));
-    if (json) {
-      console.log(JSON.stringify({ version, targets: statuses }, null, 2));
-      return;
-    }
-    console.log();
-    console.log(colors.primaryBold("Model targets"));
-    for (const status of statuses) {
-      const mark = status.installed ? colors.success(symbols.check) : colors.dim(symbols.dot);
+  program2.command("models [target]").description("List models discovered for Codex, Claude Code, and Gemini CLI").option("--json", "JSON output").action(
+    async (targetValue, opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const state = await loadModelProfileState();
+      const targets = targetValue ? [parseModelTarget(targetValue)] : [...MODEL_TARGETS];
+      const statuses = await Promise.all(targets.map((target) => getModelTargetStatus(target, state.profiles)));
+      if (json) {
+        console.log(JSON.stringify({ version, targets: statuses }, null, 2));
+        return;
+      }
       console.log();
-      console.log(`  ${mark} ${colors.secondaryBold(status.displayName)}`);
-      console.log(`    ${colors.dim(status.executable ?? "CLI not found on PATH")}`);
-      if (status.activeModel) {
-        console.log(`    Active: ${colors.textBold(status.activeModel)}`);
+      console.log(colors.primaryBold("Model targets"));
+      for (const status of statuses) {
+        const mark = status.installed ? colors.success(symbols.check) : colors.dim(symbols.dot);
+        console.log();
+        console.log(`  ${mark} ${colors.secondaryBold(status.displayName)}`);
+        console.log(`    ${colors.dim(status.executable ?? "CLI not found on PATH")}`);
+        if (status.activeModel) {
+          console.log(`    Active: ${colors.textBold(status.activeModel)}`);
+        }
+        if (status.provider) console.log(`    Provider: ${status.provider}`);
+        if (status.configPaths.length > 0) {
+          console.log(`    Config: ${status.configPaths.join(", ")}`);
+        }
+        for (const model of status.models) {
+          const detail = model.detail ? ` \xB7 ${model.detail}` : "";
+          console.log(`      ${symbols.bullet} ${model.id} ${colors.dim(`(${model.source}${detail})`)}`);
+        }
       }
-      if (status.provider) console.log(`    Provider: ${status.provider}`);
-      if (status.configPaths.length > 0) {
-        console.log(`    Config: ${status.configPaths.join(", ")}`);
-      }
-      for (const model of status.models) {
-        const detail = model.detail ? ` \xB7 ${model.detail}` : "";
-        console.log(`      ${symbols.bullet} ${model.id} ${colors.dim(`(${model.source}${detail})`)}`);
-      }
-    }
-    console.log();
-  });
+      console.log();
+    })
+  );
 }
 
 // src/models/profile-command.ts
-async function runProfileAction(action) {
-  try {
-    await action();
-  } catch (error) {
-    console.error(colors.error(error instanceof Error ? error.message : String(error)));
-    process.exitCode = 1;
-  }
-}
 function registerProfileCommand(program2) {
   const profile = program2.command("profile").description("Manage reusable model profiles");
-  profile.command("list").description("List configured model profiles").option("--json", "JSON output").action(async (opts) => {
-    const json = opts.json ?? program2.opts().json;
-    const state = await loadModelProfileState();
-    if (json) {
-      console.log(JSON.stringify({ default: state.defaultProfile, profiles: state.profiles }, null, 2));
-      return;
-    }
-    console.log();
-    console.log(colors.primaryBold("Model profiles"));
-    const entries = Object.entries(state.profiles);
-    if (entries.length === 0) console.log(colors.muted("  No profiles configured."));
-    for (const [name, value] of entries) {
-      const mark = state.defaultProfile === name ? colors.success(symbols.star) : " ";
-      console.log(
-        `  ${mark} ${colors.secondaryBold(name)} ${colors.dim(`(${value.target})`)} ${value.model ?? "default"}`
-      );
-    }
-    console.log(colors.dim(`
+  profile.command("list").description("List configured model profiles").option("--json", "JSON output").action(
+    async (opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const state = await loadModelProfileState();
+      if (json) {
+        console.log(JSON.stringify({ default: state.defaultProfile, profiles: state.profiles }, null, 2));
+        return;
+      }
+      console.log();
+      console.log(colors.primaryBold("Model profiles"));
+      const entries = Object.entries(state.profiles);
+      if (entries.length === 0) console.log(colors.muted("  No profiles configured."));
+      for (const [name, value] of entries) {
+        const mark = state.defaultProfile === name ? colors.success(symbols.star) : " ";
+        console.log(
+          `  ${mark} ${colors.secondaryBold(name)} ${colors.dim(`(${value.target})`)} ${value.model ?? "default"}`
+        );
+      }
+      console.log(colors.dim(`
 Config: ${state.configPath}`));
-    console.log();
-  });
+      console.log();
+    })
+  );
   profile.command("show <name>").description("Show one model profile").option("--json", "JSON output").action(
-    async (name, opts) => runProfileAction(async () => {
+    async (name, opts) => guardedAction(async () => {
       const json = opts.json ?? program2.opts().json;
       const state = await loadModelProfileState();
       const value = state.profiles[name];
       if (!value) throw new Error(`Model profile not found: ${name}`);
       if (json) console.log(JSON.stringify({ name, default: state.defaultProfile === name, ...value }, null, 2));
-      else console.log(`
-${colors.secondaryBold(name)}
+      else {
+        const marker = state.defaultProfile === name ? colors.success(" (default)") : "";
+        console.log(`
+${colors.secondaryBold(name)}${marker}
 ${JSON.stringify(value, null, 2)}
 `);
+      }
     })
   );
-  profile.command("set <name>").description("Create or replace a model profile").requiredOption("-t, --target <target>", "codex | claude | gemini").option("-m, --model <model>", "Model ID or alias").option("--description <text>", "Profile description").option("--effort <level>", "Reasoning/effort level").option("--approval-mode <mode>", "Native target approval mode").option("--sandbox <mode>", "Native target sandbox mode").option("--native-profile <name>", "Codex config profile selected with --profile").option("--arg <args...>", "Additional native CLI arguments").option("--default", "Make this the default model profile").action(
-    async (name, opts) => runProfileAction(async () => {
+  profile.command("set <name>").description("Create or replace a model profile").requiredOption("-t, --target <target>", "codex | claude | gemini").option("-m, --model <model>", "Model ID or alias").option("--description <text>", "Profile description").option("--effort <level>", "Reasoning/effort level").option("--approval-mode <mode>", "Native target approval mode").option("--sandbox <mode>", "Native target sandbox mode").option("--native-profile <name>", "Codex config profile selected with --profile").option("--arg <args...>", "Additional native CLI arguments; persisted in plain text, never include secrets").option("--default", "Make this the default model profile").action(
+    async (name, opts) => guardedAction(async () => {
       const value = {
         target: parseModelTarget(opts.target),
         description: opts.description,
@@ -2030,14 +2109,14 @@ ${JSON.stringify(value, null, 2)}
     })
   );
   profile.command("use <name>").description("Set the default model profile").action(
-    async (name) => runProfileAction(async () => {
+    async (name) => guardedAction(async () => {
       const state = await setDefaultModelProfile(name);
       console.log(colors.success(`${symbols.check} Default profile: ${name}`));
       console.log(colors.dim(state.configPath));
     })
   );
   profile.command("remove <name>").alias("rm").description("Remove a model profile").action(
-    async (name) => runProfileAction(async () => {
+    async (name) => guardedAction(async () => {
       const state = await removeModelProfile(name);
       console.log(colors.success(`${symbols.check} Removed ${name}`));
       console.log(colors.dim(state.configPath));
@@ -2105,32 +2184,26 @@ async function runModelInvocation(invocation) {
 }
 
 // src/models/run-command.ts
-async function guarded(action) {
-  try {
-    await action();
-  } catch (error) {
-    console.error(colors.error(error instanceof Error ? error.message : String(error)));
-    process.exitCode = 1;
-  }
-}
 function mergeRunProfile(base, opts) {
+  const target = opts.target ? parseModelTarget(opts.target) : base?.target ?? "codex";
+  const inherited = base?.target === target ? base : void 0;
   const profile = {
-    ...base,
-    target: opts.target ? parseModelTarget(opts.target) : base?.target ?? "codex",
-    model: opts.model ?? base?.model,
-    effort: opts.effort ?? base?.effort,
-    approvalMode: opts.approvalMode ?? base?.approvalMode,
-    sandbox: opts.sandbox ?? base?.sandbox,
-    nativeProfile: opts.nativeProfile ?? base?.nativeProfile,
-    extraArgs: opts.arg ?? base?.extraArgs
+    ...inherited,
+    target,
+    model: opts.model ?? inherited?.model,
+    effort: opts.effort ?? inherited?.effort,
+    approvalMode: opts.approvalMode ?? inherited?.approvalMode,
+    sandbox: opts.sandbox ?? inherited?.sandbox,
+    nativeProfile: opts.nativeProfile ?? inherited?.nativeProfile,
+    extraArgs: opts.arg ?? inherited?.extraArgs
   };
   const errors = validateModelProfile(profile);
   if (errors.length > 0) throw new Error(errors.join("\n"));
   return profile;
 }
 function registerRunCommand(program2) {
-  program2.command("run [prompt...]").description("Run Codex, Claude Code, or Gemini CLI through a Vibe model profile").option("-p, --profile <name>", "Vibe model profile (defaults to the active profile)").option("-t, --target <target>", "codex | claude | gemini").option("-m, --model <model>", "Override the profile model").option("--effort <level>", "Override reasoning/effort").option("--approval-mode <mode>", "Override the native approval mode").option("--sandbox <mode>", "Override the native sandbox mode").option("--native-profile <name>", "Codex config profile selected with --profile").option("--arg <args...>", "Additional native CLI arguments").option("--print", "Run non-interactively and print the response").option("--dry-run", "Print the native invocation without launching it").option("--json", "JSON output for --dry-run").action(
-    async (promptParts, opts) => guarded(async () => {
+  program2.command("run [prompt...]").description("Run Codex, Claude Code, or Gemini CLI through a Vibe model profile").option("-p, --profile <name>", "Vibe model profile (defaults to the active profile)").option("-t, --target <target>", "codex | claude | gemini").option("-m, --model <model>", "Override the profile model").option("--effort <level>", "Override reasoning/effort").option("--approval-mode <mode>", "Override the native approval mode").option("--sandbox <mode>", "Override the native sandbox mode").option("--native-profile <name>", "Codex config profile selected with --profile").option("--arg <args...>", "Additional native CLI arguments; never include secrets").option("--print", "Run non-interactively and print the response").option("--dry-run", "Print the native invocation without launching it").option("--json", "JSON output for --dry-run").action(
+    async (promptParts, opts) => guardedAction(async () => {
       const json = opts.json ?? program2.opts().json;
       const dryRun = opts.dryRun ?? program2.opts().dryRun;
       const state = await loadModelProfileState();
@@ -2151,7 +2224,7 @@ function registerRunCommand(program2) {
     })
   );
   program2.command("exec <target> [args...]").description("Pass native arguments directly to Codex, Claude Code, or Gemini CLI").allowUnknownOption(true).passThroughOptions().action(
-    async (targetValue, args) => guarded(async () => {
+    async (targetValue, args) => guardedAction(async () => {
       const target = parseModelTarget(targetValue);
       const base = buildModelInvocation({ target });
       process.exitCode = await runModelInvocation({ ...base, args });

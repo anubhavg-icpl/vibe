@@ -53,13 +53,24 @@ function addModel(
 
 async function readJson(path: string): Promise<Record<string, unknown>> {
   if (!existsSync(path)) return {};
-  return objectValue(JSON.parse(await readFile(path, "utf8")));
+  try {
+    return objectValue(JSON.parse(await readFile(path, "utf8")));
+  } catch {
+    return {};
+  }
+}
+
+async function readToml(path: string): Promise<Record<string, unknown>> {
+  if (!existsSync(path)) return {};
+  try {
+    return objectValue(parseToml(await readFile(path, "utf8")));
+  } catch {
+    return {};
+  }
 }
 
 async function codexStatus(models: Map<string, ModelCandidate>, paths: string[]) {
-  const configs = await Promise.all(
-    paths.filter(existsSync).map(async (path) => objectValue(parseToml(await readFile(path, "utf8")))),
-  );
+  const configs = await Promise.all(paths.filter(existsSync).map(readToml));
   let activeModel: string | undefined;
   let provider: string | undefined;
   for (const [index, config] of configs.entries()) {
