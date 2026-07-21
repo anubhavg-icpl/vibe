@@ -47,8 +47,8 @@ _vibe_completions() {
 
     # Subcommands
     local words="\${COMP_WORDS[@]}"
-    if [[ ! " \${words} " =~ " (add|list|info|doctor|search|targets|completions|init|uninstall|update) " ]]; then
-        COMPREPLY=( $(compgen -W "add list info doctor search targets completions init uninstall update" -- \${cur}) )
+    if [[ ! " \${words} " =~ " (add|list|info|doctor|search|targets|models|profile|config|run|exec|completions|init|uninstall|update) " ]]; then
+        COMPREPLY=( $(compgen -W "add list info doctor search targets models profile config run exec completions init uninstall update" -- \${cur}) )
         return 0
     fi
 
@@ -93,6 +93,7 @@ _vibe() {
 
     _arguments -s \\
         \$options \\
+        '1:command:(add list info doctor search targets models profile config run exec completions init uninstall update)' \\
         '*:directory:_files -/'
 }
 
@@ -131,7 +132,7 @@ complete -c vibe -s s -l asset -d "Specify asset name"
 complete -c vibe -l preview -d "Preview an asset"
 
 # Subcommands
-complete -c vibe -n "not __fish_seen_subcommand_from add list info doctor search targets completions init uninstall update" -a "add list info doctor search targets completions init uninstall update"
+complete -c vibe -n "not __fish_seen_subcommand_from add list info doctor search targets models profile config run exec completions init uninstall update" -a "add list info doctor search targets models profile config run exec completions init uninstall update"
 
 # Directory argument
 complete -c vibe -a "(__fish_complete_directories)"

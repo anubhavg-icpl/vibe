@@ -4,8 +4,8 @@
 import { program } from "commander";
 import * as p from "@clack/prompts";
 import chalk3 from "chalk";
-import { existsSync as existsSync3, rmSync, statSync } from "fs";
-import { dirname as dirname2, resolve, join as join5 } from "path";
+import { existsSync as existsSync4, rmSync, statSync } from "fs";
+import { dirname as dirname2, resolve as resolve2, join as join6 } from "path";
 import { fileURLToPath } from "url";
 import { stat as statAsync } from "fs/promises";
 import { emitKeypressEvents } from "readline";
@@ -669,6 +669,117 @@ import { readFile as readFile3, writeFile as writeFile2, access as access2 } fro
 import { join as join4 } from "path";
 import { homedir as homedir2 } from "os";
 import YAML from "yaml";
+
+// src/models/types.ts
+var MODEL_TARGETS = ["codex", "claude", "gemini"];
+function parseModelTarget(value) {
+  const normalized = value.trim().toLowerCase();
+  if (normalized === "claude-code") return "claude";
+  if (normalized === "gemini-cli") return "gemini";
+  if (MODEL_TARGETS.includes(normalized)) {
+    return normalized;
+  }
+  throw new Error(`Unsupported model target: ${value}. Use codex, claude, or gemini.`);
+}
+
+// src/models/validation.ts
+var PROFILE_NAME = /^[a-z0-9][a-z0-9._-]*$/i;
+var EFFORTS = {
+  codex: /* @__PURE__ */ new Set(["minimal", "low", "medium", "high", "xhigh"]),
+  claude: /* @__PURE__ */ new Set(["low", "medium", "high", "xhigh", "max"])
+};
+var SECRET_ARG = /^--?(?:api[-_]?key|access[-_]?token|auth[-_]?token|token|password|secret)(?:=|$)/i;
+var APPROVAL_MODES = {
+  codex: /* @__PURE__ */ new Set(["untrusted", "on-request", "never"]),
+  claude: /* @__PURE__ */ new Set(["default", "acceptEdits", "plan", "dontAsk", "bypassPermissions", "delegate"]),
+  gemini: /* @__PURE__ */ new Set(["default", "auto_edit", "yolo", "plan"])
+};
+var SANDBOX_MODES = {
+  codex: /* @__PURE__ */ new Set(["read-only", "workspace-write", "danger-full-access"]),
+  gemini: /* @__PURE__ */ new Set(["on", "off"])
+};
+function validateProfileName(name) {
+  if (PROFILE_NAME.test(name)) return [];
+  return [`Invalid profile name "${name}". Use letters, numbers, dots, underscores, and hyphens.`];
+}
+function validateModelProfile(profile) {
+  const errors = [];
+  if (!profile || typeof profile !== "object" || Array.isArray(profile)) {
+    return ["Profile must be an object."];
+  }
+  if (!MODEL_TARGETS.includes(profile.target)) {
+    return [`Unsupported model target: ${String(profile.target)}. Use codex, claude, or gemini.`];
+  }
+  const efforts = EFFORTS[profile.target];
+  const approvals = APPROVAL_MODES[profile.target];
+  const sandboxes = SANDBOX_MODES[profile.target];
+  for (const field of ["description", "model", "effort", "approvalMode", "sandbox", "nativeProfile"]) {
+    if (profile[field] !== void 0 && typeof profile[field] !== "string") {
+      errors.push(`${field} must be a string.`);
+    }
+  }
+  if (typeof profile.effort === "string" && !efforts?.has(profile.effort)) {
+    errors.push(`${profile.target} does not support effort "${profile.effort}".`);
+  }
+  if (typeof profile.approvalMode === "string" && !approvals.has(profile.approvalMode)) {
+    errors.push(`${profile.target} does not support approval mode "${profile.approvalMode}".`);
+  }
+  if (typeof profile.sandbox === "string" && !sandboxes?.has(profile.sandbox)) {
+    errors.push(`${profile.target} does not support sandbox mode "${profile.sandbox}".`);
+  }
+  if (profile.nativeProfile && profile.target !== "codex") {
+    errors.push("nativeProfile is only supported by Codex.");
+  }
+  if (profile.extraArgs !== void 0 && !Array.isArray(profile.extraArgs)) {
+    errors.push("extraArgs must be an array of strings.");
+  } else if (profile.extraArgs) {
+    if (profile.extraArgs.some((arg) => typeof arg !== "string")) {
+      errors.push("extraArgs must be an array of strings.");
+    } else {
+      if (profile.extraArgs.some((arg) => arg.includes("\0"))) {
+        errors.push("Extra arguments cannot contain null bytes.");
+      }
+      if (profile.extraArgs.some((arg) => SECRET_ARG.test(arg))) {
+        errors.push("Extra arguments cannot contain secret-bearing flags; authenticate with the native CLI instead.");
+      }
+    }
+  }
+  return errors;
+}
+function validateModelProfilesConfig(value) {
+  if (value === void 0) return [];
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return ["modelProfiles must be an object."];
+  }
+  const modelProfiles = value;
+  const errors = [];
+  if (modelProfiles.default !== void 0 && typeof modelProfiles.default !== "string") {
+    errors.push("modelProfiles.default must be a string.");
+  }
+  if (modelProfiles.profiles !== void 0 && (!modelProfiles.profiles || typeof modelProfiles.profiles !== "object" || Array.isArray(modelProfiles.profiles))) {
+    errors.push("modelProfiles.profiles must be an object.");
+    return errors;
+  }
+  return [
+    ...errors,
+    ...validateProfiles(
+      modelProfiles.profiles ?? {},
+      typeof modelProfiles.default === "string" ? modelProfiles.default : void 0
+    )
+  ];
+}
+function validateProfiles(profiles, defaultProfile) {
+  const errors = Object.entries(profiles).flatMap(([name, profile]) => [
+    ...validateProfileName(name),
+    ...validateModelProfile(profile).map((error) => `${name}: ${error}`)
+  ]);
+  if (defaultProfile && !profiles[defaultProfile]) {
+    errors.push(`Default model profile "${defaultProfile}" does not exist.`);
+  }
+  return errors;
+}
+
+// src/config.ts
 var CONFIG_FILENAME = ".vibeconfig.yaml";
 var CONFIG_FILENAME_ALT = ".vibeconfig.yml";
 var DEFAULT_CONFIG = {
@@ -679,8 +790,22 @@ var DEFAULT_CONFIG = {
   },
   favorites: [],
   theme: "dark",
-  parallelInstalls: 4
+  parallelInstalls: 4,
+  modelProfiles: {
+    profiles: {}
+  }
 };
+function defaultConfig() {
+  return {
+    ...DEFAULT_CONFIG,
+    defaults: { ...DEFAULT_CONFIG.defaults },
+    favorites: [...DEFAULT_CONFIG.favorites ?? []],
+    modelProfiles: {
+      ...DEFAULT_CONFIG.modelProfiles,
+      profiles: { ...DEFAULT_CONFIG.modelProfiles?.profiles }
+    }
+  };
+}
 async function findConfigFile(cwd) {
   const searchPaths = [
     cwd ? join4(cwd, CONFIG_FILENAME) : join4(process.cwd(), CONFIG_FILENAME),
@@ -700,17 +825,34 @@ async function findConfigFile(cwd) {
 async function loadConfig(cwd) {
   const configPath = await findConfigFile(cwd);
   if (!configPath) {
-    return { ...DEFAULT_CONFIG };
+    return defaultConfig();
   }
   try {
     const content = await readFile3(configPath, "utf-8");
-    const parsed = YAML.parse(content);
+    const parsedValue = YAML.parse(content);
+    if (!parsedValue || typeof parsedValue !== "object" || Array.isArray(parsedValue)) {
+      throw new Error("The configuration root must be a YAML object.");
+    }
+    const parsed = parsedValue;
+    const profileErrors = validateModelProfilesConfig(parsed.modelProfiles);
+    if (profileErrors.length > 0) {
+      throw new Error(`Invalid model profiles:
+- ${profileErrors.join("\n- ")}`);
+    }
     return {
       ...DEFAULT_CONFIG,
       ...parsed,
       defaults: {
         ...DEFAULT_CONFIG.defaults,
         ...parsed.defaults
+      },
+      modelProfiles: {
+        ...DEFAULT_CONFIG.modelProfiles,
+        ...parsed.modelProfiles,
+        profiles: {
+          ...DEFAULT_CONFIG.modelProfiles?.profiles,
+          ...parsed.modelProfiles?.profiles
+        }
       }
     };
   } catch (error) {
@@ -718,7 +860,7 @@ async function loadConfig(cwd) {
     console.warn(
       `[vibe] Warning: Failed to parse config at ${configPath}: ${msg}. Using defaults.`
     );
-    return { ...DEFAULT_CONFIG };
+    return defaultConfig();
   }
 }
 async function saveConfig(config, path) {
@@ -747,7 +889,10 @@ async function initConfig(cwd) {
       "software-engineer-agent-mode"
     ],
     theme: "dark",
-    parallelInstalls: 4
+    parallelInstalls: 4,
+    modelProfiles: {
+      profiles: {}
+    }
   };
   await saveConfig(exampleConfig, targetPath);
   return targetPath;
@@ -821,8 +966,8 @@ _vibe_completions() {
 
     # Subcommands
     local words="\${COMP_WORDS[@]}"
-    if [[ ! " \${words} " =~ " (add|list|info|doctor|search|targets|completions|init|uninstall|update) " ]]; then
-        COMPREPLY=( $(compgen -W "add list info doctor search targets completions init uninstall update" -- \${cur}) )
+    if [[ ! " \${words} " =~ " (add|list|info|doctor|search|targets|models|profile|config|run|exec|completions|init|uninstall|update) " ]]; then
+        COMPREPLY=( $(compgen -W "add list info doctor search targets models profile config run exec completions init uninstall update" -- \${cur}) )
         return 0
     fi
 
@@ -866,6 +1011,7 @@ _vibe() {
 
     _arguments -s \\
         $options \\
+        '1:command:(add list info doctor search targets models profile config run exec completions init uninstall update)' \\
         '*:directory:_files -/'
 }
 
@@ -903,7 +1049,7 @@ complete -c vibe -s s -l asset -d "Specify asset name"
 complete -c vibe -l preview -d "Preview an asset"
 
 # Subcommands
-complete -c vibe -n "not __fish_seen_subcommand_from add list info doctor search targets completions init uninstall update" -a "add list info doctor search targets completions init uninstall update"
+complete -c vibe -n "not __fish_seen_subcommand_from add list info doctor search targets models profile config run exec completions init uninstall update" -a "add list info doctor search targets models profile config run exec completions init uninstall update"
 
 # Directory argument
 complete -c vibe -a "(__fish_complete_directories)"
@@ -1233,7 +1379,7 @@ ${divider}
   const blankCat = Array(CAT_ROWS).fill(" ".repeat(CAT_W));
   printCatBlock(blankCat, []);
   linesUsed = CAT_ROWS;
-  await new Promise((resolve2) => {
+  await new Promise((resolve3) => {
     const interval = setInterval(() => {
       const done = typed.length >= quote.length;
       if (!done) typed = quote.slice(0, typed.length + CHARS_PER_FRAME);
@@ -1245,7 +1391,7 @@ ${divider}
       linesUsed = drawRows;
       if (done) {
         clearInterval(interval);
-        resolve2();
+        resolve3();
       }
     }, FRAME_MS2);
   });
@@ -1558,11 +1704,11 @@ function buildFrame(version, tick, status, ready, quote) {
 async function waitForKey() {
   if (!process.stdin.isTTY) return;
   const readline = await import("readline");
-  return new Promise((resolve2) => {
+  return new Promise((resolve3) => {
     const iface = readline.createInterface({ input: process.stdin });
     iface.question("", () => {
       iface.close();
-      resolve2();
+      resolve3();
     });
   });
 }
@@ -1616,12 +1762,490 @@ function startAnimation(version) {
   };
 }
 
+// src/models/command-helpers.ts
+async function guardedAction(action) {
+  try {
+    await action();
+  } catch (error) {
+    console.error(colors.error(error instanceof Error ? error.message : String(error)));
+    process.exitCode = 1;
+  }
+}
+
+// src/models/profiles.ts
+import { resolve } from "path";
+import { readFile as readFile4 } from "fs/promises";
+import YAML2 from "yaml";
+async function loadModelProfileState(cwd = process.cwd()) {
+  const config = await loadConfig(cwd);
+  const configPath = await findConfigFile(cwd) ?? resolve(cwd, ".vibeconfig.yaml");
+  return {
+    config,
+    configPath,
+    defaultProfile: config.modelProfiles?.default,
+    profiles: config.modelProfiles?.profiles ?? {}
+  };
+}
+async function saveState(state) {
+  state.config.modelProfiles = {
+    default: state.defaultProfile,
+    profiles: state.profiles
+  };
+  await saveConfig(state.config, state.configPath);
+}
+async function saveModelProfile(name, profile, cwd = process.cwd()) {
+  const errors = [...validateProfileName(name), ...validateModelProfile(profile)];
+  if (errors.length > 0) throw new Error(errors.join("\n"));
+  const state = await loadModelProfileState(cwd);
+  state.profiles[name] = profile;
+  await saveState(state);
+  return state;
+}
+async function removeModelProfile(name, cwd = process.cwd()) {
+  const state = await loadModelProfileState(cwd);
+  if (!state.profiles[name]) throw new Error(`Model profile not found: ${name}`);
+  delete state.profiles[name];
+  if (state.defaultProfile === name) state.defaultProfile = void 0;
+  await saveState(state);
+  return state;
+}
+async function setDefaultModelProfile(name, cwd = process.cwd()) {
+  const state = await loadModelProfileState(cwd);
+  if (!state.profiles[name]) throw new Error(`Model profile not found: ${name}`);
+  state.defaultProfile = name;
+  await saveState(state);
+  return state;
+}
+async function validateModelProfileState(cwd = process.cwd()) {
+  const sourcePath = await findConfigFile(cwd);
+  if (sourcePath) {
+    try {
+      const parsed = YAML2.parse(await readFile4(sourcePath, "utf8"));
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+        throw new Error("The configuration root must be a YAML object.");
+      }
+      const errors = validateModelProfilesConfig(parsed.modelProfiles);
+      if (errors.length > 0) return { path: sourcePath, errors };
+    } catch (error) {
+      return {
+        path: sourcePath,
+        errors: [error instanceof Error ? error.message : String(error)]
+      };
+    }
+  }
+  const state = await loadModelProfileState(cwd);
+  return {
+    path: state.configPath,
+    errors: validateProfiles(state.profiles, state.defaultProfile)
+  };
+}
+
+// src/models/config-command.ts
+function registerConfigCommand(program2) {
+  const config = program2.command("config").description("Inspect and validate Vibe configuration");
+  config.command("show").description("Print the merged Vibe configuration").option("--json", "JSON output").action(
+    async (opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const state = await loadModelProfileState();
+      const value = { path: state.configPath, config: state.config };
+      console.log(
+        json ? JSON.stringify(value, null, 2) : `
+${state.configPath}
+${JSON.stringify(state.config, null, 2)}
+`
+      );
+    })
+  );
+  config.command("path").description("Print the active Vibe configuration path").action(async () => guardedAction(async () => console.log((await loadModelProfileState()).configPath)));
+  config.command("validate").description("Validate model profiles and the default selection").option("--json", "JSON output").action(
+    async (opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const result = await validateModelProfileState();
+      if (json) {
+        console.log(JSON.stringify({ ...result, valid: result.errors.length === 0 }, null, 2));
+      } else if (result.errors.length === 0) {
+        console.log(colors.success(`${symbols.check} Valid configuration: ${result.path}`));
+      } else {
+        console.error(colors.error(`${symbols.cross} Invalid configuration: ${result.path}`));
+        for (const error of result.errors) console.error(`  ${symbols.bullet} ${error}`);
+      }
+      if (result.errors.length > 0) process.exitCode = 1;
+    })
+  );
+}
+
+// src/models/targets.ts
+import { existsSync as existsSync3 } from "fs";
+import { readFile as readFile5 } from "fs/promises";
+import { homedir as homedir3 } from "os";
+import { delimiter, extname, join as join5 } from "path";
+import { parse as parseToml } from "smol-toml";
+var TARGET_META = {
+  codex: { displayName: "OpenAI Codex", command: "codex" },
+  claude: { displayName: "Claude Code", command: "claude" },
+  gemini: { displayName: "Gemini CLI", command: "gemini" }
+};
+var BUILT_INS = {
+  codex: ["default"],
+  claude: ["default", "best", "sonnet", "opus", "haiku", "sonnet[1m]", "opus[1m]", "opusplan"],
+  gemini: ["auto"]
+};
+function executableNames(command) {
+  if (process.platform !== "win32") return [command];
+  return [".exe", ".com", ".ps1", ".cmd", ".bat"].map((ext) => `${command}${ext}`);
+}
+function findExecutable(command) {
+  if (command.includes("/") || command.includes("\\")) {
+    return existsSync3(command) ? command : null;
+  }
+  const pathEntries = (process.env.PATH ?? "").split(delimiter).filter(Boolean);
+  for (const dir of pathEntries) {
+    for (const name of executableNames(command)) {
+      const candidate = join5(dir.replace(/^"|"$/g, ""), name);
+      if (existsSync3(candidate)) return candidate;
+    }
+  }
+  return null;
+}
+function objectValue(value) {
+  return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+}
+function addModel(models, id, source, detail) {
+  if (typeof id !== "string" || !id.trim()) return;
+  const key = id.trim();
+  if (!models.has(key)) models.set(key, { id: key, source, detail });
+}
+async function readJson(path) {
+  if (!existsSync3(path)) return {};
+  try {
+    return objectValue(JSON.parse(await readFile5(path, "utf8")));
+  } catch {
+    return {};
+  }
+}
+async function readToml(path) {
+  if (!existsSync3(path)) return {};
+  try {
+    return objectValue(parseToml(await readFile5(path, "utf8")));
+  } catch {
+    return {};
+  }
+}
+async function codexStatus(models, paths) {
+  const configs = await Promise.all(paths.filter(existsSync3).map(readToml));
+  let activeModel;
+  let provider;
+  for (const [index, config] of configs.entries()) {
+    if (typeof config.model === "string") activeModel = config.model;
+    if (index === 0 && typeof config.model_provider === "string") {
+      provider = config.model_provider;
+    }
+    addModel(models, config.model, "config", "configured");
+    const profiles = objectValue(config.profiles);
+    for (const [name, value] of Object.entries(profiles)) {
+      addModel(models, objectValue(value).model, "config", `Codex profile: ${name}`);
+    }
+  }
+  return { activeModel, provider };
+}
+async function claudeStatus(models, paths) {
+  const configs = await Promise.all(paths.filter(existsSync3).map(readJson));
+  let activeModel;
+  for (const config of configs) {
+    if (typeof config.model === "string") activeModel = config.model;
+    addModel(models, config.model, "config", "configured");
+    if (Array.isArray(config.availableModels)) {
+      for (const model of config.availableModels) addModel(models, model, "config", "availableModels");
+    }
+    for (const model of Object.keys(objectValue(config.modelOverrides))) {
+      addModel(models, model, "config", "modelOverrides");
+    }
+  }
+  return { activeModel };
+}
+async function geminiStatus(models, paths) {
+  const configs = await Promise.all(paths.filter(existsSync3).map(readJson));
+  let activeModel;
+  for (const config of configs) {
+    const model = objectValue(config.model);
+    const modelConfigs = objectValue(config.modelConfigs);
+    if (typeof model.name === "string") activeModel = model.name;
+    addModel(models, model.name, "config", "configured");
+    for (const alias of Object.keys(objectValue(modelConfigs.customAliases))) {
+      addModel(models, alias, "config", "custom alias");
+    }
+    for (const id of Object.keys(objectValue(modelConfigs.modelDefinitions))) {
+      addModel(models, id, "config", "model definition");
+    }
+  }
+  return { activeModel };
+}
+async function getModelTargetStatus(target, profiles = {}, cwd = process.cwd()) {
+  const home2 = homedir3();
+  const configPaths = {
+    codex: [join5(home2, ".codex", "config.toml"), join5(cwd, ".codex", "config.toml")],
+    claude: [
+      join5(home2, ".claude", "settings.json"),
+      join5(cwd, ".claude", "settings.json"),
+      join5(cwd, ".claude", "settings.local.json")
+    ],
+    gemini: [join5(home2, ".gemini", "settings.json"), join5(cwd, ".gemini", "settings.json")]
+  };
+  const models = /* @__PURE__ */ new Map();
+  for (const id of BUILT_INS[target]) addModel(models, id, "built-in");
+  for (const [name, profile] of Object.entries(profiles)) {
+    if (profile.target === target) addModel(models, profile.model, "profile", name);
+  }
+  const details = target === "codex" ? await codexStatus(models, configPaths[target]) : target === "claude" ? await claudeStatus(models, configPaths[target]) : await geminiStatus(models, configPaths[target]);
+  const meta = TARGET_META[target];
+  const executable = findExecutable(meta.command);
+  return {
+    target,
+    ...meta,
+    executable,
+    installed: executable !== null,
+    configPaths: configPaths[target].filter(existsSync3),
+    ...details,
+    models: [...models.values()]
+  };
+}
+function executableExtension(path) {
+  return extname(path).toLowerCase();
+}
+
+// src/models/model-command.ts
+function registerModelsCommand(program2, version) {
+  program2.command("models [target]").description("List models discovered for Codex, Claude Code, and Gemini CLI").option("--json", "JSON output").action(
+    async (targetValue, opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const state = await loadModelProfileState();
+      const targets = targetValue ? [parseModelTarget(targetValue)] : [...MODEL_TARGETS];
+      const statuses = await Promise.all(targets.map((target) => getModelTargetStatus(target, state.profiles)));
+      if (json) {
+        console.log(JSON.stringify({ version, targets: statuses }, null, 2));
+        return;
+      }
+      console.log();
+      console.log(colors.primaryBold("Model targets"));
+      for (const status of statuses) {
+        const mark = status.installed ? colors.success(symbols.check) : colors.dim(symbols.dot);
+        console.log();
+        console.log(`  ${mark} ${colors.secondaryBold(status.displayName)}`);
+        console.log(`    ${colors.dim(status.executable ?? "CLI not found on PATH")}`);
+        if (status.activeModel) {
+          console.log(`    Active: ${colors.textBold(status.activeModel)}`);
+        }
+        if (status.provider) console.log(`    Provider: ${status.provider}`);
+        if (status.configPaths.length > 0) {
+          console.log(`    Config: ${status.configPaths.join(", ")}`);
+        }
+        for (const model of status.models) {
+          const detail = model.detail ? ` \xB7 ${model.detail}` : "";
+          console.log(`      ${symbols.bullet} ${model.id} ${colors.dim(`(${model.source}${detail})`)}`);
+        }
+      }
+      console.log();
+    })
+  );
+}
+
+// src/models/profile-command.ts
+function registerProfileCommand(program2) {
+  const profile = program2.command("profile").description("Manage reusable model profiles");
+  profile.command("list").description("List configured model profiles").option("--json", "JSON output").action(
+    async (opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const state = await loadModelProfileState();
+      if (json) {
+        console.log(JSON.stringify({ default: state.defaultProfile, profiles: state.profiles }, null, 2));
+        return;
+      }
+      console.log();
+      console.log(colors.primaryBold("Model profiles"));
+      const entries = Object.entries(state.profiles);
+      if (entries.length === 0) console.log(colors.muted("  No profiles configured."));
+      for (const [name, value] of entries) {
+        const mark = state.defaultProfile === name ? colors.success(symbols.star) : " ";
+        console.log(
+          `  ${mark} ${colors.secondaryBold(name)} ${colors.dim(`(${value.target})`)} ${value.model ?? "default"}`
+        );
+      }
+      console.log(colors.dim(`
+Config: ${state.configPath}`));
+      console.log();
+    })
+  );
+  profile.command("show <name>").description("Show one model profile").option("--json", "JSON output").action(
+    async (name, opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const state = await loadModelProfileState();
+      const value = state.profiles[name];
+      if (!value) throw new Error(`Model profile not found: ${name}`);
+      if (json) console.log(JSON.stringify({ name, default: state.defaultProfile === name, ...value }, null, 2));
+      else {
+        const marker = state.defaultProfile === name ? colors.success(" (default)") : "";
+        console.log(`
+${colors.secondaryBold(name)}${marker}
+${JSON.stringify(value, null, 2)}
+`);
+      }
+    })
+  );
+  profile.command("set <name>").description("Create or replace a model profile").requiredOption("-t, --target <target>", "codex | claude | gemini").option("-m, --model <model>", "Model ID or alias").option("--description <text>", "Profile description").option("--effort <level>", "Reasoning/effort level").option("--approval-mode <mode>", "Native target approval mode").option("--sandbox <mode>", "Native target sandbox mode").option("--native-profile <name>", "Codex config profile selected with --profile").option("--arg <args...>", "Additional native CLI arguments; persisted in plain text, never include secrets").option("--default", "Make this the default model profile").action(
+    async (name, opts) => guardedAction(async () => {
+      const value = {
+        target: parseModelTarget(opts.target),
+        description: opts.description,
+        model: opts.model,
+        effort: opts.effort,
+        approvalMode: opts.approvalMode,
+        sandbox: opts.sandbox,
+        nativeProfile: opts.nativeProfile,
+        extraArgs: opts.arg
+      };
+      const state = await saveModelProfile(name, value);
+      if (opts.default) await setDefaultModelProfile(name);
+      console.log(colors.success(`${symbols.check} Saved ${name} to ${state.configPath}`));
+    })
+  );
+  profile.command("use <name>").description("Set the default model profile").action(
+    async (name) => guardedAction(async () => {
+      const state = await setDefaultModelProfile(name);
+      console.log(colors.success(`${symbols.check} Default profile: ${name}`));
+      console.log(colors.dim(state.configPath));
+    })
+  );
+  profile.command("remove <name>").alias("rm").description("Remove a model profile").action(
+    async (name) => guardedAction(async () => {
+      const state = await removeModelProfile(name);
+      console.log(colors.success(`${symbols.check} Removed ${name}`));
+      console.log(colors.dim(state.configPath));
+    })
+  );
+}
+
+// src/models/invocation.ts
+import { spawn } from "child_process";
+function codexArgs(profile, prompt, print = false) {
+  const args = [];
+  if (profile.nativeProfile) args.push("--profile", profile.nativeProfile);
+  if (profile.model && profile.model !== "default") args.push("--model", profile.model);
+  if (profile.effort) args.push("--config", `model_reasoning_effort=${JSON.stringify(profile.effort)}`);
+  if (profile.approvalMode) args.push("--ask-for-approval", profile.approvalMode);
+  if (profile.sandbox) args.push("--sandbox", profile.sandbox);
+  args.push(...profile.extraArgs ?? []);
+  if (print) args.push("exec");
+  if (prompt) args.push(prompt);
+  return args;
+}
+function claudeArgs(profile, prompt, print = false) {
+  const args = [];
+  if (profile.model && profile.model !== "default") args.push("--model", profile.model);
+  if (profile.effort) args.push("--effort", profile.effort);
+  if (profile.approvalMode) args.push("--permission-mode", profile.approvalMode);
+  if (print) args.push("--print", "--output-format", "text");
+  args.push(...profile.extraArgs ?? []);
+  if (prompt) args.push(prompt);
+  return args;
+}
+function geminiArgs(profile, prompt, print = false) {
+  const args = [];
+  if (profile.model && profile.model !== "auto") args.push("--model", profile.model);
+  if (profile.approvalMode) args.push("--approval-mode", profile.approvalMode);
+  if (profile.sandbox === "on") args.push("--sandbox");
+  args.push(...profile.extraArgs ?? []);
+  if (prompt) args.push(print ? "--prompt" : "--prompt-interactive", prompt);
+  return args;
+}
+function buildModelInvocation(profile, prompt, print = false) {
+  const command = profile.target === "codex" ? "codex" : profile.target === "claude" ? "claude" : "gemini";
+  const args = profile.target === "codex" ? codexArgs(profile, prompt, print) : profile.target === "claude" ? claudeArgs(profile, prompt, print) : geminiArgs(profile, prompt, print);
+  return { target: profile.target, command, args };
+}
+async function runModelInvocation(invocation) {
+  const executable = findExecutable(invocation.command);
+  if (!executable) throw new Error(`${invocation.command} is not installed or not on PATH.`);
+  const extension = executableExtension(executable);
+  const command = extension === ".ps1" ? "powershell.exe" : executable;
+  const args = extension === ".ps1" ? ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", executable, ...invocation.args] : invocation.args;
+  if ([".cmd", ".bat"].includes(extension)) {
+    throw new Error(
+      `Refusing to invoke the ${extension} shim directly. Install an executable or PowerShell shim for ${invocation.command}.`
+    );
+  }
+  return new Promise((resolve3, reject) => {
+    const child = spawn(command, args, { stdio: "inherit", windowsHide: false });
+    child.once("error", reject);
+    child.once("exit", (code, signal) => {
+      if (signal) reject(new Error(`${invocation.command} exited via signal ${signal}.`));
+      else resolve3(code ?? 1);
+    });
+  });
+}
+
+// src/models/run-command.ts
+function mergeRunProfile(base, opts) {
+  const target = opts.target ? parseModelTarget(opts.target) : base?.target ?? "codex";
+  const inherited = base?.target === target ? base : void 0;
+  const profile = {
+    ...inherited,
+    target,
+    model: opts.model ?? inherited?.model,
+    effort: opts.effort ?? inherited?.effort,
+    approvalMode: opts.approvalMode ?? inherited?.approvalMode,
+    sandbox: opts.sandbox ?? inherited?.sandbox,
+    nativeProfile: opts.nativeProfile ?? inherited?.nativeProfile,
+    extraArgs: opts.arg ?? inherited?.extraArgs
+  };
+  const errors = validateModelProfile(profile);
+  if (errors.length > 0) throw new Error(errors.join("\n"));
+  return profile;
+}
+function registerRunCommand(program2) {
+  program2.command("run [prompt...]").description("Run Codex, Claude Code, or Gemini CLI through a Vibe model profile").option("-p, --profile <name>", "Vibe model profile (defaults to the active profile)").option("-t, --target <target>", "codex | claude | gemini").option("-m, --model <model>", "Override the profile model").option("--effort <level>", "Override reasoning/effort").option("--approval-mode <mode>", "Override the native approval mode").option("--sandbox <mode>", "Override the native sandbox mode").option("--native-profile <name>", "Codex config profile selected with --profile").option("--arg <args...>", "Additional native CLI arguments; never include secrets").option("--print", "Run non-interactively and print the response").option("--dry-run", "Print the native invocation without launching it").option("--json", "JSON output for --dry-run").action(
+    async (promptParts, opts) => guardedAction(async () => {
+      const json = opts.json ?? program2.opts().json;
+      const dryRun = opts.dryRun ?? program2.opts().dryRun;
+      const state = await loadModelProfileState();
+      const profileName = opts.profile ?? state.defaultProfile;
+      const base = profileName ? state.profiles[profileName] : void 0;
+      if (profileName && !base) throw new Error(`Model profile not found: ${profileName}`);
+      const profile = mergeRunProfile(base, opts);
+      const prompt = promptParts.length > 0 ? promptParts.join(" ") : void 0;
+      const invocation = buildModelInvocation(profile, prompt, opts.print);
+      if (dryRun) {
+        if (json) console.log(JSON.stringify({ profile: profileName, ...invocation }, null, 2));
+        else {
+          console.log([invocation.command, ...invocation.args].map((value) => JSON.stringify(value)).join(" "));
+        }
+        return;
+      }
+      process.exitCode = await runModelInvocation(invocation);
+    })
+  );
+  program2.command("exec <target> [args...]").description("Pass native arguments directly to Codex, Claude Code, or Gemini CLI").allowUnknownOption(true).passThroughOptions().action(
+    async (targetValue, args) => guardedAction(async () => {
+      const target = parseModelTarget(targetValue);
+      const base = buildModelInvocation({ target });
+      process.exitCode = await runModelInvocation({ ...base, args });
+    })
+  );
+}
+
+// src/models/register.ts
+function registerModelCommands(program2, version) {
+  registerModelsCommand(program2, version);
+  registerProfileCommand(program2);
+  registerConfigCommand(program2);
+  registerRunCommand(program2);
+}
+
 // src/index.ts
 var VERSION = "2.0.0";
 function defaultSource() {
   const here = dirname2(fileURLToPath(import.meta.url));
-  const repoRoot = resolve(here, "..");
-  if (existsSync3(resolve(repoRoot, "skills")) || existsSync3(resolve(repoRoot, "modes"))) {
+  const repoRoot = resolve2(here, "..");
+  if (existsSync4(resolve2(repoRoot, "skills")) || existsSync4(resolve2(repoRoot, "modes"))) {
     return repoRoot;
   }
   return process.cwd();
@@ -1758,10 +2382,14 @@ Examples:
   vibe add <name> --dry-run      Preview what would be installed
   vibe doctor                    Check environment and detected CLIs
   vibe targets                   Show supported target CLIs
+  vibe models                    Discover Codex, Claude, and Gemini models
+  vibe profile set deep -t codex -m gpt-5.6-sol --effort high
+  vibe run --profile deep "review this repository"
+  vibe exec gemini --help        Pass arguments to a native model CLI
   vibe completions zsh           Generate shell completions`;
 program.name("vibe").description(
   "Install Vibe AI-agent assets (skills/agents/commands/modes/system-prompts) onto coding-agent CLIs." + EXAMPLES
-).version(VERSION).argument("[source]", "Path to Vibe repo root (default: bundled or ./)", "").option(
+).version(VERSION).enablePositionalOptions().argument("[source]", "Path to Vibe repo root (default: bundled or ./)", "").option(
   "-g, --global",
   "Install globally (user-level) instead of per-project"
 ).option(
@@ -1934,6 +2562,7 @@ program.command("uninstall <names...>").description("Remove installed assets fro
 program.command("update [names...]").description("Re-install assets to get the latest versions").option("-g, --global", "Install globally").option("-a, --agent <agents...>", "Target CLIs").option("-y, --yes", "Skip confirmation").option("--json", "JSON output").option("--dry-run", "Preview what would be updated").action(async (names, opts) => {
   await runUpdate(names, mergeRootOptions(opts));
 });
+registerModelCommands(program, VERSION);
 program.parse();
 function parseKinds(input) {
   if (!input || input.length === 0) return void 0;
@@ -1953,7 +2582,7 @@ async function listInstalledEntries(dir) {
     return out;
   }
   for (const entry of entries) {
-    const full = join5(dir, entry.name);
+    const full = join6(dir, entry.name);
     if (entry.isDirectory()) {
       out.push(...await listInstalledEntries(full));
     } else if (entry.isFile()) {
@@ -2508,7 +3137,7 @@ async function runUninstall(names, opts) {
         const targetPath = getInstallTarget(asset, agentType, { global });
         if (!targetPath) continue;
         try {
-          if (existsSync3(targetPath)) {
+          if (existsSync4(targetPath)) {
             rmSync(targetPath, { recursive: true, force: true });
             removed.push({
               name: asset.name,

@@ -75,6 +75,7 @@ import {
   type AnimController,
 } from "./ui/index.js";
 import type { Asset, AssetKind, AgentType } from "./types.js";
+import { registerModelCommands } from "./models/register.js";
 
 const VERSION = "2.0.0";
 
@@ -279,6 +280,10 @@ Examples:
   vibe add <name> --dry-run      Preview what would be installed
   vibe doctor                    Check environment and detected CLIs
   vibe targets                   Show supported target CLIs
+  vibe models                    Discover Codex, Claude, and Gemini models
+  vibe profile set deep -t codex -m gpt-5.6-sol --effort high
+  vibe run --profile deep "review this repository"
+  vibe exec gemini --help        Pass arguments to a native model CLI
   vibe completions zsh           Generate shell completions`;
 
 program
@@ -288,6 +293,7 @@ program
     EXAMPLES,
   )
   .version(VERSION)
+  .enablePositionalOptions()
   .argument("[source]", "Path to Vibe repo root (default: bundled or ./)", "")
   .option(
     "-g, --global",
@@ -543,6 +549,8 @@ program
   .action(async (names: string[], opts: CliOptions) => {
     await runUpdate(names, mergeRootOptions(opts));
   });
+
+registerModelCommands(program, VERSION);
 
 program.parse();
 
