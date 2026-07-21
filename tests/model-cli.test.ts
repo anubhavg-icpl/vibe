@@ -84,6 +84,7 @@ test("builds native invocations without a shell", () => {
 test("persists, selects, and removes model profiles", async () => {
   const cwd = await mkdtemp(join(tmpdir(), "vibe-model-profile-"));
   try {
+    await writeFile(join(cwd, ".vibeconfig.yaml"), "version: 1.0.0\nmodelProfiles:\n  profiles: {}\n", "utf8");
     await saveModelProfile("deep", { target: "claude", model: "opus", effort: "high" }, cwd);
     await setDefaultModelProfile("deep", cwd);
     let state = await loadModelProfileState(cwd);

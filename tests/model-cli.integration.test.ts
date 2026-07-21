@@ -1,11 +1,15 @@
 import assert from "node:assert/strict";
-import { mkdtemp, rm } from "node:fs/promises";
+import { mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
 const CLI = resolve("dist/index.js");
+
+async function isolateVibeConfig(cwd: string): Promise<void> {
+  await writeFile(join(cwd, ".vibeconfig.yaml"), "version: 1.0.0\nmodelProfiles:\n  profiles: {}\n", "utf8");
+}
 
 function run(cwd: string, args: string[]) {
   const result = spawnSync(process.execPath, [CLI, ...args], {
@@ -19,6 +23,7 @@ function run(cwd: string, args: string[]) {
 test("model CLI commands work together in an isolated project", async () => {
   const cwd = await mkdtemp(join(tmpdir(), "vibe-model-cli-"));
   try {
+    await isolateVibeConfig(cwd);
     const targets = JSON.parse(run(cwd, ["models", "--json"]));
     assert.equal(targets.targets.length, 3);
 
@@ -93,6 +98,7 @@ test("model CLI commands work together in an isolated project", async () => {
 test("run defaults to Codex when no profile is configured", async () => {
   const cwd = await mkdtemp(join(tmpdir(), "vibe-model-cli-default-"));
   try {
+    await isolateVibeConfig(cwd);
     const invocation = JSON.parse(run(cwd, ["run", "--dry-run", "--json", "explain this repository"]));
     assert.equal(invocation.target, "codex");
     assert.equal(invocation.command, "codex");
