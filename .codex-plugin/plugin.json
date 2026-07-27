@@ -1,7 +1,7 @@
 {
   "name": "vibe",
   "version": "1.0.0",
-  "description": "853 modes + 5340 skills + 200 agents — unified AI coding workflow library.",
+  "description": "853 modes + 5341 skills + 216 agents: unified AI coding workflow library.",
   "author": {
     "name": "Anubhav Gain",
     "email": "anubhavg@infopercept.com",
@@ -14,8 +14,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Vibe",
-    "shortDescription": "853 modes + 5340 skills + 216 agents",
-    "longDescription": "Vibe is a comprehensive AI coding-agent library: 853 specialized chat modes, 5340 reusable skills, 216 subagents, 127 slash commands, 120 plugin trees, and 111 universal rules. One repo, every major coding-agent CLI.",
+    "shortDescription": "853 modes + 5341 skills + 216 agents",
+    "longDescription": "Vibe is a comprehensive AI coding-agent library: 853 specialized chat modes, 5341 reusable skills, 216 subagents, 127 slash commands, 120 plugin trees, and 111 universal rules. One repo, every major coding-agent CLI.",
     "developerName": "Anubhav Gain",
     "category": "Coding",
     "capabilities": ["Interactive", "Read", "Write"],

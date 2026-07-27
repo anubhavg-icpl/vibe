@@ -2,7 +2,7 @@
  * Vibe plugin for OpenCode.ai
  *
  * Auto-registers Vibe's skills directory via OpenCode's config hook so the
- * agent discovers all 5340 skills without manual symlinks or config edits.
+ * agent discovers all 5341 skills without manual symlinks or config edits.
  *
  * Adapted from obra/superpowers `.opencode/plugin.js` (MIT) for the Vibe
  * library (CC-BY-NC-SA-4.0).
@@ -79,7 +79,7 @@ Use OpenCode's native \`skill\` tool to list and load skills.`;
     _bootstrapCache = `<EXTREMELY_IMPORTANT>
 You have Vibe.
 
-Vibe is a library of 675 skills, 216 agents, 127 commands, and 754 modes for AI coding agents.
+Vibe is a library of 5341 skills, 216 agents, 127 commands, and 853 modes for AI coding agents.
 The using-superpowers skill content is included below. It is ALREADY LOADED -
 you are currently following it. Do NOT use the skill tool to load
 "using-superpowers" again - that would be redundant.

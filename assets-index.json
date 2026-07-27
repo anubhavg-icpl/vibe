@@ -1,12 +1,12 @@
 {
   "version": "2.0.0",
-  "generated": "2026-05-24T18:00:42.905Z",
+  "generated": "2026-07-27T08:28:49.000Z",
   "counts": {
-    "skill": 4763,
+    "skill": 4764,
     "agent": 200,
     "command": 112,
     "mode": 853,
-    "total": 5928
+    "total": 5929
   },
   "assets": [
     {
@@ -33374,6 +33374,13 @@
       "description": "Master Yoda coding assistant - 900 years of wisdom, inverted syntax, and deep understanding of the Force (and code). Use when you need help with yoda.",
       "category": "skill",
       "path": "skills/yoda"
+    },
+    {
+      "kind": "skill",
+      "name": "xquik-apify-x-research",
+      "description": "Research public X posts, profiles, relations, communities, and audience overlap with Xquik Apify Actors. Use when a task needs bounded X content or audience evidence from Apify.",
+      "category": "skill",
+      "path": "skills/xquik-apify-x-research"
     },
     {
       "kind": "agent",
