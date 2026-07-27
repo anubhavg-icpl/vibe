@@ -21,7 +21,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Modes-853-c084fc?style=flat-square" alt="Modes">
   <img src="https://img.shields.io/badge/Categories-52-a78bfa?style=flat-square" alt="Categories">
-  <img src="https://img.shields.io/badge/Skills-5340-7c3aed?style=flat-square" alt="Skills">
+  <img src="https://img.shields.io/badge/Skills-5341-7c3aed?style=flat-square" alt="Skills">
   <img src="https://img.shields.io/badge/Agents-200-6366f1?style=flat-square" alt="Agents">
   <img src="https://img.shields.io/badge/Plugins-120-3b82f6?style=flat-square" alt="Plugins">
   <img src="https://img.shields.io/badge/Commands-112-0ea5e9?style=flat-square" alt="Commands">
@@ -34,7 +34,7 @@
 ---
 
 <p align="center">
-  <img src="assets/abstract-data-visualization-lumi.webp" alt="5340 skills visualized as luminous constellations" width="800"/>
+  <img src="assets/abstract-data-visualization-lumi.webp" alt="5341 skills visualized as luminous constellations" width="800"/>
 </p>
 
 ## What Is This?
@@ -53,7 +53,7 @@ Did your AI just suggest using `var` in TypeScript? Recommend jQuery in 2026? Th
 | -------------------------------------- | ----------------------------------------------------------------------------------------- |
 | **853 expert modes**                   | Because one-size-fits-all is for socks, not AI                                            |
 | **52 categories**                      | Organized chaos is still organization                                                     |
-| **5340 skills**                        | Reusable Claude/Codex/Amp/Droid skill bundles                                             |
+| **5341 skills**                        | Reusable Claude/Codex/Amp/Droid skill bundles                                             |
 | **200 subagents** in 10 sub-categories | Specialized workers for orchestration, QA, data, infra, language experts, etc.            |
 | **112 slash commands** in 8 sub-cats   | `/architecture`, `/devops`, `/security`, `/testing`, `/git`, `/refactoring`...            |
 | **120 plugins**                        | Ready-to-install plugin trees with their own agents + commands                            |
@@ -162,7 +162,7 @@ Vibe ships **manifests for every major coding-agent CLI** at the repo root, so y
 | **Copilot CLI**   | `copilot plugin marketplace add anubhavg-icpl/vibe` then `copilot plugin install vibe@vibe`                |
 | **Factory Droid** | `droid plugin marketplace add https://github.com/anubhavg-icpl/vibe` then `droid plugin install vibe@vibe` |
 
-Once installed, all 5340 skills are discoverable via the harness's native skill tool. Skills auto-load on relevance — no further config needed.
+Once installed, all 5341 skills are discoverable via the harness's native skill tool. Skills auto-load on relevance; no further config is needed.
 
 ### Manifest layout in this repo
 
@@ -403,7 +403,7 @@ vibe/
 ├── recipes/                   # 18 end-to-end recipes + case-studies/
 ├── rules/                     # 111 rules (8 originals + 89 ecc + 9 toolkit + 5 cmods)
 ├── scripts/                   # generate-modes-index.py, fix-diagrams.py
-├── skills/                    # 5340 installable skills (vibe + ai-engineering + pi + cmods + ecc + toolkit)
+├── skills/                    # 5341 installable skills (vibe + ai-engineering + pi + cmods + ecc + toolkit)
 ├── src/                       # VIBE CLI (TypeScript)
 ├── templates/                 # claude-md/ + project-starters/ + cmods/
 ├── tools/                     # cmods/ (perplexity.py, install scripts)
@@ -441,7 +441,7 @@ rules/
 | Modern-stack (web/edge/data)  | 53       |
 | Local LLM + model-authoring   | 36       |
 | Android (CLI + platform)      | 30       |
-| **Total Skills**              | **5340** |
+| **Total Skills**              | **5341** |
 | **Total Subagents**           | **200**  |
 | **Total Commands**            | **112**  |
 | **Total Plugins**             | **120**  |
