@@ -81,6 +81,7 @@ Before execution:
 - [ ] `maxItems` is explicit.
 - [ ] Multi-target work has a fairness decision.
 - [ ] Current pricing was reviewed.
+- [ ] Maximum cost per run was approved.
 - [ ] The external run was approved.
 
 After execution:

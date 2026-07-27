@@ -10,6 +10,7 @@ Require these facts before a billable run:
 - Current pricing source.
 - Explicit global result cap.
 - Optional per-target cap.
+- Approved maximum cost per run.
 - User approval for the external run.
 
 Stop when the target requires access bypass.
@@ -22,7 +23,7 @@ Classify each row before analysis:
 | Class       | Common signal                       | Handling                  |
 | ----------- | ----------------------------------- | ------------------------- |
 | Data        | Expected post or profile identifier | Include in analysis       |
-| Diagnostic  | `status` and `message` fields       | Report separately         |
+| Diagnostic  | `resultType: "diagnostic"`          | Report separately         |
 | Filtered    | Actor reports a filter reason       | Exclude and count         |
 | Duplicate   | Repeated stable identifier          | Apply the declared policy |
 | Unavailable | Target visibility marker            | Report without inference  |
@@ -30,6 +31,7 @@ Classify each row before analysis:
 
 Never convert diagnostic rows into empty profiles or posts.
 Never hide partial, unavailable, filtered, or duplicate counts.
+Use `status` and `message` as fallback signals when `resultType` is absent.
 
 ## Audience Interpretation
 
@@ -45,6 +47,9 @@ Keep these limits visible:
 - Audience overlap does not prove shared intent.
 - Verification status does not prove expertise.
 - Profile fields can be stale or self-reported.
+
+Report only necessary attributes that users explicitly self-disclose.
+Never infer sensitive traits from profiles, bios, locations, relations, or engagement.
 
 ## Post Interpretation
 
