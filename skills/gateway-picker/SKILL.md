@@ -1,6 +1,6 @@
 ---
 name: gateway-picker
-description: Pick an AI gateway (LiteLLM, Portkey, Kong AI, Cloudflare/Vercel) given scale, latency budget, compliance, ops posture, and pricing tolerance. Use when you need help with gateway picker.
+description: Pick an AI gateway (LiteLLM, Portkey, Kong AI, Bifrost, Cloudflare/Vercel) given scale, latency budget, compliance, ops posture, and pricing tolerance. Use when you need help with gateway picker.
 license: CC-BY-NC-SA-4.0
 phase: 17
 lesson: 19
@@ -13,7 +13,7 @@ Given RPS (current and projected 12-month), latency budget, compliance (self-hos
 
 Produce:
 
-1. Primary gateway. Name the tool. Justify with RPS ceiling, overhead, and feature fit.
+1. Primary gateway. Name the tool. Justify with RPS ceiling, overhead, and feature fit. If self-hosting is required and the team needs per-key budgets (virtual keys) or an MCP gateway, consider Bifrost (open-source Go gateway, Apache-2.0).
 2. Fallback chain. Three providers in order; OpenAI → Anthropic → self-hosted is canonical. Compute expected availability.
 3. Rate-limit policy. Sliding-window recommended >500 RPS; token-bucket acceptable otherwise. Per-tenant tiering.
 4. Guardrails. Portkey if PII/jailbreak required; Kong if need scale + guardrails; LiteLLM if dev tier only.
